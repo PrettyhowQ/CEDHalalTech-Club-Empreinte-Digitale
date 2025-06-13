@@ -1,8 +1,12 @@
 import OpenAI from "openai";
 
 // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
+if (!process.env.OPENAI_API_KEY) {
+  console.warn("⚠️ OPENAI_API_KEY n'est pas configurée. Chat IARP ne fonctionnera pas.");
+}
+
 const openai = new OpenAI({ 
-  apiKey: process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ENV_VAR || "default_key"
+  apiKey: process.env.OPENAI_API_KEY || "clé-manquante"
 });
 
 export async function chatWithIARP(
@@ -28,8 +32,11 @@ export async function chatWithIARP(
 
     return response.choices[0].message.content || "Je suis désolé, je n'ai pas pu comprendre votre demande.";
   } catch (error) {
-    console.error("Error in Chat IARP:", error);
-    throw new Error("Failed to get response from Chat IARP");
+    console.error("Erreur Chat IARP:", error);
+    if (!process.env.OPENAI_API_KEY) {
+      return "Chat IARP nécessite une clé OpenAI pour fonctionner. Veuillez configurer OPENAI_API_KEY dans les secrets Replit.";
+    }
+    return "Je suis actuellement indisponible. Veuillez réessayer plus tard.";
   }
 }
 
