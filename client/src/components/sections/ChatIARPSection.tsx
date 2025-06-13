@@ -45,7 +45,7 @@ export function ChatIARPSection() {
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Chat IARP <br />
-              <span className="text-accent-500">PrettyhowQ</span>
+              <span className="text-accent-500">Votre Assistant IA</span>
             </h2>
             
             <p className="text-xl text-gray-600 mb-8">
