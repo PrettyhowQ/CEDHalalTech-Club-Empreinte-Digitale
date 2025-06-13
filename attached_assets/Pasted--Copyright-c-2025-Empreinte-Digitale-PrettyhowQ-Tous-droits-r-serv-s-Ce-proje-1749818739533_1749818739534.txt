@@ -1,0 +1,145 @@
+<!--
+/*! 
+ * Copyright (c) 2025 Empreinte Digitale / PrettyhowQ
+ * Tous droits réservés.
+ * Ce projet est protégé par la licence propriétaire CEDPro.
+ * Reproduction, diffusion ou usage commercial interdits sans autorisation écrite.
+ */
+-->
+
+# 🌍 Club Empreinte Digitale & IA Responsable  
+### 💛 Propulsé par PrettyhowQ – L’intelligence du cœur
+
+Bienvenue dans le **Club Empreinte Digitale**, un écosystème éducatif et solidaire qui place l’**intelligence artificielle responsable** au cœur de la transformation humaine, professionnelle et planétaire.
+
+---
+
+## 🎓 Objectifs du projet
+
+- Offrir un **accès libre et éthique** à la connaissance, à l’innovation et à l’intelligence artificielle.
+- Accompagner les **apprenants, créateurs, citoyens** vers des métiers utiles, durables et porteurs de sens.
+- Former les talents de demain à l’IA Responsable, à la technologie verte, et à l’économie circulaire.
+
+---
+
+## 🗂️ Arborescence du projet
+
+club-empreinte-digitale/
+├── index.html
+├── style.css
+├── script.js
+├── sections/
+│   ├── formations/
+│   │   ├── programmation.md
+│   │   ├── dietetique.md
+│   │   ├── domaines-ia.md
+│   │   └── certifications.md
+│   ├── ressources/
+│   │   ├── a-propos.md
+│   │   ├── temoignages.md
+│   │   ├── faq.md
+│   │   ├── gouvernance.md
+│   │   ├── portfolio-yamina.md
+│   │   └── generateurs-ia.md
+│   ├── ecosysteme/
+│   │   ├── prettyhowq.md
+│   │   ├── boutique-solidaire.md
+│   │   ├── costa-del-sol.md
+│   │   └── rejoindre-le-club.md
+│   └── ia-ethique/
+│       ├── cours.md
+│       ├── ressources.md
+│       └── entreprise.md
+├── legal/
+│   ├── politique-confidentialite.md
+│   ├── conditions-utilisation.md
+│   └── cookies.md
+└── README.md
+
+
+---
+
+## 🧠 Contenu principal
+
+### 🔹 Formations
+- 👨‍💻 Programmation
+- 🥗 Diététique
+- 🤖 10 Domaines IA
+- 🎓 Certifications
+
+### 🔹 Ressources
+- 📘 À propos
+- 💬 Témoignages
+- ❓ FAQ
+- 🛡️ Gouvernance & Éthique
+- 🖼️ Portfolio Yakoubi Yamina
+- ⚙️ Générateurs IA Responsable
+
+### 🔹 Écosystème
+- 🧠 PrettyhowQ & HeardPower
+- 🛍️ Boutique solidaire
+- 🌅 Costa del Sol
+- 🚪 Rejoindre le club
+
+### 🌱 IA Éthique (via bouton interactif)
+- 💡 Technologie verte
+- 🔋 Énergies renouvelables
+- 🧠 IA Responsable
+- ♻️ Économie circulaire
+
+#### 🌐 Ressources IA Éthique
+- 📘 Guide PrettyhowQ
+- 📝 Blog
+- 📊 Études de cas
+- 🎥 Webinaires
+- 🆘 Centre d’aide
+
+#### 🏢 Espace Entreprise
+- 📘 À propos
+- 🎯 Notre mission
+- 👥 Équipe
+- 💼 Carrières
+- 📩 Contact
+
+---
+
+## 🌐 Multilingue / Multilingual Support
+
+Le projet est en cours de traduction pour permettre un accès mondial :
+
+| Langue / Language     | Statut       |
+|------------------------|--------------|
+| Français 🇫🇷            | ✅ Complet     |
+| Anglais 🇬🇧             | 🔄 En cours   |
+| Arabe 🇸🇦🇩🇿             | 🔄 En cours   |
+| Chinois 🇨🇳             | 🔄 En cours   |
+
+---
+
+## 🛡️ Mentions légales
+
+- 📍 **Données hébergées à Genève – Suisse 🇨🇭**
+- 📜 Politique de confidentialité → `legal/politique-confidentialite.md`
+- 📃 Conditions d’utilisation → `legal/conditions-utilisation.md`
+- 🍪 Gestion des cookies → `legal/cookies.md`
+
+---
+
+## 🧾 Licence
+
+Ce projet est protégé par la licence propriétaire **CEDPro**.
+
+**© Yakoubi Yamina – Tous droits réservés  
+| All rights reserved  
+| جميع الحقوق محفوظة  
+| 版权所有**
+
+---
+
+## 📬 Contact & Contributions
+
+- 📩 contact@empreintedigitale.org  
+- 🤖 IA Responsable intégrée : PrettyhowQ  
+- ✨ Développé avec amour et éthique par **Yakoubi Yamina**
+
+---

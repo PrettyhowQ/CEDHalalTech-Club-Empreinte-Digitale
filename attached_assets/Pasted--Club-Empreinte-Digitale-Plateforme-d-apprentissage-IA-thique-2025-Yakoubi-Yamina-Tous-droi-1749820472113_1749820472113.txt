@@ -1,0 +1,204 @@
+# Club Empreinte Digitale - Plateforme d'apprentissage IA éthique
+
+© 2025 Yakoubi Yamina - Tous droits réservés
+
+## Vue d'ensemble
+
+Plateforme e-learning complète avec système de gouvernance éthique, formations multilingues, et technologies IA responsables. Association internationale basée en Suisse, conforme RGPD et LPD.
+
+## Fonctionnalités principales
+
+- **Formation multidomaine** : 10 espaces de formation (Programmation, Diététique, IA Responsable, etc.)
+- **Système multilingue** : 78 langues supportées avec détection automatique
+- **Gouvernance éthique** : Cadre légal suisse, principes IA responsable
+- **Technologies IA** : PrettyhowQ, HeardPower, TechForAll, Costa del Sol
+- **Certification professionnelle** : Partenariats universitaires, blockchain
+- **Analytics avancés** : Dashboard Coursera-level, gamification XP
+- **Support temps réel** : Chat IA intégré, assistance 24/7
+
+## Stack technique
+
+- **Frontend** : React 18, TypeScript, Tailwind CSS, Shadcn/ui
+- **Backend** : Node.js, Express, TypeScript
+- **Base de données** : PostgreSQL avec Drizzle ORM
+- **État global** : TanStack Query, Context API
+- **Authentification** : Session-based avec stockage sécurisé
+- **Routage** : Wouter (léger et performant)
+- **Build** : Vite, ESBuild
+- **Styles** : Tailwind CSS avec système de design professionnel
+
+## Installation
+
+### Prérequis
+- Node.js 18+ 
+- PostgreSQL 14+
+- Git
+
+### Installation locale
+
+```bash
+# Cloner le projet
+git clone https://github.com/votre-username/club-empreinte-digitale.git
+cd club-empreinte-digitale
+
+# Installer les dépendances
+npm install
+
+# Configurer les variables d'environnement
+cp .env.example .env
+# Éditer .env avec vos paramètres
+
+# Initialiser la base de données
+npm run db:push
+npm run db:seed
+
+# Lancer en mode développement
+npm run dev
+```
+
+### Variables d'environnement
+
+```env
+DATABASE_URL=postgresql://username:password@localhost:5432/club_empreinte
+SESSION_SECRET=votre-secret-session-ultra-securise
+NODE_ENV=development
+```
+
+## Structure du projet
+
+```
+club-empreinte-digitale/
+├── client/                 # Frontend React
+│   ├── src/
+│   │   ├── components/     # Composants réutilisables
+│   │   │   ├── ui/        # Composants UI de base
+│   │   │   ├── layout/    # Layout et navigation
+│   │   │   └── embed/     # Widgets intégrables
+│   │   ├── pages/         # Pages de l'application
+│   │   ├── context/       # Contextes React (Auth, Language)
+│   │   ├── lib/           # Utilitaires et helpers
+│   │   └── hooks/         # Hooks personnalisés
+│   └── index.html         # Point d'entrée HTML
+├── server/                # Backend Express
+│   ├── index.ts           # Serveur principal
+│   ├── routes.ts          # Routes API
+│   ├── db.ts              # Configuration DB
+│   └── storage.ts         # Interface de stockage
+├── shared/                # Code partagé
+│   └── schema.ts          # Schémas Drizzle
+├── scripts/               # Scripts utilitaires
+│   ├── db-push.ts         # Synchronisation DB
+│   └── seed-database.ts   # Données d'exemple
+└── attached_assets/       # Assets et documentation
+```
+
+## Scripts disponibles
+
+```bash
+npm run dev          # Lancement développement
+npm run build        # Build production
+npm run preview      # Aperçu build
+npm run db:push      # Synchroniser schéma DB
+npm run db:seed      # Insérer données test
+npm run db:studio    # Interface Drizzle Studio
+npm run lint         # Vérification code
+npm run type-check   # Vérification TypeScript
+```
+
+## Déploiement
+
+### Production
+
+```bash
+# Build du projet
+npm run build
+
+# Variables d'environnement production
+DATABASE_URL=postgresql://prod-url
+SESSION_SECRET=secret-production-securise
+NODE_ENV=production
+
+# Lancement
+npm start
+```
+
+### Docker (optionnel)
+
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 5000
+CMD ["npm", "start"]
+```
+
+## Widgets intégrables
+
+Le projet inclut des widgets responsives pour intégration dans d'autres sites :
+
+```html
+<!-- Widget compact -->
+<iframe src="https://votre-domaine.com/embed?variant=compact" 
+        width="384" height="300" frameborder="0"></iframe>
+
+<!-- Widget hero complet -->
+<iframe src="https://votre-domaine.com/embed?variant=hero&lang=fr" 
+        width="100%" height="400" frameborder="0"></iframe>
+```
+
+Variantes : `compact`, `hero`, `features`, `governance`, `full`
+
+## Multilinguisme
+
+Support de 78 langues avec traduction automatique :
+
+- Détection automatique de la langue navigateur
+- Persistance des préférences utilisateur  
+- Support RTL pour arabe, hébreu, persan
+- Interface de sélection intuitive
+
+## Gouvernance et conformité
+
+- **Statut légal** : Association suisse (Code civil art. 60 ss)
+- **Conformité** : RGPD européen + LPD Suisse 2023
+- **Hébergement** : Serveurs sécurisés Genève
+- **Éthique IA** : Transparence, non-discrimination, souveraineté
+- **Données** : Chiffrement, aucune vente, accès/retrait garantis
+
+## Support et contact
+
+- **Documentation** : https://votre-domaine.com/docs
+- **Email** : contact@empreintedigitale.club  
+- **Support** : contact@techforall.ch
+- **Issues** : GitHub Issues pour bugs et améliorations
+
+## Licence
+
+© 2025 Yakoubi Yamina - Club Empreinte Digitale & PrettyhowQ
+Tous droits réservés. Toute reproduction non autorisée est strictement interdite.
+
+## Contributions
+
+1. Fork le projet
+2. Créer une branche feature (`git checkout -b feature/amelioration`)
+3. Commit les modifications (`git commit -m 'Ajout fonctionnalité'`)
+4. Push la branche (`git push origin feature/amelioration`) 
+5. Ouvrir une Pull Request
+
+## Changelog
+
+### v1.0.0 (Juin 2025)
+- Lancement initial de la plateforme
+- 10 domaines de formation
+- Système multilingue complet
+- Gouvernance éthique intégrée
+- Widgets intégrables
+- Dashboard analytics avancé
+- Système de certification
+
+---
+
+*Plateforme développée avec ❤️ pour une IA éthique et inclusive*

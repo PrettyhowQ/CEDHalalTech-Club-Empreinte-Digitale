@@ -1,0 +1,285 @@
+# Club Empreinte Digitale - IA Éthique
+
+## 🌍 Vision du Projet
+
+Plateforme d'apprentissage IA éthique avec écosystème solidaire intégré, combinant formation responsable, commerce équitable et accessibilité universelle.
+
+## 🎯 Mission
+
+Démocratiser l'accès à l'éducation technologique tout en promouvant une approche éthique de l'intelligence artificielle et en soutenant l'économie circulaire à travers notre boutique solidaire Costa del Sol.
+
+---
+
+## 🏗️ Architecture du Projet
+
+### Frontend (React + TypeScript)
+- **Framework** : React 18 avec TypeScript
+- **Routing** : Wouter
+- **UI** : Shadcn/ui + Tailwind CSS
+- **État** : React Query pour la gestion des données
+- **Formulaires** : React Hook Form + Zod
+
+### Backend (Express + Node.js)
+- **Serveur** : Express.js
+- **Base de données** : PostgreSQL avec Drizzle ORM
+- **Session** : Express Session
+- **IA** : OpenAI API pour Chat IARP
+
+---
+
+## 🎨 Sections Principales
+
+### 1. **Page d'Accueil**
+- Hero Section avec présentation
+- Métriques d'impact en temps réel
+- Showcase des cours populaires
+- Témoignages utilisateurs
+
+### 2. **Chat IARP (IA Responsable PrettyhowQ)**
+- Assistant vocal conversationnel
+- Interface multilingue (78 langues)
+- Navigation entièrement vocale
+- Accessibilité pour malvoyants
+
+### 3. **Plateforme d'Apprentissage**
+- Cours IA éthique et technologie durable
+- Player vidéo interactif
+- Système de progression
+- Certificats de formation
+
+### 4. **Boutique Solidaire Costa del Sol**
+- **Informatique** : Ordinateurs, smartphones reconditionnés
+- **Électroménager** : Appareils domestiques durables
+- **Équipement Marin** : Moteurs et outils pour pêcheurs
+- **Construction** : Outils pour artisans du bâtiment
+- **Équipement Professionnel** : Matériel entreprises
+- **Maison & Jardin** : Articles lifestyle écoresponsables
+
+### 5. **Écosystème Partenaires**
+- **Entreprises Donatrices** : 240+ partenaires
+- **Acheteurs en Ligne** : Communauté d'acheteurs solidaires
+- **Association TechForAll** : Partenaire insertion professionnelle
+
+### 6. **Fonctionnalités Avancées**
+- Sélecteur de langues (78 langues)
+- Analytics et tableaux de bord
+- Système de gouvernance participative
+- Widgets intégrables
+
+---
+
+## 🚀 Fonctionnalités Techniques
+
+### Accessibilité Universelle
+- **Synthèse vocale** : Chat IARP en 78 langues
+- **Navigation vocale** : Contrôle mains libres complet
+- **Interface adaptative** : Contrastes élevés, agrandissement
+- **Support handicap** : Lecteurs d'écran compatibles
+
+### Multilingue
+- **78 langues supportées** avec interface dédiée
+- **Traduction automatique** des contenus
+- **Localisation complète** par région
+
+### IA Intégrée
+- **Chat IARP** : Assistant vocal éducatif
+- **Recommandations** : Cours personnalisés
+- **Génération de contenu** : Support pédagogique automatique
+
+---
+
+## 📦 Installation et Déploiement
+
+### Prérequis
+```bash
+Node.js 18+
+PostgreSQL 14+
+npm ou yarn
+```
+
+### Installation Locale
+```bash
+# Cloner le projet
+git clone [repository-url]
+cd club-empreinte-digitale
+
+# Installer les dépendances
+npm install
+
+# Configuration environnement
+cp .env.example .env
+# Configurer DATABASE_URL et OPENAI_API_KEY
+
+# Migration base de données
+npm run db:migrate
+
+# Démarrer le serveur de développement
+npm run dev
+```
+
+### Structure des Fichiers
+```
+├── client/src/
+│   ├── components/          # Composants React
+│   ├── pages/              # Pages principales
+│   ├── hooks/              # Hooks personnalisés
+│   └── lib/                # Utilitaires
+├── server/
+│   ├── routes.ts           # API Routes
+│   ├── storage.ts          # Couche données
+│   └── openai.ts           # Intégration IA
+├── shared/
+│   └── schema.ts           # Schémas base de données
+└── package.json
+```
+
+---
+
+## 🎯 Roadmap Développement
+
+### Phase 1 : Fonctionnalités Core (2-3 semaines)
+- [ ] Authentification utilisateur
+- [ ] Système de paiement Stripe
+- [ ] Upload de contenu cours
+- [ ] Chat support temps réel
+
+### Phase 2 : Intégrations Avancées (1-2 semaines)
+- [ ] API OpenAI Chat IARP fonctionnel
+- [ ] Emails automatisés
+- [ ] Analytics avancées
+- [ ] Sauvegarde automatique
+
+### Phase 3 : Optimisation (1 semaine)
+- [ ] Performance et SEO
+- [ ] Tests utilisateur
+- [ ] Documentation complète
+- [ ] Formation équipe
+
+---
+
+## 💰 Budget Prévisionnel
+
+### Développement
+- **Minimal** : 8,500€
+- **Recommandé** : 15,000€
+- **Premium** : 25,000€
+
+### Coûts Annuels
+- **Hébergement** : 500-800€
+- **Domaines** : 100€
+- **API OpenAI** : 600-2,400€
+- **Maintenance** : 2,000-5,000€
+
+---
+
+## 🏆 Aides et Financements
+
+### Subventions Publiques
+- **France Num** : 500€ digitalisation
+- **Aide TPE Numérique** : 500€ remboursables
+- **BPI France** : Prêts préférentiels
+- **Aides régionales** : Variables
+
+### Dispositifs Spécialisés
+- **Mission Handicap** : Accessibilité numérique
+- **Fonds Social Européen** : Projets inclusifs
+- **AGEFIPH** : Emploi personnes handicapées
+- **Fondations privées** : Projets éducatifs
+
+### Estimation Aide Totale
+**2,000€ à 5,000€** - Reste à charge : **10,000€ à 13,000€**
+
+---
+
+## 🛠️ Technologies Utilisées
+
+### Frontend
+- React 18 + TypeScript
+- Tailwind CSS + Shadcn/ui
+- React Query (TanStack)
+- React Hook Form + Zod
+- Wouter (Routing)
+- Lucide React (Icons)
+
+### Backend
+- Express.js + TypeScript
+- PostgreSQL + Drizzle ORM
+- OpenAI API
+- Express Session
+- Passport.js
+
+### DevOps
+- Vite (Build tool)
+- ESBuild (Bundler)
+- Git + GitHub
+- Deployment via Replit
+
+---
+
+## 📊 Métriques Actuelles
+
+- **32 cours** disponibles
+- **41,343 apprenants** inscrits
+- **4.8/5** note moyenne écologique
+- **2,340 apprenants** malvoyants
+- **240+ entreprises** donatrices
+- **78 langues** supportées
+
+---
+
+## 🤝 Partenaires
+
+### Association TechForAll
+- Insertion professionnelle
+- Formation numérique
+- Accompagnement social
+
+### Entreprises Donatrices
+- Don d'équipements IT
+- Matériel professionnel
+- Partenariats RSE
+
+### Costa del Sol
+- Reconditionnement équipements
+- Vente solidaire
+- Économie circulaire
+
+---
+
+## 📞 Support
+
+### Contact
+- **Email** : support@club-empreinte-digitale.fr
+- **Chat IARP** : Assistant vocal 24/7
+- **Communauté** : Forum utilisateurs
+
+### Documentation
+- Guide utilisateur complet
+- API Documentation
+- Tutoriels vidéo
+- FAQ multilingue
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+---
+
+## 🎉 Contribuer
+
+Nous accueillons les contributions ! Consultez `CONTRIBUTING.md` pour les guidelines.
+
+### Développeurs
+1. Fork le projet
+2. Créer une branche feature
+3. Commit les modifications
+4. Push vers la branche
+5. Ouvrir une Pull Request
+
+---
+
+**Dernière mise à jour** : Janvier 2025  
+**Version** : 1.0.0-beta  
+**Statut** : 80% complété - En développement actif
