@@ -5,6 +5,7 @@ import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { ModulesSection } from '@/components/sections/ModulesSection';
 import { GenerateursSection } from '@/components/sections/GenerateursSection';
+import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
@@ -21,6 +22,7 @@ export default function Home() {
         <ChatIARPSection />
         <ModulesSection />
         <GenerateursSection />
+        <PortfolioSection />
         <EcosystemSection />
         <IAEthiqueSection />
         <TestimonialsSection />
