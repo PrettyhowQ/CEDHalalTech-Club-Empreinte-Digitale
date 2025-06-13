@@ -103,7 +103,7 @@ export function VoiceAssistant() {
               {conversation.length === 0 ? (
                 <div className="text-center text-gray-500 mt-8">
                   <Mic className="h-12 w-12 mx-auto mb-4 text-accent-500" />
-                  <p>Salut ! Je suis IARP, votre assistant IA responsable.</p>
+                  <p>Salut ! Je suis Super IARP Pro, votre assistant IA évolutif.</p>
                   <p className="text-sm mt-2">Tapez votre message ou utilisez la voix.</p>
                 </div>
               ) : (
@@ -178,7 +178,7 @@ export function VoiceAssistant() {
         onClick={() => setIsOpen(true)}
       >
         <Mic className="h-4 w-4" />
-        <span>Chat IARP</span>
+        <span>Super IARP Pro</span>
       </Button>
     </>
   );

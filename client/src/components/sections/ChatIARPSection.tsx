@@ -25,10 +25,10 @@ export function ChatIARPSection() {
   };
 
   const features = [
-    "Modules GPT spécialisés intégrés (écriture, code, recherche)",
-    "Intelligence modulaire évolutive et contextuelle",
-    "Support de 78 langues avec navigation vocale",
-    "Expertise multi-domaines : business, lifestyle, éducation"
+    "Assistant & Coach personnel intelligent et adaptatif",
+    "Manager & Gestionnaire pour optimiser votre productivité", 
+    "Développeur expert : code, debug, architecture complète",
+    "Expert multi-domaines : business, santé, éducation, créativité"
   ];
 
   return (
@@ -49,8 +49,8 @@ export function ChatIARPSection() {
             </h2>
             
             <p className="text-xl text-gray-600 mb-8">
-              Assistant IA évolutif intégrant tous les GPTs spécialisés : écriture, éducation, 
-              programmation, recherche, coaching et bien plus. Navigation vocale 78 langues.
+              Chat IA Responsable PrettyhowQ Pro : Assistant, Coach, Manager, Gestionnaire, 
+              Développeur et expert dans tous les domaines. Intelligence modulaire 78 langues.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -110,8 +110,8 @@ export function ChatIARPSection() {
                   <div className="flex items-start space-x-3 justify-end">
                     <div className="bg-accent-500 rounded-lg px-4 py-2 max-w-xs">
                       <p className="text-sm text-white">
-                        Je vous recommande notre parcours "Fondamentaux IA Éthique". 
-                        Souhaitez-vous que je vous guide vocalement ?
+                        En tant que votre Coach IA, je recommande le parcours "Fondamentaux IA Éthique". 
+                        Je peux aussi vous aider en tant que Manager pour planifier votre apprentissage.
                       </p>
                     </div>
                     <div className="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">

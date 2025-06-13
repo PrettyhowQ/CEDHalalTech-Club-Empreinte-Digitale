@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
+import { ModulesSection } from '@/components/sections/ModulesSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <FormationsSection />
         <ChatIARPSection />
+        <ModulesSection />
         <EcosystemSection />
         <IAEthiqueSection />
         <TestimonialsSection />
