@@ -82,7 +82,7 @@ export function VoiceAssistant() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                  <span className="font-semibold">Chat IARP</span>
+                  <span className="font-semibold">Super IARP Pro</span>
                 </div>
                 <Button
                   variant="ghost"

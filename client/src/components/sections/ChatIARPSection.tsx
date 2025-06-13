@@ -25,10 +25,10 @@ export function ChatIARPSection() {
   };
 
   const features = [
-    "Support de 78 langues en temps réel",
-    "Navigation vocale complète",
-    "Accessibilité pour malvoyants",
-    "Assistance pédagogique personnalisée"
+    "Modules GPT spécialisés intégrés (écriture, code, recherche)",
+    "Intelligence modulaire évolutive et contextuelle",
+    "Support de 78 langues avec navigation vocale",
+    "Expertise multi-domaines : business, lifestyle, éducation"
   ];
 
   return (
@@ -44,13 +44,13 @@ export function ChatIARPSection() {
             </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Chat IARP <br />
-              <span className="text-accent-500">Votre Assistant IA</span>
+              Super IARP Pro <br />
+              <span className="text-accent-500">Assistant IA Évolutif</span>
             </h2>
             
             <p className="text-xl text-gray-600 mb-8">
-              Assistant vocal conversationnel multilingue qui vous accompagne dans votre apprentissage 
-              avec navigation entièrement vocale et accessibilité optimisée.
+              Assistant IA évolutif intégrant tous les GPTs spécialisés : écriture, éducation, 
+              programmation, recherche, coaching et bien plus. Navigation vocale 78 langues.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -87,7 +87,7 @@ export function ChatIARPSection() {
                     <Mic className="text-white h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {isListening ? 'Chat IARP en écoute' : 'Chat IARP disponible'}
+                    {isListening ? 'Super IARP Pro en écoute' : 'Super IARP Pro disponible'}
                   </h3>
                   <p className="text-gray-600">
                     {isListening ? 'Parlez maintenant...' : 'Dites "Bonjour" pour commencer'}
