@@ -1,12 +1,14 @@
 # 🌱 Club Empreinte Digitale - Plateforme d'IA Éthique
 
+*Dernière mise à jour : 14 juin 2025*
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
-> **Une plateforme révolutionnaire pour l'apprentissage de l'Intelligence Artificielle responsable et éthique, propulsée par Super IARP Pro.**
+> **Club Empreinte Digitale - Une plateforme révolutionnaire pour l'apprentissage de l'Intelligence Artificielle responsable et éthique, propulsée par Super IARP Pro.**
 
 ## 📖 À Propos
 
@@ -34,7 +36,7 @@ Super IARP Pro (Intelligence Artificielle Responsable et Polyvalente) est notre 
 - **Certifications professionnelles** reconnues dans l'industrie
 
 ### 🛠️ Générateurs Intelligents
-Notre boîte à outils comprend 12 générateurs spécialisés :
+Notre boîte à outils comprend 13 générateurs spécialisés :
 
 | Générateur | Description | Catégorie |
 |-----------|-------------|-----------|
@@ -50,6 +52,7 @@ Notre boîte à outils comprend 12 générateurs spécialisés :
 | 💡 **Brainstorming** | Génération d'idées innovantes | Innovation |
 | 📈 **Stratégies Marketing** | Plans marketing digitaux complets | Marketing |
 | 👥 **Optimiseur d'Équipe** | Formation d'équipes optimales | Management |
+| 📝 **IARP Markdown Pro** | Intelligence Artificielle Responsable PrettyhowQ Markdown | Documentation |
 
 ### 🌐 Écosystème Intégré
 - **PrettyhowQ** - Technologie IA propriétaire
@@ -304,4 +307,4 @@ Voir le fichier LICENSE pour plus de détails.
 - [ ] ⏳ Tests de charge et performance
 - [ ] ⏳ Monitoring et alertes production
 
-*Dernière mise à jour : Janvier 2025*
+*Dernière mise à jour : 14 juin 2025*

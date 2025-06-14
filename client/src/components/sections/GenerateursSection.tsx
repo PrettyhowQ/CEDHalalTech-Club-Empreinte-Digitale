@@ -153,10 +153,21 @@ const generateurs = [
     bgColor: "bg-violet-50",
     inputs: ["Projet", "Compétences requises", "Disponibilités", "Objectifs"],
     placeholder: "Ex: Équipe pour développer plateforme IA éthique..."
+  },
+  {
+    id: 'iarp-markdown-pro',
+    icon: FileText,
+    title: "IARP Markdown Pro",
+    description: "Intelligence Artificielle Responsable PrettyhowQ pour documentation avancée",
+    category: "Documentation",
+    color: "text-emerald-600",
+    bgColor: "bg-emerald-50",
+    inputs: ["Type de document", "Audience", "Niveau technique", "Format souhaité"],
+    placeholder: "Ex: Documentation technique pour API REST, développeurs senior..."
   }
 ];
 
-const categories = ["Tous", "Professionnel", "Business", "Éducation", "Développement", "Créatif", "Communication"];
+const categories = ["Tous", "Professionnel", "Business", "Éducation", "Développement", "Créatif", "Communication", "Documentation"];
 
 export function GenerateursSection() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -192,8 +203,8 @@ export function GenerateursSection() {
             Boîte à Outils IA Créative
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            12 générateurs intelligents pour automatiser vos tâches créatives et professionnelles
-            avec l'assistance de Super IARP Pro.
+            13 générateurs intelligents pour automatiser vos tâches créatives et professionnelles
+            avec l'assistance de Super IARP Pro, incluant le nouveau IARP Markdown Pro.
           </p>
         </div>
 
