@@ -121,6 +121,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Calendar sync routes
+  app.post("/api/calendar/sync", async (req, res) => {
+    try {
+      const { events, timezone } = req.body;
+      
+      // Simulation de synchronisation Google Calendar
+      // En production, ici vous intégreriez l'API Google Calendar
+      const syncResult = {
+        success: true,
+        synced: events.length,
+        timezone: timezone,
+        message: "Événements synchronisés avec Google Calendar"
+      };
+      
+      console.log(`Calendar sync: ${events.length} events for timezone ${timezone}`);
+      res.json(syncResult);
+    } catch (error: any) {
+      console.error("Error syncing calendar:", error);
+      res.status(500).json({ error: error.message });
+    }
+  });
+
   // Chat IARP routes
   app.post('/api/chat', async (req, res) => {
     try {
