@@ -282,8 +282,28 @@ SESSION_SECRET
 - **Support technique**: support@club-empreinte-digitale.fr
 - **Documentation**: docs.club-empreinte-digitale.fr
 
+## 📊 Statistiques GitHub
+
+[![GitHub stars](https://img.shields.io/github/stars/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
+[![GitHub forks](https://img.shields.io/github/forks/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
+[![GitHub issues](https://img.shields.io/github/issues/club-empreinte-digitale/plateforme-ia-ethique)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique/issues)
+
+## 📫 Me contacter
+
+- 📧 **Email** : [contact@empreintedigitale.club](mailto:contact@empreintedigitale.club)
+- 🌐 **Site** : [Club Empreinte Digitale & IA PrettyhowQ](https://empreintedigitale.club)
+- 📸 **Instagram** : [@empreintedigitale](https://instagram.com/empreintedigitale)
+
+## 🔒 Conformité et Protection des Données
+
+**Hébergement et données** : Toutes les données utilisateurs sont stockées dans des centres de données certifiés à **Genève, Suisse**, garantissant le plus haut niveau de protection et de confidentialité.
+
+**Conformité RGPD** : Cette plateforme respecte intégralement le Règlement Général sur la Protection des Données (RGPD) européen et les normes suisses de protection des données (LPD).
+
 ---
 
 **Votre MacBook Pro M4 Pro Max sera parfaitement configuré pour développer Club Empreinte Digitale avec toutes les fonctionnalités avancées !**
 
-*Dernière mise à jour: 14 juin 2025*
+**© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有**
+
+*Guide mis à jour - Genève, Suisse - 14 juin 2025*

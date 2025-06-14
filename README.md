@@ -348,4 +348,28 @@ Voir le fichier LICENSE pour plus de détails.
 - **14 outils générateurs** développés et déployés
 - **8 projets portfolio** documentés avec impact mesurable
 
+## 📊 Statistiques GitHub
+
+[![GitHub stars](https://img.shields.io/github/stars/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
+[![GitHub forks](https://img.shields.io/github/forks/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
+[![GitHub issues](https://img.shields.io/github/issues/club-empreinte-digitale/plateforme-ia-ethique)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique/issues)
+[![GitHub license](https://img.shields.io/github/license/club-empreinte-digitale/plateforme-ia-ethique)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique/blob/main/LICENSE)
+
+## 📫 Me contacter
+
+- 📧 **Email** : [contact@empreintedigitale.club](mailto:contact@empreintedigitale.club)
+- 🌐 **Site** : [Club Empreinte Digitale & IA PrettyhowQ](https://empreintedigitale.club)
+- 📸 **Instagram** : [@empreintedigitale](https://instagram.com/empreintedigitale)
+
+## 🔒 Conformité et Protection des Données
+
+**Hébergement et données** : Toutes les données utilisateurs sont stockées dans des centres de données certifiés à **Genève, Suisse**, garantissant le plus haut niveau de protection et de confidentialité.
+
+**Conformité RGPD** : Cette plateforme respecte intégralement le Règlement Général sur la Protection des Données (RGPD) européen et les normes suisses de protection des données (LPD). Vos données personnelles sont traitées avec le plus grand soin et ne sont jamais partagées avec des tiers sans votre consentement explicite.
+
+---
+
+**© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有**
+
+*Copyright © 2025 Empreinte Digitale - PrettyhowQ | Données hébergées à Genève, Suisse*
 *Dernière mise à jour : 14 juin 2025*
