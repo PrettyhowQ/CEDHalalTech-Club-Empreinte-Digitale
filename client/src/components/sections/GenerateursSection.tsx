@@ -58,13 +58,13 @@ const generateurs = [
   {
     id: 'planning-generator',
     icon: Calendar,
-    title: "Planificateur Intelligent",
-    description: "Créez des plannings optimisés automatiquement",
+    title: "Planificateur Satellite Pro",
+    description: "Planning synchronisé Google Calendar, horloge satellite, calendriers hégirien/grégorien",
     category: "Productivité",
     color: "text-orange-600",
     bgColor: "bg-orange-50",
-    inputs: ["Projet", "Échéances", "Ressources", "Priorités"],
-    placeholder: "Ex: Lancement de plateforme e-learning en 3 mois..."
+    inputs: ["Projet", "Échéances", "Ressources", "Priorités", "Fuseau horaire", "Type de calendrier"],
+    placeholder: "Ex: Planning formation IA avec synchronisation Google Calendar..."
   },
   {
     id: 'course-generator',

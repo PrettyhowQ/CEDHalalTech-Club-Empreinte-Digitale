@@ -11,6 +11,7 @@ import { useAuth } from "@/hooks/useAuth";
 import Home from "@/pages/Home";
 import Landing from "@/pages/Landing";
 import Formations from "@/pages/Formations";
+import Planning from "@/pages/Planning";
 import Dashboard from "@/pages/Dashboard";
 import NotFound from "@/pages/not-found";
 
@@ -22,6 +23,7 @@ function Router() {
       {/* Public routes */}
       <Route path="/formations" component={Formations} />
       <Route path="/formations/:category" component={Formations} />
+      <Route path="/planning" component={Planning} />
       
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (
