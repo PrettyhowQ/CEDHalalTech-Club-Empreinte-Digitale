@@ -5,6 +5,10 @@ import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { ModulesSection } from '@/components/sections/ModulesSection';
 import { GenerateursSection } from '@/components/sections/GenerateursSection';
+import { AcademieSection } from '@/components/sections/AcademieSection';
+import { RechercheSection } from '@/components/sections/RechercheSection';
+import { MentoratSection } from '@/components/sections/MentoratSection';
+import { CommunauteSection } from '@/components/sections/CommunauteSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
@@ -22,6 +26,10 @@ export default function Home() {
         <ChatIARPSection />
         <ModulesSection />
         <GenerateursSection />
+        <AcademieSection />
+        <RechercheSection />
+        <MentoratSection />
+        <CommunauteSection />
         <PortfolioSection />
         <EcosystemSection />
         <IAEthiqueSection />

@@ -1,0 +1,17 @@
+Catégorie,Outil / Plateforme,Description principale,Niveau technique,Intégration dans CED & IARP Pro
+🔄 Automatisation No-Code,Zapier,"Connecte +5000 apps (Google, Notion, Gmail…)",🔰 Débutant,"✅ Planning, IA, Email, CRM"
+🔄 Automatisation No-Code,Make (ex-Integromat),"Scénarios visuels complexes, plus personnalisable que Zapier",⚙️ Intermédiaire,✅ Email IA + Formulaires
+🔄 Automatisation No-Code,Pabbly Connect,Alternative à Zapier sans limite de tâches,🔰 Débutant,"✅ vCard IA, SMS, Email"
+🔄 Automatisation Code,n8n,"Open source, automation auto-hébergée (RGPD Friendly)",💻 Avancé,✅ Version Suisse RGPD
+🔄 Automatisation Code,Python + cron + API REST,Automatisation backend avec scripts personnalisés,💻 Avancé,✅ Modules IA métiers
+🤖 Agent IA / Automation,AutoGPT / GPT-Engineer,Agent autonome avec objectifs et mémoire,🧠 Avancé,✅ Super IARP + Coach IA
+🤖 Agent IA / Automation,CrewAI / LangGraph,Organisation d'agents IA collaboratifs,🧠 Avancé,✅ Apprentissage structuré
+🤖 Agent IA / Automation,Superagent.sh,Déploiement rapide d'agents GPT dans le cloud,⚙️ Intermédiaire,✅ IA personnalisées
+🤖 Agent IA / Automation,Flowise / Langflow,Interface visuelle pour workflows LLM,🔰 Débutant,✅ Générateurs interactifs
+📡 API & Intégrations,OpenAI API + LangChain,"Intégrer tous les GPTs (écriture, analyse, etc.)",💻 Avancé,✅ Super IARP Pro
+📡 API & Intégrations,Google Workspace + Apps Script,"Automatisations Google Calendar, Docs, Gmail",⚙️ Intermédiaire,✅ Planning IA + Formations
+📡 API & Intégrations,Notion API + AI,Centralisation du contenu + IA,🔰 Débutant,✅ Tableau de bord apprenant
+📦 Data & Monitoring,Airtable + Scripts IA,Base de données + automatisations intelligentes,🔰 Débutant,✅ Fiches formations + CRM
+📦 Data & Monitoring,Replit + Flask / FastAPI,Développement d’API IA internes,💻 Avancé,✅ Backend IA PrettyhowQ
+📦 Data & Monitoring,PostHog / Plausible,Analytics éthique pour interactions IA,⚙️ Intermédiaire,✅ Statistiques anonymisées
+🔐 Éthique & RGPD,Swiss hosting + GDPR proxies,"Hébergement en Suisse, traitement sécurisé",🔐 Expert,✅ Conforme RGPD + Éthique
