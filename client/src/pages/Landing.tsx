@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { LiveClock } from '@/components/ui/LiveClock';
+import { QuickAgenda } from '@/components/ui/QuickAgenda';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
@@ -13,6 +14,8 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <LiveClock variant="desktop" />
+      <QuickAgenda userId="guest" variant="compact" />
       <main>
         <HeroSection />
         <FormationsSection />

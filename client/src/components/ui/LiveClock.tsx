@@ -87,7 +87,11 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
     if (variant === 'desktop') {
       const savedPosition = localStorage.getItem('clock_position');
       if (savedPosition) {
-        setClockPosition(JSON.parse(savedPosition));
+        const position = JSON.parse(savedPosition);
+        // Vérifier si la position est dans les limites de l'écran
+        if (position.x > -200 && position.x < 200 && position.y > -100 && position.y < 100) {
+          setClockPosition(position);
+        }
       }
     }
   }, [showPomodoro, userId, variant]);
@@ -262,6 +266,11 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
     }
   };
 
+  const resetClockPosition = () => {
+    setClockPosition({ x: 0, y: 0 });
+    localStorage.removeItem('clock_position');
+  };
+
   if (variant === 'desktop') {
     return (
       <motion.div
@@ -279,7 +288,7 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
           x: clockPosition.x,
           y: clockPosition.y
         }}
-        className="fixed top-20 right-4 z-40 cursor-grab active:cursor-grabbing"
+        className="fixed top-20 right-4 z-50 cursor-grab active:cursor-grabbing"
       >
         <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg">
           <CardContent className="p-3">
@@ -314,6 +323,17 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
                 <MapPin className="h-3 w-3 inline mr-1" />
                 {location.city}
               </div>
+              
+              {/* Bouton reset position */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={resetClockPosition}
+                className="h-5 w-5 p-0 text-gray-400 hover:text-gray-600"
+                title="Réinitialiser position"
+              >
+                <RotateCcw className="h-3 w-3" />
+              </Button>
             </div>
           </CardContent>
         </Card>
