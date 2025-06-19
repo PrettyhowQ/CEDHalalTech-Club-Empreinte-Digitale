@@ -2,6 +2,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { LiveClock } from '@/components/ui/LiveClock';
 import { QuickAgenda } from '@/components/ui/QuickAgenda';
+import { ParticleBackground } from '@/components/ui/ParticleBackground';
+import { ThemeCustomizer } from '@/components/ui/ThemeCustomizer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
@@ -12,11 +14,12 @@ import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <ParticleBackground />
       <Header />
       <LiveClock variant="desktop" />
       <QuickAgenda userId="guest" variant="compact" />
-      <main>
+      <main className="relative z-10">
         <HeroSection />
         <FormationsSection />
         <ChatIARPSection />
@@ -44,6 +47,7 @@ export default function Landing() {
       </main>
       <Footer />
       <VoiceAssistant />
+      <ThemeCustomizer />
     </div>
   );
 }

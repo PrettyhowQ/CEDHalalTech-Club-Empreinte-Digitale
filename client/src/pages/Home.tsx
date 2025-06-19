@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { LiveClock } from '@/components/ui/LiveClock';
 import { QuickAgenda } from '@/components/ui/QuickAgenda';
 import { ParticleBackground } from '@/components/ui/ParticleBackground';
-import { VisualEnhancementToggle } from '@/components/ui/VisualEnhancementToggle';
+import { ThemeCustomizer } from '@/components/ui/ThemeCustomizer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
@@ -61,7 +61,7 @@ export default function Home() {
       </main>
       <Footer />
       <VoiceAssistant />
-      <VisualEnhancementToggle />
+      <ThemeCustomizer />
     </div>
   );
 }

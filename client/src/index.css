@@ -110,6 +110,74 @@ body:not(.enhanced-visuals) .drop-shadow-lg {
   filter: none;
 }
 
+/* Variables CSS pour les thèmes personnalisables */
+:root {
+  --theme-gradient: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  --theme-particles: rgba(59, 130, 246, 0.6);
+  --theme-glow: rgba(59, 130, 246, 0.3);
+  --theme-text: rgb(255, 255, 255);
+  --theme-text-secondary: rgba(255, 255, 255, 0.8);
+  --theme-accent: rgb(255, 215, 0);
+}
+
+/* Application des thèmes personnalisés */
+body.enhanced-visuals .gradient-bg {
+  background: var(--theme-gradient);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+body.enhanced-visuals .particle {
+  background: var(--theme-particles);
+}
+
+body.enhanced-visuals .animate-glow {
+  box-shadow: 0 0 5px var(--theme-glow), 0 0 20px var(--theme-glow), 0 0 30px var(--theme-glow);
+}
+
+body.enhanced-visuals .text-white {
+  color: var(--theme-text) !important;
+}
+
+body.enhanced-visuals .text-white\/80 {
+  color: var(--theme-text-secondary) !important;
+}
+
+body.enhanced-visuals .text-white\/70 {
+  color: var(--theme-text-secondary) !important;
+}
+
+body.enhanced-visuals .text-yellow-300 {
+  color: var(--theme-accent) !important;
+}
+
+/* Effets spéciaux pour les thèmes pailletés */
+body.sparkle-effect .glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Cpath d='M30 30l4-4v8l-4-4zm0 0l-4-4v8l4-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+body.sparkle-effect .animate-glow {
+  animation: glow 1s ease-in-out infinite, sparkle-shimmer 3s linear infinite;
+}
+
+@keyframes sparkle-shimmer {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.2) saturate(1.3); }
+}
+
+/* Amélioration des contrastes pour certains thèmes */
+body.enhanced-visuals .text-cyan-300 {
+  color: var(--theme-accent) !important;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
