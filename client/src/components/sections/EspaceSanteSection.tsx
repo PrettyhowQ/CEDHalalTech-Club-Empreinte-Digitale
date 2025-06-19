@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
-import { Heart, Utensils, Activity, Calendar, Users, Star, Clock, Award } from 'lucide-react';
+import { Heart, Utensils, Activity, Calendar, Users, Star, Clock, Award, Smartphone, Zap, MapPin, Bell, Target, TrendingUp, CheckCircle } from 'lucide-react';
 
 interface NutritionProgram {
   id: string;
@@ -48,6 +48,84 @@ interface Testimonial {
 }
 
 const nutritionPrograms: NutritionProgram[] = [
+  {
+    id: 'nutrition-football',
+    name: 'Nutrition Footballeur Performance',
+    description: 'Programme spécialisé pour optimiser les performances sur le terrain',
+    duration: '8 semaines',
+    price: 327,
+    currency: 'EUR',
+    rating: 4.9,
+    students: 184,
+    modules: [
+      'Nutrition pré-match optimale',
+      'Récupération post-entraînement',
+      'Hydratation stratégique',
+      'Gestion des voyages et déplacements',
+      'Supplémentation légale et efficace'
+    ],
+    objectives: [
+      'Augmenter endurance et vitesse',
+      'Accélérer la récupération',
+      'Maintenir le poids de forme',
+      'Prévenir les blessures'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Expert'
+  },
+  {
+    id: 'nutrition-tennis',
+    name: 'Nutrition Tennis Elite',
+    description: 'Stratégies nutritionnelles pour les tournois et compétitions',
+    duration: '6 semaines',
+    price: 297,
+    currency: 'EUR',
+    rating: 4.8,
+    students: 156,
+    modules: [
+      'Endurance sur terre battue',
+      'Récupération entre sets',
+      'Nutrition en tournoi',
+      'Gestion de la chaleur',
+      'Mental et alimentation'
+    ],
+    objectives: [
+      'Maintenir concentration',
+      'Optimiser la puissance',
+      'Gérer les longs matchs',
+      'Récupération rapide'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Expert'
+  },
+  {
+    id: 'nutrition-musculation',
+    name: 'Nutrition Musculation & Force',
+    description: 'Développer masse musculaire et force avec une nutrition adaptée',
+    duration: '10 semaines',
+    price: 247,
+    currency: 'EUR',
+    rating: 4.7,
+    students: 892,
+    modules: [
+      'Protéines et synthèse musculaire',
+      'Timing nutritionnel optimal',
+      'Supplémentation naturelle',
+      'Nutrition en sèche/prise de masse',
+      'Récupération et sommeil'
+    ],
+    objectives: [
+      'Développer la masse musculaire',
+      'Augmenter la force',
+      'Optimiser la récupération',
+      'Réduire la graisse corporelle'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Intermédiaire'
+  },
   {
     id: 'perte-poids-naturelle',
     name: 'Perte de Poids Naturelle',
