@@ -5,6 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/context/LanguageContext';
 import { LanguageSelector } from '@/components/language/LanguageSelector';
 import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
+import { LiveClock } from '@/components/ui/LiveClock';
 import { Brain, Menu, X } from 'lucide-react';
 
 export function Header() {

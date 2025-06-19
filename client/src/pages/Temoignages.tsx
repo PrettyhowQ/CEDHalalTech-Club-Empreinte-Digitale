@@ -147,10 +147,10 @@ export default function Temoignages() {
                       {[...Array(5)].map((_, i) => (
                         <Star 
                           key={i} 
-                          className={`h-4 w-4 ${i < testimonial.rating ? 'text-amber-400 fill-current' : 'text-gray-300'}`} 
+                          className={`h-4 w-4 ${i < (testimonial.rating || 0) ? 'text-amber-400 fill-current' : 'text-gray-300'}`} 
                         />
                       ))}
-                      <span className="ml-2 text-sm text-gray-600">({testimonial.rating}/5)</span>
+                      <span className="ml-2 text-sm text-gray-600">({testimonial.rating || 0}/5)</span>
                     </div>
                   </CardHeader>
                   
@@ -160,9 +160,9 @@ export default function Temoignages() {
                     </p>
                     
                     <div className="flex items-center justify-between text-sm text-gray-500">
-                      <span>{testimonial.course || 'Formation IA Éthique'}</span>
+                      <span>Formation IA Éthique</span>
                       <span>
-                        {new Date(testimonial.createdAt).toLocaleDateString('fr-FR')}
+                        {testimonial.createdAt ? new Date(testimonial.createdAt).toLocaleDateString('fr-FR') : 'Récent'}
                       </span>
                     </div>
                   </CardContent>
