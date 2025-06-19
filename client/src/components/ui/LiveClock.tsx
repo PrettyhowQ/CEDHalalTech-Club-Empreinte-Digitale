@@ -158,6 +158,28 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
     }
   };
 
+  const formatHijriDate = (date: Date): string => {
+    // Conversion approximative vers le calendrier hégirien
+    const gregorianYear = date.getFullYear();
+    const gregorianMonth = date.getMonth() + 1;
+    const gregorianDay = date.getDate();
+    
+    // Calcul approximatif (basé sur l'époque hégirienne : 16 juillet 622)
+    const daysSinceHijraEpoch = Math.floor((date.getTime() - new Date(622, 6, 16).getTime()) / (24 * 60 * 60 * 1000));
+    const hijriYear = Math.floor(daysSinceHijraEpoch / 354.367) + 1;
+    const dayInYear = daysSinceHijraEpoch % 354.367;
+    const hijriMonth = Math.floor(dayInYear / 29.531) + 1;
+    const hijriDay = Math.floor(dayInYear % 29.531) + 1;
+    
+    const hijriMonths = [
+      'Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani',
+      'Jumada al-Awwal', 'Jumada al-Thani', 'Rajab', 'Sha\'ban',
+      'Ramadan', 'Shawwal', 'Dhu al-Qi\'dah', 'Dhu al-Hijjah'
+    ];
+    
+    return `${hijriDay} ${hijriMonths[hijriMonth - 1] || hijriMonths[0]} ${hijriYear} H`;
+  };
+
   const formatPomodoroTime = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -237,31 +259,40 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="fixed top-24 right-4 z-40"
+        className="fixed top-20 right-4 z-40"
       >
         <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg">
           <CardContent className="p-3">
-            <div className="flex items-center gap-3">
-              <div className="text-right">
-                <div className="font-mono text-lg font-bold text-gray-900">
-                  {formatTime(currentTime)}
-                </div>
-                <div className="text-xs text-gray-600">
-                  {formatDate(currentTime)}
-                </div>
+            <div className="flex flex-col items-end gap-2">
+              {/* Heure */}
+              <div className="font-mono text-lg font-bold text-gray-900">
+                {formatTime(currentTime)}
               </div>
               
-              <div className="flex flex-col items-center gap-1">
-                <div className="flex items-center gap-1">
-                  <Satellite className="h-3 w-3 text-blue-600" />
-                  {satelliteConnected && (
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  )}
-                </div>
-                <div className="text-xs text-gray-500 text-center">
-                  <MapPin className="h-3 w-3 inline mr-1" />
-                  {location.city}
-                </div>
+              {/* Date grégorienne */}
+              <div className="text-xs text-gray-600 text-right">
+                <Calendar className="h-3 w-3 inline mr-1" />
+                {formatDate(currentTime)}
+              </div>
+              
+              {/* Date hégirienne */}
+              <div className="text-xs text-purple-600 text-right">
+                🌙 {formatHijriDate(currentTime)}
+              </div>
+              
+              {/* Indicateur satellite */}
+              <div className="flex items-center gap-1 text-xs text-gray-500">
+                <Satellite className="h-3 w-3 text-blue-600" />
+                <span>Satellite</span>
+                {satelliteConnected && (
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                )}
+              </div>
+              
+              {/* Localisation */}
+              <div className="text-xs text-gray-500 text-right">
+                <MapPin className="h-3 w-3 inline mr-1" />
+                {location.city}
               </div>
             </div>
           </CardContent>
