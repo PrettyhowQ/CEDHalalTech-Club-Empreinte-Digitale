@@ -34,6 +34,7 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
   const [currentTime, setCurrentTime] = useState(new Date());
   const [location, setLocation] = useState({ city: 'Paris', country: 'France', timezone: 'Europe/Paris' });
   const [satelliteConnected, setSatelliteConnected] = useState(true);
+  const [clockPosition, setClockPosition] = useState({ x: 0, y: 0 });
   const [pomodoroState, setPomodoroState] = useState<PomodoroState>({
     isActive: false,
     timeLeft: 25 * 60, // 25 minutes en secondes
@@ -73,16 +74,23 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
     }
   }, []);
 
-  // Timer Pomodoro personnalisé par utilisateur
+  // Timer Pomodoro personnalisé par utilisateur et position horloge
   useEffect(() => {
     if (showPomodoro && userId) {
-      // Charger l'état Pomodoro sauvegardé pour cet utilisateur
       const savedState = localStorage.getItem(`pomodoro_${userId}`);
       if (savedState) {
         setPomodoroState(JSON.parse(savedState));
       }
     }
-  }, [showPomodoro, userId]);
+    
+    // Charger la position sauvegardée de l'horloge
+    if (variant === 'desktop') {
+      const savedPosition = localStorage.getItem('clock_position');
+      if (savedPosition) {
+        setClockPosition(JSON.parse(savedPosition));
+      }
+    }
+  }, [showPomodoro, userId, variant]);
 
   // Gestion du timer Pomodoro
   useEffect(() => {
@@ -257,9 +265,21 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
   if (variant === 'desktop') {
     return (
       <motion.div
+        drag="x"
+        dragConstraints={{ left: -400, right: 0 }}
+        dragElastic={0.1}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="fixed top-20 right-4 z-40"
+        onDragEnd={(event, info) => {
+          const newPosition = { x: info.offset.x, y: clockPosition.y };
+          setClockPosition(newPosition);
+          localStorage.setItem('clock_position', JSON.stringify(newPosition));
+        }}
+        style={{
+          x: clockPosition.x,
+          y: clockPosition.y
+        }}
+        className="fixed top-20 right-4 z-40 cursor-grab active:cursor-grabbing"
       >
         <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg">
           <CardContent className="p-3">
