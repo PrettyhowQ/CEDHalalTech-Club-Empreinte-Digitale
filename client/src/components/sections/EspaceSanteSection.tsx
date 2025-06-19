@@ -321,6 +321,148 @@ export function EspaceSanteSection() {
           </div>
         </motion.div>
 
+        {/* Section Application Mobile - À venir */}
+        <div className="mb-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-50 to-emerald-50 p-8 md:p-12">
+            <div className="absolute top-4 right-4">
+              <span className="bg-orange-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                Bientôt Disponible
+              </span>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Smartphone className="h-8 w-8 text-green-600" />
+                  <h2 className="text-3xl font-bold">Mon Coach Sportif</h2>
+                </div>
+                <p className="text-xl text-green-600 font-semibold mb-4">
+                  À emporter partout - En salle de sport, tous les sports
+                </p>
+                <p className="text-gray-700 mb-6">
+                  L'application mobile révolutionnaire de coaching personnalisé avec Souheila Yakoubi-Ozel. 
+                  Votre coach nutrition et sport dans votre poche pour une santé mentale et physique optimale.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-red-500" />
+                    <span className="text-sm">Santé mentale</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-5 w-5 text-yellow-500" />
+                    <span className="text-sm">Performance physique</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-blue-500" />
+                    <span className="text-sm">Partout avec vous</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-purple-500" />
+                    <span className="text-sm">Coaching personnalisé</span>
+                  </div>
+                </div>
+
+                {/* Formules de prix par niveau */}
+                <div className="space-y-4 mb-6">
+                  <h3 className="text-lg font-semibold">Formules adaptées à votre niveau :</h3>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg border">
+                      <div>
+                        <span className="font-semibold text-green-600">Débutant</span>
+                        <p className="text-sm text-gray-600">Bases nutrition + exercices adaptés</p>
+                      </div>
+                      <span className="text-lg font-bold">19€/mois</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg border">
+                      <div>
+                        <span className="font-semibold text-blue-600">Intermédiaire</span>
+                        <p className="text-sm text-gray-600">Programmes avancés + suivi personnalisé</p>
+                      </div>
+                      <span className="text-lg font-bold">39€/mois</span>
+                    </div>
+                    
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-amber-200">
+                      <div>
+                        <span className="font-semibold text-amber-600">Expert/Athlète</span>
+                        <p className="text-sm text-gray-600">Coaching intensif + analyse performance</p>
+                      </div>
+                      <span className="text-lg font-bold">79€/mois</span>
+                    </div>
+                  </div>
+                </div>
+
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  <Bell className="h-4 w-4 mr-2" />
+                  Me notifier du lancement
+                </Button>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold mb-4">Avis des testeurs exclusifs :</h3>
+                
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Thomas M. - Coach personnel</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Incroyable ! L'app me suit en temps réel pendant mes séances. Les conseils de Souheila sont parfaitement adaptés à chaque exercice."
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Lisa R. - Athlète professionnelle</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "L'aspect santé mentale est révolutionnaire. Je me sens plus motivée et équilibrée dans ma préparation. Formule Expert parfaite !"
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Marc D. - Débutant</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Parfait pour débuter ! L'app s'adapte à mon niveau et Souheila m'encourage à chaque étape. 19€/mois, c'est donné !"
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Sarah L. - Niveau intermédiaire</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Le suivi personnalisé de la formule Intermédiaire m'a permis de dépasser mes objectifs. Excellent rapport qualité-prix !"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Tabs defaultValue="programmes" className="w-full">
           <TabsList className="grid w-full grid-cols-4 mb-8">
             <TabsTrigger value="programmes" className="flex items-center gap-2">
