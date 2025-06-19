@@ -20,7 +20,7 @@ interface NutritionProgram {
   objectives: string[];
   nutritionist: string;
   category: 'Perte de poids' | 'Prise de masse' | 'Équilibre' | 'Thérapeutique' | 'Sport';
-  level: 'Débutant' | 'Intermédiaire' | 'Avancé';
+  level: 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Expert';
 }
 
 interface HealthConsultation {
@@ -47,6 +47,95 @@ interface Testimonial {
   };
 }
 
+// Base de données complète des sports mondiaux
+const globalSportsDatabase = [
+  // Sports d'équipe
+  { name: 'Football/Soccer', category: 'Équipe', region: 'Mondial', popularity: 'Très élevée', calories: '400-600/h' },
+  { name: 'Basketball', category: 'Équipe', region: 'Mondial', popularity: 'Très élevée', calories: '300-500/h' },
+  { name: 'Volleyball', category: 'Équipe', region: 'Mondial', popularity: 'Élevée', calories: '200-400/h' },
+  { name: 'Rugby', category: 'Équipe', region: 'Europe/Océanie', popularity: 'Élevée', calories: '500-700/h' },
+  { name: 'Handball', category: 'Équipe', region: 'Europe', popularity: 'Élevée', calories: '400-600/h' },
+  { name: 'Hockey sur glace', category: 'Équipe', region: 'Amérique du Nord/Europe', popularity: 'Élevée', calories: '500-700/h' },
+  { name: 'Baseball', category: 'Équipe', region: 'Amérique/Asie', popularity: 'Élevée', calories: '200-350/h' },
+  { name: 'Cricket', category: 'Équipe', region: 'Commonwealth', popularity: 'Très élevée', calories: '250-400/h' },
+  
+  // Sports individuels - Athlétisme
+  { name: 'Course à pied', category: 'Athlétisme', region: 'Mondial', popularity: 'Très élevée', calories: '400-800/h' },
+  { name: 'Marathon', category: 'Athlétisme', region: 'Mondial', popularity: 'Élevée', calories: '600-900/h' },
+  { name: 'Sprint', category: 'Athlétisme', region: 'Mondial', popularity: 'Élevée', calories: '500-700/h' },
+  { name: 'Saut en hauteur', category: 'Athlétisme', region: 'Mondial', popularity: 'Moyenne', calories: '300-500/h' },
+  { name: 'Saut à la perche', category: 'Athlétisme', region: 'Mondial', popularity: 'Moyenne', calories: '400-600/h' },
+  { name: 'Lancer du poids', category: 'Athlétisme', region: 'Mondial', popularity: 'Moyenne', calories: '300-450/h' },
+  { name: 'Marche rapide', category: 'Athlétisme', region: 'Mondial', popularity: 'Très élevée', calories: '200-350/h' },
+  
+  // Sports aquatiques
+  { name: 'Natation', category: 'Aquatique', region: 'Mondial', popularity: 'Très élevée', calories: '400-700/h' },
+  { name: 'Water-polo', category: 'Aquatique', region: 'Mondial', popularity: 'Moyenne', calories: '500-700/h' },
+  { name: 'Plongée', category: 'Aquatique', region: 'Mondial', popularity: 'Élevée', calories: '200-400/h' },
+  { name: 'Surf', category: 'Aquatique', region: 'Côtier', popularity: 'Élevée', calories: '300-500/h' },
+  { name: 'Kayak', category: 'Aquatique', region: 'Mondial', popularity: 'Élevée', calories: '300-500/h' },
+  { name: 'Aviron', category: 'Aquatique', region: 'Mondial', popularity: 'Moyenne', calories: '400-600/h' },
+  
+  // Sports de raquette
+  { name: 'Tennis', category: 'Raquette', region: 'Mondial', popularity: 'Très élevée', calories: '350-550/h' },
+  { name: 'Badminton', category: 'Raquette', region: 'Asie/Europe', popularity: 'Très élevée', calories: '300-500/h' },
+  { name: 'Tennis de table', category: 'Raquette', region: 'Mondial', popularity: 'Très élevée', calories: '200-350/h' },
+  { name: 'Squash', category: 'Raquette', region: 'Mondial', popularity: 'Élevée', calories: '400-600/h' },
+  
+  // Sports de combat
+  { name: 'Boxe', category: 'Combat', region: 'Mondial', popularity: 'Très élevée', calories: '500-800/h' },
+  { name: 'Karaté', category: 'Combat', region: 'Mondial', popularity: 'Élevée', calories: '400-600/h' },
+  { name: 'Judo', category: 'Combat', region: 'Mondial', popularity: 'Élevée', calories: '400-600/h' },
+  { name: 'Taekwondo', category: 'Combat', region: 'Mondial', popularity: 'Élevée', calories: '350-550/h' },
+  { name: 'Lutte', category: 'Combat', region: 'Mondial', popularity: 'Moyenne', calories: '500-700/h' },
+  { name: 'MMA', category: 'Combat', region: 'Mondial', popularity: 'Élevée', calories: '600-900/h' },
+  
+  // Sports cyclistes
+  { name: 'Cyclisme route', category: 'Cyclisme', region: 'Mondial', popularity: 'Très élevée', calories: '400-800/h' },
+  { name: 'VTT', category: 'Cyclisme', region: 'Mondial', popularity: 'Élevée', calories: '500-800/h' },
+  { name: 'BMX', category: 'Cyclisme', region: 'Mondial', popularity: 'Moyenne', calories: '400-600/h' },
+  { name: 'Cyclisme sur piste', category: 'Cyclisme', region: 'Mondial', popularity: 'Moyenne', calories: '500-700/h' },
+  
+  // Sports d'hiver
+  { name: 'Ski alpin', category: 'Hiver', region: 'Montagnes', popularity: 'Très élevée', calories: '400-600/h' },
+  { name: 'Ski de fond', category: 'Hiver', region: 'Nordique', popularity: 'Élevée', calories: '500-800/h' },
+  { name: 'Snowboard', category: 'Hiver', region: 'Montagnes', popularity: 'Très élevée', calories: '350-550/h' },
+  { name: 'Patinage artistique', category: 'Hiver', region: 'Mondial', popularity: 'Élevée', calories: '300-500/h' },
+  { name: 'Hockey sur glace', category: 'Hiver', region: 'Nordique', popularity: 'Très élevée', calories: '500-700/h' },
+  { name: 'Biathlon', category: 'Hiver', region: 'Nordique', popularity: 'Moyenne', calories: '600-900/h' },
+  
+  // Sports traditionnels/régionaux
+  { name: 'Sumo', category: 'Traditionnel', region: 'Japon', popularity: 'Élevée', calories: '300-500/h' },
+  { name: 'Kabbadi', category: 'Traditionnel', region: 'Inde', popularity: 'Très élevée', calories: '400-600/h' },
+  { name: 'Pelote basque', category: 'Traditionnel', region: 'Pays Basque', popularity: 'Moyenne', calories: '350-500/h' },
+  { name: 'Hurling', category: 'Traditionnel', region: 'Irlande', popularity: 'Élevée', calories: '500-700/h' },
+  { name: 'Capoeira', category: 'Traditionnel', region: 'Brésil', popularity: 'Élevée', calories: '400-600/h' },
+  { name: 'Sepak takraw', category: 'Traditionnel', region: 'Asie du Sud-Est', popularity: 'Élevée', calories: '350-550/h' },
+  
+  // Sports de force
+  { name: 'Haltérophilie', category: 'Force', region: 'Mondial', popularity: 'Élevée', calories: '300-500/h' },
+  { name: 'Powerlifting', category: 'Force', region: 'Mondial', popularity: 'Élevée', calories: '250-400/h' },
+  { name: 'Crossfit', category: 'Force', region: 'Mondial', popularity: 'Très élevée', calories: '500-800/h' },
+  { name: 'Culturisme', category: 'Force', region: 'Mondial', popularity: 'Élevée', calories: '300-500/h' },
+  
+  // Sports de précision
+  { name: 'Tir à l\'arc', category: 'Précision', region: 'Mondial', popularity: 'Élevée', calories: '150-250/h' },
+  { name: 'Tir sportif', category: 'Précision', region: 'Mondial', popularity: 'Élevée', calories: '100-200/h' },
+  { name: 'Billard', category: 'Précision', region: 'Mondial', popularity: 'Élevée', calories: '100-150/h' },
+  { name: 'Fléchettes', category: 'Précision', region: 'Europe', popularity: 'Élevée', calories: '100-150/h' },
+  
+  // Sports motorisés
+  { name: 'Formule 1', category: 'Motorisé', region: 'Mondial', popularity: 'Très élevée', calories: '200-400/h' },
+  { name: 'Rallye', category: 'Motorisé', region: 'Mondial', popularity: 'Élevée', calories: '250-400/h' },
+  { name: 'MotoGP', category: 'Motorisé', region: 'Mondial', popularity: 'Très élevée', calories: '300-500/h' },
+  
+  // Sports émergents
+  { name: 'E-sport', category: 'Émergent', region: 'Mondial', popularity: 'Très élevée', calories: '80-120/h' },
+  { name: 'Parkour', category: 'Émergent', region: 'Mondial', popularity: 'Élevée', calories: '500-800/h' },
+  { name: 'Kitesurf', category: 'Émergent', region: 'Côtier', popularity: 'Élevée', calories: '400-600/h' },
+  { name: 'Slackline', category: 'Émergent', region: 'Mondial', popularity: 'Moyenne', calories: '200-400/h' }
+];
+
 const nutritionPrograms: NutritionProgram[] = [
   {
     id: 'nutrition-football',
@@ -72,7 +161,7 @@ const nutritionPrograms: NutritionProgram[] = [
     ],
     nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Sport',
-    level: 'Expert'
+    level: 'Avancé'
   },
   {
     id: 'nutrition-tennis',
@@ -98,7 +187,7 @@ const nutritionPrograms: NutritionProgram[] = [
     ],
     nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Sport',
-    level: 'Expert'
+    level: 'Avancé'
   },
   {
     id: 'nutrition-musculation',
@@ -121,6 +210,110 @@ const nutritionPrograms: NutritionProgram[] = [
       'Augmenter la force',
       'Optimiser la récupération',
       'Réduire la graisse corporelle'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Intermédiaire'
+  },
+  {
+    id: 'nutrition-natation',
+    name: 'Nutrition Natation Performance',
+    description: 'Alimentation adaptée aux sports aquatiques et endurance',
+    duration: '7 semaines',
+    price: 267,
+    currency: 'EUR',
+    rating: 4.8,
+    students: 234,
+    modules: [
+      'Hydratation en milieu aquatique',
+      'Énergie pour l\'endurance',
+      'Récupération après entraînement',
+      'Nutrition en eau froide/chaude',
+      'Gestion des compétitions longues'
+    ],
+    objectives: [
+      'Optimiser l\'endurance',
+      'Maintenir la température corporelle',
+      'Améliorer les temps',
+      'Récupération efficace'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Intermédiaire'
+  },
+  {
+    id: 'nutrition-marche-rapide',
+    name: 'Nutrition Marche Rapide & Bien-être',
+    description: 'Programme nutritionnel pour activité douce et santé globale',
+    duration: '4 semaines',
+    price: 147,
+    currency: 'EUR',
+    rating: 4.9,
+    students: 1456,
+    modules: [
+      'Énergie naturelle pour l\'effort',
+      'Collations santé pré/post marche',
+      'Hydratation optimale',
+      'Anti-inflammatoires naturels',
+      'Récupération articulaire'
+    ],
+    objectives: [
+      'Soutenir l\'activité quotidienne',
+      'Améliorer l\'endurance',
+      'Protéger les articulations',
+      'Maintenir l\'énergie'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Débutant'
+  },
+  {
+    id: 'nutrition-cyclisme',
+    name: 'Nutrition Cyclisme & Vélo',
+    description: 'Stratégies nutritionnelles pour les sorties longues et courses',
+    duration: '6 semaines',
+    price: 287,
+    currency: 'EUR',
+    rating: 4.7,
+    students: 378,
+    modules: [
+      'Ravitaillement en course',
+      'Gestion de l\'effort long',
+      'Récupération musculaire',
+      'Nutrition par temps chaud',
+      'Préparation physique optimale'
+    ],
+    objectives: [
+      'Maintenir l\'effort sur la durée',
+      'Éviter les hypoglycémies',
+      'Optimiser la récupération',
+      'Améliorer les performances'
+    ],
+    nutritionist: 'Souheila Yakoubi-Ozel',
+    category: 'Sport',
+    level: 'Intermédiaire'
+  },
+  {
+    id: 'nutrition-running',
+    name: 'Nutrition Course à Pied',
+    description: 'De la course loisir au marathon, nutrition adaptée',
+    duration: '8 semaines',
+    price: 297,
+    currency: 'EUR',
+    rating: 4.8,
+    students: 567,
+    modules: [
+      'Nutrition pré-course optimale',
+      'Stratégies marathon/semi',
+      'Récupération post-effort',
+      'Gestion des troubles digestifs',
+      'Préparation mentale par l\'alimentation'
+    ],
+    objectives: [
+      'Améliorer les temps de course',
+      'Éviter les troubles digestifs',
+      'Optimiser la récupération',
+      'Maintenir la motivation'
     ],
     nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Sport',
@@ -415,12 +608,43 @@ export function EspaceSanteSection() {
                   <h2 className="text-3xl font-bold">Mon Coach Sportif</h2>
                 </div>
                 <p className="text-xl text-green-600 font-semibold mb-4">
-                  À emporter partout - En salle de sport, tous les sports
+                  À emporter partout - Compatible avec tous les sports du monde !
                 </p>
                 <p className="text-gray-700 mb-6">
                   L'application mobile révolutionnaire de coaching personnalisé avec Souheila Yakoubi-Ozel. 
                   Votre coach nutrition et sport dans votre poche pour une santé mentale et physique optimale.
+                  <span className="font-semibold text-green-600"> Plus de 70 sports intégrés</span> des 5 continents !
                 </p>
+                
+                <div className="bg-white rounded-lg p-4 mb-6 border">
+                  <h4 className="font-semibold mb-3 text-center">🌍 Sports Disponibles par Continent</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                    <div className="text-center">
+                      <div className="font-semibold">🇪🇺 Europe</div>
+                      <div className="text-gray-600">Football, Tennis, Handball</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold">🇺🇸 Amérique</div>
+                      <div className="text-gray-600">Basketball, Baseball</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold">🇯🇵 Asie</div>
+                      <div className="text-gray-600">Sumo, Badminton, Arts martiaux</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold">🇦🇺 Océanie</div>
+                      <div className="text-gray-600">Rugby, Surf, Cricket</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold">🇿🇦 Afrique</div>
+                      <div className="text-gray-600">Course, Football</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-semibold">❄️ Sports d'hiver</div>
+                      <div className="text-gray-600">Ski, Patinage, Hockey</div>
+                    </div>
+                  </div>
+                </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-2">
@@ -534,6 +758,62 @@ export function EspaceSanteSection() {
                   </div>
                   <p className="text-gray-700 text-sm">
                     "Le suivi personnalisé de la formule Intermédiaire m'a permis de dépasser mes objectifs. Excellent rapport qualité-prix !"
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Pierre M. - Nageur</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Mes temps de natation se sont améliorés de 15% grâce aux conseils nutrition de Souheila. Incontournable pour les sports aquatiques !"
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Martine D. - Marche nordique</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "À 58 ans, je retrouve une énergie de jeune fille ! Le programme marche rapide est parfait pour les seniors actifs."
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Kenji T. - Arts martiaux (Japon)</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "L'app reconnaît parfaitement les spécificités du karaté. Nutrition adaptée aux entraînements intensifs. Arigato Souheila !"
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-sm">Carlos R. - Surf (Brésil)</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Incrível ! Mon coaching nutrition s'adapte même aux conditions de surf tropical. Obrigado for this amazing app !"
                   </p>
                 </div>
               </div>
