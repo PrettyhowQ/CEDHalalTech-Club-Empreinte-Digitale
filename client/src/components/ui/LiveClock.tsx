@@ -237,7 +237,7 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="fixed top-4 right-4 z-50"
+        className="fixed top-24 right-4 z-40"
       >
         <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg">
           <CardContent className="p-3">
