@@ -70,7 +70,7 @@ const nutritionPrograms: NutritionProgram[] = [
       'Adopter de nouvelles habitudes',
       'Maintenir les résultats long terme'
     ],
-    nutritionist: 'Souheila Benali',
+    nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Perte de poids',
     level: 'Débutant'
   },
@@ -96,7 +96,7 @@ const nutritionPrograms: NutritionProgram[] = [
       'Soulager les douleurs',
       'Prévenir les maladies chroniques'
     ],
-    nutritionist: 'Souheila Benali',
+    nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Thérapeutique',
     level: 'Intermédiaire'
   },
@@ -122,7 +122,7 @@ const nutritionPrograms: NutritionProgram[] = [
       'Optimiser la composition corporelle',
       'Prévenir les blessures'
     ],
-    nutritionist: 'Souheila Benali',
+    nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Sport',
     level: 'Avancé'
   },
@@ -148,7 +148,7 @@ const nutritionPrograms: NutritionProgram[] = [
       'Améliorer la fertilité',
       'Soutenir la ménopause'
     ],
-    nutritionist: 'Souheila Benali',
+    nutritionist: 'Souheila Yakoubi-Ozel',
     category: 'Thérapeutique',
     level: 'Intermédiaire'
   }
@@ -548,7 +548,7 @@ export function EspaceSanteSection() {
                     <div className="w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <Heart className="h-16 w-16 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Souheila Benali</h3>
+                    <h3 className="text-2xl font-bold mb-2">Souheila Yakoubi-Ozel</h3>
                     <p className="text-green-600 font-semibold mb-4">Diététicienne-Nutritionniste</p>
                     <div className="space-y-2 text-sm">
                       <div>🎓 Master en Nutrition Clinique</div>

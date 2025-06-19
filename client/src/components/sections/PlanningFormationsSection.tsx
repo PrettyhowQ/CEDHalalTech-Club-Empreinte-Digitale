@@ -118,7 +118,7 @@ const formations: Formation[] = [
     id: 'nutrition-entrepreneuriat',
     title: 'Entrepreneuriat en Nutrition & Santé',
     description: 'Créer et développer son activité dans le secteur santé-nutrition',
-    instructor: 'Souheila Benali',
+    instructor: 'Souheila Yakoubi-Ozel',
     duration: '6 semaines',
     startDate: '2025-07-15',
     endDate: '2025-08-26',

@@ -277,9 +277,9 @@ const internships: Internship[] = [
   },
   {
     id: 'stage-liberal',
-    name: 'Cabinet Diététique - Souheila Benali',
+    name: 'Cabinet Diététique - Souheila Yakoubi-Ozel',
     location: 'Paris, France',
-    supervisor: 'Souheila Benali',
+    supervisor: 'Souheila Yakoubi-Ozel',
     duration: 6,
     startDate: '2025-06-15',
     endDate: '2025-07-26',
