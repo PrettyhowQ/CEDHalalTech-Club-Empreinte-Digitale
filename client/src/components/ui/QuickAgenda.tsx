@@ -190,7 +190,7 @@ export function QuickAgenda({ userId = 'guest', variant = 'compact' }: QuickAgen
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
     >
-      <Card className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg w-80">
+      <Card className="glass-effect hover-lift animate-float border-2 border-purple-200/30 shadow-xl w-80">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm flex items-center gap-2">

@@ -290,11 +290,11 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
         }}
         className="fixed top-20 right-4 z-50 cursor-grab active:cursor-grabbing"
       >
-        <Card className="bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg">
+        <Card className="glass-effect hover-lift animate-glow border-2 border-blue-200/30 shadow-xl">
           <CardContent className="p-3">
             <div className="flex flex-col items-end gap-2">
               {/* Heure */}
-              <div className="font-mono text-lg font-bold text-gray-900">
+              <div className="font-mono text-lg font-bold text-white drop-shadow-lg">
                 {formatTime(currentTime)}
               </div>
               
