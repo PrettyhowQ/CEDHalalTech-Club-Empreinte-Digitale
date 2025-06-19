@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Palette, Sparkles, Heart, Sun, Moon, Leaf, Rainbow, Star, RotateCcw } from 'lucide-react';
+import { Palette, Sparkles, Heart, Sun, Moon, Leaf, Rainbow, Star, RotateCcw, Monitor } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface ThemeConfig {
@@ -113,6 +113,18 @@ const themes: ThemeConfig[] = [
     textColor: 'rgb(255, 255, 255)',
     secondaryText: 'rgba(255, 255, 255, 0.9)',
     accentColor: 'rgb(255, 255, 255)'
+  },
+  {
+    id: 'developer',
+    name: 'Nuit de Développeur',
+    mood: 'Focus',
+    icon: <Monitor className="h-4 w-4" />,
+    gradient: 'linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569)',
+    particles: 'rgba(59, 130, 246, 0.6)',
+    glowColor: 'rgba(59, 130, 246, 0.4)',
+    textColor: 'rgb(148, 163, 184)',
+    secondaryText: 'rgba(148, 163, 184, 0.8)',
+    accentColor: 'rgb(34, 211, 238)'
   }
 ];
 
@@ -286,6 +298,7 @@ export function ThemeCustomizer() {
                 <ul className="text-sm text-blue-800 space-y-1">
                   <li>• <strong>Matin :</strong> Essayez "Coucher de Soleil" ou "Ivoire Doux"</li>
                   <li>• <strong>Travail :</strong> "Océan Profond" favorise la concentration</li>
+                  <li>• <strong>Développement :</strong> "Nuit de Développeur" repose les yeux</li>
                   <li>• <strong>Créativité :</strong> "Fluo Électrique" ou "Arc-en-ciel" stimulent</li>
                   <li>• <strong>Détente :</strong> "Forêt Émeraude" apaise naturellement</li>
                 </ul>
