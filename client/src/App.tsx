@@ -29,6 +29,9 @@ function Router() {
       {/* Public routes */}
       <Route path="/formations" component={Formations} />
       <Route path="/formations/:category" component={Formations} />
+      <Route path="/ressources" component={Formations} />
+      <Route path="/boutique" component={Portfolio} />
+      <Route path="/ia-ethique" component={APropos} />
       <Route path="/planning" component={Planning} />
       <Route path="/coaching" component={CoachingMobile} />
       <Route path="/contact" component={Contact} />
