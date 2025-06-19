@@ -14,6 +14,11 @@ import Formations from "@/pages/Formations";
 import Planning from "@/pages/Planning";
 import Dashboard from "@/pages/Dashboard";
 import CoachingMobile from "@/pages/CoachingMobile";
+import Contact from "@/pages/Contact";
+import APropos from "@/pages/APropos";
+import FAQ from "@/pages/FAQ";
+import Portfolio from "@/pages/Portfolio";
+import Temoignages from "@/pages/Temoignages";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +31,24 @@ function Router() {
       <Route path="/formations/:category" component={Formations} />
       <Route path="/planning" component={Planning} />
       <Route path="/coaching" component={CoachingMobile} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/a-propos" component={APropos} />
+      <Route path="/faq" component={FAQ} />
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/temoignages" component={Temoignages} />
+      <Route path="/formations/programmation" component={Formations} />
+      <Route path="/formations/dietetique" component={Formations} />
+      <Route path="/formations/ia-domains" component={Formations} />
+      <Route path="/formations/certifications" component={Formations} />
+      <Route path="/chat" component={Formations} />
+      <Route path="/aide" component={FAQ} />
+      <Route path="/docs" component={FAQ} />
+      <Route path="/status" component={Contact} />
+      <Route path="/communaute" component={Temoignages} />
+      <Route path="/gouvernance" component={APropos} />
+      <Route path="/legal/confidentialite" component={FAQ} />
+      <Route path="/legal/conditions" component={FAQ} />
+      <Route path="/legal/cookies" component={FAQ} />
       
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (
