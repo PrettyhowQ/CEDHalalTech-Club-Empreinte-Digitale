@@ -161,6 +161,11 @@ export function ThemeCustomizer() {
   const selectTheme = (themeId: string) => {
     setCurrentTheme(themeId);
     
+    // Fermer automatiquement le panel après sélection pour voir l'effet
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 800);
+    
     // Feedback visuel
     const theme = themes.find(t => t.id === themeId);
     if (theme && 'vibrate' in navigator) {
@@ -171,13 +176,20 @@ export function ThemeCustomizer() {
   return (
     <>
       {/* Bouton flottant pour ouvrir */}
-      <Button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 left-4 z-50 w-12 h-12 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg"
-        title="Personnaliser les couleurs"
-      >
-        <Palette className="h-5 w-5" />
-      </Button>
+      <div className="fixed bottom-4 left-4 z-50">
+        <Button
+          onClick={() => setIsOpen(true)}
+          className="w-12 h-12 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:scale-110 transition-all animate-pulse"
+          title="Personnaliser les couleurs"
+        >
+          <Palette className="h-5 w-5" />
+        </Button>
+        {!isOpen && (
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity">
+            Changer de thème
+          </div>
+        )}
+      </div>
 
       {/* Panel de personnalisation */}
       {isOpen && (
@@ -189,16 +201,27 @@ export function ThemeCustomizer() {
                   <Palette className="h-5 w-5 text-purple-600" />
                   Personnalisez Votre Ambiance
                 </CardTitle>
-                <Button
-                  variant="ghost"
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  ✕
-                </Button>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setIsOpen(false)}
+                    className="text-xs bg-blue-50 hover:bg-blue-100"
+                  >
+                    Voir l'effet
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    ✕
+                  </Button>
+                </div>
               </div>
               <p className="text-sm text-gray-600">
-                Choisissez un thème qui correspond à votre humeur et à votre sensibilité
+                Choisissez un thème qui correspond à votre humeur et à votre sensibilité. 
+                <span className="font-medium text-purple-600">Cliquez pour voir l'effet immédiatement !</span>
               </p>
             </CardHeader>
             
@@ -208,10 +231,10 @@ export function ThemeCustomizer() {
                   <div
                     key={theme.id}
                     onClick={() => selectTheme(theme.id)}
-                    className={`cursor-pointer p-4 rounded-lg border-2 transition-all hover:scale-105 ${
+                    className={`cursor-pointer p-4 rounded-lg border-2 transition-all hover:scale-105 relative group ${
                       currentTheme === theme.id 
-                        ? 'border-purple-500 bg-purple-50' 
-                        : 'border-gray-200 hover:border-purple-300'
+                        ? 'border-purple-500 bg-purple-50 ring-2 ring-purple-200' 
+                        : 'border-gray-200 hover:border-purple-300 hover:shadow-lg'
                     }`}
                   >
                     {/* Aperçu du thème */}
@@ -240,10 +263,19 @@ export function ThemeCustomizer() {
                     
                     {/* Indicateur de sélection */}
                     {currentTheme === theme.id && (
-                      <div className="mt-2 flex justify-center">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                      <div className="absolute top-2 right-2">
+                        <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">✓</span>
+                        </div>
                       </div>
                     )}
+                    
+                    {/* Badge "Cliquez ici" pour l'interactivité */}
+                    <div className="absolute bottom-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Badge variant="secondary" className="text-xs px-2 py-1">
+                        Cliquer pour appliquer
+                      </Badge>
+                    </div>
                   </div>
                 ))}
               </div>
