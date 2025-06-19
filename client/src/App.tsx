@@ -13,6 +13,7 @@ import Landing from "@/pages/Landing";
 import Formations from "@/pages/Formations";
 import Planning from "@/pages/Planning";
 import Dashboard from "@/pages/Dashboard";
+import CoachingMobile from "@/pages/CoachingMobile";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/formations" component={Formations} />
       <Route path="/formations/:category" component={Formations} />
       <Route path="/planning" component={Planning} />
+      <Route path="/coaching" component={CoachingMobile} />
       
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (

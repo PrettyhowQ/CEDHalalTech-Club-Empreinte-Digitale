@@ -696,10 +696,20 @@ export function EspaceSanteSection() {
                   </div>
                 </div>
 
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  <Bell className="h-4 w-4 mr-2" />
-                  Me notifier du lancement
-                </Button>
+                <div className="flex gap-2">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white flex-1">
+                    <Bell className="h-4 w-4 mr-2" />
+                    Me notifier du lancement
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-green-600 text-green-600 hover:bg-green-50"
+                    onClick={() => window.open('/coaching', '_blank')}
+                  >
+                    <Smartphone className="h-4 w-4 mr-2" />
+                    Tester l'app
+                  </Button>
+                </div>
               </div>
 
               <div className="space-y-4">
