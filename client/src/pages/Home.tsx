@@ -14,6 +14,7 @@ import { EspaceSanteSection } from '@/components/sections/EspaceSanteSection';
 import { PlanningFormationsSection } from '@/components/sections/PlanningFormationsSection';
 import { EntreprisesSection } from '@/components/sections/EntreprisesSection';
 import { SimulateurBTSSection } from '@/components/sections/SimulateurBTSSection';
+import { ProgrammingLanguagesSection } from '@/components/sections/ProgrammingLanguagesSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
@@ -41,6 +42,7 @@ export default function Home() {
         <PlanningFormationsSection />
         <EntreprisesSection />
         <SimulateurBTSSection />
+        <ProgrammingLanguagesSection />
         <PortfolioSection />
         <EcosystemSection />
         <IAEthiqueSection />
