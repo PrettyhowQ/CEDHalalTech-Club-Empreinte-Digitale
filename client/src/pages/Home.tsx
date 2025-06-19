@@ -10,6 +10,10 @@ import { RechercheSection } from '@/components/sections/RechercheSection';
 import { MentoratSection } from '@/components/sections/MentoratSection';
 import { CommunauteSection } from '@/components/sections/CommunauteSection';
 import { AutomatisationSection } from '@/components/sections/AutomatisationSection';
+import { EspaceSanteSection } from '@/components/sections/EspaceSanteSection';
+import { PlanningFormationsSection } from '@/components/sections/PlanningFormationsSection';
+import { EntreprisesSection } from '@/components/sections/EntreprisesSection';
+import { SimulateurBTSSection } from '@/components/sections/SimulateurBTSSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
@@ -33,6 +37,10 @@ export default function Home() {
         <MentoratSection />
         <CommunauteSection />
         <AutomatisationSection />
+        <EspaceSanteSection />
+        <PlanningFormationsSection />
+        <EntreprisesSection />
+        <SimulateurBTSSection />
         <PortfolioSection />
         <EcosystemSection />
         <IAEthiqueSection />
