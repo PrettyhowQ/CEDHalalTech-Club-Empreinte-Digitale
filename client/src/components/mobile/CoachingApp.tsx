@@ -36,6 +36,8 @@ import {
 } from 'lucide-react';
 
 import { WorldClock } from './WorldClock';
+import { LiveClock } from '@/components/ui/LiveClock';
+import { useAuth } from '@/hooks/useAuth';
 
 interface WorkoutSession {
   id: string;
@@ -154,6 +156,7 @@ const globalSports: SportActivity[] = [
 ];
 
 export function CoachingApp() {
+  const { user } = useAuth();
   const [isWorkoutActive, setIsWorkoutActive] = useState(false);
   const [currentWorkout, setCurrentWorkout] = useState<WorkoutSession | null>(null);
   const [selectedSport, setSelectedSport] = useState<SportActivity | null>(null);
@@ -526,6 +529,13 @@ export function CoachingApp() {
 
         {/* Section Horaires Mondiaux */}
         <TabsContent value="time" className="space-y-3 sm:space-y-4">
+          <div className="mb-4">
+            <LiveClock 
+              variant="mobile" 
+              showPomodoro={true} 
+              userId="guest" 
+            />
+          </div>
           <WorldClock />
         </TabsContent>
 
