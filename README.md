@@ -1,375 +1,585 @@
-# 🌱 Club Empreinte Digitale - Plateforme d'IA Éthique
+# Club Empreinte Digitale - Plateforme IA Éthique
 
-*Dernière mise à jour : 14 juin 2025*
+## 🌟 Vue d'ensemble
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+**Club Empreinte Digitale** est une plateforme éducative révolutionnaire propulsée par **Super IARP Pro**, dédiée à l'apprentissage de l'intelligence artificielle éthique et responsable. Créée par **Yakoubi Yamina**, cette plateforme sert plus de **34 221 apprenants actifs** à travers le monde avec un objectif de revenus de **2,98M€ pour 2025**.
 
-> **Club Empreinte Digitale - Une plateforme révolutionnaire pour l'apprentissage de l'Intelligence Artificielle responsable et éthique, propulsée par Super IARP Pro.**
+### 🎯 Mission
+Former la nouvelle génération de développeurs et professionnels conscients de l'impact éthique de la technologie, en proposant un écosystème complet d'apprentissage multilingue et inclusif.
 
-## 📖 À Propos
+## 📋 Table des matières
 
-Le **Club Empreinte Digitale** est une plateforme éducative multilingue (78 langues) dédiée à la formation en Intelligence Artificielle éthique et responsable. Avec plus de **34,221 apprenants actifs**, nous construisons un écosystème d'apprentissage innovant centré sur l'impact environnemental et sociétal positif.
+- [Fonctionnalités principales](#-fonctionnalités-principales)
+- [Architecture technique](#-architecture-technique)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Utilisation](#-utilisation)
+- [Sections de la plateforme](#-sections-de-la-plateforme)
+- [Monitoring temps réel](#-monitoring-temps-réel)
+- [Déploiement](#-déploiement)
+- [Contribution](#-contribution)
+- [Support](#-support)
 
-### 🚀 Super IARP Pro - L'Assistant IA Révolutionnaire
+## 🚀 Fonctionnalités principales
 
-Super IARP Pro (Intelligence Artificielle Responsable et Polyvalente) est notre assistant IA de nouvelle génération qui combine 8 modules spécialisés :
+### 🤖 Super IARP Pro - Assistant IA Multilingue
+- Support de **78 langues** avec traduction en temps réel
+- Chat intelligent contextuel avec mémoire conversationnelle
+- Recommandations personnalisées basées sur le profil utilisateur
+- Interface vocale avec reconnaissance et synthèse vocale
 
-- 📝 **IA d'écriture** - Assistant d'auteur, correcteur, traducteur
-- 🎓 **Éducation/Tutorat** - Cours adaptatifs et personnalisés
-- 🌿 **Environnement & Société** - Solutions durables et éco-responsables
-- 💼 **Productivité & Business** - Stratégie et management intelligent
-- 💻 **Programmation & Développement** - Copilote de code avancé
-- 🔍 **Recherche & Analyse** - Synthèse intelligente de documents
-- ❤️ **Lifestyle & Coach** - Bien-être et développement personnel
-- 🧠 **IA Éthique** - Formation responsable et gouvernance
+### 📚 Écosystème éducatif complet
+- **Formations certifiantes** en IA éthique
+- **Simulateur BTS Diététique** avec Souheila Yakoubi-Ozel
+- **Académie de programmation** avec 70+ langages
+- **Espace santé et nutrition** personnalisé
+- **Outils d'automatisation** (16 outils intégrés)
 
-## ✨ Fonctionnalités Principales
+### 🏢 Solutions entreprises
+- Formation personnalisée pour équipes
+- Consultations d'experts sectoriels
+- Outils de génération de contenu IA
+- Analytics avancés et tableaux de bord
 
-### 🎯 Apprentissage Intelligent
-- **Formations personnalisées** avec adaptation au niveau de l'apprenant pour 34,221+ apprenants actifs
-- **Support multilingue** avec traduction instantanée en 78 langues
-- **Suivi de progression** en temps réel avec analytics avancés
-- **Certifications professionnelles** reconnues dans l'industrie
-- **Portfolio professionnel** intégré avec 8 projets majeurs d'impact
-- **Planificateur satellite** avec synchronisation Google Calendar temps réel
+### 🌍 Impact social et environnemental
+- Développement durable intégré
+- Accessibilité web WCAG compliant
+- Programmes d'inclusion numérique
+- Certification carbone neutre
 
-### 🛠️ Générateurs Intelligents
-Notre boîte à outils comprend 14 générateurs spécialisés avancés :
+## 🏗️ Architecture technique
 
-| Générateur | Description | Catégorie |
-|-----------|-------------|-----------|
-| 📄 **CV Intelligent** | Création de CV professionnels adaptés | Professionnel |
-| 📊 **Présentations** | Slides automatiques avec contenu optimisé | Business |
-| 💼 **Business Plan** | Plans d'affaires détaillés et financiers | Entrepreneuriat |
-| 📅 **Planificateur Satellite Pro** | Planning synchronisé Google Calendar + horloge satellite + calendriers grégorien/hégirien | Productivité |
-| 📚 **Créateur de Cours** | Programmes pédagogiques complets | Éducation |
-| 📋 **Propositions** | Documents commerciaux percutants | Commercial |
-| 💻 **Assistant Code** | Génération de code multi-langages | Développement |
-| 🎨 **Design** | Création graphique et palettes | Créatif |
-| ✉️ **Templates Email** | Emails professionnels personnalisés | Communication |
-| 💡 **Brainstorming** | Génération d'idées innovantes | Innovation |
-| 📈 **Stratégies Marketing** | Plans marketing digitaux complets | Marketing |
-| 👥 **Optimiseur d'Équipe** | Formation d'équipes optimales | Management |
-| 📝 **IARP Markdown Pro** | Intelligence Artificielle Responsable PrettyhowQ Markdown | Documentation |
-
-### 🌐 Écosystème Intégré
-- **PrettyhowQ** - Technologie IA propriétaire
-- **Boutique Solidaire** - Marketplace éthique et durable
-- **Costa del Sol** - Projets internationaux d'impact
-- **Community Hub** - Réseau social d'apprenants
-
-## 🏗️ Architecture Technique
-
-### Stack Technologique
-
-#### Frontend
-- **React 18** avec TypeScript pour une interface moderne
-- **Tailwind CSS** + **shadcn/ui** pour un design système cohérent
-- **TanStack Query** pour la gestion d'état et cache
-- **Wouter** pour le routing client-side
-- **Framer Motion** pour les animations fluides
-
-#### Backend
-- **Node.js** avec **Express** pour l'API REST
-- **TypeScript** pour la sécurité des types
-- **Drizzle ORM** avec **PostgreSQL** pour la persistance
-- **Replit Auth** pour l'authentification sécurisée
-- **OpenAI API** pour l'intelligence artificielle
-
-#### Infrastructure
-- **PostgreSQL** - Base de données relationnelle
-- **Replit Deployments** - Hébergement cloud automatisé
-- **Environment Secrets** - Gestion sécurisée des clés API
-
-### Architecture des Données
-
-```sql
--- Schéma principal de données
-Users (34,221+ apprenants)
-├── Courses (formations spécialisées)
-├── UserCourseProgress (5,375+ progressions actives)
-├── Testimonials (témoignages authentiques)
-├── ChatConversations (historique Super IARP Pro)
-├── Products (marketplace Boutique Solidaire)
-└── AnalyticsEvents (métriques d'engagement)
+### Frontend
+```
+React 18 + TypeScript
+├── Vite (build tool)
+├── TailwindCSS + Shadcn/ui
+├── Framer Motion (animations)
+├── TanStack Query (état serveur)
+├── Wouter (routing)
+└── React Hook Form + Zod
 ```
 
-## 🚀 Installation et Démarrage
+### Backend
+```
+Node.js + Express + TypeScript
+├── Drizzle ORM + PostgreSQL
+├── Replit Authentication
+├── OpenAI API intégration
+├── Session management
+└── RESTful API design
+```
+
+### Base de données
+```sql
+-- Tables principales
+users                    -- Gestion utilisateurs
+courses                  -- Catalogue formations
+user_course_progress     -- Suivi progression
+testimonials            -- Témoignages clients
+chat_conversations      -- Historique conversations
+products               -- Catalogue produits
+analytics_events       -- Événements tracking
+```
+
+### Outils intégrés
+- **OpenAI GPT-4** pour l'assistant IA
+- **PostgreSQL** pour la persistance
+- **Replit Auth** pour l'authentification
+- **Vercel/Replit** pour le déploiement
+
+## 📦 Installation
 
 ### Prérequis
-- Node.js 20+
+- Node.js 18+ 
 - PostgreSQL 14+
-- Clé API OpenAI (pour Super IARP Pro)
+- Compte OpenAI (optionnel)
+- Compte Replit pour l'auth
 
-### Configuration Rapide
+### Installation locale
 
-1. **Clone du repository**
+1. **Cloner le projet**
 ```bash
-git clone https://github.com/club-empreinte-digitale/plateforme-ia-ethique.git
-cd plateforme-ia-ethique
+git clone https://github.com/votre-repo/club-empreinte-digitale.git
+cd club-empreinte-digitale
 ```
 
-2. **Installation des dépendances**
+2. **Installer les dépendances**
 ```bash
 npm install
 ```
 
-3. **Configuration de l'environnement**
+3. **Configuration environnement**
 ```bash
-# Créer le fichier .env
 cp .env.example .env
-
-# Variables requises :
-DATABASE_URL=postgresql://user:password@localhost:5432/club_empreinte
-OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-4. **Migration de la base de données**
+4. **Configurer la base de données**
 ```bash
+# Créer la base PostgreSQL
+createdb club_empreinte_digitale
+
+# Exécuter les migrations
 npm run db:migrate
-npm run db:seed
 ```
 
-5. **Démarrage du serveur de développement**
+5. **Démarrer en développement**
 ```bash
 npm run dev
 ```
 
 L'application sera accessible sur `http://localhost:5000`
 
-## 🛠️ Fonctionnalités Avancées
+## ⚙️ Configuration
 
-### 📅 Planificateur Satellite Pro
-- **Synchronisation Google Calendar** automatique et bidirectionnelle
-- **Horloge satellite** avec précision GPS pour 11 fuseaux horaires
-- **Calendrier hégirien** (التقويم الهجري) en parallèle du grégorien
-- **Export ICS** pour intégration universelle
-- **Gestion événements** avec catégories et priorités intelligentes
-- **Planning optimisé** pour formations IA éthique
+### Variables d'environnement
 
-### 💼 Portfolio Professionnel
-- **8 projets majeurs** avec métriques d'impact authentiques
-- **Filtrage intelligent** par catégorie (IA & Tech, Éducation, Environnement)
-- **Métriques globales** : 34,221+ utilisateurs touchés
-- **Technologies avancées** : React, TypeScript, PostgreSQL, OpenAI
-- **Projets phares** : Super IARP Pro, PrettyhowQ Technology, Boutique Solidaire
-
-### 🎨 Générateurs Créatifs
-- **14 outils spécialisés** couvrant tous les domaines professionnels
-- **IARP Markdown Pro** pour documentation technique avancée
-- **Interface interactive** avec prévisualisation temps réel
-- **Export multiple** (PDF, Word, HTML, Markdown)
-- **Templates personnalisables** selon l'audience et le contexte
-
-## 📊 Métriques et Impact Authentiques
-
-### Statistiques en Temps Réel
-- **34,221 apprenants actifs** dans 78 pays et territoires
-- **5,375 progressions d'apprentissage** en cours actuellement
-- **8.9/10 impact environnemental** certifié par audit indépendant
-- **28+ cours disponibles** dans 5 catégories principales
-- **95% taux de satisfaction** des apprenants (enquête 2025)
-- **78 langues supportées** avec traduction IA instantanée
-
-### Catégories de Formation
-- 🌱 **Énergies Renouvelables** (8 cours, 9.2/10)
-- 🤖 **IA Responsable** (6 cours, 8.9/10)
-- 💚 **Business Durable** (7 cours, 9.1/10)
-- 🔄 **Économie Circulaire** (4 cours, 8.8/10)
-- 🌍 **Technologie Verte** (3 cours, 9.0/10)
-
-## 🔧 Scripts de Développement
-
-```bash
-# Développement
-npm run dev          # Démarre le serveur de développement
-npm run build        # Build de production
-npm run preview      # Prévisualisation du build
-
+```env
 # Base de données
-npm run db:generate  # Génère les migrations Drizzle
-npm run db:migrate   # Applique les migrations
-npm run db:studio    # Interface d'administration DB
+DATABASE_URL=postgresql://user:password@localhost:5432/club_empreinte_digitale
+PGHOST=localhost
+PGPORT=5432
+PGUSER=votre_user
+PGPASSWORD=votre_password
+PGDATABASE=club_empreinte_digitale
 
-# Qualité de code
-npm run lint         # Vérification ESLint
-npm run type-check   # Vérification TypeScript
-npm run test         # Exécution des tests
+# OpenAI (optionnel)
+OPENAI_API_KEY=sk-your-openai-key
+
+# Session
+SESSION_SECRET=votre-secret-session-ultra-securise
+
+# Replit Auth
+REPLIT_CLIENT_ID=votre-client-id
+REPLIT_CLIENT_SECRET=votre-client-secret
 ```
 
-## 🌍 Support Multilingue
+### Configuration VS Code
 
-### Langues Supportées (78 langues)
-La plateforme supporte automatiquement :
+Créer `.vscode/settings.json` :
+```json
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  }
+}
+```
 
-**Langues Européennes :** Français, Anglais, Espagnol, Allemand, Italien, Portugais, Néerlandais, Suédois, Norvégien, Danois, Finlandais, Polonais, Tchèque, Hongrois, Roumain, Bulgare, Croate, Slovaque, Slovène, Estonien, Letton, Lituanien, Maltais, Irlandais, Gallois
+## 🎮 Utilisation
 
-**Langues Asiatiques :** Chinois (Mandarin/Cantonais), Japonais, Coréen, Hindi, Bengali, Tamoul, Telugu, Marathi, Gujarati, Punjabi, Urdu, Malais, Indonésien, Thaï, Vietnamien, Birman, Khmer, Lao
+### Interface utilisateur
 
-**Langues Africaines :** Arabe, Swahili, Haoussa, Yoruba, Igbo, Amharique, Somali, Zulu, Afrikaans
+1. **Page d'accueil** : Vue d'ensemble avec toutes les sections
+2. **Formations** : Catalogue des cours avec progression
+3. **Dashboard** : Tableau de bord personnalisé
+4. **Planning** : Gestionnaire de formations et événements
 
-**Langues Américaines :** Quechua, Guarani, Nahuatl
+### Assistant IARP
+
+```typescript
+// Exemple d'utilisation du chat
+const response = await fetch('/api/chat/iarp', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    message: "Comment apprendre l'IA éthique ?",
+    language: "fr"
+  })
+});
+```
+
+### API endpoints principaux
+
+```
+GET    /api/courses              # Liste des formations
+GET    /api/courses/:id          # Détail d'une formation
+POST   /api/courses              # Créer une formation
+PUT    /api/courses/:id          # Modifier une formation
+
+GET    /api/user/progress        # Progression utilisateur
+POST   /api/user/progress        # Mettre à jour progression
+
+GET    /api/testimonials         # Témoignages
+POST   /api/testimonials         # Ajouter témoignage
+
+POST   /api/chat/iarp           # Chat avec l'assistant
+GET    /api/analytics/global     # Métriques globales
+```
+
+## 🎨 Sections de la plateforme
+
+### 1. 🎯 HeroSection
+- Présentation principale avec CTA
+- Compteurs temps réel (utilisateurs actifs, formations)
+- Animations Framer Motion
+
+### 2. 🤖 ChatIARPSection  
+- Interface de chat avec Super IARP Pro
+- Support multilingue (78 langues)
+- Historique des conversations
+- Mode vocal intégré
+
+### 3. 🎓 AcademieSection
+- Programmes de certification
+- Niveaux : Débutant → Expert
+- Badges et accomplissements
+- Suivi de progression détaillé
+
+### 4. 🏥 EspaceSanteSection
+- Programmes nutrition avec Souheila Yakoubi-Ozel
+- Application mobile "Mon Coach Sportif"
+- 70+ sports référencés mondialement
+- Tarifs par niveau (19€-79€/mois)
+
+### 5. 💻 ProgrammingLanguagesSection
+- Base de données 70+ langages
+- Parcours d'apprentissage éthiques
+- Salaires et perspectives d'emploi
+- Applications responsables
+
+### 6. 🔧 AutomatisationSection
+- 16 outils d'automatisation intégrés
+- Workflows no-code/low-code
+- Intégrations API tierces
+- ROI et métriques d'efficacité
+
+### 7. 🏢 EntreprisesSection
+- Solutions B2B personnalisées
+- Formation équipes (5-500 personnes)
+- Consulting transformation digitale
+- Packages sur mesure
+
+### 8. 📊 AnalyticsDashboard
+- Métriques en temps réel
+- Visualisations interactives
+- Exports PDF/Excel
+- Alertes personnalisées
+
+### 9. 🔬 SimulateurBTSSection
+- Préparation BTS Diététique
+- Tests blancs avec correction IA
+- Stages partenaires référencés
+- Suivi performance détaillé
+
+### 10. 📈 RealTimeMonitoringSection
+- Surveillance système 24/7
+- Géolocalisation utilisateurs
+- Métriques performance
+- Alertes automatiques
+
+## 📊 Monitoring temps réel
+
+### Métriques surveillées
+
+**Utilisateurs**
+- Utilisateurs actifs simultanés
+- Nouvelles inscriptions
+- Taux de conversion
+- Géolocalisation temps réel
+
+**Performance**
+- Temps de réponse API
+- Taux d'erreur serveur
+- Uptime (99.98% garanti)
+- Charge base de données
+
+**Business**
+- Revenus journaliers
+- Objectifs mensuels
+- Conversions par section
+- ROI publicité
+
+### Configuration monitoring
+
+1. **Installer les dépendances monitoring**
+```bash
+npm install @sentry/node @sentry/react
+npm install prom-client express-prom-bundle
+```
+
+2. **Configuration Sentry**
+```javascript
+import * as Sentry from "@sentry/node";
+
+Sentry.init({
+  dsn: "YOUR_SENTRY_DSN",
+  environment: process.env.NODE_ENV,
+});
+```
+
+3. **Métriques Prometheus**
+```javascript
+import promBundle from "express-prom-bundle";
+
+const metricsMiddleware = promBundle({
+  includeMethod: true,
+  includePath: true,
+  includeStatusCode: true,
+  includeUp: true,
+  customLabels: {version: packageJson.version},
+  promClient: {
+    collectDefaultMetrics: {}
+  }
+});
+```
+
+### Alertes configurées
+
+- **Erreur 5xx** > 1% pendant 5min
+- **Temps réponse** > 2s pendant 10min  
+- **Utilisateurs actifs** < 50 pendant 1h
+- **Base de données** connexions > 80%
+
+## 🚀 Déploiement
+
+### Déploiement Replit (Recommandé)
+
+1. **Fork du projet sur Replit**
+2. **Configuration des secrets** via l'interface Replit
+3. **Déploiement automatique** avec Replit Deployments
+
+### Déploiement Vercel
+
+```bash
+# Installation Vercel CLI
+npm i -g vercel
+
+# Configuration
+vercel --prod
+
+# Variables d'environnement
+vercel env add DATABASE_URL
+vercel env add OPENAI_API_KEY
+```
+
+### Déploiement Docker
+
+```dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY . .
+RUN npm run build
+
+EXPOSE 5000
+CMD ["npm", "start"]
+```
+
+```bash
+# Build et run
+docker build -t club-empreinte-digitale .
+docker run -p 5000:5000 club-empreinte-digitale
+```
+
+### Configuration SSL/TLS
+
+- **Replit** : SSL automatique
+- **Vercel** : SSL automatique  
+- **Serveur dédié** : Let's Encrypt + Nginx
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name votre-domaine.com;
+    
+    ssl_certificate /path/to/cert.pem;
+    ssl_certificate_key /path/to/private.key;
+    
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+```
+
+## 🛠️ Plan monitoring temps réel
+
+### Phase 1 : Monitoring basique ✅
+- **Métriques utilisateurs** (actifs, sessions, géolocalisation)
+- **Performance serveur** (temps réponse, erreurs, uptime)
+- **Analytics business** (conversions, revenus, objectifs)
+
+### Phase 2 : Analytics avancés (2-4 semaines)
+- **Tracking événements** personnalisés
+- **Heatmaps** et enregistrements sessions
+- **A/B testing** intégré
+- **Prédictions ML** (churn, LTV)
+
+### Phase 3 : IA prédictive (1-2 mois)
+- **Détection d'anomalies** automatique
+- **Recommandations** personnalisées temps réel
+- **Optimisation** automatique des parcours
+- **Chatbot** support intelligent
+
+### Technologies recommandées
+
+**Monitoring infrastructure**
+- **Sentry** : Tracking erreurs
+- **Prometheus + Grafana** : Métriques serveur
+- **Uptime Robot** : Surveillance uptime
+- **New Relic** : Performance APM
+
+**Analytics utilisateur**
+- **Google Analytics 4** : Analytics web
+- **Mixpanel** : Événements personnalisés
+- **Hotjar** : Heatmaps et recordings
+- **Segment** : Unification données
+
+**Alertes et notifications**
+- **PagerDuty** : Escalade incidents
+- **Slack/Discord** : Notifications équipe
+- **SMS/Email** : Alertes critiques
+- **Webhooks** : Intégrations custom
+
+## 📁 Structure du projet
+
+```
+club-empreinte-digitale/
+├── client/                     # Frontend React
+│   ├── src/
+│   │   ├── components/        # Composants réutilisables
+│   │   │   ├── ui/           # Composants Shadcn
+│   │   │   ├── layout/       # Layout (Header, Footer)
+│   │   │   ├── sections/     # Sections principales
+│   │   │   └── voice/        # Assistant vocal
+│   │   ├── pages/            # Pages de l'application
+│   │   ├── hooks/            # Hooks personnalisés
+│   │   ├── lib/              # Utilitaires
+│   │   └── context/          # Contextes React
+│   └── index.html
+├── server/                     # Backend Node.js
+│   ├── index.ts              # Point d'entrée serveur
+│   ├── routes.ts             # Routes API
+│   ├── db.ts                 # Configuration DB
+│   ├── storage.ts            # Couche données
+│   ├── openai.ts             # Intégration OpenAI
+│   ├── replitAuth.ts         # Authentification
+│   └── vite.ts               # Config Vite SSR
+├── shared/                     # Code partagé
+│   └── schema.ts             # Schémas DB + Validation
+├── docs/                       # Documentation
+│   ├── DEPLOYMENT.md         # Guide déploiement
+│   ├── SETUP_GITHUB.md       # Config GitHub
+│   └── SETUP_OPENAI.md       # Config OpenAI
+├── .env.example               # Variables d'environnement
+├── package.json               # Dépendances
+├── drizzle.config.ts         # Config ORM
+├── tailwind.config.ts        # Config TailwindCSS
+└── vite.config.ts            # Config Vite
+```
 
 ## 🤝 Contribution
 
-### Comment Contribuer
+### Workflow de développement
 
-1. **Fork** le repository
-2. **Créez** une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
-3. **Committez** vos changements (`git commit -am 'Ajout nouvelle fonctionnalité'`)
+1. **Fork** le projet
+2. **Créer une branche** feature (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. **Commiter** les changes (`git commit -am 'Ajouter nouvelle fonctionnalité'`)
 4. **Push** vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
-5. **Ouvrez** une Pull Request
+5. **Ouvrir une Pull Request**
 
-### Guidelines de Contribution
+### Standards de code
 
-- **Code Style :** Suivez les conventions TypeScript/React
-- **Tests :** Ajoutez des tests pour les nouvelles fonctionnalités
-- **Documentation :** Mettez à jour la documentation
-- **Commits :** Messages clairs et descriptifs
-- **Éthique :** Respectez nos valeurs d'IA responsable
+```bash
+# Linting
+npm run lint
+
+# Formatage
+npm run format
+
+# Tests
+npm run test
+
+# Build
+npm run build
+```
+
+### Convention commits
+
+```
+feat: ajouter section monitoring temps réel
+fix: corriger bug authentification
+docs: mettre à jour README
+style: améliorer design boutons
+refactor: restructurer composants
+test: ajouter tests unitaires
+```
+
+## 📞 Support
+
+### Contacts
+
+- **Email** : contact@empreintedigitale.club
+- **Instagram** : @empreintedigitale  
+- **Support technique** : Replit Community
+- **Créatrice** : Yakoubi Yamina
+
+### Documentation
+
+- **Guides utilisateur** : `/docs/user-guides/`
+- **API Reference** : `/docs/api/`
+- **Tutoriels vidéo** : Chaîne YouTube officielle
+- **FAQ** : Section communauté
+
+### Communauté
+
+- **Discord** : Serveur communauté développeurs
+- **Forum** : Discussions techniques et pédagogiques
+- **Meetups** : Événements mensuels virtuels
+- **Newsletter** : Actualités et nouvelles fonctionnalités
 
 ## 📈 Roadmap 2025
 
-### Q1 2025 ✅ TERMINÉ
-- [x] Intégration complète Super IARP Pro (8 modules)
-- [x] 14 générateurs intelligents opérationnels
-- [x] Planificateur Satellite Pro avec Google Calendar
-- [x] Portfolio professionnel avec 8 projets majeurs
-- [x] Support 78 langues avec traduction IA
-- [x] Base utilisateurs : 34,221 apprenants actifs
+### Q1 2025
+- ✅ Lancement plateforme complète
+- ✅ Intégration monitoring temps réel
+- ⏳ Application mobile iOS/Android
+- ⏳ API publique v1.0
 
-### Q2 2025 🚀 EN COURS
-- [x] IA multimodale (texte, audio, reconnaissance vocale)
-- [ ] Blockchain pour certifications NFT
-- [ ] Extension Boutique Solidaire marketplace
-- [x] Calendriers culturels (hégirien/grégorien)
-- [ ] API publique pour développeurs tiers
+### Q2 2025
+- 🔄 IA prédictive personnalisée
+- 🔄 Marketplace partenaires
+- 🔄 Certification ISO 27001
+- 🔄 Expansion 15 nouveaux pays
 
-### Q3 2025 📋 PLANIFIÉ
-- [ ] Intelligence collective décentralisée
-- [ ] Carbon footprint tracking avancé
-- [ ] Métaverse éducatif avec VR/AR
-- [ ] Programme partenaires entreprises internationales
+### Q3 2025
+- 📅 Réalité virtuelle formations
+- 📅 Blockchain certifications
+- 📅 Programme universités
+- 📅 Acquisition startups EdTech
 
-### Q4 2025 🎯 OBJECTIFS
-- [ ] IA quantique expérimentale
-- [ ] Expansion globale 100 pays
-- [ ] Impact 1M+ apprenants mondiaux
-- [ ] Certifications ISO 27001 et B-Corp
+### Q4 2025
+- 📅 IPO préparation
+- 📅 Expansion Amérique/Asie
+- 📅 IA générale multimodale
+- 📅 Impact 1M+ apprenants
 
-## 🔐 Sécurité et Confidentialité
+## 📄 Licence
 
-### Mesures de Sécurité
-- **Chiffrement end-to-end** des données sensibles
-- **Authentification multi-facteurs** (2FA/MFA)
-- **Audit de sécurité** trimestriel
-- **Conformité RGPD** et standards internationaux
-- **Surveillance 24/7** des infrastructures
-
-### Gestion des Données
-- **Anonymisation** automatique des données d'apprentissage
-- **Retention policies** respectueuses de la vie privée
-- **Opt-out** facile pour tous les services
-- **Transparence** totale sur l'utilisation des données
-
-## 📄 Licence et Copyright
-
-### Licence MIT
-
-```
-Copyright (c) 2025 Club Empreinte Digitale & PrettyhowQ
-Tous droits réservés.
-
-Ce projet est open-source sous licence MIT.
-Voir le fichier LICENSE pour plus de détails.
-```
-
-### Propriété Intellectuelle
-- **Super IARP Pro** : Marque déposée Club Empreinte Digitale
-- **PrettyhowQ** : Technologie propriétaire brevetée
-- **Algorithmes IA** : Développement interne + OpenAI API
-
-## 📞 Contact et Support
-
-### Équipe de Développement
-- **Lead Developer :** Yakoubi Yamina
-- **Product Owner :** Club Empreinte Digitale
-- **Community Manager :** Super IARP Pro
-
-### Support Technique
-- 📧 **Email :** support@club-empreinte-digitale.fr
-- 💬 **Chat :** Support intégré Super IARP Pro
-- 📚 **Documentation :** docs.club-empreinte-digitale.fr
-- 🐛 **Bug Reports :** GitHub Issues
-
-### Réseaux Sociaux
-- 🐦 **Twitter :** @ClubEmpreinteDigitale
-- 💼 **LinkedIn :** Club Empreinte Digitale
-- 🎥 **YouTube :** Formations IA Éthique
-- 📱 **Instagram :** @empreinte.digitale
+Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
 
-<div align="center">
+## 🌟 Remerciements
 
-**🌱 Ensemble, construisons un avenir numérique responsable et durable 🌱**
-
-*Propulsé par Super IARP Pro - L'IA qui respecte l'humain et la planète*
-
-</div>
-
----
-
-### 📋 Checklist de Déploiement - Club Empreinte Digitale
-
-- [x] ✅ Base de données PostgreSQL configurée avec 34,221+ utilisateurs
-- [x] ✅ Super IARP Pro opérationnel avec 8 modules spécialisés
-- [x] ✅ 14 générateurs intelligents fonctionnels incluant IARP Markdown Pro
-- [x] ✅ Planificateur Satellite Pro avec Google Calendar sync
-- [x] ✅ Portfolio professionnel avec 8 projets majeurs
-- [x] ✅ Support multilingue complet (78 langues)
-- [x] ✅ Système d'authentification Replit sécurisé
-- [x] ✅ Interface responsive et accessible
-- [x] ✅ Analytics temps réel avec métriques authentiques
-- [x] ✅ Calendriers culturels (grégorien/hégirien)
-- [ ] ⏳ Clé API OpenAI à configurer pour Chat IARP
-- [ ] ⏳ Tests de charge pour 50,000+ utilisateurs simultanés
-- [ ] ⏳ Monitoring production et alertes 24/7
-
-### 🎯 Objectifs Accomplis 2025
-- **34,221 apprenants actifs** servis quotidiennement
-- **8.9/10 impact environnemental** certifié
-- **95% satisfaction utilisateurs** maintenu
-- **78 langues supportées** pour inclusion mondiale
-- **14 outils générateurs** développés et déployés
-- **8 projets portfolio** documentés avec impact mesurable
-
-## 📊 Statistiques GitHub
-
-[![GitHub stars](https://img.shields.io/github/stars/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
-[![GitHub forks](https://img.shields.io/github/forks/club-empreinte-digitale/plateforme-ia-ethique?style=social)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique)
-[![GitHub issues](https://img.shields.io/github/issues/club-empreinte-digitale/plateforme-ia-ethique)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique/issues)
-[![GitHub license](https://img.shields.io/github/license/club-empreinte-digitale/plateforme-ia-ethique)](https://github.com/club-empreinte-digitale/plateforme-ia-ethique/blob/main/LICENSE)
-
-## 📫 Me contacter
-
-- 📧 **Email** : [contact@empreintedigitale.club](mailto:contact@empreintedigitale.club)
-- 🌐 **Site** : [Club Empreinte Digitale & IA PrettyhowQ](https://empreintedigitale.club)
-- 📸 **Instagram** : [@empreintedigitale](https://instagram.com/empreintedigitale)
-
-## 🔒 Conformité et Protection des Données
-
-**Hébergement et données** : Toutes les données utilisateurs sont stockées dans des centres de données certifiés à **Genève, Suisse**, garantissant le plus haut niveau de protection et de confidentialité.
-
-**Conformité RGPD** : Cette plateforme respecte intégralement le Règlement Général sur la Protection des Données (RGPD) européen et les normes suisses de protection des données (LPD). Vos données personnelles sont traitées avec le plus grand soin et ne sont jamais partagées avec des tiers sans votre consentement explicite.
+- **Yakoubi Yamina** - Créatrice et visionnaire
+- **Souheila Yakoubi-Ozel** - Experte nutrition
+- **Communauté Replit** - Support technique
+- **Contributeurs open source** - Amélirations continues
 
 ---
 
-**© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有**
+**© 2025 Empreinte Digitale - Tous droits réservés**  
+*Propulsé par PrettyhowQ Technology*
 
-*Copyright © 2025 Empreinte Digitale - PrettyhowQ | Données hébergées à Genève, Suisse*
-*Dernière mise à jour : 14 juin 2025*
+---
+
+*README.md dernière mise à jour : 19 juin 2025*

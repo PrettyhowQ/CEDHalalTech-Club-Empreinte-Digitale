@@ -15,6 +15,7 @@ import { PlanningFormationsSection } from '@/components/sections/PlanningFormati
 import { EntreprisesSection } from '@/components/sections/EntreprisesSection';
 import { SimulateurBTSSection } from '@/components/sections/SimulateurBTSSection';
 import { ProgrammingLanguagesSection } from '@/components/sections/ProgrammingLanguagesSection';
+import { RealTimeMonitoringSection } from '@/components/sections/RealTimeMonitoringSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { EcosystemSection } from '@/components/sections/EcosystemSection';
 import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
@@ -43,6 +44,7 @@ export default function Home() {
         <EntreprisesSection />
         <SimulateurBTSSection />
         <ProgrammingLanguagesSection />
+        <RealTimeMonitoringSection />
         <PortfolioSection />
         <EcosystemSection />
         <IAEthiqueSection />
