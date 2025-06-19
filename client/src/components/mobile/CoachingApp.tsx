@@ -35,6 +35,8 @@ import {
   BarChart3
 } from 'lucide-react';
 
+import { WorldClock } from './WorldClock';
+
 interface WorkoutSession {
   id: string;
   sport: string;
@@ -338,7 +340,7 @@ export function CoachingApp() {
 
       {/* Navigation principale */}
       <Tabs value={currentTab} onValueChange={setCurrentTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-4 mb-4 sm:mb-6 h-auto">
+        <TabsList className="grid w-full grid-cols-5 mb-4 sm:mb-6 h-auto">
           <TabsTrigger value="sports" className="flex flex-col items-center gap-1 py-2 sm:py-3 text-xs">
             <Activity className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>Sports</span>
@@ -351,9 +353,13 @@ export function CoachingApp() {
             <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>Nutrition</span>
           </TabsTrigger>
+          <TabsTrigger value="time" className="flex flex-col items-center gap-1 py-2 sm:py-3 text-xs">
+            <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span>Horaires</span>
+          </TabsTrigger>
           <TabsTrigger value="community" className="flex flex-col items-center gap-1 py-2 sm:py-3 text-xs">
             <Users className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span>Communauté</span>
+            <span>Équipe</span>
           </TabsTrigger>
         </TabsList>
 
@@ -516,6 +522,11 @@ export function CoachingApp() {
               </CardContent>
             </Card>
           </div>
+        </TabsContent>
+
+        {/* Section Horaires Mondiaux */}
+        <TabsContent value="time" className="space-y-3 sm:space-y-4">
+          <WorldClock />
         </TabsContent>
 
         {/* Section Communauté */}
