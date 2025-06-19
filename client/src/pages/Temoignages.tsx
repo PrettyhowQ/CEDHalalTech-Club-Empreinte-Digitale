@@ -119,7 +119,7 @@ export default function Temoignages() {
           className="mb-16"
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial: any, index: number) => (
+            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
                 initial={{ opacity: 0, y: 20 }}
