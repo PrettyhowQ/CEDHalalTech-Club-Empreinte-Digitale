@@ -194,8 +194,8 @@ export function QuickAgenda({ userId = 'guest', variant = 'compact' }: QuickAgen
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm flex items-center gap-2">
-              <Calendar className="h-4 w-4 text-blue-600" />
-              Agenda Rapide
+              <Calendar className="h-4 w-4 text-white drop-shadow-lg" />
+              <span className="text-white drop-shadow-lg">Agenda Rapide</span>
             </CardTitle>
             <div className="flex items-center gap-1">
               <Button

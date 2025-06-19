@@ -65,6 +65,51 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Mode standard (design original) */
+body:not(.enhanced-visuals) .gradient-bg {
+  background: white;
+  animation: none;
+}
+
+body:not(.enhanced-visuals) .glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body:not(.enhanced-visuals) .animate-float {
+  animation: none;
+}
+
+body:not(.enhanced-visuals) .animate-glow {
+  animation: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.enhanced-visuals) .particle {
+  display: none;
+}
+
+body:not(.enhanced-visuals) .text-white {
+  color: rgb(17, 24, 39) !important;
+}
+
+body:not(.enhanced-visuals) .text-white\/80 {
+  color: rgb(55, 65, 81) !important;
+}
+
+body:not(.enhanced-visuals) .text-white\/70 {
+  color: rgb(75, 85, 99) !important;
+}
+
+body:not(.enhanced-visuals) .text-yellow-300 {
+  color: rgb(147, 51, 234) !important;
+}
+
+body:not(.enhanced-visuals) .drop-shadow-lg {
+  filter: none;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);

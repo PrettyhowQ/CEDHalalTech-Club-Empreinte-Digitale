@@ -299,27 +299,27 @@ export function LiveClock({ variant = 'desktop', showPomodoro = false, userId }:
               </div>
               
               {/* Date grégorienne */}
-              <div className="text-xs text-gray-600 text-right">
+              <div className="text-xs text-white/80 drop-shadow-lg text-right">
                 <Calendar className="h-3 w-3 inline mr-1" />
                 {formatDate(currentTime)}
               </div>
               
               {/* Date hégirienne */}
-              <div className="text-xs text-purple-600 text-right">
+              <div className="text-xs text-yellow-300 drop-shadow-lg text-right">
                 🌙 {formatHijriDate(currentTime)}
               </div>
               
               {/* Indicateur satellite */}
-              <div className="flex items-center gap-1 text-xs text-gray-500">
-                <Satellite className="h-3 w-3 text-blue-600" />
+              <div className="flex items-center gap-1 text-xs text-white/70 drop-shadow-lg">
+                <Satellite className="h-3 w-3 text-cyan-300" />
                 <span>Satellite</span>
                 {satelliteConnected && (
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 )}
               </div>
               
               {/* Localisation */}
-              <div className="text-xs text-gray-500 text-right">
+              <div className="text-xs text-white/70 drop-shadow-lg text-right">
                 <MapPin className="h-3 w-3 inline mr-1" />
                 {location.city}
               </div>
