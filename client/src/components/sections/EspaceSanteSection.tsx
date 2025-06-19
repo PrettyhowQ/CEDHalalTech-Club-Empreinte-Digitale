@@ -303,7 +303,7 @@ export function EspaceSanteSection() {
             Espace Santé & Nutrition
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Accompagnement nutritionnel personnalisé avec Souheila Benali, diététicienne-nutritionniste certifiée
+            Accompagnement nutritionnel personnalisé avec Souheila Yakoubi-Ozel, diététicienne-nutritionniste certifiée
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center gap-2 bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-md">
