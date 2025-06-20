@@ -16,6 +16,7 @@ export function Header() {
 
   const navigation = [
     { name: 'Formations', href: '/formations' },
+    { name: 'Catalogue Complet', href: '/catalogue' },
     { name: 'Ressources', href: '/ressources' },
     { name: 'Boutique Solidaire', href: '/boutique' },
     { name: 'IA Éthique', href: '/ia-ethique' },

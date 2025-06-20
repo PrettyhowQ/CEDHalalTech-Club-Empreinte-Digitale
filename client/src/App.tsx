@@ -20,6 +20,7 @@ import FAQ from "@/pages/FAQ";
 import Portfolio from "@/pages/Portfolio";
 import Temoignages from "@/pages/Temoignages";
 import Previsionnel from "@/pages/Previsionnel";
+import CatalogueFormations from "@/pages/CatalogueFormations";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -36,6 +37,8 @@ function Router() {
       <Route path="/planning" component={Planning} />
       <Route path="/previsionnel" component={Previsionnel} />
       <Route path="/finance" component={Previsionnel} />
+      <Route path="/catalogue" component={CatalogueFormations} />
+      <Route path="/formations-catalogue" component={CatalogueFormations} />
       <Route path="/coaching" component={CoachingMobile} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
