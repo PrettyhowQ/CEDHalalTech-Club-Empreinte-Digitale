@@ -19,6 +19,7 @@ export function Header() {
     { name: 'Ressources', href: '/ressources' },
     { name: 'Boutique Solidaire', href: '/boutique' },
     { name: 'IA Éthique', href: '/ia-ethique' },
+    { name: 'Centre Financier', href: '/previsionnel' },
   ];
 
   return (

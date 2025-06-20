@@ -19,6 +19,7 @@ import APropos from "@/pages/APropos";
 import FAQ from "@/pages/FAQ";
 import Portfolio from "@/pages/Portfolio";
 import Temoignages from "@/pages/Temoignages";
+import Previsionnel from "@/pages/Previsionnel";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -33,6 +34,8 @@ function Router() {
       <Route path="/boutique" component={Portfolio} />
       <Route path="/ia-ethique" component={APropos} />
       <Route path="/planning" component={Planning} />
+      <Route path="/previsionnel" component={Previsionnel} />
+      <Route path="/finance" component={Previsionnel} />
       <Route path="/coaching" component={CoachingMobile} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
