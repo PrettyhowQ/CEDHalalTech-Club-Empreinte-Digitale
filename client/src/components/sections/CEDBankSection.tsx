@@ -98,6 +98,21 @@ export function CEDBankSection() {
                 </Button>
               </div>
               
+              {/* Premium Dashboard Access */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
+                <div className="text-center">
+                  <h4 className="font-bold text-yellow-800 mb-2">Accès Clients Premium</h4>
+                  <p className="text-sm text-yellow-700 mb-4">Découvrez nos 7 fonctionnalités exclusives pour les fortunes de Dubai</p>
+                  <Button asChild className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white">
+                    <a href="/premium-dashboard" className="flex items-center gap-2">
+                      <Star className="h-4 w-4" />
+                      Dashboard Premium
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              
               <div className="flex justify-center gap-3">
                 <Button 
                   variant="outline" 
