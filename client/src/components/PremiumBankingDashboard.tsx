@@ -14,6 +14,7 @@ import {
   Building2,
   Globe,
   Code,
+  Calculator,
   Zap,
   ArrowRight,
   Eye,
@@ -103,6 +104,16 @@ export function PremiumBankingDashboard() {
       route: '/crypto-donations',
       status: 'available',
       tier: 'elite'
+    },
+    {
+      id: '8',
+      title: 'Convertisseur Instantané',
+      description: 'Conversion temps réel avec animations fluides, 16+ devises halal et taux interbancaires',
+      icon: Calculator,
+      color: 'from-purple-500 to-indigo-600',
+      route: '/convertisseur-instantane',
+      status: 'available',
+      tier: 'premium'
     }
   ]);
 

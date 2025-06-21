@@ -88,6 +88,9 @@ function Router() {
       <Route path="/convertisseur" component={CurrencyConverter} />
       <Route path="/currency-converter" component={CurrencyConverter} />
       <Route path="/change-devises" component={CurrencyConverter} />
+      <Route path="/convertisseur-instantane" component={InstantCurrencyConverter} />
+      <Route path="/instant-converter" component={InstantCurrencyConverter} />
+      <Route path="/convertisseur-premium" component={InstantCurrencyConverter} />
       <Route path="/wallet" component={CryptoWallet} />
       <Route path="/crypto-wallet" component={CryptoWallet} />
       <Route path="/portefeuille-crypto" component={CryptoWallet} />
