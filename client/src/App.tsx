@@ -21,6 +21,7 @@ import Portfolio from "@/pages/Portfolio";
 import Temoignages from "@/pages/Temoignages";
 import Previsionnel from "@/pages/Previsionnel";
 import CatalogueFormations from "@/pages/CatalogueFormations";
+import AnalyseStrategique from "@/pages/AnalyseStrategique";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -39,6 +40,8 @@ function Router() {
       <Route path="/finance" component={Previsionnel} />
       <Route path="/catalogue" component={CatalogueFormations} />
       <Route path="/formations-catalogue" component={CatalogueFormations} />
+      <Route path="/analyse-strategique" component={AnalyseStrategique} />
+      <Route path="/viabilite" component={AnalyseStrategique} />
       <Route path="/coaching" component={CoachingMobile} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
