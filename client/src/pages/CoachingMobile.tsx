@@ -6,6 +6,7 @@ import { ThemeCustomizer } from '@/components/ui/ThemeCustomizer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { AppointmentButton } from '@/components/ui/AppointmentButton';
 import { motion } from 'framer-motion';
 import { 
   Activity, 
@@ -177,8 +178,8 @@ export default function CoachingMobile() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="px-8 py-3">
-                  <Smartphone className="h-5 w-5 mr-2" />
-                  Télécharger l'App
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Prendre Rendez-vous
                 </Button>
                 <Button variant="outline" size="lg" className="px-8 py-3">
                   <Calendar className="h-5 w-5 mr-2" />
