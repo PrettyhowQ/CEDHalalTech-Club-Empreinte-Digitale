@@ -82,6 +82,12 @@ function Router() {
       <Route path="/wallet" component={CryptoWallet} />
       <Route path="/crypto-wallet" component={CryptoWallet} />
       <Route path="/portefeuille-crypto" component={CryptoWallet} />
+      <Route path="/transactions" component={TransactionHistory} />
+      <Route path="/historique" component={TransactionHistory} />
+      <Route path="/transaction-history" component={TransactionHistory} />
+      <Route path="/budget" component={BudgetPlanner} />
+      <Route path="/budget-planner" component={BudgetPlanner} />
+      <Route path="/planificateur-budget" component={BudgetPlanner} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
