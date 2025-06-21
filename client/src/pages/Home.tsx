@@ -6,6 +6,8 @@ import { ParticleBackground } from '@/components/ui/ParticleBackground';
 import { ThemeCustomizer } from '@/components/ui/ThemeCustomizer';
 import { RealTimeFinanceWidget } from '@/components/ui/RealTimeFinanceWidget';
 import { AIGeneratorWidget } from '@/components/ui/AIGeneratorWidget';
+import { NutritionWidget } from '@/components/ui/NutritionWidget';
+import { SportWidget } from '@/components/ui/SportWidget';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
@@ -39,6 +41,8 @@ export default function Home() {
       <QuickAgenda userId="guest" variant="compact" />
       <RealTimeFinanceWidget variant="compact" />
       <AIGeneratorWidget variant="compact" />
+      <NutritionWidget variant="compact" />
+      <SportWidget variant="compact" />
       <main className="relative z-10">
         <HeroSection />
         <FormationsSection />
