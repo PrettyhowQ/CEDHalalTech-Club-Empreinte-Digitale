@@ -67,28 +67,28 @@ export default function BanqueDigitale() {
       {
         id: '1',
         type: 'checking',
-        name: 'Compte Courant CED',
+        name: 'Compte Courant Suisse',
         balance: 2847.50,
-        currency: 'EUR',
-        iban: 'FR76 3000 3000 0000 0000 0000 123',
+        currency: 'CHF',
+        iban: 'CH93 0076 2011 6238 5295 7',
         status: 'active'
       },
       {
         id: '2',
         type: 'savings',
-        name: 'Épargne Formation',
+        name: 'Épargne Dubaï',
         balance: 5420.00,
-        currency: 'EUR',
-        iban: 'FR76 3000 3000 0000 0000 0000 456',
+        currency: 'AED',
+        iban: 'AE07 0331 2345 6789 0123 456',
         status: 'active'
       },
       {
         id: '3',
         type: 'investment',
-        name: 'Investissement IA',
+        name: 'Investissement International',
         balance: 12350.75,
-        currency: 'EUR',
-        iban: 'FR76 3000 3000 0000 0000 0000 789',
+        currency: 'USD',
+        iban: 'US64 SVBK USA6 1234 5678 90',
         status: 'active'
       }
     ];
@@ -152,10 +152,17 @@ export default function BanqueDigitale() {
     setSelectedAccount(mockAccounts[0].id);
   }, []);
 
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('fr-FR', {
+  const formatCurrency = (amount: number, currency = 'EUR') => {
+    const localeMap = {
+      'CHF': 'de-CH',
+      'AED': 'ar-AE', 
+      'USD': 'en-US',
+      'EUR': 'fr-FR'
+    };
+    
+    return new Intl.NumberFormat(localeMap[currency as keyof typeof localeMap] || 'fr-FR', {
       style: 'currency',
-      currency: 'EUR'
+      currency: currency
     }).format(amount);
   };
 
@@ -179,18 +186,18 @@ export default function BanqueDigitale() {
         <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold mb-2">CED Bank 0%</h1>
-              <p className="text-green-100">Banque Digitale 100% Gratuite</p>
-              <p className="text-sm text-green-200 mt-1">Yakoubi Yamina - Révolution Bancaire à 0%</p>
+              <h1 className="text-3xl font-bold mb-2">CED Bank International</h1>
+              <p className="text-green-100">Siège Suisse • Expansion Dubaï</p>
+              <p className="text-sm text-green-200 mt-1">Yakoubi Yamina - Finance Islamique & Services 0%</p>
               <div className="flex items-center gap-2 mt-2">
                 <Badge className="bg-white/20 text-white border-white/30">
-                  0% Frais
+                  🇨🇭 Siège Suisse
                 </Badge>
                 <Badge className="bg-white/20 text-white border-white/30">
-                  0% Commission
+                  🇦🇪 Finance Islamique
                 </Badge>
                 <Badge className="bg-white/20 text-white border-white/30">
-                  100% Gratuit
+                  0% Intérêts
                 </Badge>
               </div>
             </div>
@@ -289,7 +296,7 @@ export default function BanqueDigitale() {
                       </div>
                       <div className="text-right">
                         <p className="font-bold text-lg">
-                          {showBalance ? formatCurrency(account.balance) : '***€'}
+                          {showBalance ? formatCurrency(account.balance, account.currency) : '***'}
                         </p>
                         <Badge variant={account.status === 'active' ? 'default' : 'secondary'}>
                           {account.status}
@@ -407,16 +414,20 @@ export default function BanqueDigitale() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="p-3 bg-white rounded-lg border border-green-200">
-                  <h4 className="font-medium text-green-800">Prêts Formation 0%</h4>
-                  <p className="text-sm text-green-600">Aucun taux d'intérêt - 100% gratuit</p>
+                  <h4 className="font-medium text-green-800">Financement Halal 0%</h4>
+                  <p className="text-sm text-green-600">Conforme à la Charia - Sans intérêts</p>
                 </div>
-                <div className="p-3 bg-white rounded-lg border border-yellow-200">
-                  <h4 className="font-medium text-yellow-800">Épargne IA</h4>
-                  <p className="text-sm text-yellow-600">Investissement automatisé dans l'IA</p>
+                <div className="p-3 bg-white rounded-lg border border-blue-200">
+                  <h4 className="font-medium text-blue-800">Murabaha Formation</h4>
+                  <p className="text-sm text-blue-600">Financement participatif éthique</p>
                 </div>
-                <div className="p-3 bg-white rounded-lg border border-yellow-200">
-                  <h4 className="font-medium text-yellow-800">Cashback Formations</h4>
-                  <p className="text-sm text-yellow-600">5% sur toutes les formations CED</p>
+                <div className="p-3 bg-white rounded-lg border border-purple-200">
+                  <h4 className="font-medium text-purple-800">Sukuk Investissement</h4>
+                  <p className="text-sm text-purple-600">Obligations islamiques technologiques</p>
+                </div>
+                <div className="p-3 bg-white rounded-lg border border-orange-200">
+                  <h4 className="font-medium text-orange-800">Takaful Protection</h4>
+                  <p className="text-sm text-orange-600">Assurance participative islamique</p>
                 </div>
               </CardContent>
             </Card>
