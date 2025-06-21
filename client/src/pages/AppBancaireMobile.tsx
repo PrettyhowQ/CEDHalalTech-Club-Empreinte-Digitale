@@ -69,6 +69,12 @@ export default function AppBancaireMobile() {
       category: 'islamic'
     },
     {
+      icon: Bell,
+      title: 'Mode Prière Automatique',
+      description: 'Pause intelligente des services durant les 5 prières quotidiennes',
+      category: 'islamic'
+    },
+    {
       icon: Zap,
       title: 'Virements Instantanés',
       description: 'Transferts immédiats 24h/24 sans frais entre comptes CED',
@@ -241,7 +247,7 @@ export default function AppBancaireMobile() {
               Fonctionnalités Révolutionnaires
             </h2>
             <p className="text-lg text-gray-600">
-              Une expérience bancaire mobile sans précédent
+              Une expérience bancaire mobile sans précédent avec respect des valeurs islamiques
             </p>
           </div>
 

@@ -222,7 +222,7 @@ export default function BanqueDigitale() {
         </div>
 
         {/* Actions rapides */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <Card className="hover:shadow-lg transition-shadow cursor-pointer">
             <CardContent className="p-4 text-center">
               <div className="w-12 h-12 mx-auto mb-3 bg-green-100 rounded-full flex items-center justify-center">
@@ -256,6 +256,15 @@ export default function BanqueDigitale() {
                 <Smartphone className="h-6 w-6 text-blue-600" />
               </div>
               <p className="font-medium">App Mobile</p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = '/mode-priere'}>
+            <CardContent className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 bg-green-100 rounded-full flex items-center justify-center">
+                <Bell className="h-6 w-6 text-green-600" />
+              </div>
+              <p className="font-medium">Mode Prière</p>
             </CardContent>
           </Card>
         </div>
