@@ -27,6 +27,7 @@ import TechnologiesAvancees from "@/pages/TechnologiesAvancees";
 import FinancialDashboard from "@/pages/FinancialDashboard";
 import BanqueDigitale from "@/pages/BanqueDigitale";
 import AppBancaireMobile from "@/pages/AppBancaireMobile";
+import ParrainageCED from "@/pages/ParrainageCED";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -65,6 +66,9 @@ function Router() {
       <Route path="/mobile-banking" component={AppBancaireMobile} />
       <Route path="/ced-bank-app" component={AppBancaireMobile} />
       <Route path="/telecharger-app" component={AppBancaireMobile} />
+      <Route path="/parrainage" component={ParrainageCED} />
+      <Route path="/referral" component={ParrainageCED} />
+      <Route path="/ambassadeur" component={ParrainageCED} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

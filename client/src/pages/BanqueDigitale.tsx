@@ -20,7 +20,8 @@ import {
   Plus,
   Settings,
   Bell,
-  Star
+  Star,
+  Smartphone
 } from 'lucide-react';
 
 interface BankAccount {
@@ -457,8 +458,80 @@ export default function BanqueDigitale() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Réseau Donateurs Dubaï */}
+            <Card className="border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Star className="h-5 w-5 text-amber-600" />
+                  Réseau Dubaï
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-amber-700">🇦🇪</div>
+                    <p className="text-sm font-medium text-amber-800">Hub Philanthropique</p>
+                    <p className="text-xs text-amber-600">Investisseurs & Donateurs</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 border border-amber-200">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium">Projets stratégiques</span>
+                      <Badge className="bg-amber-100 text-amber-800">En développement</Badge>
+                    </div>
+                    <p className="text-xs text-gray-600 mt-1">
+                      Financement éthique selon la Charia
+                    </p>
+                  </div>
+                  <Button variant="outline" size="sm" className="w-full border-amber-300 text-amber-700 hover:bg-amber-50">
+                    Accès Investisseurs
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
+
+        {/* Section Parrainage Intégrée */}
+        <Card className="border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-green-50">
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Programme de Parrainage CED Bank
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Invitez vos proches à rejoindre la révolution bancaire islamique et gagnez des récompenses exclusives.
+                </p>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <div className="text-lg font-bold text-green-600">50 CHF</div>
+                    <div className="text-xs text-gray-600">Par parrainage</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <div className="text-lg font-bold text-blue-600">0%</div>
+                    <div className="text-xs text-gray-600">Frais réseau</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm">
+                    <div className="text-lg font-bold text-purple-600">✓</div>
+                    <div className="text-xs text-gray-600">Halal certifié</div>
+                  </div>
+                </div>
+                <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => window.location.href = '/parrainage'}>
+                  Commencer le Parrainage
+                </Button>
+              </div>
+              <div className="text-center">
+                <div className="w-32 h-32 mx-auto bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-4">
+                  <div className="text-white text-4xl font-bold">🤝</div>
+                </div>
+                <p className="text-sm text-gray-600">
+                  Rejoignez plus de 23 ambassadeurs CED Bank qui ont déjà parrainé 156+ nouveaux membres
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
