@@ -29,6 +29,7 @@ import BanqueDigitale from "@/pages/BanqueDigitale";
 import AppBancaireMobile from "@/pages/AppBancaireMobile";
 import ParrainageCED from "@/pages/ParrainageCED";
 import ModePriere from "@/pages/ModePriere";
+import DubaiInvestments from "@/pages/DubaiInvestments";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -73,6 +74,9 @@ function Router() {
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
+      <Route path="/dubai-investments" component={DubaiInvestments} />
+      <Route path="/investissements-dubai" component={DubaiInvestments} />
+      <Route path="/immobilier-dubai" component={DubaiInvestments} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

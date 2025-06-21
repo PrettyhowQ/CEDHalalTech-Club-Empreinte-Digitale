@@ -25,6 +25,7 @@ export function Header() {
     { name: 'Boutique Solidaire', href: '/boutique' },
     { name: 'IA Éthique', href: '/ia-ethique' },
     { name: 'Centre Financier', href: '/previsionnel' },
+    { name: 'Investissements Dubaï', href: '/dubai-investments' },
   ];
 
   return (
