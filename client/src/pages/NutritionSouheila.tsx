@@ -7,8 +7,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { AppointmentButton } from '@/components/ui/AppointmentButton';
+import { ProgressTracker } from '@/components/ui/ProgressTracker';
+import { AIRecommendations } from '@/components/ui/AIRecommendations';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { 
   Heart, 
   Apple, 
@@ -25,7 +30,9 @@ import {
   MessageCircle,
   Camera,
   Zap,
-  Activity
+  Activity,
+  BookOpen,
+  FileText
 } from 'lucide-react';
 
 interface NutritionPlan {
@@ -54,6 +61,7 @@ interface SuccessStory {
 
 export default function NutritionSouheila() {
   const [selectedPlan, setSelectedPlan] = useState<string>('');
+  const [activeTab, setActiveTab] = useState('programmes');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,6 +70,7 @@ export default function NutritionSouheila() {
     restrictions: '',
     lifestyle: ''
   });
+  const { user } = useAuth();
 
   const nutritionPlans: NutritionPlan[] = [
     {
