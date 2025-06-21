@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
+import { QiblaCompass } from './QiblaCompass';
 import {
   Moon,
   Sun,
@@ -14,7 +15,8 @@ import {
   VolumeX,
   Settings,
   MapPin,
-  Calendar
+  Calendar,
+  Compass
 } from 'lucide-react';
 
 // Interface pour la synchronisation avec le calendrier existant
@@ -387,6 +389,9 @@ export function PrayerMode() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Boussole Qibla intégrée */}
+      <QiblaCompass />
     </div>
   );
 }

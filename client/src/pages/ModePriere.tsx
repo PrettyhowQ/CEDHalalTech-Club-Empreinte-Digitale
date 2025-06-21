@@ -56,20 +56,26 @@ export default function ModePriere() {
         <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
           <div className="text-center">
             <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
-              <div className="text-3xl">☪️</div>
+              <div className="text-3xl">🕋</div>
             </div>
             <h2 className="text-2xl font-bold mb-4">
               Technologie Respectueuse de la Foi
             </h2>
             <p className="text-lg text-green-100 mb-6">
-              CED Bank est la première banque digitale au monde à intégrer 
-              automatiquement les horaires de prière dans ses services.
+              CED Bank intègre boussole Qibla, horaires de prière et calendrier islamique 
+              pour une expérience bancaire 100% respectueuse des pratiques religieuses.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
               <div className="bg-white/10 rounded-lg p-4">
                 <h3 className="font-bold mb-2">Calculs Précis</h3>
                 <p className="text-sm text-green-100">
-                  Horaires basés sur votre localisation géographique exacte
+                  Horaires et direction Qibla basés sur GPS haute précision
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-lg p-4">
+                <h3 className="font-bold mb-2">Boussole Qibla</h3>
+                <p className="text-sm text-green-100">
+                  Direction exacte vers La Mecque depuis votre position
                 </p>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
