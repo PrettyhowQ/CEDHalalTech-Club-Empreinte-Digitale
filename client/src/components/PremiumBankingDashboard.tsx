@@ -15,6 +15,7 @@ import {
   Globe,
   Code,
   Calculator,
+  GraduationCap,
   Zap,
   ArrowRight,
   Eye,
@@ -112,6 +113,16 @@ export function PremiumBankingDashboard() {
       icon: Calculator,
       color: 'from-purple-500 to-indigo-600',
       route: '/convertisseur-instantane',
+      status: 'available',
+      tier: 'premium'
+    },
+    {
+      id: '9',
+      title: 'Système de Paiement Formations',
+      description: 'Inscription et paiement direct sur compte bancaire professionnel pour toutes les formations',
+      icon: GraduationCap,
+      color: 'from-teal-500 to-cyan-600',
+      route: '/formations-paiement',
       status: 'available',
       tier: 'premium'
     }

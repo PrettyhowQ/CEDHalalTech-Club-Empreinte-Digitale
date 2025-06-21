@@ -41,6 +41,7 @@ import MetaverseNFT from "@/pages/MetaverseNFT";
 import DeveloperAPI from "@/pages/DeveloperAPI";
 import PremiumDashboard from "@/pages/PremiumDashboard";
 import InstantCurrencyConverter from "@/pages/CurrencyConverter";
+import FormationPayment from "@/pages/FormationPayment";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -54,6 +55,9 @@ function Router() {
       {/* Public routes */}
       <Route path="/formations" component={Formations} />
       <Route path="/formations/:category" component={Formations} />
+      <Route path="/formations-paiement" component={FormationPayment} />
+      <Route path="/inscription-formations" component={FormationPayment} />
+      <Route path="/paiement-formations" component={FormationPayment} />
       <Route path="/ressources" component={Formations} />
       <Route path="/boutique" component={Portfolio} />
       <Route path="/ia-ethique" component={APropos} />

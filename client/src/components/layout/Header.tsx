@@ -18,6 +18,7 @@ export function Header() {
     { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },
     { name: 'CED Bank 🏦', href: '/banque', priority: true },
     { name: 'Formations', href: '/formations' },
+    { name: 'Inscription & Paiement', href: '/formations-paiement', priority: true },
     { name: 'Catalogue Complet', href: '/catalogue' },
     { name: 'Coaching Sport', href: '/coaching' },
     { name: 'Nutrition Souheila', href: '/nutrition' },
