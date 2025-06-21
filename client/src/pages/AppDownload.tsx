@@ -1,5 +1,5 @@
-import { AppDownloadSystem } from '@/components/AppDownloadSystem';
+import { DubaiEliteAppDownload } from '@/components/DubaiEliteAppDownload';
 
 export default function AppDownloadPage() {
-  return <AppDownloadSystem />;
+  return <DubaiEliteAppDownload />;
 }
