@@ -23,6 +23,7 @@ import Previsionnel from "@/pages/Previsionnel";
 import CatalogueFormations from "@/pages/CatalogueFormations";
 import AnalyseStrategique from "@/pages/AnalyseStrategique";
 import NutritionSouheila from "@/pages/NutritionSouheila";
+import TechnologiesAvancees from "@/pages/TechnologiesAvancees";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -46,6 +47,9 @@ function Router() {
       <Route path="/nutrition" component={NutritionSouheila} />
       <Route path="/nutrition-souheila" component={NutritionSouheila} />
       <Route path="/coaching" component={CoachingMobile} />
+      <Route path="/technologies-avancees" component={TechnologiesAvancees} />
+      <Route path="/futur" component={TechnologiesAvancees} />
+      <Route path="/innovations" component={TechnologiesAvancees} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
