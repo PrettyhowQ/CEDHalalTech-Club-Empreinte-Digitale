@@ -124,6 +124,31 @@ function CourseCard({ course, userProgress }: { course: any; userProgress?: any 
             <span>4.8</span>
           </div>
         </div>
+
+        {/* Prix des formations */}
+        <div className="mb-4 space-y-2">
+          <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
+            <div>
+              <p className="text-sm font-medium text-blue-800">Étudiants</p>
+              <p className="text-xs text-blue-600">Tarif préférentiel</p>
+            </div>
+            <div className="text-right">
+              <p className="text-lg font-bold text-blue-700">{course.priceStudent || '29'}€</p>
+              <p className="text-xs text-blue-600">par mois</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg border border-purple-200">
+            <div>
+              <p className="text-sm font-medium text-purple-800">Entreprises</p>
+              <p className="text-xs text-purple-600">Formation professionnelle</p>
+            </div>
+            <div className="text-right">
+              <p className="text-lg font-bold text-purple-700">{course.priceBusiness || '149'}€</p>
+              <p className="text-xs text-purple-600">par employé/mois</p>
+            </div>
+          </div>
+        </div>
         
         <Button 
           className={`w-full ${isCompleted ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-600 hover:bg-primary-700'} text-white`}

@@ -57,6 +57,10 @@ export const courses = pgTable("courses", {
   videoUrl: text("video_url"),
   content: text("content"),
   isPublished: boolean("is_published").default(false),
+  // Prix par type d'utilisateur
+  priceStudent: integer("price_student"), // Prix pour étudiants en euros
+  priceBusiness: integer("price_business"), // Prix pour entreprises en euros
+  priceIndividual: integer("price_individual"), // Prix pour particuliers en euros
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });

@@ -733,7 +733,47 @@ export function FormationCatalog() {
                   <div className="text-center p-2 bg-gray-50 rounded">
                     <Euro className="h-4 w-4 text-blue-600 mx-auto mb-1" />
                     <p className="text-sm font-bold text-blue-600">{formation.price}€</p>
-                    <p className="text-xs text-gray-600">Prix</p>
+                    <p className="text-xs text-gray-600">Prix standard</p>
+                  </div>
+                </div>
+
+                {/* Tarifs par public */}
+                <div className="space-y-2">
+                  <h4 className="text-sm font-medium text-gray-800">Tarifs spéciaux :</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    {formation.targetAudience.includes('etudiant') && (
+                      <div className="flex items-center justify-between p-2 bg-blue-50 rounded border border-blue-200">
+                        <div className="flex items-center gap-2">
+                          <GraduationCap className="h-4 w-4 text-blue-600" />
+                          <span className="text-sm font-medium text-blue-800">Étudiants</span>
+                        </div>
+                        <span className="text-sm font-bold text-blue-700">
+                          {Math.round(formation.price * 0.4)}€/mois
+                        </span>
+                      </div>
+                    )}
+                    {formation.targetAudience.includes('entreprise') && (
+                      <div className="flex items-center justify-between p-2 bg-purple-50 rounded border border-purple-200">
+                        <div className="flex items-center gap-2">
+                          <Building2 className="h-4 w-4 text-purple-600" />
+                          <span className="text-sm font-medium text-purple-800">Entreprises</span>
+                        </div>
+                        <span className="text-sm font-bold text-purple-700">
+                          {Math.round(formation.price * 1.8)}€/employé
+                        </span>
+                      </div>
+                    )}
+                    {formation.targetAudience.includes('particulier') && (
+                      <div className="flex items-center justify-between p-2 bg-green-50 rounded border border-green-200">
+                        <div className="flex items-center gap-2">
+                          <Users className="h-4 w-4 text-green-600" />
+                          <span className="text-sm font-medium text-green-800">Particuliers</span>
+                        </div>
+                        <span className="text-sm font-bold text-green-700">
+                          {formation.price}€ unique
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
 
