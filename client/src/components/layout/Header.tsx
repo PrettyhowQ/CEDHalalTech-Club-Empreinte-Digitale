@@ -17,6 +17,8 @@ export function Header() {
   const navigation = [
     { name: 'Formations', href: '/formations' },
     { name: 'Catalogue Complet', href: '/catalogue' },
+    { name: 'Coaching Sport', href: '/coaching' },
+    { name: 'Nutrition Souheila', href: '/nutrition' },
     { name: 'Analyse Stratégique', href: '/analyse-strategique' },
     { name: 'Ressources', href: '/ressources' },
     { name: 'Boutique Solidaire', href: '/boutique' },
