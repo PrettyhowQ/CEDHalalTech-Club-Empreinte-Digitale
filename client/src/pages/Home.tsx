@@ -9,6 +9,7 @@ import { AIGeneratorWidget } from '@/components/ui/AIGeneratorWidget';
 import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { ModulesSection } from '@/components/sections/ModulesSection';
@@ -45,6 +46,7 @@ export default function Home() {
       <SportWidget variant="compact" />
       <main className="relative z-10">
         <HeroSection />
+        <CEDBankSection />
         <FormationsSection />
         <ChatIARPSection />
         <ModulesSection />

@@ -1,8 +1,14 @@
-# Club Empreinte Digitale - Plateforme IA Éthique
+# 🌍 Club Empreinte Digitale - Plateforme IA Éthique & Finance Islamique
 
-## 🌟 Vue d'ensemble
+**Version:** 2.1.0  
+**Date de mise à jour:** 21 Juin 2025 - 12:51 PM (GMT+1)  
+**Copyright © 2025 - Yakoubi Yamina - Tous droits réservés**
 
-**Club Empreinte Digitale** est une plateforme éducative révolutionnaire propulsée par **Super IARP Pro**, dédiée à l'apprentissage de l'intelligence artificielle éthique et responsable. Créée par **Yakoubi Yamina**, cette plateforme sert plus de **34 221 apprenants actifs** à travers le monde avec un objectif de revenus de **2,98M€ pour 2025**.
+---
+
+## 🎯 Vision du Projet
+
+**Club Empreinte Digitale** est une plateforme révolutionnaire mondiale combinant l'éducation IA éthique avec les services financiers islamiques, servrant 34,221+ apprenants actifs à travers 78 langues. Dirigée par **Yakoubi Yamina**, notre mission est de démocratiser l'accès à une technologie éthique tout en respectant les principes de finance islamique.
 
 ### 🎯 Mission
 Former la nouvelle génération de développeurs et professionnels conscients de l'impact éthique de la technologie, en proposant un écosystème complet d'apprentissage multilingue et inclusif.
