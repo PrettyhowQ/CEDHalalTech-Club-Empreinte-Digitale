@@ -24,6 +24,7 @@ import CatalogueFormations from "@/pages/CatalogueFormations";
 import AnalyseStrategique from "@/pages/AnalyseStrategique";
 import NutritionSouheila from "@/pages/NutritionSouheila";
 import TechnologiesAvancees from "@/pages/TechnologiesAvancees";
+import FinancialDashboard from "@/pages/FinancialDashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -50,6 +51,10 @@ function Router() {
       <Route path="/technologies-avancees" component={TechnologiesAvancees} />
       <Route path="/futur" component={TechnologiesAvancees} />
       <Route path="/innovations" component={TechnologiesAvancees} />
+      <Route path="/financier" component={FinancialDashboard} />
+      <Route path="/revenus" component={FinancialDashboard} />
+      <Route path="/chiffres" component={FinancialDashboard} />
+      <Route path="/dashboard-financier" component={FinancialDashboard} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
