@@ -39,6 +39,7 @@ import HalalCashback from "@/pages/HalalCashback";
 import IslamicInvestments from "@/pages/IslamicInvestments";
 import MetaverseNFT from "@/pages/MetaverseNFT";
 import DeveloperAPI from "@/pages/DeveloperAPI";
+import PremiumDashboard from "@/pages/PremiumDashboard";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -110,6 +111,9 @@ function Router() {
       <Route path="/nft-halal" component={MetaverseNFT} />
       <Route path="/developer-api" component={DeveloperAPI} />
       <Route path="/api-developpeur" component={DeveloperAPI} />
+      <Route path="/premium-dashboard" component={PremiumDashboard} />
+      <Route path="/dashboard-premium" component={PremiumDashboard} />
+      <Route path="/fonctionnalites-premium" component={PremiumDashboard} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
