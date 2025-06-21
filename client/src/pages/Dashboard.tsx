@@ -26,7 +26,8 @@ import {
   Users,
   Play,
   ChevronRight,
-  Download
+  Download,
+  DollarSign
 } from 'lucide-react';
 
 function StatCard({ icon: Icon, title, value, subtitle, color = "text-primary-600" }: {
@@ -130,18 +131,7 @@ export default function Dashboard() {
     queryKey: ['/api/analytics/user'],
     retry: false,
     enabled: isAuthenticated,
-    onError: (error: Error) => {
-      if (isUnauthorizedError(error)) {
-        toast({
-          title: "Session expirée",
-          description: "Vous allez être redirigé vers la page de connexion.",
-          variant: "destructive",
-        });
-        setTimeout(() => {
-          window.location.href = "/api/login";
-        }, 500);
-      }
-    }
+
   });
 
   const { data: recentCourses } = useQuery({
@@ -447,6 +437,111 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          {/* CED Bank Access Section */}
+          <div className="mt-8">
+            <Card className="border-2 border-green-500 bg-gradient-to-r from-green-50 via-blue-50 to-purple-50">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <DollarSign className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-green-800">CED Bank International</h3>
+                    <p className="text-sm text-green-600">Banque digitale islamique - Accès immédiat après validation</p>
+                  </div>
+                  <div className="ml-auto">
+                    <Badge className="bg-green-500 text-white">Dossier Approuvé</Badge>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center p-4 bg-white rounded-lg border border-green-200">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
+                      <Globe className="h-8 w-8 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Interface Web Banking</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Comptes multi-devises CHF/AED, cartes virtuelles/physiques
+                    </p>
+                    <Button 
+                      className="w-full bg-green-600 hover:bg-green-700" 
+                      onClick={() => window.location.href = '/banque'}
+                    >
+                      Ouvrir CED Bank
+                    </Button>
+                  </div>
+                  
+                  <div className="text-center p-4 bg-white rounded-lg border border-blue-200">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
+                      <Download className="h-8 w-8 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Application Mobile</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      App iOS/Android avec mode prière et boussole Qibla
+                    </p>
+                    <Button 
+                      className="w-full bg-blue-600 hover:bg-blue-700" 
+                      onClick={() => window.location.href = '/app-bancaire'}
+                    >
+                      Télécharger l'App
+                    </Button>
+                  </div>
+                  
+                  <div className="text-center p-4 bg-white rounded-lg border border-purple-200">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-500 rounded-full flex items-center justify-center">
+                      <Users className="h-8 w-8 text-white" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">Programme Parrainage</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Récompenses exclusives pour ambassadeurs CED
+                    </p>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700" 
+                      onClick={() => window.location.href = '/parrainage'}
+                    >
+                      Devenir Ambassadeur
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="mt-6 bg-green-100 rounded-lg p-4 border border-green-200">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-bold">YY</span>
+                      </div>
+                      <div>
+                        <p className="font-bold text-green-800">Statut de validation</p>
+                        <p className="text-xs text-green-600">Approuvé par Yakoubi Yamina - Direction</p>
+                      </div>
+                    </div>
+                    <Badge className="bg-green-500 text-white">Accès Autorisé</Badge>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div className="text-center">
+                      <div className="font-bold text-green-700">0%</div>
+                      <div className="text-green-600">Taux d'intérêt</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-bold text-green-700">Halal</div>
+                      <div className="text-green-600">Finance islamique</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-bold text-green-700">5x/jour</div>
+                      <div className="text-green-600">Mode prière auto</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-bold text-green-700">GPS</div>
+                      <div className="text-green-600">Qibla Mecca</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Quick Actions */}
