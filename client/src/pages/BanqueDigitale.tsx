@@ -405,11 +405,11 @@ export default function BanqueDigitale() {
             </Card>
 
             {/* Services exclusifs */}
-            <Card className="border-yellow-200 bg-gradient-to-br from-yellow-50 to-orange-50">
+            <Card className="border-green-200 bg-gradient-to-br from-green-50 to-blue-50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-yellow-600" />
-                  Services Exclusifs CED
+                  <Star className="h-5 w-5 text-green-600" />
+                  Finance Islamique CED
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
