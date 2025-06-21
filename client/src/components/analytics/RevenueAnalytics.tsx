@@ -463,6 +463,34 @@ export function RevenueAnalytics() {
             ))}
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-purple-600" />
+              Conversion par Canal
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {Object.entries(metrics.conversionByChannel).map(([channel, rate]) => (
+              <div key={channel} className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">{channel}</span>
+                  <span className="text-sm font-bold text-purple-600">{rate.toFixed(1)}%</span>
+                </div>
+                <Progress value={rate} className="h-2" />
+              </div>
+            ))}
+            <div className="pt-3 border-t">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium text-gray-800">Conversion moyenne</span>
+                <span className="text-sm font-bold text-purple-700">
+                  {Object.values(metrics.conversionByChannel).reduce((a, b) => a + b, 0) / Object.values(metrics.conversionByChannel).length}%
+                </span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Métriques avancées */}
