@@ -130,8 +130,7 @@ export default function Dashboard() {
   const { data: analytics, isLoading: analyticsLoading } = useQuery({
     queryKey: ['/api/analytics/user'],
     retry: false,
-    enabled: isAuthenticated,
-
+    enabled: isAuthenticated
   });
 
   const { data: recentCourses } = useQuery({

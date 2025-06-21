@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import { OverdraftProtection } from '@/components/OverdraftProtection';
+import { DubaiDonationSystem } from '@/components/DubaiDonationSystem';
 import {
   CreditCard,
   Wallet,
@@ -77,7 +79,7 @@ export default function BanqueDigitale() {
       {
         id: '2',
         type: 'savings',
-        name: 'Épargne Dubaï',
+        name: 'Épargne Dubaï - Logement Social',
         balance: 5420.00,
         currency: 'AED',
         iban: 'AE07 0331 2345 6789 0123 456',
