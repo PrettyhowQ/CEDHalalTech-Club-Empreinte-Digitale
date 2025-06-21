@@ -94,8 +94,9 @@ export default function FinancialDashboard() {
 
           {/* Tableau de bord principal */}
           <Tabs defaultValue="revenue" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="revenue">Revenus Temps Réel</TabsTrigger>
+              <TabsTrigger value="banking">CED Bank</TabsTrigger>
               <TabsTrigger value="growth">Croissance</TabsTrigger>
               <TabsTrigger value="forecasting">Prévisions</TabsTrigger>
               <TabsTrigger value="performance">Performance</TabsTrigger>
@@ -103,6 +104,130 @@ export default function FinancialDashboard() {
 
             <TabsContent value="revenue" className="space-y-6">
               <RevenueAnalytics />
+            </TabsContent>
+
+            <TabsContent value="banking" className="space-y-6">
+              <Card className="border-2 border-green-200 bg-gradient-to-r from-green-50 to-blue-50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <DollarSign className="h-6 w-6 text-green-600" />
+                    CED Bank International - Services Bancaires
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
+                        <Globe className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="font-bold text-lg mb-2">Interface Web Banking</h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        Comptes multi-devises, cartes, transactions sécurisées
+                      </p>
+                      <Button className="bg-green-600 hover:bg-green-700" onClick={() => window.location.href = '/banque'}>
+                        Accéder à CED Bank
+                      </Button>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
+                        <Zap className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="font-bold text-lg mb-2">Application Mobile</h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        App téléchargeable iOS/Android avec mode prière
+                      </p>
+                      <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => window.location.href = '/app-bancaire'}>
+                        Télécharger l'App
+                      </Button>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-purple-500 rounded-full flex items-center justify-center">
+                        <Users className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="font-bold text-lg mb-2">Programme Parrainage</h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        Récompenses exclusives pour ambassadeurs
+                      </p>
+                      <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => window.location.href = '/parrainage'}>
+                        Devenir Ambassadeur
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <Card className="border-amber-200 bg-amber-50">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="text-2xl">🇨🇭</div>
+                          <div>
+                            <h4 className="font-bold text-amber-800">Siège Suisse</h4>
+                            <p className="text-sm text-amber-600">Sécurité bancaire européenne</p>
+                          </div>
+                        </div>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span>Comptes CHF actifs</span>
+                            <Badge className="bg-green-500 text-white">2,847</Badge>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Volume transactions</span>
+                            <Badge className="bg-blue-500 text-white">156M CHF</Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-blue-200 bg-blue-50">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="text-2xl">🇦🇪</div>
+                          <div>
+                            <h4 className="font-bold text-blue-800">Hub Dubaï</h4>
+                            <p className="text-sm text-blue-600">Finance islamique & donateurs</p>
+                          </div>
+                        </div>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span>Comptes AED actifs</span>
+                            <Badge className="bg-green-500 text-white">5,420</Badge>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Financement Sukuk</span>
+                            <Badge className="bg-purple-500 text-white">89M AED</Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <div className="mt-6 bg-green-100 rounded-lg p-4 border border-green-200">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Star className="h-5 w-5 text-green-600" />
+                      <span className="font-bold text-green-800">Finance Islamique Certifiée</span>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                      <div className="text-center">
+                        <div className="font-bold text-green-700">0%</div>
+                        <div className="text-green-600">Taux intérêt</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-green-700">Halal</div>
+                        <div className="text-green-600">Certifié Charia</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-green-700">Auto</div>
+                        <div className="text-green-600">Mode prière</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="font-bold text-green-700">GPS</div>
+                        <div className="text-green-600">Boussole Qibla</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
 
             <TabsContent value="growth" className="space-y-6">
