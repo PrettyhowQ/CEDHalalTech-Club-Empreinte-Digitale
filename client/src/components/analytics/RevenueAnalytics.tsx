@@ -43,6 +43,21 @@ interface RevenueMetrics {
   projectedRevenue: number;
   conversionRate: number;
   averageOrderValue: number;
+  // Nouvelles métriques avancées
+  arpu: number; // Average Revenue Per User
+  cac: number; // Customer Acquisition Cost
+  ltv: number; // Lifetime Value
+  retentionRate: number;
+  churnRate: number;
+  conversionByChannel: {
+    [key: string]: number;
+  };
+  revenuePerLearner: number;
+  monthlyRecurringRevenue: number;
+  alerts: {
+    type: 'success' | 'warning' | 'danger';
+    message: string;
+  }[];
 }
 
 export function RevenueAnalytics() {
@@ -59,7 +74,16 @@ export function RevenueAnalytics() {
     revenueByCategory: {},
     projectedRevenue: 0,
     conversionRate: 0,
-    averageOrderValue: 0
+    averageOrderValue: 0,
+    arpu: 0,
+    cac: 0,
+    ltv: 0,
+    retentionRate: 0,
+    churnRate: 0,
+    conversionByChannel: {},
+    revenuePerLearner: 0,
+    monthlyRecurringRevenue: 0,
+    alerts: []
   });
 
   const [isRealTime, setIsRealTime] = useState(true);
@@ -101,6 +125,46 @@ export function RevenueAnalytics() {
           'Développement': Math.floor(totalRevenue * 0.15),
           'Design & UX': Math.floor(totalRevenue * 0.12)
         };
+
+        // Métriques avancées
+        const totalUsers = students + businesses + individuals;
+        const arpu = Math.floor(totalRevenue / totalUsers);
+        const cac = 45 + Math.floor(Math.random() * 15); // Customer Acquisition Cost
+        const ltv = arpu * 24; // Lifetime Value (2 ans)
+        const retentionRate = 94.2 + (Math.random() * 2 - 1);
+        const churnRate = 100 - retentionRate;
+        const revenuePerLearner = Math.floor(totalRevenue / 34221);
+        const monthlyRecurringRevenue = Math.floor(totalRevenue * 0.85); // 85% récurrent
+
+        // Conversion par canal
+        const conversionByChannel = {
+          'Recherche Organique': 15.8 + (Math.random() * 2 - 1),
+          'Réseaux Sociaux': 8.3 + (Math.random() * 2 - 1),
+          'Email Marketing': 22.1 + (Math.random() * 2 - 1),
+          'Partenariats': 31.7 + (Math.random() * 2 - 1),
+          'Publicité Payante': 12.4 + (Math.random() * 2 - 1)
+        };
+
+        // Alertes intelligentes
+        const alerts = [];
+        if (monthlyGrowth > 50) {
+          alerts.push({
+            type: 'success' as const,
+            message: 'Croissance exceptionnelle détectée ! Opportunité d\'expansion'
+          });
+        }
+        if (churnRate > 7) {
+          alerts.push({
+            type: 'warning' as const,
+            message: 'Taux de désabonnement en hausse - Action recommandée'
+          });
+        }
+        if (cac > ltv * 0.3) {
+          alerts.push({
+            type: 'danger' as const,
+            message: 'Coût acquisition élevé par rapport à la LTV'
+          });
+        }
         
         return {
           totalRevenue,
@@ -111,7 +175,16 @@ export function RevenueAnalytics() {
           revenueByCategory,
           projectedRevenue: Math.floor(totalRevenue * 1.25),
           conversionRate: 12.5 + (Math.random() * 2 - 1),
-          averageOrderValue: 147 + Math.floor(Math.random() * 20)
+          averageOrderValue: 147 + Math.floor(Math.random() * 20),
+          arpu,
+          cac,
+          ltv,
+          retentionRate,
+          churnRate,
+          conversionByChannel,
+          revenuePerLearner,
+          monthlyRecurringRevenue,
+          alerts
         };
       });
       
@@ -246,12 +319,12 @@ export function RevenueAnalytics() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-orange-600">Projection Annuelle</p>
+                <p className="text-sm font-medium text-orange-600">MRR & Projection</p>
                 <p className="text-2xl font-bold text-orange-700">
-                  {formatCurrency(metrics.projectedRevenue * 12)}
+                  {formatCurrency(metrics.monthlyRecurringRevenue)}
                 </p>
                 <p className="text-sm text-orange-600">
-                  Panier moyen: {formatCurrency(metrics.averageOrderValue)}
+                  Projection: {formatCurrency(metrics.projectedRevenue * 12)}
                 </p>
               </div>
               <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -262,8 +335,77 @@ export function RevenueAnalytics() {
         </Card>
       </div>
 
-      {/* Répartition par type d'abonnés */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Alertes et métriques avancées */}
+      {metrics.alerts.length > 0 && (
+        <Card className="border-yellow-200 bg-gradient-to-r from-yellow-50 to-orange-50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Activity className="h-5 w-5 text-yellow-600" />
+              Alertes Intelligentes Temps Réel
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {metrics.alerts.map((alert, index) => (
+              <div
+                key={index}
+                className={`p-3 rounded-lg border ${
+                  alert.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' :
+                  alert.type === 'warning' ? 'bg-yellow-50 border-yellow-200 text-yellow-800' :
+                  'bg-red-50 border-red-200 text-red-800'
+                }`}
+              >
+                <p className="text-sm font-medium">{alert.message}</p>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Métriques avancées KPI */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card className="border-indigo-200 bg-indigo-50">
+          <CardContent className="p-4 text-center">
+            <div className="w-12 h-12 mx-auto mb-2 bg-indigo-100 rounded-full flex items-center justify-center">
+              <DollarSign className="h-6 w-6 text-indigo-600" />
+            </div>
+            <p className="text-lg font-bold text-indigo-700">{formatCurrency(metrics.arpu)}</p>
+            <p className="text-xs text-gray-600">ARPU (Revenu/Utilisateur)</p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-pink-200 bg-pink-50">
+          <CardContent className="p-4 text-center">
+            <div className="w-12 h-12 mx-auto mb-2 bg-pink-100 rounded-full flex items-center justify-center">
+              <Target className="h-6 w-6 text-pink-600" />
+            </div>
+            <p className="text-lg font-bold text-pink-700">{formatCurrency(metrics.cac)}</p>
+            <p className="text-xs text-gray-600">CAC (Coût Acquisition)</p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-emerald-200 bg-emerald-50">
+          <CardContent className="p-4 text-center">
+            <div className="w-12 h-12 mx-auto mb-2 bg-emerald-100 rounded-full flex items-center justify-center">
+              <TrendingUp className="h-6 w-6 text-emerald-600" />
+            </div>
+            <p className="text-lg font-bold text-emerald-700">{formatCurrency(metrics.ltv)}</p>
+            <p className="text-xs text-gray-600">LTV (Valeur à Vie)</p>
+          </CardContent>
+        </Card>
+
+        <Card className="border-violet-200 bg-violet-50">
+          <CardContent className="p-4 text-center">
+            <div className="w-12 h-12 mx-auto mb-2 bg-violet-100 rounded-full flex items-center justify-center">
+              <Users className="h-6 w-6 text-violet-600" />
+            </div>
+            <p className="text-lg font-bold text-violet-700">{metrics.retentionRate.toFixed(1)}%</p>
+            <p className="text-xs text-gray-600">Taux Rétention</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Répartition par type d'abonnés et canaux */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
