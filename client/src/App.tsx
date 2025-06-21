@@ -29,6 +29,9 @@ import BanqueDigitale from "@/pages/BanqueDigitale";
 import AppBancaireMobile from "@/pages/AppBancaireMobile";
 import ParrainageCED from "@/pages/ParrainageCED";
 import CurrencyConverter from "@/pages/CurrencyConverter";
+import CryptoWallet from "@/pages/CryptoWallet";
+import TransactionHistory from "@/pages/TransactionHistory";
+import BudgetPlanner from "@/pages/BudgetPlanner";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -76,6 +79,9 @@ function Router() {
       <Route path="/convertisseur" component={CurrencyConverter} />
       <Route path="/currency-converter" component={CurrencyConverter} />
       <Route path="/change-devises" component={CurrencyConverter} />
+      <Route path="/wallet" component={CryptoWallet} />
+      <Route path="/crypto-wallet" component={CryptoWallet} />
+      <Route path="/portefeuille-crypto" component={CryptoWallet} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />

@@ -14,7 +14,8 @@ import {
   Clock,
   MapPin,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Wallet
 } from 'lucide-react';
 
 export function CEDBankSection() {
@@ -97,14 +98,22 @@ export function CEDBankSection() {
                 </Button>
               </div>
               
-              <div className="flex justify-center">
+              <div className="flex justify-center gap-3">
                 <Button 
                   variant="outline" 
                   className="bg-white/80 border-2 border-blue-300 text-blue-700 hover:bg-blue-50 flex items-center gap-2"
                   onClick={() => window.location.href = '/convertisseur'}
                 >
                   <Globe className="h-4 w-4" />
-                  Convertisseur Devises
+                  Convertisseur
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="bg-white/80 border-2 border-purple-300 text-purple-700 hover:bg-purple-50 flex items-center gap-2"
+                  onClick={() => window.location.href = '/wallet'}
+                >
+                  <Wallet className="h-4 w-4" />
+                  Wallet Crypto
                 </Button>
               </div>
             </div>
