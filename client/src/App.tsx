@@ -42,6 +42,7 @@ import DeveloperAPI from "@/pages/DeveloperAPI";
 import PremiumDashboard from "@/pages/PremiumDashboard";
 import InstantCurrencyConverter from "@/pages/CurrencyConverter";
 import FormationPayment from "@/pages/FormationPayment";
+import AppDownload from "@/pages/AppDownload";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -85,7 +86,10 @@ function Router() {
       <Route path="/app-bancaire" component={AppBancaireMobile} />
       <Route path="/mobile-banking" component={AppBancaireMobile} />
       <Route path="/ced-bank-app" component={AppBancaireMobile} />
-      <Route path="/telecharger-app" component={AppBancaireMobile} />
+      <Route path="/telecharger-app" component={AppDownload} />
+      <Route path="/download-app" component={AppDownload} />
+      <Route path="/app-download" component={AppDownload} />
+      <Route path="/telechargement" component={AppDownload} />
       <Route path="/parrainage" component={ParrainageCED} />
       <Route path="/referral" component={ParrainageCED} />
       <Route path="/ambassadeur" component={ParrainageCED} />
