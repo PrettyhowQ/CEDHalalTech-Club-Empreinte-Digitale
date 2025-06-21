@@ -32,6 +32,7 @@ import CurrencyConverter from "@/pages/CurrencyConverter";
 import CryptoWallet from "@/pages/CryptoWallet";
 import TransactionHistory from "@/pages/TransactionHistory";
 import BudgetPlanner from "@/pages/BudgetPlanner";
+import CryptoDonations from "@/pages/CryptoDonations";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -88,6 +89,9 @@ function Router() {
       <Route path="/budget" component={BudgetPlanner} />
       <Route path="/budget-planner" component={BudgetPlanner} />
       <Route path="/planificateur-budget" component={BudgetPlanner} />
+      <Route path="/crypto-donations" component={CryptoDonations} />
+      <Route path="/donations-crypto" component={CryptoDonations} />
+      <Route path="/dubai-crypto" component={CryptoDonations} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
