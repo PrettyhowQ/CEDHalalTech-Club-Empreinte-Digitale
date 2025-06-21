@@ -30,6 +30,7 @@ import AppBancaireMobile from "@/pages/AppBancaireMobile";
 import ParrainageCED from "@/pages/ParrainageCED";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
+import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -77,6 +78,9 @@ function Router() {
       <Route path="/dubai-investments" component={DubaiInvestments} />
       <Route path="/investissements-dubai" component={DubaiInvestments} />
       <Route path="/immobilier-dubai" component={DubaiInvestments} />
+      <Route path="/dubai-wealth-crm" component={DubaiWealthCRM} />
+      <Route path="/fortunes-dubai" component={DubaiWealthCRM} />
+      <Route path="/crm-donateurs" component={DubaiWealthCRM} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
