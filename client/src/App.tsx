@@ -26,6 +26,7 @@ import NutritionSouheila from "@/pages/NutritionSouheila";
 import TechnologiesAvancees from "@/pages/TechnologiesAvancees";
 import FinancialDashboard from "@/pages/FinancialDashboard";
 import BanqueDigitale from "@/pages/BanqueDigitale";
+import AppBancaireMobile from "@/pages/AppBancaireMobile";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -60,6 +61,10 @@ function Router() {
       <Route path="/banque-digitale" component={BanqueDigitale} />
       <Route path="/ced-bank" component={BanqueDigitale} />
       <Route path="/banking" component={BanqueDigitale} />
+      <Route path="/app-bancaire" component={AppBancaireMobile} />
+      <Route path="/mobile-banking" component={AppBancaireMobile} />
+      <Route path="/ced-bank-app" component={AppBancaireMobile} />
+      <Route path="/telecharger-app" component={AppBancaireMobile} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

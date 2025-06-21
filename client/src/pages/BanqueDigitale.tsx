@@ -249,12 +249,12 @@ export default function BanqueDigitale() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = '/app-bancaire'}>
             <CardContent className="p-4 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 bg-orange-100 rounded-full flex items-center justify-center">
-                <Target className="h-6 w-6 text-orange-600" />
+              <div className="w-12 h-12 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
+                <Smartphone className="h-6 w-6 text-blue-600" />
               </div>
-              <p className="font-medium">Objectifs</p>
+              <p className="font-medium">App Mobile</p>
             </CardContent>
           </Card>
         </div>
