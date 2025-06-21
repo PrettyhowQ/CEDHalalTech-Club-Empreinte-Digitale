@@ -28,6 +28,7 @@ import FinancialDashboard from "@/pages/FinancialDashboard";
 import BanqueDigitale from "@/pages/BanqueDigitale";
 import AppBancaireMobile from "@/pages/AppBancaireMobile";
 import ParrainageCED from "@/pages/ParrainageCED";
+import CurrencyConverter from "@/pages/CurrencyConverter";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -72,6 +73,9 @@ function Router() {
       <Route path="/parrainage" component={ParrainageCED} />
       <Route path="/referral" component={ParrainageCED} />
       <Route path="/ambassadeur" component={ParrainageCED} />
+      <Route path="/convertisseur" component={CurrencyConverter} />
+      <Route path="/currency-converter" component={CurrencyConverter} />
+      <Route path="/change-devises" component={CurrencyConverter} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
