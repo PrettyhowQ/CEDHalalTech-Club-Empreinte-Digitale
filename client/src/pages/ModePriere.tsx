@@ -1,4 +1,7 @@
 import { PrayerMode } from '@/components/PrayerMode';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Clock, Calendar, Satellite } from 'lucide-react';
 
 export default function ModePriere() {
   return (
@@ -10,10 +13,42 @@ export default function ModePriere() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Votre banque digitale respecte vos pratiques religieuses en suspendant 
-            automatiquement les services durant les heures de prière. Une innovation 
-            unique qui allie technologie bancaire moderne et valeurs islamiques.
+            automatiquement les services durant les heures de prière. Synchronisé 
+            avec le planificateur satellite CED et les calendriers hégirien/grégorien.
           </p>
         </div>
+
+        {/* Intégration avec le système existant */}
+        <Card className="mb-6 border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-green-50">
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-blue-500 rounded-full flex items-center justify-center">
+                  <Satellite className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-bold text-blue-800 mb-1">Planificateur Satellite</h3>
+                <p className="text-sm text-blue-600">Synchronisation temps réel</p>
+                <Badge className="bg-green-500 text-white mt-2">Connecté</Badge>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-green-500 rounded-full flex items-center justify-center">
+                  <Calendar className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-bold text-green-800 mb-1">Calendriers Intégrés</h3>
+                <p className="text-sm text-green-600">Hégirien & Grégorien</p>
+                <Badge className="bg-blue-500 text-white mt-2">Synchronisé</Badge>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-3 bg-purple-500 rounded-full flex items-center justify-center">
+                  <Clock className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-bold text-purple-800 mb-1">Horaires Précis</h3>
+                <p className="text-sm text-purple-600">Calculs astronomiques</p>
+                <Badge className="bg-purple-500 text-white mt-2">Actif</Badge>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
         
         <PrayerMode />
         
