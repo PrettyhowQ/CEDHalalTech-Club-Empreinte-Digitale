@@ -15,6 +15,7 @@ export function Header() {
   const { currentLanguage } = useLanguage();
 
   const navigation = [
+    { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },
     { name: 'CED Bank 🏦', href: '/banque', priority: true },
     { name: 'Formations', href: '/formations' },
     { name: 'Catalogue Complet', href: '/catalogue' },
@@ -50,11 +51,13 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  item.priority 
-                    ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
-                    : location === item.href
-                      ? 'text-primary-600 border-b-2 border-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                  item.premium
+                    ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg hover:from-yellow-600 hover:to-orange-600 shadow-md font-bold'
+                    : item.priority 
+                      ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
+                      : location === item.href
+                        ? 'text-primary-600 border-b-2 border-primary-600'
+                        : 'text-gray-700 hover:text-primary-600'
                 }`}
               >
                 {item.name}

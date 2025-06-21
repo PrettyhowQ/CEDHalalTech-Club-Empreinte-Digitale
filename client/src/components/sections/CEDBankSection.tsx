@@ -17,6 +17,7 @@ import {
   ArrowRight,
   Wallet
 } from 'lucide-react';
+import { Link } from 'wouter';
 
 export function CEDBankSection() {
   return (
@@ -82,7 +83,30 @@ export function CEDBankSection() {
               </div>
             </div>
             
-            <div className="flex flex-col gap-4">
+            {/* Premium Dashboard - Section mise en avant */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-2xl border-2 border-yellow-300 shadow-lg">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                    <Star className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-yellow-800 mb-3">Dashboard Premium CED Bank</h3>
+                <p className="text-yellow-700 mb-6 max-w-2xl mx-auto">
+                  Accès exclusif aux 7 fonctionnalités révolutionnaires conçues pour les plus grosses fortunes de Dubai. 
+                  Cartes virtuelles, IA financière, cashback halal, métaverse et plus encore.
+                </p>
+                <Button asChild size="lg" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white text-lg px-8 py-3">
+                  <Link href="/premium-dashboard" className="flex items-center gap-3">
+                    <Star className="h-5 w-5" />
+                    Accéder au Dashboard Premium
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="flex flex-col gap-4 mt-6">
               <div className="flex justify-center gap-4">
                 <Button className="bg-black text-white hover:bg-gray-800 flex items-center gap-2">
                   <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -96,21 +120,6 @@ export function CEDBankSection() {
                   </svg>
                   Télécharger Android
                 </Button>
-              </div>
-              
-              {/* Premium Dashboard Access */}
-              <div className="mt-6 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
-                <div className="text-center">
-                  <h4 className="font-bold text-yellow-800 mb-2">Accès Clients Premium</h4>
-                  <p className="text-sm text-yellow-700 mb-4">Découvrez nos 7 fonctionnalités exclusives pour les fortunes de Dubai</p>
-                  <Button asChild className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white">
-                    <a href="/premium-dashboard" className="flex items-center gap-2">
-                      <Star className="h-4 w-4" />
-                      Dashboard Premium
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
               </div>
               
               <div className="flex justify-center gap-3">
