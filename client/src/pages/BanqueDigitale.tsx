@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { OverdraftProtection } from '@/components/OverdraftProtection';
 import { DubaiDonationSystem } from '@/components/DubaiDonationSystem';
+import { CEDBankCards } from '@/components/CEDBankCards';
 import {
   CreditCard,
   Wallet,
