@@ -40,6 +40,7 @@ import IslamicInvestments from "@/pages/IslamicInvestments";
 import MetaverseNFT from "@/pages/MetaverseNFT";
 import DeveloperAPI from "@/pages/DeveloperAPI";
 import PremiumDashboard from "@/pages/PremiumDashboard";
+import InstantCurrencyConverter from "@/pages/CurrencyConverter";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";

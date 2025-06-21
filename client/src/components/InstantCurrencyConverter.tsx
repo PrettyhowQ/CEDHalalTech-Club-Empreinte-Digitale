@@ -4,16 +4,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowUpDown,
-  TrendingUp,
-  TrendingDown,
-  RefreshCw,
-  Banknote,
-  Globe,
-  Clock,
+import { 
+  ArrowUpDown, 
+  TrendingUp, 
+  TrendingDown, 
+  RefreshCw, 
   Star,
-  Zap
+  Clock,
+  Globe,
+  Zap,
+  Calculator,
+  DollarSign,
+  Euro,
+  Banknote,
+  Coins
 } from 'lucide-react';
 
 interface ExchangeRate {
@@ -22,7 +26,9 @@ interface ExchangeRate {
   rate: number;
   change24h: number;
   lastUpdate: Date;
-  isHalal: boolean;
+  bid: number;
+  ask: number;
+  spread: number;
 }
 
 interface Currency {
@@ -30,396 +36,419 @@ interface Currency {
   name: string;
   symbol: string;
   flag: string;
-  islamicCompliant: boolean;
+  isHalal: boolean;
+  isPopular: boolean;
   region: string;
 }
 
 export function InstantCurrencyConverter() {
   const [amount, setAmount] = useState<string>('1000');
-  const [fromCurrency, setFromCurrency] = useState<string>('CHF');
-  const [toCurrency, setToCurrency] = useState<string>('AED');
+  const [fromCurrency, setFromCurrency] = useState<string>('USD');
+  const [toCurrency, setToCurrency] = useState<string>('EUR');
   const [convertedAmount, setConvertedAmount] = useState<number>(0);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isConverting, setIsConverting] = useState(false);
+  const [exchangeRates, setExchangeRates] = useState<ExchangeRate[]>([]);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
-  const [animationKey, setAnimationKey] = useState<number>(0);
 
   const currencies: Currency[] = [
-    {
-      code: 'CHF',
-      name: 'Swiss Franc',
-      symbol: 'CHF',
-      flag: '🇨🇭',
-      islamicCompliant: true,
-      region: 'Europe'
-    },
-    {
-      code: 'AED',
-      name: 'UAE Dirham',
-      symbol: 'د.إ',
-      flag: '🇦🇪',
-      islamicCompliant: true,
-      region: 'Middle East'
-    },
-    {
-      code: 'USD',
-      name: 'US Dollar',
-      symbol: '$',
-      flag: '🇺🇸',
-      islamicCompliant: true,
-      region: 'Americas'
-    },
-    {
-      code: 'EUR',
-      name: 'Euro',
-      symbol: '€',
-      flag: '🇪🇺',
-      islamicCompliant: true,
-      region: 'Europe'
-    },
-    {
-      code: 'SAR',
-      name: 'Saudi Riyal',
-      symbol: 'ر.س',
-      flag: '🇸🇦',
-      islamicCompliant: true,
-      region: 'Middle East'
-    },
-    {
-      code: 'QAR',
-      name: 'Qatari Riyal',
-      symbol: 'ر.ق',
-      flag: '🇶🇦',
-      islamicCompliant: true,
-      region: 'Middle East'
-    }
+    { code: 'USD', name: 'US Dollar', symbol: '$', flag: '🇺🇸', isHalal: true, isPopular: true, region: 'North America' },
+    { code: 'EUR', name: 'Euro', symbol: '€', flag: '🇪🇺', isHalal: true, isPopular: true, region: 'Europe' },
+    { code: 'AED', name: 'UAE Dirham', symbol: 'د.إ', flag: '🇦🇪', isHalal: true, isPopular: true, region: 'Middle East' },
+    { code: 'SAR', name: 'Saudi Riyal', symbol: 'ر.س', flag: '🇸🇦', isHalal: true, isPopular: true, region: 'Middle East' },
+    { code: 'GBP', name: 'British Pound', symbol: '£', flag: '🇬🇧', isHalal: true, isPopular: true, region: 'Europe' },
+    { code: 'JPY', name: 'Japanese Yen', symbol: '¥', flag: '🇯🇵', isHalal: true, isPopular: true, region: 'Asia' },
+    { code: 'CHF', name: 'Swiss Franc', symbol: 'CHF', flag: '🇨🇭', isHalal: true, isPopular: true, region: 'Europe' },
+    { code: 'CAD', name: 'Canadian Dollar', symbol: 'C$', flag: '🇨🇦', isHalal: true, isPopular: false, region: 'North America' },
+    { code: 'AUD', name: 'Australian Dollar', symbol: 'A$', flag: '🇦🇺', isHalal: true, isPopular: false, region: 'Oceania' },
+    { code: 'QAR', name: 'Qatari Riyal', symbol: 'ر.ق', flag: '🇶🇦', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'KWD', name: 'Kuwaiti Dinar', symbol: 'د.ك', flag: '🇰🇼', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'BHD', name: 'Bahraini Dinar', symbol: '.د.ب', flag: '🇧🇭', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'OMR', name: 'Omani Rial', symbol: 'ر.ع.', flag: '🇴🇲', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'JOD', name: 'Jordanian Dinar', symbol: 'د.ا', flag: '🇯🇴', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'LBP', name: 'Lebanese Pound', symbol: 'ل.ل', flag: '🇱🇧', isHalal: true, isPopular: false, region: 'Middle East' },
+    { code: 'EGP', name: 'Egyptian Pound', symbol: '£E', flag: '🇪🇬', isHalal: true, isPopular: false, region: 'Africa' },
   ];
 
-  // Simulated real-time exchange rates (in production, this would come from a real API)
-  const exchangeRates: ExchangeRate[] = [
-    { from: 'CHF', to: 'AED', rate: 4.02, change24h: 0.12, lastUpdate: new Date(), isHalal: true },
-    { from: 'CHF', to: 'USD', rate: 1.09, change24h: -0.05, lastUpdate: new Date(), isHalal: true },
-    { from: 'CHF', to: 'EUR', rate: 0.96, change24h: 0.08, lastUpdate: new Date(), isHalal: true },
-    { from: 'CHF', to: 'SAR', rate: 4.11, change24h: 0.15, lastUpdate: new Date(), isHalal: true },
-    { from: 'CHF', to: 'QAR', rate: 3.98, change24h: -0.02, lastUpdate: new Date(), isHalal: true },
-    { from: 'AED', to: 'CHF', rate: 0.25, change24h: -0.12, lastUpdate: new Date(), isHalal: true },
-    { from: 'AED', to: 'USD', rate: 0.27, change24h: -0.17, lastUpdate: new Date(), isHalal: true },
-    { from: 'AED', to: 'EUR', rate: 0.24, change24h: -0.04, lastUpdate: new Date(), isHalal: true },
-    { from: 'USD', to: 'CHF', rate: 0.92, change24h: 0.05, lastUpdate: new Date(), isHalal: true },
-    { from: 'USD', to: 'AED', rate: 3.67, change24h: 0.17, lastUpdate: new Date(), isHalal: true },
-    { from: 'USD', to: 'EUR', rate: 0.88, change24h: 0.13, lastUpdate: new Date(), isHalal: true },
-    { from: 'EUR', to: 'CHF', rate: 1.04, change24h: -0.08, lastUpdate: new Date(), isHalal: true },
-    { from: 'EUR', to: 'AED', rate: 4.17, change24h: 0.04, lastUpdate: new Date(), isHalal: true },
-    { from: 'EUR', to: 'USD', rate: 1.14, change24h: -0.13, lastUpdate: new Date(), isHalal: true }
-  ];
+  // Simulated real-time exchange rates (in production, this would come from a financial API)
+  const generateExchangeRates = (): ExchangeRate[] => {
+    const baseRates: Record<string, number> = {
+      'USD/EUR': 0.85 + (Math.random() - 0.5) * 0.02,
+      'USD/AED': 3.67 + (Math.random() - 0.5) * 0.05,
+      'USD/SAR': 3.75 + (Math.random() - 0.5) * 0.05,
+      'USD/GBP': 0.79 + (Math.random() - 0.5) * 0.02,
+      'USD/JPY': 110.5 + (Math.random() - 0.5) * 2,
+      'USD/CHF': 0.92 + (Math.random() - 0.5) * 0.02,
+      'EUR/AED': 4.32 + (Math.random() - 0.5) * 0.05,
+      'EUR/SAR': 4.41 + (Math.random() - 0.5) * 0.05,
+      'AED/SAR': 1.02 + (Math.random() - 0.5) * 0.01,
+    };
 
-  const getCurrentRate = (from: string, to: string): ExchangeRate | null => {
-    return exchangeRates.find(rate => rate.from === from && rate.to === to) || null;
+    return Object.entries(baseRates).map(([pair, rate]) => {
+      const [from, to] = pair.split('/');
+      const spread = rate * 0.001; // 0.1% spread
+      return {
+        from,
+        to,
+        rate,
+        change24h: (Math.random() - 0.5) * 2, // -1% to +1% daily change
+        lastUpdate: new Date(),
+        bid: rate - spread/2,
+        ask: rate + spread/2,
+        spread: spread,
+      };
+    });
   };
 
-  const convertCurrency = async () => {
-    if (!amount || amount === '0') return;
+  useEffect(() => {
+    const rates = generateExchangeRates();
+    setExchangeRates(rates);
     
-    setIsLoading(true);
-    setAnimationKey(prev => prev + 1);
+    // Update rates every 10 seconds (simulating real-time updates)
+    const interval = setInterval(() => {
+      const newRates = generateExchangeRates();
+      setExchangeRates(newRates);
+      setLastUpdate(new Date());
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const findExchangeRate = (from: string, to: string): number => {
+    if (from === to) return 1;
+    
+    // Direct rate
+    const directRate = exchangeRates.find(r => r.from === from && r.to === to);
+    if (directRate) return directRate.rate;
+    
+    // Inverse rate
+    const inverseRate = exchangeRates.find(r => r.from === to && r.to === from);
+    if (inverseRate) return 1 / inverseRate.rate;
+    
+    // Cross rate via USD
+    if (from !== 'USD' && to !== 'USD') {
+      const fromUsdRate = findExchangeRate(from, 'USD');
+      const toUsdRate = findExchangeRate('USD', to);
+      return fromUsdRate * toUsdRate;
+    }
+    
+    // Default fallback
+    return 1;
+  };
+
+  const performConversion = async () => {
+    setIsConverting(true);
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    const rate = getCurrentRate(fromCurrency, toCurrency);
-    if (rate) {
-      const converted = parseFloat(amount) * rate.rate;
-      setConvertedAmount(converted);
-      setLastUpdate(new Date());
-    }
-    
-    setIsLoading(false);
-  };
-
-  const swapCurrencies = () => {
-    const temp = fromCurrency;
-    setFromCurrency(toCurrency);
-    setToCurrency(temp);
-    setAnimationKey(prev => prev + 1);
-  };
-
-  const refreshRates = async () => {
-    setIsLoading(true);
-    // Simulate rate refresh
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdate(new Date());
-    setIsLoading(false);
-    if (amount && amount !== '0') {
-      convertCurrency();
-    }
+    const rate = findExchangeRate(fromCurrency, toCurrency);
+    const result = parseFloat(amount) * rate;
+    setConvertedAmount(result);
+    setIsConverting(false);
   };
 
   useEffect(() => {
-    if (amount && amount !== '0') {
-      convertCurrency();
+    if (amount && fromCurrency && toCurrency) {
+      performConversion();
     }
-  }, [fromCurrency, toCurrency, amount]);
+  }, [amount, fromCurrency, toCurrency, exchangeRates]);
 
-  const fromCurrencyData = currencies.find(c => c.code === fromCurrency);
-  const toCurrencyData = currencies.find(c => c.code === toCurrency);
-  const currentRate = getCurrentRate(fromCurrency, toCurrency);
+  const swapCurrencies = () => {
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+  };
+
+  const getCurrentRate = () => {
+    return findExchangeRate(fromCurrency, toCurrency);
+  };
+
+  const getRateChange = () => {
+    const rate = exchangeRates.find(r => 
+      (r.from === fromCurrency && r.to === toCurrency) ||
+      (r.from === toCurrency && r.to === fromCurrency)
+    );
+    return rate ? rate.change24h : 0;
+  };
+
+  const formatCurrency = (value: number, currencyCode: string) => {
+    const currency = currencies.find(c => c.code === currencyCode);
+    return `${currency?.symbol || currencyCode} ${value.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 4
+    })}`;
+  };
+
+  const popularCurrencies = currencies.filter(c => c.isPopular);
+  const currentRate = getCurrentRate();
+  const rateChange = getRateChange();
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center"
-      >
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-            <Globe className="h-6 w-6 text-white" />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900">Convertisseur Instantané</h2>
-            <p className="text-gray-600">Finance islamique • Taux temps réel • 0% commission</p>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
+      <div className="max-w-6xl mx-auto space-y-6">
         
-        <div className="flex justify-center gap-2">
-          <Badge className="bg-green-100 text-green-800 border border-green-200">
-            <Star className="h-3 w-3 mr-1" />
-            Halal Certifié
-          </Badge>
-          <Badge className="bg-blue-100 text-blue-800 border border-blue-200">
-            <Zap className="h-3 w-3 mr-1" />
-            Temps Réel
-          </Badge>
-        </div>
-      </motion.div>
-
-      {/* Main Converter Card */}
-      <Card className="border-2 border-gray-200 shadow-xl bg-gradient-to-br from-white to-gray-50">
-        <CardHeader className="pb-4">
-          <div className="flex items-center justify-between">
-            <CardTitle className="flex items-center gap-2">
-              <Banknote className="h-5 w-5 text-green-600" />
-              Conversion Devises
-            </CardTitle>
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={refreshRates}
-              disabled={isLoading}
-              className="flex items-center gap-2"
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center space-y-4"
+        >
+          <div className="flex justify-center items-center gap-3">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
             >
-              <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-              Actualiser
-            </Button>
-          </div>
-        </CardHeader>
-        
-        <CardContent className="space-y-6">
-          {/* Amount Input */}
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-700">Montant à convertir</label>
-            <Input
-              type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              className="text-xl font-bold text-center h-14"
-              placeholder="Entrez le montant"
-            />
-          </div>
-
-          {/* Currency Selection */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            {/* From Currency */}
-            <motion.div 
-              key={`from-${animationKey}`}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="space-y-2"
-            >
-              <label className="text-sm font-medium text-gray-700">De</label>
-              <div className="relative">
-                <select
-                  value={fromCurrency}
-                  onChange={(e) => setFromCurrency(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-green-500 appearance-none"
-                >
-                  {currencies.map(currency => (
-                    <option key={currency.code} value={currency.code}>
-                      {currency.flag} {currency.code} - {currency.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {fromCurrencyData && (
-                <div className="text-xs text-gray-500 flex items-center gap-1">
-                  <span>{fromCurrencyData.region}</span>
-                  {fromCurrencyData.islamicCompliant && (
-                    <Badge variant="outline" className="text-xs">Halal</Badge>
-                  )}
-                </div>
-              )}
+              <Calculator className="h-6 w-6 text-white" />
             </motion.div>
-
-            {/* Swap Button */}
-            <div className="flex justify-center">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={swapCurrencies}
-                className="rounded-full w-12 h-12 border-2 hover:bg-green-50 hover:border-green-300"
-              >
-                <motion.div
-                  key={animationKey}
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: 180 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <ArrowUpDown className="h-5 w-5" />
-                </motion.div>
-              </Button>
-            </div>
-
-            {/* To Currency */}
-            <motion.div 
-              key={`to-${animationKey}`}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="space-y-2"
-            >
-              <label className="text-sm font-medium text-gray-700">Vers</label>
-              <div className="relative">
-                <select
-                  value={toCurrency}
-                  onChange={(e) => setToCurrency(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-blue-500 appearance-none"
-                >
-                  {currencies.map(currency => (
-                    <option key={currency.code} value={currency.code}>
-                      {currency.flag} {currency.code} - {currency.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {toCurrencyData && (
-                <div className="text-xs text-gray-500 flex items-center gap-1">
-                  <span>{toCurrencyData.region}</span>
-                  {toCurrencyData.islamicCompliant && (
-                    <Badge variant="outline" className="text-xs">Halal</Badge>
-                  )}
-                </div>
-              )}
-            </motion.div>
+            <h1 className="text-4xl font-bold text-gray-900">Convertisseur Instantané</h1>
           </div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Conversion de devises en temps réel avec taux interbancaires et animations fluides
+          </p>
+          <div className="flex justify-center gap-2">
+            <Badge variant="secondary" className="bg-green-100 text-green-800">
+              <Zap className="h-3 w-3 mr-1" />
+              Temps Réel
+            </Badge>
+            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
+              <Star className="h-3 w-3 mr-1" />
+              Halal Certifié
+            </Badge>
+            <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+              <Globe className="h-3 w-3 mr-1" />
+              16+ Devises
+            </Badge>
+          </div>
+        </motion.div>
 
-          {/* Result Display */}
-          <AnimatePresence mode="wait">
-            {convertedAmount > 0 && (
+        {/* Main Converter */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+        >
+          <Card className="bg-white/80 backdrop-blur border-0 shadow-2xl">
+            <CardHeader className="text-center pb-2">
+              <CardTitle className="flex items-center justify-center gap-2">
+                <DollarSign className="h-5 w-5 text-green-600" />
+                Conversion Instantanée
+                <Euro className="h-5 w-5 text-blue-600" />
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              
+              {/* Amount Input */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-gray-700">Montant</label>
+                <div className="relative">
+                  <Input
+                    type="number"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    className="text-2xl font-bold text-center h-16 bg-gray-50 border-2 border-gray-200 focus:border-blue-400"
+                    placeholder="Entrez le montant"
+                  />
+                  <motion.div
+                    className="absolute inset-0 rounded-md border-2 border-blue-400"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: amount ? 0.3 : 0, scale: 1 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </div>
+              </div>
+
+              {/* Currency Selectors */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                
+                {/* From Currency */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">De</label>
+                  <select
+                    value={fromCurrency}
+                    onChange={(e) => setFromCurrency(e.target.value)}
+                    className="w-full h-14 px-4 bg-white border-2 border-gray-200 rounded-lg text-lg font-medium focus:border-blue-400 focus:outline-none"
+                  >
+                    {currencies.map((currency) => (
+                      <option key={currency.code} value={currency.code}>
+                        {currency.flag} {currency.code} - {currency.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Swap Button */}
+                <div className="flex justify-center">
+                  <motion.button
+                    onClick={swapCurrencies}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <ArrowUpDown className="h-5 w-5" />
+                  </motion.button>
+                </div>
+
+                {/* To Currency */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-gray-700">Vers</label>
+                  <select
+                    value={toCurrency}
+                    onChange={(e) => setToCurrency(e.target.value)}
+                    className="w-full h-14 px-4 bg-white border-2 border-gray-200 rounded-lg text-lg font-medium focus:border-blue-400 focus:outline-none"
+                  >
+                    {currencies.map((currency) => (
+                      <option key={currency.code} value={currency.code}>
+                        {currency.flag} {currency.code} - {currency.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Conversion Result */}
               <motion.div
-                key={`result-${animationKey}`}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
                 className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border border-green-200"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
               >
-                <div className="text-center space-y-3">
-                  <div className="text-sm text-gray-600">Résultat de la conversion</div>
-                  
-                  <div className="text-4xl font-bold text-gray-900">
-                    {isLoading ? (
-                      <div className="flex items-center justify-center gap-2">
-                        <RefreshCw className="h-6 w-6 animate-spin" />
-                        Calcul...
-                      </div>
-                    ) : (
-                      <motion.span
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                      >
-                        {convertedAmount.toLocaleString('fr-CH', {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2
-                        })} {toCurrencyData?.symbol}
-                      </motion.span>
-                    )}
-                  </div>
-
-                  {currentRate && !isLoading && (
-                    <motion.div 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.4 }}
-                      className="space-y-2"
+                <div className="text-center space-y-2">
+                  <p className="text-sm text-gray-600">Résultat de la conversion</p>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={convertedAmount}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-4xl font-bold text-gray-900"
                     >
-                      <div className="text-sm text-gray-600">
-                        Taux: 1 {fromCurrency} = {currentRate.rate.toFixed(4)} {toCurrency}
-                      </div>
-                      
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="text-xs text-gray-500">Variation 24h:</span>
-                        <div className={`flex items-center gap-1 text-xs ${
-                          currentRate.change24h > 0 ? 'text-green-600' : 'text-red-600'
-                        }`}>
-                          {currentRate.change24h > 0 ? (
-                            <TrendingUp className="h-3 w-3" />
-                          ) : (
-                            <TrendingDown className="h-3 w-3" />
-                          )}
-                          {Math.abs(currentRate.change24h).toFixed(2)}%
+                      {isConverting ? (
+                        <div className="flex items-center justify-center gap-2">
+                          <RefreshCw className="h-6 w-6 animate-spin" />
+                          Conversion...
                         </div>
-                      </div>
+                      ) : (
+                        formatCurrency(convertedAmount, toCurrency)
+                      )}
                     </motion.div>
-                  )}
+                  </AnimatePresence>
+                  
+                  {/* Exchange Rate Info */}
+                  <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-1">
+                      <span>Taux: {currentRate.toFixed(4)}</span>
+                      {rateChange !== 0 && (
+                        <span className={`flex items-center gap-1 ${rateChange > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                          {rateChange > 0 ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
+                          {Math.abs(rateChange).toFixed(2)}%
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      Mis à jour: {lastUpdate.toLocaleTimeString()}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
-            )}
-          </AnimatePresence>
 
-          {/* Quick Convert Buttons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {['100', '500', '1000', '5000'].map((quickAmount) => (
-              <Button
-                key={quickAmount}
-                variant="outline"
-                size="sm"
-                onClick={() => setAmount(quickAmount)}
-                className="text-xs"
-              >
-                {quickAmount}
-              </Button>
-            ))}
-          </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
-          {/* Last Update Info */}
-          <div className="flex items-center justify-center gap-2 text-xs text-gray-500 pt-4 border-t">
-            <Clock className="h-3 w-3" />
-            Dernière mise à jour: {lastUpdate.toLocaleTimeString('fr-CH')}
-          </div>
-        </CardContent>
-      </Card>
+        {/* Quick Currency Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <Card className="bg-white/60 backdrop-blur">
+            <CardHeader>
+              <CardTitle className="text-center">Devises Populaires</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {popularCurrencies.map((currency) => (
+                  <motion.button
+                    key={currency.code}
+                    onClick={() => setFromCurrency(currency.code)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`p-4 rounded-xl border-2 transition-all ${
+                      fromCurrency === currency.code
+                        ? 'border-blue-400 bg-blue-50'
+                        : 'border-gray-200 bg-white hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="text-2xl mb-1">{currency.flag}</div>
+                    <div className="font-bold">{currency.code}</div>
+                    <div className="text-xs text-gray-600">{currency.name}</div>
+                  </motion.button>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
 
-      {/* Islamic Finance Info */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="bg-green-50 rounded-xl p-6 border border-green-200"
-      >
-        <div className="text-center space-y-3">
-          <h3 className="text-lg font-semibold text-green-800">Finance Islamique Certifiée</h3>
-          <p className="text-sm text-green-700">
-            Toutes les conversions respectent les principes de la Charia. Aucun intérêt (Riba) ni commission sur les changes.
-            Taux transparents et équitables conformes aux valeurs islamiques.
-          </p>
-          <div className="flex justify-center gap-4 text-xs text-green-600">
-            <span>✓ Sans Riba (intérêts)</span>
-            <span>✓ Transparent</span>
-            <span>✓ Certifié Halal</span>
-            <span>✓ 0% Commission</span>
-          </div>
-        </div>
-      </motion.div>
+        {/* Exchange Rate Table */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <Card className="bg-white/60 backdrop-blur">
+            <CardHeader>
+              <CardTitle className="flex items-center justify-center gap-2">
+                <Banknote className="h-5 w-5" />
+                Taux de Change en Temps Réel
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left p-2">Paire</th>
+                      <th className="text-right p-2">Taux</th>
+                      <th className="text-right p-2">Variation 24h</th>
+                      <th className="text-right p-2">Spread</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {exchangeRates.slice(0, 6).map((rate) => (
+                      <motion.tr
+                        key={`${rate.from}/${rate.to}`}
+                        className="border-b hover:bg-gray-50"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.1 }}
+                      >
+                        <td className="p-2 font-medium">
+                          {rate.from}/{rate.to}
+                        </td>
+                        <td className="p-2 text-right font-mono">
+                          {rate.rate.toFixed(4)}
+                        </td>
+                        <td className={`p-2 text-right flex items-center justify-end gap-1 ${
+                          rate.change24h > 0 ? 'text-green-600' : 'text-red-600'
+                        }`}>
+                          {rate.change24h > 0 ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
+                          {rate.change24h.toFixed(2)}%
+                        </td>
+                        <td className="p-2 text-right text-sm text-gray-600">
+                          {(rate.spread * 100).toFixed(3)}%
+                        </td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+      </div>
     </div>
   );
 }
