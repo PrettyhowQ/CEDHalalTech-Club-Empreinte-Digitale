@@ -33,6 +33,12 @@ import CryptoWallet from "@/pages/CryptoWallet";
 import TransactionHistory from "@/pages/TransactionHistory";
 import BudgetPlanner from "@/pages/BudgetPlanner";
 import CryptoDonations from "@/pages/CryptoDonations";
+import VirtualCards from "@/pages/VirtualCards";
+import AIAdvisor from "@/pages/AIAdvisor";
+import HalalCashback from "@/pages/HalalCashback";
+import IslamicInvestments from "@/pages/IslamicInvestments";
+import MetaverseNFT from "@/pages/MetaverseNFT";
+import DeveloperAPI from "@/pages/DeveloperAPI";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -92,6 +98,18 @@ function Router() {
       <Route path="/crypto-donations" component={CryptoDonations} />
       <Route path="/donations-crypto" component={CryptoDonations} />
       <Route path="/dubai-crypto" component={CryptoDonations} />
+      <Route path="/virtual-cards" component={VirtualCards} />
+      <Route path="/cartes-virtuelles" component={VirtualCards} />
+      <Route path="/ai-advisor" component={AIAdvisor} />
+      <Route path="/conseiller-ia" component={AIAdvisor} />
+      <Route path="/halal-cashback" component={HalalCashback} />
+      <Route path="/cashback-halal" component={HalalCashback} />
+      <Route path="/islamic-investments" component={IslamicInvestments} />
+      <Route path="/investissements-islamiques" component={IslamicInvestments} />
+      <Route path="/metaverse-nft" component={MetaverseNFT} />
+      <Route path="/nft-halal" component={MetaverseNFT} />
+      <Route path="/developer-api" component={DeveloperAPI} />
+      <Route path="/api-developpeur" component={DeveloperAPI} />
       <Route path="/mode-priere" component={ModePriere} />
       <Route path="/prayer-mode" component={ModePriere} />
       <Route path="/salah" component={ModePriere} />
