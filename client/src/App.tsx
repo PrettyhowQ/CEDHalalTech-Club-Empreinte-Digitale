@@ -25,6 +25,7 @@ import AnalyseStrategique from "@/pages/AnalyseStrategique";
 import NutritionSouheila from "@/pages/NutritionSouheila";
 import TechnologiesAvancees from "@/pages/TechnologiesAvancees";
 import FinancialDashboard from "@/pages/FinancialDashboard";
+import BanqueDigitale from "@/pages/BanqueDigitale";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -55,6 +56,10 @@ function Router() {
       <Route path="/revenus" component={FinancialDashboard} />
       <Route path="/chiffres" component={FinancialDashboard} />
       <Route path="/dashboard-financier" component={FinancialDashboard} />
+      <Route path="/banque" component={BanqueDigitale} />
+      <Route path="/banque-digitale" component={BanqueDigitale} />
+      <Route path="/ced-bank" component={BanqueDigitale} />
+      <Route path="/banking" component={BanqueDigitale} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
