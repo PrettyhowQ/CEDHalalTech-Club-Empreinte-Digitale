@@ -45,16 +45,19 @@ export default function Home() {
       <NutritionWidget variant="compact" />
       <SportWidget variant="compact" />
       <main className="relative z-10">
-        {/* PRIORITÉ 1 - FONDAMENTAUX ET FINANCE ISLAMIQUE */}
+        {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
         <HeroSection />
-        <CEDBankSection />
         
         {/* PRIORITÉ 2 - INTERACTION ET FORMATION IA */}
         <ChatIARPSection />
         <FormationsSection />
         <AcademieSection />
         
-        {/* PRIORITÉ 3 - BUSINESS ET AUTOMATISATION */}
+        {/* PRIORITÉ 3 - MOMENT STRATÉGIQUE POUR CED BANK */}
+        {/* Après engagement utilisateur avec l'IA et formations */}
+        <CEDBankSection />
+        
+        {/* PRIORITÉ 4 - BUSINESS ET AUTOMATISATION */}
         <AutomatisationSection />
         <EntreprisesSection />
         

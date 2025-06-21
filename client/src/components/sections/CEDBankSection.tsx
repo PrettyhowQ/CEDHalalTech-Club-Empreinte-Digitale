@@ -46,6 +46,61 @@ export function CEDBankSection() {
             <span className="font-bold text-green-600"> 0% d'intérêts</span>, mode prière automatique et boussole Qibla intégrée
           </p>
           
+          {/* App Download Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 max-w-4xl mx-auto mb-12"
+          >
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Smartphone className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900">Application CED Bank</h3>
+                <p className="text-gray-600">Emportez votre banque partout avec vous</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center p-4 bg-green-50 rounded-xl">
+                <Shield className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                <h4 className="font-bold text-green-800">100% Sécurisé</h4>
+                <p className="text-sm text-green-600">Chiffrement bancaire grade militaire</p>
+              </div>
+              <div className="text-center p-4 bg-blue-50 rounded-xl">
+                <Globe className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                <h4 className="font-bold text-blue-800">Mondial</h4>
+                <p className="text-sm text-blue-600">Utilisable dans 195+ pays</p>
+              </div>
+              <div className="text-center p-4 bg-purple-50 rounded-xl">
+                <Star className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                <h4 className="font-bold text-purple-800">Mode Prière</h4>
+                <p className="text-sm text-purple-600">Pause automatique pendant Salah</p>
+              </div>
+            </div>
+            
+            <div className="flex justify-center gap-4">
+              <Button className="bg-black text-white hover:bg-gray-800 flex items-center gap-2">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Télécharger iOS
+              </Button>
+              <Button className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                </svg>
+                Télécharger Android
+              </Button>
+            </div>
+            
+            <p className="text-center text-sm text-gray-500 mt-4">
+              Version 3.0 • Compatible iOS 15+ et Android 10+ • Gratuit
+            </p>
+          </motion.div>
+          
           <div className="flex justify-center gap-4 mb-8">
             <Badge className="bg-green-500 text-white px-4 py-2 text-lg">
               🇨🇭 Siège Suisse

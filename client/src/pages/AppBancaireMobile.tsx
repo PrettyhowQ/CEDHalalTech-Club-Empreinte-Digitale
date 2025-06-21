@@ -42,6 +42,7 @@ interface AppFeature {
 export default function AppBancaireMobile() {
   const [showBalance, setShowBalance] = useState(true);
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [downloadStarted, setDownloadStarted] = useState(false);
 
   const appFeatures: AppFeature[] = [
     {
@@ -153,14 +154,25 @@ export default function AppBancaireMobile() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-black text-white hover:bg-gray-800 flex items-center gap-2 px-6 py-3">
+                  <Button 
+                    className="bg-black text-white hover:bg-gray-800 flex items-center gap-2 px-6 py-3"
+                    onClick={() => setDownloadStarted(true)}
+                  >
                     <SiAppstore className="h-5 w-5" />
-                    App Store
+                    {downloadStarted ? 'Téléchargement...' : 'Télécharger iOS'}
                   </Button>
-                  <Button className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2 px-6 py-3">
+                  <Button 
+                    className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2 px-6 py-3"
+                    onClick={() => setDownloadStarted(true)}
+                  >
                     <SiGoogleplay className="h-5 w-5" />
-                    Google Play
+                    {downloadStarted ? 'Téléchargement...' : 'Télécharger Android'}
                   </Button>
+                </div>
+                
+                <div className="mt-4 text-sm text-green-100">
+                  <p>✨ Gratuit • Compatible iOS 15+ et Android 10+</p>
+                  <p>🌍 Disponible dans 67 pays • Mode hors ligne</p>
                 </div>
               </div>
 
