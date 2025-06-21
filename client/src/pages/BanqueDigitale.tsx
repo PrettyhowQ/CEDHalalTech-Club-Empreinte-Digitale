@@ -176,12 +176,23 @@ export default function BanqueDigitale() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-4 md:p-6">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* En-tête */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-6 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold mb-2">CED Bank</h1>
-              <p className="text-blue-100">Banque Digitale Club Empreinte Digitale</p>
-              <p className="text-sm text-blue-200 mt-1">Yakoubi Yamina - Services Bancaires Intégrés</p>
+              <h1 className="text-3xl font-bold mb-2">CED Bank 0%</h1>
+              <p className="text-green-100">Banque Digitale 100% Gratuite</p>
+              <p className="text-sm text-green-200 mt-1">Yakoubi Yamina - Révolution Bancaire à 0%</p>
+              <div className="flex items-center gap-2 mt-2">
+                <Badge className="bg-white/20 text-white border-white/30">
+                  0% Frais
+                </Badge>
+                <Badge className="bg-white/20 text-white border-white/30">
+                  0% Commission
+                </Badge>
+                <Badge className="bg-white/20 text-white border-white/30">
+                  100% Gratuit
+                </Badge>
+              </div>
             </div>
             <div className="text-right">
               <div className="flex items-center gap-2 mb-2">
@@ -395,9 +406,9 @@ export default function BanqueDigitale() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="p-3 bg-white rounded-lg border border-yellow-200">
-                  <h4 className="font-medium text-yellow-800">Prêts Formation</h4>
-                  <p className="text-sm text-yellow-600">Taux préférentiel 0,5% pour les formations</p>
+                <div className="p-3 bg-white rounded-lg border border-green-200">
+                  <h4 className="font-medium text-green-800">Prêts Formation 0%</h4>
+                  <p className="text-sm text-green-600">Aucun taux d'intérêt - 100% gratuit</p>
                 </div>
                 <div className="p-3 bg-white rounded-lg border border-yellow-200">
                   <h4 className="font-medium text-yellow-800">Épargne IA</h4>
