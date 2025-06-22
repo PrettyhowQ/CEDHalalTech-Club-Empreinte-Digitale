@@ -87,6 +87,25 @@ interface DonationTracking {
   trackingCode: string;
   route: string[];
   lastUpdate: Date;
+  category?: 'informatique' | 'climatisation' | 'materiel_construction' | 'autres';
+  technicalSpecs?: string[];
+  targetBeneficiary?: string;
+}
+
+interface ClimateEquipment {
+  id: string;
+  brand: string;
+  model: string;
+  type: 'split' | 'central' | 'portable' | 'industriel';
+  capacity: string; // en BTU
+  energyClass: string;
+  technology: string[];
+  year: number;
+  condition: 'neuf' | 'excellent' | 'bon' | 'reconditionné';
+  donorCompany: string;
+  destinationSite: string;
+  installationRequired: boolean;
+  warranty: number; // en mois
 }
 
 interface RealTimeNotification {
@@ -153,7 +172,11 @@ export function CostaDelSolBankAccount() {
       "✅ Livraison réceptionnée par Yakoubi Brahim",
       "🔄 Redistribution équipement vers bénéficiaires",
       "⚡ Mise à jour GPS temps réel disponible",
-      "📱 Nouvelle commande boutique TechForAll"
+      "📱 Nouvelle commande boutique TechForAll",
+      "❄️ Don climatiseurs haute performance reçu de constructeur",
+      "🏗️ Équipements climatisation industrielle en transit",
+      "🌡️ Installation climatiseurs dernière génération programmée",
+      "⚙️ Maintenance préventive climatiseurs Costa del Sol"
     ];
     return messages[Math.floor(Math.random() * messages.length)];
   };
@@ -182,7 +205,10 @@ export function CostaDelSolBankAccount() {
         estimatedArrival: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
         trackingCode: 'TFA-ML-001',
         route: ['Paris', 'Lyon', 'Marseille', 'Costa del Sol'],
-        lastUpdate: new Date()
+        lastUpdate: new Date(),
+        category: 'informatique',
+        technicalSpecs: ['Intel i5', '8GB RAM', 'SSD 256GB'],
+        targetBeneficiary: 'Écoles locales'
       },
       {
         id: 'DON-2025-002',
@@ -194,7 +220,10 @@ export function CostaDelSolBankAccount() {
         estimatedArrival: new Date(),
         trackingCode: 'ASN-TB-002',
         route: ['Toulouse', 'Barcelone', 'Costa del Sol'],
-        lastUpdate: new Date()
+        lastUpdate: new Date(),
+        category: 'informatique',
+        technicalSpecs: ['Android 12', '4GB RAM', 'Écran 10"'],
+        targetBeneficiary: 'Centres formation'
       },
       {
         id: 'DON-2025-003',
@@ -206,7 +235,55 @@ export function CostaDelSolBankAccount() {
         estimatedArrival: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000),
         trackingCode: 'TR-SP-003',
         route: ['Nice', 'Monaco', 'Costa del Sol'],
-        lastUpdate: new Date()
+        lastUpdate: new Date(),
+        category: 'informatique',
+        technicalSpecs: ['iOS/Android', 'Reconditionné grade A'],
+        targetBeneficiary: 'Familles précaires'
+      },
+      {
+        id: 'DON-2025-004',
+        donorName: 'Daikin Constructeur Pro',
+        itemType: 'Climatiseurs Split Inverter dernière génération',
+        quantity: 8,
+        currentLocation: 'Usine Barcelone',
+        status: 'collecté',
+        estimatedArrival: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000),
+        trackingCode: 'DKN-CLI-004',
+        route: ['Barcelone', 'Costa del Sol'],
+        lastUpdate: new Date(),
+        category: 'climatisation',
+        technicalSpecs: ['18000 BTU', 'Classe A+++', 'R32 écologique', 'WiFi intégré'],
+        targetBeneficiary: 'Chantiers construction'
+      },
+      {
+        id: 'DON-2025-005',
+        donorName: 'Mitsubishi Electric Espagne',
+        itemType: 'Systèmes climatisation centrale industrielle',
+        quantity: 3,
+        currentLocation: 'En transit Madrid-Costa del Sol',
+        status: 'en_transit',
+        estimatedArrival: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
+        trackingCode: 'MTE-IND-005',
+        route: ['Madrid', 'Valence', 'Alicante', 'Costa del Sol'],
+        lastUpdate: new Date(),
+        category: 'climatisation',
+        technicalSpecs: ['100000 BTU', 'Contrôle intelligent', 'Maintenance prédictive'],
+        targetBeneficiary: 'Bâtiments publics'
+      },
+      {
+        id: 'DON-2025-006',
+        donorName: 'Carrier Climate Solutions',
+        itemType: 'Pompes à chaleur haute efficacité',
+        quantity: 12,
+        currentLocation: 'Costa del Sol - Inspection Yakoubi Brahim',
+        status: 'traité_brahim',
+        estimatedArrival: new Date(),
+        trackingCode: 'CAR-PAC-006',
+        route: ['Toulouse', 'Perpignan', 'Costa del Sol'],
+        lastUpdate: new Date(),
+        category: 'climatisation',
+        technicalSpecs: ['Technologie inverter', 'COP 4.5', 'Réfrigérant R290'],
+        targetBeneficiary: 'Projets habitat social'
       }
     ];
     setActiveDonations(initialDonations);
@@ -573,8 +650,19 @@ export function CostaDelSolBankAccount() {
                     >
                       <div className="flex items-center justify-between mb-3">
                         <div>
-                          <h4 className="font-medium text-gray-800">{donation.donorName}</h4>
+                          <div className="flex items-center gap-2 mb-1">
+                            <h4 className="font-medium text-gray-800">{donation.donorName}</h4>
+                            {donation.category === 'climatisation' && (
+                              <Badge className="bg-cyan-100 text-cyan-800 text-xs">❄️ CLIM</Badge>
+                            )}
+                            {donation.category === 'informatique' && (
+                              <Badge className="bg-purple-100 text-purple-800 text-xs">💻 IT</Badge>
+                            )}
+                          </div>
                           <p className="text-sm text-gray-600">{donation.itemType} (x{donation.quantity})</p>
+                          {donation.targetBeneficiary && (
+                            <p className="text-xs text-gray-500">→ {donation.targetBeneficiary}</p>
+                          )}
                         </div>
                         <div className="flex items-center gap-2">
                           <Badge className="bg-blue-100 text-blue-800">{donation.trackingCode}</Badge>
@@ -590,6 +678,19 @@ export function CostaDelSolBankAccount() {
                           </Badge>
                         </div>
                       </div>
+
+                      {donation.technicalSpecs && (
+                        <div className="mb-3">
+                          <p className="text-xs text-gray-600 mb-1">Spécifications:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {donation.technicalSpecs.map((spec, index) => (
+                              <Badge key={index} variant="outline" className="text-xs">
+                                {spec}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
 
                       <div className="flex items-center gap-2 mb-3">
                         <MapPin className="h-4 w-4 text-gray-500" />
