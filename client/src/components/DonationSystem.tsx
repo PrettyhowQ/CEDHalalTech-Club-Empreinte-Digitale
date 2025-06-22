@@ -858,7 +858,7 @@ export function DonationSystem() {
                     </div>
                     <div className="bg-orange-50 p-3 rounded-lg text-center">
                       <div className="text-2xl font-bold text-orange-700">12,450€</div>
-                      <div className="text-sm text-orange-600">Revenus CED</div>
+                      <div className="text-sm text-orange-600">Compte CED intégré</div>
                     </div>
                   </div>
                   
@@ -1003,58 +1003,133 @@ export function DonationSystem() {
             <p className="text-center text-gray-600">Du don à la formation : circuit intégré avec Banque CED</p>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Truck className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-red-800">1. Logistique Suisse</h3>
+                <p className="text-sm text-gray-600">Yakoubi Aziz</p>
+                <p className="text-xs text-gray-500">Suisse → Expatriés</p>
+              </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Package className="h-8 w-8 text-white" />
+                  <MapPin className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-blue-800">1. Collecte</h3>
-                <p className="text-sm text-gray-600">Dons PC, iPhone, climatiseurs</p>
-                <p className="text-xs text-gray-500">Logistique temps réel</p>
+                <h3 className="font-bold text-blue-800">2. Logistique Europe</h3>
+                <p className="text-sm text-gray-600">Yakoubi Abdelkarim</p>
+                <p className="text-xs text-gray-500">Europe → Expatriés</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="h-8 w-8 text-white" />
+                  <Package className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-green-800">2. Boutique Costa del Sol</h3>
-                <p className="text-sm text-gray-600">Gestion Brahim Yakoubi</p>
-                <p className="text-xs text-gray-500">Revente prix solidaires</p>
+                <h3 className="font-bold text-green-800">3. Costa del Sol</h3>
+                <p className="text-sm text-gray-600">Yakoubi Brahim</p>
+                <p className="text-xs text-gray-500">Gestion & Boutique</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Euro className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-purple-800">3. Banque CED</h3>
-                <p className="text-sm text-gray-600">Compte dédié intégré</p>
-                <p className="text-xs text-gray-500">Gestion financière automatique</p>
+                <h3 className="font-bold text-purple-800">4. Banque CED</h3>
+                <p className="text-sm text-gray-600">Flux automatique</p>
+                <p className="text-xs text-gray-500">Synchronisation</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-orange-800">4. Centres Formation</h3>
-                <p className="text-sm text-gray-600">Financement par ventes</p>
-                <p className="text-xs text-gray-500">Formation expatriés/chômeurs</p>
+                <h3 className="font-bold text-orange-800">5. Formations</h3>
+                <p className="text-sm text-gray-600">Centres expatriés</p>
+                <p className="text-xs text-gray-500">Financement direct</p>
               </div>
             </div>
             
             <div className="mt-6 p-4 bg-white rounded-lg border-2 border-green-200">
-              <h4 className="font-bold text-center text-green-800 mb-2">Contact Direct Brahim Yakoubi</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
-                <div>
-                  <Phone className="h-5 w-5 text-blue-600 mx-auto mb-1" />
-                  <p className="font-medium">+34 952 77 88 99</p>
-                  <p className="text-xs text-gray-500">Logistique Costa del Sol</p>
+              <h4 className="font-bold text-center text-green-800 mb-3">Réseau Logistique Yakoubi Synchronisé</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center p-3 bg-red-50 rounded-lg">
+                  <div className="font-bold text-red-800 mb-2">🇨🇭 Yakoubi Aziz - Suisse</div>
+                  <div className="text-sm space-y-1">
+                    <div className="flex items-center justify-center gap-1">
+                      <Phone className="h-4 w-4 text-blue-600" />
+                      <span>+41 22 345 67 89</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Mail className="h-4 w-4 text-green-600" />
+                      <span className="text-xs">aziz.yakoubi@techforall.ch</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Euro className="h-4 w-4 text-purple-600" />
+                      <span className="text-xs">Compte CED-CH-7834</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Logistique Suisse → Expatriés</p>
+                  </div>
                 </div>
-                <div>
-                  <Mail className="h-5 w-5 text-green-600 mx-auto mb-1" />
-                  <p className="font-medium">b.yakoubi@costadelsol.org</p>
-                  <p className="text-xs text-gray-500">Gestion dons & boutique</p>
+                
+                <div className="text-center p-3 bg-blue-50 rounded-lg">
+                  <div className="font-bold text-blue-800 mb-2">🇪🇺 Yakoubi Abdelkarim - Europe</div>
+                  <div className="text-sm space-y-1">
+                    <div className="flex items-center justify-center gap-1">
+                      <Phone className="h-4 w-4 text-blue-600" />
+                      <span>+33 1 45 67 89 12</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Mail className="h-4 w-4 text-green-600" />
+                      <span className="text-xs">abdelkarim.yakoubi@techforall.eu</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Euro className="h-4 w-4 text-purple-600" />
+                      <span className="text-xs">Compte CED-EU-5621</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Logistique Europe → Expatriés</p>
+                  </div>
                 </div>
-                <div>
-                  <MapPin className="h-5 w-5 text-purple-600 mx-auto mb-1" />
-                  <p className="font-medium">Costa del Sol, Málaga</p>
-                  <p className="text-xs text-gray-500">Centre logistique principal</p>
+                
+                <div className="text-center p-3 bg-green-50 rounded-lg">
+                  <div className="font-bold text-green-800 mb-2">🇪🇸 Yakoubi Brahim - Costa del Sol</div>
+                  <div className="text-sm space-y-1">
+                    <div className="flex items-center justify-center gap-1">
+                      <Phone className="h-4 w-4 text-blue-600" />
+                      <span>+34 952 77 88 99</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Mail className="h-4 w-4 text-green-600" />
+                      <span className="text-xs">brahim.yakoubi@costadelsol.org</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <Euro className="h-4 w-4 text-purple-600" />
+                      <span className="text-xs">Compte CED-ES-9012</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Gestion & Boutique Central</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-4 p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg">
+                <h5 className="font-bold text-center text-gray-800 mb-2">Synchronisation Banque CED</h5>
+                <div className="grid grid-cols-4 gap-3 text-center text-xs">
+                  <div>
+                    <div className="font-medium text-gray-700">Donateurs</div>
+                    <div className="text-gray-600">Base commune CED</div>
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-700">Logistique</div>
+                    <div className="text-gray-600">3 comptes CED sync</div>
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-700">Receveurs</div>
+                    <div className="text-gray-600">Gestion centralisée</div>
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-700">Flux Financier</div>
+                    <div className="text-gray-600">Temps réel CED</div>
+                  </div>
+                </div>
+                <div className="mt-2 p-2 bg-purple-50 rounded text-center">
+                  <div className="text-sm font-bold text-purple-800">Comptes CED Synchronisés</div>
+                  <div className="text-xs text-purple-600">CED-CH-7834 • CED-EU-5621 • CED-ES-9012</div>
                 </div>
               </div>
             </div>
