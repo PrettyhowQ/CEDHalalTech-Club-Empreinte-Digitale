@@ -10,6 +10,7 @@ import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
+import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
 import { AcademieSection } from '@/components/sections/AcademieSection';
@@ -56,6 +57,10 @@ export default function Home() {
         {/* PRIORITÉ 3 - MOMENT STRATÉGIQUE POUR CED BANK */}
         {/* Après engagement utilisateur avec l'IA et formations */}
         <CEDBankSection />
+        
+        {/* PRIORITÉ 3.5 - LA CITADELLE DU MUSULMAN */}
+        {/* Intégration spirituelle après services bancaires */}
+        <CitadelleMusulmanSection />
         
         {/* PRIORITÉ 4 - BUSINESS ET AUTOMATISATION */}
         <AutomatisationSection />
