@@ -24,249 +24,10 @@ import {
 } from 'lucide-react';
 import { CED_BANK_CARDS, type BankCard } from '@/data/cedBankCards';
 
-// Interface moved to data file for consistency
-
 export function CEDBankCards() {
   const [selectedCard, setSelectedCard] = useState<string>('yakoubi-essential');
 
   const cedBankCards = CED_BANK_CARDS;
-    {
-      id: 'yakoubi-gold',
-      name: 'CED Yakoubi Gold Sécurisée',
-      type: 'physical',
-      tier: 'gold',
-      dailyLimit: 50000,
-      monthlyLimit: 600000,
-      withdrawalLimit: 25000,
-      currency: ['AED', 'CHF', 'USD', 'EUR', 'GBP'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Carte sécurisée - Yakoubi Yamina',
-        'Directives flexibles selon vos besoins',
-        'Contrôle total établissement CED',
-        'Gestion autonome quand vous voulez',
-        'Concierge services premium',
-        'Accès salons aéroports VIP',
-        'Assurance voyage internationale',
-        'Cash back 3% TechForAll',
-        'Priority banking exclusif'
-      ],
-      islamicFeatures: [
-        'Investissements Sukuk privilégiés',
-        'Consultation scholars islamiques dédiés',
-        'Hajj/Umrah financing premium',
-        'Zakat calculation automatique avancée',
-        'Certification Yakoubi Yamina exclusive'
-      ],
-      securityFeatures: [
-        'Carte à puce EMV renforcée',
-        'Contactless Yakoubi Yamina sécurisé',
-        'Authentification 3D biométrique',
-        'Monitoring anti-fraude IA avancée',
-        'Alerte temps réel Yakoubi Yamina'
-      ],
-      eligibility: {
-        minDeposit: 0,
-        minMonthlyIncome: 0,
-        approvalRequired: false
-      },
-      color: 'from-yellow-500 to-amber-600',
-      gradient: 'bg-gradient-to-br from-yellow-500 to-amber-600'
-    },
-    {
-      id: 'yakoubi-platinum',
-      name: 'CED Yakoubi Platinum Directrice',
-      type: 'premium',
-      tier: 'platinum',
-      dailyLimit: 200000,
-      monthlyLimit: 2400000,
-      withdrawalLimit: 100000,
-      currency: ['AED', 'CHF', 'USD', 'EUR', 'GBP', 'JPY', 'CAD'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Carte Directrice - Yakoubi Yamina',
-        'Directives illimitées selon votre volonté',
-        'Contrôle absolu établissement CED',
-        'Gestion Costa del Sol autorisée',
-        'Instructions personnalisées à tout moment',
-        'Gestionnaire privé dédié 24/7',
-        'Accès worldwide lounges premium',
-        'Assurance premium globale illimitée',
-        'Cash back 5% sur tous achats',
-        'Private banking access exclusif',
-        'Investment advisory personnel',
-        'Family office services complets'
-      ],
-      islamicFeatures: [
-        'Portfolio Sharia-compliant personnalisé',
-        'Accès exclusif Islamic real estate funds',
-        'Private Sukuk investments privilégiés',
-        'Halal luxury marketplace VIP',
-        'Conseil Charia personnel Yakoubi Yamina'
-      ],
-      securityFeatures: [
-        'Carte métal Yakoubi Yamina signature',
-        'Biométrie digitale renforcée',
-        'Tokenisation avancée exclusive',
-        'Protection identité maximale',
-        'Contrôle décisionnaire total'
-      ],
-      eligibility: {
-        minDeposit: 0,
-        minMonthlyIncome: 0,
-        approvalRequired: false
-      },
-      color: 'from-slate-400 to-slate-600',
-      gradient: 'bg-gradient-to-br from-slate-400 to-slate-600'
-    },
-    {
-      id: 'diamond',
-      name: 'CED Diamond',
-      type: 'elite',
-      tier: 'diamond',
-      dailyLimit: 500000,
-      monthlyLimit: 6000000,
-      withdrawalLimit: 200000,
-      currency: ['Toutes devises majeures', 'Cryptos halal'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Toutes fonctionnalités Platinum',
-        'Concierge personnel 24/7',
-        'Private jet booking',
-        'Yacht club memberships',
-        'Cash back 5%',
-        'Unlimited airport transfers',
-        'Personal shopping services',
-        'Art investment advisory'
-      ],
-      islamicFeatures: [
-        'Islamic family office complete',
-        'Waqf (endowment) establishment',
-        'Philanthropic impact tracking',
-        'Direct access to Islamic scholars'
-      ],
-      securityFeatures: [
-        'Carte diamant gravée',
-        'Sécurité militaire grade',
-        'Protection patrimoine',
-        'Surveillance personnalisée'
-      ],
-      eligibility: {
-        minDeposit: 2000000,
-        minMonthlyIncome: 200000,
-        approvalRequired: true
-      },
-      color: 'from-blue-600 to-purple-700',
-      gradient: 'bg-gradient-to-br from-blue-600 to-purple-700'
-    },
-    {
-      id: 'gift-cards',
-      name: 'CED Cartes Cadeaux',
-      type: 'premium',
-      tier: 'gold',
-      dailyLimit: 10000,
-      monthlyLimit: 100000,
-      withdrawalLimit: 5000,
-      currency: ['AED', 'CHF', 'USD', 'EUR'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Carte Cadeau Hajj & Omra',
-        'Carte Cadeau Aid El Kebir (agneau)',
-        'Carte Cadeau Zakat & Fitr',
-        'Carte Cadeau Support Veuves',
-        'Carte Cadeau Omar (soutien personnel)',
-        'Carte Cadeau Causes Humanitaires',
-        'Carte Cadeau Éducation & Formation',
-        'Carte Cadeau TechForAll (matériel solidaire)',
-        'Carte Cadeau Urgences & Catastrophes'
-      ],
-      islamicFeatures: [
-        'Validation Charia pour toutes donations',
-        'Suivi transparent des dons',
-        'Certificats fiscaux automatiques',
-        'Distribution équitable garantie',
-        'Audit par scholars islamiques'
-      ],
-      securityFeatures: [
-        'Traçabilité complète des dons',
-        'Validation bénéficiaires',
-        'Anti-fraude renforcé',
-        'Certification Yakoubi Yamina'
-      ],
-      eligibility: {
-        minDeposit: 0,
-        minMonthlyIncome: 0,
-        approvalRequired: false
-      },
-      color: 'from-green-500 to-emerald-600',
-      gradient: 'bg-gradient-to-br from-green-500 to-emerald-600'
-    },
-    {
-      id: 'royal',
-      name: 'CED Royal',
-      type: 'elite',
-      tier: 'royal',
-      dailyLimit: 2000000,
-      monthlyLimit: 24000000,
-      withdrawalLimit: 1000000,
-      currency: ['Illimitées'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Accès illimité tous services',
-        'Validation Yakoubi Yamina directe',
-        'Influence décisions philanthropiques',
-        'Naming rights projets',
-        'Cash back 7%',
-        'Royal treatment worldwide',
-        'Legacy building program',
-        'Historical founder status'
-      ],
-      islamicFeatures: [
-        'Sharia board advisory participation',
-        'Mega-waqf establishment',
-        'Islamic university sponsoring',
-        'Hajj/Umrah organization for community'
-      ],
-      securityFeatures: [
-        'Carte royale sur mesure',
-        'Sécurité état niveau',
-        'Protection familiale',
-        'Anonymat complet'
-      ],
-      eligibility: {
-        minDeposit: 10000000,
-        minMonthlyIncome: 1000000,
-        approvalRequired: true
-      },
-      color: 'from-purple-800 to-pink-900',
-      gradient: 'bg-gradient-to-br from-purple-800 to-pink-900'
-    }
-  ];
 
   const formatCurrency = (amount: number, currency = 'AED') => {
     return new Intl.NumberFormat('fr-FR', { 
@@ -291,8 +52,25 @@ export function CEDBankCards() {
 
   return (
     <div className="space-y-8">
+      {/* Header */}
+      <div className="text-center space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex justify-center items-center gap-4"
+        >
+          <div className="w-16 h-16 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+            <CreditCard className="h-8 w-8 text-white" />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Cartes CED Bank</h1>
+            <p className="text-gray-600">Collection complète Yakoubi - Islamiques 0% intérêt</p>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Sélecteur de cartes */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {cedBankCards.map((card) => {
           const IconComponent = getCardIcon(card.tier);
           return (
@@ -403,7 +181,7 @@ export function CEDBankCards() {
                     <div className="p-3 bg-orange-50 rounded-lg">
                       <p className="text-sm text-orange-600">Frais Annuels</p>
                       <p className="text-xl font-bold text-orange-800">
-                        {selectedCardData.fees.annual === 0 ? 'GRATUIT' : formatCurrency(selectedCardData.fees.annual)}
+                        GRATUIT
                       </p>
                     </div>
                   </div>
@@ -413,30 +191,40 @@ export function CEDBankCards() {
                 <div>
                   <h4 className="font-bold mb-3">Devises Supportées</h4>
                   <div className="flex flex-wrap gap-2">
-                    {selectedCardData.currency.map((curr, index) => (
-                      <Badge key={index} className="bg-gray-100 text-gray-800">
+                    {selectedCardData.currency.map((curr) => (
+                      <Badge key={curr} variant="outline">
                         {curr}
                       </Badge>
                     ))}
                   </div>
                 </div>
 
-                {/* Éligibilité */}
+                {/* Conditions d'éligibilité */}
                 <div>
                   <h4 className="font-bold mb-3">Conditions d'Éligibilité</h4>
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2">
                     <div className="flex justify-between">
                       <span>Dépôt minimum:</span>
-                      <span className="font-bold">{formatCurrency(selectedCardData.eligibility.minDeposit)}</span>
+                      <span className="font-bold">
+                        {selectedCardData.eligibility.minDeposit === 0 
+                          ? 'Aucun' 
+                          : formatCurrency(selectedCardData.eligibility.minDeposit)
+                        }
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span>Revenus mensuels min:</span>
-                      <span className="font-bold">{formatCurrency(selectedCardData.eligibility.minMonthlyIncome)}</span>
+                      <span className="font-bold">
+                        {selectedCardData.eligibility.minMonthlyIncome === 0 
+                          ? 'Aucun' 
+                          : formatCurrency(selectedCardData.eligibility.minMonthlyIncome)
+                        }
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Validation direction:</span>
-                      <span className="font-bold text-green-600">
-                        {selectedCardData.eligibility.approvalRequired ? 'Requise' : 'Automatique'}
+                      <span>Approbation requise:</span>
+                      <span className="font-bold">
+                        {selectedCardData.eligibility.approvalRequired ? 'Oui' : 'Non'}
                       </span>
                     </div>
                   </div>
@@ -447,124 +235,80 @@ export function CEDBankCards() {
         </div>
       )}
 
-      {/* Onglets détaillés */}
+      {/* Avantages et fonctionnalités */}
       {selectedCardData && (
-        <Tabs defaultValue="benefits" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="benefits">Avantages</TabsTrigger>
-            <TabsTrigger value="islamic">Finance Islamique</TabsTrigger>
-            <TabsTrigger value="security">Sécurité</TabsTrigger>
-            <TabsTrigger value="fees">Frais</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="benefits" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Avantages Exclusifs</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {selectedCardData.benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="islamic" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-green-600" />
-                  Conformité Finance Islamique
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {selectedCardData.islamicFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="security" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-blue-600" />
-                  Fonctionnalités Sécurité
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {selectedCardData.securityFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                      <Lock className="h-5 w-5 text-blue-600" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="fees" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Structure Tarifaire</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
-                    <p className="text-sm text-green-600">Frais Annuels</p>
-                    <p className="text-2xl font-bold text-green-800">
-                      {selectedCardData.fees.annual === 0 ? 'GRATUIT' : formatCurrency(selectedCardData.fees.annual)}
-                    </p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Avantages */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Star className="h-5 w-5 text-yellow-500" />
+                Avantages
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {selectedCardData.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{benefit}</span>
                   </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <p className="text-sm text-blue-600">Frais Change</p>
-                    <p className="text-2xl font-bold text-blue-800">
-                      {selectedCardData.fees.foreign === 0 ? 'GRATUIT' : `${selectedCardData.fees.foreign}%`}
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
-                    <p className="text-sm text-purple-600">Retrait ATM</p>
-                    <p className="text-2xl font-bold text-purple-800">
-                      {selectedCardData.fees.withdrawal === 0 ? 'GRATUIT' : formatCurrency(selectedCardData.fees.withdrawal)}
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-orange-50 rounded-lg border border-orange-200">
-                    <p className="text-sm text-orange-600">Remplacement</p>
-                    <p className="text-2xl font-bold text-orange-800">
-                      {selectedCardData.fees.replacement === 0 ? 'GRATUIT' : formatCurrency(selectedCardData.fees.replacement)}
-                    </p>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <div className="flex items-center gap-2 mb-2">
-                    <AlertTriangle className="h-5 w-5 text-yellow-600" />
-                    <span className="font-bold text-yellow-800">Politique CED Bank</span>
+          {/* Fonctionnalités islamiques */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="h-5 w-5 text-green-500" />
+                Conformité Islamique
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {selectedCardData.islamicFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
                   </div>
-                  <p className="text-sm text-yellow-700">
-                    Conformément aux principes islamiques, CED Bank ne génère aucun revenu via les intérêts. 
-                    Tous nos services sont financés par des frais transparents et des partenariats éthiques.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Sécurité */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Lock className="h-5 w-5 text-blue-500" />
+                Sécurité
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                {selectedCardData.securityFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       )}
+
+      {/* Actions */}
+      <div className="flex justify-center gap-4">
+        <Button size="lg" className="bg-green-600 hover:bg-green-700">
+          Demander cette carte
+        </Button>
+        <Button variant="outline" size="lg">
+          Comparer les cartes
+        </Button>
+      </div>
     </div>
   );
 }
