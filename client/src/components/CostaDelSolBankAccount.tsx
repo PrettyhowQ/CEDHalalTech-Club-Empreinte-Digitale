@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   CreditCard, 
   Anchor,
@@ -12,7 +12,7 @@ import {
   Package,
   TrendingUp,
   Users,
-  Wrench,
+  Settings,
   Smartphone,
   CheckCircle,
   Star,
@@ -30,7 +30,21 @@ import {
   MapPin,
   Phone,
   User,
-  Waves
+  Waves,
+  Navigation,
+  AlertCircle,
+  CheckCircle2,
+  ArrowRight,
+  RefreshCw,
+  Download,
+  Scan,
+  QrCode,
+  Bell,
+  Activity,
+  Timer,
+  Radio,
+  Satellite,
+  Route
 } from 'lucide-react';
 
 interface BusinessStream {
@@ -62,14 +76,186 @@ interface LogisticsOperation {
   trend: number;
 }
 
+interface DonationTracking {
+  id: string;
+  donorName: string;
+  itemType: string;
+  quantity: number;
+  currentLocation: string;
+  status: 'collecté' | 'en_transit' | 'arrivé_costa_del_sol' | 'traité_brahim' | 'redistribué';
+  estimatedArrival: Date;
+  trackingCode: string;
+  route: string[];
+  lastUpdate: Date;
+}
+
+interface RealTimeNotification {
+  id: string;
+  type: 'donation' | 'logistics' | 'delivery' | 'urgent';
+  message: string;
+  timestamp: Date;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+}
+
+interface MobileAppFeature {
+  name: string;
+  description: string;
+  icon: any;
+  available: boolean;
+  category: 'tracking' | 'donation' | 'logistics' | 'brahim';
+}
+
 export function CostaDelSolBankAccount() {
   const [activeTab, setActiveTab] = useState('overview');
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [notifications, setNotifications] = useState<RealTimeNotification[]>([]);
+  const [activeDonations, setActiveDonations] = useState<DonationTracking[]>([]);
+  const [isLiveTracking, setIsLiveTracking] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  // Simulation du suivi en temps réel
+  useEffect(() => {
+    if (!isLiveTracking) return;
+
+    const interval = setInterval(() => {
+      // Générer de nouvelles notifications
+      const newNotification: RealTimeNotification = {
+        id: Date.now().toString(),
+        type: ['donation', 'logistics', 'delivery'][Math.floor(Math.random() * 3)] as any,
+        message: getRandomNotificationMessage(),
+        timestamp: new Date(),
+        priority: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)] as any
+      };
+
+      setNotifications(prev => [newNotification, ...prev.slice(0, 4)]);
+
+      // Mettre à jour les dons actifs
+      setActiveDonations(prev => 
+        prev.map(donation => ({
+          ...donation,
+          lastUpdate: new Date(),
+          status: getNextStatus(donation.status) as DonationTracking['status']
+        }))
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isLiveTracking]);
+
+  const getRandomNotificationMessage = () => {
+    const messages = [
+      "📦 Nouveau don de matériel informatique collecté à Paris",
+      "🚛 Convoi logistique en route vers Costa del Sol",
+      "✅ Livraison réceptionnée par Yakoubi Brahim",
+      "🔄 Redistribution équipement vers bénéficiaires",
+      "⚡ Mise à jour GPS temps réel disponible",
+      "📱 Nouvelle commande boutique TechForAll"
+    ];
+    return messages[Math.floor(Math.random() * messages.length)];
+  };
+
+  const getNextStatus = (currentStatus: DonationTracking['status']): DonationTracking['status'] => {
+    const statusFlow: Record<DonationTracking['status'], DonationTracking['status']> = {
+      'collecté': 'en_transit',
+      'en_transit': 'arrivé_costa_del_sol',
+      'arrivé_costa_del_sol': 'traité_brahim',
+      'traité_brahim': 'redistribué',
+      'redistribué': 'redistribué'
+    };
+    return Math.random() > 0.7 ? statusFlow[currentStatus] || currentStatus : currentStatus;
+  };
+
+  // Initialiser les données de suivi
+  useEffect(() => {
+    const initialDonations: DonationTracking[] = [
+      {
+        id: 'DON-2025-001',
+        donorName: 'TechForAll Paris',
+        itemType: 'Ordinateurs portables reconditionnés',
+        quantity: 25,
+        currentLocation: 'Entrepôt Marseille',
+        status: 'en_transit',
+        estimatedArrival: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
+        trackingCode: 'TFA-ML-001',
+        route: ['Paris', 'Lyon', 'Marseille', 'Costa del Sol'],
+        lastUpdate: new Date()
+      },
+      {
+        id: 'DON-2025-002',
+        donorName: 'Association Solidarité Numérique',
+        itemType: 'Tablettes éducatives',
+        quantity: 40,
+        currentLocation: 'Costa del Sol - Bureau Yakoubi Brahim',
+        status: 'traité_brahim',
+        estimatedArrival: new Date(),
+        trackingCode: 'ASN-TB-002',
+        route: ['Toulouse', 'Barcelone', 'Costa del Sol'],
+        lastUpdate: new Date()
+      },
+      {
+        id: 'DON-2025-003',
+        donorName: 'Entreprise TechRecycle',
+        itemType: 'Smartphones reconditionnés',
+        quantity: 60,
+        currentLocation: 'En cours de collecte',
+        status: 'collecté',
+        estimatedArrival: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000),
+        trackingCode: 'TR-SP-003',
+        route: ['Nice', 'Monaco', 'Costa del Sol'],
+        lastUpdate: new Date()
+      }
+    ];
+    setActiveDonations(initialDonations);
+  }, []);
+
+  const mobileAppFeatures: MobileAppFeature[] = [
+    {
+      name: 'Suivi GPS Temps Réel',
+      description: 'Localisation précise des dons en transit vers Yakoubi Brahim',
+      icon: Navigation,
+      available: true,
+      category: 'tracking'
+    },
+    {
+      name: 'Notifications Push',
+      description: 'Alertes instantanées pour chaque étape du processus',
+      icon: Bell,
+      available: true,
+      category: 'tracking'
+    },
+    {
+      name: 'Scanner QR Dons',
+      description: 'Scan et enregistrement immédiat des nouveaux dons',
+      icon: QrCode,
+      available: true,
+      category: 'donation'
+    },
+    {
+      name: 'Logistique Brahim',
+      description: 'Interface dédiée pour Yakoubi Brahim - Gestion Costa del Sol',
+      icon: User,
+      available: true,
+      category: 'brahim'
+    },
+    {
+      name: 'Routage Automatique',
+      description: 'Calcul optimal des itinéraires de livraison',
+      icon: Route,
+      available: true,
+      category: 'logistics'
+    },
+    {
+      name: 'Statut Temps Réel',
+      description: 'Mise à jour instantanée des statuts de traitement',
+      icon: Activity,
+      available: true,
+      category: 'tracking'
+    }
+  ];
 
   const businessStreams: BusinessStream[] = [
     {
@@ -201,7 +387,7 @@ export function CostaDelSolBankAccount() {
       case 'marine': return <Anchor className="h-5 w-5" />;
       case 'logistics': return <Truck className="h-5 w-5" />;
       case 'solidarity': return <Gift className="h-5 w-5" />;
-      case 'equipment': return <Wrench className="h-5 w-5" />;
+      case 'equipment': return <Settings className="h-5 w-5" />;
       default: return <Package className="h-5 w-5" />;
     }
   };
@@ -297,13 +483,188 @@ export function CostaDelSolBankAccount() {
 
       {/* Tabs Content */}
       <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-5">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="overview">Vue d'ensemble</TabsTrigger>
+          <TabsTrigger value="tracking">Suivi Temps Réel</TabsTrigger>
           <TabsTrigger value="business">Activités</TabsTrigger>
           <TabsTrigger value="marine">Services Marins</TabsTrigger>
           <TabsTrigger value="logistics">Logistique</TabsTrigger>
+          <TabsTrigger value="mobile">App Mobile</TabsTrigger>
           <TabsTrigger value="account">Compte</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="tracking" className="mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Notifications en temps réel */}
+            <Card className="bg-white shadow-lg">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center gap-2">
+                    <Bell className="h-6 w-6 text-orange-600" />
+                    Notifications Temps Réel
+                  </CardTitle>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-3 h-3 rounded-full ${isLiveTracking ? 'bg-green-500 animate-pulse' : 'bg-gray-400'}`}></div>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setIsLiveTracking(!isLiveTracking)}
+                    >
+                      <RefreshCw className={`h-4 w-4 ${isLiveTracking ? 'animate-spin' : ''}`} />
+                    </Button>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <AnimatePresence>
+                    {notifications.map((notification) => (
+                      <motion.div
+                        key={notification.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        className="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500"
+                      >
+                        <div className="flex justify-between items-start">
+                          <p className="text-sm text-gray-800">{notification.message}</p>
+                          <Badge 
+                            className={
+                              notification.priority === 'urgent' ? 'bg-red-100 text-red-800' :
+                              notification.priority === 'high' ? 'bg-orange-100 text-orange-800' :
+                              'bg-blue-100 text-blue-800'
+                            }
+                          >
+                            {notification.priority}
+                          </Badge>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">
+                          {notification.timestamp.toLocaleTimeString('fr-FR')}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                  {notifications.length === 0 && (
+                    <div className="text-center py-4 text-gray-500">
+                      <Activity className="h-8 w-8 mx-auto mb-2 opacity-50" />
+                      <p>En attente de nouvelles notifications...</p>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Suivi des dons actifs */}
+            <Card className="bg-white shadow-lg lg:col-span-2">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Package className="h-6 w-6 text-purple-600" />
+                  Dons en Transit vers Yakoubi Brahim
+                </CardTitle>
+                <p className="text-gray-600">Suivi GPS temps réel - Costa del Sol</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {activeDonations.map((donation) => (
+                    <motion.div
+                      key={donation.id}
+                      layout
+                      className="p-4 border rounded-lg hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div>
+                          <h4 className="font-medium text-gray-800">{donation.donorName}</h4>
+                          <p className="text-sm text-gray-600">{donation.itemType} (x{donation.quantity})</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Badge className="bg-blue-100 text-blue-800">{donation.trackingCode}</Badge>
+                          <Badge 
+                            className={
+                              donation.status === 'traité_brahim' ? 'bg-green-100 text-green-800' :
+                              donation.status === 'arrivé_costa_del_sol' ? 'bg-orange-100 text-orange-800' :
+                              donation.status === 'en_transit' ? 'bg-blue-100 text-blue-800' :
+                              'bg-gray-100 text-gray-800'
+                            }
+                          >
+                            {donation.status.replace('_', ' ').toUpperCase()}
+                          </Badge>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 mb-3">
+                        <MapPin className="h-4 w-4 text-gray-500" />
+                        <span className="text-sm text-gray-700">{donation.currentLocation}</span>
+                      </div>
+
+                      {/* Barre de progression du trajet */}
+                      <div className="mb-3">
+                        <div className="flex justify-between text-xs text-gray-600 mb-1">
+                          <span>Progression</span>
+                          <span>{Math.round((donation.route.indexOf(donation.currentLocation.split(' ')[0]) + 1) / donation.route.length * 100)}%</span>
+                        </div>
+                        <Progress 
+                          value={(donation.route.indexOf(donation.currentLocation.split(' ')[0]) + 1) / donation.route.length * 100} 
+                          className="h-2"
+                        />
+                        <div className="flex justify-between text-xs text-gray-500 mt-1">
+                          {donation.route.map((city, index) => (
+                            <span key={index} className={index <= donation.route.indexOf(donation.currentLocation.split(' ')[0]) ? 'text-blue-600 font-medium' : ''}>
+                              {city}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="flex justify-between items-center text-xs text-gray-500">
+                        <span>Dernière mise à jour: {donation.lastUpdate.toLocaleTimeString('fr-FR')}</span>
+                        <span>Arrivée prévue: {donation.estimatedArrival.toLocaleDateString('fr-FR')}</span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Statistiques temps réel */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+              <CardContent className="p-6 text-center">
+                <Truck className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-bold text-lg text-gray-800">Dons en Transit</h3>
+                <p className="text-2xl font-bold text-blue-600">{activeDonations.filter(d => d.status === 'en_transit').length}</p>
+                <p className="text-sm text-gray-600">Vers Costa del Sol</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-orange-50 to-orange-100">
+              <CardContent className="p-6 text-center">
+                <MapPin className="h-8 w-8 text-orange-600 mx-auto mb-3" />
+                <h3 className="font-bold text-lg text-gray-800">Arrivés Destination</h3>
+                <p className="text-2xl font-bold text-orange-600">{activeDonations.filter(d => d.status === 'arrivé_costa_del_sol').length}</p>
+                <p className="text-sm text-gray-600">En attente traitement</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-50 to-green-100">
+              <CardContent className="p-6 text-center">
+                <CheckCircle2 className="h-8 w-8 text-green-600 mx-auto mb-3" />
+                <h3 className="font-bold text-lg text-gray-800">Traités par Brahim</h3>
+                <p className="text-2xl font-bold text-green-600">{activeDonations.filter(d => d.status === 'traité_brahim').length}</p>
+                <p className="text-sm text-gray-600">Gestion effectuée</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-purple-100">
+              <CardContent className="p-6 text-center">
+                <Gift className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+                <h3 className="font-bold text-lg text-gray-800">Redistribués</h3>
+                <p className="text-2xl font-bold text-purple-600">{activeDonations.filter(d => d.status === 'redistribué').length}</p>
+                <p className="text-sm text-gray-600">Mission accomplie</p>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
 
         <TabsContent value="overview" className="mt-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -533,6 +894,168 @@ export function CostaDelSolBankAccount() {
               </div>
             </CardContent>
           </Card>
+        </TabsContent>
+
+        <TabsContent value="mobile" className="mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Téléchargement App Mobile */}
+            <Card className="bg-gradient-to-br from-purple-600 to-blue-600 text-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-white">
+                  <Smartphone className="h-6 w-6" />
+                  Application Mobile TechForAll
+                </CardTitle>
+                <p className="text-purple-100">Suivi temps réel pour Yakoubi Brahim - Costa del Sol</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="p-4 bg-white/10 rounded-lg">
+                    <h3 className="font-bold text-lg mb-2">🚛 Logistique Costa del Sol</h3>
+                    <p className="text-sm text-purple-100 mb-3">
+                      Interface dédiée à Yakoubi Brahim pour gérer tous les flux logistiques, 
+                      dons et acheminements vers Costa del Sol en temps réel.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>GPS temps réel des livraisons</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>Notifications push instantanées</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>Scanner QR pour réception dons</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button className="bg-black hover:bg-gray-800 text-white">
+                      <Download className="h-4 w-4 mr-2" />
+                      App Store
+                    </Button>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white">
+                      <Download className="h-4 w-4 mr-2" />
+                      Play Store
+                    </Button>
+                  </div>
+
+                  <div className="text-center">
+                    <QrCode className="h-16 w-16 mx-auto mb-2 opacity-80" />
+                    <p className="text-xs text-purple-200">Scanner pour télécharger</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Fonctionnalités App */}
+            <Card className="bg-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Star className="h-6 w-6 text-yellow-600" />
+                  Fonctionnalités Exclusives
+                </CardTitle>
+                <p className="text-gray-600">Application mobile spécialisée Costa del Sol</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {mobileAppFeatures.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                    >
+                      <div className={`p-2 rounded-lg ${
+                        feature.category === 'tracking' ? 'bg-blue-100' :
+                        feature.category === 'brahim' ? 'bg-green-100' :
+                        feature.category === 'donation' ? 'bg-purple-100' :
+                        'bg-orange-100'
+                      }`}>
+                        <feature.icon className={`h-5 w-5 ${
+                          feature.category === 'tracking' ? 'text-blue-600' :
+                          feature.category === 'brahim' ? 'text-green-600' :
+                          feature.category === 'donation' ? 'text-purple-600' :
+                          'text-orange-600'
+                        }`} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-medium text-gray-800">{feature.name}</h4>
+                        <p className="text-sm text-gray-600">{feature.description}</p>
+                      </div>
+                      <Badge className={feature.available ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}>
+                        {feature.available ? 'Actif' : 'Bientôt'}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Interface Brahim Spécialisée */}
+          <div className="mt-6">
+            <Card className="bg-gradient-to-r from-green-50 to-blue-50 shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <User className="h-6 w-6 text-green-600" />
+                  Interface Dédiée Yakoubi Brahim
+                </CardTitle>
+                <p className="text-gray-600">Tableau de bord mobile optimisé pour la gestion Costa del Sol</p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <Satellite className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">Suivi GPS Live</h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Localisation en temps réel de tous les dons en transit vers Costa del Sol
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-sm text-green-600">
+                      <Radio className="h-4 w-4" />
+                      <span>Signal actif</span>
+                    </div>
+                  </div>
+
+                  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <Scan className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">Réception QR</h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Scanner et validation instantanée des dons reçus à Costa del Sol
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-sm text-green-600">
+                      <CheckCircle2 className="h-4 w-4" />
+                      <span>Prêt à scanner</span>
+                    </div>
+                  </div>
+
+                  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                    <Route className="h-12 w-12 text-orange-600 mx-auto mb-4" />
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">Redistribution</h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Gestion des livraisons finales aux bénéficiaires depuis Costa del Sol
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-sm text-green-600">
+                      <Timer className="h-4 w-4" />
+                      <span>En cours</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Shield className="h-5 w-5 text-blue-600" />
+                    <span className="font-bold text-blue-800">Accès Sécurisé Yakoubi Brahim</span>
+                  </div>
+                  <p className="text-sm text-blue-700">
+                    Interface mobile avec authentification biométrique dédiée exclusivement à la gestion 
+                    logistique Costa del Sol sous supervision Yakoubi Yamina.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </TabsContent>
 
         <TabsContent value="account" className="mt-6">
