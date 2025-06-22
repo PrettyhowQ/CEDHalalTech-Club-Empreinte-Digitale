@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechForAll & Empreinte Digitale</title>
+
+  <style>
+    /* style.css – Landing Page TechForAll */
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .intro, .projet, .actions {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 1rem 1rem 0 0;
+      padding: 0.8rem 1.5rem;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #002c5f;
+    }
+
+    .btn.secondary {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌍 TechForAll & IA PrettyhowQ</h1>
+    <p>Une technologie éthique & solidaire, née du cœur</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>🎯 Notre Mission</h2>
+      <p>TechForAll est une initiative éducative & humanitaire qui vise à offrir à chaque individu – femmes, jeunes, exilés – l’accès aux outils du futur : IA, codage, cloud, souveraineté numérique.</p>
+    </section>
+
+    <section class="projet">
+      <h2>📦 Ce que contient ce projet</h2>
+      <ul>
+        <li>💻 MacBook Pro M4 Max – Création & développement éducatif</li>
+        <li>🖥️ Dell Precision 7680 – IA, cloud, machine learning</li>
+        <li>📚 Diplômes IA multilingues</li>
+        <li>🇨🇭 Données sécurisées hébergées à Genève</li>
+      </ul>
+    </section>
+
+    <section class="actions">
+      <h2>🚀 Explorer nos outils</h2>
+      <a href="https://jsitor.com/Y_I4py0a6wc" target="_blank" class="btn">🔗 Accéder au Simulateur IA</a>
+      <a href="mailto:contact@techforallfrance.org" class="btn secondary">📩 Nous contacter</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Yakoubi Yamina – Tous droits réservés | 🇨🇭 Données hébergées en Suisse – RGPD conforme</p>
+  </footer>
+
+  <script>
+    // script.js – À ajouter si tu veux un effet ou une future interaction
+    console.log("TechForAll – Page chargée avec succès.");
+  </script>
+
+</body>
+</html>

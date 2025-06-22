@@ -47,6 +47,7 @@ import TechForAll from "@/pages/TechForAll";
 import CostaDelSol from "@/pages/CostaDelSol";
 import YakoubiStore from "@/pages/YakoubiStore";
 import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
+import TechForAllLanding from "@/pages/TechForAllLanding";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -105,6 +106,9 @@ function Router() {
       <Route path="/boutique-costa-del-sol" component={YakoubiStore} />
       <Route path="/costa-del-sol-website" component={CostaDelSolWebsite} />
       <Route path="/site-costa-del-sol" component={CostaDelSolWebsite} />
+      <Route path="/techforall-landing" component={TechForAllLanding} />
+      <Route path="/accueil-techforall" component={TechForAllLanding} />
+      <Route path="/home-techforall" component={TechForAllLanding} />
       <Route path="/parrainage" component={ParrainageCED} />
       <Route path="/referral" component={ParrainageCED} />
       <Route path="/ambassadeur" component={ParrainageCED} />
