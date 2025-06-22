@@ -1105,13 +1105,21 @@ B. Yakoubi - Expert reconditionnement professionnel`
                   Boutique solidaire TechForAll située en Costa del Sol, gérée par B. Yakoubi pour la vente d'équipements reconditionnés et l'accueil des donateurs européens.
                 </p>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => window.location.href = '/costa-del-sol'}
+                  >
                     <Building className="h-3 w-3 mr-1" />
-                    Voir inventaire
+                    App Logistique
                   </Button>
-                  <Button variant="outline" size="sm">
-                    <Calendar className="h-3 w-3 mr-1" />
-                    Horaires
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => window.location.href = '/boutique-yakoubi'}
+                  >
+                    <ShoppingCart className="h-3 w-3 mr-1" />
+                    Boutique Solidaire
                   </Button>
                 </div>
               </div>

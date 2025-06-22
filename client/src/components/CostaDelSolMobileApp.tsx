@@ -32,7 +32,8 @@ import {
   Heart,
   Euro,
   Gift,
-  Zap
+  Zap,
+  ShoppingCart
 } from 'lucide-react';
 import { SiAppstore, SiGoogleplay, SiAndroid, SiApple } from 'react-icons/si';
 
@@ -890,6 +891,26 @@ export function CostaDelSolMobileApp() {
           </TabsContent>
 
         </Tabs>
+
+        {/* Lien vers Boutique Solidaire */}
+        <Card className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-200">
+          <CardContent className="p-6 text-center">
+            <div className="flex justify-center items-center gap-2 mb-4">
+              <ShoppingCart className="h-6 w-6 text-yellow-600" />
+              <h3 className="text-xl font-bold text-yellow-800">Boutique Solidaire Costa del Sol</h3>
+            </div>
+            <p className="text-yellow-700 mb-4">
+              Découvrez la boutique solidaire gérée par B. Yakoubi - Matériel professionnel reconditionné et produits européens.
+            </p>
+            <Button 
+              onClick={() => window.location.href = '/boutique-yakoubi'}
+              className="bg-yellow-600 hover:bg-yellow-700"
+            >
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              Visiter la Boutique
+            </Button>
+          </CardContent>
+        </Card>
 
         {/* Footer Costa del Sol */}
         <Card className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200">
