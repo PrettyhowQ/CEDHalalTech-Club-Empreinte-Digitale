@@ -55,13 +55,13 @@ export function CEDBankCards() {
 
   const cedBankCards: BankCard[] = [
     {
-      id: 'essential',
-      name: 'CED Essential',
+      id: 'yakoubi-essential',
+      name: 'CED Yakoubi Essential',
       type: 'virtual',
       tier: 'standard',
-      dailyLimit: 5000,
-      monthlyLimit: 50000,
-      withdrawalLimit: 2000,
+      dailyLimit: 10000,
+      monthlyLimit: 100000,
+      withdrawalLimit: 5000,
       currency: ['AED', 'CHF', 'USD'],
       fees: {
         annual: 0,
@@ -70,83 +70,88 @@ export function CEDBankCards() {
         replacement: 0
       },
       benefits: [
+        'Carte principale Yakoubi Yamina',
         'Mode prière automatique',
         'Boussole Qibla intégrée',
         'Notifications en temps réel',
-        'Support 24/7',
-        'Transferts gratuits'
+        'Support 24/7 prioritaire',
+        'Transferts gratuits illimités'
       ],
       islamicFeatures: [
         'Aucun intérêt débiteur',
         'Transactions halal uniquement',
         'Blocage automatique secteurs haram',
-        'Audit Charia mensuel'
+        'Audit Charia mensuel',
+        'Certification Yakoubi Yamina'
       ],
       securityFeatures: [
-        'Chiffrement E2E',
-        'Biométrie mobile',
-        'Géolocalisation',
-        'Limite temps réel'
+        'Chiffrement E2E renforcé',
+        'Biométrie Yakoubi',
+        'Géolocalisation avancée',
+        'Contrôle total décisionnaire'
       ],
       eligibility: {
-        minDeposit: 1000,
-        minMonthlyIncome: 3000,
-        approvalRequired: true
+        minDeposit: 0,
+        minMonthlyIncome: 0,
+        approvalRequired: false
       },
-      color: 'from-green-400 to-blue-500',
-      gradient: 'bg-gradient-to-br from-green-400 to-blue-500'
+      color: 'from-emerald-500 to-teal-600',
+      gradient: 'bg-gradient-to-br from-emerald-500 to-teal-600'
     },
     {
-      id: 'gold',
-      name: 'CED Gold',
+      id: 'yakoubi-gold',
+      name: 'CED Yakoubi Gold Sécurisée',
       type: 'physical',
       tier: 'gold',
-      dailyLimit: 25000,
-      monthlyLimit: 300000,
-      withdrawalLimit: 10000,
+      dailyLimit: 50000,
+      monthlyLimit: 600000,
+      withdrawalLimit: 25000,
       currency: ['AED', 'CHF', 'USD', 'EUR', 'GBP'],
       fees: {
         annual: 0,
         foreign: 0,
         withdrawal: 0,
-        replacement: 100
+        replacement: 0
       },
       benefits: [
-        'Toutes fonctionnalités Essential',
-        'Concierge services',
-        'Accès salons aéroports',
-        'Assurance voyage',
-        'Cash back 2%',
-        'Priority banking'
+        'Carte sécurisée Yakoubi Yamina',
+        'Contrôle total établissement CED',
+        'Concierge services premium',
+        'Accès salons aéroports VIP',
+        'Assurance voyage internationale',
+        'Cash back 3% TechForAll',
+        'Priority banking exclusif'
       ],
       islamicFeatures: [
         'Investissements Sukuk privilégiés',
-        'Consultation scholars islamiques',
-        'Hajj/Umrah financing',
-        'Zakat calculation automatique'
+        'Consultation scholars islamiques dédiés',
+        'Hajj/Umrah financing premium',
+        'Zakat calculation automatique avancée',
+        'Certification Yakoubi exclusive'
       ],
       securityFeatures: [
-        'Carte à puce EMV',
-        'Contactless sécurisé',
-        'Authentification 3D',
-        'Monitoring anti-fraude IA'
+        'Carte à puce EMV renforcée',
+        'Contactless Yakoubi sécurisé',
+        'Authentification 3D biométrique',
+        'Monitoring anti-fraude IA avancée',
+        'Alerte temps réel Yakoubi'
       ],
       eligibility: {
-        minDeposit: 50000,
-        minMonthlyIncome: 15000,
-        approvalRequired: true
+        minDeposit: 0,
+        minMonthlyIncome: 0,
+        approvalRequired: false
       },
-      color: 'from-yellow-400 to-orange-500',
-      gradient: 'bg-gradient-to-br from-yellow-400 to-orange-500'
+      color: 'from-yellow-500 to-amber-600',
+      gradient: 'bg-gradient-to-br from-yellow-500 to-amber-600'
     },
     {
-      id: 'platinum',
-      name: 'CED Platinum',
+      id: 'yakoubi-platinum',
+      name: 'CED Yakoubi Platinum Directrice',
       type: 'premium',
       tier: 'platinum',
-      dailyLimit: 100000,
-      monthlyLimit: 1200000,
-      withdrawalLimit: 50000,
+      dailyLimit: 200000,
+      monthlyLimit: 2400000,
+      withdrawalLimit: 100000,
       currency: ['AED', 'CHF', 'USD', 'EUR', 'GBP', 'JPY', 'CAD'],
       fees: {
         annual: 0,
@@ -155,34 +160,38 @@ export function CEDBankCards() {
         replacement: 0
       },
       benefits: [
-        'Toutes fonctionnalités Gold',
-        'Gestionnaire dédié',
-        'Accès worldwide lounges',
-        'Assurance premium globale',
-        'Cash back 3.5%',
-        'Private banking access',
-        'Investment advisory',
-        'Family office services'
+        'Carte Directrice Yakoubi Yamina',
+        'Contrôle absolu établissement CED',
+        'Gestion Costa del Sol autorisée',
+        'Gestionnaire privé dédié 24/7',
+        'Accès worldwide lounges premium',
+        'Assurance premium globale illimitée',
+        'Cash back 5% sur tous achats',
+        'Private banking access exclusif',
+        'Investment advisory personnel',
+        'Family office services complets'
       ],
       islamicFeatures: [
         'Portfolio Sharia-compliant personnalisé',
-        'Access to Islamic real estate funds',
-        'Private Sukuk investments',
-        'Halal luxury marketplace'
+        'Accès exclusif Islamic real estate funds',
+        'Private Sukuk investments privilégiés',
+        'Halal luxury marketplace VIP',
+        'Conseil Charia personnel Yakoubi'
       ],
       securityFeatures: [
-        'Carte métal premium',
-        'Biométrie digitale',
-        'Tokenisation avancée',
-        'Protection identité'
+        'Carte métal Yakoubi signature',
+        'Biométrie digitale renforcée',
+        'Tokenisation avancée exclusive',
+        'Protection identité maximale',
+        'Contrôle décisionnaire total'
       ],
       eligibility: {
-        minDeposit: 500000,
-        minMonthlyIncome: 50000,
-        approvalRequired: true
+        minDeposit: 0,
+        minMonthlyIncome: 0,
+        approvalRequired: false
       },
-      color: 'from-gray-400 to-gray-600',
-      gradient: 'bg-gradient-to-br from-gray-400 to-gray-600'
+      color: 'from-slate-400 to-slate-600',
+      gradient: 'bg-gradient-to-br from-slate-400 to-slate-600'
     },
     {
       id: 'diamond',
