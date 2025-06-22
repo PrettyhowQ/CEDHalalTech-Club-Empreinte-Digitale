@@ -1048,6 +1048,328 @@ export function AlAmanCEDComparison() {
 
           {/* Positionnement stratégique */}
           <TabsContent value="positioning" className="space-y-6">
+            
+            {/* Comparaison des prix */}
+            <Card className="bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-200">
+              <CardHeader>
+                <CardTitle className="text-center text-2xl text-amber-800">
+                  💰 Comparaison des Prix - Assurances Takaful Dubai
+                </CardTitle>
+                <p className="text-center text-amber-700">
+                  Tarifs mensuels moyens par type de couverture (AED)
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  
+                  {/* Assurance Auto */}
+                  <Card className="border border-blue-200">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-blue-800">
+                        <Car className="h-5 w-5" />
+                        Assurance Auto Takaful
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                          <div>
+                            <div className="font-bold text-green-800">Al-Aman CED</div>
+                            <div className="text-xs text-green-600">Couverture complète + CED Bank 0%</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-green-700">285 AED</div>
+                            <div className="text-xs text-green-600">-25% clients CED</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Salama Islamic</div>
+                            <div className="text-xs text-gray-600">Couverture standard</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">320 AED</div>
+                            <div className="text-xs text-gray-600">Prix public</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">AD National Takaful</div>
+                            <div className="text-xs text-gray-600">Offre basique</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">340 AED</div>
+                            <div className="text-xs text-gray-600">Tarif standard</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Emirates Takaful</div>
+                            <div className="text-xs text-gray-600">Couverture limitée</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">295 AED</div>
+                            <div className="text-xs text-gray-600">Prix compétitif</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 p-3 bg-blue-50 rounded text-center">
+                        <div className="text-sm font-medium text-blue-800">
+                          Al-Aman CED : Meilleur rapport qualité/prix
+                        </div>
+                        <div className="text-xs text-blue-600">
+                          Couverture premium + avantages écosystème
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Assurance Habitation */}
+                  <Card className="border border-green-200">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-green-800">
+                        <Home className="h-5 w-5" />
+                        Assurance Habitation Takaful
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                          <div>
+                            <div className="font-bold text-green-800">Al-Aman CED</div>
+                            <div className="text-xs text-green-600">Protection famille + TechForAll</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-green-700">225 AED</div>
+                            <div className="text-xs text-green-600">Éco CED -30%</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Salama Islamic</div>
+                            <div className="text-xs text-gray-600">Protection standard</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">275 AED</div>
+                            <div className="text-xs text-gray-600">Tarif marché</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">AD National Takaful</div>
+                            <div className="text-xs text-gray-600">Couverture basique</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">290 AED</div>
+                            <div className="text-xs text-gray-600">Prix élevé</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Emirates Takaful</div>
+                            <div className="text-xs text-gray-600">Offre simple</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">260 AED</div>
+                            <div className="text-xs text-gray-600">Couverture réduite</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 p-3 bg-green-50 rounded text-center">
+                        <div className="text-sm font-medium text-green-800">
+                          Al-Aman CED : Prix le plus avantageux
+                        </div>
+                        <div className="text-xs text-green-600">
+                          Jusqu'à 30% d'économies avec écosystème
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Assurance Santé */}
+                  <Card className="border border-purple-200">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-purple-800">
+                        <Heart className="h-5 w-5" />
+                        Assurance Santé Famille Takaful
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                          <div>
+                            <div className="font-bold text-green-800">Al-Aman CED</div>
+                            <div className="text-xs text-green-600">Famille 4 pers. + médecine halal</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-green-700">850 AED</div>
+                            <div className="text-xs text-green-600">Paiement 0% CED</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Salama Islamic</div>
+                            <div className="text-xs text-gray-600">Famille 4 pers. standard</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">920 AED</div>
+                            <div className="text-xs text-gray-600">Paiement traditionnel</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">AD National Takaful</div>
+                            <div className="text-xs text-gray-600">Couverture limitée</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">780 AED</div>
+                            <div className="text-xs text-gray-600">Réseau restreint</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Emirates Takaful</div>
+                            <div className="text-xs text-gray-600">Plan basique</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">750 AED</div>
+                            <div className="text-xs text-gray-600">Services minimums</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 p-3 bg-purple-50 rounded text-center">
+                        <div className="text-sm font-medium text-purple-800">
+                          Al-Aman CED : Meilleure couverture
+                        </div>
+                        <div className="text-xs text-purple-600">
+                          Réseau médical halal + facilités paiement
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Assurance Voyage/Hajj */}
+                  <Card className="border border-amber-200">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-amber-800">
+                        <Plane className="h-5 w-5" />
+                        Assurance Voyage / Hajj & Omra
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center p-3 bg-green-50 rounded border-l-4 border-green-500">
+                          <div>
+                            <div className="font-bold text-green-800">Al-Aman CED</div>
+                            <div className="text-xs text-green-600">Hajj/Omra spécialisé + worldwide</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-green-700">180 AED</div>
+                            <div className="text-xs text-green-600">Guide spirituel inclus</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Salama Islamic</div>
+                            <div className="text-xs text-gray-600">Voyage standard</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">195 AED</div>
+                            <div className="text-xs text-gray-600">Couverture basique</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">AD National Takaful</div>
+                            <div className="text-xs text-gray-600">Voyage simple</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">210 AED</div>
+                            <div className="text-xs text-gray-600">Zone limitée</div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
+                          <div>
+                            <div className="font-bold">Emirates Takaful</div>
+                            <div className="text-xs text-gray-600">Pas d'offre Hajj</div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold">- AED</div>
+                            <div className="text-xs text-gray-600">Non disponible</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 p-3 bg-amber-50 rounded text-center">
+                        <div className="text-sm font-medium text-amber-800">
+                          Al-Aman CED : Seul spécialiste Hajj/Omra
+                        </div>
+                        <div className="text-xs text-amber-600">
+                          Services religieux inclus + prix compétitif
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Résumé économies */}
+                <Card className="mt-6 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+                  <CardHeader>
+                    <CardTitle className="text-center text-2xl">
+                      💡 Économies Annuelles avec Al-Aman CED
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                      <div className="p-4 bg-white/20 rounded-lg">
+                        <div className="text-2xl font-bold">1,200 AED</div>
+                        <div className="text-sm">Économie Auto</div>
+                        <div className="text-xs">vs concurrence</div>
+                      </div>
+                      <div className="p-4 bg-white/20 rounded-lg">
+                        <div className="text-2xl font-bold">1,800 AED</div>
+                        <div className="text-sm">Économie Habitation</div>
+                        <div className="text-xs">Réductions écosystème</div>
+                      </div>
+                      <div className="p-4 bg-white/20 rounded-lg">
+                        <div className="text-2xl font-bold">2,400 AED</div>
+                        <div className="text-sm">Économie Santé</div>
+                        <div className="text-xs">Paiement 0% CED Bank</div>
+                      </div>
+                      <div className="p-4 bg-white/20 rounded-lg">
+                        <div className="text-2xl font-bold">5,400 AED</div>
+                        <div className="text-sm">Total Annuel</div>
+                        <div className="text-xs">Famille complète</div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 text-center">
+                      <p className="text-lg font-medium">
+                        💰 Jusqu'à <span className="text-3xl font-bold">30% d'économies</span> par rapport à la concurrence
+                      </p>
+                      <p className="text-sm mt-2 opacity-90">
+                        Grâce à l'écosystème intégré CED Bank + Formation + TechForAll
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CardContent>
+            </Card>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               
               <Card>
