@@ -420,6 +420,479 @@ export function AlAmanCEDComparison() {
 
           {/* Matrice concurrentielle */}
           <TabsContent value="competitive-matrix" className="space-y-6">
+            
+            {/* Comparaison spécifique assurances 100% Halal Dubai */}
+            <Card className="bg-gradient-to-r from-green-100 to-blue-100 border-2 border-green-200">
+              <CardHeader>
+                <CardTitle className="text-center text-2xl">
+                  Comparaison Assurances 100% Halal - Marché Dubai
+                </CardTitle>
+                <p className="text-center text-gray-600">
+                  Focus sur les acteurs Takaful purs conformes Charia
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="bg-green-50">
+                        <th className="border p-3 text-left font-bold">Critères Comparatifs</th>
+                        <th className="border p-3 text-center font-bold bg-green-100">
+                          🏆 Al-Aman CED
+                          <div className="text-xs font-normal text-green-700">NOTRE SOLUTION</div>
+                        </th>
+                        <th className="border p-3 text-center font-bold">
+                          Salama Islamic
+                          <div className="text-xs font-normal text-gray-600">Leader historique</div>
+                        </th>
+                        <th className="border p-3 text-center font-bold">
+                          AD National Takaful
+                          <div className="text-xs font-normal text-gray-600">Spécialiste pur</div>
+                        </th>
+                        <th className="border p-3 text-center font-bold">
+                          Emirates Takaful
+                          <div className="text-xs font-normal text-gray-600">Émergent</div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Conformité Charia (Certification)</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">100% Certifié</div>
+                          <div className="text-xs">Conseil Charia Suisse + UAE</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-green-600">100% Certifié</div>
+                          <div className="text-xs">Conseil Charia UAE</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-green-600">100% Certifié</div>
+                          <div className="text-xs">Conseil Charia local</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-green-600">100% Certifié</div>
+                          <div className="text-xs">Certification standard</div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Écosystème Intégré</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Complet</div>
+                          <div className="text-xs">Banque + Formation + Assurance</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-gray-600">Limité</div>
+                          <div className="text-xs">Assurance uniquement</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-gray-600">Basique</div>
+                          <div className="text-xs">Quelques partenariats</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-gray-600">Inexistant</div>
+                          <div className="text-xs">Services isolés</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Innovation Technologique</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Révolutionnaire</div>
+                          <div className="text-xs">IA + Blockchain + App unifiée</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Standard</div>
+                          <div className="text-xs">Systèmes traditionnels</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Moderne</div>
+                          <div className="text-xs">Digitalisation récente</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Basique</div>
+                          <div className="text-xs">En développement</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Options de Paiement</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">0% Intérêt</div>
+                          <div className="text-xs">CED Bank Gold Yakoubi</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Standard</div>
+                          <div className="text-xs">Paiement traditionnel</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Standard</div>
+                          <div className="text-xs">Options limitées</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Basique</div>
+                          <div className="text-xs">Paiement comptant/mensuel</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Couverture Géographique</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Mondiale</div>
+                          <div className="text-xs">Suisse + UAE + Europe</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Régionale</div>
+                          <div className="text-xs">GCC + quelques pays</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Locale</div>
+                          <div className="text-xs">UAE principalement</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Locale</div>
+                          <div className="text-xs">UAE + Oman</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Support Multilingue</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">8 Langues</div>
+                          <div className="text-xs">AR, EN, FR, DE, ES, IT, TR, UR</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">3 Langues</div>
+                          <div className="text-xs">Arabe, Anglais, Hindi</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">2 Langues</div>
+                          <div className="text-xs">Arabe, Anglais</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">2 Langues</div>
+                          <div className="text-xs">Arabe, Anglais</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Produits Spécialisés</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Innovation</div>
+                          <div className="text-xs">Hajj, Crypto halal, TechForAll</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Classiques</div>
+                          <div className="text-xs">Auto, Santé, Habitation</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Standards</div>
+                          <div className="text-xs">Gamme traditionnelle</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Limités</div>
+                          <div className="text-xs">Produits de base</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Avantages Clients Fidèles</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Exceptionnels</div>
+                          <div className="text-xs">-25% CED Bank, -40% formation</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Standards</div>
+                          <div className="text-xs">Remises classiques</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Basiques</div>
+                          <div className="text-xs">Programme simple</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Inexistants</div>
+                          <div className="text-xs">Pas de programme</div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td className="border p-3 font-medium bg-blue-50">Transparence & Gouvernance</td>
+                        <td className="border p-3 text-center bg-green-50">
+                          <div className="font-bold text-green-700">Blockchain</div>
+                          <div className="text-xs">Transparence totale</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Rapports</div>
+                          <div className="text-xs">Audit annuel</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-blue-600">Standard</div>
+                          <div className="text-xs">Conformité réglementaire</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="font-bold text-orange-600">Basique</div>
+                          <div className="text-xs">Minimum requis</div>
+                        </td>
+                      </tr>
+
+                      <tr className="bg-yellow-50">
+                        <td className="border p-3 font-bold">Score Global (/100)</td>
+                        <td className="border p-3 text-center bg-green-100">
+                          <div className="text-2xl font-bold text-green-700">95/100</div>
+                          <div className="text-xs">Leader innovation</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="text-xl font-bold text-blue-600">78/100</div>
+                          <div className="text-xs">Expérience solide</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="text-xl font-bold text-orange-600">72/100</div>
+                          <div className="text-xs">Spécialiste local</div>
+                        </td>
+                        <td className="border p-3 text-center">
+                          <div className="text-xl font-bold text-orange-600">65/100</div>
+                          <div className="text-xs">En développement</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Valeur ajoutée unique Al-Aman CED */}
+            <Card className="bg-gradient-to-r from-yellow-100 to-green-100 border-2 border-yellow-300">
+              <CardHeader>
+                <CardTitle className="text-center text-2xl text-yellow-800">
+                  🚀 Valeur Ajoutée Unique Al-Aman CED
+                </CardTitle>
+                <p className="text-center text-yellow-700 font-medium">
+                  Ce qui nous distingue radicalement de la concurrence Dubai
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  
+                  <Card className="bg-white border-2 border-green-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto">
+                        <Building2 className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-green-800">Écosystème 360°</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-500" />
+                          <span>CED Bank intégrée (156K+ clients)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-500" />
+                          <span>Formation éthique (12K+ étudiants)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-500" />
+                          <span>TechForAll solidaire (8K+ membres)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-500" />
+                          <span>Une app = tous les services</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-green-50 rounded text-xs text-green-700 font-medium text-center">
+                        Aucun concurrent n'offre cette intégration
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white border-2 border-blue-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto">
+                        <Zap className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-blue-800">Innovation Technologique</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-500" />
+                          <span>IA éthique prédictive sinistres</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-500" />
+                          <span>Blockchain transparence totale</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-500" />
+                          <span>Mode prière automatique</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-500" />
+                          <span>Interface adaptative multilingue</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-blue-50 rounded text-xs text-blue-700 font-medium text-center">
+                        Technologie 5 ans d'avance
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white border-2 border-purple-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto">
+                        <DollarSign className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-purple-800">Financement 0% Intérêt</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-purple-500" />
+                          <span>Cartes CED Bank Gold Yakoubi</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-purple-500" />
+                          <span>Facilités de paiement halal</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-purple-500" />
+                          <span>Pas de frais bancaires cachés</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-purple-500" />
+                          <span>Conformité Charia garantie</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-purple-50 rounded text-xs text-purple-700 font-medium text-center">
+                        Seul sur le marché UAE
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white border-2 border-amber-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mx-auto">
+                        <Globe className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-amber-800">Portée Internationale</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-amber-500" />
+                          <span>Siège Genève (neutralité suisse)</span>
+                        </div>
+                        <div className="flex items-centers gap-2">
+                          <CheckCircle className="h-4 w-4 text-amber-500" />
+                          <span>Hub Dubai (pont Moyen-Orient)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-amber-500" />
+                          <span>Couverture Europe + GCC</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-amber-500" />
+                          <span>Standards suisses + local UAE</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-amber-50 rounded text-xs text-amber-700 font-medium text-center">
+                        Vision globale unique
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white border-2 border-red-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto">
+                        <Heart className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-red-800">Impact Solidaire</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-red-500" />
+                          <span>TechForAll couverture gratuite</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-red-500" />
+                          <span>Formations -40% étudiants</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-red-500" />
+                          <span>Dons équipements protégés</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-red-500" />
+                          <span>Impact social mesurable</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-red-50 rounded text-xs text-red-700 font-medium text-center">
+                        Dimension sociale inégalée
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-white border-2 border-indigo-200">
+                    <CardHeader className="pb-3">
+                      <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center mx-auto">
+                        <Award className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-indigo-800">Excellence Certifiée</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-indigo-500" />
+                          <span>Double certification Charia</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-indigo-500" />
+                          <span>Standards suisses qualité</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-indigo-500" />
+                          <span>Support 24/7 expert</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-indigo-500" />
+                          <span>SLA garantie 99.9%</span>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 bg-indigo-50 rounded text-xs text-indigo-700 font-medium text-center">
+                        Qualité premium garantie
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Résumé de la valeur ajoutée */}
+                <div className="mt-8 p-6 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl text-white">
+                  <h3 className="text-2xl font-bold text-center mb-4">
+                    🎯 Résumé de Notre Avantage Concurrentiel Unique
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-3xl font-bold">847K+</div>
+                      <div className="text-sm">Base clients existante</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold">0%</div>
+                      <div className="text-sm">Intérêt paiements</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold">100%</div>
+                      <div className="text-sm">Conformité Charia</div>
+                    </div>
+                  </div>
+                  <p className="text-center mt-4 text-lg">
+                    <span className="font-bold">Al-Aman CED n'est pas juste une assurance Takaful,</span><br/>
+                    c'est le premier écosystème financier islamique intégré au monde.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
             <Card>
               <CardHeader>
                 <CardTitle>Matrice Comparative Détaillée</CardTitle>
