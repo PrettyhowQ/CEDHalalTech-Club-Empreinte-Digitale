@@ -49,6 +49,8 @@ import YakoubiStore from "@/pages/YakoubiStore";
 import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
 import TechForAllLanding from "@/pages/TechForAllLanding";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
+import DreamSimulator from "@/pages/DreamSimulator";
+import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
 import YakoubiCEDAccount from "@/pages/YakoubiCEDAccount";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
@@ -114,6 +116,12 @@ function Router() {
       <Route path="/documents-techforall" component={TechForAllDocuments} />
       <Route path="/jstor-techforall" component={TechForAllDocuments} />
       <Route path="/pack-documents" component={TechForAllDocuments} />
+      <Route path="/simulateur-evasion" component={DreamSimulator} />
+      <Route path="/ambiances-reve" component={DreamSimulator} />
+      <Route path="/dream-simulator" component={DreamSimulator} />
+      <Route path="/generateurs-ia" component={AIGeneratorsMobile} />
+      <Route path="/ai-generators" component={AIGeneratorsMobile} />
+      <Route path="/mobile-ia-tools" component={AIGeneratorsMobile} />
       <Route path="/compte-yakoubi" component={YakoubiCEDAccount} />
       <Route path="/yakoubi-ced-bank" component={YakoubiCEDAccount} />
       <Route path="/brahim-yakoubi-compte" component={YakoubiCEDAccount} />

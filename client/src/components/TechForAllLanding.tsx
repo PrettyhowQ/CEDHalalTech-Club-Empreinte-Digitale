@@ -85,10 +85,10 @@ export function TechForAllLanding() {
       icon: Brain
     },
     {
-      name: 'Documents TechForAll',
-      url: '/documents-techforall',
-      description: 'Pack complet statuts, modèles et traductions',
-      icon: Package
+      name: 'Simulateur d\'Évasion',
+      url: '/simulateur-evasion',
+      description: 'Ambiances de rêve pour nourrir l\'espoir',
+      icon: Heart
     },
     {
       name: 'Costa del Sol Logistique',
