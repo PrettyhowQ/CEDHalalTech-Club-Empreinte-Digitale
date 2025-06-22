@@ -65,6 +65,7 @@ import CEDBankPage from "@/pages/CEDBank";
 import DonationSystemPage from "@/pages/DonationSystem";
 import AlAmanCEDComparisonPage from "@/pages/AlAmanCEDComparison";
 import AlAmanCEDLaunchStrategyPage from "@/pages/AlAmanCEDLaunchStrategy";
+import CitadelleMusulmanPage from "@/pages/CitadelleMusulman";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -232,6 +233,10 @@ function Router() {
       <Route path="/alaman-ced-launch" component={AlAmanCEDLaunchStrategyPage} />
       <Route path="/strategie-lancement" component={AlAmanCEDLaunchStrategyPage} />
       <Route path="/go-to-market" component={AlAmanCEDLaunchStrategyPage} />
+      <Route path="/citadelle-musulman" component={CitadelleMusulmanPage} />
+      <Route path="/douaas" component={CitadelleMusulmanPage} />
+      <Route path="/priere" component={CitadelleMusulmanPage} />
+      <Route path="/qibla" component={CitadelleMusulmanPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
