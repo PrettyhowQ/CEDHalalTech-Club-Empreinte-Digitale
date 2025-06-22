@@ -62,6 +62,7 @@ import CEDBankCardsPage from "@/pages/CEDBankCards";
 import SouheilaBankAccountPage from "@/pages/SouheilaBankAccount";
 import CostaDelSolBankAccountPage from "@/pages/CostaDelSolBankAccount";
 import CEDBankPage from "@/pages/CEDBank";
+import DonationSystemPage from "@/pages/DonationSystem";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -109,6 +110,10 @@ function Router() {
       <Route path="/techforall" component={TechForAll} />
       <Route path="/boutique-solidaire" component={TechForAll} />
       <Route path="/dons-materiels" component={TechForAll} />
+      <Route path="/systeme-donation" component={DonationSystemPage} />
+      <Route path="/donation-automatique" component={DonationSystemPage} />
+      <Route path="/donation-moteurs" component={DonationSystemPage} />
+      <Route path="/donation-informatique" component={DonationSystemPage} />
       <Route path="/costa-del-sol" component={CostaDelSol} />
       <Route path="/app-costa-del-sol" component={CostaDelSol} />
       <Route path="/logistique-mobile" component={CostaDelSol} />

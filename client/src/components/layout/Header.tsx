@@ -25,6 +25,7 @@ export function Header() {
     { name: 'Analyse Stratégique', href: '/analyse-strategique' },
     { name: 'Ressources', href: '/ressources' },
     { name: 'TechForAll', href: '/techforall', priority: true },
+    { name: 'Donations Automatiques', href: '/systeme-donation', priority: true },
     { name: 'Boutique Solidaire', href: '/boutique' },
     { name: 'IA Éthique', href: '/ia-ethique' },
     { name: 'Centre Financier', href: '/previsionnel' },
