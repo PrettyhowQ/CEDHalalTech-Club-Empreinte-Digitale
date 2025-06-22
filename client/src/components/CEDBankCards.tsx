@@ -51,7 +51,7 @@ interface BankCard {
 }
 
 export function CEDBankCards() {
-  const [selectedCard, setSelectedCard] = useState<string>('essential');
+  const [selectedCard, setSelectedCard] = useState<string>('yakoubi-essential');
 
   const cedBankCards: BankCard[] = [
     {
@@ -70,7 +70,7 @@ export function CEDBankCards() {
         replacement: 0
       },
       benefits: [
-        'Carte principale Yakoubi Yamina',
+        'Carte principale - Y.Y.',
         'Mode prière automatique',
         'Boussole Qibla intégrée',
         'Notifications en temps réel',
@@ -82,11 +82,11 @@ export function CEDBankCards() {
         'Transactions halal uniquement',
         'Blocage automatique secteurs haram',
         'Audit Charia mensuel',
-        'Certification Yakoubi Yamina'
+        'Certification Y.Y.'
       ],
       securityFeatures: [
         'Chiffrement E2E renforcé',
-        'Biométrie Yakoubi',
+        'Biométrie Y.Y.',
         'Géolocalisation avancée',
         'Contrôle total décisionnaire'
       ],
@@ -114,7 +114,7 @@ export function CEDBankCards() {
         replacement: 0
       },
       benefits: [
-        'Carte sécurisée Yakoubi Yamina',
+        'Carte sécurisée - Y.Y.',
         'Contrôle total établissement CED',
         'Concierge services premium',
         'Accès salons aéroports VIP',
@@ -127,14 +127,14 @@ export function CEDBankCards() {
         'Consultation scholars islamiques dédiés',
         'Hajj/Umrah financing premium',
         'Zakat calculation automatique avancée',
-        'Certification Yakoubi exclusive'
+        'Certification Y.Y. exclusive'
       ],
       securityFeatures: [
         'Carte à puce EMV renforcée',
-        'Contactless Yakoubi sécurisé',
+        'Contactless Y.Y. sécurisé',
         'Authentification 3D biométrique',
         'Monitoring anti-fraude IA avancée',
-        'Alerte temps réel Yakoubi'
+        'Alerte temps réel Y.Y.'
       ],
       eligibility: {
         minDeposit: 0,
@@ -160,7 +160,7 @@ export function CEDBankCards() {
         replacement: 0
       },
       benefits: [
-        'Carte Directrice Yakoubi Yamina',
+        'Carte Directrice - Y.Y.',
         'Contrôle absolu établissement CED',
         'Gestion Costa del Sol autorisée',
         'Gestionnaire privé dédié 24/7',
@@ -176,10 +176,10 @@ export function CEDBankCards() {
         'Accès exclusif Islamic real estate funds',
         'Private Sukuk investments privilégiés',
         'Halal luxury marketplace VIP',
-        'Conseil Charia personnel Yakoubi'
+        'Conseil Charia personnel Y.Y.'
       ],
       securityFeatures: [
-        'Carte métal Yakoubi signature',
+        'Carte métal Y.Y. signature',
         'Biométrie digitale renforcée',
         'Tokenisation avancée exclusive',
         'Protection identité maximale',
