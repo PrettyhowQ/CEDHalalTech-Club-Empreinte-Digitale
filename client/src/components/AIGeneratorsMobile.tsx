@@ -31,7 +31,8 @@ import {
   Bot,
   Sparkles,
   Target,
-  ArrowRight
+  ArrowRight,
+  Anchor
 } from 'lucide-react';
 
 interface CompanyInfo {
@@ -85,48 +86,73 @@ export function AIGeneratorsMobile() {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const materialTypes = [
-    // Informatique
-    'Ordinateur portable',
-    'Ordinateur fixe', 
-    'Écran',
-    'Imprimante',
-    'Serveur',
-    'Périphérique',
+    // Informatique professionnelle
+    'MacBook Pro',
+    'MacBook Air', 
+    'iMac Pro',
+    'Mac Studio',
+    'ThinkPad X1 Carbon',
+    'ThinkPad P1 Workstation',
+    'Dell XPS 13/15',
+    'Dell Precision Workstation',
+    'Surface Pro/Studio',
+    'Ordinateur fixe HP/Dell',
+    'Workstation graphique',
+    'Serveur rack',
+    'NAS Synology/QNAP',
+    
+    // Téléphonie professionnelle
+    'iPhone 15 Pro/Pro Max',
+    'iPhone 14 Pro/Pro Max',
+    'iPhone 13 Pro/Pro Max',
+    'Samsung Galaxy S24 Ultra',
+    'Samsung Galaxy Note',
+    'Google Pixel Pro',
+    'Téléphone satellite',
+    'Téléphone étanche professionnel',
+    
+    // Tablettes professionnelles
+    'iPad Pro 12.9"',
+    'iPad Pro 11"',
+    'iPad Air',
+    'Surface Pro',
+    'Samsung Galaxy Tab S9',
+    
+    // Périphériques pro
+    'Écran 4K/5K professionnel',
+    'Moniteur Ultra-wide',
+    'Imprimante laser couleur',
+    'Scanner professionnel',
+    'Webcam 4K',
+    'Casque audio pro',
+    'Clavier mécanique',
+    'Souris gaming/pro',
     
     // Équipements marins
-    'Moteur hors-bord',
-    'Moteur in-bord',
-    'GPS marin',
-    'Sondeur',
-    'Radar',
-    'Radio VHF',
-    'Pilote automatique',
-    'Treuil électrique',
+    'Moteur hors-bord Yamaha/Mercury',
+    'Moteur in-bord diesel',
+    'GPS Garmin/Furuno',
+    'Sondeur Humminbird/Lowrance',
+    'Radar Garmin/Raymarine',
+    'Radio VHF ICOM/Standard',
+    'Pilote automatique Raymarine',
+    'Treuil électrique Lewmar',
     
-    // Matériel hydroélectrique
-    'Turbine hydraulique',
-    'Générateur hydroélectrique',
-    'Régulateur de charge',
-    'Onduleur marine',
-    'Batterie marine',
-    'Panneau solaire marine',
-    
-    // Outils professionnels hydrauliques
-    'Pompe hydraulique',
-    'Vérin hydraulique',
-    'Compresseur',
-    'Groupe électrogène',
-    'Poste à souder',
-    'Perceuse marine',
-    'Meuleuse étanche',
+    // Matériel photo/vidéo pro
+    'Caméra DSLR Canon/Nikon',
+    'Caméra mirrorless Sony',
+    'Objectif professionnel',
+    'Drone DJI Pro',
+    'Stabilisateur gimbal',
+    'Éclairage LED pro',
     
     // Équipements de pêche professionnels
-    'Chalut',
-    'Filet de pêche',
-    'Casier à poissons',
-    'Glacière professionnelle',
-    'Balance de pêche',
-    'Sonar de pêche'
+    'Chalut professionnel',
+    'Filet tramail',
+    'Casier à homards',
+    'Glacière isotherme 300L+',
+    'Balance électronique étanche',
+    'Sonar de pêche Furuno'
   ];
 
   const emailTypes: EmailType[] = [
@@ -680,10 +706,26 @@ Reçu fiscal en pièce jointe`,
             <h3 className="text-xl font-bold text-green-800">Application TechForAll Mobile</h3>
           </div>
           <p className="text-green-700 mb-4">
-            Cette application facilite la collecte de dons matériels pour éviter le gaspillage 
-            et accompagner les familles dans le besoin vers l'inclusion numérique.
+            Cette application facilite la collecte de dons matériels professionnels (MacBook, iPhone, équipements marins) 
+            qui seront reconditionnés puis revendus à prix solidaires dans notre boutique en ligne pour aider les familles dans le besoin.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button 
+              onClick={() => window.location.href = '/boutique-solidaire'}
+              variant="outline"
+              className="border-indigo-300 text-indigo-700"
+            >
+              <Laptop className="h-4 w-4 mr-2" />
+              Consulter la boutique
+            </Button>
+            <Button 
+              onClick={() => window.location.href = '/materiel-marin'}
+              variant="outline"
+              className="border-blue-300 text-blue-700"
+            >
+              <ArrowRight className="h-4 w-4 mr-2" />
+              Matériel marin
+            </Button>
             <Button 
               onClick={() => window.location.href = '/techforall'}
               variant="outline"
@@ -695,7 +737,7 @@ Reçu fiscal en pièce jointe`,
             <Button 
               onClick={() => window.location.href = '/simulateur-evasion'}
               variant="outline"
-              className="border-blue-300 text-blue-700"
+              className="border-pink-300 text-pink-700"
             >
               <Sparkles className="h-4 w-4 mr-2" />
               Simulateur d'Évasion
