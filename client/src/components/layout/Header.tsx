@@ -24,6 +24,7 @@ export function Header() {
     { name: 'Nutrition Souheila', href: '/nutrition' },
     { name: 'Analyse Stratégique', href: '/analyse-strategique' },
     { name: 'Ressources', href: '/ressources' },
+    { name: 'TechForAll', href: '/techforall', priority: true },
     { name: 'Boutique Solidaire', href: '/boutique' },
     { name: 'IA Éthique', href: '/ia-ethique' },
     { name: 'Centre Financier', href: '/previsionnel' },
