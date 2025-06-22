@@ -26,7 +26,8 @@ import {
   Zap,
   Globe,
   Building2,
-  DollarSign
+  DollarSign,
+  GraduationCap
 } from 'lucide-react';
 
 interface InsuranceProduct {
@@ -839,7 +840,7 @@ export function CEDInsuranceHalal() {
                       <Mail className="h-5 w-5 text-blue-600" />
                       <div>
                         <div className="font-bold">Support Email</div>
-                        <div className="text-sm text-gray-600">support@ced-insurance.com</div>
+                        <div className="text-sm text-gray-600">contact@alaman-ced.ch</div>
                       </div>
                     </div>
 
