@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="copyright" content="Yakoubi Yamina">
+  <title>Boutique Démo Yakoubi</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    header .topbar {
+      background-color: #222;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav button {
+      background: #ffe600;
+      border: none;
+      margin-left: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .categories, .produits {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      margin-top: 20px;
+    }
+
+    .cat, .produit {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .produit img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .produit button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Section Contact */
+    .contact {
+      background: #ffffff;
+      padding: 30px 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .contact h2, .contact h3 {
+      color: #333;
+    }
+
+    .contact p {
+      line-height: 1.6;
+    }
+
+    /* Dark Mode */
+    body.dark {
+      background: #121212;
+      color: #f0f0f0;
+    }
+
+    body.dark header,
+    body.dark footer,
+    body.dark .cat,
+    body.dark .produit,
+    body.dark .contact {
+      background-color: #1f1f1f;
+      color: #f0f0f0;
+    }
+
+    body.dark .produit button,
+    body.dark header nav button {
+      background: #333;
+      color: #ffe600;
+    }
+
+    /* Copyright invisible */
+    /* 
+    Copyright © Yakoubi Yamina
+    Reproduction interdite. Propriété protégée. 
+    */
+
+    /* 
+    Copyright © Yakoubi Yamina
+    Toute reproduction du design, de la structure ou de l’idée sans autorisation est strictement interdite.
+    Développé pour démonstration uniquement.
+    */
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="topbar">
+      <h1>Boutique Démo Yakoubi</h1>
+      <nav>
+        <button>Accueil</button>
+        <button>Catégories</button>
+        <button>Panier</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="https://via.placeholder.com/900x150.png?text=Bannière+Publicitaire" alt="Bannière pub">
+  </section>
+
+  <section class="categories">
+    <h2>Catégories</h2>
+    <div class="grid">
+      <div class="cat">Meubles</div>
+      <div class="cat">Électroménager</div>
+      <div class="cat">Beauté</div>
+      <div class="cat">Mode</div>
+      <div class="cat">Sport</div>
+      <div class="cat">À venir</div>
+    </div>
+  </section>
+
+  <section class="produits">
+    <h2>Nouveaux Produits</h2>
+    <div class="grid">
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 1">
+        <p>Canapé 3 places</p>
+        <button>À venir</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 2">
+        <p>Mixeur Pro 1200W</p>
+        <button>À venir</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 3">
+        <p>Sèche-cheveux Compact</p>
+        <button>Disponible</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>À propos de nous</h2>
+    <p>
+      La Boutique Démo Yakoubi, gérée par Brahim, vous propose des produits livrés depuis l’Europe, avec un suivi de qualité. 
+      Nous travaillons avec des fournisseurs fiables et une logistique européenne.
+    </p>
+    <h3>Contact</h3>
+    <p>Email : contact@yakoubi-store.com</p>
+    <p>Téléphone : +33 6 12 34 56 78</p>
+    <p>Adresse : Paris, France (Stockage européen)</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Boutique Démo Yakoubi | Gérée par Brahim</p>
+  </footer>
+
+  <!-- Bouton Dark Mode -->
+  <button onclick="document.body.classList.toggle('dark')" style="position:fixed; top:10px; right:10px; z-index:999;">
+    Dark Mode
+  </button>
+
+  <!-- Script anti copie -->
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      alert("Contenu protégé © Yakoubi Yamina");
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && ['u','s','c','x'].includes(e.key.toLowerCase())) || e.key === "F12") {
+        e.preventDefault();
+        alert("Copie et inspection interdites © Yakoubi Yamina");
+      }
+    });
+  </script>
+
+</body>
+</html>
