@@ -44,7 +44,9 @@ import {
   Home,
   Plane,
   Briefcase,
-  Bell
+  Bell,
+  GraduationCap,
+  Banknote
 } from 'lucide-react';
 
 interface BankingService {
@@ -446,33 +448,145 @@ export function CEDBank() {
               ))}
             </div>
 
-            {/* Avantages écosystème */}
-            <Card className="bg-gradient-to-r from-purple-100 to-pink-100">
+            {/* Avantages Clients Exceptionnels */}
+            <Card className="bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300">
               <CardHeader>
-                <CardTitle className="text-center text-xl">Avantages Exclusifs Clients CED Bank</CardTitle>
+                <CardTitle className="text-center text-xl">Avantages Clients Exceptionnels Al-Aman CED</CardTitle>
+                <p className="text-center text-purple-700 font-medium">Programme de fidélité cross-services unique</p>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                    <h3 className="font-bold">Paiement 0% Intérêt</h3>
-                    <p className="text-sm text-gray-600">Facilités via cartes Gold Yakoubi</p>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                    <h3 className="font-bold">Gestion Unifiée</h3>
-                    <p className="text-sm text-gray-600">Une app pour banque + assurance</p>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <Award className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                    <h3 className="font-bold">Points Fidélité</h3>
-                    <p className="text-sm text-gray-600">Cumul sur tous les services</p>
-                  </div>
+                {/* Promotions d'accueil */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <Card className="bg-gradient-to-r from-green-100 to-emerald-100 border-l-4 border-green-500">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-green-700">
+                        <Users className="h-5 w-5" />
+                        Clients CED Bank
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-green-700 mb-2">-25%</div>
+                        <div className="text-sm text-green-600 mb-3">Les 3 premiers mois</div>
+                        <Badge className="bg-green-500 text-white px-3 py-1">Automatique</Badge>
+                      </div>
+                      <div className="mt-4 space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-600" />
+                          <span>Réduction appliquée automatiquement</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-600" />
+                          <span>Sur tous produits d'assurance</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-green-600" />
+                          <span>Paiement 0% via Gold Yakoubi</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-r from-blue-100 to-cyan-100 border-l-4 border-blue-500">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-blue-700">
+                        <GraduationCap className="h-5 w-5" />
+                        Étudiants CED Ethics
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-blue-700 mb-2">-40%</div>
+                        <div className="text-sm text-blue-600 mb-3">Pendant formations (3 mois)</div>
+                        <Badge className="bg-blue-500 text-white px-3 py-1">Étudiant</Badge>
+                      </div>
+                      <div className="mt-4 space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-600" />
+                          <span>Certificat étudiant requis</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-600" />
+                          <span>Extension possible selon résultats</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-blue-600" />
+                          <span>Cumul avec autres avantages</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
 
-                <div className="mt-6 text-center">
-                  <div className="text-2xl font-bold text-purple-700 mb-2">Jusqu'à 30% d'économies</div>
-                  <p className="text-purple-600">vs assurances traditionnelles Dubai</p>
+                {/* Programme de fidélité cross-services */}
+                <Card className="bg-white border-2 border-purple-300">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-purple-700">
+                      <Award className="h-5 w-5" />
+                      Programme Fidélité Cross-Services
+                    </CardTitle>
+                    <p className="text-sm text-purple-600">Cumulez des points sur TOUS vos services CED</p>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                      <div className="text-center p-3 bg-green-50 rounded-lg border border-green-200">
+                        <Banknote className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                        <div className="text-lg font-bold text-green-700">CED Bank</div>
+                        <div className="text-xs text-gray-600">1 point = 1 AED transaction</div>
+                      </div>
+                      <div className="text-center p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <Shield className="h-6 w-6 text-blue-600 mx-auto mb-2" />
+                        <div className="text-lg font-bold text-blue-700">Al-Aman CED</div>
+                        <div className="text-xs text-gray-600">5 points = 1 AED cotisation</div>
+                      </div>
+                      <div className="text-center p-3 bg-purple-50 rounded-lg border border-purple-200">
+                        <BookOpen className="h-6 w-6 text-purple-600 mx-auto mb-2" />
+                        <div className="text-lg font-bold text-purple-700">CED Ethics</div>
+                        <div className="text-xs text-gray-600">10 points = 1 AED formation</div>
+                      </div>
+                      <div className="text-center p-3 bg-orange-50 rounded-lg border border-orange-200">
+                        <Heart className="h-6 w-6 text-orange-600 mx-auto mb-2" />
+                        <div className="text-lg font-bold text-orange-700">TechForAll</div>
+                        <div className="text-xs text-gray-600">2 points = 1 AED don</div>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                      <h4 className="font-bold text-purple-800 mb-3 text-center">Récompenses Exclusives</h4>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                        <div className="text-center">
+                          <div className="font-bold text-purple-700">1,000 pts</div>
+                          <div className="text-gray-600">1 mois gratuit assurance</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-purple-700">2,500 pts</div>
+                          <div className="text-gray-600">Formation Ethics gratuite</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-purple-700">5,000 pts</div>
+                          <div className="text-gray-600">Hajj Insurance Premium</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="font-bold text-purple-700">10,000 pts</div>
+                          <div className="text-gray-600">Pack voyage Hajj</div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Synthèse économies */}
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="text-center p-4 bg-white rounded-lg border-2 border-green-300">
+                    <div className="text-3xl font-bold text-green-700 mb-2">Jusqu'à 65%</div>
+                    <div className="text-green-600 font-medium">d'économies totales</div>
+                    <div className="text-xs text-gray-500 mt-1">Nouveaux clients CED Bank étudiants</div>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg border-2 border-purple-300">
+                    <div className="text-3xl font-bold text-purple-700 mb-2">4 Services</div>
+                    <div className="text-purple-600 font-medium">Une seule fidélité</div>
+                    <div className="text-xs text-gray-500 mt-1">Banque + Assurance + Formation + Don</div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
