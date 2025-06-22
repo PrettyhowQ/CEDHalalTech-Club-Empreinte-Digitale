@@ -140,8 +140,14 @@ function Router() {
       <Route path="/materiel-marin" component={MarineEquipmentCatalog} />
       <Route path="/equipement-peche" component={MarineEquipmentCatalog} />
       <Route path="/marine-equipment" component={MarineEquipmentCatalog} />
-      <Route path="/boutique-solidaire" component={BoutiqueSolidaireTechForAll} />
-      <Route path="/informatique-solidaire" component={BoutiqueSolidaireTechForAll} />
+      <Route
+        path="/boutique-solidaire"
+        component={BoutiqueSolidaireTechForAll}
+      />
+      <Route
+        path="/informatique-solidaire"
+        component={BoutiqueSolidaireTechForAll}
+      />
       <Route path="/techforall-shop" component={BoutiqueSolidaireTechForAll} />
       <Route path="/simulateur-recyclage" component={RecyclingSimulator} />
       <Route path="/recyclage-impact" component={RecyclingSimulator} />
@@ -155,9 +161,15 @@ function Router() {
       <Route path="/convertisseur" component={CurrencyConverter} />
       <Route path="/currency-converter" component={CurrencyConverter} />
       <Route path="/change-devises" component={CurrencyConverter} />
-      <Route path="/convertisseur-instantane" component={InstantCurrencyConverter} />
+      <Route
+        path="/convertisseur-instantane"
+        component={InstantCurrencyConverter}
+      />
       <Route path="/instant-converter" component={InstantCurrencyConverter} />
-      <Route path="/convertisseur-premium" component={InstantCurrencyConverter} />
+      <Route
+        path="/convertisseur-premium"
+        component={InstantCurrencyConverter}
+      />
       <Route path="/wallet" component={CryptoWallet} />
       <Route path="/crypto-wallet" component={CryptoWallet} />
       <Route path="/portefeuille-crypto" component={CryptoWallet} />
@@ -177,7 +189,10 @@ function Router() {
       <Route path="/halal-cashback" component={HalalCashback} />
       <Route path="/cashback-halal" component={HalalCashback} />
       <Route path="/islamic-investments" component={IslamicInvestments} />
-      <Route path="/investissements-islamiques" component={IslamicInvestments} />
+      <Route
+        path="/investissements-islamiques"
+        component={IslamicInvestments}
+      />
       <Route path="/metaverse-nft" component={MetaverseNFT} />
       <Route path="/nft-halal" component={MetaverseNFT} />
       <Route path="/developer-api" component={DeveloperAPI} />
@@ -200,8 +215,14 @@ function Router() {
       <Route path="/souheila-bank" component={SouheilaBankAccountPage} />
       <Route path="/compte-souheila" component={SouheilaBankAccountPage} />
       <Route path="/nutrition-bank" component={SouheilaBankAccountPage} />
-      <Route path="/costa-del-sol-bank" component={CostaDelSolBankAccountPage} />
-      <Route path="/compte-costa-del-sol" component={CostaDelSolBankAccountPage} />
+      <Route
+        path="/costa-del-sol-bank"
+        component={CostaDelSolBankAccountPage}
+      />
+      <Route
+        path="/compte-costa-del-sol"
+        component={CostaDelSolBankAccountPage}
+      />
       <Route path="/brahim-bank" component={CostaDelSolBankAccountPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
@@ -221,7 +242,7 @@ function Router() {
       <Route path="/legal/confidentialite" component={FAQ} />
       <Route path="/legal/conditions" component={FAQ} />
       <Route path="/legal/cookies" component={FAQ} />
-      
+
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (
         <>
@@ -229,12 +250,12 @@ function Router() {
           <Route path="/dashboard" component={Dashboard} />
         </>
       )}
-      
+
       {/* Landing page for non-authenticated users */}
       {(!isAuthenticated || isLoading) && (
         <Route path="/" component={Landing} />
       )}
-      
+
       {/* 404 fallback */}
       <Route component={NotFound} />
     </Switch>
