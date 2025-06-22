@@ -435,6 +435,23 @@ export function YakoubiSolidaryStore() {
                 </div>
               </div>
 
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Button 
+                  onClick={() => window.location.href = '/costa-del-sol'}
+                  variant="outline"
+                  className="border-orange-300 hover:bg-orange-50"
+                >
+                  App Logistique Costa del Sol
+                </Button>
+                <Button 
+                  onClick={() => window.location.href = '/costa-del-sol-website'}
+                  variant="outline"
+                  className="border-blue-300 hover:bg-blue-50"
+                >
+                  Site Web Costa del Sol
+                </Button>
+              </div>
+
             </CardContent>
           </Card>
         </section>

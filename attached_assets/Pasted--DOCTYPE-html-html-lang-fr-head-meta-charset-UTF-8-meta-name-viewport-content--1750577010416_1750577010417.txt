@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="copyright" content="Yakoubi Yamina" />
+  <title>Costa del Sol</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #f9f9f4;
+      color: #333;
+    }
+
+    header .topbar {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header nav button {
+      background: #fdd9a0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .intro {
+      background: #eafafc;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: #1565c0;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .banner {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: zoomIn 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    .categories,
+    .produits {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    .cat,
+    .produit {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cat:hover,
+    .produit:hover {
+      background: #f0f8ff;
+    }
+
+    .produit img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .produit button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: #fff;
+      padding: 30px 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      color: #0077be;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #ff5500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .logos img {
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .footer,
+    .footer-social {
+      background-color: #061a34;
+      color: #f0c15e;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .language-selector select {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .payments img {
+      height: 35px;
+      margin: 5px;
+    }
+
+    .access-ia {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #00c3ff, #004aad);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00c3ff;
+      transition: all 0.3s ease;
+    }
+
+    .access-ia:hover {
+      transform: scale(1.05);
+      background: #003366;
+    }
+
+    .legal-links {
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    .legal-links a {
+      color: #f0c15e;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .legal-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <h1>Costa del Sol</h1>
+      <nav>
+        <button>Accueil</button>
+        <button>Catégories</button>
+        <button>Panier</button>
+        <select id="lang-select" onchange="changerLangue()">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="es">Español</option>
+          <option value="zh">中文</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2 id="texte-bienvenue">Bienvenue chez Costa del Sol</h2>
+    <p>Des articles soigneusement sélectionnés pour votre confort, livrés depuis l'Europe vers le monde entier.</p>
+  </section>
+
+  <section class="banner">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80"
+      alt="Costa del Sol & Canaries">
+  </section>
+
+  <section class="categories">
+    <h2>Catégories</h2>
+    <div class="grid">
+      <div class="cat">Meubles</div>
+      <div class="cat">Électroménager</div>
+      <div class="cat">Beauté</div>
+      <div class="cat">Mode</div>
+      <div class="cat">Sport</div>
+      <div class="cat">À venir</div>
+    </div>
+  </section>
+
+  <section class="produits">
+    <h2>Nouveaux Produits</h2>
+    <div class="grid">
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 1">
+        <p>Canapé 3 places</p>
+        <button>À venir</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 2">
+        <p>Mixeur Pro 1200W</p>
+        <button>À venir</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Produit 3">
+        <p>Sèche-cheveux Compact</p>
+        <button>Disponible</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact & Commande</h2>
+    <form action="https://formsubmit.co/yakoubi.yamina@ik.me" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nouvelle commande via Costa del Sol">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="nom" placeholder="Nom / Name / الاسم" required>
+      <input type="email" name="email" placeholder="Email / البريد الإلكتروني" required>
+      <textarea name="message" placeholder="Votre message / Your message / رسالتك" rows="4" required></textarea>
+      <button type="submit">Envoyer / Send / إرسال</button>
+    </form>
+  </section>
+
+  <section class="livraison">
+    <h2>Livraison Internationale</h2>
+    <p>Livraison en Europe, Maghreb, Moyen-Orient, Amérique du Nord...</p>
+    <p>Suivi, rapidité, fiabilité — DHL, UPS et partenaires locaux</p>
+
+    <h3>Paiements sécurisés</h3>
+    <div class="logos">
+      <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+      <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="MasterCard">
+      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
+      <img src="https://img.icons8.com/ios-filled/50/apple-pay.png" alt="Apple Pay">
+      <img src="https://img.icons8.com/color/48/stripe.png" alt="Stripe">
+    </div>
+  </section>
+
+  <section class="legal-section">
+    <h3>Conditions d’utilisation</h3>
+    <p>En accédant au site, vous acceptez nos conditions générales. Toutes les données sont protégées. Le contenu est
+      la propriété de Yakoubi Yamina.</p>
+    <p>Pour toute question, contactez : <a href="mailto:contact@costa-del-sol.com">contact@costa-del-sol.com</a></p>
+  </section>
+
+  <footer class="footer">
+    <div class="language-selector">
+      <label for="language">Langue / Devise :</label>
+      <select id="language">
+        <option value="fr">France (EUR €)</option>
+        <option value="us">USA (USD $)</option>
+        <option value="jp">Japon (JPY ¥)</option>
+        <option value="br">Brésil (BRL R$)</option>
+        <option value="dz">Algérie (DZD د.ج)</option>
+      </select>
+    </div>
+
+    <div class="payments">
+      <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+      <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="MasterCard">
+      <img src="https://img.icons8.com/ios-filled/50/apple-pay.png" alt="Apple Pay">
+      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
+      <img src="https://img.icons8.com/color/48/stripe.png" alt="Stripe">
+    </div>
+
+    <a href="#" class="access-ia">Rejoignez le Réseau CED & IAP</a>
+
+    <div class="legal-links">
+      <a href="#">Conditions d'utilisation</a> |
+      <a href="#">CGV</a> |
+      <a href="#">Mentions légales</a> |
+      <a href="#">Confidentialité</a>
+    </div>
+
+    <div class="copyright">
+      © 2025 Costa del Sol – Tous droits réservés | Propulsé par <strong>Yakoubi Yamina</strong>
+    </div>
+  </footer>
+
+  <!-- Anti-copie -->
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && ['u', 's', 'c', 'x'].includes(e.key.toLowerCase())) || e.key === "F12") {
+        e.preventDefault();
+        alert("Copie protégée © Yakoubi Yamina");
+      }
+    });
+  </script>
+
+  <script>
+    const traductions = {
+      fr: "Bienvenue chez Costa del Sol",
+      en: "Welcome to Costa del Sol",
+      ar: "مرحبا بكم في كوستا ديل سول",
+      es: "Bienvenido a Costa del Sol",
+      zh: "欢迎来到阳光海岸"
+    };
+    function changerLangue() {
+      const lang = document.getElementById("lang-select").value;
+      const texte = traductions[lang] || traductions['fr'];
+      document.getElementById("texte-bienvenue").textContent = texte;
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const langSelect = document.getElementById("lang-select");
+      const savedLang = localStorage.getItem("selectedLang");
+      if (savedLang) {
+        langSelect.value = savedLang;
+        changerLangue();
+      }
+      langSelect.addEventListener("change", function () {
+        localStorage.setItem("selectedLang", this.value);
+        changerLangue();
+      });
+    });
+  </script>
+</body>
+
+</html>
