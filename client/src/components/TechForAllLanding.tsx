@@ -164,27 +164,57 @@ export function TechForAllLanding() {
   return (
     <div className="min-h-screen bg-gray-50">
       
-      {/* Header */}
-      <header className="bg-blue-800 text-white py-16">
-        <div className="max-w-4xl mx-auto text-center px-4">
+      {/* Header Révolutionnaire */}
+      <header className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-600/20 via-transparent to-transparent"></div>
+        <div className="max-w-6xl mx-auto text-center px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex justify-center items-center gap-3 mb-4"
+            className="flex justify-center items-center gap-4 mb-6"
           >
-            <Globe className="h-12 w-12 text-blue-200" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {animatedTitle}
-              <span className="animate-pulse">|</span>
-            </h1>
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="w-20 h-20 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-3xl flex items-center justify-center shadow-2xl"
+            >
+              <Globe className="h-10 w-10 text-white" />
+            </motion.div>
+            <div>
+              <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-emerald-200 via-teal-200 to-cyan-200 bg-clip-text text-transparent">
+                TechForAll
+              </h1>
+              <div className="text-sm font-bold text-emerald-300 tracking-widest">
+                Fondée par Yakoubi Yamina © 2025
+              </div>
+            </div>
           </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mb-8"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              L'Association Révolutionnaire Anti-Gaspillage
+            </h2>
+            <div className="flex justify-center gap-8 text-lg font-medium">
+              <span className="text-emerald-300">UNIQUE</span>
+              <span className="text-teal-300">UNIVERSELLE</span> 
+              <span className="text-cyan-300">INDÉPENDANTE</span>
+              <span className="text-blue-300">INTELLIGENTE</span>
+            </div>
+          </motion.div>
+
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl text-blue-100"
+            transition={{ delay: 0.6 }}
+            className="text-xl text-emerald-100 max-w-4xl mx-auto leading-relaxed"
           >
-            Une technologie éthique & solidaire, née du cœur
+            La première association mondiale qui révolutionne l'économie circulaire technologique. 
+            Inspirée par la philosophie CED Bank : zéro gaspillage, éthique absolue, impact planétaire.
           </motion.p>
         </div>
       </header>
@@ -198,32 +228,123 @@ export function TechForAllLanding() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card className="bg-white shadow-lg">
+            <Card className="bg-gradient-to-r from-emerald-50 to-teal-50 shadow-2xl border-emerald-200">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-2xl text-blue-800">
-                  <Target className="h-8 w-8" />
-                  Notre Mission
+                <CardTitle className="flex items-center gap-2 text-3xl text-emerald-800">
+                  <Target className="h-10 w-10" />
+                  Manifeste de l'Association TechForAll
                 </CardTitle>
+                <div className="text-emerald-600 font-medium">
+                  Une révolution technologique éthique inspirée par CED Bank
+                </div>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  TechForAll est une initiative éducative & humanitaire qui vise à offrir à chaque individu – 
-                  femmes, jeunes, exilés – l'accès aux outils du futur : IA, codage, cloud, souveraineté numérique.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {missionPoints.map((point, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 + 0.1 * index }}
-                      className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg"
-                    >
-                      <CheckCircle className="h-5 w-5 text-blue-600" />
-                      <span className="text-gray-700">{point}</span>
-                    </motion.div>
-                  ))}
+              <CardContent className="space-y-8">
+                <div className="bg-white p-6 rounded-xl shadow-inner">
+                  <blockquote className="text-xl text-gray-800 leading-relaxed italic border-l-4 border-emerald-500 pl-6">
+                    "Nous refusons la surconsommation. Nous choisissons l'intelligence. 
+                    Chaque équipement sauvé du gaspillage devient un pont vers l'inclusion numérique. 
+                    TechForAll n'est pas une association de plus : c'est le modèle d'économie circulaire 
+                    que le monde n'a jamais vu."
+                  </blockquote>
+                  <div className="text-right mt-4 text-emerald-700 font-bold">
+                    — Yakoubi Yamina, Fondatrice
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-emerald-800">Nos Principes Uniques</h3>
+                    {[
+                      "Anti-gaspillage technologique radical",
+                      "Éthique bancaire CED intégrée", 
+                      "Indépendance totale des lobbies tech",
+                      "Intelligence collective au service de tous"
+                    ].map((point, index) => (
+                      <motion.div 
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + 0.1 * index }}
+                        className="flex items-center gap-3 p-4 bg-emerald-100 rounded-lg"
+                      >
+                        <CheckCircle className="h-6 w-6 text-emerald-600" />
+                        <span className="text-gray-800 font-medium">{point}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-teal-800">Impact Révolutionnaire</h3>
+                    {[
+                      "0% surconsommation encouragée",
+                      "100% matériel donné reconverti",
+                      "Financement transparent via CED",
+                      "Emplois verts créés localement"
+                    ].map((point, index) => (
+                      <motion.div 
+                        key={index}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + 0.1 * index }}
+                        className="flex items-center gap-3 p-4 bg-teal-100 rounded-lg"
+                      >
+                        <CheckCircle className="h-6 w-6 text-teal-600" />
+                        <span className="text-gray-800 font-medium">{point}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-emerald-100 to-teal-100 p-6 rounded-xl">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Ce qui nous rend uniques au monde :</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                        <div>
+                          <strong className="text-emerald-800">Première association mondiale</strong>
+                          <p className="text-sm text-gray-600">À refuser tout financement de l'industrie tech pour préserver son indépendance</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                        <div>
+                          <strong className="text-teal-800">Garantie zéro surconsommation</strong>
+                          <p className="text-sm text-gray-600">Seule organisation à s'engager formellement contre l'incitation à l'achat</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                        <div>
+                          <strong className="text-cyan-800">Partenariat CED Bank exclusif</strong>
+                          <p className="text-sm text-gray-600">Financement éthique 0% intérêt pour maximiser l'impact social</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
+                        <div>
+                          <strong className="text-blue-800">Transparence radicale</strong>
+                          <p className="text-sm text-gray-600">Traçabilité complète : chaque équipement suivi de la collecte à la redistribution</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
+                        <div>
+                          <strong className="text-purple-800">Intelligence collective</strong>
+                          <p className="text-sm text-gray-600">IA éthique au service de l'optimisation des ressources, pas du profit</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                        <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">6</div>
+                        <div>
+                          <strong className="text-pink-800">Universalité sans frontières</strong>
+                          <p className="text-sm text-gray-600">Modèle reproductible mondialement, adaptation locale respectueuse</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
