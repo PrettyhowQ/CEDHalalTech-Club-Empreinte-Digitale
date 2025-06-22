@@ -445,11 +445,27 @@ export function DonationSystem() {
                   {/* Informations du donateur */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-bold text-gray-800">Informations du Donateur</h3>
-                    <Input
-                      placeholder="Nom complet ou entreprise"
-                      value={donationForm.donorName}
-                      onChange={(e) => setDonationForm({...donationForm, donorName: e.target.value})}
-                    />
+                    <Select value={donationForm.donorName} onValueChange={(value) => setDonationForm({...donationForm, donorName: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Entreprise ou nom complet" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="apple_france">🍎 Apple France</SelectItem>
+                        <SelectItem value="apple_europe">🍎 Apple Europe</SelectItem>
+                        <SelectItem value="apple_suisse">🍎 Apple Suisse</SelectItem>
+                        <SelectItem value="dell_europe">💻 Dell Europe</SelectItem>
+                        <SelectItem value="dell_france">💻 Dell France</SelectItem>
+                        <SelectItem value="microsoft_europe">🪟 Microsoft Europe</SelectItem>
+                        <SelectItem value="samsung_europe">📱 Samsung Europe</SelectItem>
+                        <SelectItem value="hp_enterprise">🖥️ HP Enterprise Europe</SelectItem>
+                        <SelectItem value="lenovo_europe">💼 Lenovo Europe</SelectItem>
+                        <SelectItem value="cisco_europe">🌐 Cisco Europe</SelectItem>
+                        <SelectItem value="mitsubishi_electric">❄️ Mitsubishi Electric Europe</SelectItem>
+                        <SelectItem value="daikin_europe">🏠 Daikin Europe</SelectItem>
+                        <SelectItem value="yamaha_marine">⚓ Yamaha Marine Europe</SelectItem>
+                        <SelectItem value="custom">Particulier / Autre entreprise</SelectItem>
+                      </SelectContent>
+                    </Select>
                     <Input
                       type="email"
                       placeholder="Email de contact"
@@ -598,7 +614,31 @@ export function DonationSystem() {
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
-                {/* Avantages fiscaux par pays */}
+                {/* Avantages fiscaux par pays avec section entreprises */}
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg mb-6">
+                  <h4 className="font-bold text-center text-gray-800 mb-3">
+                    🏢 Avantages Spéciaux Entreprises Tech Européennes
+                  </h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-sm">
+                    <div className="bg-white p-2 rounded">
+                      <div className="font-bold text-gray-700">Apple Europe</div>
+                      <div className="text-xs text-gray-600">Déduction majorée</div>
+                    </div>
+                    <div className="bg-white p-2 rounded">
+                      <div className="font-bold text-gray-700">Dell Enterprise</div>
+                      <div className="text-xs text-gray-600">Crédit d'impôt RSE</div>
+                    </div>
+                    <div className="bg-white p-2 rounded">
+                      <div className="font-bold text-gray-700">Microsoft EU</div>
+                      <div className="text-xs text-gray-600">Avantage digital</div>
+                    </div>
+                    <div className="bg-white p-2 rounded">
+                      <div className="font-bold text-gray-700">Samsung Europe</div>
+                      <div className="text-xs text-gray-600">Innovation sociale</div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <Card className="bg-gradient-to-r from-red-50 to-red-100 border-red-200">
                     <CardContent className="p-4 text-center">
@@ -627,11 +667,24 @@ export function DonationSystem() {
                   {/* Informations du donateur */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-bold text-gray-800">Informations Fiscales</h3>
-                    <Input
-                      placeholder="Nom complet ou entreprise"
-                      value={financialDonation.donorName}
-                      onChange={(e) => setFinancialDonation({...financialDonation, donorName: e.target.value})}
-                    />
+                    <Select value={financialDonation.donorName} onValueChange={(value) => setFinancialDonation({...financialDonation, donorName: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Entreprise ou nom complet" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="apple_france">🍎 Apple France</SelectItem>
+                        <SelectItem value="apple_europe">🍎 Apple Europe</SelectItem>
+                        <SelectItem value="apple_suisse">🍎 Apple Suisse</SelectItem>
+                        <SelectItem value="dell_europe">💻 Dell Europe</SelectItem>
+                        <SelectItem value="dell_france">💻 Dell France</SelectItem>
+                        <SelectItem value="microsoft_europe">🪟 Microsoft Europe</SelectItem>
+                        <SelectItem value="samsung_europe">📱 Samsung Europe</SelectItem>
+                        <SelectItem value="hp_enterprise">🖥️ HP Enterprise Europe</SelectItem>
+                        <SelectItem value="lenovo_europe">💼 Lenovo Europe</SelectItem>
+                        <SelectItem value="cisco_europe">🌐 Cisco Europe</SelectItem>
+                        <SelectItem value="custom">Autre entreprise</SelectItem>
+                      </SelectContent>
+                    </Select>
                     <Input
                       type="email"
                       placeholder="Email pour reçu fiscal"
