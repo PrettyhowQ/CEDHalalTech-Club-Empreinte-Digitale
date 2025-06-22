@@ -727,41 +727,121 @@ export function CostaDelSolBankAccount() {
             </Card>
           </div>
 
-          {/* Statistiques temps réel */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+          {/* Statistiques temps réel par catégorie */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mt-6">
             <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
-              <CardContent className="p-6 text-center">
-                <Truck className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                <h3 className="font-bold text-lg text-gray-800">Dons en Transit</h3>
-                <p className="text-2xl font-bold text-blue-600">{activeDonations.filter(d => d.status === 'en_transit').length}</p>
-                <p className="text-sm text-gray-600">Vers Costa del Sol</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-orange-50 to-orange-100">
-              <CardContent className="p-6 text-center">
-                <MapPin className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-                <h3 className="font-bold text-lg text-gray-800">Arrivés Destination</h3>
-                <p className="text-2xl font-bold text-orange-600">{activeDonations.filter(d => d.status === 'arrivé_costa_del_sol').length}</p>
-                <p className="text-sm text-gray-600">En attente traitement</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-green-50 to-green-100">
-              <CardContent className="p-6 text-center">
-                <CheckCircle2 className="h-8 w-8 text-green-600 mx-auto mb-3" />
-                <h3 className="font-bold text-lg text-gray-800">Traités par Brahim</h3>
-                <p className="text-2xl font-bold text-green-600">{activeDonations.filter(d => d.status === 'traité_brahim').length}</p>
-                <p className="text-sm text-gray-600">Gestion effectuée</p>
+              <CardContent className="p-4 text-center">
+                <Truck className="h-6 w-6 text-blue-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">Transit Global</h3>
+                <p className="text-xl font-bold text-blue-600">{activeDonations.filter(d => d.status === 'en_transit').length}</p>
+                <p className="text-xs text-gray-600">Total en route</p>
               </CardContent>
             </Card>
 
             <Card className="bg-gradient-to-br from-purple-50 to-purple-100">
-              <CardContent className="p-6 text-center">
-                <Gift className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-                <h3 className="font-bold text-lg text-gray-800">Redistribués</h3>
-                <p className="text-2xl font-bold text-purple-600">{activeDonations.filter(d => d.status === 'redistribué').length}</p>
-                <p className="text-sm text-gray-600">Mission accomplie</p>
+              <CardContent className="p-4 text-center">
+                <Package className="h-6 w-6 text-purple-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">IT en Transit</h3>
+                <p className="text-xl font-bold text-purple-600">{activeDonations.filter(d => d.category === 'informatique' && d.status === 'en_transit').length}</p>
+                <p className="text-xs text-gray-600">💻 Informatique</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-cyan-50 to-cyan-100">
+              <CardContent className="p-4 text-center">
+                <Settings className="h-6 w-6 text-cyan-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">Clim en Transit</h3>
+                <p className="text-xl font-bold text-cyan-600">{activeDonations.filter(d => d.category === 'climatisation' && d.status === 'en_transit').length}</p>
+                <p className="text-xs text-gray-600">❄️ Climatisation</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-orange-50 to-orange-100">
+              <CardContent className="p-4 text-center">
+                <MapPin className="h-6 w-6 text-orange-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">Arrivés Total</h3>
+                <p className="text-xl font-bold text-orange-600">{activeDonations.filter(d => d.status === 'arrivé_costa_del_sol').length}</p>
+                <p className="text-xs text-gray-600">Costa del Sol</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-50 to-green-100">
+              <CardContent className="p-4 text-center">
+                <CheckCircle2 className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">Traités Brahim</h3>
+                <p className="text-xl font-bold text-green-600">{activeDonations.filter(d => d.status === 'traité_brahim').length}</p>
+                <p className="text-xs text-gray-600">Gestion effectuée</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100">
+              <CardContent className="p-4 text-center">
+                <Gift className="h-6 w-6 text-yellow-600 mx-auto mb-2" />
+                <h3 className="font-bold text-sm text-gray-800">Redistribués</h3>
+                <p className="text-xl font-bold text-yellow-600">{activeDonations.filter(d => d.status === 'redistribué').length}</p>
+                <p className="text-xs text-gray-600">Mission accomplie</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Analyse par type d'équipement */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+            <Card className="bg-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Package className="h-6 w-6 text-purple-600" />
+                  Flux Informatique TechForAll
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {activeDonations.filter(d => d.category === 'informatique').map((donation) => (
+                    <div key={donation.id} className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+                      <div>
+                        <p className="font-medium text-gray-800">{donation.itemType}</p>
+                        <p className="text-sm text-gray-600">{donation.donorName} • x{donation.quantity}</p>
+                      </div>
+                      <Badge className={
+                        donation.status === 'traité_brahim' ? 'bg-green-100 text-green-800' :
+                        donation.status === 'en_transit' ? 'bg-blue-100 text-blue-800' :
+                        'bg-gray-100 text-gray-800'
+                      }>
+                        {donation.status.replace('_', ' ')}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Settings className="h-6 w-6 text-cyan-600" />
+                  Flux Climatisation Constructeurs
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {activeDonations.filter(d => d.category === 'climatisation').map((donation) => (
+                    <div key={donation.id} className="flex items-center justify-between p-3 bg-cyan-50 rounded-lg">
+                      <div>
+                        <p className="font-medium text-gray-800">{donation.itemType}</p>
+                        <p className="text-sm text-gray-600">{donation.donorName} • x{donation.quantity}</p>
+                        {donation.technicalSpecs && (
+                          <p className="text-xs text-cyan-700">{donation.technicalSpecs[0]}</p>
+                        )}
+                      </div>
+                      <Badge className={
+                        donation.status === 'traité_brahim' ? 'bg-green-100 text-green-800' :
+                        donation.status === 'en_transit' ? 'bg-blue-100 text-blue-800' :
+                        'bg-gray-100 text-gray-800'
+                      }>
+                        {donation.status.replace('_', ' ')}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -799,27 +879,62 @@ export function CostaDelSolBankAccount() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-lg">
+            <Card className="bg-gradient-to-br from-green-50 to-blue-50 shadow-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Waves className="h-6 w-6 text-cyan-600" />
-                  Performance Opérationnelle
+                  <Activity className="h-6 w-6 text-green-600" />
+                  Système Unifié IT + Climatisation
                 </CardTitle>
+                <p className="text-gray-600">Vue consolidée des deux flux principaux</p>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  {logisticsOperations.map((operation, index) => (
-                    <div key={index} className="p-3 bg-gray-50 rounded-lg">
-                      <div className="flex justify-between items-start mb-2">
-                        <p className="font-medium text-gray-800">{operation.metric}</p>
-                        <Badge className="bg-blue-100 text-blue-800">+{operation.trend}%</Badge>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-2xl font-bold text-cyan-600">{operation.value.toLocaleString()} {operation.unit}</span>
-                      </div>
-                      <p className="text-xs text-gray-600 mt-1">{operation.description}</p>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="text-center p-4 bg-purple-100 rounded-lg">
+                    <Package className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                    <p className="text-lg font-bold text-purple-600">
+                      {activeDonations.filter(d => d.category === 'informatique').length}
+                    </p>
+                    <p className="text-sm text-gray-700">Dons IT actifs</p>
+                  </div>
+                  <div className="text-center p-4 bg-cyan-100 rounded-lg">
+                    <Settings className="h-8 w-8 text-cyan-600 mx-auto mb-2" />
+                    <p className="text-lg font-bold text-cyan-600">
+                      {activeDonations.filter(d => d.category === 'climatisation').length}
+                    </p>
+                    <p className="text-sm text-gray-700">Dons Climatisation</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <span className="text-sm font-medium">TechForAll (IT)</span>
                     </div>
-                  ))}
+                    <span className="text-sm text-gray-600">
+                      {activeDonations.filter(d => d.category === 'informatique').reduce((sum, d) => sum + d.quantity, 0)} unités
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                      <span className="text-sm font-medium">Constructeurs (Clim)</span>
+                    </div>
+                    <span className="text-sm text-gray-600">
+                      {activeDonations.filter(d => d.category === 'climatisation').reduce((sum, d) => sum + d.quantity, 0)} unités
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                  <div className="flex items-center gap-2 mb-1">
+                    <CheckCircle2 className="h-4 w-4 text-yellow-600" />
+                    <span className="text-sm font-bold text-yellow-800">Convergence Costa del Sol</span>
+                  </div>
+                  <p className="text-xs text-yellow-700">
+                    Les deux flux (informatique et climatisation) convergent vers Yakoubi Brahim 
+                    pour traitement unifié et redistribution optimisée.
+                  </p>
                 </div>
               </CardContent>
             </Card>
