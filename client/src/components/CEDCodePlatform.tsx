@@ -183,10 +183,38 @@ export function CEDCodePlatform() {
             Plateforme de développement cloud intégrée pour former les développeurs de demain
           </p>
           <div className="flex justify-center gap-3 mt-4">
-            <Badge className="bg-green-500 text-white px-3 py-1">✨ IA Intégrée</Badge>
-            <Badge className="bg-blue-500 text-white px-3 py-1">☁️ Cloud Native</Badge>
-            <Badge className="bg-purple-500 text-white px-3 py-1">🚀 Temps Réel</Badge>
+            <Badge className="bg-amber-500 text-white px-3 py-1">À venir 2026/2027</Badge>
+            <Badge className="bg-green-500 text-white px-3 py-1">IA Intégrée</Badge>
+            <Badge className="bg-blue-500 text-white px-3 py-1">Cloud Native</Badge>
+            <Badge className="bg-purple-500 text-white px-3 py-1">Temps Réel</Badge>
           </div>
+          
+          {/* Annonce recherche partenaires */}
+          <Card className="mt-6 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Users className="h-5 w-5 text-amber-600" />
+                <h3 className="text-lg font-bold text-amber-800">Recherche Partenaires & Investisseurs</h3>
+              </div>
+              <p className="text-amber-700 mb-3">
+                Rejoignez la révolution de l'éducation tech éthique. Partenariat stratégique disponible avant lancement.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                <div className="text-center p-2 bg-white rounded border border-amber-200">
+                  <div className="font-bold text-amber-700">Investissement 0€</div>
+                  <div className="text-gray-600">Financement partenarial</div>
+                </div>
+                <div className="text-center p-2 bg-white rounded border border-amber-200">
+                  <div className="font-bold text-amber-700">ROI 2026</div>
+                  <div className="text-gray-600">Retour garanti</div>
+                </div>
+                <div className="text-center p-2 bg-white rounded border border-amber-200">
+                  <div className="font-bold text-amber-700">Marché Unique</div>
+                  <div className="text-gray-600">Code éthique/halal</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
 
         {/* Navigation */}
@@ -264,32 +292,69 @@ export function CEDCodePlatform() {
               ))}
             </div>
 
-            {/* Statistiques */}
-            <Card className="bg-gradient-to-r from-blue-100 to-purple-100">
-              <CardHeader>
-                <CardTitle className="text-center">Statistiques Plateforme CED Code</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-3xl font-bold text-blue-700 mb-2">15,247</div>
-                    <div className="text-sm text-blue-600">Développeurs actifs</div>
+            {/* Projection marché et partenariats */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Card className="bg-gradient-to-r from-blue-100 to-purple-100">
+                <CardHeader>
+                  <CardTitle className="text-center">Projection Marché 2026-2029</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-4 bg-white rounded-lg">
+                      <div className="text-2xl font-bold text-blue-700 mb-2">450-900K€</div>
+                      <div className="text-sm text-blue-600">Investment MVP</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg">
+                      <div className="text-3xl font-bold text-green-700 mb-2">25-40M€</div>
+                      <div className="text-sm text-green-600">CA Année 3</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg">
+                      <div className="text-2xl font-bold text-purple-700 mb-2">350M€</div>
+                      <div className="text-sm text-purple-600">Marché tech éthique</div>
+                    </div>
+                    <div className="text-center p-4 bg-white rounded-lg">
+                      <div className="text-2xl font-bold text-amber-700 mb-2">18-24 mois</div>
+                      <div className="text-sm text-amber-600">Break-even</div>
+                    </div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-3xl font-bold text-green-700 mb-2">89,332</div>
-                    <div className="text-sm text-green-600">Projets créés</div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-r from-green-100 to-emerald-100">
+                <CardHeader>
+                  <CardTitle className="text-center">Opportunités Partenariat</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <div>
+                        <div className="font-bold text-green-700">Financement Complet</div>
+                        <div className="text-sm text-gray-600">Partenaire tech principal</div>
+                      </div>
+                      <Badge className="bg-green-500 text-white">70% parts</Badge>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <div>
+                        <div className="font-bold text-blue-700">Co-investissement</div>
+                        <div className="text-sm text-gray-600">Infrastructure partagée</div>
+                      </div>
+                      <Badge className="bg-blue-500 text-white">40% parts</Badge>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <div>
+                        <div className="font-bold text-purple-700">Mécénat Tech</div>
+                        <div className="text-sm text-gray-600">Vision éthique partagée</div>
+                      </div>
+                      <Badge className="bg-purple-500 text-white">15% parts</Badge>
+                    </div>
                   </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-3xl font-bold text-purple-700 mb-2">2.4M</div>
-                    <div className="text-sm text-purple-600">Lignes de code</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-3xl font-bold text-amber-700 mb-2">99.8%</div>
-                    <div className="text-sm text-amber-600">Disponibilité</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <Button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white">
+                    <Users className="mr-2 h-4 w-4" />
+                    Proposer Partenariat
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </TabsContent>
 
           {/* Éditeur de code */}
