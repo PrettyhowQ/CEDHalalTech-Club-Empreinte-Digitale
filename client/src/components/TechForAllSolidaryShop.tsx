@@ -79,7 +79,7 @@ interface DonationItem {
   name: string;
   brand: string;
   model: string;
-  condition: 'excellent' | 'good' | 'fair' | 'poor';
+  condition: 'like_new' | 'excellent' | 'good' | 'fair' | 'poor';
   estimatedValue: number;
   serialNumber?: string;
   specifications: string;
@@ -103,7 +103,7 @@ interface FinancialDonation {
 interface ShopItem {
   id: string;
   name: string;
-  category: 'refurbished_computers' | 'smartphones' | 'tablets' | 'accessories';
+  category: 'professional_computers' | 'marine_motors' | 'construction_tools' | 'mechanical_equipment' | 'tech_accessories';
   originalDonation: string;
   refurbishedBy: string;
   condition: 'like_new' | 'excellent' | 'good';
@@ -115,6 +115,7 @@ interface ShopItem {
   available: boolean;
   soldDate?: Date;
   buyer?: string;
+  targetProfile: 'expatriate' | 'unemployed' | 'fisherman' | 'construction_worker' | 'mechanic' | 'entrepreneur';
 }
 
 export function TechForAllSolidaryShop() {
@@ -188,25 +189,25 @@ export function TechForAllSolidaryShop() {
       id: 'MD001',
       donorId: '2',
       donorName: 'Marie Dubois',
-      category: 'computers',
+      category: 'computers_pro',
       items: [
         {
-          name: 'MacBook Pro',
+          name: 'MacBook Pro Professionnel',
           brand: 'Apple',
           model: '2019 13"',
           condition: 'good',
           estimatedValue: 800,
           serialNumber: 'C02XD0AAJG5H',
-          specifications: '8GB RAM, 256GB SSD, Intel i5',
+          specifications: '8GB RAM, 256GB SSD, Intel i5 - Configuration développeur',
           workingCondition: true
         },
         {
-          name: 'Dell Monitor',
+          name: 'Écran Dell Professionnel',
           brand: 'Dell',
           model: 'U2419H',
           condition: 'excellent',
           estimatedValue: 200,
-          specifications: '24" Full HD, USB-C',
+          specifications: '24" Full HD, USB-C, calibrage couleur',
           workingCondition: true
         }
       ],
@@ -215,11 +216,77 @@ export function TechForAllSolidaryShop() {
       collectionDate: new Date('2024-06-02'),
       location: 'Paris 15ème',
       estimatedValue: 1000,
-      recipient: 'École Primaire Jean Jaurès',
+      recipient: 'Jean Martinez - Développeur expatrié',
+      recipientProfile: 'expatriate',
       documentation: {
         photos: ['photo1.jpg', 'photo2.jpg'],
         certificates: ['certificate_md001.pdf'],
         receiptGenerated: true
+      }
+    },
+    {
+      id: 'MD002',
+      donorId: '3',
+      donorName: 'TechCorp Germany',
+      category: 'marine_equipment',
+      items: [
+        {
+          name: 'Moteur Hors-Bord Yamaha',
+          brand: 'Yamaha',
+          model: 'F25DMHS',
+          condition: 'excellent',
+          estimatedValue: 4500,
+          serialNumber: 'YAM25-2023-8457',
+          specifications: '25CV, 4 temps, démarrage électrique, très peu utilisé',
+          workingCondition: true
+        }
+      ],
+      status: 'approved',
+      submissionDate: new Date('2024-06-10'),
+      location: 'Marseille Port',
+      estimatedValue: 4500,
+      recipient: 'Carlos Rodriguez - Pêcheur Costa del Sol',
+      recipientProfile: 'fisherman',
+      documentation: {
+        photos: ['yamaha_motor1.jpg', 'yamaha_motor2.jpg'],
+        certificates: ['marine_certificate.pdf'],
+        receiptGenerated: false
+      }
+    },
+    {
+      id: 'MD003',
+      donorId: '1',
+      donorName: 'Swiss Tech Foundation',
+      category: 'construction_tools',
+      items: [
+        {
+          name: 'Perceuse Hilti Professional',
+          brand: 'Hilti',
+          model: 'TE 6-A36',
+          condition: 'excellent',
+          estimatedValue: 650,
+          specifications: 'Batterie 36V, perforateur SDS-plus, coffret complet',
+          workingCondition: true
+        },
+        {
+          name: 'Niveau Laser Bosch',
+          brand: 'Bosch',
+          model: 'GLL 3-80 CG',
+          condition: 'excellent',
+          estimatedValue: 400,
+          specifications: 'Laser vert, portée 30m, support magnétique',
+          workingCondition: true
+        }
+      ],
+      status: 'pending',
+      submissionDate: new Date('2024-06-15'),
+      location: 'Genève',
+      estimatedValue: 1050,
+      recipientProfile: 'construction_worker',
+      documentation: {
+        photos: ['tools1.jpg', 'tools2.jpg'],
+        certificates: [],
+        receiptGenerated: false
       }
     }
   ];
@@ -244,7 +311,7 @@ export function TechForAllSolidaryShop() {
     {
       id: 'SI001',
       name: 'MacBook Pro Reconditionné',
-      category: 'refurbished_computers',
+      category: 'professional_computers',
       originalDonation: 'MD001',
       refurbishedBy: 'B. Yakoubi',
       condition: 'like_new',
@@ -253,7 +320,38 @@ export function TechForAllSolidaryShop() {
       specifications: '8GB RAM, 256GB SSD, Reconditionné par TechForAll',
       photos: ['macbook1.jpg', 'macbook2.jpg'],
       warranty: 12,
-      available: true
+      available: true,
+      targetProfile: 'expatriate'
+    },
+    {
+      id: 'SI002',
+      name: 'Moteur Yamaha 25CV',
+      category: 'marine_motors',
+      originalDonation: 'MD002',
+      refurbishedBy: 'B. Yakoubi',
+      condition: 'excellent',
+      price: 3200,
+      originalValue: 4500,
+      specifications: '25CV, 4 temps, démarrage électrique, révision complète',
+      photos: ['yamaha1.jpg', 'yamaha2.jpg'],
+      warranty: 6,
+      available: true,
+      targetProfile: 'fisherman'
+    },
+    {
+      id: 'SI003',
+      name: 'Kit Outils Hilti Pro',
+      category: 'construction_tools',
+      originalDonation: 'MD003',
+      refurbishedBy: 'B. Yakoubi',
+      condition: 'like_new',
+      price: 850,
+      originalValue: 1050,
+      specifications: 'Perceuse + Niveau laser, batteries neuves, coffret complet',
+      photos: ['hilti1.jpg', 'hilti2.jpg'],
+      warranty: 12,
+      available: false,
+      targetProfile: 'construction_worker'
     }
   ];
 
@@ -271,48 +369,48 @@ export function TechForAllSolidaryShop() {
   const emailTemplates = {
     welcome: `Cher donateur,
 
-Bienvenue dans la communauté TechForAll ! Votre engagement pour l'inclusion numérique fait une différence concrète.
+Bienvenue dans TechForAll ! Votre soutien aide concrètement les expatriés et personnes éloignées de l'emploi.
 
-Grâce à votre soutien, nous pouvons :
-- Reconditionnement d'équipements informatiques
-- Formation numérique pour tous
-- Accès à la technologie pour les plus démunis
+Nous collectons et reconditionnons :
+- PC Pro et MacBook pour développeurs expatriés
+- Moteurs marins pour pêcheurs en difficulté
+- Outils BTP professionnels pour artisans
+- Équipement mécanique proche du neuf
 
-Responsable: B. Yakoubi
-Boutique solidaire TechForAll
-Costa del Sol & Europe
+Responsable reconditionnement: B. Yakoubi
+Boutique solidaire Costa del Sol & Europe
 
-Merci pour votre confiance !`,
+Merci pour votre générosité !`,
 
-    thankyou: `Merci pour votre généreux don !
+    thankyou: `Merci pour votre don professionnel !
 
-Votre contribution permet de réduire la fracture numérique et d'offrir de nouvelles opportunités.
+Votre matériel professionnel va directement aider nos bénéficiaires à retrouver une activité.
 
 Détails de votre don :
-- Montant/Valeur: {amount}
-- Date: {date}
+- Valeur estimée: {amount}€
+- Date réception: {date}
 - Reçu fiscal: En cours de génération
+- Attribution: Expatrié/Demandeur d'emploi qualifié
 
-Suivi disponible sur votre espace donateur.
+Suivi reconditionnement disponible.
 
 Cordialement,
 B. Yakoubi - TechForAll`,
 
-    monthly_update: `Actualités TechForAll - {month}
+    monthly_update: `TechForAll - Actualités {month}
 
 Cher donateur,
 
-Ce mois-ci grâce à vous :
-✓ {computers} ordinateurs reconditionnés
-✓ {beneficiaries} bénéficiaires formés  
-✓ {schools} établissements équipés
+Ce mois-ci grâce à vos dons :
+✓ {computers} PC/Mac Pro reconditionnés → Développeurs expatriés
+✓ {motors} moteurs marins révisés → Pêcheurs Costa del Sol  
+✓ {tools} kits outils BTP → Artisans en reconversion
+✓ {mechanics} équipements mécaniques → Garages solidaires
 
-Prochaine collecte Costa del Sol: {next_date}
+Prochaine collecte matériel: {next_date}
+Boutique Costa del Sol: www.techforall.solidaire
 
-Boutique solidaire: www.techforall.solidaire
-Contact B. Yakoubi: contact@techforall.org
-
-Merci pour votre fidélité !`
+B. Yakoubi - Expert reconditionnement professionnel`
   };
 
   const generateEmail = (template: string, donor: Donor) => {
@@ -359,12 +457,12 @@ Merci pour votre fidélité !`
             </h1>
           </div>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-            Plateforme de gestion des dons et boutique solidaire - Responsable: B. Yakoubi
+            Association d'aide aux expatriés et personnes éloignées de l'emploi - Matériel professionnel proche du neuf
           </p>
           <div className="flex justify-center gap-2">
             <Badge variant="secondary" className="bg-green-100 text-green-800">
-              <Heart className="h-3 w-3 mr-1" />
-              Association TechForAll
+              <Users className="h-3 w-3 mr-1" />
+              Aide Expatriés
             </Badge>
             <Badge variant="secondary" className="bg-blue-100 text-blue-800">
               <MapPin className="h-3 w-3 mr-1" />
@@ -372,7 +470,11 @@ Merci pour votre fidélité !`
             </Badge>
             <Badge variant="secondary" className="bg-purple-100 text-purple-800">
               <Package className="h-3 w-3 mr-1" />
-              Boutique Solidaire
+              Matériel Professionnel
+            </Badge>
+            <Badge variant="secondary" className="bg-orange-100 text-orange-800">
+              <Truck className="h-3 w-3 mr-1" />
+              Moteurs Bateaux
             </Badge>
           </div>
         </motion.div>
@@ -467,7 +569,7 @@ Merci pour votre fidélité !`
                       <h3 className="text-xl font-bold text-gray-900">B. Yakoubi</h3>
                       <p className="text-gray-600">Responsable TechForAll - Boutique Solidaire</p>
                       <p className="text-sm text-gray-500 mt-1">
-                        Gestion des dons matériels, reconditionnement, vente solidaire
+                        Spécialiste reconditionnement: PC Pro, MacBook, moteurs marins, outils BTP, équipement mécanique
                       </p>
                     </div>
                     <div className="text-right">
@@ -476,8 +578,27 @@ Merci pour votre fidélité !`
                         Contacter
                       </Button>
                       <p className="text-sm text-gray-500">
-                        Coordonnées à ajouter
+                        Expert matériel professionnel
                       </p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="text-center p-3 bg-white rounded-lg">
+                      <Smartphone className="h-6 w-6 mx-auto mb-2 text-blue-600" />
+                      <p className="text-xs font-medium">PC & MacBook Pro</p>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg">
+                      <Truck className="h-6 w-6 mx-auto mb-2 text-green-600" />
+                      <p className="text-xs font-medium">Moteurs Marins</p>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg">
+                      <Building className="h-6 w-6 mx-auto mb-2 text-orange-600" />
+                      <p className="text-xs font-medium">Outils BTP</p>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg">
+                      <Zap className="h-6 w-6 mx-auto mb-2 text-purple-600" />
+                      <p className="text-xs font-medium">Équip. Mécanique</p>
                     </div>
                   </div>
                 </div>
