@@ -369,7 +369,7 @@ export function CEDInsuranceHalal() {
               🚫 Zéro Riba/Gharar
             </Badge>
             <Badge className="bg-amber-500 text-white px-4 py-2 text-lg">
-              ⭐ 847K+ Assurés
+              🌍 847K+ Assurés Mondiaux
             </Badge>
           </div>
         </motion.div>
@@ -719,6 +719,94 @@ export function CEDInsuranceHalal() {
 
           {/* Support et contact */}
           <TabsContent value="support" className="space-y-6">
+            
+            {/* Public cible prioritaire */}
+            <Card className="bg-gradient-to-r from-blue-100 to-green-100 border border-blue-200">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-6 w-6 text-blue-600" />
+                  Public Cible Prioritaire Al-Aman CED
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  
+                  <Card className="border-2 border-green-200 bg-green-50">
+                    <CardContent className="p-4 text-center">
+                      <Building2 className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                      <h4 className="font-bold text-green-800">Clients CED Bank</h4>
+                      <p className="text-sm text-green-600 mt-1">
+                        156,780+ détenteurs cartes Gold Yakoubi
+                      </p>
+                      <Badge className="bg-green-100 text-green-800 mt-2">
+                        Tarifs préférentiels -25%
+                      </Badge>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-blue-200 bg-blue-50">
+                    <CardContent className="p-4 text-center">
+                      <GraduationCap className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                      <h4 className="font-bold text-blue-800">Étudiants CED Éthique</h4>
+                      <p className="text-sm text-blue-600 mt-1">
+                        12,847+ étudiants formations certifiées
+                      </p>
+                      <Badge className="bg-blue-100 text-blue-800 mt-2">
+                        Réduction étudiante -40%
+                      </Badge>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-purple-200 bg-purple-50">
+                    <CardContent className="p-4 text-center">
+                      <Heart className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                      <h4 className="font-bold text-purple-800">Membres TechForAll</h4>
+                      <p className="text-sm text-purple-600 mt-1">
+                        8,492+ bénéficiaires solidaires
+                      </p>
+                      <Badge className="bg-purple-100 text-purple-800 mt-2">
+                        Couverture gratuite 1 an
+                      </Badge>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-amber-200 bg-amber-50">
+                    <CardContent className="p-4 text-center">
+                      <Globe className="h-8 w-8 text-amber-600 mx-auto mb-2" />
+                      <h4 className="font-bold text-amber-800">Communauté Mondiale</h4>
+                      <p className="text-sm text-amber-600 mt-1">
+                        Ouvert à tous les musulmans
+                      </p>
+                      <Badge className="bg-amber-100 text-amber-800 mt-2">
+                        Tarifs standards
+                      </Badge>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="mt-6 p-4 bg-white rounded-lg border border-gray-200">
+                  <h4 className="font-bold text-center mb-3">Avantages Écosystème CED</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="text-center">
+                      <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-1" />
+                      <div className="text-sm font-medium">Paiement CED Bank 0%</div>
+                      <div className="text-xs text-gray-600">Facilités sans intérêt</div>
+                    </div>
+                    <div className="text-center">
+                      <Shield className="h-6 w-6 text-blue-600 mx-auto mb-1" />
+                      <div className="text-sm font-medium">Couverture Intégrée</div>
+                      <div className="text-xs text-gray-600">Sync avec comptes bancaires</div>
+                    </div>
+                    <div className="text-center">
+                      <Award className="h-6 w-6 text-purple-600 mx-auto mb-1" />
+                      <div className="text-sm font-medium">Points Fidélité</div>
+                      <div className="text-xs text-gray-600">Cumul cross-services</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               
               {/* Contact rapide */}
