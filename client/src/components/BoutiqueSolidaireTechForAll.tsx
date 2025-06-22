@@ -349,9 +349,9 @@ export function BoutiqueSolidaireTechForAll() {
           </motion.div>
           <div>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Boutique Solidaire TechForAll
+              Boutique Solidaire Costa del Sol
             </h1>
-            <p className="text-xl text-gray-700">Matériel informatique reconditionné certifié</p>
+            <p className="text-xl text-gray-700">Association TechForAll • Gérée par Yakoubi Brahim • Compte CED Bank</p>
           </div>
         </div>
         
@@ -603,10 +603,10 @@ export function BoutiqueSolidaireTechForAll() {
             <Button 
               onClick={() => window.location.href = '/compte-yakoubi'}
               variant="outline"
-              className="border-pink-300 text-pink-700"
+              className="border-blue-300 text-blue-700"
             >
               <Euro className="h-4 w-4 mr-2" />
-              Financement
+              Compte Association Brahim
             </Button>
           </div>
         </CardContent>

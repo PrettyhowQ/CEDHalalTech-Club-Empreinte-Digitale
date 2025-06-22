@@ -197,11 +197,11 @@ export function YakoubiCEDBankAccount() {
               <CreditCard className="h-8 w-8 text-white" />
             </motion.div>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-              Compte CED Bank - B. Yakoubi
+              Compte CED Bank - Yakoubi Brahim
             </h1>
           </div>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-            Compte professionnel TechForAll avec rémunération basée sur les ventes et dons solidaires
+            Gestionnaire Association TechForAll • Boutique Solidaire Costa del Sol • Compte CED Bank connecté
           </p>
           <div className="flex justify-center gap-2">
             <Badge variant="secondary" className="bg-blue-100 text-blue-800">
