@@ -39,7 +39,12 @@ import {
   BookOpen,
   Moon,
   Sun,
-  Navigation
+  Navigation,
+  Car,
+  Home,
+  Plane,
+  Briefcase,
+  Bell
 } from 'lucide-react';
 
 interface BankingService {
@@ -253,9 +258,10 @@ export function CEDBank() {
 
         {/* Tabs Navigation */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-5 mb-8">
             <TabsTrigger value="services">Services Bancaires</TabsTrigger>
-            <TabsTrigger value="islamic">Fonctionnalités Islamiques</TabsTrigger>
+            <TabsTrigger value="insurance">Assurance Takaful</TabsTrigger>
+            <TabsTrigger value="islamic">Spiritualité</TabsTrigger>
             <TabsTrigger value="download">Téléchargements</TabsTrigger>
             <TabsTrigger value="contact">Contact & Support</TabsTrigger>
           </TabsList>
@@ -314,19 +320,394 @@ export function CEDBank() {
             </div>
           </TabsContent>
 
-          {/* Fonctionnalités Islamiques */}
+          {/* Assurance Takaful intégrée */}
+          <TabsContent value="insurance" className="space-y-6">
+            <Card className="bg-gradient-to-r from-green-100 to-blue-100 border-2 border-green-300">
+              <CardHeader>
+                <CardTitle className="text-center text-2xl text-green-800">
+                  Al-Aman CED - Assurance Takaful Internationale
+                </CardTitle>
+                <p className="text-center text-lg text-gray-700 italic mt-2">
+                  L'assurance solidaire, éthique et 100% halal pour les générations futures
+                </p>
+                <div className="flex justify-center gap-3 mt-4">
+                  <Badge className="bg-green-500 text-white px-3 py-1">100% Halal</Badge>
+                  <Badge className="bg-blue-500 text-white px-3 py-1">Certifié Charia</Badge>
+                  <Badge className="bg-purple-500 text-white px-3 py-1">Standards Suisses</Badge>
+                </div>
+              </CardHeader>
+            </Card>
+
+            {/* Produits d'assurance */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  id: 'auto-takaful',
+                  name: 'Auto Protection Takaful',
+                  description: 'Assurance automobile 100% conforme Charia',
+                  price: '285 AED/mois',
+                  discount: '-25% clients CED Bank',
+                  features: ['Couverture tous accidents', 'Réparations garagistes halal', 'Véhicule remplacement', 'Protection juridique'],
+                  icon: Car,
+                  color: 'from-blue-500 to-cyan-600'
+                },
+                {
+                  id: 'home-takaful',
+                  name: 'Home Secure Takaful',
+                  description: 'Protection habitation selon principes islamiques',
+                  price: '225 AED/mois',
+                  discount: '-30% écosystème CED',
+                  features: ['Incendie et dégâts eaux', 'Vol et vandalisme', 'Responsabilité civile', 'Hébergement temporaire'],
+                  icon: Home,
+                  color: 'from-green-500 to-emerald-600'
+                },
+                {
+                  id: 'health-takaful',
+                  name: 'Health Family Takaful',
+                  description: 'Santé famille avec médecine halal',
+                  price: '850 AED/mois',
+                  discount: 'Paiement 0% CED Bank',
+                  features: ['Couverture famille 4 pers', 'Réseau médical halal', 'Hospitalisation complète', 'Médecines douces'],
+                  icon: Heart,
+                  color: 'from-red-500 to-pink-600'
+                },
+                {
+                  id: 'travel-hajj',
+                  name: 'Travel & Hajj Protection',
+                  description: 'Voyage et pèlerinage spécialisé',
+                  price: '180 AED/voyage',
+                  discount: 'Guide spirituel inclus',
+                  features: ['Couverture mondiale', 'Assistance Hajj/Omra', 'Annulation voyage', 'Bagages perdus'],
+                  icon: Plane,
+                  color: 'from-purple-500 to-indigo-600'
+                },
+                {
+                  id: 'business-takaful',
+                  name: 'Business Halal Pro',
+                  description: 'Protection entreprise conforme Charia',
+                  price: 'Sur devis',
+                  discount: 'Consultation gratuite',
+                  features: ['Responsabilité pro', 'Perte exploitation', 'Cyber-sécurité', 'Audit conformité'],
+                  icon: Briefcase,
+                  color: 'from-amber-500 to-orange-600'
+                },
+                {
+                  id: 'life-takaful',
+                  name: 'Life Family Protection',
+                  description: 'Protection vie selon Takaful participatif',
+                  price: '320 AED/mois',
+                  discount: 'Membres TechForAll gratuit',
+                  features: ['Capital décès halal', 'Rente éducation', 'Invalidité totale', 'Assistance famille'],
+                  icon: Users,
+                  color: 'from-teal-500 to-cyan-600'
+                }
+              ].map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+                    <CardHeader>
+                      <div className={`w-12 h-12 bg-gradient-to-r ${product.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                        <product.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-lg">{product.name}</CardTitle>
+                      <p className="text-center text-sm text-gray-600">{product.description}</p>
+                    </CardHeader>
+                    
+                    <CardContent className="space-y-4">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-700">{product.price}</div>
+                        <Badge className="bg-green-100 text-green-800 mt-1">{product.discount}</Badge>
+                      </div>
+
+                      <div className="space-y-2">
+                        {product.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm">
+                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="space-y-2">
+                        <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                          Souscrire maintenant
+                        </Button>
+                        <Button variant="outline" className="w-full">
+                          Devis gratuit
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Avantages écosystème */}
+            <Card className="bg-gradient-to-r from-purple-100 to-pink-100">
+              <CardHeader>
+                <CardTitle className="text-center text-xl">Avantages Exclusifs Clients CED Bank</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center p-4 bg-white rounded-lg">
+                    <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                    <h3 className="font-bold">Paiement 0% Intérêt</h3>
+                    <p className="text-sm text-gray-600">Facilités via cartes Gold Yakoubi</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg">
+                    <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                    <h3 className="font-bold">Gestion Unifiée</h3>
+                    <p className="text-sm text-gray-600">Une app pour banque + assurance</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg">
+                    <Award className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                    <h3 className="font-bold">Points Fidélité</h3>
+                    <p className="text-sm text-gray-600">Cumul sur tous les services</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <div className="text-2xl font-bold text-purple-700 mb-2">Jusqu'à 30% d'économies</div>
+                  <p className="text-purple-600">vs assurances traditionnelles Dubai</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Comparaison concurrentielle */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Pourquoi choisir Al-Aman CED vs concurrents Dubai ?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left p-3">Critères</th>
+                        <th className="text-center p-3 bg-green-50">Al-Aman CED</th>
+                        <th className="text-center p-3">Salama Insurance</th>
+                        <th className="text-center p-3">Dubai Insurance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="p-3 font-medium">Conformité Charia</td>
+                        <td className="text-center p-3 bg-green-50">✅ 100%</td>
+                        <td className="text-center p-3">✅ 100%</td>
+                        <td className="text-center p-3">⚠️ 50%</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-3 font-medium">Paiement 0% intérêt</td>
+                        <td className="text-center p-3 bg-green-50">✅ Unique</td>
+                        <td className="text-center p-3">❌ Non</td>
+                        <td className="text-center p-3">❌ Non</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-3 font-medium">App intégrée banque</td>
+                        <td className="text-center p-3 bg-green-50">✅ Oui</td>
+                        <td className="text-center p-3">❌ Non</td>
+                        <td className="text-center p-3">❌ Non</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-3 font-medium">Support multilingue</td>
+                        <td className="text-center p-3 bg-green-50">8 langues</td>
+                        <td className="text-center p-3">3 langues</td>
+                        <td className="text-center p-3">2 langues</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Spiritualité (La Citadelle du Musulman) */}
           <TabsContent value="islamic" className="space-y-6">
             <Card className="bg-gradient-to-r from-green-100 to-blue-100 border-2 border-green-300">
               <CardHeader>
                 <CardTitle className="text-center text-2xl text-green-800">
-                  Finance Islamique Certifiée - Conforme à la Charia
+                  La Citadelle du Musulman - Intégrée à CED Bank
                 </CardTitle>
                 <p className="text-center text-gray-700">
-                  CED Bank International respecte intégralement les principes de finance islamique,
-                  validée par les autorités religieuses des Émirats Arabes Unis.
+                  Votre compagnon spirituel quotidien directement dans votre application bancaire.
+                  Douaas, prières, Qibla et calendrier islamique pour une vie bénie et protégée.
                 </p>
               </CardHeader>
             </Card>
+
+            {/* Fonctionnalités spirituelles principales */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  name: 'Douaas Contextuelles',
+                  description: 'Invocations adaptées à vos transactions bancaires',
+                  icon: BookOpen,
+                  features: ['Douaa avant transaction', 'Invocation voyage Hajj', 'Protection maison', 'Travail halal'],
+                  color: 'from-green-500 to-emerald-600'
+                },
+                {
+                  name: 'Horaires Prières',
+                  description: 'Mode automatique pendant les 5 prières quotidiennes',
+                  icon: Clock,
+                  features: ['Notifications silencieuses', 'Mode Jumma vendredi', 'Rappels personnalisés', 'Gestion temps'],
+                  color: 'from-blue-500 to-cyan-600'
+                },
+                {
+                  name: 'Boussole Qibla',
+                  description: 'Direction précise de la Mecque avec GPS intégré',
+                  icon: Compass,
+                  features: ['GPS haute précision', 'Direction 285° NW', '2,145 km Mecque', 'Calibrage auto'],
+                  color: 'from-purple-500 to-indigo-600'
+                },
+                {
+                  name: 'Calendrier Islamique',
+                  description: 'Dates Hijri et événements religieux importants',
+                  icon: Calendar,
+                  features: ['15 Jumada Al-Thani 1446', 'Événements à venir', 'Hajj dans 186 jours', 'Rappels auto'],
+                  color: 'from-amber-500 to-orange-600'
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={feature.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-xl transition-all duration-300">
+                    <CardHeader>
+                      <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                        <feature.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-center text-lg">{feature.name}</CardTitle>
+                      <p className="text-center text-sm text-gray-600">{feature.description}</p>
+                    </CardHeader>
+                    
+                    <CardContent>
+                      <div className="space-y-2">
+                        {feature.features.map((item, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm">
+                            <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Exemple de douaa intégrée */}
+            <Card className="bg-gradient-to-r from-blue-50 to-green-50 border-l-4 border-green-500">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-green-600" />
+                  Douaa avant Transaction Bancaire
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div>
+                    <div className="p-4 bg-green-50 rounded-lg border-r-4 border-green-500 mb-3">
+                      <div className="text-right text-lg leading-relaxed arabic-text" dir="rtl">
+                        اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ
+                      </div>
+                    </div>
+                    <div className="p-3 bg-blue-50 rounded-lg mb-3">
+                      <div className="text-sm font-medium text-blue-800 mb-1">Translittération:</div>
+                      <div className="italic text-blue-700">Allahumma barik lana fima razaqtana wa qina adhab an-nar</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="p-3 bg-gray-50 rounded-lg mb-3">
+                      <div className="text-sm font-medium text-gray-800 mb-1">Traduction:</div>
+                      <div className="text-gray-700">Ô Allah, bénis-nous dans ce que Tu nous as accordé et préserve-nous du châtiment du Feu.</div>
+                    </div>
+                    <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
+                      <div className="flex items-start gap-2">
+                        <Shield className="h-4 w-4 text-purple-600 mt-0.5" />
+                        <div className="text-xs text-purple-700">
+                          <span className="font-medium">Intégration CED Bank: </span>
+                          Cette douaa s'affiche automatiquement avant vos transactions importantes pour bénir vos finances.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Mode prière en action */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <Card className="bg-gradient-to-r from-purple-100 to-blue-100">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Moon className="h-5 w-5" />
+                    Mode Prière Automatique
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="p-3 bg-white rounded-lg">
+                      <div className="font-medium">Prochaine prière: Asr</div>
+                      <div className="text-2xl font-bold text-blue-700">15:42</div>
+                      <div className="text-sm text-gray-600">Dans 23 minutes</div>
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      L'application passera automatiquement en mode silencieux et affichera 
+                      la direction de la Qibla pendant la période de prière.
+                    </div>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                      <Bell className="mr-2 h-4 w-4" />
+                      Configurer rappels
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-r from-amber-100 to-yellow-100">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Navigation className="h-5 w-5" />
+                    Qibla Finder Intégré
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-center space-y-3">
+                    <div className="w-24 h-24 mx-auto relative">
+                      <div className="w-full h-full rounded-full border-4 border-gray-300 bg-gradient-to-br from-blue-50 to-green-50 relative">
+                        <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
+                          <div className="w-1 h-6 bg-red-500 rounded-full"></div>
+                        </div>
+                        <div 
+                          className="absolute top-1/2 left-1/2 origin-bottom"
+                          style={{ 
+                            transform: `translate(-50%, -100%) rotate(285deg)`,
+                            height: '32px'
+                          }}
+                        >
+                          <div className="w-1 h-full bg-green-500 rounded-full relative">
+                            <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
+                              <Navigation className="h-3 w-3 text-green-600" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-gray-700 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-green-700">285° NW</div>
+                      <div className="text-sm text-gray-600">Direction Kaaba</div>
+                      <div className="text-xs text-gray-500">2,145 km de Dubai</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {islamicFeatures.map((feature, index) => (
