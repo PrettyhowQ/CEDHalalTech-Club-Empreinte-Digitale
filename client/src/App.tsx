@@ -58,6 +58,7 @@ import YakoubiCEDAccount from "@/pages/YakoubiCEDAccount";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
+import CEDBankCardsPage from "@/pages/CEDBankCards";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -182,6 +183,9 @@ function Router() {
       <Route path="/dubai-wealth-crm" component={DubaiWealthCRM} />
       <Route path="/fortunes-dubai" component={DubaiWealthCRM} />
       <Route path="/crm-donateurs" component={DubaiWealthCRM} />
+      <Route path="/ced-bank-cards" component={CEDBankCardsPage} />
+      <Route path="/cartes-ced" component={CEDBankCardsPage} />
+      <Route path="/yakoubi-cards" component={CEDBankCardsPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
