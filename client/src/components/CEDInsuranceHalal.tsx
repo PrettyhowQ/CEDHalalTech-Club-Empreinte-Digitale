@@ -346,12 +346,17 @@ export function CEDInsuranceHalal() {
             >
               <Shield className="h-10 w-10 text-white" />
             </motion.div>
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
-              Al-Aman CED
-            </h1>
-            <h2 className="text-2xl font-semibold text-gray-700">
-              Assurance Takaful Internationale
-            </h2>
+            <div>
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
+                Al-Aman CED
+              </h1>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                Assurance Takaful Internationale
+              </h2>
+              <p className="text-lg text-gray-600 italic mt-2">
+                L'assurance solidaire, éthique et 100% halal pour les générations futures
+              </p>
+            </div>
           </div>
           
           <p className="text-xl text-gray-700 max-w-4xl mx-auto">

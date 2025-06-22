@@ -63,6 +63,7 @@ import SouheilaBankAccountPage from "@/pages/SouheilaBankAccount";
 import CostaDelSolBankAccountPage from "@/pages/CostaDelSolBankAccount";
 import CEDBankPage from "@/pages/CEDBank";
 import DonationSystemPage from "@/pages/DonationSystem";
+import AlAmanCEDComparisonPage from "@/pages/AlAmanCEDComparison";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -224,6 +225,9 @@ function Router() {
         component={CostaDelSolBankAccountPage}
       />
       <Route path="/brahim-bank" component={CostaDelSolBankAccountPage} />
+      <Route path="/alaman-ced-comparison" component={AlAmanCEDComparisonPage} />
+      <Route path="/assurance-dubai" component={AlAmanCEDComparisonPage} />
+      <Route path="/takaful-comparison" component={AlAmanCEDComparisonPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
