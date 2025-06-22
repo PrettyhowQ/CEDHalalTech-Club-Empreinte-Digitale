@@ -59,6 +59,7 @@ import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
 import CEDBankCardsPage from "@/pages/CEDBankCards";
+import SouheilaBankAccountPage from "@/pages/SouheilaBankAccount";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -186,6 +187,9 @@ function Router() {
       <Route path="/ced-bank-cards" component={CEDBankCardsPage} />
       <Route path="/cartes-ced" component={CEDBankCardsPage} />
       <Route path="/yakoubi-cards" component={CEDBankCardsPage} />
+      <Route path="/souheila-bank" component={SouheilaBankAccountPage} />
+      <Route path="/compte-souheila" component={SouheilaBankAccountPage} />
+      <Route path="/nutrition-bank" component={SouheilaBankAccountPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
