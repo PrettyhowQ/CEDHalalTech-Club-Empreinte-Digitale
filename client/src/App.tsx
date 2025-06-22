@@ -114,6 +114,9 @@ function Router() {
       <Route path="/donation-automatique" component={DonationSystemPage} />
       <Route path="/donation-moteurs" component={DonationSystemPage} />
       <Route path="/donation-informatique" component={DonationSystemPage} />
+      <Route path="/donation-climatisation" component={DonationSystemPage} />
+      <Route path="/donation-clims-pro" component={DonationSystemPage} />
+      <Route path="/donation-hvac" component={DonationSystemPage} />
       <Route path="/costa-del-sol" component={CostaDelSol} />
       <Route path="/app-costa-del-sol" component={CostaDelSol} />
       <Route path="/logistique-mobile" component={CostaDelSol} />

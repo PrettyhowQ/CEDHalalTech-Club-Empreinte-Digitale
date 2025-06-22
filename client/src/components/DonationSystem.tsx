@@ -37,7 +37,7 @@ import {
 
 interface DonationItem {
   id: string;
-  category: 'marine' | 'computer' | 'tools' | 'electronics';
+  category: 'marine' | 'computer' | 'tools' | 'electronics' | 'hvac';
   name: string;
   brand: string;
   model: string;
@@ -146,6 +146,24 @@ export function DonationSystem() {
         'Instruments de mesure',
         'Électronique industrielle'
       ]
+    },
+    {
+      id: 'hvac',
+      name: 'Climatisation Professionnelle',
+      icon: Settings,
+      color: 'from-cyan-500 to-blue-600',
+      items: [
+        'Climatiseurs split système pro',
+        'Unités de toiture RTU',
+        'Pompes à chaleur réversibles',
+        'Systèmes VRV/VRF',
+        'Climatiseurs cassettes plafond',
+        'Unités murales haute puissance',
+        'Systèmes gainables professionnels',
+        'Régulation et thermostats pro',
+        'Équipement frigorifique',
+        'Ventilation mécanique contrôlée'
+      ]
     }
   ];
 
@@ -208,6 +226,44 @@ export function DonationSystem() {
       notes: 'Ordinateur d\'entreprise, peu utilisé',
       submissionDate: new Date('2024-12-19'),
       status: 'collected'
+    },
+    {
+      id: 'DON003',
+      donorName: 'Construcciones Mediterráneo SA',
+      donorEmail: 'donate@construcciones-med.es',
+      donorPhone: '+34 952 77 88 99',
+      donorLocation: 'Málaga, Espagne',
+      items: [
+        {
+          id: 'ITEM003',
+          category: 'hvac',
+          name: 'Climatiseur Split Mitsubishi Electric',
+          brand: 'Mitsubishi Electric',
+          model: 'MSZ-LN35VG',
+          condition: 'excellent',
+          estimatedValue: 1800,
+          workingCondition: true,
+          specifications: '12000 BTU/h, Inverter, A+++, technologie Hyper Heating, installation récente',
+          photos: ['mitsubishi-split-1.jpg']
+        },
+        {
+          id: 'ITEM004',
+          category: 'hvac',
+          name: 'Unité extérieure Mitsubishi',
+          brand: 'Mitsubishi Electric',
+          model: 'MUZ-LN35VG',
+          condition: 'excellent',
+          estimatedValue: 1200,
+          workingCondition: true,
+          specifications: 'Unité extérieure correspondante, compresseur Inverter DC',
+          photos: ['mitsubishi-outdoor-1.jpg']
+        }
+      ],
+      totalEstimatedValue: 3000,
+      pickupPreferred: true,
+      notes: 'Système complet de climatisation, fin de chantier résidence expatriés. Installation professionnelle disponible.',
+      submissionDate: new Date('2024-12-21'),
+      status: 'pending'
     }
   ];
 
@@ -235,12 +291,12 @@ export function DonationSystem() {
           </div>
           
           <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-            Système automatisé pour les donations de matériel professionnel : moteurs marins, équipement informatique, outillage et électronique
+            Système automatisé pour les donations de matériel professionnel : moteurs marins, équipement informatique, climatisation pro pour expatriés, outillage et électronique
           </p>
         </motion.div>
 
         {/* Statistiques */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           <Card className="bg-gradient-to-r from-blue-100 to-blue-200">
             <CardContent className="p-6 text-center">
               <Anchor className="h-8 w-8 text-blue-600 mx-auto mb-2" />
@@ -267,6 +323,13 @@ export function DonationSystem() {
               <Users className="h-8 w-8 text-purple-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-purple-800">8,492</div>
               <div className="text-sm text-purple-600">Bénéficiaires aidés</div>
+            </CardContent>
+          </Card>
+          <Card className="bg-gradient-to-r from-cyan-100 to-cyan-200">
+            <CardContent className="p-6 text-center">
+              <Settings className="h-8 w-8 text-cyan-600 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-cyan-800">284</div>
+              <div className="text-sm text-cyan-600">Climatiseurs pro installés</div>
             </CardContent>
           </Card>
         </div>
@@ -330,6 +393,7 @@ export function DonationSystem() {
                         <SelectItem value="computer">Matériel Informatique</SelectItem>
                         <SelectItem value="tools">Outillage Professionnel</SelectItem>
                         <SelectItem value="electronics">Électronique</SelectItem>
+                        <SelectItem value="hvac">Climatisation Professionnelle</SelectItem>
                       </SelectContent>
                     </Select>
                     <Input
