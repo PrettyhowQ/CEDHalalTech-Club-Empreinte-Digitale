@@ -64,6 +64,7 @@ import CostaDelSolBankAccountPage from "@/pages/CostaDelSolBankAccount";
 import CEDBankPage from "@/pages/CEDBank";
 import DonationSystemPage from "@/pages/DonationSystem";
 import AlAmanCEDComparisonPage from "@/pages/AlAmanCEDComparison";
+import AlAmanCEDLaunchStrategyPage from "@/pages/AlAmanCEDLaunchStrategy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -228,6 +229,9 @@ function Router() {
       <Route path="/alaman-ced-comparison" component={AlAmanCEDComparisonPage} />
       <Route path="/assurance-dubai" component={AlAmanCEDComparisonPage} />
       <Route path="/takaful-comparison" component={AlAmanCEDComparisonPage} />
+      <Route path="/alaman-ced-launch" component={AlAmanCEDLaunchStrategyPage} />
+      <Route path="/strategie-lancement" component={AlAmanCEDLaunchStrategyPage} />
+      <Route path="/go-to-market" component={AlAmanCEDLaunchStrategyPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

@@ -19,7 +19,12 @@ import {
   MapPin,
   Award,
   Clock,
-  Target
+  Target,
+  Zap,
+  Heart,
+  Car,
+  Home,
+  Plane
 } from 'lucide-react';
 
 interface InsuranceCompany {
