@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechForAll Suisse – Interface Interactive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    aside {
+      width: 260px;
+      background-color: #1b1b1b;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+
+    aside h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 10px;
+    }
+
+    aside a {
+      color: #ffd700;
+      text-decoration: none;
+      display: block;
+      margin: 12px 0;
+      transition: 0.3s;
+    }
+
+    aside a:hover {
+      color: #fff;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 30px;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+    }
+
+    main h1 {
+      color: #1a1a1a;
+      margin-top: 0;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #111, #1a1a1a);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <h2>📚 Fichiers du Pack</h2>
+    <a href="#" onclick="loadFile('📄 Statuts Trilingues')">📄 Statuts Trilingues</a>
+    <a href="#" onclick="loadFile('🧾 PV Constitutif')">🧾 PV Constitutif</a>
+    <a href="#" onclick="loadFile('📜 Charte Éthique')">📜 Charte Éthique</a>
+    <a href="#" onclick="loadFile('✉️ Modèle Email Pro')">✉️ Modèle Email Pro</a>
+    <a href="#" onclick="loadFile('💌 Lettre de Mécénat')">💌 Lettre de Mécénat</a>
+    <a href="#" onclick="loadFile('📘 Mentions Légales')">📘 Mentions Légales</a>
+    <a href="#" onclick="loadFile('🌍 Traductions AR/ZH')">🌍 Traductions AR/ZH</a>
+  </aside>
+
+  <main>
+    <h1 id="titre">Bienvenue dans le Pack TechForAll Suisse</h1>
+    <pre id="contenu">Clique à gauche pour afficher un fichier 📂</pre>
+  </main>
+
+  <footer>
+    <p><strong>© Yakoubi Yamina</strong> – Tous droits réservés |
+      <span lang="en">All rights reserved</span> |
+      <span lang="ar" dir="rtl">جميع الحقوق محفوظة</span> |
+      <span lang="zh">版权所有</span>
+    </p>
+    <p>📜 Données personnelles protégées selon le RGPD 🇪🇺 – hébergement sécurisé 🇨🇭 en Suisse (serveurs Infomaniak ou Proton)</p>
+    <p>📦 Livraison des matériels informatiques certifiés 🔐 – retrait sécurisé dans des zones partenaires (ex. 📍Apple France – Rhône-Alpes, établissements relais)</p>
+    <p>🔗 Association internationale pour les expatriés - projet TechForAll France/Suisse</p>
+  </footer>
+
+  <script>
+    const fichiers = {
+      "📄 Statuts Trilingues": "Article 1 – Nom de l'association...\nBut : Promouvoir l'accès à la technologie...",
+      "🧾 PV Constitutif": "Procès-verbal de la réunion constitutive tenue le ...\nPrésents : ...",
+      "📜 Charte Éthique": "Nos valeurs fondamentales sont : Transparence, Inclusion, Respect...",
+      "✉️ Modèle Email Pro": "Objet : Demande de partenariat solidaire...\nBonjour, je me permets de vous contacter...",
+      "💌 Lettre de Mécénat": "Madame, Monsieur,\nNous vous sollicitons pour un don matériel ou financier...",
+      "📘 Mentions Légales": "Conformément au RGPD et aux lois suisses en vigueur, l’association s’engage à...",
+      "🌍 Traductions AR/ZH": "🇦🇪 النسخة العربية: ...\n🇨🇳 中文版本: ..."
+    };
+
+    function loadFile(titre) {
+      document.getElementById('titre').innerText = titre;
+      document.getElementById('contenu').innerText = fichiers[titre] || "Contenu indisponible.";
+    }
+  </script>
+
+</body>
+</html>

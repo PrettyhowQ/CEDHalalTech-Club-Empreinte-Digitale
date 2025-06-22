@@ -22,7 +22,10 @@ import {
   Zap,
   MapPin,
   CheckCircle,
-  ExternalLink
+  ExternalLink,
+  CreditCard,
+  Building,
+  FileText
 } from 'lucide-react';
 
 interface ProjectFeature {
@@ -82,10 +85,10 @@ export function TechForAllLanding() {
       icon: Brain
     },
     {
-      name: 'Plateforme TechForAll',
-      url: '/techforall',
-      description: 'Gestion complète des dons et formations',
-      icon: Users
+      name: 'Documents TechForAll',
+      url: '/documents-techforall',
+      description: 'Pack complet statuts, modèles et traductions',
+      icon: Package
     },
     {
       name: 'Costa del Sol Logistique',
