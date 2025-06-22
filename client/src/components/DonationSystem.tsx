@@ -336,7 +336,7 @@ export function DonationSystem() {
               </div>
             </div>
             <p className="text-center text-sm text-gray-600 mt-3">
-              iPhone Pro, PC, climatiseurs • Reçu fiscal automatique • Expertise gratuite
+              Dons → Boutique Costa del Sol → Centres Formation • Gestion Brahim Yakoubi • Banque CED
             </p>
           </div>
         </motion.div>
@@ -581,10 +581,10 @@ export function DonationSystem() {
                     </div>
                   </div>
                   <div className="text-sm text-green-700 space-y-1">
-                    <p>• <strong>PC pro, MacBook, iPhone Pro :</strong> Déduction sur valeur d'expertise</p>
-                    <p>• <strong>Smartphones d'entreprise, serveurs :</strong> Avantage fiscal complet</p>
-                    <p>• <strong>Climatiseurs, moteurs marins :</strong> Déduction maximale autorisée</p>
-                    <p>• <strong>Certificat d'utilité publique :</strong> TechForAll reconnu dans toute l'UE</p>
+                    <p>• <strong>PC pro, MacBook, iPhone Pro :</strong> Revendus boutique Costa del Sol → Financement centres formation</p>
+                    <p>• <strong>Gestion directe Brahim Yakoubi :</strong> Logistique temps réel + Banque CED intégrée</p>
+                    <p>• <strong>Suivi transparent :</strong> Du don à la formation, traçabilité complète</p>
+                    <p>• <strong>Déduction fiscale maximale :</strong> Certificat d'utilité publique européen</p>
                   </div>
                 </div>
 
@@ -833,12 +833,106 @@ export function DonationSystem() {
             </div>
           </TabsContent>
 
-          {/* Suivi des Donations */}
+          {/* Suivi des Donations - Tableau de Bord Brahim Yakoubi */}
           <TabsContent value="tracking" className="space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Tableau de bord temps réel */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Tableau de Bord Costa del Sol</CardTitle>
+                  <p className="text-gray-600">Gestion temps réel - Brahim Yakoubi</p>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="bg-blue-50 p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-700">23</div>
+                      <div className="text-sm text-blue-600">En collecte</div>
+                    </div>
+                    <div className="bg-green-50 p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-700">156</div>
+                      <div className="text-sm text-green-600">En boutique</div>
+                    </div>
+                    <div className="bg-purple-50 p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-purple-700">84</div>
+                      <div className="text-sm text-purple-600">Vendus</div>
+                    </div>
+                    <div className="bg-orange-50 p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-orange-700">12,450€</div>
+                      <div className="text-sm text-orange-600">Revenus CED</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-bold text-gray-700 mb-2">Actions Urgentes</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <span>3 MacBook Pro à collecter aujourd'hui (Apple France)</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <span>Climatiseur Mitsubishi prêt pour expatrié</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>Virement 2,800€ reçu sur compte CED</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Flux financier Banque CED */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">Flux Financier Banque CED</CardTitle>
+                  <p className="text-gray-600">Compte dédié formations</p>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <div className="flex justify-between items-center">
+                        <span className="font-bold text-green-800">Solde Total</span>
+                        <span className="text-2xl font-bold text-green-700">45,780€</span>
+                      </div>
+                      <div className="text-sm text-green-600 mt-1">
+                        Disponible pour centres de formation
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <div>
+                          <div className="font-medium">Vente MacBook Pro (Dell Europe)</div>
+                          <div className="text-sm text-gray-500">Aujourd'hui 14:30</div>
+                        </div>
+                        <div className="text-green-600 font-bold">+2,800€</div>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <div>
+                          <div className="font-medium">Don financier (Samsung Europe)</div>
+                          <div className="text-sm text-gray-500">Hier 16:45</div>
+                        </div>
+                        <div className="text-green-600 font-bold">+5,000€</div>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-white rounded border">
+                        <div>
+                          <div className="font-medium">Financement centre Málaga</div>
+                          <div className="text-sm text-gray-500">Hier 10:20</div>
+                        </div>
+                        <div className="text-red-600 font-bold">-3,200€</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Donations en cours */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Donations Récentes</CardTitle>
-                <p className="text-gray-600">Suivi en temps réel des donations soumises</p>
+                <CardTitle className="text-xl">Donations en Cours de Traitement</CardTitle>
+                <p className="text-gray-600">Suivi logistique temps réel</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -854,10 +948,10 @@ export function DonationSystem() {
                                 donation.status === 'distributed' ? 'bg-purple-500' :
                                 'bg-yellow-500'
                               }>
-                                {donation.status === 'approved' ? 'Approuvée' :
-                                 donation.status === 'collected' ? 'Collectée' :
-                                 donation.status === 'distributed' ? 'Distribuée' :
-                                 'En attente'}
+                                {donation.status === 'approved' ? 'Approuvée - À collecter' :
+                                 donation.status === 'collected' ? 'En boutique Costa del Sol' :
+                                 donation.status === 'distributed' ? 'Vendu - Fonds transférés CED' :
+                                 'En attente validation'}
                               </Badge>
                               <span className="text-sm text-gray-500">
                                 #{donation.id}
@@ -874,7 +968,7 @@ export function DonationSystem() {
                               </span>
                               <span className="flex items-center gap-1">
                                 <Euro className="h-4 w-4" />
-                                {donation.totalEstimatedValue}€
+                                {donation.totalEstimatedValue}€ (prix boutique estimé)
                               </span>
                               <span className="flex items-center gap-1">
                                 <Calendar className="h-4 w-4" />
@@ -882,10 +976,16 @@ export function DonationSystem() {
                               </span>
                             </div>
                           </div>
-                          <Button variant="outline" size="sm">
-                            <FileText className="h-4 w-4 mr-1" />
-                            Détails
-                          </Button>
+                          <div className="flex gap-2">
+                            <Button variant="outline" size="sm">
+                              <Truck className="h-4 w-4 mr-1" />
+                              Logistique
+                            </Button>
+                            <Button variant="outline" size="sm">
+                              <FileText className="h-4 w-4 mr-1" />
+                              Détails
+                            </Button>
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
@@ -896,30 +996,66 @@ export function DonationSystem() {
           </TabsContent>
         </Tabs>
 
-        {/* Contact et Support */}
-        <Card className="bg-gradient-to-r from-blue-100 to-green-100">
+        {/* Écosystème Complet Costa del Sol */}
+        <Card className="bg-gradient-to-r from-blue-100 via-green-100 to-purple-100">
           <CardHeader>
-            <CardTitle className="text-center text-xl">Contact Donation TechForAll</CardTitle>
+            <CardTitle className="text-center text-xl">Écosystème Complet TechForAll</CardTitle>
+            <p className="text-center text-gray-600">Du don à la formation : circuit intégré avec Banque CED</p>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-bold">Téléphone</h3>
-                <p className="text-gray-600">+33 4 93 99 77 55</p>
-                <p className="text-sm text-gray-500">Lun-Ven 9h-18h</p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Package className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-blue-800">1. Collecte</h3>
+                <p className="text-sm text-gray-600">Dons PC, iPhone, climatiseurs</p>
+                <p className="text-xs text-gray-500">Logistique temps réel</p>
               </div>
-              <div>
-                <Mail className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                <h3 className="font-bold">Email</h3>
-                <p className="text-gray-600">donations@techforall.org</p>
-                <p className="text-sm text-gray-500">Réponse sous 24h</p>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-green-800">2. Boutique Costa del Sol</h3>
+                <p className="text-sm text-gray-600">Gestion Brahim Yakoubi</p>
+                <p className="text-xs text-gray-500">Revente prix solidaires</p>
               </div>
-              <div>
-                <MapPin className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-                <h3 className="font-bold">Centre de Collecte</h3>
-                <p className="text-gray-600">Costa del Sol, Espagne</p>
-                <p className="text-sm text-gray-500">Géré par B. Yakoubi</p>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Euro className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-purple-800">3. Banque CED</h3>
+                <p className="text-sm text-gray-600">Compte dédié intégré</p>
+                <p className="text-xs text-gray-500">Gestion financière automatique</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="font-bold text-orange-800">4. Centres Formation</h3>
+                <p className="text-sm text-gray-600">Financement par ventes</p>
+                <p className="text-xs text-gray-500">Formation expatriés/chômeurs</p>
+              </div>
+            </div>
+            
+            <div className="mt-6 p-4 bg-white rounded-lg border-2 border-green-200">
+              <h4 className="font-bold text-center text-green-800 mb-2">Contact Direct Brahim Yakoubi</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
+                <div>
+                  <Phone className="h-5 w-5 text-blue-600 mx-auto mb-1" />
+                  <p className="font-medium">+34 952 77 88 99</p>
+                  <p className="text-xs text-gray-500">Logistique Costa del Sol</p>
+                </div>
+                <div>
+                  <Mail className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                  <p className="font-medium">b.yakoubi@costadelsol.org</p>
+                  <p className="text-xs text-gray-500">Gestion dons & boutique</p>
+                </div>
+                <div>
+                  <MapPin className="h-5 w-5 text-purple-600 mx-auto mb-1" />
+                  <p className="font-medium">Costa del Sol, Málaga</p>
+                  <p className="text-xs text-gray-500">Centre logistique principal</p>
+                </div>
               </div>
             </div>
           </CardContent>
