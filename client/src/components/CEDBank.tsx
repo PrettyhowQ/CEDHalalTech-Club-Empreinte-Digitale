@@ -31,7 +31,11 @@ import {
   Compass,
   Heart,
   Settings,
-  Activity
+  Activity,
+  Laptop,
+  Recycle,
+  Monitor,
+  Camera
 } from 'lucide-react';
 
 interface BankingService {
@@ -553,10 +557,213 @@ export function CEDBank() {
           </TabsContent>
         </Tabs>
 
+        {/* Section TechForAll - Partenariat CED Bank */}
+        <Card className="bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 border-2 border-green-300">
+          <CardHeader>
+            <CardTitle className="text-center text-2xl text-green-800">
+              Partenariat CED Bank × TechForAll
+            </CardTitle>
+            <p className="text-center text-gray-700">
+              Association d'aide aux expatriés par la donation technologique solidaire
+            </p>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* TechForAll Association */}
+              <Card className="border-2 border-green-200 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-center text-green-800">
+                    TechForAll Association
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center space-y-4">
+                  <p className="text-gray-600">
+                    Aide aux expatriés et personnes éloignées de l'emploi avec matériel professionnel reconditionné
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center justify-center gap-2">
+                      <Laptop className="h-4 w-4 text-green-600" />
+                      <span>MacBook Pro, PC, tablettes</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Smartphone className="h-4 w-4 text-green-600" />
+                      <span>Smartphones reconditionnés</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Users className="h-4 w-4 text-green-600" />
+                      <span>2,500+ équipements donnés</span>
+                    </div>
+                  </div>
+                  <Button 
+                    className="w-full bg-green-600 hover:bg-green-700"
+                    onClick={() => window.location.href = '/techforall'}
+                  >
+                    Découvrir TechForAll
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Financement CED Bank */}
+              <Card className="border-2 border-blue-200 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Building2 className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-center text-blue-800">
+                    Financement CED Bank
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center space-y-4">
+                  <p className="text-gray-600">
+                    CED Bank finance les projets TechForAll avec des solutions bancaires halal
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center justify-center gap-2">
+                      <DollarSign className="h-4 w-4 text-blue-600" />
+                      <span>Financement 0% intérêt</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Shield className="h-4 w-4 text-blue-600" />
+                      <span>Conformité Charia garantie</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Target className="h-4 w-4 text-blue-600" />
+                      <span>Impact social mesuré</span>
+                    </div>
+                  </div>
+                  <Button 
+                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    onClick={() => window.location.href = '/financement-solidaire'}
+                  >
+                    Financer un Projet
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Costa del Sol Hub */}
+              <Card className="border-2 border-orange-200 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-center text-orange-800">
+                    Hub Costa del Sol
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center space-y-4">
+                  <p className="text-gray-600">
+                    Centre de reconditionnement et distribution géré par B. Yakoubi
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center justify-center gap-2">
+                      <Recycle className="h-4 w-4 text-orange-600" />
+                      <span>1,240+ équipements traités</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Globe className="h-4 w-4 text-orange-600" />
+                      <span>Suivi GPS temps réel</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4 text-orange-600" />
+                      <span>App logistique mobile</span>
+                    </div>
+                  </div>
+                  <Button 
+                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    onClick={() => window.location.href = '/costa-del-sol'}
+                  >
+                    App Logistique
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Boutique Solidaire */}
+            <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200">
+              <CardHeader>
+                <CardTitle className="text-center text-xl text-purple-800">
+                  Boutique Solidaire TechForAll - Accès Direct
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-purple-800">Équipements Disponibles</h3>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Laptop className="h-4 w-4 text-purple-600" />
+                        <span>MacBook Pro M4 Max 48Go - 3,699€</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Monitor className="h-4 w-4 text-purple-600" />
+                        <span>Dell UltraSharp 32" 4K - 899€</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Smartphone className="h-4 w-4 text-purple-600" />
+                        <span>iPhone 15 Pro Max reconditionné - 1,299€</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Camera className="h-4 w-4 text-purple-600" />
+                        <span>Sony A7R V professionnel - 3,199€</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-purple-800">Avantages CED Bank</h3>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <span>Paiement en plusieurs fois 0% intérêt</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <span>Garantie étendue incluse</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <span>Livraison gratuite Costa del Sol</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-600" />
+                        <span>Support technique dédié</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center gap-4 mt-6">
+                  <Button 
+                    size="lg"
+                    className="bg-purple-600 hover:bg-purple-700"
+                    onClick={() => window.location.href = '/boutique-solidaire'}
+                  >
+                    <Heart className="h-5 w-5 mr-2" />
+                    Boutique Solidaire
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="border-purple-300 text-purple-700 hover:bg-purple-50"
+                    onClick={() => window.location.href = '/yakoubi-store'}
+                  >
+                    <Star className="h-5 w-5 mr-2" />
+                    Boutique Yakoubi
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </CardContent>
+        </Card>
+
         {/* Navigation vers autres services */}
         <Card className="bg-gradient-to-r from-gray-100 to-gray-200">
           <CardHeader>
-            <CardTitle className="text-center">Découvrez l'Écosystème Complet</CardTitle>
+            <CardTitle className="text-center">Services Bancaires Complémentaires</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -570,7 +777,7 @@ export function CEDBank() {
               </Button>
               <Button 
                 variant="outline"
-                onClick={() => window.location.href = '/cartes-bancaires'}
+                onClick={() => window.location.href = '/ced-bank-cards'}
                 className="h-20 flex flex-col items-center justify-center"
               >
                 <CreditCard className="h-6 w-6 mb-2" />
@@ -578,7 +785,7 @@ export function CEDBank() {
               </Button>
               <Button 
                 variant="outline"
-                onClick={() => window.location.href = '/investissements-dubai'}
+                onClick={() => window.location.href = '/dubai-investments'}
                 className="h-20 flex flex-col items-center justify-center"
               >
                 <TrendingUp className="h-6 w-6 mb-2" />
@@ -586,11 +793,11 @@ export function CEDBank() {
               </Button>
               <Button 
                 variant="outline"
-                onClick={() => window.location.href = '/techforall'}
+                onClick={() => window.location.href = '/ia-financiere'}
                 className="h-20 flex flex-col items-center justify-center"
               >
-                <Heart className="h-6 w-6 mb-2" />
-                TechForAll
+                <Target className="h-6 w-6 mb-2" />
+                IA Financière
               </Button>
             </div>
           </CardContent>
