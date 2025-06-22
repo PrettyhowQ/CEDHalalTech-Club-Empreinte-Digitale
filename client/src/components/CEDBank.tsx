@@ -35,7 +35,11 @@ import {
   Laptop,
   Recycle,
   Monitor,
-  Camera
+  Camera,
+  BookOpen,
+  Moon,
+  Sun,
+  Navigation
 } from 'lucide-react';
 
 interface BankingService {
