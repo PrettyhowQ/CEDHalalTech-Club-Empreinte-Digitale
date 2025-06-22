@@ -126,6 +126,14 @@ export function TechForAllLanding() {
       icon: MapPin,
       category: 'Transport',
       color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      name: 'TechForAll : Simulateur Recyclage',
+      url: '/simulateur-recyclage',
+      description: 'Impact environnemental en un clic - CO₂, énergie, eau',
+      icon: Globe,
+      category: 'Écologie',
+      color: 'from-emerald-500 to-teal-500'
     }
   ];
 
@@ -417,16 +425,16 @@ export function TechForAllLanding() {
                       <div className="text-2xl font-bold text-indigo-600">2,500+</div>
                       <div className="text-sm text-gray-600">Équipements reconditionnés</div>
                     </div>
-                    <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-600">450+</div>
-                      <div className="text-sm text-gray-600">Moteurs marins sauvés</div>
-                    </div>
                     <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600">120</div>
+                      <div className="text-2xl font-bold text-green-600">125 tonnes</div>
+                      <div className="text-sm text-gray-600">CO₂ évité cette année</div>
+                    </div>
+                    <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">120</div>
                       <div className="text-sm text-gray-600">Familles accompagnées</div>
                     </div>
                     <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg">
-                      <div className="text-2xl font-bold text-orange-600">6</div>
+                      <div className="text-2xl font-bold text-orange-600">7</div>
                       <div className="text-sm text-gray-600">Sections spécialisées</div>
                     </div>
                   </div>

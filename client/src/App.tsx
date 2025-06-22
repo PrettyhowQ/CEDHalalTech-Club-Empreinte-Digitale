@@ -53,6 +53,7 @@ import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
 import MarineEquipmentCatalog from "@/pages/MarineEquipmentCatalog";
 import BoutiqueSolidaireTechForAll from "@/pages/BoutiqueSolidaireTechForAll";
+import RecyclingSimulator from "@/pages/RecyclingSimulator";
 import YakoubiCEDAccount from "@/pages/YakoubiCEDAccount";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
@@ -130,6 +131,9 @@ function Router() {
       <Route path="/boutique-solidaire" component={BoutiqueSolidaireTechForAll} />
       <Route path="/informatique-solidaire" component={BoutiqueSolidaireTechForAll} />
       <Route path="/techforall-shop" component={BoutiqueSolidaireTechForAll} />
+      <Route path="/simulateur-recyclage" component={RecyclingSimulator} />
+      <Route path="/recyclage-impact" component={RecyclingSimulator} />
+      <Route path="/recycling-simulator" component={RecyclingSimulator} />
       <Route path="/compte-yakoubi" component={YakoubiCEDAccount} />
       <Route path="/yakoubi-ced-bank" component={YakoubiCEDAccount} />
       <Route path="/brahim-yakoubi-compte" component={YakoubiCEDAccount} />
