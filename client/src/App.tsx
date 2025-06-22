@@ -44,6 +44,7 @@ import InstantCurrencyConverter from "@/pages/CurrencyConverter";
 import FormationPayment from "@/pages/FormationPayment";
 import AppDownload from "@/pages/AppDownload";
 import TechForAll from "@/pages/TechForAll";
+import CostaDelSol from "@/pages/CostaDelSol";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
 import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
@@ -94,7 +95,9 @@ function Router() {
       <Route path="/techforall" component={TechForAll} />
       <Route path="/boutique-solidaire" component={TechForAll} />
       <Route path="/dons-materiels" component={TechForAll} />
-      <Route path="/costa-del-sol" component={TechForAll} />
+      <Route path="/costa-del-sol" component={CostaDelSol} />
+      <Route path="/app-costa-del-sol" component={CostaDelSol} />
+      <Route path="/logistique-mobile" component={CostaDelSol} />
       <Route path="/parrainage" component={ParrainageCED} />
       <Route path="/referral" component={ParrainageCED} />
       <Route path="/ambassadeur" component={ParrainageCED} />
