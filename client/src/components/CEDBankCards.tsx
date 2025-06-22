@@ -245,6 +245,53 @@ export function CEDBankCards() {
       gradient: 'bg-gradient-to-br from-blue-600 to-purple-700'
     },
     {
+      id: 'gift-cards',
+      name: 'CED Cartes Cadeaux',
+      type: 'premium',
+      tier: 'gold',
+      dailyLimit: 10000,
+      monthlyLimit: 100000,
+      withdrawalLimit: 5000,
+      currency: ['AED', 'CHF', 'USD', 'EUR'],
+      fees: {
+        annual: 0,
+        foreign: 0,
+        withdrawal: 0,
+        replacement: 0
+      },
+      benefits: [
+        'Carte Cadeau Hajj & Omra',
+        'Carte Cadeau Aid El Kebir (agneau)',
+        'Carte Cadeau Zakat & Fitr',
+        'Carte Cadeau Support Veuves',
+        'Carte Cadeau Omar (soutien personnel)',
+        'Carte Cadeau Causes Humanitaires',
+        'Carte Cadeau Éducation & Formation',
+        'Carte Cadeau TechForAll (matériel solidaire)',
+        'Carte Cadeau Urgences & Catastrophes'
+      ],
+      islamicFeatures: [
+        'Validation Charia pour toutes donations',
+        'Suivi transparent des dons',
+        'Certificats fiscaux automatiques',
+        'Distribution équitable garantie',
+        'Audit par scholars islamiques'
+      ],
+      securityFeatures: [
+        'Traçabilité complète des dons',
+        'Validation bénéficiaires',
+        'Anti-fraude renforcé',
+        'Certification Yakoubi Yamina'
+      ],
+      eligibility: {
+        minDeposit: 0,
+        minMonthlyIncome: 0,
+        approvalRequired: false
+      },
+      color: 'from-green-500 to-emerald-600',
+      gradient: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    },
+    {
       id: 'royal',
       name: 'CED Royal',
       type: 'elite',
