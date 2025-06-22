@@ -156,14 +156,14 @@ export function DonationSystem() {
       icon: Smartphone,
       color: 'from-purple-500 to-pink-600',
       items: [
-        'Smartphones professionnels',
-        'Tablettes graphiques',
-        'Appareils photo pro',
+        'iPhone Pro, Samsung Galaxy Pro',
+        'Smartphones d\'entreprise',
+        'Tablettes graphiques pro',
+        'Appareils photo professionnels',
         'Équipement audio/vidéo',
         'Matériel de télécommunication',
         'Équipement médical',
-        'Instruments de mesure',
-        'Électronique industrielle'
+        'Instruments de mesure'
       ]
     },
     {
@@ -336,7 +336,7 @@ export function DonationSystem() {
               </div>
             </div>
             <p className="text-center text-sm text-gray-600 mt-3">
-              Reçu fiscal automatique • Expertise gratuite • Suivi transparent
+              iPhone Pro, PC, climatiseurs • Reçu fiscal automatique • Expertise gratuite
             </p>
           </div>
         </motion.div>
@@ -565,9 +565,10 @@ export function DonationSystem() {
                     </div>
                   </div>
                   <div className="text-sm text-green-700 space-y-1">
-                    <p>• <strong>Valeur déductible :</strong> Expertise gratuite de votre équipement</p>
+                    <p>• <strong>PC pro, MacBook, iPhone Pro :</strong> Déduction sur valeur d'expertise</p>
+                    <p>• <strong>Smartphones d'entreprise, serveurs :</strong> Avantage fiscal complet</p>
+                    <p>• <strong>Climatiseurs, moteurs marins :</strong> Déduction maximale autorisée</p>
                     <p>• <strong>Certificat d'utilité publique :</strong> TechForAll reconnu dans toute l'UE</p>
-                    <p>• <strong>Suivi transparent :</strong> Photos et rapports d'utilisation de vos dons</p>
                   </div>
                 </div>
 
@@ -687,9 +688,10 @@ export function DonationSystem() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="hvac_expatriates">Climatisation pour Expatriés</SelectItem>
-                        <SelectItem value="hvac_general">Équipement Climatisation Général</SelectItem>
+                        <SelectItem value="computer_equipment">PC Pro, MacBook, iPhone Pro</SelectItem>
+                        <SelectItem value="mobile_devices">Smartphones d'Entreprise</SelectItem>
                         <SelectItem value="marine_equipment">Moteurs Marins</SelectItem>
-                        <SelectItem value="computer_equipment">Matériel Informatique</SelectItem>
+                        <SelectItem value="hvac_general">Équipement Climatisation Général</SelectItem>
                         <SelectItem value="general_support">Soutien Général TechForAll</SelectItem>
                       </SelectContent>
                     </Select>
