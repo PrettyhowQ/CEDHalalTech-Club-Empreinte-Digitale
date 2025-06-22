@@ -61,6 +61,7 @@ import DubaiWealthCRM from "@/pages/DubaiWealthCRM";
 import CEDBankCardsPage from "@/pages/CEDBankCards";
 import SouheilaBankAccountPage from "@/pages/SouheilaBankAccount";
 import CostaDelSolBankAccountPage from "@/pages/CostaDelSolBankAccount";
+import CEDBankPage from "@/pages/CEDBank";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -96,7 +97,7 @@ function Router() {
       <Route path="/dashboard-financier" component={FinancialDashboard} />
       <Route path="/banque" component={BanqueDigitale} />
       <Route path="/banque-digitale" component={BanqueDigitale} />
-      <Route path="/ced-bank" component={BanqueDigitale} />
+      <Route path="/ced-bank" component={CEDBankPage} />
       <Route path="/banking" component={BanqueDigitale} />
       <Route path="/app-bancaire" component={AppBancaireMobile} />
       <Route path="/mobile-banking" component={AppBancaireMobile} />
