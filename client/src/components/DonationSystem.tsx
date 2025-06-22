@@ -79,6 +79,25 @@ export function DonationSystem() {
     workingCondition: true,
     specifications: '',
     pickupPreferred: true,
+    notes: '',
+    taxResidence: '',
+    taxReceiptNeeded: false
+  });
+
+  const [financialDonation, setFinancialDonation] = useState({
+    donorName: '',
+    donorEmail: '',
+    donorPhone: '',
+    country: '',
+    taxResidence: '',
+    donationType: 'financial',
+    amount: '',
+    currency: 'EUR',
+    purpose: 'hvac_expatriates',
+    paymentMethod: 'bank_transfer',
+    taxReceiptNeeded: true,
+    companyName: '',
+    vatNumber: '',
     notes: ''
   });
 
@@ -291,55 +310,123 @@ export function DonationSystem() {
           </div>
           
           <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-            Système automatisé pour les donations de matériel professionnel : moteurs marins, équipement informatique, climatisation pro pour expatriés, outillage et électronique
+            Système automatisé pour les donations avec avantages fiscaux européens : moteurs marins, équipement informatique, climatisation pro pour expatriés, outillage et électronique
           </p>
+          
+          <div className="bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 p-6 rounded-2xl max-w-4xl mx-auto">
+            <h3 className="text-lg font-bold text-center text-gray-800 mb-4">
+              💰 Déductions Fiscales Garanties dans toute l'Europe
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="bg-white p-3 rounded-lg">
+                <div className="text-2xl font-bold text-red-600">🇨🇭 20%</div>
+                <div className="text-sm text-red-700">Suisse</div>
+              </div>
+              <div className="bg-white p-3 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600">🇫🇷 66%</div>
+                <div className="text-sm text-blue-700">France</div>
+              </div>
+              <div className="bg-white p-3 rounded-lg">
+                <div className="text-2xl font-bold text-gray-600">🇩🇪 60%</div>
+                <div className="text-sm text-gray-700">Allemagne</div>
+              </div>
+              <div className="bg-white p-3 rounded-lg">
+                <div className="text-2xl font-bold text-orange-600">🇪🇸 75%</div>
+                <div className="text-sm text-orange-700">Espagne</div>
+              </div>
+            </div>
+            <p className="text-center text-sm text-gray-600 mt-3">
+              Reçu fiscal automatique • Expertise gratuite • Suivi transparent
+            </p>
+          </div>
         </motion.div>
 
-        {/* Statistiques */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <Card className="bg-gradient-to-r from-blue-100 to-blue-200">
-            <CardContent className="p-6 text-center">
-              <Anchor className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-blue-800">127</div>
-              <div className="text-sm text-blue-600">Moteurs marins donnés</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-r from-green-100 to-green-200">
-            <CardContent className="p-6 text-center">
-              <Laptop className="h-8 w-8 text-green-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-green-800">2,847</div>
-              <div className="text-sm text-green-600">Ordinateurs redistribués</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-r from-orange-100 to-orange-200">
-            <CardContent className="p-6 text-center">
-              <Wrench className="h-8 w-8 text-orange-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-orange-800">1,563</div>
-              <div className="text-sm text-orange-600">Outils professionnels</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-r from-purple-100 to-purple-200">
-            <CardContent className="p-6 text-center">
-              <Users className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-purple-800">8,492</div>
-              <div className="text-sm text-purple-600">Bénéficiaires aidés</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-gradient-to-r from-cyan-100 to-cyan-200">
-            <CardContent className="p-6 text-center">
-              <Settings className="h-8 w-8 text-cyan-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-cyan-800">284</div>
-              <div className="text-sm text-cyan-600">Climatiseurs pro installés</div>
+        {/* Statistiques avec Avantages Fiscaux */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Statistiques des donations */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <Card className="bg-gradient-to-r from-blue-100 to-blue-200">
+              <CardContent className="p-4 text-center">
+                <Anchor className="h-6 w-6 text-blue-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-blue-800">127</div>
+                <div className="text-xs text-blue-600">Moteurs marins</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-r from-green-100 to-green-200">
+              <CardContent className="p-4 text-center">
+                <Laptop className="h-6 w-6 text-green-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-green-800">2,847</div>
+                <div className="text-xs text-green-600">Ordinateurs</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-r from-cyan-100 to-cyan-200">
+              <CardContent className="p-4 text-center">
+                <Settings className="h-6 w-6 text-cyan-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-cyan-800">284</div>
+                <div className="text-xs text-cyan-600">Climatiseurs pro</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-r from-orange-100 to-orange-200">
+              <CardContent className="p-4 text-center">
+                <Wrench className="h-6 w-6 text-orange-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-orange-800">1,563</div>
+                <div className="text-xs text-orange-600">Outils pro</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-r from-purple-100 to-purple-200">
+              <CardContent className="p-4 text-center">
+                <Users className="h-6 w-6 text-purple-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-purple-800">8,492</div>
+                <div className="text-xs text-purple-600">Bénéficiaires</div>
+              </CardContent>
+            </Card>
+            <Card className="bg-gradient-to-r from-yellow-100 to-yellow-200">
+              <CardContent className="p-4 text-center">
+                <Euro className="h-6 w-6 text-yellow-600 mx-auto mb-1" />
+                <div className="text-xl font-bold text-yellow-800">2.8M€</div>
+                <div className="text-xs text-yellow-600">Déductions fiscales</div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Avantages fiscaux rapides */}
+          <Card className="bg-gradient-to-r from-emerald-50 to-green-100 border-green-200">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg text-green-800">Avantages Fiscaux Européens</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <div className="text-lg font-bold text-red-700">🇨🇭 20%</div>
+                  <div className="text-xs text-red-600">Suisse</div>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <div className="text-lg font-bold text-blue-700">🇫🇷 66%</div>
+                  <div className="text-xs text-blue-600">France</div>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <div className="text-lg font-bold text-gray-700">🇩🇪 60%</div>
+                  <div className="text-xs text-gray-600">Allemagne</div>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg">
+                  <div className="text-lg font-bold text-orange-700">🇪🇸 75%</div>
+                  <div className="text-xs text-orange-600">Espagne</div>
+                </div>
+              </div>
+              <div className="text-xs text-green-700 text-center">
+                Reçu fiscal automatique pour tous vos dons
+              </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Tabs Navigation */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="donate">Faire une Donation</TabsTrigger>
-            <TabsTrigger value="categories">Catégories Acceptées</TabsTrigger>
-            <TabsTrigger value="tracking">Suivi des Donations</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="donate">Donation Matériel</TabsTrigger>
+            <TabsTrigger value="financial">Don Financier</TabsTrigger>
+            <TabsTrigger value="categories">Catégories</TabsTrigger>
+            <TabsTrigger value="tracking">Suivi</TabsTrigger>
           </TabsList>
 
           {/* Formulaire de Donation */}
@@ -448,6 +535,42 @@ export function DonationSystem() {
                   />
                 </div>
 
+                {/* Section Déduction Fiscale pour Dons Matériels */}
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-bold text-green-800 mb-3">💰 Déduction Fiscale sur Dons Matériels</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <Select value={donationForm.taxResidence} onValueChange={(value) => setDonationForm({...donationForm, taxResidence: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Pays de résidence fiscale" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="CH">🇨🇭 Suisse - Déduction 20%</SelectItem>
+                        <SelectItem value="FR">🇫🇷 France - Réduction 66%</SelectItem>
+                        <SelectItem value="DE">🇩🇪 Allemagne</SelectItem>
+                        <SelectItem value="ES">🇪🇸 Espagne</SelectItem>
+                        <SelectItem value="OTHER">Autre pays UE</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <div className="flex items-center space-x-2">
+                      <input 
+                        type="checkbox" 
+                        id="taxReceipt" 
+                        checked={donationForm.taxReceiptNeeded}
+                        onChange={(e) => setDonationForm({...donationForm, taxReceiptNeeded: e.target.checked})}
+                        className="w-4 h-4 text-green-600"
+                      />
+                      <label htmlFor="taxReceipt" className="text-sm text-green-700">
+                        Reçu fiscal automatique requis
+                      </label>
+                    </div>
+                  </div>
+                  <div className="text-sm text-green-700 space-y-1">
+                    <p>• <strong>Valeur déductible :</strong> Expertise gratuite de votre équipement</p>
+                    <p>• <strong>Certificat d'utilité publique :</strong> TechForAll reconnu dans toute l'UE</p>
+                    <p>• <strong>Suivi transparent :</strong> Photos et rapports d'utilisation de vos dons</p>
+                  </div>
+                </div>
+
                 <div className="flex justify-center">
                   <Button 
                     size="lg"
@@ -456,6 +579,164 @@ export function DonationSystem() {
                   >
                     <Send className="h-5 w-5 mr-2" />
                     Soumettre la Donation
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* Don Financier avec Déductions Fiscales */}
+          <TabsContent value="financial" className="space-y-6">
+            <Card className="bg-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center text-green-800">
+                  Don Financier avec Déduction Fiscale
+                </CardTitle>
+                <p className="text-center text-gray-600">
+                  Soutenez nos projets climatisation pour expatriés et bénéficiez d'avantages fiscaux
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {/* Avantages fiscaux par pays */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <Card className="bg-gradient-to-r from-red-50 to-red-100 border-red-200">
+                    <CardContent className="p-4 text-center">
+                      <h3 className="font-bold text-red-800 mb-2">🇨🇭 Suisse</h3>
+                      <p className="text-sm text-red-700">Déduction jusqu'à 20% du revenu imposable</p>
+                      <p className="text-xs text-red-600 mt-1">CHF 10'000 max par année</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-gradient-to-r from-blue-50 to-blue-100 border-blue-200">
+                    <CardContent className="p-4 text-center">
+                      <h3 className="font-bold text-blue-800 mb-2">🇫🇷 France</h3>
+                      <p className="text-sm text-blue-700">Réduction d'impôt de 66%</p>
+                      <p className="text-xs text-blue-600 mt-1">EUR 20'000 max par année</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-gradient-to-r from-green-50 to-green-100 border-green-200">
+                    <CardContent className="p-4 text-center">
+                      <h3 className="font-bold text-green-800 mb-2">🇪🇺 UE</h3>
+                      <p className="text-sm text-green-700">Selon législation locale</p>
+                      <p className="text-xs text-green-600 mt-1">Certificat international fourni</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Informations du donateur */}
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-gray-800">Informations Fiscales</h3>
+                    <Input
+                      placeholder="Nom complet ou entreprise"
+                      value={financialDonation.donorName}
+                      onChange={(e) => setFinancialDonation({...financialDonation, donorName: e.target.value})}
+                    />
+                    <Input
+                      type="email"
+                      placeholder="Email pour reçu fiscal"
+                      value={financialDonation.donorEmail}
+                      onChange={(e) => setFinancialDonation({...financialDonation, donorEmail: e.target.value})}
+                    />
+                    <Select value={financialDonation.country} onValueChange={(value) => setFinancialDonation({...financialDonation, country: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Pays de résidence fiscale" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="CH">🇨🇭 Suisse</SelectItem>
+                        <SelectItem value="FR">🇫🇷 France</SelectItem>
+                        <SelectItem value="DE">🇩🇪 Allemagne</SelectItem>
+                        <SelectItem value="IT">🇮🇹 Italie</SelectItem>
+                        <SelectItem value="ES">🇪🇸 Espagne</SelectItem>
+                        <SelectItem value="AT">🇦🇹 Autriche</SelectItem>
+                        <SelectItem value="BE">🇧🇪 Belgique</SelectItem>
+                        <SelectItem value="LU">🇱🇺 Luxembourg</SelectItem>
+                        <SelectItem value="OTHER">Autre pays UE</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Input
+                      placeholder="Numéro fiscal / TVA (optionnel)"
+                      value={financialDonation.vatNumber}
+                      onChange={(e) => setFinancialDonation({...financialDonation, vatNumber: e.target.value})}
+                    />
+                  </div>
+
+                  {/* Détails du don */}
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-gray-800">Détails du Don</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <Input
+                        type="number"
+                        placeholder="Montant"
+                        value={financialDonation.amount}
+                        onChange={(e) => setFinancialDonation({...financialDonation, amount: e.target.value})}
+                      />
+                      <Select value={financialDonation.currency} onValueChange={(value) => setFinancialDonation({...financialDonation, currency: value})}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Devise" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="EUR">EUR €</SelectItem>
+                          <SelectItem value="CHF">CHF Fr.</SelectItem>
+                          <SelectItem value="USD">USD $</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <Select value={financialDonation.purpose} onValueChange={(value) => setFinancialDonation({...financialDonation, purpose: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Affectation du don" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="hvac_expatriates">Climatisation pour Expatriés</SelectItem>
+                        <SelectItem value="hvac_general">Équipement Climatisation Général</SelectItem>
+                        <SelectItem value="marine_equipment">Moteurs Marins</SelectItem>
+                        <SelectItem value="computer_equipment">Matériel Informatique</SelectItem>
+                        <SelectItem value="general_support">Soutien Général TechForAll</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Select value={financialDonation.paymentMethod} onValueChange={(value) => setFinancialDonation({...financialDonation, paymentMethod: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Mode de paiement" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="bank_transfer">Virement Bancaire</SelectItem>
+                        <SelectItem value="credit_card">Carte de Crédit</SelectItem>
+                        <SelectItem value="paypal">PayPal</SelectItem>
+                        <SelectItem value="crypto">Cryptomonnaie</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <Textarea
+                    placeholder="Notes ou demandes spécifiques (projet particulier, pays de destination...)"
+                    value={financialDonation.notes}
+                    onChange={(e) => setFinancialDonation({...financialDonation, notes: e.target.value})}
+                    rows={3}
+                  />
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-800 mb-2">📋 Reçu Fiscal Automatique</h4>
+                    <ul className="text-sm text-blue-700 space-y-1">
+                      <li>• Reçu fiscal généré automatiquement selon la législation de votre pays</li>
+                      <li>• Envoi par email sous 24h après confirmation du paiement</li>
+                      <li>• Certificat d'utilité publique TechForAll inclus</li>
+                      <li>• Suivi de l'affectation de votre don (photos, rapports)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <Button 
+                    size="lg"
+                    className="bg-green-600 hover:bg-green-700 px-8 py-3 text-lg"
+                    onClick={() => {
+                      console.log('Financial donation submitted:', financialDonation);
+                      alert('Votre don financier a été enregistré ! Vous allez recevoir les instructions de paiement par email.');
+                    }}
+                  >
+                    <Euro className="h-5 w-5 mr-2" />
+                    Confirmer le Don Financier
                   </Button>
                 </div>
               </CardContent>
