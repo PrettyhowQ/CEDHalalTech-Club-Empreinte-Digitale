@@ -17,6 +17,7 @@ export function Header() {
   const navigation = [
     { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },
     { name: 'CED Bank 🏦', href: '/banque', priority: true },
+    { name: 'Cartes Gold Yakoubi 💳', href: '/ced-bank-cards', priority: true, premium: true },
     { name: 'Formations', href: '/formations' },
     { name: 'Inscription & Paiement', href: '/formations-paiement', priority: true },
     { name: 'Catalogue Complet', href: '/catalogue' },

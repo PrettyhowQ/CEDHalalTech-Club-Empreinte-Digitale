@@ -22,84 +22,14 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
+import { CED_BANK_CARDS, type BankCard } from '@/data/cedBankCards';
 
-interface BankCard {
-  id: string;
-  name: string;
-  type: 'virtual' | 'physical' | 'premium' | 'elite';
-  tier: 'standard' | 'gold' | 'platinum' | 'diamond' | 'royal';
-  dailyLimit: number;
-  monthlyLimit: number;
-  withdrawalLimit: number;
-  currency: string[];
-  fees: {
-    annual: number;
-    foreign: number;
-    withdrawal: number;
-    replacement: number;
-  };
-  benefits: string[];
-  islamicFeatures: string[];
-  securityFeatures: string[];
-  eligibility: {
-    minDeposit: number;
-    minMonthlyIncome: number;
-    approvalRequired: boolean;
-  };
-  color: string;
-  gradient: string;
-}
+// Interface moved to data file for consistency
 
 export function CEDBankCards() {
   const [selectedCard, setSelectedCard] = useState<string>('yakoubi-essential');
 
-  const cedBankCards: BankCard[] = [
-    {
-      id: 'yakoubi-essential',
-      name: 'CED Yakoubi Essential',
-      type: 'virtual',
-      tier: 'standard',
-      dailyLimit: 10000,
-      monthlyLimit: 100000,
-      withdrawalLimit: 5000,
-      currency: ['AED', 'CHF', 'USD'],
-      fees: {
-        annual: 0,
-        foreign: 0,
-        withdrawal: 0,
-        replacement: 0
-      },
-      benefits: [
-        'Carte principale - Yakoubi Yamina',
-        'Directives personnalisées selon vos souhaits',
-        'Contrôle total quand et comme vous voulez',
-        'Mode prière automatique',
-        'Boussole Qibla intégrée',
-        'Notifications en temps réel',
-        'Support 24/7 prioritaire',
-        'Transferts gratuits illimités'
-      ],
-      islamicFeatures: [
-        'Aucun intérêt débiteur',
-        'Transactions halal uniquement',
-        'Blocage automatique secteurs haram',
-        'Audit Charia mensuel',
-        'Certification Yakoubi Yamina'
-      ],
-      securityFeatures: [
-        'Chiffrement E2E renforcé',
-        'Biométrie Yakoubi Yamina',
-        'Géolocalisation avancée',
-        'Contrôle total décisionnaire'
-      ],
-      eligibility: {
-        minDeposit: 0,
-        minMonthlyIncome: 0,
-        approvalRequired: false
-      },
-      color: 'from-emerald-500 to-teal-600',
-      gradient: 'bg-gradient-to-br from-emerald-500 to-teal-600'
-    },
+  const cedBankCards = CED_BANK_CARDS;
     {
       id: 'yakoubi-gold',
       name: 'CED Yakoubi Gold Sécurisée',
