@@ -363,12 +363,12 @@ export function TechForAllLanding() {
                   </Button>
                   
                   <Button 
-                    onClick={() => window.location.href = '/premium-dashboard'}
+                    onClick={() => window.location.href = '/compte-yakoubi'}
                     variant="outline"
                     className="h-20 flex flex-col items-center justify-center hover:bg-blue-50"
                   >
-                    <Zap className="h-6 w-6 mb-2 text-blue-600" />
-                    <span className="text-sm">CED Bank Premium</span>
+                    <CreditCard className="h-6 w-6 mb-2 text-blue-600" />
+                    <span className="text-sm">Compte B. Yakoubi</span>
                   </Button>
                   
                 </div>
