@@ -51,6 +51,7 @@ import TechForAllLanding from "@/pages/TechForAllLanding";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
+import MarineEquipmentCatalog from "@/pages/MarineEquipmentCatalog";
 import YakoubiCEDAccount from "@/pages/YakoubiCEDAccount";
 import ModePriere from "@/pages/ModePriere";
 import DubaiInvestments from "@/pages/DubaiInvestments";
@@ -122,6 +123,9 @@ function Router() {
       <Route path="/generateurs-ia" component={AIGeneratorsMobile} />
       <Route path="/ai-generators" component={AIGeneratorsMobile} />
       <Route path="/mobile-ia-tools" component={AIGeneratorsMobile} />
+      <Route path="/materiel-marin" component={MarineEquipmentCatalog} />
+      <Route path="/equipement-peche" component={MarineEquipmentCatalog} />
+      <Route path="/marine-equipment" component={MarineEquipmentCatalog} />
       <Route path="/compte-yakoubi" component={YakoubiCEDAccount} />
       <Route path="/yakoubi-ced-bank" component={YakoubiCEDAccount} />
       <Route path="/brahim-yakoubi-compte" component={YakoubiCEDAccount} />

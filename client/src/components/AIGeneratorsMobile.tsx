@@ -85,12 +85,48 @@ export function AIGeneratorsMobile() {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const materialTypes = [
+    // Informatique
     'Ordinateur portable',
     'Ordinateur fixe', 
     'Écran',
     'Imprimante',
     'Serveur',
-    'Périphérique'
+    'Périphérique',
+    
+    // Équipements marins
+    'Moteur hors-bord',
+    'Moteur in-bord',
+    'GPS marin',
+    'Sondeur',
+    'Radar',
+    'Radio VHF',
+    'Pilote automatique',
+    'Treuil électrique',
+    
+    // Matériel hydroélectrique
+    'Turbine hydraulique',
+    'Générateur hydroélectrique',
+    'Régulateur de charge',
+    'Onduleur marine',
+    'Batterie marine',
+    'Panneau solaire marine',
+    
+    // Outils professionnels hydrauliques
+    'Pompe hydraulique',
+    'Vérin hydraulique',
+    'Compresseur',
+    'Groupe électrogène',
+    'Poste à souder',
+    'Perceuse marine',
+    'Meuleuse étanche',
+    
+    // Équipements de pêche professionnels
+    'Chalut',
+    'Filet de pêche',
+    'Casier à poissons',
+    'Glacière professionnelle',
+    'Balance de pêche',
+    'Sonar de pêche'
   ];
 
   const emailTypes: EmailType[] = [
@@ -115,11 +151,11 @@ MATÉRIELS RECHERCHÉS
 {materials_list}
 
 PROCESSUS SIMPLIFIÉ
-1. Évaluation gratuite sur site
-2. Enlèvement sécurisé par nos équipes
-3. Effacement certifié des données (norme NIST)
-4. Reconditionnement dans nos ateliers
-5. Redistribution aux bénéficiaires
+1. Évaluation gratuite sur site par nos experts
+2. Enlèvement sécurisé par nos équipes Costa del Sol
+3. Reconditionnement professionnel dans nos ateliers
+4. Test qualité et remise aux normes
+5. Redistribution aux familles de pêcheurs et artisans
 
 Je reste à votre disposition pour organiser une présentation personnalisée.
 
@@ -184,13 +220,13 @@ VALEUR TOTALE ESTIMÉE
 {total_value}€ (évaluation certifiée)
 
 IMPACT SOCIAL
-Votre don permettra d'équiper {beneficiaries} familles en situation de précarité numérique et de financer {training_hours}h de formation IA éthique.
+Votre don permettra d'équiper {beneficiaries} familles de pêcheurs et artisans en précarité, financer {training_hours}h de formation technique et soutenir {jobs_created} emplois locaux à Costa del Sol.
 
 DÉDUCTION FISCALE
-Un reçu fiscal sera émis sous 48h permettant une déduction de {tax_deduction}€ sur vos impôts.
+Un reçu fiscal sera émis sous 48h permettant une déduction de {tax_deduction}€ sur vos impôts (66% de la valeur du don).
 
-SUIVI
-Vous recevrez un rapport d'impact dans 3 mois détaillant l'utilisation concrète de votre don.
+SUIVI TRANSPARENT
+Vous recevrez un rapport d'impact trimestriel avec photos et témoignages des bénéficiaires, détaillant l'utilisation concrète de votre don et son impact sur les communautés maritimes.
 
 Nous vous remercions chaleureusement pour votre soutien à notre mission d'inclusion numérique.
 
@@ -259,6 +295,7 @@ Reçu fiscal en pièce jointe`,
         email = email.replace(/{tax_deduction}/g, Math.round(totalValue * 0.66).toString());
         email = email.replace(/{beneficiaries}/g, Math.ceil(donationItems.length / 2).toString());
         email = email.replace(/{training_hours}/g, (donationItems.length * 5).toString());
+        email = email.replace(/{jobs_created}/g, Math.ceil(donationItems.length / 3).toString());
         
         setGeneratedEmail(email);
       }
