@@ -25,7 +25,8 @@ import {
   ExternalLink,
   CreditCard,
   Building,
-  FileText
+  FileText,
+  Anchor
 } from 'lucide-react';
 
 interface ProjectFeature {
@@ -77,24 +78,54 @@ export function TechForAllLanding() {
     'Éthique et solidarité technologique'
   ];
 
-  const tools = [
+  const techForAllSections = [
     {
-      name: 'Simulateur IA PrettyhowQ',
-      url: 'https://jsitor.com/Y_I4py0a6wc',
-      description: 'Interface interactive pour découvrir l\'IA éthique',
-      icon: Brain
+      name: 'TechForAll : Informatique',
+      url: '/boutique-solidaire',
+      description: 'MacBook, PC, tablettes et smartphones reconditionnés',
+      icon: Laptop,
+      category: 'Matériel IT',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
-      name: 'Simulateur d\'Évasion',
+      name: 'TechForAll : Marin',
+      url: '/materiel-marin',
+      description: 'Moteurs, GPS, sondes et équipement de pêche',
+      icon: Anchor,
+      category: 'Maritime',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'TechForAll : Générateurs IA',
+      url: '/generateurs-ia',
+      description: 'Outils d\'automatisation et formulaires intelligents',
+      icon: Brain,
+      category: 'IA Mobile',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      name: 'TechForAll : Documents',
+      url: '/pack-documents',
+      description: 'Certificats, statuts officiels et partenariats UE',
+      icon: FileText,
+      category: 'Juridique',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      name: 'TechForAll : Évasion',
       url: '/simulateur-evasion',
-      description: 'Ambiances de rêve pour nourrir l\'espoir',
-      icon: Heart
+      description: 'Ambiances de rêve anti-gaspillage et inspiration',
+      icon: Heart,
+      category: 'Bien-être',
+      color: 'from-pink-500 to-rose-500'
     },
     {
-      name: 'Costa del Sol Logistique',
+      name: 'TechForAll : Logistique',
       url: '/costa-del-sol',
-      description: 'Application mobile de gestion logistique',
-      icon: MapPin
+      description: 'Transport, stockage et distribution Costa del Sol',
+      icon: MapPin,
+      category: 'Transport',
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
@@ -237,62 +268,168 @@ export function TechForAllLanding() {
           </motion.div>
         </section>
 
+        {/* Circuit solidaire */}
+        <section>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Card className="bg-gradient-to-r from-green-50 to-blue-50 shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-2xl text-green-800">
+                  <Heart className="h-8 w-8" />
+                  Circuit solidaire TechForAll
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="text-center p-6 bg-white rounded-xl shadow-md"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Heart className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">1. Dons généreux</h3>
+                    <p className="text-gray-600 text-sm">
+                      Particuliers et entreprises donnent leur matériel informatique et marin usagé via nos générateurs IA.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7 }}
+                    className="text-center p-6 bg-white rounded-xl shadow-md"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Zap className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">2. Reconditionnement expert</h3>
+                    <p className="text-gray-600 text-sm">
+                      Nos équipes techniques remettent en état, certifient et garantissent chaque équipement donné.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="text-center p-6 bg-white rounded-xl shadow-md"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2 text-gray-800">3. Boutique solidaire</h3>
+                    <p className="text-gray-600 text-sm">
+                      Revente à prix très réduits aux familles, pêcheurs et artisans dans le besoin.
+                    </p>
+                  </motion.div>
+                </div>
+
+                <div className="text-center p-6 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl">
+                  <h4 className="font-bold text-xl text-indigo-800 mb-2">Impact économique et social</h4>
+                  <p className="text-indigo-700">
+                    Chaque don évite le gaspillage, crée de l'emploi local, finance des formations techniques et équipe des familles à prix solidaires. 
+                    C'est un cercle vertueux qui profite à tous.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
+
         {/* Explorer nos outils */}
         <section>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.9 }}
           >
             <Card className="bg-gradient-to-r from-blue-50 to-green-50 shadow-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-2xl text-blue-800">
                   <Rocket className="h-8 w-8" />
-                  Explorer nos outils
+                  Les 6 sections TechForAll
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 
                 {/* Outils principaux */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {tools.map((tool, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {techForAllSections.map((section, index) => (
                     <motion.div
-                      key={tool.name}
+                      key={section.name}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7 + 0.1 * index }}
-                      className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all"
+                      className="relative text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all group overflow-hidden"
                     >
-                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <tool.icon className="h-8 w-8 text-blue-600" />
+                      {/* Background gradient */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${section.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                      
+                      <div className="relative z-10">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${section.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                          <section.icon className="h-8 w-8 text-white" />
+                        </div>
+                        
+                        <Badge variant="outline" className="mb-3 text-xs font-medium">
+                          {section.category}
+                        </Badge>
+                        
+                        <h3 className="font-bold text-lg mb-2 text-gray-800">{section.name}</h3>
+                        <p className="text-gray-600 text-sm mb-4 leading-relaxed">{section.description}</p>
+                        
+                        <Button 
+                          onClick={() => {
+                            if (section.url.startsWith('http')) {
+                              window.open(section.url, '_blank');
+                            } else {
+                              window.location.href = section.url;
+                            }
+                          }}
+                          className={`w-full bg-gradient-to-r ${section.color} hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-white border-none`}
+                        >
+                          {section.url.startsWith('http') ? (
+                            <>
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              Accéder
+                            </>
+                          ) : (
+                            <>
+                              <section.icon className="h-4 w-4 mr-2" />
+                              Explorer
+                            </>
+                          )}
+                        </Button>
                       </div>
-                      <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-                      <Button 
-                        onClick={() => {
-                          if (tool.url.startsWith('http')) {
-                            window.open(tool.url, '_blank');
-                          } else {
-                            window.location.href = tool.url;
-                          }
-                        }}
-                        className="w-full"
-                        variant={index === 0 ? 'default' : 'outline'}
-                      >
-                        {tool.url.startsWith('http') ? (
-                          <>
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Accéder
-                          </>
-                        ) : (
-                          <>
-                            <Link className="h-4 w-4 mr-2" />
-                            Explorer
-                          </>
-                        )}
-                      </Button>
                     </motion.div>
                   ))}
+                </div>
+
+                {/* Statistiques d'impact */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div className="p-4 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg">
+                      <div className="text-2xl font-bold text-indigo-600">2,500+</div>
+                      <div className="text-sm text-gray-600">Équipements reconditionnés</div>
+                    </div>
+                    <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">450+</div>
+                      <div className="text-sm text-gray-600">Moteurs marins sauvés</div>
+                    </div>
+                    <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">120</div>
+                      <div className="text-sm text-gray-600">Familles accompagnées</div>
+                    </div>
+                    <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg">
+                      <div className="text-2xl font-bold text-orange-600">6</div>
+                      <div className="text-sm text-gray-600">Sections spécialisées</div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Boutons d'action principaux */}
