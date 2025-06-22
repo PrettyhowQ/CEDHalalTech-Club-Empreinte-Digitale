@@ -896,7 +896,7 @@ export function DonationSystem() {
                         <span className="text-2xl font-bold text-green-700">45,780€</span>
                       </div>
                       <div className="text-sm text-green-600 mt-1">
-                        Disponible pour centres de formation
+                        Disponible pour centres TechForAll expatriés
                       </div>
                     </div>
                     
@@ -917,7 +917,7 @@ export function DonationSystem() {
                       </div>
                       <div className="flex justify-between items-center p-2 bg-white rounded border">
                         <div>
-                          <div className="font-medium">Financement centre Málaga</div>
+                          <div className="font-medium">Financement centre TechForAll Málaga</div>
                           <div className="text-sm text-gray-500">Hier 10:20</div>
                         </div>
                         <div className="text-red-600 font-bold">-3,200€</div>
@@ -1000,7 +1000,7 @@ export function DonationSystem() {
         <Card className="bg-gradient-to-r from-blue-100 via-green-100 to-purple-100">
           <CardHeader>
             <CardTitle className="text-center text-xl">Écosystème Complet TechForAll</CardTitle>
-            <p className="text-center text-gray-600">Du don à la formation : circuit intégré avec Banque CED</p>
+            <p className="text-center text-gray-600">TechForAll uniquement : du don aux centres physiques via Banque CED</p>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -1040,9 +1040,9 @@ export function DonationSystem() {
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-orange-800">5. Formations</h3>
-                <p className="text-sm text-gray-600">Centres expatriés</p>
-                <p className="text-xs text-gray-500">Financement direct</p>
+                <h3 className="font-bold text-orange-800">5. Centres TechForAll</h3>
+                <p className="text-sm text-gray-600">Formation physique expatriés</p>
+                <p className="text-xs text-gray-500">Financement CED</p>
               </div>
             </div>
             
