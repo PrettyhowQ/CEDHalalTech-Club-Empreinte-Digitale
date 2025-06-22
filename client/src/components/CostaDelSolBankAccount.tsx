@@ -357,23 +357,23 @@ export function CostaDelSolBankAccount() {
     },
     {
       id: 'solidarity-boutique',
-      name: 'Boutique Solidaire TechForAll',
+      name: 'TechForAll - Révolution Solidaire',
       category: 'solidarity',
-      totalRevenue: 567890,
-      monthlyAverage: 47324,
-      clientsCount: 1456,
-      growth: 35,
-      description: 'Vente matériel informatique reconditionné'
+      totalRevenue: 2567890,
+      monthlyAverage: 213991,
+      clientsCount: 3456,
+      growth: 125,
+      description: 'Association unique anti-gaspillage tech universelle Yakoubi Yamina'
     },
     {
       id: 'equipment-repair',
-      name: 'Réparation & Maintenance',
+      name: 'Réparation & Maintenance Spécialisée',
       category: 'equipment',
-      totalRevenue: 423570,
-      monthlyAverage: 35298,
-      clientsCount: 234,
-      growth: 18,
-      description: 'Services de réparation équipements marins et tech'
+      totalRevenue: 823570,
+      monthlyAverage: 68631,
+      clientsCount: 456,
+      growth: 45,
+      description: 'Services réparation équipements marins, tech et climatisation'
     }
   ];
 
@@ -786,30 +786,82 @@ export function CostaDelSolBankAccount() {
 
           {/* Analyse par type d'équipement */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-            <Card className="bg-white shadow-lg">
+            <Card className="bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg border border-purple-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Package className="h-6 w-6 text-purple-600" />
-                  Flux Informatique TechForAll
+                  TechForAll - Révolution Anti-Gaspillage
                 </CardTitle>
+                <p className="text-purple-700 font-medium">Association unique universelle Yakoubi Yamina</p>
               </CardHeader>
               <CardContent>
+                <div className="mb-4 p-3 bg-purple-100 rounded-lg border border-purple-300">
+                  <h4 className="font-bold text-purple-800 mb-2">🌟 Modèle Révolutionnaire</h4>
+                  <p className="text-sm text-purple-700">
+                    Première association anti-gaspillage éthique universelle jamais vue ailleurs. 
+                    Innovation Yakoubi Yamina pour inclusion numérique mondiale.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="text-center p-2 bg-white rounded border">
+                    <p className="text-lg font-bold text-purple-600">3,456</p>
+                    <p className="text-xs text-gray-600">Bénéficiaires</p>
+                  </div>
+                  <div className="text-center p-2 bg-white rounded border">
+                    <p className="text-lg font-bold text-green-600">+125%</p>
+                    <p className="text-xs text-gray-600">Croissance</p>
+                  </div>
+                  <div className="text-center p-2 bg-white rounded border">
+                    <p className="text-lg font-bold text-blue-600">125</p>
+                    <p className="text-xs text-gray-600">Unités actives</p>
+                  </div>
+                </div>
+
                 <div className="space-y-3">
                   {activeDonations.filter(d => d.category === 'informatique').map((donation) => (
-                    <div key={donation.id} className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+                    <div key={donation.id} className="flex items-center justify-between p-3 bg-white rounded-lg border border-purple-200 shadow-sm">
                       <div>
-                        <p className="font-medium text-gray-800">{donation.itemType}</p>
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                          <p className="font-medium text-gray-800">{donation.itemType}</p>
+                        </div>
                         <p className="text-sm text-gray-600">{donation.donorName} • x{donation.quantity}</p>
+                        <p className="text-xs text-purple-600">→ {donation.targetBeneficiary}</p>
                       </div>
-                      <Badge className={
-                        donation.status === 'traité_brahim' ? 'bg-green-100 text-green-800' :
-                        donation.status === 'en_transit' ? 'bg-blue-100 text-blue-800' :
-                        'bg-gray-100 text-gray-800'
-                      }>
-                        {donation.status.replace('_', ' ')}
-                      </Badge>
+                      <div className="text-right">
+                        <Badge className={
+                          donation.status === 'traité_brahim' ? 'bg-green-100 text-green-800' :
+                          donation.status === 'en_transit' ? 'bg-blue-100 text-blue-800' :
+                          'bg-gray-100 text-gray-800'
+                        }>
+                          {donation.status.replace('_', ' ')}
+                        </Badge>
+                        <p className="text-xs text-gray-500 mt-1">{donation.trackingCode}</p>
+                      </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-4 p-3 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg border border-purple-300">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Trophy className="h-4 w-4 text-purple-600" />
+                    <span className="font-bold text-purple-800">Innovation Yakoubi Yamina</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 mb-2">
+                    <div className="text-center p-2 bg-white/70 rounded">
+                      <p className="text-sm font-bold text-purple-600">2.5M€</p>
+                      <p className="text-xs text-gray-600">CA TechForAll</p>
+                    </div>
+                    <div className="text-center p-2 bg-white/70 rounded">
+                      <p className="text-sm font-bold text-green-600">0 déchet</p>
+                      <p className="text-xs text-gray-600">Objectif 2025</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-purple-700">
+                    Modèle éthique intelligent révolutionnaire : inclusion numérique universelle, 
+                    anti-gaspillage technologique, impact social mesurable. Unique au monde.
+                  </p>
                 </div>
               </CardContent>
             </Card>
