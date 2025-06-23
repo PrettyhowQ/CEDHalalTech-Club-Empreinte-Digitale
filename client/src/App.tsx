@@ -72,6 +72,7 @@ import { DeveloperLanding } from "@/components/DeveloperLanding";
 import { DeveloperDashboard } from "@/components/DeveloperDashboard";
 import { HalalPlatformComparison } from "@/components/HalalPlatformComparison";
 import { IslamicMarketPartnership } from "@/components/IslamicMarketPartnership";
+import { IslamicGovernance } from "@/components/IslamicGovernance";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -262,6 +263,9 @@ function Router() {
       <Route path="/alliance-islamique" component={IslamicMarketPartnership} />
       <Route path="/partenariat-strategique" component={IslamicMarketPartnership} />
       <Route path="/consortium-halal" component={IslamicMarketPartnership} />
+      <Route path="/gouvernance-islamique" component={IslamicGovernance} />
+      <Route path="/sharia-board" component={IslamicGovernance} />
+      <Route path="/conformite-halal" component={IslamicGovernance} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
