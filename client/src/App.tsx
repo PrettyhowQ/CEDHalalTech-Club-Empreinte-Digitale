@@ -71,6 +71,7 @@ import { CEDBankingAPI } from "@/components/CEDBankingAPI";
 import { DeveloperLanding } from "@/components/DeveloperLanding";
 import { DeveloperDashboard } from "@/components/DeveloperDashboard";
 import { HalalPlatformComparison } from "@/components/HalalPlatformComparison";
+import { IslamicMarketPartnership } from "@/components/IslamicMarketPartnership";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -258,6 +259,9 @@ function Router() {
       <Route path="/comparison-halal" component={HalalPlatformComparison} />
       <Route path="/analyse-concurrentielle" component={HalalPlatformComparison} />
       <Route path="/positioning" component={HalalPlatformComparison} />
+      <Route path="/alliance-islamique" component={IslamicMarketPartnership} />
+      <Route path="/partenariat-strategique" component={IslamicMarketPartnership} />
+      <Route path="/consortium-halal" component={IslamicMarketPartnership} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
