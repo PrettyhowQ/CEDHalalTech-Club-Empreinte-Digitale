@@ -70,6 +70,7 @@ import { CEDCodePlatform } from "@/components/CEDCodePlatform";
 import { CEDBankingAPI } from "@/components/CEDBankingAPI";
 import { DeveloperLanding } from "@/components/DeveloperLanding";
 import { DeveloperDashboard } from "@/components/DeveloperDashboard";
+import { HalalPlatformComparison } from "@/components/HalalPlatformComparison";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -254,6 +255,9 @@ function Router() {
       <Route path="/investisseurs" component={DeveloperLanding} />
       <Route path="/developer-dashboard" component={DeveloperDashboard} />
       <Route path="/dashboard-dev" component={DeveloperDashboard} />
+      <Route path="/comparison-halal" component={HalalPlatformComparison} />
+      <Route path="/analyse-concurrentielle" component={HalalPlatformComparison} />
+      <Route path="/positioning" component={HalalPlatformComparison} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
