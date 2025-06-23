@@ -68,6 +68,8 @@ import AlAmanCEDLaunchStrategyPage from "@/pages/AlAmanCEDLaunchStrategy";
 import CitadelleMusulmanPage from "@/pages/CitadelleMusulman";
 import { CEDCodePlatform } from "@/components/CEDCodePlatform";
 import { CEDBankingAPI } from "@/components/CEDBankingAPI";
+import { DeveloperLanding } from "@/components/DeveloperLanding";
+import { DeveloperDashboard } from "@/components/DeveloperDashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -248,6 +250,10 @@ function Router() {
       <Route path="/api-halal" component={CEDBankingAPI} />
       <Route path="/sdk-banking" component={CEDBankingAPI} />
       <Route path="/developers" component={CEDBankingAPI} />
+      <Route path="/developer-landing" component={DeveloperLanding} />
+      <Route path="/investisseurs" component={DeveloperLanding} />
+      <Route path="/developer-dashboard" component={DeveloperDashboard} />
+      <Route path="/dashboard-dev" component={DeveloperDashboard} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
