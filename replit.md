@@ -117,6 +117,7 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 - **Microservices**: Future modular architecture for individual services
 
 ## Changelog
+- June 24, 2025. Comptes bancaires CED Bank et assurance Takaful créés pour équipe + direction
 - June 23, 2025. Initial setup
 
 ## User Preferences

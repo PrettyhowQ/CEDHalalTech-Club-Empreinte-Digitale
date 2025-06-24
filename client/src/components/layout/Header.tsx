@@ -39,6 +39,7 @@ export function Header() {
     { name: 'Fiches de Paie 💰', href: '/fiches-paie', priority: true, premium: true },
     { name: 'App Logistique 📱', href: '/app-logistique', priority: true, premium: true },
     { name: 'CED Bank Comptes 🏛️', href: '/ced-bank-comptes', priority: true, premium: true },
+    { name: 'Al-Aman Takaful 🛡️', href: '/al-aman-takaful', priority: true, premium: true },
     { name: 'TechForAll Dashboard 📊', href: '/techforall-dashboard', priority: true, premium: true },
   ];
 
