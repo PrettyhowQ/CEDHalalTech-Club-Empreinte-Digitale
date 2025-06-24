@@ -49,6 +49,7 @@ import YakoubiStore from "@/pages/YakoubiStore";
 import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
 import TechForAllLanding from "@/pages/TechForAllLanding";
 import VueEnsemble from "@/pages/VueEnsemble";
+import ContactComplet from "@/pages/ContactComplet";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -276,6 +277,9 @@ function Router() {
       <Route path="/platform-deploy" component={CEDReplitPlatform} />
       <Route path="/cloud-hosting" component={CEDReplitPlatform} />
       <Route path="/vue-ensemble" component={VueEnsemble} />
+      <Route path="/contact-complet" component={ContactComplet} />
+      <Route path="/contacts-equipe" component={ContactComplet} />
+      <Route path="/equipe-complete" component={ContactComplet} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

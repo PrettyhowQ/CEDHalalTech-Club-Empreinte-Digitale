@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Club Empreinte Digitale</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul><li><strong>Club Empreinte Digitale</strong></li></ul>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#" role="button">Connexion</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <div class="grid">
+        <section>
+          <hgroup>
+            <h2>Bienvenue sur la plateforme : Club Empreinte Digitale</h2>
+            <h3>Propulsé par PrettyhowQ</h3>
+          </hgroup>
+          <p>Notre plateforme propose des services en développement web, formation en data et accompagnement digital sur mesure.</p>
+
+          <figure>
+            <img src="https://source.unsplash.com/featured/?technology,web" alt="Interface digitale moderne" />
+            <figcaption><a href="https://unsplash.com" target="_blank">Image Unsplash</a></figcaption>
+          </figure>
+
+          <h3>Nos pôles d'expertise</h3>
+          <p>Nous intervenons dans le développement web, les formations spécialisées, l'hébergement sécurisé, et la transformation numérique responsable.</p>
+
+          <h3>Engagement et confidentialité</h3>
+          <p>Nos services respectent les normes RGPD et LPD. Toutes les données sont hébergées en Suisse de manière sécurisée.</p>
+        </section>
+      </div>
+    </main>
+
+    <section aria-label="Subscribe example">
+      <div class="container">
+        <article>
+          <hgroup>
+            <h2>Restez informé</h2>
+            <h3>Recevez les dernières nouvelles de la plateforme</h3>
+          </hgroup>
+          <form class="grid">
+            <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" aria-label="Prénom" required />
+            <input type="email" id="email" name="email" placeholder="Votre email" aria-label="Email" required />
+            <button type="submit" onclick="event.preventDefault()">S'inscrire</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacts" class="container">
+      <h2>Référents par service</h2>
+      <p>Voici la liste des contacts principaux. Vous pourrez compléter noms, fonctions et e-mails au fur et à mesure du déploiement :</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Fonction / Service</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Contact principal</td>
+            <td>contact@empreintedigitale.club</td>
+          </tr>
+          <tr>
+            <td>Yakoubi</td>
+            <td>Yamina</td>
+            <td>Direction / Partenariats / Dons</td>
+            <td>yakoubi.yamina@ik.me</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Développement / Formations</td>
+            <td>swissyakoubidev.ch@ik.me</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Logistique – Suisse</td>
+            <td>À insérer</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Logistique – Europe</td>
+            <td>À insérer</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Gérant</td>
+            <td>Emplacement réservé</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer style="background-color: #f8f8f8; padding: 2em 1em; font-family: 'Segoe UI', sans-serif; font-size: 0.9rem; color: #444; text-align: center; line-height: 1.7; border-top: 1px solid #ddd;">
+      <p style="margin-bottom: 0.5em;">
+        <strong>© Yakoubi Yamina</strong> – Tous droits réservés | All rights reserved | <span dir="rtl">جميع الحقوق محفوظة</span> | 版权所有
+      </p>
+      <p style="margin-bottom: 0.5em;">Conforme RGPD 🇪🇺 & LPD 🇨🇭 ·Hébergement sécurisé en <strong>Suisse</strong> · Données confidentielles protégées</p>
+      <p style="margin-bottom: 0.5em;">Projet confidentiel – <strong>Traçabilité numérique activée</strong> – Usage exclusif réservé à l’écosystème <strong>CED & PrettyhowQ</strong></p>
+      <p style="margin-bottom: 0.5em;">Ce projet, son contenu, son code, ses idées, ses visuels, ses textes et sa structure sont la propriété exclusive de <strong>Yakoubi Yamina</strong>.</p>
+      <p style="margin-bottom: 0.5em;">Toute reproduction, diffusion, extraction, adaptation, modification ou exploitation – totale ou partielle – sans autorisation écrite préalable est strictement interdite et fera l'objet de poursuites judiciaires conformément au <strong>Code de la propriété intellectuelle</strong> (France / Europe / International).</p>
+      <p style="margin-bottom: 0.5em;">Ce dépôt n'est <strong>ni open source</strong>, ni destiné à un usage public ou commercial sans accord express préalable.</p>
+      <p style="margin-bottom: 0.5em;">📌 Version non publique – Dépôt en cours 📎</p>
+      <p style="margin-bottom: 0;">
+        Pour toute demande d’autorisation :<br>
+        <a href="mailto:swissyakoubidev.ch@ik.me" style="color: #0066cc; text-decoration: none;">swissyakoubidev.ch@ik.me</a> &nbsp;·&nbsp;
+        <a href="mailto:yakoubi.yamina@ik.me" style="color: #0066cc; text-decoration: none;">yakoubi.yamina@ik.me</a> &nbsp;·&nbsp;
+        <a href="mailto:contact@empreintedigitale.club" style="color: #0066cc; text-decoration: none;">contact@empreintedigitale.club</a>
+      </p>
+    </footer>
+  </body>
+</html>

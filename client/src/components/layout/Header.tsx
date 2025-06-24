@@ -34,6 +34,7 @@ export function Header() {
     { name: 'IA Éthique', href: '/ia-ethique' },
     { name: 'Centre Financier', href: '/previsionnel' },
     { name: 'Investissements Dubaï', href: '/dubai-investments' },
+    { name: 'Contacts Complets 👥', href: '/contact-complet', priority: true },
   ];
 
   return (
