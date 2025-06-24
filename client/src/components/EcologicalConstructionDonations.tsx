@@ -412,7 +412,7 @@ export function EcologicalConstructionDonations() {
     const donAmount = amount || donationAmount;
     const taxReduction = calculateTaxReduction(donAmount, project?.taxBenefit.percentage || 75, project?.taxBenefit.maxDeduction || 50000);
     
-    alert(`Donation effectuée !\n\nPrjet: ${project?.name}\nMontant: €${donAmount.toLocaleString()}\nRéduction d'impôt: €${taxReduction.toLocaleString()} (${project?.taxBenefit.percentage}%)\nCoût réel: €${(donAmount - taxReduction).toLocaleString()}\n\nReçu fiscal envoyé par email`);
+    alert(`Simulation de donation\n\nPlateforme en développement\n\nProjet: ${project?.name}\nMontant simulé: €${donAmount.toLocaleString()}\nRéduction d'impôt estimée: €${taxReduction.toLocaleString()} (${project?.taxBenefit.percentage}%)\nCoût réel estimé: €${(donAmount - taxReduction).toLocaleString()}\n\nNote: Aucune transaction réelle n'est encore possible.`);
   };
 
   return (
@@ -429,7 +429,7 @@ export function EcologicalConstructionDonations() {
             TechForAll Construction Écologique
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
-            Logements sociaux écologiques avec 75% de réduction d'impôt
+            Plateforme en développement - Logements sociaux écologiques avec 75% de réduction d'impôt
           </p>
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             <Badge variant="secondary" className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
@@ -640,10 +640,11 @@ export function EcologicalConstructionDonations() {
                     <Button 
                       size="sm"
                       onClick={() => makeDonation(project.id)}
-                      className="flex-1 bg-green-600 hover:bg-green-700"
+                      className="flex-1 bg-amber-600 hover:bg-amber-700"
+                      variant="outline"
                     >
-                      <Heart className="h-4 w-4 mr-1" />
-                      Donner
+                      <Calculator className="h-4 w-4 mr-1" />
+                      Simuler
                     </Button>
                   </div>
                 </CardContent>
@@ -702,26 +703,20 @@ export function EcologicalConstructionDonations() {
                 ))}
               </div>
 
-              <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-                <h4 className="font-semibold text-lg mb-4 text-center text-blue-800 dark:text-blue-200">
-                  🏆 Impact de Vos Dons
+              <div className="mt-8 bg-amber-50 dark:bg-amber-900/20 p-6 rounded-lg border border-amber-200">
+                <h4 className="font-semibold text-lg mb-4 text-center text-amber-800 dark:text-amber-200">
+                  ⚠️ Plateforme en Développement
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-blue-600">120+</div>
-                    <p className="text-sm text-blue-700">Familles relogées</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-green-600">80%</div>
-                    <p className="text-sm text-green-700">Économie énergétique</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-purple-600">-60%</div>
-                    <p className="text-sm text-purple-700">Émissions CO2</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-orange-600">25+</div>
-                    <p className="text-sm text-orange-700">Projets lancés</p>
+                <div className="text-center space-y-3">
+                  <p className="text-amber-700 dark:text-amber-300">
+                    Cette plateforme de collecte de dons pour la construction écologique est actuellement en phase de développement.
+                  </p>
+                  <p className="text-amber-600 dark:text-amber-400 text-sm">
+                    Aucune collecte de matériaux de construction n'est encore opérationnelle. 
+                    Les fonctionnalités présentées sont des prototypes en cours de finalisation.
+                  </p>
+                  <div className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded text-amber-800 dark:text-amber-200 text-sm">
+                    Phase actuelle : Conception et validation des processus de collecte
                   </div>
                 </div>
               </div>
@@ -837,11 +832,12 @@ export function EcologicalConstructionDonations() {
 
                 <div className="flex gap-4 pt-4">
                   <Button 
-                    className="flex-1 bg-green-600 hover:bg-green-700"
+                    className="flex-1 bg-amber-600 hover:bg-amber-700"
+                    variant="outline"
                     onClick={() => makeDonation(selectedProject.id)}
                   >
-                    <Heart className="h-4 w-4 mr-2" />
-                    Faire un Don
+                    <Calculator className="h-4 w-4 mr-2" />
+                    Simuler Don
                   </Button>
                   <Button variant="outline" className="flex-1">
                     <Download className="h-4 w-4 mr-2" />
