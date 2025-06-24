@@ -60,6 +60,7 @@ import InnovationRoadmapPage from "@/pages/InnovationRoadmap";
 import EmployeeTrainingPlatformPage from "@/pages/EmployeeTrainingPlatform";
 import MobileProfessionalSuitePage from "@/pages/MobileProfessionalSuite";
 import QuranListeningAppPage from "@/pages/QuranListeningApp";
+import EcologicalConstructionDonationsPage from "@/pages/EcologicalConstructionDonations";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -316,6 +317,9 @@ function Router() {
       <Route path="/coran-ecoute" component={QuranListeningAppPage} />
       <Route path="/quran-listening" component={QuranListeningAppPage} />
       <Route path="/saint-coran" component={QuranListeningAppPage} />
+      <Route path="/construction-ecologique" component={EcologicalConstructionDonationsPage} />
+      <Route path="/logements-sociaux" component={EcologicalConstructionDonationsPage} />
+      <Route path="/dons-construction" component={EcologicalConstructionDonationsPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />

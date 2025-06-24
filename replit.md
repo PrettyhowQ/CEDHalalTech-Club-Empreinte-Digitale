@@ -53,6 +53,13 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 
 ### TechForAll Donation Platform
 - **Solidary Commerce**: Refurbished technology marketplace
+- **Ecological Construction**: Social housing with 75% French tax benefits
+- **Construction Materials**: Eco-friendly building supplies donations
+- **Land Donations**: Constructible land for social projects
+- **Vehicle Donations**: Camping-cars, trucks, utility vehicles
+- **Heavy Equipment**: Excavators, mini-excavators, construction machinery
+- **Irrigation Systems**: Sustainable agriculture and gardening equipment
+- **Nautical Equipment**: Jet skis and marine safety equipment
 - **Donation Tracking**: Transparent impact measurement
 - **Geographic Coverage**: 25+ countries expansion plan
 
@@ -127,6 +134,7 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 - **Microservices**: Future modular architecture for individual services
 
 ## Changelog
+- June 24, 2025. TechForAll plateforme construction écologique avec avantages fiscaux 75% France
 - June 24, 2025. Application écoute du Coran intégrée dans CED Bank Mobile
 - June 24, 2025. Suite mobile professionnelle et formations employés créées
 - June 24, 2025. Comptes bancaires CED Bank et assurance Takaful créés pour équipe + direction
