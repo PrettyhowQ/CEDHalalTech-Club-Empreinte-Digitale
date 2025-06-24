@@ -68,7 +68,7 @@ const employees: EmployeeData[] = [
     service: "TechForAll & Costa del Sol",
     region: "Espagne & Europe",
     dateEmbauche: "2023-06-01",
-    salaire: 4500,
+    salaire: 6200,
     statusContrat: "cdi",
     compteBancaire: "ES91 2100 0418 4502 0005 1332",
     telephone: "+34 XXX XXX XXX",
@@ -84,7 +84,7 @@ const employees: EmployeeData[] = [
     service: "Santé & Bien-être",
     region: "International",
     dateEmbauche: "2023-03-15",
-    salaire: 5200,
+    salaire: 7200,
     statusContrat: "cdi",
     compteBancaire: "FR14 2004 1010 0505 0001 3M02 606",
     telephone: "+33 X XX XX XX XX",
@@ -100,7 +100,7 @@ const employees: EmployeeData[] = [
     service: "Secrétariat Brahim Yakoubi",
     region: "Espagne & Europe",
     dateEmbauche: "2024-12-01",
-    salaire: 3800,
+    salaire: 5500,
     statusContrat: "cdd",
     compteBancaire: "ES91 2100 0418 4502 0005 1333",
     telephone: "+34 XXX XXX XXX",
@@ -132,7 +132,7 @@ const employees: EmployeeData[] = [
     service: "Logistique Europe",
     region: "Europe",
     dateEmbauche: "2024-10-15",
-    salaire: 5800,
+    salaire: 7800,
     statusContrat: "cdi",
     compteBancaire: "DE89 3704 0044 0532 0130 00",
     telephone: "+49 XXX XXX XXXX",
@@ -154,37 +154,15 @@ export function TableauBordEquipe() {
   const totalSalaires = employees.reduce((sum, emp) => sum + emp.salaire, 0);
 
   const generatePaySlip = (employee: EmployeeData) => {
-    // Calculs selon standards suisses
+    // Tous les salaires aux standards suisses
     const getTaxRates = (region: string, salaire: number) => {
-      if (region.includes('Suisse')) {
-        return {
-          cotisationsSociales: 0.128, // AVS/AI/APG + AC + AANP
-          impots: salaire > 5000 ? 0.15 : 0.12, // Impôt à la source Suisse
-          assuranceMaladie: 350, // Montant fixe mensuel
-          net: salaire > 5000 ? 0.70 : 0.73
-        };
-      } else if (region.includes('France')) {
-        return {
-          cotisationsSociales: 0.23,
-          impots: 0.12,
-          assuranceMaladie: 0,
-          net: 0.65
-        };
-      } else if (region.includes('Espagne')) {
-        return {
-          cotisationsSociales: 0.067,
-          impots: 0.19,
-          assuranceMaladie: 0,
-          net: 0.74
-        };
-      } else { // Allemagne/Europe
-        return {
-          cotisationsSociales: 0.20,
-          impots: 0.25,
-          assuranceMaladie: 0,
-          net: 0.55
-        };
-      }
+      // Standards suisses appliqués à tous les employés
+      return {
+        cotisationsSociales: 0.128, // AVS/AI/APG + AC + AANP (12.8%)
+        impots: salaire > 6000 ? 0.15 : 0.12, // Impôt à la source Suisse
+        assuranceMaladie: 380, // Montant fixe mensuel assurance maladie
+        net: salaire > 6000 ? 0.69 : 0.72
+      };
     };
 
     const rates = getTaxRates(employee.region, employee.salaire);
@@ -201,14 +179,25 @@ export function TableauBordEquipe() {
       region: employee.region
     };
 
-    // Simulation génération fiche de paie
-    console.log('Génération fiche de paie standards suisses:', paySlipData);
-    alert(`Fiche de paie générée pour ${paySlipData.employe}
-Région: ${paySlipData.region}
-Salaire brut: €${paySlipData.salaireBrut}
-Cotisations: €${paySlipData.cotisationsSociales}
-Impôts: €${paySlipData.impots}
-${paySlipData.assuranceMaladie > 0 ? `Assurance maladie: €${paySlipData.assuranceMaladie}\n` : ''}Salaire net: €${paySlipData.salaireNet}`);
+    // Simulation génération fiche de paie standards suisses
+    console.log('Génération fiche de paie (Standards Suisses pour tous):', paySlipData);
+    alert(`FICHE DE PAIE - Standards Suisses
+    
+Employé: ${paySlipData.employe}
+Région d'activité: ${paySlipData.region}
+Période: ${paySlipData.periode}
+
+SALAIRE BRUT: CHF ${paySlipData.salaireBrut}
+
+DÉDUCTIONS:
+- Cotisations sociales (12.8%): CHF ${paySlipData.cotisationsSociales}
+- Impôts à la source: CHF ${paySlipData.impots}
+- Assurance maladie: CHF ${paySlipData.assuranceMaladie}
+
+SALAIRE NET: CHF ${paySlipData.salaireNet}
+
+Compte bancaire: ${paySlipData.compteBancaire}
+Conforme législation suisse`);
   };
 
   const getContractColor = (status: string) => {
@@ -274,7 +263,7 @@ ${paySlipData.assuranceMaladie > 0 ? `Assurance maladie: €${paySlipData.assura
               <Euro className="h-4 w-4" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">€{(totalSalaires / 1000).toFixed(0)}K</div>
+              <div className="text-2xl font-bold">CHF {(totalSalaires / 1000).toFixed(0)}K</div>
               <p className="text-xs text-green-100">Par mois</p>
             </CardContent>
           </Card>
@@ -388,7 +377,8 @@ ${paySlipData.assuranceMaladie > 0 ? `Assurance maladie: €${paySlipData.assura
                     {employee.salaire > 0 && (
                       <div className="flex items-center gap-2 text-sm">
                         <Euro className="h-4 w-4 text-gray-500" />
-                        <span className="font-semibold text-green-600">€{employee.salaire.toLocaleString()}/mois</span>
+                        <span className="font-semibold text-green-600">CHF {employee.salaire.toLocaleString()}/mois</span>
+                        <Badge variant="outline" className="text-xs bg-red-50 text-red-700">Standards 🇨🇭</Badge>
                       </div>
                     )}
                   </div>
@@ -485,7 +475,7 @@ ${paySlipData.assuranceMaladie > 0 ? `Assurance maladie: €${paySlipData.assura
                     <>
                       <div>
                         <span className="font-medium text-gray-500">Salaire:</span>
-                        <p className="font-semibold text-green-600">€{selectedEmployee.salaire.toLocaleString()}/mois</p>
+                        <p className="font-semibold text-green-600">CHF {selectedEmployee.salaire.toLocaleString()}/mois 🇨🇭</p>
                       </div>
                       <div>
                         <span className="font-medium text-gray-500">Compte bancaire:</span>
