@@ -50,6 +50,8 @@ import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
 import TechForAllLanding from "@/pages/TechForAllLanding";
 import VueEnsemble from "@/pages/VueEnsemble";
 import ContactComplet from "@/pages/ContactComplet";
+import TableauBordEquipePage from "@/pages/TableauBordEquipe";
+import TechForAllDashboardPage from "@/pages/TechForAllDashboard";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -280,6 +282,12 @@ function Router() {
       <Route path="/contact-complet" component={ContactComplet} />
       <Route path="/contacts-equipe" component={ContactComplet} />
       <Route path="/equipe-complete" component={ContactComplet} />
+      <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
+      <Route path="/gestion-equipe" component={TableauBordEquipePage} />
+      <Route path="/fiches-paie" component={TableauBordEquipePage} />
+      <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
+      <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
+      <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />
       <Route path="/contact" component={Contact} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />

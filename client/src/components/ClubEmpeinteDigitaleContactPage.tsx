@@ -97,6 +97,16 @@ const contacts: Contact[] = [
     status: "actif"
   },
   {
+    nom: "Kadjouf",
+    prenom: "Hanane",
+    fonction: "Secrétaire de Direction",
+    service: "Secrétariat Brahim Yakoubi",
+    email: "hanane.secretaire@empreintedigitale.club",
+    region: "Espagne & Europe",
+    specialite: ["Secrétariat", "Gestion administrative", "Coordination", "Support direction"],
+    status: "nouveau"
+  },
+  {
     nom: "Yakoubi Ozel",
     prenom: "Souheila",
     fonction: "Responsable Santé",
