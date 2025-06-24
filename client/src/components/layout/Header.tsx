@@ -36,6 +36,8 @@ export function Header() {
     { name: 'Investissements Dubaï', href: '/dubai-investments' },
     { name: 'Contacts Complets 👥', href: '/contact-complet', priority: true },
     { name: 'Gestion Équipe 👨‍💼', href: '/tableau-bord-equipe', priority: true, premium: true },
+    { name: 'Fiches de Paie 💰', href: '/fiches-paie', priority: true, premium: true },
+    { name: 'App Logistique 📱', href: '/app-logistique', priority: true, premium: true },
     { name: 'TechForAll Dashboard 📊', href: '/techforall-dashboard', priority: true, premium: true },
   ];
 

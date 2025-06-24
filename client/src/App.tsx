@@ -52,6 +52,8 @@ import VueEnsemble from "@/pages/VueEnsemble";
 import ContactComplet from "@/pages/ContactComplet";
 import TableauBordEquipePage from "@/pages/TableauBordEquipe";
 import TechForAllDashboardPage from "@/pages/TechForAllDashboard";
+import PaySlipGeneratorPage from "@/pages/PaySlipGenerator";
+import LogisticsAppPage from "@/pages/LogisticsApp";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -284,7 +286,12 @@ function Router() {
       <Route path="/equipe-complete" component={ContactComplet} />
       <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
       <Route path="/gestion-equipe" component={TableauBordEquipePage} />
-      <Route path="/fiches-paie" component={TableauBordEquipePage} />
+      <Route path="/fiches-paie" component={PaySlipGeneratorPage} />
+      <Route path="/generateur-fiches-paie" component={PaySlipGeneratorPage} />
+      <Route path="/payslip-generator" component={PaySlipGeneratorPage} />
+      <Route path="/app-logistique" component={LogisticsAppPage} />
+      <Route path="/logistics-app" component={LogisticsAppPage} />
+      <Route path="/mobile-logistique" component={LogisticsAppPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />
