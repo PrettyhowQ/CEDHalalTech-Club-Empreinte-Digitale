@@ -56,6 +56,7 @@ import PaySlipGeneratorPage from "@/pages/PaySlipGenerator";
 import LogisticsAppPage from "@/pages/LogisticsApp";
 import CEDBankAccountCreationPage from "@/pages/CEDBankAccountCreation";
 import AlAmanTakafulInsurancePage from "@/pages/AlAmanTakafulInsurance";
+import InnovationRoadmapPage from "@/pages/InnovationRoadmap";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -300,6 +301,9 @@ function Router() {
       <Route path="/al-aman-takaful" component={AlAmanTakafulInsurancePage} />
       <Route path="/assurance-takaful" component={AlAmanTakafulInsurancePage} />
       <Route path="/takaful-insurance" component={AlAmanTakafulInsurancePage} />
+      <Route path="/innovation-roadmap" component={InnovationRoadmapPage} />
+      <Route path="/roadmap-innovation" component={InnovationRoadmapPage} />
+      <Route path="/technologies-futures" component={InnovationRoadmapPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />
