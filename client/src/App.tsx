@@ -61,6 +61,12 @@ import EmployeeTrainingPlatformPage from "@/pages/EmployeeTrainingPlatform";
 import MobileProfessionalSuitePage from "@/pages/MobileProfessionalSuite";
 import QuranListeningAppPage from "@/pages/QuranListeningApp";
 import EcologicalConstructionDonationsPage from "@/pages/EcologicalConstructionDonations";
+import ShariaBoardCompliancePage from "@/pages/ShariaBoardCompliance";
+import BankingSecurityPage from "@/pages/BankingSecurity";
+import APIManagementPage from "@/pages/APIManagement";
+import MobileNativeAppsPage from "@/pages/MobileNativeApps";
+import AnalyticsAvanceesPage from "@/pages/AnalyticsAdvancees";
+import IntegrationsStrategiquesPage from "@/pages/IntegrationsStrategiques";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -320,6 +326,18 @@ function Router() {
       <Route path="/construction-ecologique" component={EcologicalConstructionDonationsPage} />
       <Route path="/logements-sociaux" component={EcologicalConstructionDonationsPage} />
       <Route path="/dons-construction" component={EcologicalConstructionDonationsPage} />
+      <Route path="/conseil-sharia" component={ShariaBoardCompliancePage} />
+      <Route path="/conformite-aaoifi" component={ShariaBoardCompliancePage} />
+      <Route path="/securite-bancaire" component={BankingSecurityPage} />
+      <Route path="/authentification-2fa" component={BankingSecurityPage} />
+      <Route path="/gestion-apis" component={APIManagementPage} />
+      <Route path="/apis-management" component={APIManagementPage} />
+      <Route path="/apps-natives" component={MobileNativeAppsPage} />
+      <Route path="/mobile-ios-android" component={MobileNativeAppsPage} />
+      <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
+      <Route path="/intelligence-artificielle" component={AnalyticsAvanceesPage} />
+      <Route path="/integrations-strategiques" component={IntegrationsStrategiquesPage} />
+      <Route path="/partenaires-apis" component={IntegrationsStrategiquesPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />

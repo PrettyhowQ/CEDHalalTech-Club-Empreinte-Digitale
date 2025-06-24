@@ -45,6 +45,12 @@ export function Header() {
     { name: 'Suite Mobile Pro 📱', href: '/suite-mobile-pro', priority: true, premium: true },
     { name: 'Écoute du Coran 📖', href: '/coran-ecoute', priority: true, premium: true },
     { name: 'Construction Écologique 🏠', href: '/construction-ecologique', priority: true, premium: true },
+    { name: 'Conseil Sharia 🕌', href: '/conseil-sharia', priority: true, premium: true },
+    { name: 'Sécurité Bancaire 🔐', href: '/securite-bancaire', priority: true, premium: true },
+    { name: 'Gestion APIs ⚡', href: '/gestion-apis', priority: true, premium: true },
+    { name: 'Apps Natives 📱', href: '/apps-natives', priority: true, premium: true },
+    { name: 'Analytics IA 🤖', href: '/analytics-avancees', priority: true, premium: true },
+    { name: 'Intégrations 🌐', href: '/integrations-strategiques', priority: true, premium: true },
     { name: 'TechForAll Dashboard 📊', href: '/techforall-dashboard', priority: true, premium: true },
   ];
 
