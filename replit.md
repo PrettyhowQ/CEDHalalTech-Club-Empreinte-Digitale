@@ -36,6 +36,8 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 - **Card Management**: 5-tier system (Essential to Royal)
 - **Prayer Mode**: Automatic transaction suspension during prayer times
 - **Qibla Compass**: GPS-based Mecca direction finder
+- **Quran Listening**: Integrated audio player with 8+ renowned reciters
+- **Spiritual Features**: Prayer time notifications and Islamic calendar
 
 ### AI Education Platform
 - **Super IARP Pro**: Multi-modal AI assistant supporting 78+ languages
@@ -125,6 +127,7 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 - **Microservices**: Future modular architecture for individual services
 
 ## Changelog
+- June 24, 2025. Application écoute du Coran intégrée dans CED Bank Mobile
 - June 24, 2025. Suite mobile professionnelle et formations employés créées
 - June 24, 2025. Comptes bancaires CED Bank et assurance Takaful créés pour équipe + direction
 - June 23, 2025. Initial setup

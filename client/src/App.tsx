@@ -59,6 +59,7 @@ import AlAmanTakafulInsurancePage from "@/pages/AlAmanTakafulInsurance";
 import InnovationRoadmapPage from "@/pages/InnovationRoadmap";
 import EmployeeTrainingPlatformPage from "@/pages/EmployeeTrainingPlatform";
 import MobileProfessionalSuitePage from "@/pages/MobileProfessionalSuite";
+import QuranListeningAppPage from "@/pages/QuranListeningApp";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -312,6 +313,9 @@ function Router() {
       <Route path="/suite-mobile-pro" component={MobileProfessionalSuitePage} />
       <Route path="/mobile-professional" component={MobileProfessionalSuitePage} />
       <Route path="/iphone-pro-max" component={MobileProfessionalSuitePage} />
+      <Route path="/coran-ecoute" component={QuranListeningAppPage} />
+      <Route path="/quran-listening" component={QuranListeningAppPage} />
+      <Route path="/saint-coran" component={QuranListeningAppPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />

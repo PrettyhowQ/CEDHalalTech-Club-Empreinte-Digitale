@@ -43,6 +43,7 @@ export function Header() {
     { name: 'Innovation Roadmap 🚀', href: '/innovation-roadmap', priority: true, premium: true },
     { name: 'Formation Employés 🎓', href: '/formation-employes', priority: true, premium: true },
     { name: 'Suite Mobile Pro 📱', href: '/suite-mobile-pro', priority: true, premium: true },
+    { name: 'Écoute du Coran 📖', href: '/coran-ecoute', priority: true, premium: true },
     { name: 'TechForAll Dashboard 📊', href: '/techforall-dashboard', priority: true, premium: true },
   ];
 
