@@ -15,6 +15,7 @@ export function Header() {
   const { currentLanguage } = useLanguage();
 
   const navigation = [
+    { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
     { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },
     { name: 'CED Bank 🏦', href: '/banque', priority: true },
     { name: 'Al-Aman CED Takaful 🛡️', href: '/al-aman-ced-prototype', priority: true, premium: true },

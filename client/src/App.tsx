@@ -48,6 +48,7 @@ import CostaDelSol from "@/pages/CostaDelSol";
 import YakoubiStore from "@/pages/YakoubiStore";
 import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
 import TechForAllLanding from "@/pages/TechForAllLanding";
+import VueEnsemble from "@/pages/VueEnsemble";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
