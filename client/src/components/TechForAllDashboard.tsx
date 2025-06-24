@@ -24,6 +24,7 @@ import {
   HardDrive
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CEDFooter } from './CEDFooter';
 
 interface TechForAllMetrics {
   totalBeneficiaires: number;
@@ -531,6 +532,8 @@ export function TechForAllDashboard() {
           </Card>
         </motion.section>
       </div>
+      
+      <CEDFooter />
     </div>
   );
 }

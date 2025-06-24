@@ -22,6 +22,7 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CEDFooter } from './CEDFooter';
 
 interface LogisticsTask {
   id: string;
@@ -400,6 +401,8 @@ export function LogisticsApp() {
           </Card>
         </motion.div>
       </div>
+      
+      <CEDFooter />
     </div>
   );
 }

@@ -23,6 +23,7 @@ import {
   UserCheck
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CEDFooter } from './CEDFooter';
 
 interface EmployeeData {
   id: string;
@@ -549,6 +550,8 @@ Conforme législation suisse`);
           </Card>
         </motion.section>
       </div>
+      
+      <CEDFooter />
     </div>
   );
 }

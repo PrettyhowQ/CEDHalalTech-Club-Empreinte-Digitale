@@ -20,6 +20,7 @@ import {
   Mail
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CEDFooter } from './CEDFooter';
 
 interface PaySlipData {
   employeId: string;
@@ -601,6 +602,8 @@ Le fichier PDF sera disponible dans l'application mobile logistique de l'employ√
           </Card>
         </motion.section>
       </div>
+      
+      <CEDFooter />
     </div>
   );
 }

@@ -34,6 +34,7 @@ import {
   Activity
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CEDFooter } from './CEDFooter';
 
 interface EcosystemMetrics {
   totalUsers: number;
@@ -701,6 +702,8 @@ export function VueEnsembleCED() {
           </Card>
         </motion.div>
       </div>
+      
+      <CEDFooter />
     </div>
   );
 }

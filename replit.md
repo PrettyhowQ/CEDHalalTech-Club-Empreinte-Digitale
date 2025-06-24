@@ -122,3 +122,10 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+### Protection Intellectuelle
+- Footer de protection Yakoubi Yamina obligatoire sur toutes les pages
+- Traçabilité numérique activée sur tous composants
+- Code propriétaire exclusif - aucune reproduction autorisée
+- Conformité RGPD/LPD avec hébergement sécurisé Suisse
+- Usage exclusif réservé à l'écosystème CED & PrettyhowQ
