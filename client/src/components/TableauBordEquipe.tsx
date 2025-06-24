@@ -68,7 +68,7 @@ const employees: EmployeeData[] = [
     service: "TechForAll & Costa del Sol",
     region: "Espagne & Europe",
     dateEmbauche: "2023-06-01",
-    salaire: 2800,
+    salaire: 4500,
     statusContrat: "cdi",
     compteBancaire: "ES91 2100 0418 4502 0005 1332",
     telephone: "+34 XXX XXX XXX",
@@ -84,7 +84,7 @@ const employees: EmployeeData[] = [
     service: "Santé & Bien-être",
     region: "International",
     dateEmbauche: "2023-03-15",
-    salaire: 3200,
+    salaire: 5200,
     statusContrat: "cdi",
     compteBancaire: "FR14 2004 1010 0505 0001 3M02 606",
     telephone: "+33 X XX XX XX XX",
@@ -100,7 +100,7 @@ const employees: EmployeeData[] = [
     service: "Secrétariat Brahim Yakoubi",
     region: "Espagne & Europe",
     dateEmbauche: "2024-12-01",
-    salaire: 2200,
+    salaire: 3800,
     statusContrat: "cdd",
     compteBancaire: "ES91 2100 0418 4502 0005 1333",
     telephone: "+34 XXX XXX XXX",
@@ -116,7 +116,7 @@ const employees: EmployeeData[] = [
     service: "Logistique Suisse",
     region: "Suisse",
     dateEmbauche: "2024-11-01",
-    salaire: 4200,
+    salaire: 6500,
     statusContrat: "cdi",
     compteBancaire: "CH93 0076 2011 6238 5295 8",
     telephone: "+41 XX XXX XX XX",
@@ -132,7 +132,7 @@ const employees: EmployeeData[] = [
     service: "Logistique Europe",
     region: "Europe",
     dateEmbauche: "2024-10-15",
-    salaire: 3800,
+    salaire: 5800,
     statusContrat: "cdi",
     compteBancaire: "DE89 3704 0044 0532 0130 00",
     telephone: "+49 XXX XXX XXXX",
@@ -154,20 +154,61 @@ export function TableauBordEquipe() {
   const totalSalaires = employees.reduce((sum, emp) => sum + emp.salaire, 0);
 
   const generatePaySlip = (employee: EmployeeData) => {
+    // Calculs selon standards suisses
+    const getTaxRates = (region: string, salaire: number) => {
+      if (region.includes('Suisse')) {
+        return {
+          cotisationsSociales: 0.128, // AVS/AI/APG + AC + AANP
+          impots: salaire > 5000 ? 0.15 : 0.12, // Impôt à la source Suisse
+          assuranceMaladie: 350, // Montant fixe mensuel
+          net: salaire > 5000 ? 0.70 : 0.73
+        };
+      } else if (region.includes('France')) {
+        return {
+          cotisationsSociales: 0.23,
+          impots: 0.12,
+          assuranceMaladie: 0,
+          net: 0.65
+        };
+      } else if (region.includes('Espagne')) {
+        return {
+          cotisationsSociales: 0.067,
+          impots: 0.19,
+          assuranceMaladie: 0,
+          net: 0.74
+        };
+      } else { // Allemagne/Europe
+        return {
+          cotisationsSociales: 0.20,
+          impots: 0.25,
+          assuranceMaladie: 0,
+          net: 0.55
+        };
+      }
+    };
+
+    const rates = getTaxRates(employee.region, employee.salaire);
     const paySlipData = {
       employe: `${employee.prenom} ${employee.nom}`,
       numero: employee.numero,
       periode: new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }),
       salaireBrut: employee.salaire,
-      cotisationsSociales: Math.round(employee.salaire * 0.23),
-      impots: Math.round(employee.salaire * 0.12),
-      salaireNet: Math.round(employee.salaire * 0.65),
-      compteBancaire: employee.compteBancaire
+      cotisationsSociales: Math.round(employee.salaire * rates.cotisationsSociales),
+      impots: Math.round(employee.salaire * rates.impots),
+      assuranceMaladie: rates.assuranceMaladie,
+      salaireNet: Math.round(employee.salaire * rates.net - rates.assuranceMaladie),
+      compteBancaire: employee.compteBancaire,
+      region: employee.region
     };
 
     // Simulation génération fiche de paie
-    console.log('Génération fiche de paie pour:', paySlipData);
-    alert(`Fiche de paie générée pour ${paySlipData.employe}\nSalaire net: €${paySlipData.salaireNet}`);
+    console.log('Génération fiche de paie standards suisses:', paySlipData);
+    alert(`Fiche de paie générée pour ${paySlipData.employe}
+Région: ${paySlipData.region}
+Salaire brut: €${paySlipData.salaireBrut}
+Cotisations: €${paySlipData.cotisationsSociales}
+Impôts: €${paySlipData.impots}
+${paySlipData.assuranceMaladie > 0 ? `Assurance maladie: €${paySlipData.assuranceMaladie}\n` : ''}Salaire net: €${paySlipData.salaireNet}`);
   };
 
   const getContractColor = (status: string) => {
