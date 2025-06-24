@@ -54,6 +54,7 @@ import TableauBordEquipePage from "@/pages/TableauBordEquipe";
 import TechForAllDashboardPage from "@/pages/TechForAllDashboard";
 import PaySlipGeneratorPage from "@/pages/PaySlipGenerator";
 import LogisticsAppPage from "@/pages/LogisticsApp";
+import CEDBankAccountCreationPage from "@/pages/CEDBankAccountCreation";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -292,6 +293,9 @@ function Router() {
       <Route path="/app-logistique" component={LogisticsAppPage} />
       <Route path="/logistics-app" component={LogisticsAppPage} />
       <Route path="/mobile-logistique" component={LogisticsAppPage} />
+      <Route path="/ced-bank-comptes" component={CEDBankAccountCreationPage} />
+      <Route path="/comptes-bancaires" component={CEDBankAccountCreationPage} />
+      <Route path="/bank-accounts" component={CEDBankAccountCreationPage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />
