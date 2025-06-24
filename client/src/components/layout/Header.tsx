@@ -41,6 +41,8 @@ export function Header() {
     { name: 'CED Bank Comptes 🏛️', href: '/ced-bank-comptes', priority: true, premium: true },
     { name: 'Al-Aman Takaful 🛡️', href: '/al-aman-takaful', priority: true, premium: true },
     { name: 'Innovation Roadmap 🚀', href: '/innovation-roadmap', priority: true, premium: true },
+    { name: 'Formation Employés 🎓', href: '/formation-employes', priority: true, premium: true },
+    { name: 'Suite Mobile Pro 📱', href: '/suite-mobile-pro', priority: true, premium: true },
     { name: 'TechForAll Dashboard 📊', href: '/techforall-dashboard', priority: true, premium: true },
   ];
 

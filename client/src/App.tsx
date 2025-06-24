@@ -57,6 +57,8 @@ import LogisticsAppPage from "@/pages/LogisticsApp";
 import CEDBankAccountCreationPage from "@/pages/CEDBankAccountCreation";
 import AlAmanTakafulInsurancePage from "@/pages/AlAmanTakafulInsurance";
 import InnovationRoadmapPage from "@/pages/InnovationRoadmap";
+import EmployeeTrainingPlatformPage from "@/pages/EmployeeTrainingPlatform";
+import MobileProfessionalSuitePage from "@/pages/MobileProfessionalSuite";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
 import DreamSimulator from "@/pages/DreamSimulator";
 import AIGeneratorsMobile from "@/pages/AIGeneratorsMobile";
@@ -304,6 +306,12 @@ function Router() {
       <Route path="/innovation-roadmap" component={InnovationRoadmapPage} />
       <Route path="/roadmap-innovation" component={InnovationRoadmapPage} />
       <Route path="/technologies-futures" component={InnovationRoadmapPage} />
+      <Route path="/formation-employes" component={EmployeeTrainingPlatformPage} />
+      <Route path="/employee-training" component={EmployeeTrainingPlatformPage} />
+      <Route path="/formations-continues" component={EmployeeTrainingPlatformPage} />
+      <Route path="/suite-mobile-pro" component={MobileProfessionalSuitePage} />
+      <Route path="/mobile-professional" component={MobileProfessionalSuitePage} />
+      <Route path="/iphone-pro-max" component={MobileProfessionalSuitePage} />
       <Route path="/techforall-dashboard" component={TechForAllDashboardPage} />
       <Route path="/dashboard-techforall" component={TechForAllDashboardPage} />
       <Route path="/boutique-solidaire-dashboard" component={TechForAllDashboardPage} />
