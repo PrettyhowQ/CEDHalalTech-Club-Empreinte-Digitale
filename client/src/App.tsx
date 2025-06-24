@@ -295,18 +295,18 @@ function Router() {
       <Route path="/legal/conditions" component={FAQ} />
       <Route path="/legal/cookies" component={FAQ} />
 
+      {/* Main home page accessible to everyone */}
+      <Route path="/" component={Home} />
+      
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (
         <>
-          <Route path="/" component={Home} />
           <Route path="/dashboard" component={Dashboard} />
         </>
       )}
 
-      {/* Landing page for non-authenticated users */}
-      {(!isAuthenticated || isLoading) && (
-        <Route path="/" component={Landing} />
-      )}
+      {/* Alternative landing page */}
+      <Route path="/landing" component={Landing} />
 
       {/* 404 fallback */}
       <Route component={NotFound} />
