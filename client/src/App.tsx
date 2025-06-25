@@ -115,6 +115,8 @@ import OperationalCompliancePage from "@/pages/OperationalCompliancePage";
 import IslamicAuditPage from "@/pages/IslamicAuditPage";
 import Sharia100CompletePage from "@/pages/Sharia100CompletePage";
 import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
+import ParentAccountsPage from "@/pages/ParentAccountsPage";
+import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -434,6 +436,16 @@ function Router() {
       <Route path="/satellite-prayer-sync" component={SatellitePrayerSyncPage} />
       <Route path="/synchronisation-priere" component={SatellitePrayerSyncPage} />
       <Route path="/prayer-satellite" component={SatellitePrayerSyncPage} />
+      
+      {/* Comptes famille */}
+      <Route path="/parent-accounts" component={ParentAccountsPage} />
+      <Route path="/comptes-parents" component={ParentAccountsPage} />
+      <Route path="/famille-yakoubi" component={ParentAccountsPage} />
+      
+      {/* Comparaison banques */}
+      <Route path="/banking-comparison" component={IslamicBankingComparisonPage} />
+      <Route path="/comparaison-banques" component={IslamicBankingComparisonPage} />
+      <Route path="/concurrence-islamique" component={IslamicBankingComparisonPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
