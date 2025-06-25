@@ -204,7 +204,7 @@ const employees: Employee[] = [
   },
   {
     id: 'emp-006',
-    name: 'Hanaé Ozel',
+    name: 'Hanaé-Denise Ozel',
     role: 'Fille & Héritière Désignée (Juridique & Paie)',
     salary: 7200,
     currency: 'CHF',

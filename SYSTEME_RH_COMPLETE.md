@@ -38,7 +38,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 
 ### 👨‍👩‍👧‍👦 Héritage Familial et Succession
 
-**Hanaé Ozel - Fille et Héritière Désignée (Juridique & Paie)**
+**Hanaé-Denise Ozel - Fille et Héritière Désignée (Juridique & Paie)**
 - **Statut familial**: Fille de Yakoubi Yamina, héritière désignée
 - **Responsabilités**: Secteur JURIDIQUE et FICHES DE PAIE
 - **Formation**: Droit du travail, gestion paie, conformité légale
@@ -48,7 +48,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 
 **Vision Multigénérationnelle**:
 - **Génération 1**: Yakoubi Yamina (Fondatrice) - Décisionnaire unique
-- **Génération 2**: Souheila (Santé) + Hanaé (Juridique) - Héritières
+- **Génération 2**: Souheila (Santé) + Hanaé-Denise (Juridique) - Héritières
 - **Génération 3**: Enfants de Souheila et Hanaé - Futures dirigeantes
 - **Pérennité**: Écosystème conçu pour traverser les générations
 
@@ -291,7 +291,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 **Équipe Actuelle** (8 personnes):
 - **Yakoubi Yamina** (CEO): Direction générale
 - **Souheila Yakoubi Ozel** (Héritière Santé): CHF 7,200/mois
-- **Hanaé Ozel** (Héritière Juridique): CHF 7,200/mois
+- **Hanaé-Denise Ozel** (Héritière Juridique): CHF 7,200/mois
 - **Brahim Yakoubi** (Gestionnaire TechForAll): CHF 6,200/mois
 - **Yakoubi Karim** (Logistique Europe): CHF 6,800/mois
 - **Yakoubi Aziz** (Logistique Suisse): CHF 6,500/mois

@@ -135,6 +135,7 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 
 ## Changelog
 - December 25, 2024. Système RH complet intégré avec Code du travail suisse, contrats automatisés, IA juridique consultable, gestion équipe avec salaires et périodes d'essai
+- December 25, 2024. Structure familiale clarifiée: Yakoubi Yamina décisionnaire unique avec filles Souheila Yakoubi-Ozel et Hanaé-Denise Ozel comme héritières
 - June 25, 2025. FINAL: Écosystème CED Bank 100% complet et opérationnel - Tous standards bancaires internationaux respectés
 - June 24, 2025. Systèmes complets développés : Conseil Sharia AAOIFI, Sécurité bancaire 2FA, APIs management, Apps natives iOS/Android, Analytics IA avancées, Intégrations stratégiques
 - June 24, 2025. TechForAll plateforme construction écologique en développement (pas encore opérationnelle pour collecte)
@@ -149,11 +150,11 @@ Preferred communication style: Simple, everyday language.
 
 ### Structure Familiale et Succession
 - **Yakoubi Yamina**: Dirigeante unique, seule personne qui décide de tout
-- **Succession planifiée**: Héritage à ses filles Souheila Yakoubi-Ozel et Hanaé Ozel  
+- **Succession planifiée**: Héritage à ses filles Souheila Yakoubi-Ozel et Hanaé-Denise Ozel  
 - **Vision multigénérationnelle**: Écosystème transmis de mère en filles puis aux petits-enfants
 - **Rôles spécialisés**: 
   - Souheila: Secteur SANTÉ + co-direction
-  - Hanaé: Secteur JURIDIQUE + fiches de paie
+  - Hanaé-Denise: Secteur JURIDIQUE + fiches de paie
   - Brahim: Gestion opérationnelle TechForAll + boutique Costa del Sol (sous supervision Yakoubi Yamina)
   - Yakoubi Karim: Logistique européenne (Paris)
   - Yakoubi Aziz: Logistique Suisse (Berne)
