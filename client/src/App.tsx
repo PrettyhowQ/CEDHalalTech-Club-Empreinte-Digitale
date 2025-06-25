@@ -109,6 +109,10 @@ import CryptoShariaPage from "@/pages/CryptoShariaPage";
 import IslamicDeFiPage from "@/pages/IslamicDeFiPage";
 import TestDashboardPage from "@/pages/TestDashboardPage";
 import ShariaComplianceAnalysisPage from "@/pages/ShariaComplianceAnalysisPage";
+import ShariaGovernancePage from "@/pages/ShariaGovernancePage";
+import PurificationSystemPage from "@/pages/PurificationSystemPage";
+import OperationalCompliancePage from "@/pages/OperationalCompliancePage";
+import IslamicAuditPage from "@/pages/IslamicAuditPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -408,6 +412,16 @@ function Router() {
       <Route path="/sharia-compliance-100" component={ShariaComplianceAnalysisPage} />
       <Route path="/conformite-sharia-100" component={ShariaComplianceAnalysisPage} />
       <Route path="/analyse-conformite-complete" component={ShariaComplianceAnalysisPage} />
+      
+      {/* Modules conformité 100% */}
+      <Route path="/sharia-governance" component={ShariaGovernancePage} />
+      <Route path="/conseil-sharia-permanent" component={ShariaGovernancePage} />
+      <Route path="/purification-system" component={PurificationSystemPage} />
+      <Route path="/systeme-purification" component={PurificationSystemPage} />
+      <Route path="/operational-compliance" component={OperationalCompliancePage} />
+      <Route path="/conformite-operationnelle" component={OperationalCompliancePage} />
+      <Route path="/islamic-audit" component={IslamicAuditPage} />
+      <Route path="/audit-islamique" component={IslamicAuditPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
