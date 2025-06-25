@@ -1,0 +1,29 @@
+<footer style="background-color: #f8f8f8; padding: 2em 1em; font-family: 'Segoe UI', sans-serif; font-size: 0.9rem; color: #444; text-align: center; line-height: 1.7; border-top: 1px solid #ddd;">
+  <p style="margin-bottom: 0.5em;">
+    <strong>© Yakoubi Yamina</strong> – Tous droits réservés | All rights reserved | <span dir="rtl">جميع الحقوق محفوظة</span> | 版权所有
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    Conforme RGPD 🇪🇺 & LPD 🇨🇭 · Hébergement sécurisé en <strong>Suisse</strong> · Données confidentielles protégées
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    Projet confidentiel – <strong>Traçabilité numérique activée</strong> – Usage exclusif réservé à l’écosystème <strong>CED & PrettyhowQ</strong>
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    Ce projet, son contenu, son code, ses idées, ses visuels, ses textes et sa structure sont la propriété exclusive de <strong>Yakoubi Yamina</strong>.
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    Toute reproduction, diffusion, extraction, adaptation, modification ou exploitation – totale ou partielle – sans autorisation écrite préalable est strictement interdite et fera l'objet de poursuites judiciaires conformément au <strong>Code de la propriété intellectuelle</strong> (France / Europe / International).
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    Ce dépôt n'est <strong>ni open source</strong>, ni destiné à un usage public ou commercial sans accord express préalable.
+  </p>
+  <p style="margin-bottom: 0.5em;">
+    📌 Version non publique – Dépôt en cours 📎
+  </p>
+  <p style="margin-bottom: 0;">
+    Pour toute demande d’autorisation :<br>
+    <a href="mailto:swissyakoubidev.ch@ik.me" style="color: #0066cc; text-decoration: none;">swissyakoubidev.ch@ik.me</a> &nbsp;·&nbsp;
+    <a href="mailto:yakoubi.yamina@ik.me" style="color: #0066cc; text-decoration: none;">yakoubi.yamina@ik.me</a> &nbsp;·&nbsp;
+    <a href="mailto:contact@empreintedigitale.club" style="color: #0066cc; text-decoration: none;">contact@empreintedigitale.club</a>
+  </p>
+</footer>

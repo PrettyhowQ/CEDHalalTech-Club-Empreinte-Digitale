@@ -94,6 +94,7 @@ import { IslamicMarketPartnership } from "@/components/IslamicMarketPartnership"
 import { IslamicGovernance } from "@/components/IslamicGovernance";
 import { AlAmanCEDPrototype } from "@/components/AlAmanCEDPrototype";
 import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
+import HRManagementPage from "@/pages/HRManagement";
 import NotFound from "@/pages/not-found";
 
 function Router() {

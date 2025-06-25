@@ -134,6 +134,7 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 - **Microservices**: Future modular architecture for individual services
 
 ## Changelog
+- December 25, 2024. Système RH complet intégré avec Code du travail suisse, contrats automatisés, IA juridique consultable, gestion équipe avec salaires et périodes d'essai
 - June 25, 2025. FINAL: Écosystème CED Bank 100% complet et opérationnel - Tous standards bancaires internationaux respectés
 - June 24, 2025. Systèmes complets développés : Conseil Sharia AAOIFI, Sécurité bancaire 2FA, APIs management, Apps natives iOS/Android, Analytics IA avancées, Intégrations stratégiques
 - June 24, 2025. TechForAll plateforme construction écologique en développement (pas encore opérationnelle pour collecte)
