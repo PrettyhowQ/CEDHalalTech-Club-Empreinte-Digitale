@@ -22,7 +22,9 @@ import {
   BarChart3,
   Calendar,
   Bookmark,
-  Star
+  Star,
+  TrendingUp,
+  TrendingDown
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
-  Mosque, 
+  Building2, 
   CheckCircle, 
   AlertTriangle, 
   Clock,
@@ -219,7 +219,7 @@ export function ShariaComplianceAnalysis() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-gold-500 rounded-lg flex items-center justify-center">
-              <Mosque className="h-10 w-10 text-white" />
+              <Building2 className="h-10 w-10 text-white" />
             </div>
             <div>
               <h1 className="text-4xl font-bold">تحليل الامتثال الشرعي ١٠٠٪</h1>
