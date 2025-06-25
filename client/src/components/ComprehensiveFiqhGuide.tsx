@@ -530,7 +530,7 @@ export default function ComprehensiveFiqhGuide() {
                             <div className="flex items-start justify-between mb-3">
                               <div>
                                 <h5 className="font-semibold text-lg flex items-center gap-2">
-                                  <Award className="w-5 h-5 text-amber-500" />
+                                  <Star className="w-5 h-5 text-amber-500" />
                                   Université Al-Azhar
                                 </h5>
                                 <p className="text-sm text-gray-600">جامعة الأزهر • Fondée en 970 CE</p>
