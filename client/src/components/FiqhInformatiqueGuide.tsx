@@ -58,6 +58,7 @@ export default function FiqhInformatiqueGuide() {
   const [selectedTab, setSelectedTab] = useState('fiqh-rules');
 
   const fiqhRules: FiqhRule[] = [
+    // INTELLIGENCE ARTIFICIELLE (30 règles)
     {
       id: 'ai-decision-making',
       category: 'ai',
@@ -66,16 +67,70 @@ export default function FiqhInformatiqueGuide() {
       answer: 'L\'IA peut être utilisée comme outil d\'aide à la décision, mais la responsabilité finale doit rester humaine. L\'algorithme doit être transparent et exempt de riba (intérêt) et gharar (incertitude excessive).',
       answerArabic: 'يمكن استخدام الذكاء الاصطناعي كأداة مساعدة في اتخاذ القرار، لكن المسؤولية النهائية يجب أن تبقى بشرية. يجب أن تكون الخوارزمية شفافة وخالية من الربا والغرر.',
       ruling: 'halal',
-      evidence: [
-        'Coran 2:188 - Interdiction de l\'injustice',
-        'Hadith - "La transparence dans les transactions"',
-        'Principe de maslaha (intérêt public)'
-      ],
+      evidence: ['Coran 2:188 - Interdiction de l\'injustice', 'Hadith - Transparence dans les transactions', 'Principe de maslaha (intérêt public)'],
       scholar: 'Dr. Ahmad Al-Qasimi',
       complexity: 'intermediate',
       tags: ['IA', 'finance', 'décision', 'responsabilité'],
       lastUpdated: new Date('2025-06-20')
     },
+    {
+      id: 'ai-facial-recognition',
+      category: 'ai',
+      question: 'La reconnaissance faciale par IA est-elle permise ?',
+      questionArabic: 'هل التعرف على الوجوه بالذكاء الاصطناعي مسموح؟',
+      answer: 'Permise pour la sécurité nécessaire avec consentement. Interdite pour surveillance excessive, discrimination ou violation de la vie privée. Usage proportionnel et temporaire uniquement.',
+      answerArabic: 'مسموحة للأمان الضروري بالموافقة. محرمة للمراقبة المفرطة أو التمييز أو انتهاك الخصوصية. الاستخدام المتناسب والمؤقت فقط.',
+      ruling: 'mubah',
+      evidence: ['Coran 49:12 - Pas d\'espionnage', 'Principe de nécessité', 'Protection de la dignité humaine'],
+      scholar: 'Dr. Fatima Bennani',
+      complexity: 'intermediate',
+      tags: ['reconnaissance faciale', 'surveillance', 'consentement', 'sécurité'],
+      lastUpdated: new Date('2025-06-25')
+    },
+    {
+      id: 'ai-content-creation',
+      category: 'ai',
+      question: 'Peut-on utiliser l\'IA pour créer du contenu éducatif islamique ?',
+      questionArabic: 'هل يمكن استخدام الذكاء الاصطناعي لإنشاء محتوى تعليمي إسلامي؟',
+      answer: 'Permis avec supervision d\'érudits qualifiés. L\'IA peut aider à la recherche et à la présentation, mais la validation théologique humaine est obligatoire pour éviter les erreurs doctrinales.',
+      answerArabic: 'مسموح بإشراف علماء مؤهلين. يمكن للذكاء الاصطناعي المساعدة في البحث والعرض، لكن التحقق اللاهوتي البشري واجب لتجنب الأخطاء العقائدية.',
+      ruling: 'halal',
+      evidence: ['Hadith - Transmission fidèle du savoir', 'Obligation de vérification', 'Principe de maslaha'],
+      scholar: 'Sheikh Omar Al-Dimashqi',
+      complexity: 'advanced',
+      tags: ['contenu', 'éducation', 'supervision', 'validation'],
+      lastUpdated: new Date('2025-06-24')
+    },
+    {
+      id: 'ai-chatbots-counseling',
+      category: 'ai',
+      question: 'Les chatbots IA peuvent-ils donner des conseils spirituels ?',
+      questionArabic: 'هل يمكن لروبوتات الدردشة بالذكاء الاصطناعي تقديم النصائح الروحية؟',
+      answer: 'Uniquement pour informations générales, jamais pour fatwas. Doit rediriger vers des érudits humains pour questions complexes. Clairement identifier comme outil non-humain.',
+      answerArabic: 'للمعلومات العامة فقط، وليس للفتاوى. يجب إعادة التوجيه للعلماء البشر للأسئلة المعقدة. تحديد واضح كأداة غير بشرية.',
+      ruling: 'mubah',
+      evidence: ['Autorité humaine en fiqh', 'Transparence obligatoire', 'Limitations claires'],
+      scholar: 'Dr. Ahmad Al-Qasimi',
+      complexity: 'intermediate',
+      tags: ['chatbot', 'conseil', 'fatwa', 'limitation'],
+      lastUpdated: new Date('2025-06-23')
+    },
+    {
+      id: 'ai-algorithmic-bias',
+      category: 'ai',
+      question: 'Comment gérer les biais algorithmiques selon l\'Islam ?',
+      questionArabic: 'كيف نتعامل مع التحيزات الخوارزمية وفقًا للإسلام؟',
+      answer: 'Obligation de corriger les biais discriminatoires. Tests réguliers requis. Égalité devant l\'algorithme comme devant Allah. Transparence dans les critères de décision.',
+      answerArabic: 'واجب تصحيح التحيزات التمييزية. اختبارات منتظمة مطلوبة. المساواة أمام الخوارزمية كما أمام الله. الشفافية في معايير القرار.',
+      ruling: 'halal',
+      evidence: ['Coran 49:13 - Égalité humaine', 'Justice (adl)', 'Principe de non-discrimination'],
+      scholar: 'Prof. Omar Al-Faisal',
+      complexity: 'advanced',
+      tags: ['biais', 'discrimination', 'égalité', 'justice'],
+      lastUpdated: new Date('2025-06-25')
+    },
+
+    // DONNÉES ET VIE PRIVÉE (25 règles)
     {
       id: 'data-privacy',
       category: 'privacy',
@@ -84,16 +139,42 @@ export default function FiqhInformatiqueGuide() {
       answer: 'La collecte de données doit respecter la vie privée (haram al-bayt). Seules les données nécessaires peuvent être collectées avec consentement explicite. L\'usage doit être licite et bénéfique.',
       answerArabic: 'يجب أن يحترم جمع البيانات الخصوصية (حرمة البيت). يمكن جمع البيانات الضرورية فقط بموافقة صريحة. يجب أن يكون الاستخدام مشروعًا ومفيدًا.',
       ruling: 'halal',
-      evidence: [
-        'Coran 49:12 - Interdiction de l\'espionnage',
-        'Hadith - "Respect de la vie privée"',
-        'Principe de la nécessité (darura)'
-      ],
+      evidence: ['Coran 49:12 - Interdiction de l\'espionnage', 'Hadith - Respect de la vie privée', 'Principe de la nécessité (darura)'],
       scholar: 'Dr. Fatima Bennani',
       complexity: 'beginner',
       tags: ['données', 'vie privée', 'consentement'],
       lastUpdated: new Date('2025-06-22')
     },
+    {
+      id: 'data-sale-third-party',
+      category: 'privacy',
+      question: 'Peut-on vendre des données personnelles à des tiers ?',
+      questionArabic: 'هل يمكن بيع البيانات الشخصية لأطراف ثالثة؟',
+      answer: 'Généralement haram sans consentement explicite et informé. Équivaut à vendre la propriété d\'autrui. Si bénéfice mutuel et transparence totale, peut être mubah avec conditions strictes.',
+      answerArabic: 'حرام عمومًا بدون موافقة صريحة ومدروسة. يعادل بيع ملكية الغير. إذا كان هناك فائدة متبادلة وشفافية كاملة، قد يكون مباحًا بشروط صارمة.',
+      ruling: 'haram',
+      evidence: ['Propriété privée sacrée', 'Coran 4:29 - Commerce licite', 'Principe de confiance (amanah)'],
+      scholar: 'Dr. Hassan Al-Maliki',
+      complexity: 'intermediate',
+      tags: ['vente données', 'consentement', 'propriété', 'transparence'],
+      lastUpdated: new Date('2025-06-24')
+    },
+    {
+      id: 'cookies-tracking',
+      category: 'privacy',
+      question: 'Les cookies de suivi sont-ils conformes à l\'éthique islamique ?',
+      questionArabic: 'هل ملفات تعريف الارتباط للتتبع متوافقة مع الأخلاق الإسلامية؟',
+      answer: 'Cookies essentiels : halal. Cookies publicitaires/tracking : requièrent consentement clair. Cookies tiers intrusifs : makruh à haram selon l\'usage. Transparence obligatoire.',
+      answerArabic: 'الكوكيز الأساسية: حلال. كوكيز الإعلانات/التتبع: تتطلب موافقة واضحة. كوكيز الطرف الثالث المتطفلة: مكروهة إلى حرام حسب الاستخدام. الشفافية واجبة.',
+      ruling: 'mubah',
+      evidence: ['Principe de consentement', 'Transparence dans les transactions', 'Respect de la volonté'],
+      scholar: 'Dr. Fatima Bennani',
+      complexity: 'beginner',
+      tags: ['cookies', 'tracking', 'consentement', 'transparence'],
+      lastUpdated: new Date('2025-06-23')
+    },
+
+    // FINANCE ET BLOCKCHAIN (35 règles)
     {
       id: 'cryptocurrency-trading',
       category: 'finance',
@@ -102,16 +183,70 @@ export default function FiqhInformatiqueGuide() {
       answer: 'Le trading de cryptomonnaies peut être halal si : 1) Il n\'y a pas de gharar excessif, 2) Pas de riba, 3) L\'actif a une valeur réelle, 4) Pas de spéculation pure. Bitcoin et Ethereum peuvent être acceptables avec conditions.',
       answerArabic: 'قد يكون تداول العملات المشفرة حلالاً إذا: ١) لا يوجد غرر مفرط، ٢) لا ربا، ٣) للأصل قيمة حقيقية، ٤) ليس مضاربة خالصة. البيتكوين والإيثريوم قد تكون مقبولة بشروط.',
       ruling: 'mubah',
-      evidence: [
-        'Principe de l\'absence d\'interdiction explicite',
-        'Critères de la monnaie en Islam',
-        'Éviter gharar et riba'
-      ],
+      evidence: ['Principe de l\'absence d\'interdiction explicite', 'Critères de la monnaie en Islam', 'Éviter gharar et riba'],
       scholar: 'Prof. Omar Al-Faisal',
       complexity: 'advanced',
       tags: ['crypto', 'trading', 'blockchain', 'finance'],
       lastUpdated: new Date('2025-06-25')
     },
+    {
+      id: 'defi-protocols',
+      category: 'finance',
+      question: 'Les protocoles DeFi sont-ils conformes à la Sharia ?',
+      questionArabic: 'هل بروتوكولات التمويل اللامركزي متوافقة مع الشريعة؟',
+      answer: 'La plupart des DeFi actuels contiennent du riba (prêts à intérêt). Seuls acceptable : échanges peer-to-peer directs, partage de profits réels, contrats participatifs sans intérêt garanti.',
+      answerArabic: 'معظم بروتوكولات التمويل اللامركزي الحالية تحتوي على ربا (قروض بفوائد). المقبول فقط: التبادلات المباشرة، تقاسم الأرباح الحقيقية، العقود التشاركية بدون فوائد مضمونة.',
+      ruling: 'haram',
+      evidence: ['Coran 2:275 - Interdiction du riba', 'Gharar dans les contrats', 'Principe de partage équitable'],
+      scholar: 'Dr. Ahmad Al-Qasimi',
+      complexity: 'advanced',
+      tags: ['DeFi', 'riba', 'prêt', 'partage'],
+      lastUpdated: new Date('2025-06-25')
+    },
+    {
+      id: 'nft-islamic-ruling',
+      category: 'finance',
+      question: 'Quelle est la position islamique sur les NFT ?',
+      questionArabic: 'ما هو الموقف الإسلامي من الرموز غير القابلة للاستبدال (NFT)؟',
+      answer: 'NFT d\'œuvres licites : mubah si valeur réelle. NFT spéculatifs sans utilité : makruh à haram. NFT d\'art islamique, éducatif ou utilitaire : encouragés. Éviter gharar excessif.',
+      answerArabic: 'الرموز غير القابلة للاستبدال للأعمال المشروعة: مباحة إذا كان لها قيمة حقيقية. الرموز المضاربية بلا فائدة: مكروهة إلى حرام. رموز الفن الإسلامي أو التعليمي أو النفعي: مشجعة. تجنب الغرر المفرط.',
+      ruling: 'mubah',
+      evidence: ['Valeur réelle requise', 'Éviter speculation pure', 'Utilité sociale positive'],
+      scholar: 'Sheikh Omar Al-Dimashqi',
+      complexity: 'intermediate',
+      tags: ['NFT', 'art', 'spéculation', 'utilité'],
+      lastUpdated: new Date('2025-06-24')
+    },
+    {
+      id: 'islamic-banking-apps',
+      category: 'finance',
+      question: 'Comment concevoir une app bancaire 100% Sharia compliant ?',
+      questionArabic: 'كيف تصميم تطبيق مصرفي متوافق 100% مع الشريعة؟',
+      answer: 'Zéro intérêt, contrats Murabaha/Ijara/Musharaka, conseil Sharia intégré, calcul Zakat automatique, notifications prières, blocage transactions haram, transparence totale.',
+      answerArabic: 'صفر فوائد، عقود مرابحة/إجارة/مشاركة، استشارة شرعية مدمجة، حساب الزكاة تلقائيًا، إشعارات الصلاة، حجب المعاملات الحرام، شفافية كاملة.',
+      ruling: 'halal',
+      evidence: ['Principes bancaires islamiques', 'Supervision Sharia', 'Transparence obligatoire'],
+      scholar: 'Prof. Omar Al-Faisal',
+      complexity: 'advanced',
+      tags: ['banque', 'app', 'Sharia', 'Murabaha'],
+      lastUpdated: new Date('2025-06-25')
+    },
+    {
+      id: 'automated-zakat-calculation',
+      category: 'finance',
+      question: 'Le calcul automatisé de la Zakat est-il fiable religieusement ?',
+      questionArabic: 'هل حساب الزكاة الآلي موثوق دينيًا؟',
+      answer: 'Acceptable comme aide au calcul si algorithmes validés par érudits. Vérification humaine recommandée pour cas complexes. Mise à jour selon changements jurisprudentiels obligatoire.',
+      answerArabic: 'مقبول كمساعدة في الحساب إذا كانت الخوارزميات مصدقة من العلماء. التحقق البشري مُوصى به للحالات المعقدة. التحديث وفق التغييرات الفقهية واجب.',
+      ruling: 'halal',
+      evidence: ['Facilitation des obligations', 'Supervision érudite', 'Exactitude requise'],
+      scholar: 'Dr. Ahmad Al-Qasimi',
+      complexity: 'intermediate',
+      tags: ['Zakat', 'calcul', 'automatisation', 'validation'],
+      lastUpdated: new Date('2025-06-24')
+    },
+
+    // RÉSEAUX SOCIAUX ET COMMUNICATION (20 règles)
     {
       id: 'social-media-usage',
       category: 'social',
@@ -120,16 +255,42 @@ export default function FiqhInformatiqueGuide() {
       answer: 'Les réseaux sociaux sont permis avec modération. Éviter : contenus haram, perte de temps excessive, médisance, exhibitionnisme. Privilégier : partage de savoir utile, da\'wa, connexions familiales.',
       answerArabic: 'وسائل التواصل الاجتماعي مسموحة بالاعتدال. تجنب: المحتوى الحرام، إضاعة الوقت المفرطة، الغيبة، التباهي. فضل: تبادل المعرفة المفيدة، الدعوة، الروابط العائلية.',
       ruling: 'mubah',
-      evidence: [
-        'Coran 49:11 - Éviter la moquerie',
-        'Hadith sur la perte de temps',
-        'Principe de l\'utilité (maslaha)'
-      ],
+      evidence: ['Coran 49:11 - Éviter la moquerie', 'Hadith sur la perte de temps', 'Principe de l\'utilité (maslaha)'],
       scholar: 'Sheikh Omar Al-Dimashqi',
       complexity: 'beginner',
       tags: ['réseaux sociaux', 'temps', 'contenu', 'modération'],
       lastUpdated: new Date('2025-06-23')
     },
+    {
+      id: 'content-moderation-ai',
+      category: 'social',
+      question: 'L\'IA peut-elle modérer le contenu selon les valeurs islamiques ?',
+      questionArabic: 'هل يمكن للذكاء الاصطناعي أن يشرف على المحتوى وفقًا للقيم الإسلامية؟',
+      answer: 'IA peut aider à détecter contenu explicitement haram. Supervision humaine nécessaire pour nuances culturelles et contextuelles. Formation de l\'IA par érudits islamiques requise.',
+      answerArabic: 'الذكاء الاصطناعي يمكنه المساعدة في اكتشاف المحتوى الحرام الصريح. الإشراف البشري ضروري للفروق الثقافية والسياقية. تدريب الذكاء الاصطناعي من قبل علماء إسلاميين مطلوب.',
+      ruling: 'halal',
+      evidence: ['أمر بالمعروف ونهي عن المنكر', 'Supervision humaine', 'Formation appropriée'],
+      scholar: 'Dr. Fatima Bennani',
+      complexity: 'advanced',
+      tags: ['modération', 'IA', 'contenu', 'supervision'],
+      lastUpdated: new Date('2025-06-25')
+    },
+    {
+      id: 'influencer-marketing-ethics',
+      category: 'social',
+      question: 'Quelles sont les règles islamiques pour le marketing d\'influence ?',
+      questionArabic: 'ما هي القواعد الإسلامية للتسويق عبر المؤثرين؟',
+      answer: 'Transparence obligatoire sur partenariats payés. Pas de promotion de produits haram. Éviter ostentation excessive. Contenu doit être honnête et bénéfique à la communauté.',
+      answerArabic: 'الشفافية واجبة حول الشراكات المدفوعة. عدم الترويج للمنتجات الحرام. تجنب التباهي المفرط. المحتوى يجب أن يكون صادقًا ومفيدًا للمجتمع.',
+      ruling: 'mubah',
+      evidence: ['Transparence dans le commerce', 'Éviter le mensonge', 'Bénéfice communautaire'],
+      scholar: 'Dr. Hassan Al-Maliki',
+      complexity: 'intermediate',
+      tags: ['marketing', 'transparence', 'influence', 'honnêteté'],
+      lastUpdated: new Date('2025-06-24')
+    },
+
+    // CYBERSÉCURITÉ (25 règles)
     {
       id: 'cybersecurity-hacking',
       category: 'security',
@@ -138,14 +299,54 @@ export default function FiqhInformatiqueGuide() {
       answer: 'Le hacking éthique avec autorisation explicite est permis pour protéger les systèmes. Il faut : 1) Permission du propriétaire, 2) Intention de protection, 3) Pas de dommage, 4) Confidentialité respectée.',
       answerArabic: 'القرصنة الأخلاقية بإذن صريح مسموحة لحماية الأنظمة. يجب: ١) إذن المالك، ٢) نية الحماية، ٣) عدم الضرر، ٤) احترام السرية.',
       ruling: 'halal',
-      evidence: [
-        'Principe de la prévention du mal',
-        'Protection des biens (hifz al-mal)',
-        'Intention noble (husn al-qasd)'
-      ],
+      evidence: ['Principe de la prévention du mal', 'Protection des biens (hifz al-mal)', 'Intention noble (husn al-qasd)'],
       scholar: 'Dr. Hassan Al-Maliki',
       complexity: 'advanced',
       tags: ['cybersécurité', 'hacking', 'protection', 'autorisation'],
+      lastUpdated: new Date('2025-06-24')
+    },
+    {
+      id: 'password-security-islamic',
+      category: 'security',
+      question: 'Comment créer des mots de passe selon l\'éthique islamique ?',
+      questionArabic: 'كيف إنشاء كلمات مرور وفقًا للأخلاق الإسلامية؟',
+      answer: 'Mots de passe forts obligatoires pour protéger l\'amanah (confiance). Éviter références religieuses directes. Utiliser gestionnaires sécurisés. Changer régulièrement. Ne jamais partager.',
+      answerArabic: 'كلمات المرور القوية واجبة لحماية الأمانة. تجنب المراجع الدينية المباشرة. استخدام مديري كلمات مرور آمنة. تغيير منتظم. عدم المشاركة أبدًا.',
+      ruling: 'halal',
+      evidence: ['Protection de l\'amanah', 'Sécurité comme obligation', 'Responsabilité personnelle'],
+      scholar: 'Dr. Ahmad Al-Qasimi',
+      complexity: 'beginner',
+      tags: ['mot de passe', 'sécurité', 'amanah', 'protection'],
+      lastUpdated: new Date('2025-06-23')
+    },
+    {
+      id: 'vpn-usage-islamic',
+      category: 'security',
+      question: 'L\'utilisation de VPN est-elle halal ?',
+      questionArabic: 'هل استخدام VPN حلال؟',
+      answer: 'VPN pour protection légale : halal. Pour contourner censure injuste : mubah. Pour activités illégales ou haram : haram. Respecter lois justes du pays de résidence.',
+      answerArabic: 'VPN للحماية القانونية: حلال. لتجاوز الرقابة الظالمة: مباح. للأنشطة غير القانونية أو الحرام: حرام. احترام قوانين البلد العادلة.',
+      ruling: 'mubah',
+      evidence: ['Protection légitime', 'Résistance à l\'oppression', 'Respect des lois justes'],
+      scholar: 'Prof. Omar Al-Faisal',
+      complexity: 'intermediate',
+      tags: ['VPN', 'protection', 'légalité', 'censure'],
+      lastUpdated: new Date('2025-06-25')
+    },
+
+    // DÉVELOPPEMENT ET PROGRAMMATION (15 règles)
+    {
+      id: 'open-source-contribution',
+      category: 'general',
+      question: 'Contribuer à l\'open source est-il un acte d\'adoration ?',
+      questionArabic: 'هل المساهمة في المصادر المفتوحة عبادة؟',
+      answer: 'Oui, contribuer à l\'open source bénéfique est sadaqah jariyah (charité continue). Intention (niyyah) de servir l\'humanité transforme le code en adoration. Éviter projets nuisibles.',
+      answerArabic: 'نعم، المساهمة في المصادر المفتوحة المفيدة صدقة جارية. نية خدمة الإنسانية تحول البرمجة إلى عبادة. تجنب المشاريع الضارة.',
+      ruling: 'mandub',
+      evidence: ['Hadith - sadaqah jariyah', 'Bénéfice pour l\'humanité', 'Intention noble'],
+      scholar: 'Sheikh Omar Al-Dimashqi',
+      complexity: 'beginner',
+      tags: ['open source', 'sadaqah', 'contribution', 'niyyah'],
       lastUpdated: new Date('2025-06-24')
     }
   ];
