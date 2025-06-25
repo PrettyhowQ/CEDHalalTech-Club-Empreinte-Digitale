@@ -116,7 +116,6 @@ import IslamicAuditPage from "@/pages/IslamicAuditPage";
 import Sharia100CompletePage from "@/pages/Sharia100CompletePage";
 import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
 import ParentAccountsPage from "@/pages/ParentAccountsPage";
-import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
