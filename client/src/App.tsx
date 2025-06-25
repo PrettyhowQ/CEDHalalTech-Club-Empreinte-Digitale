@@ -117,6 +117,8 @@ import Sharia100CompletePage from "@/pages/Sharia100CompletePage";
 import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
 import ParentAccountsPage from "@/pages/ParentAccountsPage";
 import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
+import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
+import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -452,6 +454,18 @@ function Router() {
       <Route path="/formations-avancees" component={AdvancedLearningPlatformPage} />
       <Route path="/academy-international" component={AdvancedLearningPlatformPage} />
       <Route path="/classes-virtuelles" component={AdvancedLearningPlatformPage} />
+      
+      {/* Guide Fiqh Informatique */}
+      <Route path="/fiqh-informatique" component={FiqhInformatiqueGuidePage} />
+      <Route path="/fiqh-guide" component={FiqhInformatiqueGuidePage} />
+      <Route path="/islamic-tech-guide" component={FiqhInformatiqueGuidePage} />
+      <Route path="/halal-learning" component={FiqhInformatiqueGuidePage} />
+      
+      {/* Comparaison écoles en ligne */}
+      <Route path="/education-comparison" component={OnlineEducationComparisonPage} />
+      <Route path="/comparaison-ecoles" component={OnlineEducationComparisonPage} />
+      <Route path="/online-schools" component={OnlineEducationComparisonPage} />
+      <Route path="/concurrence-education" component={OnlineEducationComparisonPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />

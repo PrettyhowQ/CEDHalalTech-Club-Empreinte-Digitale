@@ -660,9 +660,13 @@ export default function AdvancedLearningPlatform() {
                   <Shield className="h-16 w-16 mx-auto mb-4 text-white" />
                   <h2 className="text-3xl font-bold mb-4">فقه الحاسوب والتكنولوجيا</h2>
                   <h3 className="text-xl mb-2">Fiqh de l'Informatique et de la Technologie</h3>
-                  <p className="text-lg opacity-90">
+                  <p className="text-lg opacity-90 mb-4">
                     Toutes nos formations respectent strictement les principes islamiques
                   </p>
+                  <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
+                    <BookOpen className="h-4 w-4 mr-2" />
+                    Accéder au Guide Fiqh Complet
+                  </Button>
                 </div>
               </CardContent>
             </Card>
