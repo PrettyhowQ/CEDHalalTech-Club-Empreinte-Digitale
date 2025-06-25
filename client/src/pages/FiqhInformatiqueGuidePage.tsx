@@ -1,5 +1,5 @@
-import ComprehensiveFiqhGuide from "@/components/ComprehensiveFiqhGuide";
+import { SimpleFiqhGuide } from "@/components/SimpleFiqhGuide";
 
 export default function FiqhInformatiqueGuidePage() {
-  return <ComprehensiveFiqhGuide />;
+  return <SimpleFiqhGuide />;
 }
