@@ -119,6 +119,8 @@ import ParentAccountsPage from "@/pages/ParentAccountsPage";
 import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
 import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
 import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
+import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
+import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -466,6 +468,18 @@ function Router() {
       <Route path="/comparaison-ecoles" component={OnlineEducationComparisonPage} />
       <Route path="/online-schools" component={OnlineEducationComparisonPage} />
       <Route path="/concurrence-education" component={OnlineEducationComparisonPage} />
+      
+      {/* TechForAll Association */}
+      <Route path="/techforall" component={TechForAllAssociationPage} />
+      <Route path="/tech-for-all" component={TechForAllAssociationPage} />
+      <Route path="/association" component={TechForAllAssociationPage} />
+      <Route path="/dons-solidaires" component={TechForAllAssociationPage} />
+      
+      {/* Costa del Sol Boutique */}
+      <Route path="/costa-del-sol" component={CostaDelSolBoutiquePage} />
+      <Route path="/boutique" component={CostaDelSolBoutiquePage} />
+      <Route path="/boutique-solidaire" component={CostaDelSolBoutiquePage} />
+      <Route path="/shop" component={CostaDelSolBoutiquePage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
