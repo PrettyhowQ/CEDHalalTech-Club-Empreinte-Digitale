@@ -54,25 +54,25 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 
 ### 💼 Équipe Opérationnelle
 
-#### Brahim Yakoubi - Directeur TechForAll & Boutique Solidaire
+#### Brahim Yakoubi - Gestionnaire Opérationnel TechForAll & Costa del Sol
 - **Salaire**: CHF 6,200/mois
 - **Contrat**: CDI avec période d'essai 3 mois
 - **Localisation**: Costa del Sol, Espagne
 - **Email**: brahim@club-empreinte-digitale.com
 - **Téléphone**: +34 XXX XXX XXX
 - **Date de début**: 1er juin 2024
-- **Manager**: Yakoubi Yamina (décisions finales)
+- **Manager**: Yakoubi Yamina (Responsable principale TechForAll)
 - **Statut**: Actif
 
 **Responsabilités exactes**:
-- Gestion complète association TechForAll
+- Gestion opérationnelle quotidienne TechForAll (sous supervision Yakoubi Yamina)
 - Direction boutique solidaire Costa del Sol
 - Collecte et redistribution matériel technologique
 - Coordination donations construction écologique
 - Gestion équipe locale Espagne
-- Reporting mensuel à Yakoubi Yamina
+- Reporting mensuel à Yakoubi Yamina (responsable finale)
 - Supervision secrétaire Kadjouf Hanane
-- Développement réseau solidaire méditerranéen
+- Exécution stratégie définie par Yakoubi Yamina
 
 **Compétences techniques**:
 - React/TypeScript avancé
@@ -292,7 +292,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - **Yakoubi Yamina** (CEO): Direction générale
 - **Souheila Yakoubi Ozel** (Héritière Santé): CHF 7,200/mois
 - **Hanaé Ozel** (Héritière Juridique): CHF 7,200/mois
-- **Brahim Yakoubi** (TechForAll): CHF 6,200/mois
+- **Brahim Yakoubi** (Gestionnaire TechForAll): CHF 6,200/mois
 - **Yakoubi Karim** (Logistique Europe): CHF 6,800/mois
 - **Yakoubi Aziz** (Logistique Suisse): CHF 6,500/mois
 - **Abdelkarim** (Développeur): CHF 7,800/mois

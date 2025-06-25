@@ -65,7 +65,7 @@ const employees: Employee[] = [
   {
     id: 'emp-001',
     name: 'Brahim Yakoubi',
-    role: 'Directeur TechForAll & Boutique Solidaire',
+    role: 'Gestionnaire Opérationnel TechForAll & Costa del Sol',
     salary: 6200,
     currency: 'CHF',
     location: 'Costa del Sol, Espagne',
@@ -75,12 +75,12 @@ const employees: Employee[] = [
     trialPeriod: 3,
     contractType: 'CDI',
     responsibilities: [
-      'Gestion complète association TechForAll',
+      'Gestion opérationnelle quotidienne TechForAll (sous supervision Yakoubi Yamina)',
       'Direction boutique solidaire Costa del Sol',
       'Collecte et redistribution matériel technologique',
       'Coordination donations construction écologique',
       'Gestion équipe locale Espagne',
-      'Supervision secrétaire Kadjouf Hanane'
+      'Exécution stratégie définie par Yakoubi Yamina'
     ],
     skills: [
       'Gestion associative', 'Logistique donations', 'Management équipe', 

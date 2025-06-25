@@ -154,7 +154,7 @@ Preferred communication style: Simple, everyday language.
 - **Rôles spécialisés**: 
   - Souheila: Secteur SANTÉ + co-direction
   - Hanaé: Secteur JURIDIQUE + fiches de paie
-  - Brahim: TechForAll association + boutique Costa del Sol
+  - Brahim: Gestion opérationnelle TechForAll + boutique Costa del Sol (sous supervision Yakoubi Yamina)
   - Yakoubi Karim: Logistique européenne (Paris)
   - Yakoubi Aziz: Logistique Suisse (Berne)
   - Kadjouf Hanane: Secrétaire de Brahim
