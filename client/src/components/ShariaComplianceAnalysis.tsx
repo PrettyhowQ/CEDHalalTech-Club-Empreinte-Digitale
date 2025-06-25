@@ -130,7 +130,7 @@ export function ShariaComplianceAnalysis() {
   ];
 
   const categories = [
-    { id: 'all', name: 'Tout', icon: Mosque, color: 'bg-emerald-500' },
+    { id: 'all', name: 'Tout', icon: Building2, color: 'bg-emerald-500' },
     { id: 'governance', name: 'Gouvernance', icon: Building, color: 'bg-blue-500' },
     { id: 'purification', name: 'Purification', icon: Heart, color: 'bg-red-500' },
     { id: 'operations', name: 'Opérations', icon: Clock, color: 'bg-orange-500' },

@@ -16,7 +16,7 @@ import {
   Star,
   Book,
   Scale,
-  Mosque,
+  Building2,
   Globe,
   Brain,
   Shield,
@@ -326,7 +326,7 @@ export function RealTimeShariaMQL() {
                 <div className="flex-1 overflow-y-auto bg-gray-50 rounded-lg p-4 mb-4">
                   {conversation.length === 0 ? (
                     <div className="text-center text-gray-500 mt-20">
-                      <Mosque className="h-16 w-16 mx-auto mb-4 text-gray-300" />
+                      <Building2 className="h-16 w-16 mx-auto mb-4 text-gray-300" />
                       <h3 className="text-lg font-semibold mb-2">مرحباً بك في المستشار الشرعي</h3>
                       <p className="mb-4">اسأل أي سؤال شرعي متعلق بالخدمات المالية الإسلامية</p>
                       <div className="grid grid-cols-1 gap-2 max-w-md mx-auto">
