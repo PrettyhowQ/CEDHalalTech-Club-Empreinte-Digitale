@@ -222,11 +222,20 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - Cypress Certified
 
 ### 💰 Budget RH Mensuel Total
-- **Salaires bruts**: CHF 33,200/mois
-- **Charges sociales** (20%): CHF 6,640/mois
+**Équipe Actuelle** (6 personnes):
+- **Yakoubi Yamina** (CEO): Direction générale
+- **Souheila Yakoubi Ozel** (Héritière Santé): CHF 7,200/mois
+- **Hanaé Ozel** (Héritière Juridique): CHF 7,200/mois
+- **Brahim Yakoubi** (TechForAll): CHF 6,200/mois
+- **Abdelkarim** (Développeur): CHF 7,800/mois
+- **Aziz** (UI/UX): CHF 6,500/mois
+- **Kadjouf Hanane** (Secrétaire): CHF 5,500/mois
+
+- **Salaires bruts**: CHF 40,400/mois
+- **Charges sociales** (20%): CHF 8,080/mois
 - **Formation continue**: CHF 2,000/mois
 - **Assurances complémentaires**: CHF 1,500/mois
-- **Total budget RH**: CHF 43,340/mois
+- **Total budget RH**: CHF 51,980/mois
 
 ---
 

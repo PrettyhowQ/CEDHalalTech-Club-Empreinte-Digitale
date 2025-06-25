@@ -298,6 +298,18 @@ function Router() {
       <Route path="/contact-complet" component={ContactComplet} />
       <Route path="/contacts-equipe" component={ContactComplet} />
       <Route path="/equipe-complete" component={ContactComplet} />
+      
+      {/* Système RH et Code du Travail */}
+      <Route path="/rh-management" component={HRManagementPage} />
+      <Route path="/ressources-humaines" component={HRManagementPage} />
+      <Route path="/gestion-rh" component={HRManagementPage} />
+      <Route path="/code-travail-suisse" component={HRManagementPage} />
+      <Route path="/contrats-travail" component={HRManagementPage} />
+      <Route path="/droit-travail" component={HRManagementPage} />
+      <Route path="/ia-juridique" component={HRManagementPage} />
+      <Route path="/consultation-juridique" component={HRManagementPage} />
+      <Route path="/salaires-equipe" component={HRManagementPage} />
+      <Route path="/periode-essai" component={HRManagementPage} />
       <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
       <Route path="/gestion-equipe" component={TableauBordEquipePage} />
       <Route path="/fiches-paie" component={PaySlipGeneratorPage} />
