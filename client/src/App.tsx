@@ -100,6 +100,7 @@ import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
 import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
+import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
