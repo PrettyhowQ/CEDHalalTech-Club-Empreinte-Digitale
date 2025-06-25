@@ -99,6 +99,7 @@ import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
 import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
+import QuranListeningPage from "@/pages/QuranListeningPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
