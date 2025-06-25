@@ -65,58 +65,58 @@ const employees: Employee[] = [
   {
     id: 'emp-001',
     name: 'Brahim Yakoubi',
-    role: 'CTO & Développeur Principal',
+    role: 'Directeur TechForAll & Boutique Solidaire',
     salary: 6200,
     currency: 'CHF',
-    location: 'Genève, Suisse',
+    location: 'Costa del Sol, Espagne',
     email: 'brahim@club-empreinte-digitale.com',
-    phone: '+41 22 XXX XXXX',
+    phone: '+34 XXX XXX XXX',
     startDate: new Date('2024-06-01'),
     trialPeriod: 3,
     contractType: 'CDI',
     responsibilities: [
-      'Architecture technique complète',
-      'Développement full-stack React/Node.js',
-      'DevOps et infrastructure cloud',
-      'Supervision équipe technique',
-      'Intégration APIs externes',
-      'Sécurité et conformité FINMA'
+      'Gestion complète association TechForAll',
+      'Direction boutique solidaire Costa del Sol',
+      'Collecte et redistribution matériel technologique',
+      'Coordination donations construction écologique',
+      'Gestion équipe locale Espagne',
+      'Supervision secrétaire Kadjouf Hanane'
     ],
     skills: [
-      'React/TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'Docker', 
-      'Blockchain', 'Cybersécurité', 'Architecture Microservices'
+      'Gestion associative', 'Logistique donations', 'Management équipe', 
+      'Développement durable', 'Relations donateurs', 'Économie solidaire'
     ],
-    certifications: ['AWS Solutions Architect', 'Certified Ethical Hacker'],
+    certifications: ['Management Associations', 'Développement Durable'],
     status: 'active',
     manager: 'Yakoubi Yamina'
   },
   {
     id: 'emp-002',
     name: 'Souheila Yakoubi Ozel',
-    role: 'Directrice Opérations',
+    role: 'Fille & Héritière Désignée (Santé)',
     salary: 7200,
     currency: 'CHF',
     location: 'Zurich, Suisse',
     email: 'souheila@club-empreinte-digitale.com',
     phone: '+41 44 XXX XXXX',
     startDate: new Date('2024-05-15'),
-    trialPeriod: 3,
+    trialPeriod: 0, // Pas de période d'essai pour héritière
     contractType: 'CDI',
     responsibilities: [
-      'Gestion opérationnelle quotidienne',
-      'Ressources humaines et recrutement',
-      'Conformité réglementaire FINMA/CBUAE',
-      'Relations partenaires stratégiques',
-      'Supervision qualité services',
-      'Reporting direction générale'
+      'Direction secteur SANTÉ écosystème CED',
+      'Développement produits santé et bien-être',
+      'Partenariats secteur médical et nutrition',
+      'Formation succession direction générale',
+      'Préparation transmission futures générations',
+      'Co-décisionnaire orientations stratégiques'
     ],
     skills: [
-      'Management', 'RH', 'Conformité bancaire', 'Négociation', 
-      'Gestion projet', 'Audit qualité', 'Relations publiques'
+      'Management santé', 'Nutrition', 'Bien-être', 'Leadership', 
+      'Vision stratégique', 'Succession familiale', 'Innovation santé'
     ],
-    certifications: ['FINMA Banking License', 'Project Management Professional'],
+    certifications: ['Leadership Familial', 'Management Santé'],
     status: 'active',
-    manager: 'Yakoubi Yamina'
+    manager: 'Yakoubi Yamina (Mère)'
   },
   {
     id: 'emp-003',
@@ -177,30 +177,58 @@ const employees: Employee[] = [
   {
     id: 'emp-005',
     name: 'Kadjouf Hanane',
-    role: 'Responsable QA & Tests',
+    role: 'Secrétaire de Brahim Yakoubi',
     salary: 5500,
     currency: 'CHF',
-    location: 'Fribourg, Suisse',
+    location: 'Costa del Sol, Espagne',
     email: 'hanane@club-empreinte-digitale.com',
-    phone: '+41 26 XXX XXXX',
+    phone: '+34 XXX XXX XXX',
     startDate: new Date('2024-08-01'),
     trialPeriod: 3,
     contractType: 'CDI',
     responsibilities: [
-      'Assurance qualité logicielle',
-      'Tests automatisés et manuels',
-      'Validation conformité bancaire',
-      'Documentation procédures QA',
-      'Formation équipe aux bonnes pratiques',
-      'Audit sécurité applications'
+      'Secrétariat personnel de Brahim Yakoubi',
+      'Gestion administrative TechForAll',
+      'Coordination boutique solidaire Costa del Sol',
+      'Organisation agenda et déplacements',
+      'Gestion correspondance et communications',
+      'Suivi dossiers donations et collectes'
     ],
     skills: [
-      'Test Automation', 'Selenium', 'Jest', 'Cypress',
-      'Manual Testing', 'Bug Tracking', 'Quality Metrics', 'Agile'
+      'Secrétariat', 'Organisation', 'Communication', 'Gestion administrative',
+      'Relations donateurs', 'Logistique', 'Support opérationnel'
     ],
-    certifications: ['ISTQB Foundation', 'Agile Testing Certified'],
+    certifications: ['Secrétariat Professionnel', 'Gestion Administrative'],
     status: 'trial',
-    manager: 'Souheila Yakoubi Ozel'
+    manager: 'Brahim Yakoubi'
+  },
+  {
+    id: 'emp-006',
+    name: 'Hanaé Ozel',
+    role: 'Fille & Héritière Désignée (Juridique & Paie)',
+    salary: 7200,
+    currency: 'CHF',
+    location: 'Genève, Suisse',
+    email: 'hanae@club-empreinte-digitale.com',
+    phone: '+41 22 XXX XXXX',
+    startDate: new Date('2024-05-15'),
+    trialPeriod: 0, // Pas de période d'essai pour héritière
+    contractType: 'CDI',
+    responsibilities: [
+      'Direction secteur JURIDIQUE écosystème CED',
+      'Gestion complète fiches de paie équipe',
+      'Application Code du travail suisse',
+      'Conformité réglementaire et légale',
+      'Formation succession direction générale',
+      'Préparation transmission futures générations'
+    ],
+    skills: [
+      'Droit du travail', 'Gestion paie', 'Conformité légale', 'Leadership',
+      'Vision stratégique', 'Succession familiale', 'Réglementation'
+    ],
+    certifications: ['Droit du Travail Suisse', 'Leadership Familial'],
+    status: 'active',
+    manager: 'Yakoubi Yamina (Mère)'
   }
 ];
 

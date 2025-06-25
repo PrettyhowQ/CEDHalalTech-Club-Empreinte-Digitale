@@ -147,6 +147,16 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 
 Preferred communication style: Simple, everyday language.
 
+### Structure Familiale et Succession
+- **Yakoubi Yamina**: Dirigeante unique, seule personne qui décide de tout
+- **Succession planifiée**: Héritage à ses filles Souheila Yakoubi-Ozel et Hanaé Ozel  
+- **Vision multigénérationnelle**: Écosystème transmis de mère en filles puis aux petits-enfants
+- **Rôles spécialisés**: 
+  - Souheila: Secteur SANTÉ + co-direction
+  - Hanaé: Secteur JURIDIQUE + fiches de paie
+  - Brahim: TechForAll association + boutique Costa del Sol
+  - Kadjouf Hanane: Secrétaire de Brahim
+
 ### Protection Intellectuelle
 - Footer de protection Yakoubi Yamina obligatoire sur toutes les pages
 - Traçabilité numérique activée sur tous composants

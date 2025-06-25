@@ -28,33 +28,51 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 ### 👑 Direction Générale
 
 **Yakoubi Yamina - Fondatrice & CEO**
-- **Statut**: Dirigeante de l'écosystème complet
-- **Responsabilités**: Vision stratégique, Partenariats internationaux, Conformité Sharia
+- **Statut**: Dirigeante unique de l'écosystème complet - Toutes décisions finales
+- **Succession planifiée**: Héritage à ses filles Souheila Yakoubi-Ozel et Hanaé Ozel
+- **Vision**: Écosystème multigénérationnel transmis de mère en filles puis aux petits-enfants
+- **Responsabilités**: Vision stratégique globale, Décisions finales sur tout
 - **Localisation**: Genève, Suisse / Dubai, UAE
 - **Contact**: yamina@club-empreinte-digitale.com
-- **Pouvoirs**: Tous ajustements de fonctions, salaires et contrats
+- **Pouvoirs absolus**: Seule personne qui décide de tout dans l'écosystème
 
-### 💼 Équipe Technique et Opérationnelle
+### 👨‍👩‍👧‍👦 Héritage Familial et Succession
 
-#### Brahim Yakoubi - CTO & Développeur Principal
+**Hanaé Ozel - Fille et Héritière Désignée (Juridique & Paie)**
+- **Statut familial**: Fille de Yakoubi Yamina, héritière désignée
+- **Responsabilités**: Secteur JURIDIQUE et FICHES DE PAIE
+- **Formation**: Droit du travail, gestion paie, conformité légale
+- **Rôle futur**: Co-direction avec Souheila après succession
+- **Transmission**: Lèguera à ses enfants (3ème génération)
+- **Contact**: hanae@club-empreinte-digitale.com
+
+**Vision Multigénérationnelle**:
+- **Génération 1**: Yakoubi Yamina (Fondatrice) - Décisionnaire unique
+- **Génération 2**: Souheila (Santé) + Hanaé (Juridique) - Héritières
+- **Génération 3**: Enfants de Souheila et Hanaé - Futures dirigeantes
+- **Pérennité**: Écosystème conçu pour traverser les générations
+
+### 💼 Équipe Opérationnelle
+
+#### Brahim Yakoubi - Directeur TechForAll & Boutique Solidaire
 - **Salaire**: CHF 6,200/mois
 - **Contrat**: CDI avec période d'essai 3 mois
-- **Localisation**: Genève, Suisse
+- **Localisation**: Costa del Sol, Espagne
 - **Email**: brahim@club-empreinte-digitale.com
-- **Téléphone**: +41 22 XXX XXXX
+- **Téléphone**: +34 XXX XXX XXX
 - **Date de début**: 1er juin 2024
-- **Manager**: Yakoubi Yamina
+- **Manager**: Yakoubi Yamina (décisions finales)
 - **Statut**: Actif
 
 **Responsabilités exactes**:
-- Architecture technique complète de l'écosystème CED
-- Développement full-stack React/Node.js/TypeScript
-- DevOps et infrastructure cloud (AWS/Replit)
-- Supervision équipe technique (3 développeurs)
-- Intégration APIs externes (Stripe, OpenAI, banking)
-- Sécurité et conformité FINMA/CBUAE
-- Migration GitHub et Visual Studio Code
-- Maintenance systèmes bancaires 24/7
+- Gestion complète association TechForAll
+- Direction boutique solidaire Costa del Sol
+- Collecte et redistribution matériel technologique
+- Coordination donations construction écologique
+- Gestion équipe locale Espagne
+- Reporting mensuel à Yakoubi Yamina
+- Supervision secrétaire Kadjouf Hanane
+- Développement réseau solidaire méditerranéen
 
 **Compétences techniques**:
 - React/TypeScript avancé
@@ -69,26 +87,26 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - Certified Ethical Hacker
 - FINMA Technical Compliance
 
-#### Souheila Yakoubi Ozel - Directrice Opérations & RH
+#### Souheila Yakoubi Ozel - Fille et Héritière Désignée (Santé)
 - **Salaire**: CHF 7,200/mois
-- **Contrat**: CDI avec période d'essai 3 mois
+- **Statut familial**: Fille de Yakoubi Yamina, héritière désignée
+- **Contrat**: CDI succession familiale planifiée
 - **Localisation**: Zurich, Suisse
 - **Email**: souheila@club-empreinte-digitale.com
 - **Téléphone**: +41 44 XXX XXXX
 - **Date de début**: 15 mai 2024
-- **Manager**: Yakoubi Yamina
-- **Statut**: Actif
+- **Rôle**: Aux côtés de sa mère pour reprendre l'écosystème
+- **Statut**: Succession multigénérationnelle (transmis à ses enfants)
 
 **Responsabilités exactes**:
-- Gestion opérationnelle quotidienne
-- Ressources humaines et recrutement
-- Application du Code du travail suisse
-- Gestion contrats de travail et périodes d'essai
-- Conformité réglementaire FINMA/CBUAE
-- Relations partenaires stratégiques
-- Supervision qualité services
-- Reporting direction générale
-- Formation équipe aux standards bancaires
+- Direction secteur SANTÉ de l'écosystème CED
+- Gestion opérationnelle quotidienne sous supervision mère
+- Développement produits santé et bien-être
+- Partenariats secteur médical et nutrition
+- Formation pour reprendre direction générale
+- Préparation transmission aux futures générations
+- Supervision équipe santé et nutrition
+- Co-décisionnaire avec sa mère sur orientations stratégiques
 
 **Domaines d'expertise**:
 - Management d'équipe
@@ -110,7 +128,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - **Email**: abdelkarim@club-empreinte-digitale.com
 - **Téléphone**: +41 61 XXX XXXX
 - **Date de début**: 1er juillet 2024
-- **Manager**: Brahim Yakoubi
+- **Manager**: Yakoubi Yamina (décisions finales)
 - **Statut**: Actif
 
 **Responsabilités exactes**:
@@ -144,7 +162,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - **Email**: aziz@club-empreinte-digitale.com
 - **Téléphone**: +41 21 XXX XXXX
 - **Date de début**: 15 juillet 2024
-- **Manager**: Brahim Yakoubi
+- **Manager**: Yakoubi Yamina (décisions finales)
 - **Statut**: Actif
 
 **Responsabilités exactes**:
@@ -170,25 +188,25 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - Google UX Design Certificate
 - Figma Advanced Certification
 
-#### Kadjouf Hanane - Responsable QA & Tests
+#### Kadjouf Hanane - Secrétaire de Brahim Yakoubi
 - **Salaire**: CHF 5,500/mois
 - **Contrat**: CDI avec période d'essai 3 mois (en cours)
-- **Localisation**: Fribourg, Suisse
+- **Localisation**: Costa del Sol, Espagne (avec Brahim)
 - **Email**: hanane@club-empreinte-digitale.com
-- **Téléphone**: +41 26 XXX XXXX
+- **Téléphone**: +34 XXX XXX XXX
 - **Date de début**: 1er août 2024
-- **Manager**: Souheila Yakoubi Ozel
+- **Manager**: Brahim Yakoubi (supervision Yakoubi Yamina)
 - **Statut**: En période d'essai (se termine 1er novembre 2024)
 
 **Responsabilités exactes**:
-- Assurance qualité logicielle complète
-- Tests automatisés (Jest, Cypress, Playwright)
-- Tests manuels critiques bancaires
-- Validation conformité FINMA/AAOIFI
-- Documentation procédures QA
-- Formation équipe aux bonnes pratiques
-- Audit sécurité applications
-- Tests de charge et performance
+- Secrétariat personnel de Brahim Yakoubi
+- Gestion administrative TechForAll association
+- Coordination boutique solidaire Costa del Sol
+- Organisation agenda et déplacements Brahim
+- Gestion correspondance et communications
+- Suivi dossiers donations et collectes
+- Interface avec donateurs et bénéficiaires
+- Support logistique opérations Espagne
 
 **Expertise qualité**:
 - Test Automation (Selenium, Jest)
