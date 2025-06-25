@@ -121,6 +121,8 @@ import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
 import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
+import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
+import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -480,6 +482,18 @@ function Router() {
       <Route path="/boutique" component={CostaDelSolBoutiquePage} />
       <Route path="/boutique-solidaire" component={CostaDelSolBoutiquePage} />
       <Route path="/shop" component={CostaDelSolBoutiquePage} />
+      
+      {/* Documents légaux automatiques */}
+      <Route path="/documents-legaux" component={DocumentsLegauxAutomatiquesPage} />
+      <Route path="/recu-fiscal" component={DocumentsLegauxAutomatiquesPage} />
+      <Route path="/documents-automatiques" component={DocumentsLegauxAutomatiquesPage} />
+      <Route path="/tax-documents" component={DocumentsLegauxAutomatiquesPage} />
+      
+      {/* Logistique équipements */}
+      <Route path="/logistique" component={LogistiqueEquipementsPage} />
+      <Route path="/equipements" component={LogistiqueEquipementsPage} />
+      <Route path="/attribution-materiel" component={LogistiqueEquipementsPage} />
+      <Route path="/macena-letter" component={LogistiqueEquipementsPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />

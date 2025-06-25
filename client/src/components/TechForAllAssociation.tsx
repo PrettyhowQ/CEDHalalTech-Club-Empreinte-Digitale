@@ -26,7 +26,8 @@ import {
   Award,
   Globe,
   Phone,
-  Mail
+  Mail,
+  FileText
 } from "lucide-react";
 
 interface DonationItem {
@@ -769,10 +770,16 @@ export default function TechForAllAssociation() {
                   <p className="text-lg opacity-90 mb-6">
                     Vente exclusive des matériels collectés par TechForAll - Circuit solidaire complet
                   </p>
-                  <Button variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
-                    <Building2 className="h-4 w-4 mr-2" />
-                    Accéder à la boutique Costa del Sol
-                  </Button>
+                  <div className="flex gap-4 justify-center">
+                    <Button variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100" onClick={() => window.location.href = '/costa-del-sol'}>
+                      <Building2 className="h-4 w-4 mr-2" />
+                      Accéder à la boutique Costa del Sol
+                    </Button>
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-orange-600" onClick={() => window.location.href = '/documents-legaux'}>
+                      <FileText className="h-4 w-4 mr-2" />
+                      Documents légaux automatiques
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
