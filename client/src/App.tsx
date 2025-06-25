@@ -116,6 +116,7 @@ import IslamicAuditPage from "@/pages/IslamicAuditPage";
 import Sharia100CompletePage from "@/pages/Sharia100CompletePage";
 import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
 import ParentAccountsPage from "@/pages/ParentAccountsPage";
+import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -445,6 +446,12 @@ function Router() {
       <Route path="/banking-comparison" component={IslamicBankingComparisonPage} />
       <Route path="/comparaison-banques" component={IslamicBankingComparisonPage} />
       <Route path="/concurrence-islamique" component={IslamicBankingComparisonPage} />
+      
+      {/* Plateforme formations avancées */}
+      <Route path="/advanced-learning" component={AdvancedLearningPlatformPage} />
+      <Route path="/formations-avancees" component={AdvancedLearningPlatformPage} />
+      <Route path="/academy-international" component={AdvancedLearningPlatformPage} />
+      <Route path="/classes-virtuelles" component={AdvancedLearningPlatformPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
