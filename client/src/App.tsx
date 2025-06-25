@@ -119,6 +119,7 @@ import ParentAccountsPage from "@/pages/ParentAccountsPage";
 import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
 import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
 import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
+import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
 import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
@@ -466,10 +467,12 @@ function Router() {
       <Route path="/halal-learning" component={FiqhInformatiqueGuidePage} />
       
       {/* Comparaison écoles en ligne */}
-      <Route path="/education-comparison" component={OnlineEducationComparisonPage} />
-      <Route path="/comparaison-ecoles" component={OnlineEducationComparisonPage} />
-      <Route path="/online-schools" component={OnlineEducationComparisonPage} />
-      <Route path="/concurrence-education" component={OnlineEducationComparisonPage} />
+      <Route path="/education-comparison" component={EducationComparisonPage} />
+      <Route path="/comparaison-ecoles" component={EducationComparisonPage} />
+      <Route path="/online-schools" component={EducationComparisonPage} />
+      <Route path="/concurrence-education" component={EducationComparisonPage} />
+      <Route path="/platform-comparison" component={EducationComparisonPage} />
+      <Route path="/fiqh-platforms" component={EducationComparisonPage} />
       
       {/* TechForAll Association */}
       <Route path="/techforall" component={TechForAllAssociationPage} />
