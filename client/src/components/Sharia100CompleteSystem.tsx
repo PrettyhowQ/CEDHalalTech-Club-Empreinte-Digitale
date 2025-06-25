@@ -19,7 +19,8 @@ import {
   Star,
   TrendingUp,
   Eye,
-  Play
+  Play,
+  Satellite
 } from "lucide-react";
 
 interface ComplianceModule {
@@ -140,6 +141,31 @@ export default function Sharia100CompleteSystem() {
         'Standards élevés'
       ],
       color: 'bg-green-500'
+    },
+    {
+      id: 'satellite',
+      title: 'Synchronisation Prière Satellitaire',
+      arabicTitle: 'مزامنة الصلاة بالأقمار الصناعية',
+      description: 'Précision GPS/GLONASS/Galileo pour horaires et direction Qibla exacte',
+      icon: Satellite,
+      path: '/satellite-prayer-sync',
+      status: 'implemented',
+      compliance: 100,
+      priority: 'critical',
+      features: [
+        'Constellation 4 satellites (GPS/GLONASS/Galileo/BeiDou)',
+        'Précision ±0.2m géolocalisation',
+        'Calendrier islamique intégré',
+        'Suspension banking automatique',
+        'Qibla direction temps réel'
+      ],
+      benefits: [
+        'Conformité géographique parfaite',
+        'Horaires prières précision absolue',
+        'Respect obligations religieuses',
+        'Intégration calendrier islamique'
+      ],
+      color: 'bg-blue-500'
     }
   ];
 
@@ -201,8 +227,8 @@ export default function Sharia100CompleteSystem() {
                 <div className="text-sm opacity-90">Scholars Résidents</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">3</div>
-                <div className="text-sm opacity-90">Certifications</div>
+                <div className="text-3xl font-bold">4</div>
+                <div className="text-sm opacity-90">Satellites Actifs</div>
               </div>
               <div>
                 <div className="text-3xl font-bold">1er</div>

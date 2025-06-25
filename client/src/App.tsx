@@ -114,6 +114,7 @@ import PurificationSystemPage from "@/pages/PurificationSystemPage";
 import OperationalCompliancePage from "@/pages/OperationalCompliancePage";
 import IslamicAuditPage from "@/pages/IslamicAuditPage";
 import Sharia100CompletePage from "@/pages/Sharia100CompletePage";
+import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -428,6 +429,11 @@ function Router() {
       <Route path="/sharia-100-complete" component={Sharia100CompletePage} />
       <Route path="/systeme-sharia-complet" component={Sharia100CompletePage} />
       <Route path="/conformite-complete" component={Sharia100CompletePage} />
+      
+      {/* Synchronisation prière satellitaire */}
+      <Route path="/satellite-prayer-sync" component={SatellitePrayerSyncPage} />
+      <Route path="/synchronisation-priere" component={SatellitePrayerSyncPage} />
+      <Route path="/prayer-satellite" component={SatellitePrayerSyncPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
