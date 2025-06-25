@@ -386,6 +386,23 @@ function Router() {
       <Route path="/legal/conditions" component={FAQ} />
       <Route path="/legal/cookies" component={FAQ} />
 
+      {/* Nouvelles fonctionnalités CED Bank */}
+      <Route path="/voice-banking-arabic" component={VoiceBankingArabicPage} />
+      <Route path="/banking-vocal-arabe" component={VoiceBankingArabicPage} />
+      <Route path="/zakat-calculator" component={ZakatCalculatorPage} />
+      <Route path="/calculateur-zakat" component={ZakatCalculatorPage} />
+      <Route path="/sharia-advisor" component={ShariaAdvisorPage} />
+      <Route path="/blockchain-trade" component={BlockchainTradePage} />
+      <Route path="/trade-finance" component={BlockchainTradePage} />
+      <Route path="/crypto-sharia" component={CryptoShariaPage} />
+      <Route path="/conformite-crypto" component={CryptoShariaPage} />
+      <Route path="/islamic-defi" component={IslamicDeFiPage} />
+      <Route path="/defi-islamique" component={IslamicDeFiPage} />
+      
+      {/* Dashboard de test */}
+      <Route path="/test-dashboard" component={TestDashboardPage} />
+      <Route path="/dashboard-test" component={TestDashboardPage} />
+
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
       
