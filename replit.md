@@ -136,7 +136,8 @@ Club Empreinte Digitale is a comprehensive fintech platform combining Islamic ba
 ## Changelog
 - December 25, 2024. Système RH complet intégré avec Code du travail suisse, contrats automatisés, IA juridique consultable, gestion équipe avec salaires et périodes d'essai
 - December 25, 2024. Structure familiale clarifiée: Yakoubi Yamina décisionnaire unique avec filles Souheila Yakoubi-Ozel et Hanaé-Denise Ozel comme héritières
-- June 25, 2025. Générateur contrats logistique créé avec calculs salaires nets et iPhone Pro Max intégré
+- June 25, 2025. Système assurance Al-Aman CED complet créé pour famille Yakoubi avec couverture 55M CHF
+- June 25, 2025. Générateur contrats logistique créé avec calculs salaires nets et iPhone Pro Max intégré  
 - June 25, 2025. Application mobile logistique temps réel développée avec synchronisation TechForAll
 - June 25, 2025. FINAL: Écosystème CED Bank 100% complet et opérationnel - Tous standards bancaires internationaux respectés
 - June 24, 2025. Systèmes complets développés : Conseil Sharia AAOIFI, Sécurité bancaire 2FA, APIs management, Apps natives iOS/Android, Analytics IA avancées, Intégrations stratégiques

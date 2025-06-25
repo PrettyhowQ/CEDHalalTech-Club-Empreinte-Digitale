@@ -98,6 +98,7 @@ import HRManagementPage from "@/pages/HRManagement";
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
+import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
