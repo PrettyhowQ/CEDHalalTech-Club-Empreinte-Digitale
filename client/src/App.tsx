@@ -101,6 +101,13 @@ import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
 import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
 import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
+import VoiceBankingArabicPage from "@/pages/VoiceBankingArabicPage";
+import ZakatCalculatorPage from "@/pages/ZakatCalculatorPage";
+import ShariaAdvisorPage from "@/pages/ShariaAdvisorPage";
+import BlockchainTradePage from "@/pages/BlockchainTradePage";
+import CryptoShariaPage from "@/pages/CryptoShariaPage";
+import IslamicDeFiPage from "@/pages/IslamicDeFiPage";
+import TestDashboardPage from "@/pages/TestDashboardPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
