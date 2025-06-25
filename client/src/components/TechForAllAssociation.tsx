@@ -677,9 +677,9 @@ export default function TechForAllAssociation() {
                 </div>
 
                 <div className="flex gap-4 mt-6">
-                  <Button className="flex-1">
+                  <Button className="flex-1" onClick={() => window.location.href = '/documents-legaux'}>
                     <Upload className="h-4 w-4 mr-2" />
-                    Soumettre le don
+                    Soumettre le don avec documents automatiques
                   </Button>
                   <Button variant="outline">
                     <Phone className="h-4 w-4 mr-2" />
@@ -776,7 +776,7 @@ export default function TechForAllAssociation() {
                       Accéder à la boutique Costa del Sol
                     </Button>
                     <Button variant="outline" className="text-white border-white hover:bg-white hover:text-orange-600" onClick={() => window.location.href = '/documents-legaux'}>
-                      <FileText className="h-4 w-4 mr-2" />
+                      <Award className="h-4 w-4 mr-2" />
                       Documents légaux automatiques
                     </Button>
                   </div>
