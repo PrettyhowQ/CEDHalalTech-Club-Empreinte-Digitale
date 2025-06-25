@@ -108,6 +108,7 @@ import BlockchainTradePage from "@/pages/BlockchainTradePage";
 import CryptoShariaPage from "@/pages/CryptoShariaPage";
 import IslamicDeFiPage from "@/pages/IslamicDeFiPage";
 import TestDashboardPage from "@/pages/TestDashboardPage";
+import ShariaComplianceAnalysisPage from "@/pages/ShariaComplianceAnalysisPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -402,6 +403,11 @@ function Router() {
       {/* Dashboard de test */}
       <Route path="/test-dashboard" component={TestDashboardPage} />
       <Route path="/dashboard-test" component={TestDashboardPage} />
+      
+      {/* Analyse conformité Sharia */}
+      <Route path="/sharia-compliance-100" component={ShariaComplianceAnalysisPage} />
+      <Route path="/conformite-sharia-100" component={ShariaComplianceAnalysisPage} />
+      <Route path="/analyse-conformite-complete" component={ShariaComplianceAnalysisPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
