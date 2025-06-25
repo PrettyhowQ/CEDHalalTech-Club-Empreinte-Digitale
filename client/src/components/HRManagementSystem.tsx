@@ -229,6 +229,62 @@ const employees: Employee[] = [
     certifications: ['Droit du Travail Suisse', 'Leadership Familial'],
     status: 'active',
     manager: 'Yakoubi Yamina (Mère)'
+  },
+  {
+    id: 'emp-007',
+    name: 'Yakoubi Karim',
+    role: 'Directeur Logistique Européenne',
+    salary: 6800,
+    currency: 'CHF',
+    location: 'Paris, France',
+    email: 'karim@club-empreinte-digitale.com',
+    phone: '+33 1 XX XX XX XX',
+    startDate: new Date('2024-09-01'),
+    trialPeriod: 3,
+    contractType: 'CDI',
+    responsibilities: [
+      'Coordination logistique Europe entière',
+      'Gestion supply chain TechForAll Europe',
+      'Partenariats distributeurs européens',
+      'Optimisation flux logistiques',
+      'Supervision équipes logistique régionales',
+      'Reporting hebdomadaire Yakoubi Yamina'
+    ],
+    skills: [
+      'Logistique internationale', 'Supply Chain', 'Management équipes',
+      'Optimisation transport', 'Négociation partenaires', 'Analytics logistique'
+    ],
+    certifications: ['Supply Chain Management', 'Logistique Internationale'],
+    status: 'active',
+    manager: 'Yakoubi Yamina'
+  },
+  {
+    id: 'emp-008',
+    name: 'Yakoubi Aziz',
+    role: 'Directeur Logistique Suisse',
+    salary: 6500,
+    currency: 'CHF',
+    location: 'Berne, Suisse',
+    email: 'aziz.logistique@club-empreinte-digitale.com',
+    phone: '+41 31 XXX XXXX',
+    startDate: new Date('2024-09-01'),
+    trialPeriod: 3,
+    contractType: 'CDI',
+    responsibilities: [
+      'Coordination logistique Suisse complète',
+      'Gestion entrepôts et distributions',
+      'Optimisation circuits livraison Suisse',
+      'Supervision équipes locales',
+      'Interface avec Yakoubi Karim (Europe)',
+      'Standards qualité logistique'
+    ],
+    skills: [
+      'Logistique locale', 'Gestion entrepôts', 'Optimisation routes',
+      'Management opérationnel', 'Qualité service', 'Coordination équipes'
+    ],
+    certifications: ['Logistique Suisse', 'Management Opérationnel'],
+    status: 'active',
+    manager: 'Yakoubi Yamina'
   }
 ];
 

@@ -221,21 +221,89 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 - Agile Testing Certified
 - Cypress Certified
 
+#### Yakoubi Karim - Directeur Logistique Européenne
+- **Salaire**: CHF 6,800/mois
+- **Contrat**: CDI avec période d'essai 3 mois
+- **Localisation**: Paris, France
+- **Email**: karim@club-empreinte-digitale.com
+- **Téléphone**: +33 1 XX XX XX XX
+- **Date de début**: 1er septembre 2024
+- **Manager**: Yakoubi Yamina (décisions finales)
+- **Statut**: Actif
+
+**Responsabilités exactes**:
+- Coordination logistique Europe entière
+- Gestion supply chain TechForAll Europe
+- Partenariats distributeurs européens
+- Optimisation flux logistiques internationaux
+- Supervision équipes logistique régionales
+- Reporting hebdomadaire Yakoubi Yamina
+- Interface avec Yakoubi Aziz (Suisse)
+- Développement réseau logistique européen
+
+**Spécialisations logistiques**:
+- Logistique internationale
+- Supply Chain Management
+- Optimisation transport
+- Négociation partenaires
+- Analytics logistique
+- Management équipes
+
+**Certifications**:
+- Supply Chain Management Professional
+- Logistique Internationale Certifiée
+- Management Opérationnel Europe
+
+#### Yakoubi Aziz - Directeur Logistique Suisse
+- **Salaire**: CHF 6,500/mois
+- **Contrat**: CDI avec période d'essai 3 mois
+- **Localisation**: Berne, Suisse
+- **Email**: aziz.logistique@club-empreinte-digitale.com
+- **Téléphone**: +41 31 XXX XXXX
+- **Date de début**: 1er septembre 2024
+- **Manager**: Yakoubi Yamina (décisions finales)
+- **Statut**: Actif
+
+**Responsabilités exactes**:
+- Coordination logistique Suisse complète
+- Gestion entrepôts et centres distribution
+- Optimisation circuits livraison Suisse
+- Supervision équipes logistique locales
+- Interface avec Yakoubi Karim (Europe)
+- Standards qualité logistique
+- Support opérationnel TechForAll Suisse
+- Coordination avec Brahim (Costa del Sol)
+
+**Expertise logistique**:
+- Logistique locale Suisse
+- Gestion entrepôts
+- Optimisation routes
+- Management opérationnel
+- Qualité service client
+- Coordination équipes
+
+**Certifications**:
+- Logistique Suisse Certifiée
+- Management Opérationnel
+- Qualité Service Client
+
 ### 💰 Budget RH Mensuel Total
-**Équipe Actuelle** (6 personnes):
+**Équipe Actuelle** (8 personnes):
 - **Yakoubi Yamina** (CEO): Direction générale
 - **Souheila Yakoubi Ozel** (Héritière Santé): CHF 7,200/mois
 - **Hanaé Ozel** (Héritière Juridique): CHF 7,200/mois
 - **Brahim Yakoubi** (TechForAll): CHF 6,200/mois
+- **Yakoubi Karim** (Logistique Europe): CHF 6,800/mois
+- **Yakoubi Aziz** (Logistique Suisse): CHF 6,500/mois
 - **Abdelkarim** (Développeur): CHF 7,800/mois
 - **Aziz** (UI/UX): CHF 6,500/mois
 - **Kadjouf Hanane** (Secrétaire): CHF 5,500/mois
 
-- **Salaires bruts**: CHF 40,400/mois
-- **Charges sociales** (20%): CHF 8,080/mois
-- **Formation continue**: CHF 2,000/mois
-- **Assurances complémentaires**: CHF 1,500/mois
-- **Total budget RH**: CHF 51,980/mois
+- **Salaires bruts**: CHF 53,700/mois
+- **Charges sociales** (20%): CHF 10,740/mois
+- **Formation continue**: CHF 2,500/mois
+- **Assurances complémentaires**: CHF 2,000/mois
+- **Total budget RH**: CHF 68,940/mois
 
 ---
 

@@ -155,6 +155,8 @@ Preferred communication style: Simple, everyday language.
   - Souheila: Secteur SANTÉ + co-direction
   - Hanaé: Secteur JURIDIQUE + fiches de paie
   - Brahim: TechForAll association + boutique Costa del Sol
+  - Yakoubi Karim: Logistique européenne (Paris)
+  - Yakoubi Aziz: Logistique Suisse (Berne)
   - Kadjouf Hanane: Secrétaire de Brahim
 
 ### Protection Intellectuelle
