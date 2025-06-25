@@ -21,6 +21,7 @@ export function Header() {
     { name: 'Al-Aman CED Takaful 🛡️', href: '/al-aman-ced-prototype', priority: true, premium: true },
     { name: 'CED Cloud Platform ☁️', href: '/ced-cloud-platform', priority: true, premium: true },
     { name: 'Cartes Gold Yakoubi 💳', href: '/ced-bank-cards', priority: true, premium: true },
+    { name: 'Guide Fiqh Informatique 📖', href: '/fiqh-informatique', priority: true },
     { name: 'Formations', href: '/formations' },
     { name: 'Inscription & Paiement', href: '/formations-paiement', priority: true },
     { name: 'Catalogue Complet', href: '/catalogue' },
