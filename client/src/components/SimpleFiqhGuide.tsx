@@ -120,8 +120,14 @@ export function SimpleFiqhGuide() {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             La plus grande collection mondiale de règles islamiques pour la technologie moderne. 
-            Plus de 23,456 règles authentifiées par 150+ scholars internationaux.
+            Plus de 23,456 règles basées sur le Coran, la Sunna, et l'Ijmâ' (consensus des savants).
           </p>
+          <div className="mt-4 flex justify-center gap-6 text-sm text-emerald-700 font-medium">
+            <span>📖 القرآن الكريم</span>
+            <span>🕌 السنة النبوية</span>
+            <span>👥 إجماع العلماء</span>
+            <span>📚 القياس الشرعي</span>
+          </div>
         </div>
 
         <Tabs defaultValue="library" className="w-full">
@@ -182,14 +188,19 @@ export function SimpleFiqhGuide() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Shield className="w-6 h-6 text-emerald-600" />
-                    Authentification Scholars
+                    Sources Authentiques
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    Toutes les règles validées par notre conseil de 150+ érudits internationaux
+                    Chaque règle basée sur le Coran, la Sunna authentique, l'Ijmâ' des savants et le Qiyâs
                   </p>
-                  <Badge variant="outline">✓ Certifié AAOIFI</Badge>
+                  <div className="space-y-2">
+                    <Badge variant="outline">📖 Coran (القرآن)</Badge>
+                    <Badge variant="outline">🕌 Sunna (السنة)</Badge>
+                    <Badge variant="outline">👥 Ijmâ' (الإجماع)</Badge>
+                    <Badge variant="outline">📚 Qiyâs (القياس)</Badge>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -303,49 +314,174 @@ export function SimpleFiqhGuide() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Users className="w-8 h-8 text-emerald-600" />
-                  Réseau de Scholars Internationaux
+                  Méthode de Validation selon les Sources Islamiques
                 </CardTitle>
+                <p className="text-gray-600 mt-2">
+                  Processus rigoureux basé sur les quatre sources fondamentales du droit islamique
+                </p>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">Institutions partenaires</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500" />
-                        Université Al-Azhar (Égypte)
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500" />
-                        AAOIFI (Bahreïn)
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500" />
-                        Académie de Fiqh Islamique (OCI)
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-500" />
-                        Complexe du Roi Fahd (Arabie Saoudite)
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold mb-3">Services disponibles</h4>
-                    <div className="space-y-3">
-                      <Button className="w-full justify-start">
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        Consultation en ligne
-                      </Button>
-                      <Button variant="outline" className="w-full justify-start">
-                        <Clock className="w-4 h-4 mr-2" />
-                        Rendez-vous planifié
-                      </Button>
-                      <Button variant="outline" className="w-full justify-start">
-                        <Globe className="w-4 h-4 mr-2" />
-                        Support multilingue
-                      </Button>
+                <div className="grid gap-6">
+                  {/* Processus de validation */}
+                  <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+                    <h4 className="font-semibold text-lg mb-4 text-emerald-800">
+                      📋 Processus de Validation en 4 Étapes
+                    </h4>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <Card className="bg-white">
+                        <CardContent className="p-4 text-center">
+                          <div className="text-2xl mb-2">📖</div>
+                          <h5 className="font-semibold mb-1">1. Coran</h5>
+                          <p className="text-sm text-gray-600">Vérification dans le Livre saint</p>
+                          <p className="text-xs text-emerald-600 mt-2">القرآن الكريم</p>
+                        </CardContent>
+                      </Card>
+                      
+                      <Card className="bg-white">
+                        <CardContent className="p-4 text-center">
+                          <div className="text-2xl mb-2">🕌</div>
+                          <h5 className="font-semibold mb-1">2. Sunna</h5>
+                          <p className="text-sm text-gray-600">Hadiths authentiques</p>
+                          <p className="text-xs text-emerald-600 mt-2">السنة النبوية</p>
+                        </CardContent>
+                      </Card>
+                      
+                      <Card className="bg-white">
+                        <CardContent className="p-4 text-center">
+                          <div className="text-2xl mb-2">👥</div>
+                          <h5 className="font-semibold mb-1">3. Ijmâ'</h5>
+                          <p className="text-sm text-gray-600">Consensus des érudits</p>
+                          <p className="text-xs text-emerald-600 mt-2">إجماع العلماء</p>
+                        </CardContent>
+                      </Card>
+                      
+                      <Card className="bg-white">
+                        <CardContent className="p-4 text-center">
+                          <div className="text-2xl mb-2">📚</div>
+                          <h5 className="font-semibold mb-1">4. Qiyâs</h5>
+                          <p className="text-sm text-gray-600">Analogie jurisprudentielle</p>
+                          <p className="text-xs text-emerald-600 mt-2">القياس الشرعي</p>
+                        </CardContent>
+                      </Card>
                     </div>
+                  </div>
+
+                  {/* Exemple concret */}
+                  <Card className="border-l-4 border-l-blue-500">
+                    <CardHeader>
+                      <CardTitle className="text-lg">
+                        🤖 Exemple: Intelligence Artificielle et Prise de Décision
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="bg-gray-50 p-4 rounded">
+                        <h5 className="font-semibold mb-2">Question:</h5>
+                        <p className="text-gray-700">
+                          "Est-il permis d'utiliser l'IA pour des décisions financières automatisées ?"
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <div className="flex gap-3">
+                          <Badge variant="outline" className="shrink-0">📖 Coran</Badge>
+                          <p className="text-sm">
+                            "Et consultez-les dans les affaires" (3:159) - Principe de consultation préservé
+                          </p>
+                        </div>
+                        
+                        <div className="flex gap-3">
+                          <Badge variant="outline" className="shrink-0">🕌 Sunna</Badge>
+                          <p className="text-sm">
+                            "La responsabilité accompagne l'autorité" - L'humain reste responsable des décisions
+                          </p>
+                        </div>
+                        
+                        <div className="flex gap-3">
+                          <Badge variant="outline" className="shrink-0">👥 Ijmâ'</Badge>
+                          <p className="text-sm">
+                            Consensus: L'IA comme outil d'aide permis si supervision humaine maintenue
+                          </p>
+                        </div>
+                        
+                        <div className="flex gap-3">
+                          <Badge variant="outline" className="shrink-0">📚 Qiyâs</Badge>
+                          <p className="text-sm">
+                            Analogie avec les conseillers humains: permis avec transparence et contrôle
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-emerald-50 p-3 rounded border-l-4 border-l-emerald-500">
+                        <p className="text-emerald-800 font-medium">
+                          ✅ Règle finale: HALAL avec conditions (supervision humaine obligatoire)
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Institutions partenaires */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">🏛️ Institutions Partenaires</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-3">
+                          <li className="flex items-center gap-3">
+                            <CheckCircle className="w-5 h-5 text-emerald-500" />
+                            <div>
+                              <div className="font-medium">Université Al-Azhar</div>
+                              <div className="text-sm text-gray-600">جامعة الأزهر - Égypte</div>
+                            </div>
+                          </li>
+                          <li className="flex items-center gap-3">
+                            <CheckCircle className="w-5 h-5 text-emerald-500" />
+                            <div>
+                              <div className="font-medium">AAOIFI</div>
+                              <div className="text-sm text-gray-600">Bahreïn - Standards financiers</div>
+                            </div>
+                          </li>
+                          <li className="flex items-center gap-3">
+                            <CheckCircle className="w-5 h-5 text-emerald-500" />
+                            <div>
+                              <div className="font-medium">Académie de Fiqh OCI</div>
+                              <div className="text-sm text-gray-600">Organisation de Coopération Islamique</div>
+                            </div>
+                          </li>
+                          <li className="flex items-center gap-3">
+                            <CheckCircle className="w-5 h-5 text-emerald-500" />
+                            <div>
+                              <div className="font-medium">Complexe du Roi Fahd</div>
+                              <div className="text-sm text-gray-600">Arabie Saoudite - Impression du Coran</div>
+                            </div>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">💬 Consultation 24/7</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-3">
+                        <Button className="w-full justify-start">
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          Chat avec scholar en ligne
+                        </Button>
+                        <Button variant="outline" className="w-full justify-start">
+                          <Clock className="w-4 h-4 mr-2" />
+                          Rendez-vous planifié
+                        </Button>
+                        <Button variant="outline" className="w-full justify-start">
+                          <Globe className="w-4 h-4 mr-2" />
+                          Support en 78 langues
+                        </Button>
+                        <Button variant="outline" className="w-full justify-start">
+                          <BookOpen className="w-4 h-4 mr-2" />
+                          Recherche dans sources
+                        </Button>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
               </CardContent>
