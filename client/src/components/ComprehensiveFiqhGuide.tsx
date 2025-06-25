@@ -435,7 +435,7 @@ export default function ComprehensiveFiqhGuide() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Library className="w-6 h-6" />
+                  <BookOpen className="w-6 h-6" />
                   Sources Authentiques et Encyclopédies Islamiques
                 </CardTitle>
                 <p className="text-gray-600">
@@ -478,7 +478,7 @@ export default function ComprehensiveFiqhGuide() {
                             </p>
                             <div className="flex items-center gap-4">
                               <Button size="sm" variant="outline" className="gap-2">
-                                <ExternalLink className="w-4 h-4" />
+                                <Globe className="w-4 h-4" />
                                 Consulter en ligne
                               </Button>
                               <Badge variant="secondary">Crédibilité maximale</Badge>
