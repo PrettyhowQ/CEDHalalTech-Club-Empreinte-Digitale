@@ -43,12 +43,12 @@ interface RegionalExpansion {
 const globalExpansions: RegionalExpansion[] = [
   {
     id: 'maghreb',
-    region: 'Maghreb',
-    countries: ['Maroc', 'Algérie', 'Tunisie', 'Libye', 'Mauritanie'],
-    flag: '🇲🇦🇩🇿🇹🇳🇱🇾🇲🇷',
-    marketSize: '4.2B USD',
-    muslimPopulation: '89.5M',
-    potentialStudents: '2.3M',
+    region: 'Maghreb & Afrique du Nord',
+    countries: ['Maroc', 'Algérie', 'Tunisie', 'Libye', 'Mauritanie', 'Égypte', 'Soudan'],
+    flag: '🇲🇦🇩🇿🇹🇳🇱🇾🇲🇷🇪🇬🇸🇩',
+    marketSize: '7.8B USD',
+    muslimPopulation: '198.7M',
+    potentialStudents: '4.1M',
     primaryLanguages: ['Arabe (Maghrébin)', 'Français', 'Berbère (Tamazight)', 'Arabe classique'],
     localAdaptations: [
       'École Malikite prioritaire (99% population Maghreb)',
@@ -248,55 +248,179 @@ const globalExpansions: RegionalExpansion[] = [
     ]
   },
   {
+    id: 'golfe_moyen_orient',
+    region: 'Golfe & Moyen-Orient',
+    countries: ['Arabie Saoudite', 'EAU', 'Qatar', 'Koweït', 'Bahreïn', 'Oman', 'Irak', 'Jordanie', 'Liban', 'Syrie', 'Palestine', 'Yémen'],
+    flag: '🇸🇦🇦🇪🇶🇦🇰🇼🇧🇭🇴🇲🇮🇶🇯🇴🇱🇧🇸🇾🇵🇸🇾🇪',
+    marketSize: '12.4B USD',
+    muslimPopulation: '156.2M',
+    potentialStudents: '3.8M',
+    primaryLanguages: ['Arabe', 'Anglais', 'Français', 'Persan', 'Kurde'],
+    localAdaptations: [
+      'Toutes écoles juridiques (Hanbalite, Hanafite, Shafiite, Jaafari)',
+      'Standards GCC harmonisés',
+      'Support communautés chiites et sunnites',
+      'Intégration Vision 2030 (Arabie)',
+      'Conformité réglementation bancaire islamique'
+    ],
+    certificationPartners: [
+      'Université Roi Saoud (Riyadh)',
+      'Université Américaine Sharjah',
+      'Qatar Foundation',
+      'Université du Koweït',
+      'Université Sultan Qaboos (Oman)'
+    ],
+    bankingPartners: [
+      'Al Rajhi Bank',
+      'Dubai Islamic Bank',
+      'Qatar Islamic Bank',
+      'Kuwait Finance House',
+      'Bank Muscat Islamic'
+    ],
+    scholarValidation: [
+      'Dar Al-Ifta Arabie Saoudite',
+      'Conseil Fatwa EAU',
+      'Centre Fatwa Qatar',
+      'Conseil Religieux Koweït'
+    ],
+    launchTimeline: 'Q1 2025',
+    expectedRevenue: '740M USD/an',
+    status: 'ready',
+    culturalPriorities: [
+      'Respect traditions bédouines',
+      'Harmonisation avec Vision 2030',
+      'Support pèlerinage Hajj/Omra',
+      'Intégration économie pétrolière'
+    ],
+    technicalChallenges: [
+      'Standards réglementaires stricts',
+      'Concurrence fintech établie',
+      'Attentes qualité premium',
+      'Cybersécurité renforcée'
+    ]
+  },
+  {
+    id: 'asie_sud',
+    region: 'Asie du Sud',
+    countries: ['Pakistan', 'Bangladesh', 'Inde', 'Afghanistan', 'Maldives', 'Sri Lanka'],
+    flag: '🇵🇰🇧🇩🇮🇳🇦🇫🇲🇻🇱🇰',
+    marketSize: '9.6B USD',
+    muslimPopulation: '612.8M',
+    potentialStudents: '8.7M',
+    primaryLanguages: ['Ourdou', 'Bengali', 'Hindi', 'Anglais', 'Dari', 'Pashto', 'Dhivehi'],
+    localAdaptations: [
+      'École Hanafite dominante (tradition Deoband/Barelvi)',
+      'Support communautés Ahmadiyya (controversé)',
+      'Intégration traditions soufies fortes',
+      'Respect diversité sectaire',
+      'Adaptation économies rurales massives'
+    ],
+    certificationPartners: [
+      'Université Islamique Internationale (Islamabad)',
+      'Université Dhaka',
+      'Jamia Millia Islamia (Delhi)',
+      'Université Kaboul',
+      'Maldives National University'
+    ],
+    bankingPartners: [
+      'Meezan Bank (Pakistan)',
+      'Islami Bank Bangladesh',
+      'Tamilnad Mercantile Bank (Inde)',
+      'Afghanistan International Bank',
+      'Bank of Maldives Islamic'
+    ],
+    scholarValidation: [
+      'Conseil Idéologie Islamique Pakistan',
+      'Bangladesh Shariah Board',
+      'All India Muslim Personal Law Board',
+      'Conseil Oulémas Afghanistan'
+    ],
+    launchTimeline: 'Q3 2025',
+    expectedRevenue: '520M USD/an',
+    status: 'development',
+    culturalPriorities: [
+      'Respect traditions soufies locales',
+      'Support communautés rurales',
+      'Intégration festival islamiques',
+      'Adaptation caste/hiérarchies sociales'
+    ],
+    technicalChallenges: [
+      'Infrastructure internet variable',
+      'Diversité linguistique extrême',
+      'Sensibilités politiques régionales',
+      'Économies informelles dominantes'
+    ]
+  },
+  {
     id: 'europe_ameriques',
-    region: 'Europe & Amériques',
-    countries: ['France', 'Allemagne', 'UK', 'USA', 'Canada', 'Bosnie', 'Albanie', 'Brésil', 'Argentine'],
-    flag: '🇫🇷🇩🇪🇬🇧🇺🇸🇨🇦🇧🇦🇦🇱🇧🇷🇦🇷',
-    marketSize: '6.8B USD',
-    muslimPopulation: '43.7M',
-    potentialStudents: '2.8M',
-    primaryLanguages: ['Français', 'Anglais', 'Allemand', 'Espagnol', 'Portugais', 'Bosniaque', 'Albanian'],
+    region: 'Europe, Amériques & Océanie',
+    countries: ['France', 'Allemagne', 'UK', 'USA', 'Canada', 'Bosnie', 'Albanie', 'Brésil', 'Argentine', 'Australie', 'Turquie', 'Russie', 'Chine'],
+    flag: '🇫🇷🇩🇪🇬🇧🇺🇸🇨🇦🇧🇦🇦🇱🇧🇷🇦🇷🇦🇺🇹🇷🇷🇺🇨🇳',
+    marketSize: '11.3B USD',
+    muslimPopulation: '187.4M',
+    potentialStudents: '6.2M',
+    primaryLanguages: ['Français', 'Anglais', 'Allemand', 'Espagnol', 'Portugais', 'Bosniaque', 'Albanian', 'Turc', 'Russe', 'Chinois'],
     localAdaptations: [
       'Toutes écoles juridiques représentées',
       'Focus intégration sociétés occidentales',
       'Respect laïcité/séparation religion-État',
       'Support communautés diaspora',
-      'Adaptation droits minorités religieuses'
+      'Adaptation droits minorités religieuses',
+      'Intégration traditions Ouïghours (Chine)',
+      'Support communautés Tatars (Russie)',
+      'Harmonisation standards européens'
     ],
     certificationPartners: [
       'Institut du Monde Arabe (Paris)',
       'Cambridge Islamic Finance',
       'Harvard Divinity School',
       'Université McGill (Canada)',
-      'Université de Sarajevo'
+      'Université de Sarajevo',
+      'Université Istanbul',
+      'Université Lomonossov (Moscou)',
+      'Université Pékin',
+      'Griffith University (Australie)'
     ],
     bankingPartners: [
       'Chaabi Bank (France)',
       'ADCB Islamic (UK)',
       'Guidance Financial (USA)',
       'Ansar Financial (Canada)',
-      'BBI Bank (Bosnie)'
+      'BBI Bank (Bosnie)',
+      'Kuveyt Türk (Turquie)',
+      'Tatfondbank Islamic (Russie)',
+      'Bank of Ningxia (Chine)',
+      'MCCA Islamic Bank (Australie)'
     ],
     scholarValidation: [
       'Conseil Français du Culte Musulman',
       'Islamic Society of North America',
       'Muslim Council of Britain',
-      'Conseil Islamique du Canada'
+      'Conseil Islamique du Canada',
+      'Diyanet İşleri Başkanlığı (Turquie)',
+      'Conseil Central des Musulmans Allemagne',
+      'Conseil Religieux Musulmans Russie'
     ],
     launchTimeline: 'Q1 2026',
-    expectedRevenue: '420M USD/an',
+    expectedRevenue: '690M USD/an',
     status: 'planned',
     culturalPriorities: [
       'Respect diversité culturelle',
       'Intégration valeurs démocratiques',
       'Support jeunesse musulmane',
-      'Dialogue interreligieux'
+      'Dialogue interreligieux',
+      'Protection communautés persécutées',
+      'Adaptation contextes séculiers',
+      'Support convertis récents'
     ],
     technicalChallenges: [
       'Réglementations RGPD strictes',
-      'Sensibilités politiques',
+      'Sensibilités politiques géopolitiques',
       'Concurrence tech établie',
-      'Standards académiques élevés'
+      'Standards académiques élevés',
+      'Restrictions gouvernementales (Chine)',
+      'Sanctions économiques (Russie)',
+      'Censure internet variable'
     ]
   }
 ];
@@ -352,10 +476,10 @@ export function GlobalMuslimExpansion() {
               <Globe className="h-8 w-8 text-green-600" />
               <div>
                 <CardTitle className="text-2xl text-green-800">
-                  🌍 Expansion Fiqh 100% - Monde Musulman Entier
+                  🌍 Expansion Fiqh 100% - TOUS LES MUSULMANS DU MONDE
                 </CardTitle>
                 <p className="text-sm text-gray-600">
-                  Plateforme globale pour tous les musulmans - 5 régions, 35+ pays
+                  Couverture mondiale complète: Dubaï, Arabie Saoudite, Asie, Europe, Afrique - 7 régions, 50+ pays
                 </p>
               </div>
             </div>
@@ -420,7 +544,7 @@ export function GlobalMuslimExpansion() {
 
       {/* Sélection de région */}
       <Tabs value={selectedRegion} onValueChange={setSelectedRegion}>
-        <TabsList className="grid w-full grid-cols-5">
+        <TabsList className="grid w-full grid-cols-7">
           {globalExpansions.map((region) => (
             <TabsTrigger key={region.id} value={region.id} className="text-xs">
               {region.flag.split('')[0]} {region.region.split(' ')[0]}
