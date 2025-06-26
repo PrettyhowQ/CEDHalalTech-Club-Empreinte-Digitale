@@ -136,6 +136,7 @@ import LanguageLearningPage from "@/pages/language-learning-page";
 import FamilyBankingPage from "@/pages/family-banking";
 import ArabicInterface from "@/pages/ArabicInterface";
 import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
+import FiqhInformatique from "@/pages/FiqhInformatique";
 import NotFound from "@/pages/not-found";
 
 function Router() {
