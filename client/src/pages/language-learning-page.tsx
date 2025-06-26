@@ -2,7 +2,7 @@ import { LanguageLearningPlatform } from "@/components/LanguageLearningPlatform"
 import { GlobalLanguageExchange } from "@/components/GlobalLanguageExchange";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function LanguageLearningPage() {
+function LanguageLearningPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-8">
@@ -28,3 +28,5 @@ export default function LanguageLearningPage() {
     </div>
   );
 }
+
+export default LanguageLearningPage;

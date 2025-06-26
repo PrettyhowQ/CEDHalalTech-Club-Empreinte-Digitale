@@ -126,6 +126,7 @@ import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
 import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
 import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import ExportModulesPage from "@/pages/export-modules-page";
+import LanguageLearningPage from "@/pages/language-learning-page";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -482,6 +483,15 @@ function Router() {
       <Route path="/dubai-export" component={ExportModulesPage} />
       <Route path="/saudi-export" component={ExportModulesPage} />
       <Route path="/golfe-export" component={ExportModulesPage} />
+      
+      {/* École de Langues */}
+      <Route path="/language-learning" component={LanguageLearningPage} />
+      <Route path="/ecole-langues" component={LanguageLearningPage} />
+      <Route path="/langues" component={LanguageLearningPage} />
+      <Route path="/arabe-litteraire" component={LanguageLearningPage} />
+      <Route path="/anglais-international" component={LanguageLearningPage} />
+      <Route path="/italien-culture" component={LanguageLearningPage} />
+      <Route path="/echange-linguistique" component={LanguageLearningPage} />
       
       {/* Comparaison écoles en ligne */}
       <Route path="/education-comparison" component={EducationComparisonPage} />
