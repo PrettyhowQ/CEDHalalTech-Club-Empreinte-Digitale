@@ -190,21 +190,21 @@ export default function ArabicInterface() {
           </div>
           <div>
             <h1 className="text-lg font-bold">INSTITUT CED</h1>
-            <p className="text-xs text-purple-100">معهد النادي الرقمي</p>
+            <p className="text-xs text-emerald-100">معهد النادي الرقمي</p>
           </div>
         </div>
-        <div className="text-xs text-purple-200">
+        <div className="text-xs text-emerald-200">
           Club Empreinte Digitale Academy
         </div>
       </div>
 
       {/* Menu hamburger */}
-      <div className="bg-purple-600 px-4 pb-2">
+      <div className="bg-emerald-600 px-4 pb-2">
         <Button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           variant="outline"
           size="sm"
-          className="bg-white text-purple-600 border-white hover:bg-purple-50"
+          className="bg-white text-emerald-600 border-white hover:bg-emerald-50"
         >
           <Menu className="h-4 w-4 mr-2" />
           Menu
@@ -213,10 +213,10 @@ export default function ArabicInterface() {
 
       {/* Navigation principale */}
       {isMenuOpen && (
-        <div className="bg-purple-600 text-white px-4 pb-4 space-y-1" dir="ltr">
+        <div className="bg-emerald-600 text-white px-4 pb-4 space-y-1" dir="ltr">
           <Button
             variant="ghost"
-            className="w-full justify-start text-white hover:bg-purple-500 py-2"
+            className="w-full justify-start text-white hover:bg-emerald-500 py-2"
           >
             <Home className="h-4 w-4 mr-3" />
             🏠 Accueil
@@ -227,7 +227,7 @@ export default function ArabicInterface() {
               <Button
                 onClick={() => toggleNiveau(niveau)}
                 variant="ghost"
-                className="w-full justify-between text-white hover:bg-purple-500 py-2"
+                className="w-full justify-between text-white hover:bg-emerald-500 py-2"
               >
                 <span>📖 Tome {niveau} de Médine</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${
@@ -239,7 +239,7 @@ export default function ArabicInterface() {
           
           <Button
             variant="ghost"
-            className="w-full justify-between text-white hover:bg-purple-500 py-2"
+            className="w-full justify-between text-white hover:bg-emerald-500 py-2"
           >
             <span>📚 Méthode Médine Complète (6 Tomes)</span>
             <ChevronDown className="h-4 w-4" />
@@ -247,7 +247,7 @@ export default function ArabicInterface() {
           
           <Button
             variant="ghost"
-            className="w-full justify-between text-white hover:bg-purple-500 py-2"
+            className="w-full justify-between text-white hover:bg-emerald-500 py-2"
           >
             <span>📝 100 verbes arabes essentiels</span>
             <ChevronDown className="h-4 w-4" />
@@ -340,11 +340,11 @@ export default function ArabicInterface() {
                 <div key={niveau} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
                     <div className="font-medium">Niveau {niveau}</div>
-                    <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">Accessible</Badge>
+                    <Badge className="bg-emerald-200 text-emerald-800 text-xs mt-1">Accessible</Badge>
                   </div>
                   <Button 
                     size="sm" 
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white"
+                    className="bg-emerald-500 hover:bg-emerald-600 text-white"
                     onClick={() => setSelectedNiveau(niveau)}
                   >
                     <ArrowRight className="h-4 w-4" />
@@ -356,9 +356,9 @@ export default function ArabicInterface() {
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
                   <div className="font-medium">100 verbes arabes</div>
-                  <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">Accessible</Badge>
+                  <Badge className="bg-emerald-200 text-emerald-800 text-xs mt-1">Accessible</Badge>
                 </div>
-                <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white">
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -368,11 +368,11 @@ export default function ArabicInterface() {
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
                     <div className="font-medium">{section.title}</div>
-                    <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">
+                    <Badge className="bg-emerald-200 text-emerald-800 text-xs mt-1">
                       {section.accessible ? 'Accessible' : 'Verrouillé'}
                     </Badge>
                   </div>
-                  <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                  <Button size="sm" className="bg-emerald-500 hover:bg-emerald-600 text-white">
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
@@ -408,7 +408,7 @@ export default function ArabicInterface() {
         )}
 
         {/* Module de traduction intégré style CED */}
-        <div className="bg-cyan-400 p-4 rounded-lg">
+        <div className="bg-emerald-400 p-4 rounded-lg">
           <div className="bg-white rounded-lg p-4">
             <div className="flex items-center justify-center mb-4 space-x-4">
               <Button variant="outline" size="sm">
@@ -446,7 +446,7 @@ export default function ArabicInterface() {
           </div>
           
           <Button 
-            className="w-full mt-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium"
+            className="w-full mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-medium"
             onClick={handleTranslate}
           >
             🌐 Traduire avec CED AI
