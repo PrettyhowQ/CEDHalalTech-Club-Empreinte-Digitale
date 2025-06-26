@@ -1,0 +1,89 @@
+# 🕌 Modèle de Citation Islamique Respectueuse  
+*Conforme au Coran, à la Sunna, à la compréhension des salafs et à l’ijmâʿ (consensus des 4 écoles : chaféite, hanbalite, malikite, hanafite)*
+
+---
+
+## 📖 1. Verset du Coran
+
+> **Verset coranique :**  
+> _"Et dis : « La vérité émane de votre Seigneur. »_  
+> — **Sourate Al-Kahf (18:29)**
+
+🔹 **Note** : toujours mentionner :
+- Le **nom de la sourate**
+- Le **numéro du verset**
+- Optionnel : préciser la **traduction** (Muhammad Hamidullah, Abdelmajid, etc.)
+
+---
+
+## 🌟 2. Hadith authentique
+
+> **Parole du Prophète ﷺ :**  
+> _"Certes, les actes ne valent que par les intentions."_  
+> — **Rapporté par Al-Bukhari (n°1) et Muslim (n°1907)**
+
+🔹 **Note** :
+- Toujours citer la **source** (Bukhari, Muslim, etc.)
+- Éviter le terme “citation” seul → utiliser “**hadith**” ou “**parole prophétique**”
+- Si doute sur l’authenticité : dire « Il est rapporté que… »
+
+---
+
+## 👳‍♂️ 3. Parole d’un salaf ou savant
+
+> **Parole de Ibn Taymiyya رحمه الله :**  
+> _"Il n’y a aucun bonheur dans ce bas-monde sans Tawḥîd."_
+
+🔹 **Note** :
+- Toujours accompagner du terme **rahimahoullah** (رحمه الله) ou **rahimahâ Allah** (pour une femme)
+- Si le savant est vivant : utiliser **حفظه الله** (ḥafaẓahu Allāh)
+- Éviter d’attribuer au Prophète ﷺ sans preuve
+
+---
+
+## 📌 4. Rappel islamique (non-sourcé)
+
+> **Rappel utile :**  
+> _"Allah ne regarde pas vos corps ni vos apparences, mais Il regarde vos cœurs et vos actions."_
+
+🔸 **Attention :**
+- Si ce n’est pas confirmé comme **hadith sahîh**, **ne pas l’attribuer directement au Prophète ﷺ**
+- Employer plutôt :
+  - "Il est dit que..."
+  - "Les savants ont rappelé que..."
+  - "Selon certains enseignements islamiques..."
+
+---
+
+## ✅ 5. Tableau récapitulatif
+
+| 📚 Type de contenu       | ✅ Formule recommandée                                      |
+|--------------------------|-------------------------------------------------------------|
+| 📖 Verset coranique       | `"Verset — Sourate X, verset Y"`                            |
+| 🌟 Hadith authentique     | `"Parole du Prophète ﷺ — Rapporté par..."`                 |
+| 👳‍♂️ Parole de salaf       | `"Parole de [Nom] رحمه الله"`                              |
+| 📌 Rappel général         | `"Rappel islamique" ou "Conseil spirituel"`                 |
+
+---
+
+## 📘 6. À éviter dans un contexte islamique
+
+❌ Dire simplement :  
+- "Citation du Prophète"
+- "Citation islamique" (sans précision)
+- "Selon l’Islam" sans source
+
+✅ À privilégier :  
+- "Verset coranique"
+- "Hadith sahîh"
+- "Parole d’un compagnon"
+- "Avis d’un savant reconnu"
+
+---
+
+## 🔐 7. Mention copyright à ajouter
+
+```html
+<footer>
+© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有
+</footer>
