@@ -535,6 +535,9 @@ function Router() {
       <Route path="/traducteur" component={TraducteurPage} />
       <Route path="/translator" component={TraducteurPage} />
       <Route path="/app-traduction" component={TraducteurPage} />
+      <Route path="/interface-arabe" component={ArabicInterface} />
+      <Route path="/arabic-interface" component={ArabicInterface} />
+      <Route path="/institut-ced" component={ArabicInterface} />
       <Route path="/professeur-arabe-ia" component={ArabicAITeacherPage} />
       <Route path="/arabic-ai-teacher" component={ArabicAITeacherPage} />
       <Route path="/ia-arabe" component={ArabicAITeacherPage} />

@@ -16,18 +16,18 @@ import {
 
 const menuItems = [
   { id: 'accueil', label: 'الصفحة الرئيسية', icon: Home, frenchLabel: 'Accueil' },
-  { id: 'niveau1', label: 'المستوى الأول', frenchLabel: 'Niveau 1' },
-  { id: 'niveau2', label: 'المستوى الثاني', frenchLabel: 'Niveau 2' },
-  { id: '100verbes', label: '100 فعل عربي', frenchLabel: '100 verbes arabes' },
-  { id: 'niveau3', label: 'المستوى الثالث', frenchLabel: 'Niveau 3' },
-  { id: 'niveau4', label: 'المستوى الرابع', frenchLabel: 'Niveau 4' },
-  { id: 'niveau5', label: 'المستوى الخامس', frenchLabel: 'Niveau 5' },
-  { id: 'niveau6', label: 'المستوى السادس', frenchLabel: 'Niveau 6' },
-  { id: 'bonus', label: 'إضافات', frenchLabel: 'Bonus' },
-  { id: 'coachings', label: 'التدريب والتصحيحات', frenchLabel: 'Coachings et corrections' },
-  { id: 'aide', label: 'المساعدة', frenchLabel: 'Aide' },
-  { id: 'credits', label: 'شراء الرصيد', frenchLabel: 'Achat de crédits' },
-  { id: 'traduction', label: 'تطبيق الترجمة', frenchLabel: 'App de Traduction' },
+  { id: 'niveau1', label: 'المستوى الأول', icon: BookOpen, frenchLabel: 'Niveau 1' },
+  { id: 'niveau2', label: 'المستوى الثاني', icon: BookOpen, frenchLabel: 'Niveau 2' },
+  { id: '100verbes', label: '100 فعل عربي', icon: BookOpen, frenchLabel: '100 verbes arabes' },
+  { id: 'niveau3', label: 'المستوى الثالث', icon: BookOpen, frenchLabel: 'Niveau 3' },
+  { id: 'niveau4', label: 'المستوى الرابع', icon: BookOpen, frenchLabel: 'Niveau 4' },
+  { id: 'niveau5', label: 'المستوى الخامس', icon: BookOpen, frenchLabel: 'Niveau 5' },
+  { id: 'niveau6', label: 'المستوى السادس', icon: BookOpen, frenchLabel: 'Niveau 6' },
+  { id: 'bonus', label: 'إضافات', icon: Smile, frenchLabel: 'Bonus' },
+  { id: 'coachings', label: 'التدريب والتصحيحات', icon: Keyboard, frenchLabel: 'Coachings et corrections' },
+  { id: 'aide', label: 'المساعدة', icon: Smile, frenchLabel: 'Aide' },
+  { id: 'credits', label: 'شراء الرصيد', icon: Smile, frenchLabel: 'Achat de crédits' },
+  { id: 'traduction', label: 'تطبيق الترجمة', icon: Languages, frenchLabel: 'App de Traduction' },
 ];
 
 const languages = [
@@ -119,7 +119,7 @@ export default function ArabicInterface() {
               <div key={item.id} className="flex items-center justify-between">
                 <div className="text-white hover:text-cyan-100 cursor-pointer py-2">
                   <div className="flex items-center">
-                    <item.icon className="h-4 w-4 ml-2" />
+                    {React.createElement(item.icon, { className: "h-4 w-4 ml-2" })}
                     <span className="text-sm">{item.label}</span>
                   </div>
                 </div>
