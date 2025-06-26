@@ -21,67 +21,130 @@ import {
 
 const niveauxContent = {
   1: [
-    'Fondements Islam et Technologie',
-    'Fiqh Informatique - Niveau Débutant',
-    'Éthique IA selon le Coran',
-    'Blockchain Halal - Introduction',
-    'Premiers pas en Trading Sharia',
-    'Zakat sur crypto-monnaies',
-    'DeFi Islamique - Bases',
-    'Smart Contracts conformes',
-    'FinTech éthique',
-    'Banque digitale sans Riba',
-    'Assurance Takaful moderne',
-    'Investissement ESG Halal',
-    'Économie circulaire islamique',
-    'Innovation responsable',
-    'Tech for Good - Vision islamique',
-    'Cybersécurité Halal',
-    'Data Privacy selon Sharia',
-    'E-commerce éthique',
-    'Entrepreneuriat digital Halal'
+    'Livre de Médine Tome 1 - الدرس الأول',
+    'Livre de Médine Tome 1 - الدرس الثاني', 
+    'Livre de Médine Tome 1 - الدرس الثالث',
+    'Livre de Médine Tome 1 - الدرس الرابع',
+    'Livre de Médine Tome 1 - الدرس الخامس',
+    'Livre de Médine Tome 1 - الدرس السادس',
+    'Livre de Médine Tome 1 - الدرس السابع',
+    'Livre de Médine Tome 1 - الدرس الثامن',
+    'Livre de Médine Tome 1 - الدرس التاسع',
+    'Livre de Médine Tome 1 - الدرس العاشر',
+    'Livre de Médine Tome 1 - الدرس الحادي عشر',
+    'Livre de Médine Tome 1 - الدرس الثاني عشر',
+    'Livre de Médine Tome 1 - الدرس الثالث عشر',
+    'Livre de Médine Tome 1 - الدرس الرابع عشر',
+    'Livre de Médine Tome 1 - الدرس الخامس عشر',
+    'Livre de Médine Tome 1 - الدرس السادس عشر',
+    'Livre de Médine Tome 1 - الدرس السابع عشر',
+    'Livre de Médine Tome 1 - الدرس الثامن عشر',
+    'Livre de Médine Tome 1 - الدرس التاسع عشر'
   ],
   2: [
-    'Fiqh Informatique Avancé',
-    'IA Éthique - Applications pratiques',
-    'Quantum Finance Halal',
-    'Métaverse et valeurs islamiques',
-    'NFT conformes Sharia',
-    'Robotic Process Automation éthique',
-    'Consulting tech islamique',
-    'Audit conformité digitale',
-    'Leadership tech responsable',
-    'Innovation sociale digitale',
-    'Sustainable FinTech',
-    'Islamic PropTech',
-    'EdTech conforme Fiqh',
-    'HealthTech éthique',
-    'AgriTech durable',
-    'GreenTech islamique',
-    'Social Impact Tech',
-    'Inclusive Innovation',
-    'Digital Transformation Halal'
+    'Livre de Médine Tome 2 - الدرس الأول',
+    'Livre de Médine Tome 2 - الدرس الثاني',
+    'Livre de Médine Tome 2 - الدرس الثالث',
+    'Livre de Médine Tome 2 - الدرس الرابع',
+    'Livre de Médine Tome 2 - الدرس الخامس',
+    'Livre de Médine Tome 2 - الدرس السادس',
+    'Livre de Médine Tome 2 - الدرس السابع',
+    'Livre de Médine Tome 2 - الدرس الثامن',
+    'Livre de Médine Tome 2 - الدرس التاسع',
+    'Livre de Médine Tome 2 - الدرس العاشر',
+    'Livre de Médine Tome 2 - الدرس الحادي عشر',
+    'Livre de Médine Tome 2 - الدرس الثاني عشر',
+    'Livre de Médine Tome 2 - الدرس الثالث عشر',
+    'Livre de Médine Tome 2 - الدرس الرابع عشر',
+    'Livre de Médine Tome 2 - الدرس الخامس عشر',
+    'Livre de Médine Tome 2 - الدرس السادس عشر',
+    'Livre de Médine Tome 2 - الدرس السابع عشر',
+    'Livre de Médine Tome 2 - الدرس الثامن عشر',
+    'Livre de Médine Tome 2 - الدرس التاسع عشر'
   ],
   3: [
-    'Expert en Fiqh Technologique',
-    'Certification Sharia Tech',
-    'Conseil stratégique Islamic Tech',
-    'Research & Development Halal',
-    'Innovation Labs islamiques',
-    'Venture Capital éthique',
-    'Tech Due Diligence Sharia',
-    'Regulatory Compliance Islamic',
-    'International Standards Halal',
-    'Cross-border Islamic FinTech',
-    'Merger & Acquisition éthique',
-    'IPO Sharia Compliance',
-    'Corporate Governance Islamic',
-    'Sustainable Finance Tech',
-    'Impact Investment Tech',
-    'ESG Integration Halal',
-    'Climate Tech islamique',
-    'Circular Economy Digital',
-    'Future of Islamic Finance'
+    'Livre de Médine Tome 3 - الدرس الأول',
+    'Livre de Médine Tome 3 - الدرس الثاني',
+    'Livre de Médine Tome 3 - الدرس الثالث',
+    'Livre de Médine Tome 3 - الدرس الرابع',
+    'Livre de Médine Tome 3 - الدرس الخامس',
+    'Livre de Médine Tome 3 - الدرس السادس',
+    'Livre de Médine Tome 3 - الدرس السابع',
+    'Livre de Médine Tome 3 - الدرس الثامن',
+    'Livre de Médine Tome 3 - الدرس التاسع',
+    'Livre de Médine Tome 3 - الدرس العاشر',
+    'Livre de Médine Tome 3 - الدرس الحادي عشر',
+    'Livre de Médine Tome 3 - الدرس الثاني عشر',
+    'Livre de Médine Tome 3 - الدرس الثالث عشر',
+    'Livre de Médine Tome 3 - الدرس الرابع عشر',
+    'Livre de Médine Tome 3 - الدرس الخامس عشر',
+    'Livre de Médine Tome 3 - الدرس السادس عشر',
+    'Livre de Médine Tome 3 - الدرس السابع عشر',
+    'Livre de Médine Tome 3 - الدرس الثامن عشر',
+    'Livre de Médine Tome 3 - الدرس التاسع عشر'
+  ],
+  4: [
+    'Livre de Médine Tome 4 - الدرس الأول',
+    'Livre de Médine Tome 4 - الدرس الثاني',
+    'Livre de Médine Tome 4 - الدرس الثالث',
+    'Livre de Médine Tome 4 - الدرس الرابع',
+    'Livre de Médine Tome 4 - الدرس الخامس',
+    'Livre de Médine Tome 4 - الدرس السادس',
+    'Livre de Médine Tome 4 - الدرس السابع',
+    'Livre de Médine Tome 4 - الدرس الثامن',
+    'Livre de Médine Tome 4 - الدرس التاسع',
+    'Livre de Médine Tome 4 - الدرس العاشر',
+    'Livre de Médine Tome 4 - الدرس الحادي عشر',
+    'Livre de Médine Tome 4 - الدرس الثاني عشر',
+    'Livre de Médine Tome 4 - الدرس الثالث عشر',
+    'Livre de Médine Tome 4 - الدرس الرابع عشر',
+    'Livre de Médine Tome 4 - الدرس الخامس عشر',
+    'Livre de Médine Tome 4 - الدرس السادس عشر',
+    'Livre de Médine Tome 4 - الدرس السابع عشر',
+    'Livre de Médine Tome 4 - الدرس الثامن عشر',
+    'Livre de Médine Tome 4 - الدرس التاسع عشر'
+  ],
+  5: [
+    'Livre de Médine Tome 5 - الدرس الأول',
+    'Livre de Médine Tome 5 - الدرس الثاني',
+    'Livre de Médine Tome 5 - الدرس الثالث',
+    'Livre de Médine Tome 5 - الدرس الرابع',
+    'Livre de Médine Tome 5 - الدرس الخامس',
+    'Livre de Médine Tome 5 - الدرس السادس',
+    'Livre de Médine Tome 5 - الدرس السابع',
+    'Livre de Médine Tome 5 - الدرس الثامن',
+    'Livre de Médine Tome 5 - الدرس التاسع',
+    'Livre de Médine Tome 5 - الدرس العاشر',
+    'Livre de Médine Tome 5 - الدرس الحادي عشر',
+    'Livre de Médine Tome 5 - الدرس الثاني عشر',
+    'Livre de Médine Tome 5 - الدرس الثالث عشر',
+    'Livre de Médine Tome 5 - الدرس الرابع عشر',
+    'Livre de Médine Tome 5 - الدرس الخامس عشر',
+    'Livre de Médine Tome 5 - الدرس السادس عشر',
+    'Livre de Médine Tome 5 - الدرس السابع عشر',
+    'Livre de Médine Tome 5 - الدرس الثامن عشر',
+    'Livre de Médine Tome 5 - الدرس التاسع عشر'
+  ],
+  6: [
+    'Livre de Médine Tome 6 - الدرس الأول',
+    'Livre de Médine Tome 6 - الدرس الثاني',
+    'Livre de Médine Tome 6 - الدرس الثالث',
+    'Livre de Médine Tome 6 - الدرس الرابع',
+    'Livre de Médine Tome 6 - الدرس الخامس',
+    'Livre de Médine Tome 6 - الدرس السادس',
+    'Livre de Médine Tome 6 - الدرس السابع',
+    'Livre de Médine Tome 6 - الدرس الثامن',
+    'Livre de Médine Tome 6 - الدرس التاسع',
+    'Livre de Médine Tome 6 - الدرس العاشر',
+    'Livre de Médine Tome 6 - الدرس الحادي عشر',
+    'Livre de Médine Tome 6 - الدرس الثاني عشر',
+    'Livre de Médine Tome 6 - الدرس الثالث عشر',
+    'Livre de Médine Tome 6 - الدرس الرابع عشر',
+    'Livre de Médine Tome 6 - الدرس الخامس عشر',
+    'Livre de Médine Tome 6 - الدرس السادس عشر',
+    'Livre de Médine Tome 6 - الدرس السابع عشر',
+    'Livre de Médine Tome 6 - الدرس الثامن عشر',
+    'Livre de Médine Tome 6 - الدرس التاسع عشر'
   ]
 };
 
@@ -166,7 +229,7 @@ export default function ArabicInterface() {
                 variant="ghost"
                 className="w-full justify-between text-white hover:bg-cyan-400 py-2"
               >
-                <span>Niveau {niveau}</span>
+                <span>📖 Tome {niveau} de Médine</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${
                   expandedNiveau === niveau ? 'rotate-180' : ''
                 }`} />
@@ -178,7 +241,7 @@ export default function ArabicInterface() {
             variant="ghost"
             className="w-full justify-between text-white hover:bg-cyan-400 py-2"
           >
-            <span>100 verbes arabes</span>
+            <span>📚 Méthode Médine Complète (6 Tomes)</span>
             <ChevronDown className="h-4 w-4" />
           </Button>
           
@@ -186,15 +249,7 @@ export default function ArabicInterface() {
             variant="ghost"
             className="w-full justify-between text-white hover:bg-cyan-400 py-2"
           >
-            <span>Niveau 3</span>
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-          
-          <Button
-            variant="ghost"
-            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
-          >
-            <span>Niveau 4</span>
+            <span>📝 100 verbes arabes essentiels</span>
             <ChevronDown className="h-4 w-4" />
           </Button>
           
