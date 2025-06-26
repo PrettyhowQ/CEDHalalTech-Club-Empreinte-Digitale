@@ -313,7 +313,7 @@ export default function ArabicInterface() {
                 <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
                     <div className="font-medium">{section.title}</div>
-                    <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">
+                    <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">
                       {section.accessible ? 'Accessible' : 'Verrouillé'}
                     </Badge>
                   </div>
