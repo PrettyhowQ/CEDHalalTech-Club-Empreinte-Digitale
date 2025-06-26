@@ -12,6 +12,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Code, Apple, Brain, Award, Clock, Users, Star, Play, ChevronRight, BookOpen, Video, Target } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/context/LanguageContext';
+import { FiqhValidationCertificate } from '@/components/FiqhValidationCertificate';
 
 const categoryIcons = {
   'programmation': Code,
@@ -99,6 +100,11 @@ const categoryDescriptions = {
   'dietetique': 'Nutrition responsable et alimentation durable pour un mode de vie équilibré. Découvrez les principes d\'une diététique éthique et écologique.',
   'ia-domains': 'Explorez les applications de l\'IA dans 10 domaines professionnels différents : santé, finance, éducation, agriculture, et plus encore.',
   'certifications': 'Obtenez des certifications reconnues en IA éthique et technologies responsables. Validez vos compétences avec nos partenaires universitaires.',
+  'coran-tajweed': 'Apprenez la récitation du Coran avec les règles du Tajweed. Formations complètes avec récitateurs authentiques et méthodes traditionnelles.',
+  'sahaba-stories': 'Découvrez les histoires inspirantes des Compagnons du Prophète (PBSL). Leçons de vie et exemples de foi authentique.',
+  'hadith-studies': 'Étudiez les hadiths authentiques (Sahih Bukhari, Muslim) avec méthodologie scientifique et chaînes de transmission vérifiées.',
+  'islamic-sciences': 'Sciences islamiques complètes : Fiqh, Aqida, Sira, Tafsir. Enseignement selon les 4 écoles sunnites authentiques.',
+  'arabic-learning': 'Maîtrisez l\'arabe littéraire et la calligraphie traditionnelle. Méthodes éprouvées et IA éducative conforme Fiqh.',
 };
 
 function CourseCard({ course, userProgress }: { course: any; userProgress?: any }) {
@@ -109,6 +115,9 @@ function CourseCard({ course, userProgress }: { course: any; userProgress?: any 
   const progress = userProgress?.find((p: any) => p.courseId === course.id);
   const progressPercentage = progress?.progress || 0;
   const isCompleted = progress?.completed || false;
+  
+  // Vérifier si c'est une formation islamique
+  const isIslamicCourse = ['coran-tajweed', 'sahaba-stories', 'hadith-studies', 'islamic-sciences', 'arabic-learning'].includes(course.category);
 
   return (
     <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 overflow-hidden">

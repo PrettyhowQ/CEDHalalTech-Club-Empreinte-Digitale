@@ -5,9 +5,14 @@ import { setupAuth, isAuthenticated } from "./replitAuth";
 import { chatWithIARP } from "./openai";
 import { insertChatConversationSchema, insertAnalyticsEventSchema } from "@shared/schema";
 
+import { seedIslamicCourses } from './seedIslamicCourses';
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
   await setupAuth(app);
+
+  // Seed Islamic courses on startup
+  await seedIslamicCourses();
 
   // Auth routes
   app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
