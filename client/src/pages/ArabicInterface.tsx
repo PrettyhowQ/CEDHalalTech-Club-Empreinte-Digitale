@@ -181,30 +181,30 @@ export default function ArabicInterface() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-cyan-600">
-      {/* Header turquoise avec logo CED */}
-      <div className="bg-cyan-500 text-white p-4 text-center">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-400 to-teal-600">
+      {/* Header vert avec logo CED */}
+      <div className="bg-emerald-600 text-white p-4 text-center">
         <div className="flex items-center justify-center mb-2">
           <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-3">
             <GraduationCap className="h-6 w-6" />
           </div>
           <div>
             <h1 className="text-lg font-bold">INSTITUT CED</h1>
-            <p className="text-xs text-cyan-100">معهد النادي الرقمي</p>
+            <p className="text-xs text-purple-100">معهد النادي الرقمي</p>
           </div>
         </div>
-        <div className="text-xs text-cyan-200">
+        <div className="text-xs text-purple-200">
           Club Empreinte Digitale Academy
         </div>
       </div>
 
       {/* Menu hamburger */}
-      <div className="bg-cyan-500 px-4 pb-2">
+      <div className="bg-purple-600 px-4 pb-2">
         <Button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           variant="outline"
           size="sm"
-          className="bg-white text-cyan-600 border-white hover:bg-cyan-50"
+          className="bg-white text-purple-600 border-white hover:bg-purple-50"
         >
           <Menu className="h-4 w-4 mr-2" />
           Menu
@@ -213,10 +213,10 @@ export default function ArabicInterface() {
 
       {/* Navigation principale */}
       {isMenuOpen && (
-        <div className="bg-cyan-500 text-white px-4 pb-4 space-y-1" dir="ltr">
+        <div className="bg-purple-600 text-white px-4 pb-4 space-y-1" dir="ltr">
           <Button
             variant="ghost"
-            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+            className="w-full justify-start text-white hover:bg-purple-500 py-2"
           >
             <Home className="h-4 w-4 mr-3" />
             🏠 Accueil
@@ -227,7 +227,7 @@ export default function ArabicInterface() {
               <Button
                 onClick={() => toggleNiveau(niveau)}
                 variant="ghost"
-                className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+                className="w-full justify-between text-white hover:bg-purple-500 py-2"
               >
                 <span>📖 Tome {niveau} de Médine</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${
@@ -239,7 +239,7 @@ export default function ArabicInterface() {
           
           <Button
             variant="ghost"
-            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+            className="w-full justify-between text-white hover:bg-purple-500 py-2"
           >
             <span>📚 Méthode Médine Complète (6 Tomes)</span>
             <ChevronDown className="h-4 w-4" />
@@ -247,7 +247,7 @@ export default function ArabicInterface() {
           
           <Button
             variant="ghost"
-            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+            className="w-full justify-between text-white hover:bg-purple-500 py-2"
           >
             <span>📝 100 verbes arabes essentiels</span>
             <ChevronDown className="h-4 w-4" />
