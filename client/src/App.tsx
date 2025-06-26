@@ -118,6 +118,7 @@ import SatellitePrayerSyncPage from "@/pages/SatellitePrayerSyncPage";
 import ParentAccountsPage from "@/pages/ParentAccountsPage";
 import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
 import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
+import FiqhExpansionPage from "@/pages/fiqh-expansion-page";
 import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
 import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
@@ -465,6 +466,14 @@ function Router() {
       <Route path="/fiqh-guide" component={FiqhInformatiqueGuidePage} />
       <Route path="/islamic-tech-guide" component={FiqhInformatiqueGuidePage} />
       <Route path="/halal-learning" component={FiqhInformatiqueGuidePage} />
+      
+      {/* Expansion Fiqh 100% pour Golfe */}
+      <Route path="/fiqh-expansion" component={FiqhExpansionPage} />
+      <Route path="/fiqh-100" component={FiqhExpansionPage} />
+      <Route path="/golfe-formations" component={FiqhExpansionPage} />
+      <Route path="/dubai-formations" component={FiqhExpansionPage} />
+      <Route path="/arabie-saoudite-formations" component={FiqhExpansionPage} />
+      <Route path="/expansion-golfe" component={FiqhExpansionPage} />
       
       {/* Comparaison écoles en ligne */}
       <Route path="/education-comparison" component={EducationComparisonPage} />
