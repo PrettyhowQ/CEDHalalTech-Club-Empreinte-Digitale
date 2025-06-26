@@ -78,13 +78,13 @@ export default function Home() {
                 </Link>
               </div>
               
-              <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 text-white text-center shadow-2xl">
-                <h2 className="text-2xl font-bold mb-4">📖 Fiqh Informatique</h2>
-                <p className="text-lg mb-6">27,446+ règles technologiques halal</p>
-                <Link href="/fiqh-informatique">
-                  <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-6 py-3">
+              <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+                <h2 className="text-2xl font-bold mb-4">🏛️ Institut CED Academy</h2>
+                <p className="text-lg mb-6">Plateforme éducative islamique complète</p>
+                <Link href="/arabic-interface">
+                  <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-6 py-3">
                     <GraduationCap className="mr-2 h-5 w-5" />
-                    Guide Fiqh
+                    Institut CED
                   </Button>
                 </Link>
               </div>
