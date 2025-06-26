@@ -8,6 +8,8 @@ import { RealTimeFinanceWidget } from '@/components/ui/RealTimeFinanceWidget';
 import { AIGeneratorWidget } from '@/components/ui/AIGeneratorWidget';
 import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
+import { QuickNavigation } from '@/components/QuickNavigation';
+import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
@@ -45,6 +47,7 @@ export default function Home() {
       <AIGeneratorWidget variant="compact" />
       <NutritionWidget variant="compact" />
       <SportWidget variant="compact" />
+      <QuickNavigation />
       <main className="relative z-10">
         {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
         <HeroSection />
