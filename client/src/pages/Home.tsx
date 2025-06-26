@@ -10,6 +10,9 @@ import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
 import { QuickNavigation } from '@/components/QuickNavigation';
 import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
+import { InstantAccess } from '@/components/ui/InstantAccess';
+import { SmartPreloader } from '@/components/ui/SmartPreloader';
+import { IntuitiveBreadcrumb } from '@/components/ui/IntuitiveBreadcrumb';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
@@ -39,6 +42,7 @@ import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
 export default function Home() {
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SmartPreloader />
       <ParticleBackground />
       <Header />
       <LiveClock variant="desktop" />
@@ -47,6 +51,8 @@ export default function Home() {
       <AIGeneratorWidget variant="compact" />
       <NutritionWidget variant="compact" />
       <SportWidget variant="compact" />
+      <InstantAccess />
+      <IntuitiveBreadcrumb />
       <QuickNavigation />
       <main className="relative z-10">
         {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
