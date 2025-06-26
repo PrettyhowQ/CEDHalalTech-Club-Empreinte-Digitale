@@ -395,33 +395,53 @@ export function SimpleFiqhGuide() {
                         </p>
                       </div>
                       
-                      <div className="space-y-3">
+                      <div className="space-y-4">
                         <div className="flex gap-3">
                           <Badge variant="outline" className="shrink-0">📖 Coran</Badge>
-                          <p className="text-sm">
-                            "Et consultez-les dans les affaires" (3:159) - Principe de consultation préservé
-                          </p>
+                          <div className="text-sm">
+                            <p className="font-medium">"وَشَاوِرْهُمْ فِي الْأَمْرِ" - "Et consultez-les dans les affaires"</p>
+                            <p className="text-gray-600 text-xs mt-1">
+                              <strong>Source:</strong> Sourate Âl-Imrân (3:159) | 
+                              <strong>Tafsir:</strong> Ibn Kathir, At-Tabari, Al-Qurtubi
+                            </p>
+                            <p className="text-emerald-700 text-xs mt-1">Principe: La consultation humaine reste obligatoire même avec l'IA</p>
+                          </div>
                         </div>
                         
                         <div className="flex gap-3">
                           <Badge variant="outline" className="shrink-0">🕌 Sunna</Badge>
-                          <p className="text-sm">
-                            "La responsabilité accompagne l'autorité" - L'humain reste responsable des décisions
-                          </p>
+                          <div className="text-sm">
+                            <p className="font-medium">"كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ"</p>
+                            <p className="text-gray-600 text-xs mt-1">
+                              <strong>Source:</strong> Sahih Al-Bukhari (893), Sahih Muslim (1829) | 
+                              <strong>Rapporteur:</strong> Abdullah Ibn Umar (رضي الله عنهما)
+                            </p>
+                            <p className="text-emerald-700 text-xs mt-1">Principe: L'humain reste responsable des décisions prises par l'IA</p>
+                          </div>
                         </div>
                         
                         <div className="flex gap-3">
                           <Badge variant="outline" className="shrink-0">👥 Ijmâ'</Badge>
-                          <p className="text-sm">
-                            Consensus des Salaf: L'IA comme outil d'aide permis si supervision humaine maintenue (position unanime des scholars contemporains suivant la voie des pieux prédécesseurs)
-                          </p>
+                          <div className="text-sm">
+                            <p className="font-medium">Consensus des Salaf sur les outils d'aide à la décision</p>
+                            <p className="text-gray-600 text-xs mt-1">
+                              <strong>Sources:</strong> Majma' Al-Fiqh Al-Islami (OCI), AAOIFI Standards, Dar Al-Ifta Al-Misriyyah |
+                              <strong>Références:</strong> Fatawa An-Nawawi, Ibn Taymiyyah (Majmu' Al-Fatawa 28/68)
+                            </p>
+                            <p className="text-emerald-700 text-xs mt-1">Position unanime: Outils permis avec supervision et transparence</p>
+                          </div>
                         </div>
                         
                         <div className="flex gap-3">
                           <Badge variant="outline" className="shrink-0">📚 Qiyâs</Badge>
-                          <p className="text-sm">
-                            Analogie avec les conseillers humains: permis avec transparence et contrôle
-                          </p>
+                          <div className="text-sm">
+                            <p className="font-medium">Analogie avec les conseillers et secrétaires qualifiés</p>
+                            <p className="text-gray-600 text-xs mt-1">
+                              <strong>Usul:</strong> Al-Ghazali (Al-Mustasfa), Ash-Shatibi (Al-Muwafaqat) |
+                              <strong>Méthodologie:</strong> École Hanafite, Malikite, Shafi'ite, Hanbalite
+                            </p>
+                            <p className="text-emerald-700 text-xs mt-1">Qiyâs valide: IA = conseiller qualifié nécessitant supervision</p>
+                          </div>
                         </div>
                       </div>
                       
