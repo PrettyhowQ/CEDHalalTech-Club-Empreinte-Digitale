@@ -63,28 +63,39 @@ export default function Home() {
       <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
-        {/* ACCÈS DIRECT FORMATIONS ET FIQH */}
+        {/* ACCÈS DIRECT PRINCIPALES FONCTIONNALITÉS */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-8 text-white text-center shadow-2xl">
-                <h2 className="text-2xl font-bold mb-4">🎓 Formations CED Academy</h2>
-                <p className="text-lg mb-6">Programmation, IA, Formations Islamiques</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🎓 Formations CED</h2>
+                <p className="text-sm mb-4">Programmation, IA, Islamiques</p>
                 <Link href="/formations">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-6 py-3">
-                    <GraduationCap className="mr-2 h-5 w-5" />
-                    Voir Formations
+                  <Button size="md" className="bg-white text-blue-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Formations
                   </Button>
                 </Link>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-8 text-white text-center shadow-2xl">
-                <h2 className="text-2xl font-bold mb-4">🏛️ Institut CED Academy</h2>
-                <p className="text-lg mb-6">Plateforme éducative islamique complète</p>
+              <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🏛️ Institut CED</h2>
+                <p className="text-sm mb-4">Plateforme éducative islamique</p>
                 <Link href="/arabic-interface">
-                  <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-6 py-3">
-                    <GraduationCap className="mr-2 h-5 w-5" />
+                  <Button size="md" className="bg-white text-purple-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
                     Institut CED
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">💎 Dashboard Premium</h2>
+                <p className="text-sm mb-4">Analytics avancées et outils pro</p>
+                <Link href="/premium-dashboard">
+                  <Button size="md" className="bg-white text-amber-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Premium
                   </Button>
                 </Link>
               </div>
