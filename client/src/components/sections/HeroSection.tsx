@@ -83,21 +83,41 @@ export function HeroSection() {
               </Button>
             </div>
             
-            {/* Nouveau bouton Récitation Coran en direct */}
-            <div className="flex justify-center mb-8">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-10 py-4 text-lg shadow-lg"
-                onClick={() => window.location.href = '/coran-direct'}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <Code className="h-6 w-6" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+            {/* Boutons principaux */}
+            <div className="flex flex-col gap-4 mb-8">
+              {/* Récitation Coran en direct */}
+              <div className="flex justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-10 py-4 text-lg shadow-lg"
+                  onClick={() => window.location.href = '/coran-direct'}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <Code className="h-6 w-6" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <span>Récitation Coran EN DIRECT</span>
                   </div>
-                  <span>Récitation Coran EN DIRECT</span>
-                </div>
-              </Button>
+                </Button>
+              </div>
+              
+              {/* École Arabe Premium */}
+              <div className="flex justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-10 py-4 text-lg shadow-lg"
+                  onClick={() => window.location.href = '/ecole-arabe-premium'}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <Apple className="h-6 w-6" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    </div>
+                    <span>École Arabe Premium • 17 Cours Tajwid</span>
+                  </div>
+                </Button>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

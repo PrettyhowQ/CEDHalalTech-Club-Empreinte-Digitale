@@ -102,6 +102,7 @@ import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
 import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
 import SystemDiagnosticsPage from "@/pages/SystemDiagnosticsPage";
+import PremiumArabicSchoolPage from "@/pages/PremiumArabicSchoolPage";
 import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import VoiceBankingArabicPage from "@/pages/VoiceBankingArabicPage";
 import ZakatCalculatorPage from "@/pages/ZakatCalculatorPage";
@@ -379,6 +380,12 @@ function Router() {
       <Route path="/mecque-direct" component={QuranLiveRecitationPage} />
       <Route path="/medine-direct" component={QuranLiveRecitationPage} />
       <Route path="/live-quran-stream" component={QuranLiveRecitationPage} />
+      
+      {/* École Arabe Premium */}
+      <Route path="/ecole-arabe-premium" component={PremiumArabicSchoolPage} />
+      <Route path="/arabic-school" component={PremiumArabicSchoolPage} />
+      <Route path="/tajwid-courses" component={PremiumArabicSchoolPage} />
+      <Route path="/recitateurs" component={PremiumArabicSchoolPage} />
       
       {/* Diagnostic système */}
       <Route path="/diagnostic-systeme" component={SystemDiagnosticsPage} />

@@ -161,10 +161,10 @@ export function PremiumArabicSchool() {
     },
     {
       id: 'tajwid-lessons',
-      title: 'Cours Tajwid Complets',
+      title: 'Cours Tajwid Complets - 17 Vidéos',
       url: 'https://www.youtube.com/watch?v=wO2DRVC-g9w&list=PLDGSJOlM3XL8aPMnm4riNMab33Jnra0hz',
       status: 'playlist',
-      lessons: 25,
+      lessons: 17,
       language: 'Arabe/Français'
     }
   ];
@@ -186,12 +186,26 @@ export function PremiumArabicSchool() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Crown className="h-12 w-12 text-yellow-400" />
-              <h1 className="text-5xl font-bold">École Arabe Premium</h1>
+              <h1 className="text-5xl font-bold">École Arabe CED Academy</h1>
             </div>
-            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-emerald-100 mb-4 max-w-3xl mx-auto">
               Apprenez l'arabe et la récitation du Coran avec les plus grands récitateurs du monde. 
               Formation personnalisée, certification authentique, expérience sans publicité.
             </p>
+            
+            {/* Free Access Notice */}
+            <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <CheckCircle className="h-5 w-5 text-green-300" />
+                <span className="font-semibold text-green-100">ACCÈS GRATUIT pour tous les membres CED</span>
+              </div>
+              <p className="text-green-200 text-sm">
+                Banques • Formations • Assurances • Associations • Consultations
+              </p>
+              <p className="text-green-100 text-xs mt-2">
+                Fonctionnalités premium disponibles pour l'apprentissage avancé
+              </p>
+            </div>
             
             {/* Live Badge */}
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -303,38 +317,106 @@ export function PremiumArabicSchool() {
               </Card>
             </div>
 
-            {/* Pricing */}
+            {/* Free vs Premium Features */}
             <div>
-              <h2 className="text-3xl font-bold text-center mb-8">Plans d'Abonnement</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {Object.entries(pricing.monthly).map(([plan, details]) => (
-                  <Card key={plan} className={plan === 'premium' ? 'border-emerald-500 border-2' : ''}>
-                    <CardHeader className="text-center">
-                      <div className="flex justify-center mb-2">
-                        {plan === 'basic' && <BookOpen className="h-8 w-8 text-blue-500" />}
-                        {plan === 'premium' && <Star className="h-8 w-8 text-emerald-500" />}
-                        {plan === 'vip' && <Crown className="h-8 w-8 text-yellow-500" />}
-                      </div>
-                      <CardTitle className="capitalize">{plan}</CardTitle>
-                      <div className="text-3xl font-bold">
-                        {details.price} CHF<span className="text-sm text-gray-500">/mois</span>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2 mb-6">
-                        {details.features.map((feature, index) => (
-                          <li key={index} className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-green-500" />
-                            <span className="text-sm">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button className="w-full" variant={plan === 'premium' ? 'default' : 'outline'}>
-                        Choisir {plan}
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+              <h2 className="text-3xl font-bold text-center mb-8">Accès Gratuit vs Premium</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                
+                {/* Free Access */}
+                <Card className="border-green-500 border-2">
+                  <CardHeader className="text-center bg-green-50">
+                    <div className="flex justify-center mb-2">
+                      <CheckCircle className="h-8 w-8 text-green-500" />
+                    </div>
+                    <CardTitle className="text-green-700">GRATUIT - Membres CED</CardTitle>
+                    <div className="text-2xl font-bold text-green-600">
+                      0 CHF<span className="text-sm text-gray-500">/toujours</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Accès à toutes les 17 vidéos Tajwid</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Live streaming La Mecque/Médine</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Services bancaires CED</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Formations IA éthique</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Assurance Al-Aman Takaful</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span className="text-sm">Support communauté</span>
+                      </li>
+                    </ul>
+                    <Button className="w-full bg-green-600 hover:bg-green-700">
+                      Accès Gratuit Immédiat
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Premium Features */}
+                <Card className="border-yellow-500 border-2 relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-yellow-500 text-black px-4 py-1">
+                      École Premium
+                    </Badge>
+                  </div>
+                  <CardHeader className="text-center bg-yellow-50">
+                    <div className="flex justify-center mb-2">
+                      <Crown className="h-8 w-8 text-yellow-500" />
+                    </div>
+                    <CardTitle className="text-yellow-700">PREMIUM - École Arabe</CardTitle>
+                    <div className="text-2xl font-bold text-yellow-600">
+                      99 CHF<span className="text-sm text-gray-500">/mois</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-yellow-700 mb-4 font-medium">
+                      + Tout l'accès gratuit, plus :
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Sessions live avec récitateurs</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Correction personnalisée Tajwid</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Mentorat individuel</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Certificats authentifiés</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Accès VIP récitateurs</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Star className="h-4 w-4 text-yellow-500" />
+                        <span className="text-sm">Cours privés sur demande</span>
+                      </li>
+                    </ul>
+                    <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                      Upgrade Premium
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -375,21 +457,24 @@ export function PremiumArabicSchool() {
                     </div>
                   </div>
                   
-                  {/* Embedded YouTube */}
-                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                  {/* Embedded YouTube sans publicité */}
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden relative">
                     <iframe
                       width="100%"
                       height="100%"
-                      src={stream.url.includes('live') 
+                      src={`${stream.url.includes('live') 
                         ? stream.url.replace('youtube.com/live/', 'youtube.com/embed/') 
                         : stream.url.replace('youtube.com/watch?v=', 'youtube.com/embed/').split('&')[0]
-                      }
+                      }?rel=0&modestbranding=1&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=1&controls=1`}
                       title={stream.title}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full"
                     ></iframe>
+                    <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs">
+                      Sans Pub
+                    </div>
                   </div>
                   
                   <div className="flex items-center justify-between mt-4">
