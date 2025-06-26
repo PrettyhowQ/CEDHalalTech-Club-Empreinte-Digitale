@@ -21,57 +21,81 @@ import {
 
 const niveauxContent = {
   1: [
-    'Manuel du niveau 1',
-    'Présentation de la langue arabe',
-    'Premiers pas dans la lecture',
-    'La vocalisation',
-    'Dictée de la vocalisation',
-    'Le soukoune',
-    'La prolongation',
-    'Dictée de la prolongation',
-    'Le tanwine',
-    'Dictée avec le tanwine',
-    'La lettre bâ\'',
-    'Dictée de la lettre bâ\'',
-    'La lettre kâf',
-    'Dictée de la lettre kâf',
-    'La lettre tâ\'',
-    'La lettre tâ\' al-marbouta',
-    'Dictée de la lettre tâ',
-    'Exercice de lecture 1',
-    'La lettre râ\''
+    'Fondements Islam et Technologie',
+    'Fiqh Informatique - Niveau Débutant',
+    'Éthique IA selon le Coran',
+    'Blockchain Halal - Introduction',
+    'Premiers pas en Trading Sharia',
+    'Zakat sur crypto-monnaies',
+    'DeFi Islamique - Bases',
+    'Smart Contracts conformes',
+    'FinTech éthique',
+    'Banque digitale sans Riba',
+    'Assurance Takaful moderne',
+    'Investissement ESG Halal',
+    'Économie circulaire islamique',
+    'Innovation responsable',
+    'Tech for Good - Vision islamique',
+    'Cybersécurité Halal',
+    'Data Privacy selon Sharia',
+    'E-commerce éthique',
+    'Entrepreneuriat digital Halal'
   ],
   2: [
-    'Manuel du niveau 2',
-    'Lectures et exercices oraux',
-    'Faire connaissance 1',
-    'Pratique 1',
-    'Faire connaissance 2',
-    'Faire connaissance 3',
-    'Pratique 2',
-    'Faire connaissance 4',
-    'Pratique 4',
-    'Faire connaissance 5',
-    'Faire connaissance 6',
-    'Pratique 5',
-    'Faire connaissance 7',
-    'Pratique 6',
-    'Faire connaissance 8',
-    'Faire connaissance 9',
-    'Pratique 7',
-    'Faire connaissance 10',
-    'Pratique 8'
+    'Fiqh Informatique Avancé',
+    'IA Éthique - Applications pratiques',
+    'Quantum Finance Halal',
+    'Métaverse et valeurs islamiques',
+    'NFT conformes Sharia',
+    'Robotic Process Automation éthique',
+    'Consulting tech islamique',
+    'Audit conformité digitale',
+    'Leadership tech responsable',
+    'Innovation sociale digitale',
+    'Sustainable FinTech',
+    'Islamic PropTech',
+    'EdTech conforme Fiqh',
+    'HealthTech éthique',
+    'AgriTech durable',
+    'GreenTech islamique',
+    'Social Impact Tech',
+    'Inclusive Innovation',
+    'Digital Transformation Halal'
+  ],
+  3: [
+    'Expert en Fiqh Technologique',
+    'Certification Sharia Tech',
+    'Conseil stratégique Islamic Tech',
+    'Research & Development Halal',
+    'Innovation Labs islamiques',
+    'Venture Capital éthique',
+    'Tech Due Diligence Sharia',
+    'Regulatory Compliance Islamic',
+    'International Standards Halal',
+    'Cross-border Islamic FinTech',
+    'Merger & Acquisition éthique',
+    'IPO Sharia Compliance',
+    'Corporate Governance Islamic',
+    'Sustainable Finance Tech',
+    'Impact Investment Tech',
+    'ESG Integration Halal',
+    'Climate Tech islamique',
+    'Circular Economy Digital',
+    'Future of Islamic Finance'
   ]
 };
 
 const specialSections = [
-  { title: 'La vie du prophète', accessible: true },
-  { title: 'Tajwid', accessible: true },
-  { title: 'Groupe WhatsApp', accessible: true },
-  { title: 'Divers', accessible: true },
-  { title: 'Achat de crédits', accessible: true },
-  { title: 'Classes en ligne', accessible: true },
-  { title: 'App de Traduction', accessible: true }
+  { title: 'CED Bank - Banking Halal', accessible: true },
+  { title: 'Al-Aman Takaful - Assurance', accessible: true },
+  { title: 'TechForAll - Économie Solidaire', accessible: true },
+  { title: 'Super IARP Pro - IA Éthique', accessible: true },
+  { title: 'Formations Certifiantes', accessible: true },
+  { title: 'Fiqh Informatique Complet', accessible: true },
+  { title: 'Traducteur Multilingue', accessible: true },
+  { title: 'École Arabe CED', accessible: true },
+  { title: 'Communauté Mondiale', accessible: true },
+  { title: 'Support 24/7 Scholars', accessible: true }
 ];
 
 export default function ArabicInterface() {
@@ -95,16 +119,19 @@ export default function ArabicInterface() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-cyan-600">
-      {/* Header turquoise avec logo */}
+      {/* Header turquoise avec logo CED */}
       <div className="bg-cyan-500 text-white p-4 text-center">
         <div className="flex items-center justify-center mb-2">
           <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-            <BookOpen className="h-6 w-6" />
+            <GraduationCap className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="text-lg font-bold">NUR UL ANWAR</h1>
-            <p className="text-xs text-cyan-100">Illuminez-vous par l'arabe</p>
+            <h1 className="text-lg font-bold">INSTITUT CED</h1>
+            <p className="text-xs text-cyan-100">معهد النادي الرقمي</p>
           </div>
+        </div>
+        <div className="text-xs text-cyan-200">
+          Club Empreinte Digitale Academy
         </div>
       </div>
 
