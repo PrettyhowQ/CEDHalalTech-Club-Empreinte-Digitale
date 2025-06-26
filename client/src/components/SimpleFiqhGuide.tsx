@@ -120,13 +120,18 @@ export function SimpleFiqhGuide() {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             La plus grande collection mondiale de règles islamiques pour la technologie moderne. 
-            Plus de 23,456 règles basées sur le Coran, la Sunna, et l'Ijmâ' (consensus des savants).
+            Plus de 23,456 règles basées sur le Coran, la Sunna, et l'Ijmâ' selon la compréhension des pieux prédécesseurs (السلف الصالح).
           </p>
           <div className="mt-4 flex justify-center gap-6 text-sm text-emerald-700 font-medium">
             <span>📖 القرآن الكريم</span>
             <span>🕌 السنة النبوية</span>
-            <span>👥 إجماع العلماء</span>
+            <span>👥 إجماع السلف</span>
             <span>📚 القياس الشرعي</span>
+          </div>
+          <div className="mt-3 text-center">
+            <span className="text-xs text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              على منهج السلف الصالح - Selon la voie des pieux prédécesseurs
+            </span>
           </div>
         </div>
 
@@ -317,7 +322,7 @@ export function SimpleFiqhGuide() {
                   Méthode de Validation selon les Sources Islamiques
                 </CardTitle>
                 <p className="text-gray-600 mt-2">
-                  Processus rigoureux basé sur les quatre sources fondamentales du droit islamique
+                  Processus rigoureux basé sur les quatre sources fondamentales du droit islamique selon la compréhension des pieux prédécesseurs (السلف الصالح)
                 </p>
               </CardHeader>
               <CardContent>
@@ -325,15 +330,21 @@ export function SimpleFiqhGuide() {
                   {/* Processus de validation */}
                   <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
                     <h4 className="font-semibold text-lg mb-4 text-emerald-800">
-                      📋 Processus de Validation en 4 Étapes
+                      📋 Processus de Validation selon la Voie des Pieux Prédécesseurs
                     </h4>
+                    <div className="mb-4 p-4 bg-amber-50 border border-amber-200 rounded">
+                      <p className="text-sm text-amber-800 font-medium">
+                        <span className="text-lg">🕌</span> Méthodologie des السلف الصالح (Salaf As-Salih) : Comprendre les textes selon la compréhension des Compagnons, des Tabi'in et de leurs successeurs
+                      </p>
+                    </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                       <Card className="bg-white">
                         <CardContent className="p-4 text-center">
                           <div className="text-2xl mb-2">📖</div>
                           <h5 className="font-semibold mb-1">1. Coran</h5>
-                          <p className="text-sm text-gray-600">Vérification dans le Livre saint</p>
+                          <p className="text-sm text-gray-600">Selon l'exégèse des Compagnons</p>
                           <p className="text-xs text-emerald-600 mt-2">القرآن الكريم</p>
+                          <p className="text-xs text-gray-500 mt-1">Tafsir Ibn Abbas, Ibn Mas'ud</p>
                         </CardContent>
                       </Card>
                       
@@ -341,8 +352,9 @@ export function SimpleFiqhGuide() {
                         <CardContent className="p-4 text-center">
                           <div className="text-2xl mb-2">🕌</div>
                           <h5 className="font-semibold mb-1">2. Sunna</h5>
-                          <p className="text-sm text-gray-600">Hadiths authentiques</p>
+                          <p className="text-sm text-gray-600">Hadiths authentiques et leur pratique</p>
                           <p className="text-xs text-emerald-600 mt-2">السنة النبوية</p>
+                          <p className="text-xs text-gray-500 mt-1">Bukhari, Muslim, application Salaf</p>
                         </CardContent>
                       </Card>
                       
@@ -350,8 +362,9 @@ export function SimpleFiqhGuide() {
                         <CardContent className="p-4 text-center">
                           <div className="text-2xl mb-2">👥</div>
                           <h5 className="font-semibold mb-1">3. Ijmâ'</h5>
-                          <p className="text-sm text-gray-600">Consensus des érudits</p>
+                          <p className="text-sm text-gray-600">Consensus authentique transmis</p>
                           <p className="text-xs text-emerald-600 mt-2">إجماع العلماء</p>
+                          <p className="text-xs text-gray-500 mt-1">Selon les Imams des Salaf</p>
                         </CardContent>
                       </Card>
                       
@@ -359,8 +372,9 @@ export function SimpleFiqhGuide() {
                         <CardContent className="p-4 text-center">
                           <div className="text-2xl mb-2">📚</div>
                           <h5 className="font-semibold mb-1">4. Qiyâs</h5>
-                          <p className="text-sm text-gray-600">Analogie jurisprudentielle</p>
+                          <p className="text-sm text-gray-600">Analogie selon les usul des Salaf</p>
                           <p className="text-xs text-emerald-600 mt-2">القياس الشرعي</p>
+                          <p className="text-xs text-gray-500 mt-1">Méthode des 4 Imams</p>
                         </CardContent>
                       </Card>
                     </div>
@@ -399,7 +413,7 @@ export function SimpleFiqhGuide() {
                         <div className="flex gap-3">
                           <Badge variant="outline" className="shrink-0">👥 Ijmâ'</Badge>
                           <p className="text-sm">
-                            Consensus: L'IA comme outil d'aide permis si supervision humaine maintenue
+                            Consensus des Salaf: L'IA comme outil d'aide permis si supervision humaine maintenue (position unanime des scholars contemporains suivant la voie des pieux prédécesseurs)
                           </p>
                         </div>
                         
