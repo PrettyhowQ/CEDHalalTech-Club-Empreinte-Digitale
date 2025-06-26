@@ -26,6 +26,14 @@ export function QuickNavigation() {
 
   const quickActions = [
     {
+      title: 'Centre de Contrôle',
+      icon: TrendingUp,
+      description: '40 modules unifiés - 7 pôles',
+      href: '/tableau-de-bord',
+      color: 'bg-gradient-to-r from-blue-600 to-purple-600',
+      badge: 'Complet'
+    },
+    {
       title: 'CED Bank',
       icon: CreditCard,
       description: 'Banking halal complet',
