@@ -104,6 +104,7 @@ import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
 import SystemDiagnosticsPage from "@/pages/SystemDiagnosticsPage";
 import PremiumArabicSchoolPage from "@/pages/PremiumArabicSchoolPage";
 import TraducteurPage from "@/pages/traducteur-page";
+import ArabicAITeacherPage from "@/pages/arabic-ai-teacher-page";
 import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import VoiceBankingArabicPage from "@/pages/VoiceBankingArabicPage";
 import ZakatCalculatorPage from "@/pages/ZakatCalculatorPage";
@@ -532,6 +533,9 @@ function Router() {
       <Route path="/traducteur" component={TraducteurPage} />
       <Route path="/translator" component={TraducteurPage} />
       <Route path="/app-traduction" component={TraducteurPage} />
+      <Route path="/professeur-arabe-ia" component={ArabicAITeacherPage} />
+      <Route path="/arabic-ai-teacher" component={ArabicAITeacherPage} />
+      <Route path="/ia-arabe" component={ArabicAITeacherPage} />
       
       {/* Comparaison écoles en ligne */}
       <Route path="/education-comparison" component={EducationComparisonPage} />

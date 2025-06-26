@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Play, Mic, Leaf, Code, Brain, Apple, BookOpen } from 'lucide-react';
+import { Play, Mic, Leaf, Code, Brain, Apple, BookOpen, MessageCircle } from 'lucide-react';
 import { useVoice } from '@/context/VoiceContext';
 
 export function HeroSection() {
@@ -115,6 +115,23 @@ export function HeroSection() {
                       <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full"></div>
                     </div>
                     <span>École Arabe Premium • 17 Cours Tajwid</span>
+                  </div>
+                </Button>
+              </div>
+              
+              {/* Professeur IA Arabe */}
+              <div className="flex justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-10 py-4 text-lg shadow-lg"
+                  onClick={() => window.location.href = '/professeur-arabe-ia'}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <Brain className="h-6 w-6" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <span>Professeur IA Arabe • Conforme Fiqh</span>
                   </div>
                 </Button>
               </div>
