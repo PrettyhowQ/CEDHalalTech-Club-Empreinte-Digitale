@@ -1,0 +1,68 @@
+# 🕌 Modèle de Citation Islamique Respectueuse (Coran, Sunna, Salafs, Savants)
+
+---
+
+## 📖 Verset du Coran
+
+> **Verset coranique :**  
+> _"Et dis : « La vérité émane de votre Seigneur. »."_  
+> — **Sourate Al-Kahf (18:29)**
+
+🔹 **Note :** Toujours mentionner **le nom de la sourate** et **le numéro du verset**.
+
+---
+
+## 🌟 Hadith authentique
+
+> **Parole du Prophète ﷺ :**  
+> _"Certes, les actes ne valent que par les intentions."_  
+> — **Rapporté par Al-Bukhari, n°1** et **Muslim, n°1907**
+
+🔹 **Note :** Toujours préciser :
+- La **chaîne d’authenticité** (Bukhari, Muslim, etc.)
+- Le **numéro du hadith**, si possible
+- Éviter d’écrire "citation du Prophète" seule : dire plutôt **"Parole prophétique"** ou **"Hadith rapporté par..."**
+
+---
+
+## 👳‍♂️ Parole d’un savant ou salaf
+
+> **Parole de Ibn Taymiyya رحمه الله :**  
+> _"Il n’y a aucun bonheur dans ce bas-monde sans Tawḥîd."_
+
+🔹 **Note :**
+- Ajouter **rahimahoullah** (رحمه الله) ou **rahimahâ Allah** si la personne est décédée
+- Utiliser des termes comme :  
+  `Parole rapportée`, `Maxime`, `Conseil`, `Avis de savant`
+
+---
+
+## 📌 Rappel islamique (sans source directe)
+
+> **Rappel utile :**  
+> _"Allah ne regarde pas vos corps ni vos apparences, mais Il regarde vos cœurs et vos actions."_
+
+🟡 **Attention :** Si ce n’est pas confirmé comme hadith sahih, ne pas l’attribuer directement au Prophète ﷺ. Utiliser plutôt :
+- "Il est rapporté que..."
+- "Certains savants ont dit que..."
+- "On trouve dans les enseignements..." etc.
+
+---
+
+## ✅ Résumé : Formules recommandées
+
+| Type de contenu       | Formule recommandée                                            |
+|-----------------------|----------------------------------------------------------------|
+| 📖 Verset             | "Verset coranique — Sourate X, verset Y"                      |
+| 🌟 Hadith             | "Parole du Prophète ﷺ — Rapporté par..."                      |
+| 👳‍♂️ Parole d’un savant | "Parole de [Nom] رحمه الله"                                    |
+| 📌 Rappel général      | "Rappel islamique" ou "Conseil spirituel"                     |
+
+---
+
+## 🔐 Copyright (à inclure en bas de page)
+
+```html
+<footer>
+© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有
+</footer>
