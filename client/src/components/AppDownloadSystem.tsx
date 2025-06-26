@@ -752,3 +752,5 @@ export function AppDownloadSystem() {
     </div>
   );
 }
+
+export default AppDownloadSystem;
