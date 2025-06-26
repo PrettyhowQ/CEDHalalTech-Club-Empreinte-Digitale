@@ -1,5 +1,6 @@
 import React from 'react';
 import { ComprehensiveFiqhExpansion } from '@/components/ComprehensiveFiqhExpansion';
+import { StructuredIslamicExplanation } from '@/components/StructuredIslamicExplanation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Globe, Award, Star } from 'lucide-react';
@@ -170,6 +171,9 @@ export default function FiqhExpansionPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Explication Structurée selon les 4 Sources */}
+        <StructuredIslamicExplanation />
 
         {/* Composant Principal d'Expansion */}
         <ComprehensiveFiqhExpansion />
