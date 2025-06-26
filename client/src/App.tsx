@@ -137,7 +137,6 @@ import FamilyBankingPage from "@/pages/family-banking";
 import ArabicInterface from "@/pages/ArabicInterface";
 import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
 import FiqhInformatique from "@/pages/FiqhInformatique";
-import UnifiedDashboard from "@/pages/UnifiedDashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -146,9 +145,6 @@ function Router() {
   return (
     <Switch>
       {/* Public routes */}
-      <Route path="/tableau-de-bord" component={UnifiedDashboard} />
-      <Route path="/dashboard-unifie" component={UnifiedDashboard} />
-      <Route path="/centre-controle" component={UnifiedDashboard} />
       <Route path="/formations" component={Formations} />
       <Route path="/formations/:category" component={Formations} />
       <Route path="/formations-paiement" component={FormationPayment} />
