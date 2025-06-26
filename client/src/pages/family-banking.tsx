@@ -4,18 +4,7 @@ import { FamilyBankingSystem } from '@/components/FamilyBankingSystem';
 export default function FamilyBankingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      <QuickNavigation />
-      <InstantAccess />
-      
       <main className="container mx-auto px-4 py-8">
-        <IntuitiveBreadcrumb 
-          items={[
-            { label: "Accueil", href: "/" },
-            { label: "Services", href: "/services" },
-            { label: "Banking Familial", href: "/family-banking", current: true }
-          ]}
-        />
-        
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Système Bancaire Familial CED
@@ -27,10 +16,6 @@ export default function FamilyBankingPage() {
 
         <FamilyBankingSystem />
       </main>
-
-      <ContextualHelp />
-      <PerformanceMonitor />
-      <Footer />
     </div>
   );
 }
