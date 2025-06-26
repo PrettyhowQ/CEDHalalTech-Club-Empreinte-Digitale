@@ -101,6 +101,33 @@ export default function Home() {
               </div>
             </div>
 
+            {/* SECTION SANTÉ SOUHEILA YAKOUBI-OZEL */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🏥 Espace Santé CED</h2>
+                <p className="text-sm mb-2">Souheila Yakoubi-Ozel - Co-Directrice</p>
+                <p className="text-sm mb-4">Nutrition, Coaching, Bien-être</p>
+                <Link href="/espace-sante">
+                  <Button size="sm" className="bg-white text-pink-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Espace Santé
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">⚖️ Juridique CED</h2>
+                <p className="text-sm mb-2">Hanaé-Denise Ozel - Secteur Juridique</p>
+                <p className="text-sm mb-4">Contrats, Fiches de paie, Droit</p>
+                <Link href="/juridique">
+                  <Button size="sm" className="bg-white text-teal-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Juridique
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
             {/* SECTION SPIRITUELLE - ACCÈS IMMÉDIAT AUX RÉCITATIONS ET CITADELLE */}
             <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-6 mb-8">
               <h3 className="text-xl font-bold text-white mb-6 text-center">🕌 Spiritualité & Invocations Islamiques</h3>

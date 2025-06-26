@@ -138,6 +138,7 @@ import FamilyBankingPage from "@/pages/family-banking";
 import ArabicInterface from "@/pages/ArabicInterface";
 import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
 import FiqhInformatique from "@/pages/FiqhInformatique";
+import EspaceSantePage from "@/pages/EspaceSantePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -547,6 +548,13 @@ function Router() {
       <Route path="/traducteur-multilingue" component={ArabicMultilingualTranslator} />
       <Route path="/multilingual-translator" component={ArabicMultilingualTranslator} />
       <Route path="/traducteur-arabe" component={ArabicMultilingualTranslator} />
+      
+      {/* Espace Santé - Souheila Yakoubi-Ozel */}
+      <Route path="/espace-sante" component={EspaceSantePage} />
+      <Route path="/sante-souheila" component={EspaceSantePage} />
+      <Route path="/nutrition-coaching" component={EspaceSantePage} />
+      <Route path="/souheila-yakoubi-ozel" component={EspaceSantePage} />
+      
       <Route path="/professeur-arabe-ia" component={ArabicAITeacherPage} />
       <Route path="/arabic-ai-teacher" component={ArabicAITeacherPage} />
       <Route path="/ia-arabe" component={ArabicAITeacherPage} />
