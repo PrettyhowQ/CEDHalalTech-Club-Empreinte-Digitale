@@ -12,7 +12,7 @@ import { QuickNavigation } from '@/components/QuickNavigation';
 import { PermanentNavigation } from '@/components/PermanentNavigation';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, BookOpen } from 'lucide-react';
 import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
 import { InstantAccess } from '@/components/ui/InstantAccess';
 import { SmartPreloader } from '@/components/ui/SmartPreloader';
@@ -63,18 +63,31 @@ export default function Home() {
       <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
-        {/* ACCÈS DIRECT FORMATIONS */}
+        {/* ACCÈS DIRECT FORMATIONS ET FIQH */}
         <section className="py-8 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-8 text-white text-center shadow-2xl">
-              <h2 className="text-3xl font-bold mb-4">🎓 Accès Direct aux Formations</h2>
-              <p className="text-xl mb-6">Programmation, IA, Formations Islamiques et plus encore</p>
-              <Link href="/formations">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-8 py-4">
-                  <GraduationCap className="mr-3 h-6 w-6" />
-                  Voir Toutes les Formations
-                </Button>
-              </Link>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+                <h2 className="text-2xl font-bold mb-4">🎓 Formations CED Academy</h2>
+                <p className="text-lg mb-6">Programmation, IA, Formations Islamiques</p>
+                <Link href="/formations">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-6 py-3">
+                    <GraduationCap className="mr-2 h-5 w-5" />
+                    Voir Formations
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+                <h2 className="text-2xl font-bold mb-4">📖 Fiqh Informatique</h2>
+                <p className="text-lg mb-6">27,446+ règles technologiques halal</p>
+                <Link href="/fiqh-informatique">
+                  <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-6 py-3">
+                    <GraduationCap className="mr-2 h-5 w-5" />
+                    Guide Fiqh
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
