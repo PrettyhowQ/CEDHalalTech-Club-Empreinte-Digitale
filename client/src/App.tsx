@@ -616,8 +616,13 @@ function App() {
       <LanguageProvider>
         <VoiceProvider>
           <TooltipProvider>
+            <div className="min-h-screen flex flex-col">
+              <main className="flex-1">
+                <Router />
+              </main>
+              <Footer />
+            </div>
             <Toaster />
-            <Router />
           </TooltipProvider>
         </VoiceProvider>
       </LanguageProvider>
