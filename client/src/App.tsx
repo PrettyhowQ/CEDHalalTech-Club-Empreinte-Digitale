@@ -127,6 +127,7 @@ import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiques
 import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import ExportModulesPage from "@/pages/export-modules-page";
 import LanguageLearningPage from "@/pages/language-learning-page";
+import FamilyBankingPage from "@/pages/family-banking";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -524,6 +525,11 @@ function Router() {
       <Route path="/equipements" component={LogistiqueEquipementsPage} />
       <Route path="/attribution-materiel" component={LogistiqueEquipementsPage} />
       <Route path="/macena-letter" component={LogistiqueEquipementsPage} />
+
+      {/* Système Bancaire Familial */}
+      <Route path="/family-banking" component={FamilyBankingPage} />
+      <Route path="/banking-familial" component={FamilyBankingPage} />
+      <Route path="/comptes-famille" component={FamilyBankingPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
