@@ -135,6 +135,23 @@ export function HeroSection() {
                   </div>
                 </Button>
               </div>
+              
+              {/* Écriture Arabe IA */}
+              <div className="flex justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-10 py-4 text-lg shadow-lg"
+                  onClick={() => window.location.href = '/ecriture-arabe'}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <Leaf className="h-6 w-6" />
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full"></div>
+                    </div>
+                    <span>Écriture Arabe IA • 5 Niveaux Calligraphie</span>
+                  </div>
+                </Button>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
