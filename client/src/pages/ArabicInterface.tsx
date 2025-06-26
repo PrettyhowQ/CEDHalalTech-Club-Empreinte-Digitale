@@ -285,7 +285,7 @@ export default function ArabicInterface() {
                 <div key={niveau} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
                     <div className="font-medium">Niveau {niveau}</div>
-                    <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">Accessible</Badge>
+                    <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">Accessible</Badge>
                   </div>
                   <Button 
                     size="sm" 
@@ -301,7 +301,7 @@ export default function ArabicInterface() {
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
                   <div className="font-medium">100 verbes arabes</div>
-                  <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">Accessible</Badge>
+                  <Badge className="bg-cyan-200 text-cyan-800 text-xs mt-1">Accessible</Badge>
                 </div>
                 <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
                   <ArrowRight className="h-4 w-4" />
@@ -352,8 +352,8 @@ export default function ArabicInterface() {
           </Card>
         )}
 
-        {/* Module de traduction intégré style orange */}
-        <div className="bg-orange-400 p-4 rounded-lg">
+        {/* Module de traduction intégré style CED */}
+        <div className="bg-cyan-400 p-4 rounded-lg">
           <div className="bg-white rounded-lg p-4">
             <div className="flex items-center justify-center mb-4 space-x-4">
               <Button variant="outline" size="sm">
@@ -391,7 +391,7 @@ export default function ArabicInterface() {
           </div>
           
           <Button 
-            className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white font-medium"
+            className="w-full mt-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium"
             onClick={handleTranslate}
           >
             🌐 Traduire avec CED AI
