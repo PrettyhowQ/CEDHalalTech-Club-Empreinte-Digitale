@@ -104,11 +104,32 @@ const modules: ModuleItem[] = [
   { id: 'contacts', title: 'Contacts Complets', description: 'CRM et relations clients', icon: Phone, route: '/contact-complet', status: 'active', category: 'services' },
   { id: 'resources', title: 'Ressources', description: 'Centre documentaire', icon: BookOpen, route: '/formations', status: 'active', category: 'services' },
   { id: 'boutique-solidaire-services', title: 'Boutique Solidaire', description: 'Services aux utilisateurs', icon: Building, route: '/costa-del-sol', status: 'active', category: 'services' },
+  { id: 'strategic-analysis', title: 'Analyse Stratégique', description: 'Études de marché avancées', icon: TrendingUp, route: '/analyse-strategique', status: 'active', category: 'services' },
 
   // 🏗️ PÔLE DÉVELOPPEMENT DURABLE
   { id: 'ecological-construction', title: 'Construction Écologique', description: 'Habitat durable innovant', icon: Home, route: '/ecological-construction-donations', status: 'active', category: 'durable' },
   { id: 'gulf-expansion', title: 'Expansion Golfe 100%', description: 'Déploiement marchés arabes', icon: Trophy, route: '/fiqh-expansion', status: 'active', category: 'durable' },
   { id: 'gold-cards', title: 'Cartes Gold Yakoubi', description: '5 tiers de cartes premium', icon: CreditCard, route: '/ced-bank-cards', status: 'active', category: 'durable' },
+  
+  // MODULES ADDITIONNELS pour atteindre 40
+  { id: 'multilingual-translator', title: 'Traducteur Multilingue', description: 'Arabe vers 23+ langues', icon: Globe, route: '/traducteur-multilingue', status: 'active', category: 'formations' },
+  { id: 'arabic-ai-teacher', title: 'Professeur IA Arabe', description: 'Apprentissage IA personnalisé', icon: Cpu, route: '/arabic-ai-teacher', status: 'active', category: 'formations' },
+  { id: 'arabic-writing', title: 'Écriture Arabe', description: 'Calligraphie 4 styles', icon: BookMarked, route: '/arabic-writing-learner', status: 'active', category: 'formations' },
+  { id: 'language-exchange', title: 'École de Langues', description: 'Échange linguistique global', icon: Users, route: '/language-learning', status: 'active', category: 'formations' },
+  { id: 'prayer-mode', title: 'Mode Prière', description: 'Suspension automatique transactions', icon: Clock, route: '/mode-priere', status: 'active', category: 'ethique' },
+  { id: 'quran-live', title: 'Quran Live Récitation', description: 'Live streaming La Mecque', icon: Globe, route: '/quran-live-recitation', status: 'active', category: 'ethique' },
+  { id: 'premium-arabic-school', title: 'École Arabe Premium', description: '99 CHF/mois sans pub', icon: Star, route: '/premium-arabic-school', status: 'premium', category: 'formations' },
+  { id: 'satellite-prayer', title: 'Synchronisation Prière', description: 'GPS satellitaire précis', icon: MapPin, route: '/satellite-prayer-sync', status: 'active', category: 'ethique' },
+  { id: 'zakat-calculator', title: 'Calculateur Zakat', description: 'Multi-devises halal', icon: Calculator, route: '/zakat-calculator', status: 'active', category: 'finance' },
+  { id: 'voice-banking', title: 'Banking Vocal Arabe', description: 'Commandes vocales arabes', icon: Phone, route: '/voice-banking-arabic', status: 'active', category: 'finance' },
+  { id: 'blockchain-trade', title: 'Blockchain Trade Finance', description: 'Trading halal sécurisé', icon: Lock, route: '/blockchain-trade', status: 'active', category: 'finance' },
+  { id: 'crypto-sharia', title: 'Crypto-Sharia Engine', description: 'Cryptomonnaies conformes', icon: Zap, route: '/crypto-sharia', status: 'active', category: 'finance' },
+  { id: 'defi-islamique', title: 'DeFi Islamique', description: 'Finance décentralisée halal', icon: Globe, route: '/islamic-defi', status: 'active', category: 'finance' },
+  { id: 'marine-equipment', title: 'Équipements Nautiques', description: 'Jet skis et sécurité marine', icon: Heart, route: '/marine-equipment-catalog', status: 'active', category: 'social' },
+  { id: 'heavy-equipment', title: 'Équipements Lourds', description: 'Excavateurs et construction', icon: Wrench, route: '/donation-system', status: 'active', category: 'social' },
+  { id: 'irrigation-systems', title: 'Systèmes Irrigation', description: 'Agriculture durable', icon: Home, route: '/donation-system', status: 'active', category: 'durable' },
+  { id: 'land-donations', title: 'Dons Terrains', description: 'Terrains constructibles sociaux', icon: Building2, route: '/donation-system', status: 'active', category: 'durable' },
+  { id: 'vehicle-donations', title: 'Dons Véhicules', description: 'Camping-cars et utilitaires', icon: Wrench, route: '/donation-system', status: 'active', category: 'social' },
 ];
 
 const categories = {
