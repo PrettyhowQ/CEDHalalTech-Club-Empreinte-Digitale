@@ -100,6 +100,7 @@ import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
 import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
+import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
 import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import VoiceBankingArabicPage from "@/pages/VoiceBankingArabicPage";
 import ZakatCalculatorPage from "@/pages/ZakatCalculatorPage";
@@ -369,6 +370,14 @@ function Router() {
       <Route path="/coran-ecoute" component={QuranListeningAppPage} />
       <Route path="/quran-listening" component={QuranListeningAppPage} />
       <Route path="/saint-coran" component={QuranListeningAppPage} />
+      
+      {/* Récitation Coran en direct */}
+      <Route path="/coran-direct" component={QuranLiveRecitationPage} />
+      <Route path="/quran-live" component={QuranLiveRecitationPage} />
+      <Route path="/recitation-direct" component={QuranLiveRecitationPage} />
+      <Route path="/mecque-direct" component={QuranLiveRecitationPage} />
+      <Route path="/medine-direct" component={QuranLiveRecitationPage} />
+      <Route path="/live-quran-stream" component={QuranLiveRecitationPage} />
       <Route path="/construction-ecologique" component={EcologicalConstructionDonationsPage} />
       <Route path="/logements-sociaux" component={EcologicalConstructionDonationsPage} />
       <Route path="/dons-construction" component={EcologicalConstructionDonationsPage} />

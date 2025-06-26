@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Play, Mic, Leaf, Code, Brain, Apple } from 'lucide-react';
+import { Play, Mic, Leaf, Code, Brain, Apple, BookOpen } from 'lucide-react';
 import { useVoice } from '@/context/VoiceContext';
 
 export function HeroSection() {
@@ -63,7 +63,7 @@ export function HeroSection() {
               la technologie durable et l'économie circulaire. Formation accessible en 78 langues.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button 
                 size="lg" 
                 className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 text-lg"
@@ -80,6 +80,23 @@ export function HeroSection() {
               >
                 <Code className="mr-3 h-5 w-5" />
                 Fiqh Informatique
+              </Button>
+            </div>
+            
+            {/* Nouveau bouton Récitation Coran en direct */}
+            <div className="flex justify-center mb-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-10 py-4 text-lg shadow-lg"
+                onClick={() => window.location.href = '/coran-direct'}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <Code className="h-6 w-6" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  </div>
+                  <span>Récitation Coran EN DIRECT</span>
+                </div>
               </Button>
             </div>
             
