@@ -55,66 +55,71 @@ interface ModuleItem {
 }
 
 const modules: ModuleItem[] = [
-  // PÔLE GOUVERNANCE & DIRECTION
-  { id: 'overview', title: 'Vue d\'Ensemble', description: 'Tableau de bord principal', icon: BarChart3, route: '/', status: 'active', category: 'gouvernance' },
-  { id: 'premium-dashboard', title: 'Dashboard Premium', description: 'Analyse avancée temps réel', icon: Star, route: '/premium-dashboard', status: 'premium', category: 'gouvernance' },
-  { id: 'team-management', title: 'Gestion Équipe', description: 'RH et management complet', icon: Users, route: '/hr-management', status: 'active', category: 'gouvernance' },
-  { id: 'payroll', title: 'Fiches de Paie', description: 'Génération automatique', icon: FileSliders, route: '/pay-slip-generator', status: 'active', category: 'gouvernance' },
-  { id: 'contacts', title: 'Contacts Complets', description: 'CRM et relations clients', icon: Phone, route: '/contact-complet', status: 'active', category: 'gouvernance' },
+  // 🧠 PÔLE PILOTAGE & VISION
+  { id: 'overview', title: 'Vue d\'Ensemble', description: 'Tableau de bord principal', icon: BarChart3, route: '/', status: 'active', category: 'pilotage' },
+  { id: 'premium-dashboard', title: 'Dashboard Premium', description: 'Analyse avancée temps réel', icon: Star, route: '/premium-dashboard', status: 'premium', category: 'pilotage' },
+  { id: 'innovation-roadmap', title: 'Innovation Roadmap', description: 'Feuille de route technologique', icon: Target, route: '/innovation-roadmap', status: 'active', category: 'pilotage' },
+  { id: 'ai-analytics', title: 'Analytics IA', description: 'Analyse intelligente données', icon: BarChart3, route: '/analytics-avancees', status: 'active', category: 'pilotage' },
+  { id: 'team-management', title: 'Gestion Équipe', description: 'RH et management complet', icon: Users, route: '/hr-management', status: 'active', category: 'pilotage' },
 
-  // PÔLE SERVICES FINANCIERS ISLAMIQUES
+  // 🏫 PÔLE FORMATIONS & COACHING
+  { id: 'formations', title: 'Formations', description: 'Catalogue complet certifié', icon: GraduationCap, route: '/formations', status: 'active', category: 'formations' },
+  { id: 'catalog', title: 'Catalogue Complet', description: 'Base de données formations', icon: BookOpen, route: '/catalogue-formations', status: 'active', category: 'formations' },
+  { id: 'employee-training', title: 'Formation Employés', description: 'Développement professionnel', icon: Award, route: '/employee-training-platform', status: 'active', category: 'formations' },
+  { id: 'sport-coaching', title: 'Coaching Sport', description: 'Programmes fitness personnalisés', icon: Dumbbell, route: '/coaching-mobile', status: 'active', category: 'formations' },
+  { id: 'nutrition', title: 'Nutrition Souheila', description: 'Conseils diététiques experts', icon: Apple, route: '/nutrition-souheila', status: 'active', category: 'formations' },
+  { id: 'arabic-interface', title: 'Institut CED Academy', description: 'École arabe 6 volumes Médine + Fiqh', icon: BookMarked, route: '/interface-arabe', status: 'active', category: 'formations' },
+
+  // 💸 PÔLE FINANCE & SÉCURITÉ
   { id: 'ced-bank', title: 'CED Bank', description: 'Banque digitale 100% halal', icon: Landmark, route: '/ced-bank', status: 'active', category: 'finance' },
-  { id: 'al-aman', title: 'Al-Aman CED Takaful', description: 'Assurance islamique complète', icon: Shield, route: '/al-aman-ced-insurance', status: 'active', category: 'finance' },
-  { id: 'gold-cards', title: 'Cartes Gold Yakoubi', description: '5 tiers de cartes premium', icon: CreditCard, route: '/ced-bank-cards', status: 'active', category: 'finance' },
   { id: 'bank-accounts', title: 'CED Bank Comptes', description: 'Comptes familiaux sécurisés', icon: PiggyBank, route: '/family-banking', status: 'active', category: 'finance' },
+  { id: 'al-aman', title: 'Al-Aman CED Takaful', description: 'Assurance islamique complète', icon: Shield, route: '/al-aman-ced-insurance', status: 'active', category: 'finance' },
+  { id: 'payroll', title: 'Fiches de Paie', description: 'Génération automatique', icon: FileSliders, route: '/pay-slip-generator', status: 'active', category: 'finance' },
+  { id: 'financial-center', title: 'Centre Financier', description: 'Gestion financière globale', icon: DollarSign, route: '/financial-dashboard', status: 'active', category: 'finance' },
   { id: 'dubai-investments', title: 'Investissements Dubaï', description: 'Portfolio immobilier Golfe', icon: Building2, route: '/dubai-investments', status: 'active', category: 'finance' },
-  { id: 'sharia-advisor', title: 'Conseil Sharia', description: 'Conformité religieuse 24/7', icon: MapPin, route: '/sharia-advisor', status: 'active', category: 'finance' },
+  { id: 'banking-security', title: 'Sécurité Bancaire', description: 'Protection 2FA avancée', icon: Lock, route: '/banking-security', status: 'active', category: 'finance' },
 
-  // PÔLE ÉDUCATION & FORMATION
-  { id: 'fiqh-guide', title: 'Guide Fiqh Informatique', description: '23,456+ règles tech halal', icon: BookOpen, route: '/fiqh-informatique', status: 'active', category: 'education' },
-  { id: 'gulf-expansion', title: 'Expansion Golfe 100%', description: 'Déploiement marchés arabes', icon: Trophy, route: '/fiqh-expansion', status: 'active', category: 'education' },
-  { id: 'formations', title: 'Formations', description: 'Catalogue complet certifié', icon: GraduationCap, route: '/formations', status: 'active', category: 'education' },
-  { id: 'employee-training', title: 'Formation Employés', description: 'Développement professionnel', icon: Award, route: '/employee-training-platform', status: 'active', category: 'education' },
-  { id: 'arabic-interface', title: 'Institut CED Academy', description: 'École arabe 6 volumes Médine', icon: BookMarked, route: '/interface-arabe', status: 'active', category: 'education' },
-  { id: 'quran-listening', title: 'Écoute du Coran', description: '8 récitateurs renommés', icon: BookMarked, route: '/quran-listening', status: 'active', category: 'education' },
-
-  // PÔLE BIEN-ÊTRE & SANTÉ
-  { id: 'sport-coaching', title: 'Coaching Sport', description: 'Programmes fitness personnalisés', icon: Dumbbell, route: '/coaching-mobile', status: 'active', category: 'wellbeing' },
-  { id: 'nutrition', title: 'Nutrition Souheila', description: 'Conseils diététiques experts', icon: Apple, route: '/nutrition-souheila', status: 'active', category: 'wellbeing' },
-  { id: 'strategic-analysis', title: 'Analyse Stratégique', description: 'Études de marché avancées', icon: TrendingUp, route: '/analyse-strategique', status: 'active', category: 'wellbeing' },
-
-  // PÔLE TECHNOLOGIE & INNOVATION
+  // 🌐 PÔLE TECHNOLOGIES & PLATEFORMES
   { id: 'ced-cloud', title: 'CED Cloud Platform', description: 'Infrastructure cloud sécurisée', icon: Cloud, route: '/ced-cloud', status: 'active', category: 'technology' },
-  { id: 'ai-ethics', title: 'IA Éthique', description: 'Intelligence artificielle responsable', icon: Cpu, route: '/ai-advisor', status: 'active', category: 'technology' },
-  { id: 'innovation-roadmap', title: 'Innovation Roadmap', description: 'Feuille de route technologique', icon: Target, route: '/innovation-roadmap', status: 'active', category: 'technology' },
-  { id: 'mobile-suite', title: 'Suite Mobile Pro', description: 'Applications natives iOS/Android', icon: Smartphone, route: '/mobile-professional-suite', status: 'active', category: 'technology' },
-  { id: 'banking-security', title: 'Sécurité Bancaire', description: 'Protection 2FA avancée', icon: Lock, route: '/banking-security', status: 'active', category: 'technology' },
-  { id: 'api-management', title: 'Gestion APIs', description: 'Interface développeur complète', icon: Settings, route: '/api-management', status: 'active', category: 'technology' },
   { id: 'native-apps', title: 'Apps Natives', description: 'Applications mobiles dédiées', icon: Phone, route: '/mobile-native-apps', status: 'active', category: 'technology' },
-  { id: 'ai-analytics', title: 'Analytics IA', description: 'Analyse intelligente données', icon: BarChart3, route: '/analytics-avancees', status: 'active', category: 'technology' },
+  { id: 'mobile-suite', title: 'Suite Mobile Pro', description: 'Applications natives iOS/Android', icon: Smartphone, route: '/mobile-professional-suite', status: 'active', category: 'technology' },
+  { id: 'logistics-app', title: 'App Logistique', description: 'Gestion opérationnelle mobile', icon: Wrench, route: '/logistics-app', status: 'active', category: 'technology' },
+  { id: 'api-management', title: 'Gestion APIs', description: 'Interface développeur complète', icon: Settings, route: '/api-management', status: 'active', category: 'technology' },
   { id: 'integrations', title: 'Intégrations', description: 'Connectivité écosystème', icon: Globe, route: '/integrations-strategiques', status: 'active', category: 'technology' },
 
-  // PÔLE IMPACT SOCIAL & ENVIRONNEMENTAL
+  // 🕌 PÔLE ÉTHIQUE & SPIRITUALITÉ
+  { id: 'ai-ethics', title: 'IA Éthique', description: 'Intelligence artificielle responsable', icon: Cpu, route: '/ai-advisor', status: 'active', category: 'ethique' },
+  { id: 'fiqh-guide', title: 'Guide Fiqh Informatique', description: '23,456+ règles tech halal', icon: BookOpen, route: '/fiqh-informatique', status: 'active', category: 'ethique' },
+  { id: 'sharia-advisor', title: 'Conseil Sharia', description: 'Conformité religieuse 24/7', icon: MapPin, route: '/sharia-advisor', status: 'active', category: 'ethique' },
+  { id: 'quran-listening', title: 'Écoute du Coran', description: '8 récitateurs renommés', icon: BookMarked, route: '/quran-listening', status: 'active', category: 'ethique' },
+
+  // 🤝 PÔLE SOLIDARITÉ & SOCIAL
   { id: 'techforall', title: 'TechForAll', description: 'Plateforme donations tech', icon: Heart, route: '/techforall', status: 'active', category: 'social' },
   { id: 'auto-donations', title: 'Donations Automatiques', description: 'Système de dons intelligent', icon: Zap, route: '/donation-system', status: 'active', category: 'social' },
   { id: 'solidarity-shop', title: 'Boutique Solidaire', description: 'Commerce équitable tech', icon: Building, route: '/costa-del-sol', status: 'active', category: 'social' },
-  { id: 'ecological-construction', title: 'Construction Écologique', description: 'Habitat durable innovant', icon: Home, route: '/ecological-construction-donations', status: 'active', category: 'social' },
   { id: 'techforall-dashboard', title: 'TechForAll Dashboard', description: 'Suivi impact social', icon: TrendingUp, route: '/techforall-dashboard', status: 'active', category: 'social' },
 
-  // PÔLE LOGISTIQUE & OPÉRATIONS
-  { id: 'logistics-app', title: 'App Logistique', description: 'Gestion opérationnelle mobile', icon: Wrench, route: '/logistics-app', status: 'active', category: 'operations' },
-  { id: 'payment-processing', title: 'Inscription & Paiement', description: 'Processus automatisé sécurisé', icon: Wallet, route: '/formation-payment', status: 'active', category: 'operations' },
-  { id: 'catalog', title: 'Catalogue Complet', description: 'Base de données formations', icon: BookOpen, route: '/catalogue-formations', status: 'active', category: 'operations' },
+  // 🛍️ PÔLE UTILISATEURS & SERVICES
+  { id: 'payment-processing', title: 'Inscription & Paiement', description: 'Processus automatisé sécurisé', icon: Wallet, route: '/formation-payment', status: 'active', category: 'services' },
+  { id: 'contacts', title: 'Contacts Complets', description: 'CRM et relations clients', icon: Phone, route: '/contact-complet', status: 'active', category: 'services' },
+  { id: 'resources', title: 'Ressources', description: 'Centre documentaire', icon: BookOpen, route: '/formations', status: 'active', category: 'services' },
+  { id: 'boutique-solidaire-services', title: 'Boutique Solidaire', description: 'Services aux utilisateurs', icon: Building, route: '/costa-del-sol', status: 'active', category: 'services' },
+
+  // 🏗️ PÔLE DÉVELOPPEMENT DURABLE
+  { id: 'ecological-construction', title: 'Construction Écologique', description: 'Habitat durable innovant', icon: Home, route: '/ecological-construction-donations', status: 'active', category: 'durable' },
+  { id: 'gulf-expansion', title: 'Expansion Golfe 100%', description: 'Déploiement marchés arabes', icon: Trophy, route: '/fiqh-expansion', status: 'active', category: 'durable' },
+  { id: 'gold-cards', title: 'Cartes Gold Yakoubi', description: '5 tiers de cartes premium', icon: CreditCard, route: '/ced-bank-cards', status: 'active', category: 'durable' },
 ];
 
 const categories = {
-  gouvernance: { name: 'Gouvernance & Direction', color: 'bg-blue-500', count: 0 },
-  finance: { name: 'Services Financiers Islamiques', color: 'bg-green-500', count: 0 },
-  education: { name: 'Éducation & Formation', color: 'bg-purple-500', count: 0 },
-  wellbeing: { name: 'Bien-être & Santé', color: 'bg-orange-500', count: 0 },
-  technology: { name: 'Technologie & Innovation', color: 'bg-cyan-500', count: 0 },
-  social: { name: 'Impact Social & Environnemental', color: 'bg-pink-500', count: 0 },
-  operations: { name: 'Logistique & Opérations', color: 'bg-amber-500', count: 0 },
+  pilotage: { name: '🧠 Pilotage & Vision', color: 'bg-blue-600', count: 0 },
+  formations: { name: '🏫 Formations & Coaching', color: 'bg-purple-600', count: 0 },
+  finance: { name: '💸 Finance & Sécurité', color: 'bg-green-600', count: 0 },
+  technology: { name: '🌐 Technologies & Plateformes', color: 'bg-cyan-600', count: 0 },
+  ethique: { name: '🕌 Éthique & Spiritualité', color: 'bg-emerald-600', count: 0 },
+  social: { name: '🤝 Solidarité & Social', color: 'bg-pink-600', count: 0 },
+  services: { name: '🛍️ Utilisateurs & Services', color: 'bg-orange-600', count: 0 },
+  durable: { name: '🏗️ Développement Durable', color: 'bg-amber-600', count: 0 },
 };
 
 // Calculer le nombre de modules par catégorie
