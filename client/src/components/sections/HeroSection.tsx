@@ -72,7 +72,7 @@ export function HeroSection() {
                 variant="outline" 
                 size="lg" 
                 className="border-2 border-indigo-500 hover:border-indigo-600 text-indigo-600 hover:text-indigo-700 px-8 py-4 text-lg"
-                onClick={() => window.location.href = '/fiqh-informatique-guide'}
+                onClick={() => window.location.href = '/fiqh-informatique'}
               >
                 <Code className="mr-3 h-5 w-5" />
                 Fiqh Informatique

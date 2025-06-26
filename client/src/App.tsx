@@ -398,6 +398,17 @@ function Router() {
       <Route path="/formations/certifications" component={Formations} />
       <Route path="/chat" component={Formations} />
       <Route path="/aide" component={FAQ} />
+      
+      {/* Guide Fiqh Informatique - Routes multiples */}
+      <Route path="/fiqh-informatique" component={FiqhInformatiqueGuidePage} />
+      <Route path="/fiqh-informatique-guide" component={FiqhInformatiqueGuidePage} />
+      <Route path="/guide-fiqh" component={FiqhInformatiqueGuidePage} />
+      <Route path="/fiqh-tech" component={FiqhInformatiqueGuidePage} />
+      <Route path="/regles-halal-tech" component={FiqhInformatiqueGuidePage} />
+      <Route path="/islamic-tech-rules" component={FiqhInformatiqueGuidePage} />
+      <Route path="/fiqh-expansion" component={FiqhExpansionPage} />
+      <Route path="/fiqh-100-expansion" component={FiqhExpansionPage} />
+      
       <Route path="/docs" component={FAQ} />
       <Route path="/status" component={Contact} />
       <Route path="/communaute" component={Temoignages} />

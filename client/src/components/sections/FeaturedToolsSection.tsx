@@ -119,7 +119,7 @@ export function FeaturedToolsSection() {
                 </div>
               </div>
               
-              <Link href="/fiqh-informatique-guide">
+              <Link href="/fiqh-informatique">
                 <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white group-hover:scale-105 transition-transform">
                   Consulter le guide
                   <ArrowRight className="ml-2 h-4 w-4" />
