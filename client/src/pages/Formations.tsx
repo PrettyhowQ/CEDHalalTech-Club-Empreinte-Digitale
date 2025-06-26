@@ -18,6 +18,11 @@ const categoryIcons = {
   'dietetique': Apple,
   'ia-domains': Brain,
   'certifications': Award,
+  'coran-tajweed': BookOpen,
+  'sahaba-stories': Users,
+  'hadith-studies': Star,
+  'islamic-sciences': Target,
+  'arabic-learning': Video,
 };
 
 const categoryColors = {
@@ -45,6 +50,36 @@ const categoryColors = {
     hover: 'group-hover:bg-accent-200',
     gradient: 'from-accent-50 to-accent-100',
   },
+  'coran-tajweed': {
+    bg: 'bg-emerald-100',
+    text: 'text-emerald-600',
+    hover: 'group-hover:bg-emerald-200',
+    gradient: 'from-emerald-50 to-emerald-100',
+  },
+  'sahaba-stories': {
+    bg: 'bg-amber-100',
+    text: 'text-amber-600',
+    hover: 'group-hover:bg-amber-200',
+    gradient: 'from-amber-50 to-amber-100',
+  },
+  'hadith-studies': {
+    bg: 'bg-blue-100',
+    text: 'text-blue-600',
+    hover: 'group-hover:bg-blue-200',
+    gradient: 'from-blue-50 to-blue-100',
+  },
+  'islamic-sciences': {
+    bg: 'bg-purple-100',
+    text: 'text-purple-600',
+    hover: 'group-hover:bg-purple-200',
+    gradient: 'from-purple-50 to-purple-100',
+  },
+  'arabic-learning': {
+    bg: 'bg-rose-100',
+    text: 'text-rose-600',
+    hover: 'group-hover:bg-rose-200',
+    gradient: 'from-rose-50 to-rose-100',
+  },
 };
 
 const categoryTitles = {
@@ -52,6 +87,11 @@ const categoryTitles = {
   'dietetique': 'Diététique',
   'ia-domains': '10 Domaines IA',
   'certifications': 'Certifications',
+  'coran-tajweed': 'Coran & Tajweed',
+  'sahaba-stories': 'Histoires des Sahaba',
+  'hadith-studies': 'Études Hadith',
+  'islamic-sciences': 'Sciences Islamiques',
+  'arabic-learning': 'Apprentissage Arabe',
 };
 
 const categoryDescriptions = {
