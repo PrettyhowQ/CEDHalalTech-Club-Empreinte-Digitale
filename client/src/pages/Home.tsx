@@ -66,7 +66,7 @@ export default function Home() {
         {/* ACCÈS DIRECT PRINCIPALES FONCTIONNALITÉS */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-6 text-white text-center shadow-2xl">
                 <h2 className="text-xl font-bold mb-3">🎓 Formations CED</h2>
                 <p className="text-sm mb-4">Programmation, IA, Islamiques</p>
@@ -97,6 +97,36 @@ export default function Home() {
                     <GraduationCap className="mr-2 h-4 w-4" />
                     Investisseurs
                   </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* SECTION SPIRITUELLE - ACCÈS IMMÉDIAT AUX RÉCITATIONS ET CITADELLE */}
+            <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-6 mb-8">
+              <h3 className="text-xl font-bold text-white mb-6 text-center">🕌 Spiritualité & Invocations Islamiques</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/quran-live-recitation">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white hover:bg-white/20 transition-all cursor-pointer text-center">
+                    <div className="text-4xl mb-3">📖</div>
+                    <h4 className="font-bold mb-2 text-lg">Récitations du Coran</h4>
+                    <p className="text-sm opacity-90">8 récitateurs renommés en direct</p>
+                  </div>
+                </Link>
+                
+                <Link href="/citadelle-du-musulman">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white hover:bg-white/20 transition-all cursor-pointer text-center">
+                    <div className="text-4xl mb-3">🛡️</div>
+                    <h4 className="font-bold mb-2 text-lg">La Citadelle du Musulman</h4>
+                    <p className="text-sm opacity-90">Invocations authentiques quotidiennes</p>
+                  </div>
+                </Link>
+
+                <Link href="/cloud-ced">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white hover:bg-white/20 transition-all cursor-pointer text-center">
+                    <div className="text-4xl mb-3">☁️</div>
+                    <h4 className="font-bold mb-2 text-lg">Cloud CED</h4>
+                    <p className="text-sm opacity-90">Stockage sécurisé & synchronisation</p>
+                  </div>
                 </Link>
               </div>
             </div>
