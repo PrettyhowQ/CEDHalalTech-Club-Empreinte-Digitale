@@ -205,8 +205,8 @@ export const FIQH_TECHNOLOGY_DOMAINS = {
       QUANTUM_NETWORKING: { name: 'Réseautage quantique', rules: 122 },
       QUANTUM_SENSING: { name: 'Détection quantique', rules: 111 },
       QUANTUM_OPTIMIZATION: { name: 'Optimisation quantique', rules: 156 },
-      QUANTUM_ERROR_CORRECTION: { name: 'Correction d\'erreurs quantiques', rules: 098 },
-      QUANTUM_SUPREMACY: { name: 'Suprématie quantique', rules: 087 },
+      QUANTUM_ERROR_CORRECTION: { name: 'Correction d\'erreurs quantiques', rules: 98 },
+      QUANTUM_SUPREMACY: { name: 'Suprématie quantique', rules: 87 },
       QUANTUM_ETHICS: { name: 'Éthique quantique', rules: 125 }
     }
   },

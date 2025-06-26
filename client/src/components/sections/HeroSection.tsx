@@ -7,7 +7,11 @@ import { useVoice } from '@/context/VoiceContext';
 export function HeroSection() {
   const { speak } = useVoice();
   
-  const { data: metrics } = useQuery({
+  const { data: metrics } = useQuery<{
+    totalLearners: number;
+    partnerCompanies: string;
+    ecoRating: string;
+  }>({
     queryKey: ['/api/analytics/global'],
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
