@@ -71,7 +71,7 @@ export default function Home() {
                 <h2 className="text-xl font-bold mb-3">🎓 Formations CED</h2>
                 <p className="text-sm mb-4">Programmation, IA, Islamiques</p>
                 <Link href="/formations">
-                  <Button size="md" className="bg-white text-blue-600 hover:bg-gray-100 text-sm px-4 py-2">
+                  <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 text-sm px-4 py-2">
                     <GraduationCap className="mr-2 h-4 w-4" />
                     Formations
                   </Button>
@@ -82,7 +82,7 @@ export default function Home() {
                 <h2 className="text-xl font-bold mb-3">🏛️ Institut CED</h2>
                 <p className="text-sm mb-4">Plateforme éducative islamique</p>
                 <Link href="/arabic-interface">
-                  <Button size="md" className="bg-white text-purple-600 hover:bg-gray-100 text-sm px-4 py-2">
+                  <Button size="sm" className="bg-white text-purple-600 hover:bg-gray-100 text-sm px-4 py-2">
                     <GraduationCap className="mr-2 h-4 w-4" />
                     Institut CED
                   </Button>
@@ -90,12 +90,12 @@ export default function Home() {
               </div>
 
               <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-6 text-white text-center shadow-2xl">
-                <h2 className="text-xl font-bold mb-3">💎 Dashboard Premium</h2>
-                <p className="text-sm mb-4">Analytics avancées et outils pro</p>
+                <h2 className="text-xl font-bold mb-3">👑 Banking Golfe Premium</h2>
+                <p className="text-sm mb-4">Investisseurs & Grosses Fortunes</p>
                 <Link href="/premium-dashboard">
-                  <Button size="md" className="bg-white text-amber-600 hover:bg-gray-100 text-sm px-4 py-2">
+                  <Button size="sm" className="bg-white text-amber-600 hover:bg-gray-100 text-sm px-4 py-2">
                     <GraduationCap className="mr-2 h-4 w-4" />
-                    Premium
+                    Investisseurs
                   </Button>
                 </Link>
               </div>
