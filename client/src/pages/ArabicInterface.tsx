@@ -266,13 +266,13 @@ export default function ArabicInterface() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              {/* Introduction */}
+              {/* Introduction CED */}
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
-                  <div className="font-medium">Introduction</div>
+                  <div className="font-medium">Introduction CED Academy</div>
                   <div className="flex items-center mt-1">
-                    <Badge className="bg-orange-200 text-orange-800 text-xs">Accessible</Badge>
-                    <span className="text-xs text-gray-500 ml-2">💬 3 commentaires</span>
+                    <Badge className="bg-green-200 text-green-800 text-xs">100% HALAL</Badge>
+                    <span className="text-xs text-gray-500 ml-2">🕌 Fiqh Informatique</span>
                   </div>
                 </div>
                 <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
@@ -394,18 +394,21 @@ export default function ArabicInterface() {
             className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white font-medium"
             onClick={handleTranslate}
           >
-            Traduire le texte
+            🌐 Traduire avec CED AI
           </Button>
         </div>
       </div>
 
-      {/* Footer de protection */}
+      {/* Footer de protection CED */}
       <div className="bg-cyan-700 text-white text-center py-4 mt-8">
         <div className="text-sm">
-          © 2025 Institut CED - معهد النادي الرقمي - NUR UL ANWAR
+          © 2025 INSTITUT CED ACADEMY - معهد النادي الرقمي
         </div>
         <div className="text-xs mt-1 opacity-80">
-          Yakoubi Yamina - Protection Propriété Intellectuelle
+          Club Empreinte Digitale - Yakoubi Yamina - Protection Propriété Intellectuelle
+        </div>
+        <div className="text-xs mt-1 opacity-60">
+          100% Conforme Fiqh Informatique - MANDUB Certifié
         </div>
       </div>
     </div>
