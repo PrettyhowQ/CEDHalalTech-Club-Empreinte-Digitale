@@ -59,6 +59,26 @@ export function HeroSection() {
               la technologie durable et l'économie circulaire. Formation accessible en 78 langues.
             </p>
             
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button 
+                size="lg" 
+                className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 text-lg"
+                onClick={() => window.location.href = '/generateurs-ia'}
+              >
+                <Brain className="mr-3 h-5 w-5" />
+                Générateur Formations IA
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-indigo-500 hover:border-indigo-600 text-indigo-600 hover:text-indigo-700 px-8 py-4 text-lg"
+                onClick={() => window.location.href = '/fiqh-informatique-guide'}
+              >
+                <Code className="mr-3 h-5 w-5" />
+                Fiqh Informatique
+              </Button>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 size="lg" 

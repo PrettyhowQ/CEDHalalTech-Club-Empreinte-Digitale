@@ -11,26 +11,36 @@ import {
   Building2,
   ArrowRight,
   Star,
-  Clock
+  Clock,
+  Brain,
+  BookOpen
 } from 'lucide-react';
 import { Link } from 'wouter';
 
 export function InstantAccess() {
   const instantActions = [
     {
+      title: 'Générateur Formations',
+      subtitle: 'IA créateur de cours',
+      icon: Brain,
+      href: '/generateurs-ia',
+      color: 'from-pink-600 to-pink-700',
+      hot: true
+    },
+    {
+      title: 'Fiqh Informatique',
+      subtitle: 'Guide complet 150+ règles',
+      icon: BookOpen,
+      href: '/fiqh-informatique-guide',
+      color: 'from-indigo-600 to-indigo-700',
+      hot: true
+    },
+    {
       title: 'CED Bank',
       subtitle: '0% intérêt • 100% halal',
       icon: CreditCard,
       href: '/ced-bank',
       color: 'from-blue-600 to-blue-700',
-      hot: true
-    },
-    {
-      title: 'Zakat Calculator',
-      subtitle: 'Multi-devises instantané',
-      icon: Calculator,
-      href: '/zakat-calculator',
-      color: 'from-green-600 to-green-700',
       hot: false
     },
     {
@@ -39,22 +49,6 @@ export function InstantAccess() {
       icon: GraduationCap,
       href: '/formations',
       color: 'from-purple-600 to-purple-700',
-      hot: true
-    },
-    {
-      title: 'Mode Prière',
-      subtitle: 'Sync satellitaire GPS',
-      icon: Heart,
-      href: '/mode-priere',
-      color: 'from-rose-600 to-rose-700',
-      hot: false
-    },
-    {
-      title: 'TechForAll',
-      subtitle: 'Dons technologiques',
-      icon: Building2,
-      href: '/techforall',
-      color: 'from-emerald-600 to-emerald-700',
       hot: false
     }
   ];

@@ -39,6 +39,7 @@ import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { AnalyticsDashboard } from '@/components/sections/AnalyticsDashboard';
 import { ImpactEnvironnementalSection } from '@/components/sections/ImpactEnvironnementalSection';
+import { FeaturedToolsSection } from '@/components/sections/FeaturedToolsSection';
 import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
 
 export default function Home() {
@@ -59,6 +60,9 @@ export default function Home() {
       <main className="relative z-10">
         {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
         <HeroSection />
+        
+        {/* OUTILS VEDETTES - Générateur Formations & Fiqh */}
+        <FeaturedToolsSection />
         
         {/* PRIORITÉ 2 - INTERACTION ET FORMATION IA */}
         <ChatIARPSection />
