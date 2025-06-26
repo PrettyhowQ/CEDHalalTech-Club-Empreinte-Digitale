@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { VoiceProvider } from "@/context/VoiceContext";
 import { useAuth } from "@/hooks/useAuth";
+import Footer from "@/components/Footer";
 
 // Pages
 import Home from "@/pages/Home";
