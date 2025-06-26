@@ -69,669 +69,214 @@ export function AppDownloadSystem() {
   const [installProgress, setInstallProgress] = useState(0);
   const [showAllDevices, setShowAllDevices] = useState(false);
 
-  useEffect(() => {
-    // Détection avancée du type d'appareil
-    const userAgent = navigator.userAgent;
-    if (/iPhone|iPad|iPod/.test(userAgent)) {
-      setDeviceDetected('ios');
-      setSelectedDevice('ios-current');
-    } else if (/Android/.test(userAgent)) {
-      setDeviceDetected('android');
-      setSelectedDevice('android-current');
-    }
-  }, []);
-
-  // Support universel pour tous les appareils actuels et futurs
-  const deviceSupport: DeviceSupport[] = [
-    {
-      id: 'ios-current',
-      name: 'iPhone (Actuel)',
-      icon: Apple,
-      versions: ['iPhone 16 Pro Max', 'iPhone 15 Pro Max', 'iPhone 14 Pro', 'iPhone 13', 'iPhone 12', 'iPhone 11', 'iPhone XS', 'iPhone XR', 'iPhone X', 'iPhone 8'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'App Store Officiel',
-          url: 'https://apps.apple.com/app/ced-bank-international/id1234567890',
-          description: 'Téléchargement sécurisé via App Store',
-          icon: SiAppstore,
-          secure: true
-        },
-        {
-          type: 'wallet',
-          name: 'Ajout à Apple Wallet',
-          url: 'https://wallet.cedbank.com/add-to-wallet',
-          description: 'Intégration directe dans Apple Wallet',
-          icon: Wallet,
-          secure: true
-        },
-        {
-          type: 'beta',
-          name: 'TestFlight Beta',
-          url: 'https://testflight.apple.com/join/CEDBANKBETA',
-          description: 'Version beta avec nouvelles fonctionnalités',
-          icon: Zap,
-          secure: true
-        },
-        {
-          type: 'enterprise',
-          name: 'Installation Enterprise',
-          url: 'https://install.appcenter.ms/orgs/ced-bank/apps/ced-bank-ios',
-          description: 'Installation directe pour entreprises',
-          icon: Shield,
-          secure: true
-        }
-      ],
-      walletSupport: true,
-      futureReady: true,
-      marketShare: 45.2
-    },
-    {
-      id: 'ios-future',
-      name: 'iPhone (Futur)',
-      icon: Apple,
-      versions: ['iPhone 17 Pro', 'iPhone 18 Ultra', 'iPhone AR', 'iPhone Foldable', 'Futures générations'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'App Store Unifié',
-          url: 'https://apps.apple.com/ced-bank-universal',
-          description: 'Compatible avec toutes futures versions iOS',
-          icon: SiAppstore,
-          secure: true
-        },
-        {
-          type: 'wallet',
-          name: 'Apple Wallet Avancé',
-          url: 'https://wallet.cedbank.com/future-compatibility',
-          description: 'Support des futures fonctionnalités Wallet',
-          icon: Wallet,
-          secure: true
-        }
-      ],
-      walletSupport: true,
-      futureReady: true,
-      marketShare: 100
-    },
-    {
-      id: 'android-current',
-      name: 'Android (Actuel)',
-      icon: SiAndroid,
-      versions: ['Android 14', 'Android 13', 'Android 12', 'Android 11', 'Android 10'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'Google Play Store',
-          url: 'https://play.google.com/store/apps/details?id=com.cedbank.international',
-          description: 'Téléchargement officiel Google Play',
-          icon: SiGoogleplay,
-          secure: true
-        },
-        {
-          type: 'direct',
-          name: 'APK Direct',
-          url: 'https://github.com/ced-bank/mobile/releases/latest/download/ced-bank.apk',
-          description: 'Installation directe fichier APK',
-          icon: Download,
-          secure: true
-        },
-        {
-          type: 'sideload',
-          name: 'Sideloading Avancé',
-          url: 'https://install.cedbank.com/android-sideload',
-          description: 'Installation via ADB et développeurs',
-          icon: Settings,
-          secure: true
-        }
-      ],
-      walletSupport: false,
-      futureReady: true,
-      marketShare: 71.8
-    },
-    {
-      id: 'android-future',
-      name: 'Android (Futur)',
-      icon: SiAndroid,
-      versions: ['Android 15+', 'Android AR', 'Android Automotive', 'Android TV', 'Futures versions'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'Play Store Unifié',
-          url: 'https://play.google.com/ced-bank-universal',
-          description: 'Compatible futures versions Android',
-          icon: SiGoogleplay,
-          secure: true
-        },
-        {
-          type: 'direct',
-          name: 'Installation Adaptative',
-          url: 'https://install.cedbank.com/android-adaptive',
-          description: 'Auto-adaptation aux nouvelles architectures',
-          icon: Zap,
-          secure: true
-        }
-      ],
-      walletSupport: true,
-      futureReady: true,
-      marketShare: 100
-    },
-    {
-      id: 'samsung',
-      name: 'Samsung Galaxy',
-      icon: SiSamsung,
-      versions: ['Galaxy S24 Ultra', 'Galaxy S23', 'Galaxy Note', 'Galaxy Z Fold', 'Galaxy Z Flip'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'Samsung Galaxy Store',
-          url: 'https://galaxystore.samsung.com/app/ced-bank',
-          description: 'Store exclusif Samsung',
-          icon: Star,
-          secure: true
-        },
-        {
-          type: 'direct',
-          name: 'Samsung Knox',
-          url: 'https://knox.samsung.com/ced-bank-enterprise',
-          description: 'Sécurité enterprise Samsung',
-          icon: Shield,
-          secure: true
-        }
-      ],
-      walletSupport: true,
-      futureReady: true,
-      marketShare: 22.1
-    },
-    {
-      id: 'huawei',
-      name: 'Huawei',
-      icon: SiHuawei,
-      versions: ['Mate 60 Pro', 'P60 Pro', 'Nova Series', 'Honor Magic'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'Huawei AppGallery',
-          url: 'https://appgallery.huawei.com/app/ced-bank',
-          description: 'Store officiel Huawei',
-          icon: Globe,
-          secure: true
-        },
-        {
-          type: 'direct',
-          name: 'HarmonyOS Native',
-          url: 'https://harmony.cedbank.com/install',
-          description: 'Application native HarmonyOS',
-          icon: Zap,
-          secure: true
-        }
-      ],
-      walletSupport: true,
-      futureReady: true,
-      marketShare: 9.7
-    },
-    {
-      id: 'xiaomi',
-      name: 'Xiaomi/Redmi',
-      icon: SiXiaomi,
-      versions: ['Xiaomi 14 Ultra', 'Redmi Note 13', 'POCO F5', 'Mi Mix'],
-      downloadMethods: [
-        {
-          type: 'store',
-          name: 'Mi Store',
-          url: 'https://app.mi.com/ced-bank',
-          description: 'Xiaomi Mi Store officiel',
-          icon: Star,
-          secure: true
-        },
-        {
-          type: 'direct',
-          name: 'MIUI Optimisé',
-          url: 'https://miui.cedbank.com/optimized',
-          description: 'Version optimisée MIUI',
-          icon: Zap,
-          secure: true
-        }
-      ],
-      walletSupport: false,
-      futureReady: true,
-      marketShare: 13.4
-    }
-  ];
-
   const appFeatures: AppFeature[] = [
     {
       icon: CreditCard,
-      title: 'Cartes Virtuelles Instantanées',
-      description: 'Créez des cartes virtuelles en 30 secondes avec contrôles avancés',
-      category: 'banking'
-    },
-    {
-      icon: Fingerprint,
-      title: 'Authentification Biométrique',
-      description: 'Face ID, Touch ID, reconnaissance vocale pour sécurité maximale',
-      category: 'security'
-    },
-    {
-      icon: Bell,
-      title: 'Mode Prière Automatique',
-      description: 'Pause automatique des notifications pendant Salah avec boussole Qibla',
-      category: 'islamic'
-    },
-    {
-      icon: Wallet,
-      title: 'Intégration Apple Wallet',
-      description: 'Cartes bancaires directement dans votre portefeuille mobile',
-      category: 'premium'
-    },
-    {
-      icon: Globe,
-      title: 'Convertisseur 16+ Devises',
-      description: 'Taux temps réel pour toutes les devises halal',
+      title: "Banking Islamique",
+      description: "Comptes conformes Sharia avec cartes CED Bank",
       category: 'banking'
     },
     {
       icon: Shield,
-      title: 'Chiffrement Bancaire',
-      description: 'Protection niveau militaire pour vos données financières',
+      title: "Sécurité Avancée",
+      description: "Authentification biométrique et chiffrement",
       category: 'security'
     },
     {
-      icon: Star,
-      title: 'Cashback Halal',
-      description: '50% redistribué automatiquement en donations',
-      category: 'islamic'
+      icon: Globe,
+      title: "Multi-devises",
+      description: "CHF, EUR, USD, AED support complet",
+      category: 'banking'
     },
     {
-      icon: Zap,
-      title: 'Compatibilité Future',
-      description: 'Prêt pour iPhone 17, Android 15+ et technologies émergentes',
-      category: 'premium'
+      icon: Bell,
+      title: "Notifications Prière",
+      description: "Alertes heures de prière personnalisées",
+      category: 'islamic'
     }
   ];
 
-  const selectedDeviceData = deviceSupport.find(device => device.id === selectedDevice) || deviceSupport[0];
+  const deviceSupport: DeviceSupport[] = [
+    {
+      id: 'iphone',
+      name: 'iPhone',
+      icon: SiApple,
+      versions: ['iOS 15+', 'iPhone 12 Pro Max optimisé'],
+      downloadMethods: [
+        {
+          type: 'store',
+          name: 'App Store',
+          url: 'https://apps.apple.com/ced-bank',
+          description: 'Installation officielle sécurisée',
+          icon: SiAppstore,
+          secure: true
+        }
+      ],
+      walletSupport: true,
+      futureReady: true,
+      marketShare: 45
+    },
+    {
+      id: 'android',
+      name: 'Android',
+      icon: SiAndroid,
+      versions: ['Android 8+', 'Optimisé Samsung'],
+      downloadMethods: [
+        {
+          type: 'store',
+          name: 'Google Play',
+          url: 'https://play.google.com/ced-bank',
+          description: 'Installation via Google Play Store',
+          icon: SiGoogleplay,
+          secure: true
+        }
+      ],
+      walletSupport: true,
+      futureReady: true,
+      marketShare: 55
+    }
+  ];
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes('iphone') || userAgent.includes('ipad')) {
+      setDeviceDetected('ios');
+      setSelectedDevice('iphone');
+    } else if (userAgent.includes('android')) {
+      setDeviceDetected('android');
+      setSelectedDevice('android');
+    }
+  }, []);
 
   const handleDownload = (method: DownloadMethod) => {
     setDownloadStarted(true);
+    setInstallProgress(0);
     
-    // Simulation du téléchargement
-    let progress = 0;
     const interval = setInterval(() => {
-      progress += Math.random() * 15;
-      setInstallProgress(Math.min(progress, 100));
-      
-      if (progress >= 100) {
-        clearInterval(interval);
-        setTimeout(() => {
-          window.open(method.url, '_blank');
-        }, 1000);
-      }
+      setInstallProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 10;
+      });
     }, 200);
-  };
 
-  const appSpecs = {
-    version: '2.1.0',
-    size: '89.4 MB',
-    minVersion: {
-      ios: 'iOS 14.0+',
-      android: 'Android 8.0+'
-    },
-    languages: ['Français', 'Arabe', 'Anglais', 'Espagnol'],
-    lastUpdate: new Date('2025-06-15'),
-    rating: 4.9,
-    downloads: '250K+',
-    reviews: 12847
-  };
-    
-    // Simulation du téléchargement
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += Math.random() * 15;
-      setInstallProgress(Math.min(progress, 100));
-      
-      if (progress >= 100) {
-        clearInterval(interval);
-        setTimeout(() => {
-          // Redirection vers le lien approprié
-          let url = '';
-          if (deviceDetected === 'ios') {
-            switch (type) {
-              case 'appstore':
-                url = downloadLinks.ios.appStore;
-                break;
-              case 'direct':
-                url = downloadLinks.ios.directDownload;
-                break;
-              case 'testflight':
-                url = downloadLinks.ios.testFlight;
-                break;
-            }
-          } else {
-            url = downloadLinks.android.playStore;
-          }
-          
-          window.open(url, '_blank');
-        }, 1000);
-      }
-    }, 200);
-  };
-
-  const generateQRCode = () => {
-    const qrData = deviceDetected === 'ios' 
-      ? downloadLinks.ios.appStore 
-      : downloadLinks.android.playStore;
-    
-    return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'banking': return 'bg-blue-100 text-blue-800';
-      case 'security': return 'bg-red-100 text-red-800';
-      case 'islamic': return 'bg-green-100 text-green-800';
-      case 'premium': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+    window.open(method.url, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
-      <div className="max-w-6xl mx-auto space-y-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-6">
+      <div className="max-w-6xl mx-auto">
         
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-4"
+          className="text-center mb-12"
         >
-          <div className="flex justify-center items-center gap-3">
-            <motion.div
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center"
-            >
-              <Smartphone className="h-8 w-8 text-white" />
-            </motion.div>
-            <h1 className="text-4xl font-bold text-gray-900">CED Bank Mobile</h1>
-          </div>
+          <Badge className="bg-blue-600 text-white mb-4">
+            <Download className="h-4 w-4 mr-2" />
+            Apps Mobiles CED Bank
+          </Badge>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Téléchargez l'App CED Bank
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Téléchargez l'application CED Bank International - La première banque digitale islamique 0% intérêts
+            Banking islamique moderne avec conformité Sharia complète. 
+            Disponible sur tous vos appareils préférés.
           </p>
-          <div className="flex justify-center gap-2">
-            <Badge variant="secondary" className="bg-green-100 text-green-800">
-              <Shield className="h-3 w-3 mr-1" />
-              100% Sécurisé
-            </Badge>
-            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-              <Star className="h-3 w-3 mr-1" />
-              Note {appSpecs.rating}/5
-            </Badge>
-            <Badge variant="secondary" className="bg-purple-100 text-purple-800">
-              <Download className="h-3 w-3 mr-1" />
-              {appSpecs.downloads} téléchargements
-            </Badge>
-          </div>
         </motion.div>
 
-        {/* Download Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-        >
-          
-          {/* Download Card */}
-          <Card className="bg-white/80 backdrop-blur border-0 shadow-2xl">
-            <CardHeader className="text-center">
-              <CardTitle className="flex items-center justify-center gap-2">
-                <Download className="h-6 w-6 text-blue-600" />
-                Téléchargement {deviceDetected === 'ios' ? 'iPhone 15 Pro Max' : 'Android'}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              
-              {/* Device Info */}
-              <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-medium">Appareil détecté:</span>
-                  <div className="flex items-center gap-2">
-                    {deviceDetected === 'ios' ? (
-                      <>
-                        <Apple className="h-5 w-5" />
-                        <span>iPhone 15 Pro Max</span>
-                      </>
-                    ) : (
-                      <>
-                        <Smartphone className="h-5 w-5" />
-                        <span>Android</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-600">Version:</span>
-                    <p className="font-medium">{appSpecs.version}</p>
-                  </div>
-                  <div>
-                    <span className="text-gray-600">Taille:</span>
-                    <p className="font-medium">{appSpecs.size}</p>
-                  </div>
-                  <div>
-                    <span className="text-gray-600">Requis:</span>
-                    <p className="font-medium">
-                      {deviceDetected === 'ios' ? appSpecs.minVersion.ios : appSpecs.minVersion.android}
-                    </p>
-                  </div>
-                  <div>
-                    <span className="text-gray-600">Langues:</span>
-                    <p className="font-medium">{appSpecs.languages.length} langues</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Download Progress */}
-              <AnimatePresence>
-                {downloadStarted && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="bg-blue-50 rounded-xl p-4"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <Download className="h-4 w-4 text-blue-600" />
-                      <span className="font-medium">Téléchargement en cours...</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
-                      <motion.div
-                        className="bg-blue-600 h-3 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{ width: `${installProgress}%` }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </div>
-                    <p className="text-sm text-blue-600">{Math.round(installProgress)}% terminé</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {/* Download Buttons */}
-              <div className="space-y-3">
-                {deviceDetected === 'ios' ? (
-                  <>
-                    <Button 
-                      onClick={() => handleDownload('appstore')}
-                      className="w-full bg-black text-white hover:bg-gray-800 h-14 text-lg"
-                      disabled={downloadStarted}
-                    >
-                      <SiAppstore className="h-6 w-6 mr-3" />
-                      Télécharger sur App Store
-                    </Button>
-                    
-                    <Button 
-                      onClick={() => handleDownload('testflight')}
-                      variant="outline"
-                      className="w-full h-12"
-                      disabled={downloadStarted}
-                    >
-                      <Apple className="h-5 w-5 mr-2" />
-                      Version Beta (TestFlight)
-                    </Button>
-                    
-                    <Button 
-                      onClick={() => handleDownload('direct')}
-                      variant="outline"
-                      className="w-full h-12"
-                      disabled={downloadStarted}
-                    >
-                      <Download className="h-5 w-5 mr-2" />
-                      Installation Directe (Enterprise)
-                    </Button>
-                  </>
-                ) : (
-                  <Button 
-                    onClick={() => handleDownload('appstore')}
-                    className="w-full bg-green-600 text-white hover:bg-green-700 h-14 text-lg"
-                    disabled={downloadStarted}
-                  >
-                    <Download className="h-6 w-6 mr-3" />
-                    Télécharger sur Google Play
-                  </Button>
-                )}
-              </div>
-
-              {/* Instructions */}
-              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-                <h3 className="font-medium text-yellow-800 mb-2">Instructions iPhone 15 Pro Max:</h3>
-                <ol className="text-sm text-yellow-700 space-y-1">
-                  <li>1. Appuyez sur "Télécharger sur App Store"</li>
-                  <li>2. Authentifiez-vous avec Face ID ou Touch ID</li>
-                  <li>3. L'installation se lance automatiquement</li>
-                  <li>4. Ouvrez CED Bank depuis votre écran d'accueil</li>
-                  <li>5. Configurez votre compte avec vos identifiants</li>
-                </ol>
-              </div>
-
-            </CardContent>
-          </Card>
-
-          {/* QR Code & Features */}
-          <div className="space-y-6">
-            
-            {/* QR Code */}
-            <Card className="bg-white/80 backdrop-blur">
-              <CardHeader className="text-center">
-                <CardTitle className="flex items-center justify-center gap-2">
-                  <QrCode className="h-5 w-5" />
-                  Scanner pour télécharger
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="inline-block p-4 bg-white rounded-xl shadow-lg">
-                  <img 
-                    src={generateQRCode()} 
-                    alt="QR Code téléchargement CED Bank"
-                    className="w-48 h-48 mx-auto"
-                  />
-                </div>
-                <p className="text-sm text-gray-600 mt-3">
-                  Scannez ce QR code avec votre iPhone pour télécharger directement
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* App Preview */}
-            <Card className="bg-white/80 backdrop-blur">
-              <CardHeader>
-                <CardTitle>Aperçu de l'application</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+        {/* Main Download Cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {deviceSupport.map((device, index) => (
+            <motion.div
+              key={device.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Card className="relative overflow-hidden border-2 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 opacity-50"></div>
+                <CardHeader className="relative">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                        <CreditCard className="h-4 w-4 text-blue-600" />
+                    <div className="flex items-center gap-3">
+                      <div className="p-3 bg-blue-600 rounded-full">
+                        <device.icon className="h-8 w-8 text-white" />
                       </div>
-                      <span className="font-medium">CED Bank</span>
-                    </div>
-                    <div className="flex gap-1">
-                      <div className="flex items-center gap-1 text-xs">
-                        <Signal className="h-3 w-3" />
-                        <Wifi className="h-3 w-3" />
-                        <Battery className="h-3 w-3" />
+                      <div>
+                        <CardTitle className="text-2xl">{device.name}</CardTitle>
+                        <p className="text-gray-600">{device.versions.join(' • ')}</p>
                       </div>
                     </div>
+                    <Badge className="bg-green-600 text-white">
+                      <CheckCircle className="h-3 w-3 mr-1" />
+                      Compatible
+                    </Badge>
                   </div>
+                </CardHeader>
+                <CardContent className="relative">
+                  {device.downloadMethods.map((method, methodIndex) => (
+                    <div key={methodIndex} className="mb-6">
+                      <Button
+                        onClick={() => handleDownload(method)}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-6 mb-3"
+                        disabled={downloadStarted}
+                      >
+                        <method.icon className="mr-3 h-6 w-6" />
+                        {downloadStarted ? `Installation ${installProgress}%` : `Télécharger sur ${method.name}`}
+                      </Button>
+                      <p className="text-sm text-gray-600 text-center">
+                        {method.description}
+                      </p>
+                    </div>
+                  ))}
                   
-                  <div className="space-y-3">
-                    <div className="bg-white/20 rounded-lg p-3">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm">Solde principal</span>
-                        <Eye className="h-4 w-4" />
-                      </div>
-                      <p className="text-2xl font-bold">€ 24,500.00</p>
+                  <div className="grid grid-cols-3 gap-3 text-center">
+                    <div>
+                      <Shield className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                      <span className="text-xs text-gray-600">Sécurisé</span>
                     </div>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-white/20 rounded-lg p-3 text-center">
-                        <CreditCard className="h-5 w-5 mx-auto mb-1" />
-                        <p className="text-xs">Cartes</p>
-                      </div>
-                      <div className="bg-white/20 rounded-lg p-3 text-center">
-                        <Globe className="h-5 w-5 mx-auto mb-1" />
-                        <p className="text-xs">Devises</p>
-                      </div>
+                    <div>
+                      <Zap className="h-5 w-5 text-yellow-600 mx-auto mb-1" />
+                      <span className="text-xs text-gray-600">Rapide</span>
+                    </div>
+                    <div>
+                      <Star className="h-5 w-5 text-purple-600 mx-auto mb-1" />
+                      <span className="text-xs text-gray-600">Premium</span>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-          </div>
-        </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
+          className="mb-12"
         >
-          <Card className="bg-white/60 backdrop-blur">
-            <CardHeader>
-              <CardTitle className="text-center">Fonctionnalités de l'application</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {appFeatures.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    className="text-center p-4 rounded-xl bg-white border hover:shadow-lg transition-all"
-                  >
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <feature.icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <h3 className="font-medium mb-2">{feature.title}</h3>
-                    <p className="text-sm text-gray-600 mb-3">{feature.description}</p>
-                    <Badge variant="outline" className={getCategoryColor(feature.category)}>
-                      {feature.category}
-                    </Badge>
-                  </motion.div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <h2 className="text-3xl font-bold text-center mb-8">Fonctionnalités Principales</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {appFeatures.map((feature, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                <feature.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
+              </Card>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Support Info */}
+        {/* Support Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.5 }}
           className="text-center bg-blue-50 rounded-xl p-6"
         >
           <h3 className="font-bold text-blue-800 mb-2">Besoin d'aide ?</h3>
