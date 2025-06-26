@@ -1,262 +1,384 @@
 import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Languages, 
-  Keyboard, 
+  Home, 
   BookOpen, 
-  Smile, 
-  Home,
-  ChevronDown,
+  Languages, 
+  GraduationCap, 
+  Users, 
+  CreditCard,
   Menu,
-  X
+  ChevronDown,
+  ArrowRight,
+  FileText,
+  MessageCircle,
+  ShoppingCart,
+  Play
 } from 'lucide-react';
 
-const menuItems = [
-  { id: 'accueil', label: 'الصفحة الرئيسية', icon: Home, frenchLabel: 'Accueil' },
-  { id: 'niveau1', label: 'المستوى الأول', icon: BookOpen, frenchLabel: 'Niveau 1' },
-  { id: 'niveau2', label: 'المستوى الثاني', icon: BookOpen, frenchLabel: 'Niveau 2' },
-  { id: '100verbes', label: '100 فعل عربي', icon: BookOpen, frenchLabel: '100 verbes arabes' },
-  { id: 'niveau3', label: 'المستوى الثالث', icon: BookOpen, frenchLabel: 'Niveau 3' },
-  { id: 'niveau4', label: 'المستوى الرابع', icon: BookOpen, frenchLabel: 'Niveau 4' },
-  { id: 'niveau5', label: 'المستوى الخامس', icon: BookOpen, frenchLabel: 'Niveau 5' },
-  { id: 'niveau6', label: 'المستوى السادس', icon: BookOpen, frenchLabel: 'Niveau 6' },
-  { id: 'bonus', label: 'إضافات', icon: Smile, frenchLabel: 'Bonus' },
-  { id: 'coachings', label: 'التدريب والتصحيحات', icon: Keyboard, frenchLabel: 'Coachings et corrections' },
-  { id: 'aide', label: 'المساعدة', icon: Smile, frenchLabel: 'Aide' },
-  { id: 'credits', label: 'شراء الرصيد', icon: Smile, frenchLabel: 'Achat de crédits' },
-  { id: 'traduction', label: 'تطبيق الترجمة', icon: Languages, frenchLabel: 'App de Traduction' },
-];
+const niveauxContent = {
+  1: [
+    'Manuel du niveau 1',
+    'Présentation de la langue arabe',
+    'Premiers pas dans la lecture',
+    'La vocalisation',
+    'Dictée de la vocalisation',
+    'Le soukoune',
+    'La prolongation',
+    'Dictée de la prolongation',
+    'Le tanwine',
+    'Dictée avec le tanwine',
+    'La lettre bâ\'',
+    'Dictée de la lettre bâ\'',
+    'La lettre kâf',
+    'Dictée de la lettre kâf',
+    'La lettre tâ\'',
+    'La lettre tâ\' al-marbouta',
+    'Dictée de la lettre tâ',
+    'Exercice de lecture 1',
+    'La lettre râ\''
+  ],
+  2: [
+    'Manuel du niveau 2',
+    'Lectures et exercices oraux',
+    'Faire connaissance 1',
+    'Pratique 1',
+    'Faire connaissance 2',
+    'Faire connaissance 3',
+    'Pratique 2',
+    'Faire connaissance 4',
+    'Pratique 4',
+    'Faire connaissance 5',
+    'Faire connaissance 6',
+    'Pratique 5',
+    'Faire connaissance 7',
+    'Pratique 6',
+    'Faire connaissance 8',
+    'Faire connaissance 9',
+    'Pratique 7',
+    'Faire connaissance 10',
+    'Pratique 8'
+  ]
+};
 
-const languages = [
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+const specialSections = [
+  { title: 'La vie du prophète', accessible: true },
+  { title: 'Tajwid', accessible: true },
+  { title: 'Groupe WhatsApp', accessible: true },
+  { title: 'Divers', accessible: true },
+  { title: 'Achat de crédits', accessible: true },
+  { title: 'Classes en ligne', accessible: true },
+  { title: 'App de Traduction', accessible: true }
 ];
 
 export default function ArabicInterface() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [sourceText, setSourceText] = useState('');
-  const [translatedText, setTranslatedText] = useState('');
-  const [sourceLang, setSourceLang] = useState('ar');
-  const [targetLang, setTargetLang] = useState('fr');
-  const [isTranslating, setIsTranslating] = useState(false);
+  const [selectedNiveau, setSelectedNiveau] = useState<number | null>(null);
+  const [expandedNiveau, setExpandedNiveau] = useState<number | null>(null);
+  const [sourceText, setSourceText] = useState('Institut club empreinte digitale');
+  const [translatedText, setTranslatedText] = useState('معهد النادي الرقمي');
 
-  const handleTranslate = async () => {
-    if (!sourceText.trim()) return;
-    
-    setIsTranslating(true);
-    try {
-      // Simuler la traduction - en production, utiliser l'API de traduction
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      if (sourceText.includes('Institut club empreinte digitale')) {
-        setTranslatedText('معهد النادي الرقمي');
-      } else {
-        setTranslatedText(`[Traduction ${sourceLang} → ${targetLang}] ${sourceText}`);
-      }
-    } catch (error) {
-      console.error('Erreur de traduction:', error);
-    } finally {
-      setIsTranslating(false);
+  const toggleNiveau = (niveau: number) => {
+    setExpandedNiveau(expandedNiveau === niveau ? null : niveau);
+  };
+
+  const handleTranslate = () => {
+    if (sourceText === 'Institut club empreinte digitale') {
+      setTranslatedText('معهد النادي الرقمي');
+    } else if (sourceText === 'معهد النادي الرقمي') {
+      setTranslatedText('Institut club empreinte digitale');
     }
   };
 
-  const swapLanguages = () => {
-    const tempLang = sourceLang;
-    setSourceLang(targetLang);
-    setTargetLang(tempLang);
-    setSourceText(translatedText);
-    setTranslatedText(sourceText);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-cyan-500" dir="rtl">
-      {/* Header avec logo et navigation */}
-      <div className="bg-cyan-400 px-4 py-3">
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-white text-lg font-bold">19:27</div>
-          <div className="flex items-center space-x-2 text-white">
-            <span className="text-sm">67%</span>
-            <div className="w-6 h-3 border border-white rounded-sm">
-              <div className="w-4 h-full bg-green-400 rounded-sm"></div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-cyan-600">
+      {/* Header turquoise avec logo */}
+      <div className="bg-cyan-500 text-white p-4 text-center">
+        <div className="flex items-center justify-center mb-2">
+          <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-3">
+            <BookOpen className="h-6 w-6" />
+          </div>
+          <div>
+            <h1 className="text-lg font-bold">NUR UL ANWAR</h1>
+            <p className="text-xs text-cyan-100">Illuminez-vous par l'arabe</p>
           </div>
         </div>
-        
-        <div className="text-center mb-4">
-          <div className="text-white text-sm opacity-90">...ut-anwar.learnybox.com</div>
-        </div>
+      </div>
 
-        <div className="flex items-center justify-center mb-6">
-          <div className="bg-white bg-opacity-20 rounded-lg px-4 py-2">
-            <div className="text-white text-center">
-              <div className="text-lg font-bold">نور الأنوار</div>
-              <div className="text-sm opacity-90">Illuminez-vous par l'arabe</div>
-            </div>
-          </div>
-        </div>
-
+      {/* Menu hamburger */}
+      <div className="bg-cyan-500 px-4 pb-2">
         <Button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="bg-white text-cyan-600 hover:bg-gray-100 mb-4"
+          variant="outline"
           size="sm"
+          className="bg-white text-cyan-600 border-white hover:bg-cyan-50"
         >
           <Menu className="h-4 w-4 mr-2" />
-          القائمة
+          Menu
         </Button>
       </div>
 
-      {/* Menu déroulant */}
+      {/* Navigation principale */}
       {isMenuOpen && (
-        <div className="bg-cyan-400 px-4 pb-4">
-          <div className="space-y-2">
-            {menuItems.map((item) => (
-              <div key={item.id} className="flex items-center justify-between">
-                <div className="text-white hover:text-cyan-100 cursor-pointer py-2">
-                  <div className="flex items-center">
-                    {React.createElement(item.icon, { className: "h-4 w-4 ml-2" })}
-                    <span className="text-sm">{item.label}</span>
-                  </div>
-                </div>
-                <ChevronDown className="h-4 w-4 text-white opacity-70" />
-              </div>
-            ))}
-          </div>
+        <div className="bg-cyan-500 text-white px-4 pb-4 space-y-1" dir="ltr">
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+          >
+            <Home className="h-4 w-4 mr-3" />
+            🏠 Accueil
+          </Button>
+          
+          {[1, 2, 3, 4, 5, 6].map((niveau) => (
+            <div key={niveau}>
+              <Button
+                onClick={() => toggleNiveau(niveau)}
+                variant="ghost"
+                className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+              >
+                <span>Niveau {niveau}</span>
+                <ChevronDown className={`h-4 w-4 transition-transform ${
+                  expandedNiveau === niveau ? 'rotate-180' : ''
+                }`} />
+              </Button>
+            </div>
+          ))}
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>100 verbes arabes</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>Niveau 3</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>Niveau 4</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>Niveau 5</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>Niveau 6</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-between text-white hover:bg-cyan-400 py-2"
+          >
+            <span>Bonus</span>
+            <ChevronDown className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+          >
+            Coachings et corrections
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+          >
+            <MessageCircle className="h-4 w-4 mr-3" />
+            Aide
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+          >
+            Achat de crédits
+          </Button>
+          
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-white hover:bg-cyan-400 py-2"
+          >
+            <Languages className="h-4 w-4 mr-3" />
+            💬 App de Traduction
+          </Button>
         </div>
       )}
 
-      {/* Section de traduction */}
-      <div className="p-4">
-        <div className="bg-orange-400 rounded-t-3xl p-6 shadow-lg">
-          {/* Icônes d'outils */}
-          <div className="flex items-center justify-center space-x-4 mb-6" dir="ltr">
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <Languages className="h-6 w-6 text-gray-700" />
-            </div>
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <Keyboard className="h-6 w-6 text-gray-700" />
-            </div>
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <BookOpen className="h-6 w-6 text-gray-700" />
-            </div>
-            <div className="bg-white rounded-lg p-3 shadow-md">
-              <Smile className="h-6 w-6 text-gray-700" />
-            </div>
-          </div>
+      {/* Contenu principal */}
+      <div className="p-4 space-y-4">
+        {/* Vue par défaut - Sommaire de la formation */}
+        {!selectedNiveau && (
+          <Card className="bg-white shadow-lg">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center text-lg">
+                <FileText className="h-5 w-5 mr-2" />
+                📋 Sommaire de la formation
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {/* Introduction */}
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <div className="font-medium">Introduction</div>
+                  <div className="flex items-center mt-1">
+                    <Badge className="bg-orange-200 text-orange-800 text-xs">Accessible</Badge>
+                    <span className="text-xs text-gray-500 ml-2">💬 3 commentaires</span>
+                  </div>
+                </div>
+                <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
 
-          {/* Zone de traduction */}
-          <div className="bg-white rounded-lg p-4 space-y-4">
-            <div>
-              <Textarea
-                placeholder="نص للترجمة"
+              {/* Niveaux 1-6 */}
+              {[1, 2, 3, 4, 5, 6].map((niveau) => (
+                <div key={niveau} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div>
+                    <div className="font-medium">Niveau {niveau}</div>
+                    <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">Accessible</Badge>
+                  </div>
+                  <Button 
+                    size="sm" 
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white"
+                    onClick={() => setSelectedNiveau(niveau)}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+
+              {/* 100 verbes arabes */}
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <div className="font-medium">100 verbes arabes</div>
+                  <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">Accessible</Badge>
+                </div>
+                <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
+
+              {/* Sections spéciales */}
+              {specialSections.map((section, index) => (
+                <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div>
+                    <div className="font-medium">{section.title}</div>
+                    <Badge className="bg-orange-200 text-orange-800 text-xs mt-1">
+                      {section.accessible ? 'Accessible' : 'Verrouillé'}
+                    </Badge>
+                  </div>
+                  <Button size="sm" className="bg-cyan-500 hover:bg-cyan-600 text-white">
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Vue détaillée d'un niveau */}
+        {selectedNiveau && (
+          <Card className="bg-white shadow-lg">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center justify-between">
+                <span>Niveau {selectedNiveau}</span>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => setSelectedNiveau(null)}
+                >
+                  Retour
+                </Button>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {niveauxContent[selectedNiveau as keyof typeof niveauxContent]?.map((item, index) => (
+                <div key={index} className="flex items-center p-2 bg-gray-50 rounded">
+                  <FileText className="h-4 w-4 mr-3 text-gray-500" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Module de traduction intégré style orange */}
+        <div className="bg-orange-400 p-4 rounded-lg">
+          <div className="bg-white rounded-lg p-4">
+            <div className="flex items-center justify-center mb-4 space-x-4">
+              <Button variant="outline" size="sm">
+                <Languages className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="sm">
+                <MessageCircle className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="sm">
+                <FileText className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="sm">
+                😊
+              </Button>
+            </div>
+            
+            <div className="space-y-3">
+              <Input
                 value={sourceText}
                 onChange={(e) => setSourceText(e.target.value)}
-                className="min-h-[100px] text-right border-gray-200"
-                dir="rtl"
+                className="text-center"
+                placeholder="Institut club empreinte digitale"
               />
-            </div>
-
-            <div className="border-t border-gray-200 pt-4">
-              <Textarea
-                placeholder="الترجمة"
-                value={translatedText}
-                readOnly
-                className="min-h-[100px] text-right border-gray-200 bg-gray-50"
-                dir={targetLang === 'ar' ? 'rtl' : 'ltr'}
-              />
-            </div>
-
-            {/* Sélecteur de langues */}
-            <div className="flex items-center justify-center space-x-4" dir="ltr">
-              <select
-                value={sourceLang}
-                onChange={(e) => setSourceLang(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md"
-              >
-                {languages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {lang.flag} {lang.name}
-                  </option>
-                ))}
-              </select>
-
-              <Button
-                onClick={swapLanguages}
-                variant="ghost"
-                size="sm"
-                className="px-2"
-              >
-                ⇄
-              </Button>
-
-              <select
-                value={targetLang}
-                onChange={(e) => setTargetLang(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md"
-              >
-                {languages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {lang.flag} {lang.name}
-                  </option>
-                ))}
-              </select>
+              
+              <div className="h-px bg-gray-200"></div>
+              
+              <div className="text-center text-lg font-arabic bg-gray-50 p-3 rounded" dir="rtl">
+                {translatedText}
+              </div>
+              
+              <div className="text-center text-sm text-gray-600">
+                Français ⇄ Arabe
+              </div>
             </div>
           </div>
-
-          {/* Bouton de traduction */}
-          <Button
+          
+          <Button 
+            className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white font-medium"
             onClick={handleTranslate}
-            disabled={isTranslating || !sourceText.trim()}
-            className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-semibold"
           >
-            {isTranslating ? 'جاري الترجمة...' : 'ترجم النص'}
+            Traduire le texte
           </Button>
         </div>
       </div>
 
-      {/* Section exemple avec Institut CED */}
-      <div className="px-4 pb-6">
-        <Card className="bg-white shadow-lg">
-          <CardContent className="p-4">
-            <div className="text-center space-y-4">
-              <div className="border-b border-gray-200 pb-4">
-                <div className="text-lg font-semibold text-gray-800" dir="ltr">
-                  Institut club empreinte digitale
-                </div>
-              </div>
-              
-              <div className="border-b border-gray-200 pb-4">
-                <div className="text-lg font-semibold text-gray-800" dir="rtl">
-                  معهد النادي الرقمي
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center space-x-4" dir="ltr">
-                <Badge variant="outline" className="text-blue-600 border-blue-600">
-                  Français
-                </Badge>
-                <span className="text-gray-400">⇄</span>
-                <Badge variant="outline" className="text-green-600 border-green-600">
-                  العربية
-                </Badge>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Footer de protection */}
-      <div className="bg-cyan-600 text-white text-center py-3 text-xs">
-        <div dir="ltr">
-          © 2025 Institut CED - معهد النادي الرقمي
+      <div className="bg-cyan-700 text-white text-center py-4 mt-8">
+        <div className="text-sm">
+          © 2025 Institut CED - معهد النادي الرقمي - NUR UL ANWAR
         </div>
-        <div className="mt-1" dir="ltr">
-          Yakoubi Yamina - جميع الحقوق محفوظة
+        <div className="text-xs mt-1 opacity-80">
+          Yakoubi Yamina - Protection Propriété Intellectuelle
         </div>
       </div>
     </div>
