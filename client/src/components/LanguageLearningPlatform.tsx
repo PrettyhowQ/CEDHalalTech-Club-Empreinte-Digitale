@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
+import { MobileLanguageSelector } from "@/components/MobileLanguageSelector";
 import { 
   Languages, 
   BookOpen, 
@@ -21,7 +22,8 @@ import {
   Volume2,
   Bookmark,
   CheckCircle,
-  TrendingUp
+  TrendingUp,
+  Smartphone
 } from "lucide-react";
 
 interface LanguageCourse {
@@ -474,6 +476,21 @@ export function LanguageLearningPlatform() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Démo Mobile Selector */}
+      <Card className="border-2 border-purple-500 bg-gradient-to-r from-purple-50 to-pink-50">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-3">
+            <Smartphone className="h-6 w-6 text-purple-600" />
+            Interface Mobile - Changement de Langue
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex justify-center">
+            <MobileLanguageSelector />
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Sélection de langue */}
       <Tabs value={selectedLanguage} onValueChange={setSelectedLanguage}>
