@@ -13,6 +13,8 @@ import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
 import { InstantAccess } from '@/components/ui/InstantAccess';
 import { SmartPreloader } from '@/components/ui/SmartPreloader';
 import { IntuitiveBreadcrumb } from '@/components/ui/IntuitiveBreadcrumb';
+import { ContextualHelp } from '@/components/ui/ContextualHelp';
+import { PerformanceMonitor } from '@/components/ui/PerformanceMonitor';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
@@ -214,6 +216,8 @@ export default function Home() {
       </main>
       <ThemeCustomizer />
       <VoiceAssistant />
+      <ContextualHelp />
+      <PerformanceMonitor />
       <Footer />
     </div>
   );
