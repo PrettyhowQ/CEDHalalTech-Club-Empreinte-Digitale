@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { Progress } from '@/components/ui/progress';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Code, Apple, Brain, Award, Clock, Users, Star, Play, ChevronRight, BookOpen, Video, Target } from 'lucide-react';
+import { Code, Apple, Brain, Award, Clock, Users, Star, Play, ChevronRight, BookOpen, Video, Target, Shield, CheckCircle } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useLanguage } from '@/context/LanguageContext';
 import { FiqhValidationCertificate } from '@/components/FiqhValidationCertificate';
@@ -120,392 +120,269 @@ function CourseCard({ course, userProgress }: { course: any; userProgress?: any 
   const isIslamicCourse = ['coran-tajweed', 'sahaba-stories', 'hadith-studies', 'islamic-sciences', 'arabic-learning'].includes(course.category);
 
   return (
-    <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 overflow-hidden">
-      <div className={`h-2 bg-gradient-to-r ${colors.gradient}`} />
-      <CardHeader className="pb-4">
-        <div className="flex items-start justify-between">
-          <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center mb-4 transition-colors ${colors.hover}`}>
-            <Icon className={`h-6 w-6 ${colors.text}`} />
-          </div>
-          <div className="flex items-center space-x-2">
-            <Badge variant="secondary" className="text-xs">
-              {course.difficulty}
+    <div className="space-y-4">
+      {/* Certificat Fiqh pour formations islamiques */}
+      {isIslamicCourse && (
+        <div className="border-2 border-green-500 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-4">
+          <div className="flex items-center gap-3 mb-3">
+            <Shield className="h-6 w-6 text-green-600" />
+            <div>
+              <h3 className="text-green-800 font-bold">🕌 Formation 100% HALAL Certifiée</h3>
+              <p className="text-green-700 text-sm">Conforme Fiqh Informatique CED Academy</p>
+            </div>
+            <Badge className="bg-blue-100 text-blue-800 text-sm px-3 py-1 ml-auto">
+              🔵 MANDUB
             </Badge>
-            {isCompleted && (
-              <Badge className="bg-green-100 text-green-600 text-xs">
-                Terminé
+          </div>
+          <div className="grid grid-cols-2 gap-3 text-xs">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-green-800">Sources: Coran + Sunna</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-green-800">Ijmâ' + Qiyâs validés</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-green-800">Méthodologie Salaf</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-green-800">4 Écoles conformes</span>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 overflow-hidden">
+        <div className={`h-2 bg-gradient-to-r ${colors.gradient}`} />
+        <CardHeader className="pb-4">
+          <div className="flex items-start justify-between">
+            <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center mb-4 transition-colors ${colors.hover}`}>
+              <Icon className={`h-6 w-6 ${colors.text}`} />
+            </div>
+            <div className="flex items-center space-x-2">
+              <Badge variant="secondary" className="text-xs">
+                {course.difficulty}
               </Badge>
-            )}
-          </div>
-        </div>
-        <CardTitle className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-          {course.title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-          {course.description}
-        </p>
-        
-        {isAuthenticated && progressPercentage > 0 && (
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-600">Progression</span>
-              <span className="text-sm font-medium text-gray-900">{progressPercentage}%</span>
-            </div>
-            <Progress value={progressPercentage} className="h-2" />
-          </div>
-        )}
-        
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-1">
-              <Clock className="h-4 w-4" />
-              <span>{course.duration || 45} min</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Target className="h-4 w-4" />
-              <span>{course.xpReward || 10} XP</span>
+              {isCompleted && (
+                <Badge className="bg-green-100 text-green-600 text-xs">
+                  Terminé
+                </Badge>
+              )}
             </div>
           </div>
-          <div className="flex items-center space-x-1">
-            <Star className="h-4 w-4 fill-current text-accent-500" />
-            <span>4.8</span>
-          </div>
-        </div>
-
-        {/* Prix des formations */}
-        <div className="mb-4 space-y-2">
-          <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
-            <div>
-              <p className="text-sm font-medium text-blue-800">Étudiants</p>
-              <p className="text-xs text-blue-600">Tarif préférentiel</p>
-            </div>
-            <div className="text-right">
-              <p className="text-lg font-bold text-blue-700">{course.priceStudent || '29'}€</p>
-              <p className="text-xs text-blue-600">par mois</p>
-            </div>
-          </div>
+          <CardTitle className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+            {course.title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+            {course.description}
+          </p>
           
-          <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg border border-purple-200">
-            <div>
-              <p className="text-sm font-medium text-purple-800">Entreprises</p>
-              <p className="text-xs text-purple-600">Formation professionnelle</p>
+          {progressPercentage > 0 && (
+            <div className="mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-medium text-gray-700">Progression</span>
+                <span className="text-sm text-gray-500">{progressPercentage}%</span>
+              </div>
+              <Progress value={progressPercentage} className="h-2" />
             </div>
-            <div className="text-right">
-              <p className="text-lg font-bold text-purple-700">{course.priceBusiness || '149'}€</p>
-              <p className="text-xs text-purple-600">par employé/mois</p>
+          )}
+
+          <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center">
+                <Clock className="mr-1 h-4 w-4" />
+                <span>{course.duration}h</span>
+              </div>
+              <div className="flex items-center">
+                <Users className="mr-1 h-4 w-4" />
+                <span>{course.modules} modules</span>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <Star className="mr-1 h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span>4.8</span>
             </div>
           </div>
-        </div>
-        
-        <Button 
-          className={`w-full ${isCompleted ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-600 hover:bg-primary-700'} text-white`}
-          size="sm"
-        >
-          {isCompleted ? (
-            <>
-              <BookOpen className="mr-2 h-4 w-4" />
-              Réviser
-            </>
-          ) : progressPercentage > 0 ? (
-            <>
-              <Play className="mr-2 h-4 w-4" />
-              Continuer
-            </>
-          ) : (
-            <>
-              <Play className="mr-2 h-4 w-4" />
-              Commencer
-            </>
-          )}
-        </Button>
-      </CardContent>
-    </Card>
+
+          <Button 
+            className={`w-full ${isCompleted ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-600 hover:bg-primary-700'} text-white`}
+            size="sm"
+          >
+            {isCompleted ? (
+              <>
+                <BookOpen className="mr-2 h-4 w-4" />
+                Réviser
+              </>
+            ) : progressPercentage > 0 ? (
+              <>
+                <Play className="mr-2 h-4 w-4" />
+                Continuer
+              </>
+            ) : (
+              <>
+                <Play className="mr-2 h-4 w-4" />
+                Commencer
+              </>
+            )}
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
 function CategorySection({ category, courses, userProgress }: { category: string; courses: any[]; userProgress?: any[] }) {
   const colors = categoryColors[category as keyof typeof categoryColors];
-  const Icon = categoryIcons[category as keyof typeof categoryIcons];
   const title = categoryTitles[category as keyof typeof categoryTitles];
   const description = categoryDescriptions[category as keyof typeof categoryDescriptions];
-  
-  const completedCourses = userProgress?.filter(p => 
-    p.completed && courses.some(c => c.id === p.courseId)
-  ).length || 0;
+  const Icon = categoryIcons[category as keyof typeof categoryIcons];
+
+  const completedCourses = courses.filter(course => {
+    const progress = userProgress?.find(p => p.courseId === course.id);
+    return progress?.completed;
+  }).length;
+
+  const totalHours = courses.reduce((acc, course) => acc + (course.duration || 0), 0);
+  const totalModules = courses.reduce((acc, course) => acc + (course.modules || 0), 0);
 
   return (
-    <section className="mb-16">
-      <div className={`bg-gradient-to-br ${colors.gradient} rounded-2xl p-8 mb-8`}>
-        <div className="flex items-center mb-4">
-          <div className={`w-16 h-16 ${colors.bg} rounded-2xl flex items-center justify-center mr-6 ${colors.hover} transition-colors`}>
-            <Icon className={`h-8 w-8 ${colors.text}`} />
-          </div>
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">{title}</h2>
-            <p className="text-lg text-gray-600">{description}</p>
-          </div>
+    <div className="mb-12">
+      <div className="flex items-center mb-6">
+        <div className={`w-16 h-16 ${colors.bg} rounded-2xl flex items-center justify-center mr-4`}>
+          <Icon className={`h-8 w-8 ${colors.text}`} />
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${colors.text}`}>
-              {courses.length}
-            </div>
-            <div className="text-sm text-gray-600">Cours disponibles</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${colors.text}`}>
-              {completedCourses}
-            </div>
-            <div className="text-sm text-gray-600">Terminés</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${colors.text}`}>
-              {Math.round(courses.reduce((acc, course) => acc + (course.duration || 45), 0) / 60)}h
-            </div>
-            <div className="text-sm text-gray-600">Durée totale</div>
-          </div>
-          <div className="text-center">
-            <div className={`text-2xl font-bold ${colors.text}`}>
-              {courses.reduce((acc, course) => acc + (course.xpReward || 10), 0)}
-            </div>
-            <div className="text-sm text-gray-600">XP total</div>
+        <div className="flex-1">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
+          <p className="text-gray-600 mb-3">{description}</p>
+          <div className="flex items-center space-x-6 text-sm text-gray-500">
+            <span>{courses.length} formations</span>
+            <span>{totalHours}h de contenu</span>
+            <span>{totalModules} modules</span>
+            <span>{completedCourses} terminées</span>
           </div>
         </div>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course) => (
-          <CourseCard 
-            key={course.id} 
-            course={course} 
-            userProgress={userProgress}
-          />
+          <CourseCard key={course.id} course={course} userProgress={userProgress} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 
 export default function Formations() {
-  const [match, params] = useRoute('/formations/:category');
-  const { isAuthenticated } = useAuth();
   const { currentLanguage } = useLanguage();
   
-  const selectedCategory = params?.category;
-
-  const { data: courses, isLoading: coursesLoading } = useQuery({
-    queryKey: ['/api/courses', selectedCategory],
-    queryFn: async () => {
-      const url = selectedCategory 
-        ? `/api/courses?category=${selectedCategory}`
-        : '/api/courses';
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('Failed to fetch courses');
-      return response.json();
-    },
+  const { data: courses = [], isLoading: coursesLoading } = useQuery({
+    queryKey: ['/api/courses'],
   });
 
-  const { data: userProgress } = useQuery({
+  const { data: userProgress = [] } = useQuery({
     queryKey: ['/api/user/progress'],
-    enabled: isAuthenticated,
   });
 
-  // Group courses by category
-  const coursesByCategory = courses?.reduce((acc: Record<string, any[]>, course: any) => {
+  if (coursesLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+        <Header />
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <Card key={i} className="overflow-hidden">
+                <div className="h-2 bg-gray-200" />
+                <CardHeader>
+                  <Skeleton className="h-12 w-12 rounded-xl" />
+                  <Skeleton className="h-6 w-3/4" />
+                </CardHeader>
+                <CardContent>
+                  <Skeleton className="h-4 w-full mb-2" />
+                  <Skeleton className="h-4 w-2/3" />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Grouper les cours par catégorie
+  const coursesByCategory = courses.reduce((acc: any, course: any) => {
     if (!acc[course.category]) {
       acc[course.category] = [];
     }
     acc[course.category].push(course);
     return acc;
-  }, {}) || {};
+  }, {});
 
-  const categories = ['programmation', 'dietetique', 'ia-domains', 'certifications'];
-
-  if (coursesLoading) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-8">
-              <Skeleton className="h-8 w-64 mb-4" />
-              <Skeleton className="h-4 w-96" />
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, i) => (
-                <Skeleton key={i} className="h-80 rounded-xl" />
-              ))}
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
+  const categories = Object.keys(coursesByCategory);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       <Header />
-      <main className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <Breadcrumb className="mb-8">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/">Accueil</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/formations">Formations</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              {selectedCategory && (
-                <>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>
-                      {categoryTitles[selectedCategory as keyof typeof categoryTitles]}
-                    </BreadcrumbPage>
-                  </BreadcrumbItem>
-                </>
-              )}
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              {selectedCategory 
-                ? categoryTitles[selectedCategory as keyof typeof categoryTitles]
-                : 'Nos Formations'
-              }
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {selectedCategory 
-                ? categoryDescriptions[selectedCategory as keyof typeof categoryDescriptions]
-                : 'Développez vos compétences avec nos formations certifiantes en IA responsable, programmation éthique et technologies durables.'
-              }
-            </p>
-          </div>
-
-          {/* Category Navigation */}
-          {!selectedCategory && (
-            <div className="flex justify-center mb-12">
-              <div className="bg-gray-100 rounded-xl p-2 flex space-x-2 overflow-x-auto">
-                {categories.map((category) => {
-                  const Icon = categoryIcons[category as keyof typeof categoryIcons];
-                  const title = categoryTitles[category as keyof typeof categoryTitles];
-                  const colors = categoryColors[category as keyof typeof categoryColors];
-                  const coursesCount = coursesByCategory[category]?.length || 0;
-                  
-                  return (
-                    <Link key={category} href={`/formations/${category}`}>
-                      <Button
-                        variant="ghost"
-                        className="flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap hover:bg-white transition-colors"
-                      >
-                        <Icon className={`h-4 w-4 ${colors.text}`} />
-                        <span>{title}</span>
-                        <Badge variant="secondary" className="text-xs">
-                          {coursesCount}
-                        </Badge>
-                      </Button>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Courses Content */}
-          {selectedCategory ? (
-            // Single category view
-            coursesByCategory[selectedCategory] ? (
-              <CategorySection 
-                category={selectedCategory}
-                courses={coursesByCategory[selectedCategory]}
-                userProgress={userProgress}
-              />
-            ) : (
-              <div className="text-center py-12">
-                <BookOpen className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Aucun cours disponible
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Les cours de cette catégorie seront bientôt disponibles.
-                </p>
-                <Link href="/formations">
-                  <Button>
-                    Voir toutes les formations
-                  </Button>
-                </Link>
-              </div>
-            )
-          ) : (
-            // All categories view
-            <div>
-              {categories.map((category) => {
-                const coursesInCategory = coursesByCategory[category];
-                if (!coursesInCategory || coursesInCategory.length === 0) return null;
-                
-                return (
-                  <CategorySection 
-                    key={category}
-                    category={category}
-                    courses={coursesInCategory}
-                    userProgress={userProgress}
-                  />
-                );
-              })}
-              
-              {Object.keys(coursesByCategory).length === 0 && (
-                <div className="text-center py-20">
-                  <BookOpen className="h-20 w-20 text-gray-300 mx-auto mb-6" />
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                    Aucune formation disponible
-                  </h3>
-                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                    Nos formations seront bientôt disponibles. Inscrivez-vous pour être notifié du lancement.
-                  </p>
-                  {!isAuthenticated && (
-                    <a href="/api/login">
-                      <Button size="lg">
-                        S'inscrire aux notifications
-                      </Button>
-                    </a>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Call to Action */}
-          {!isAuthenticated && courses && courses.length > 0 && (
-            <div className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-2xl p-8 text-center text-white">
-              <h3 className="text-2xl font-bold mb-4">
-                Prêt à commencer votre apprentissage ?
-              </h3>
-              <p className="text-primary-100 mb-6">
-                Connectez-vous pour suivre vos progrès et débloquer des fonctionnalités exclusives.
-              </p>
-              <a href="/api/login">
-                <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-50">
-                  Commencer gratuitement
-                </Button>
-              </a>
-            </div>
-          )}
-        </div>
-      </main>
-      <Footer />
       <VoiceAssistant />
+      
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumb className="mb-8">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/">Accueil</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Formations</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Catalogue de Formations CED Academy
+          </h1>
+          <p className="text-xl text-gray-600 mb-6">
+            Formations éthiques et responsables pour un avenir durable
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary-600">{courses.length}</div>
+              <div className="text-sm text-gray-500">Formations</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">78</div>
+              <div className="text-sm text-gray-500">Langues</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">95%</div>
+              <div className="text-sm text-gray-500">Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">24/7</div>
+              <div className="text-sm text-gray-500">Support</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Affichage par catégorie */}
+        {categories.map((category) => (
+          <CategorySection
+            key={category}
+            category={category}
+            courses={coursesByCategory[category]}
+            userProgress={userProgress}
+          />
+        ))}
+      </div>
+      
+      <Footer />
     </div>
   );
 }
