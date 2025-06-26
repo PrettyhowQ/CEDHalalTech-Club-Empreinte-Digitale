@@ -135,6 +135,7 @@ import ExportModulesPage from "@/pages/export-modules-page";
 import LanguageLearningPage from "@/pages/language-learning-page";
 import FamilyBankingPage from "@/pages/family-banking";
 import ArabicInterface from "@/pages/ArabicInterface";
+import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -538,6 +539,9 @@ function Router() {
       <Route path="/interface-arabe" component={ArabicInterface} />
       <Route path="/arabic-interface" component={ArabicInterface} />
       <Route path="/institut-ced" component={ArabicInterface} />
+      <Route path="/traducteur-multilingue" component={ArabicMultilingualTranslator} />
+      <Route path="/multilingual-translator" component={ArabicMultilingualTranslator} />
+      <Route path="/traducteur-arabe" component={ArabicMultilingualTranslator} />
       <Route path="/professeur-arabe-ia" component={ArabicAITeacherPage} />
       <Route path="/arabic-ai-teacher" component={ArabicAITeacherPage} />
       <Route path="/ia-arabe" component={ArabicAITeacherPage} />
