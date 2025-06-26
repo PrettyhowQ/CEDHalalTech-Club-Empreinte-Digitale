@@ -125,6 +125,7 @@ import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
 import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
 import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
+import ExportModulesPage from "@/pages/export-modules-page";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -474,6 +475,13 @@ function Router() {
       <Route path="/dubai-formations" component={FiqhExpansionPage} />
       <Route path="/arabie-saoudite-formations" component={FiqhExpansionPage} />
       <Route path="/expansion-golfe" component={FiqhExpansionPage} />
+      
+      {/* Export Modules Dubaï & Arabie Saoudite */}
+      <Route path="/export-modules" component={ExportModulesPage} />
+      <Route path="/modules-export" component={ExportModulesPage} />
+      <Route path="/dubai-export" component={ExportModulesPage} />
+      <Route path="/saudi-export" component={ExportModulesPage} />
+      <Route path="/golfe-export" component={ExportModulesPage} />
       
       {/* Comparaison écoles en ligne */}
       <Route path="/education-comparison" component={EducationComparisonPage} />
