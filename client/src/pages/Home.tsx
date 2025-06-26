@@ -9,6 +9,7 @@ import { AIGeneratorWidget } from '@/components/ui/AIGeneratorWidget';
 import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
 import { QuickNavigation } from '@/components/QuickNavigation';
+import { PermanentNavigation } from '@/components/PermanentNavigation';
 import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
 import { InstantAccess } from '@/components/ui/InstantAccess';
 import { SmartPreloader } from '@/components/ui/SmartPreloader';
@@ -56,6 +57,7 @@ export default function Home() {
       <SportWidget variant="compact" />
       <InstantAccess />
       <IntuitiveBreadcrumb />
+      <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
         {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
