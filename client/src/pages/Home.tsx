@@ -10,6 +10,9 @@ import { NutritionWidget } from '@/components/ui/NutritionWidget';
 import { SportWidget } from '@/components/ui/SportWidget';
 import { QuickNavigation } from '@/components/QuickNavigation';
 import { PermanentNavigation } from '@/components/PermanentNavigation';
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { GraduationCap } from 'lucide-react';
 import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
 import { InstantAccess } from '@/components/ui/InstantAccess';
 import { SmartPreloader } from '@/components/ui/SmartPreloader';
@@ -60,6 +63,22 @@ export default function Home() {
       <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
+        {/* ACCÈS DIRECT FORMATIONS */}
+        <section className="py-8 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+              <h2 className="text-3xl font-bold mb-4">🎓 Accès Direct aux Formations</h2>
+              <p className="text-xl mb-6">Programmation, IA, Formations Islamiques et plus encore</p>
+              <Link href="/formations">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-8 py-4">
+                  <GraduationCap className="mr-3 h-6 w-6" />
+                  Voir Toutes les Formations
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* PRIORITÉ 1 - FONDAMENTAUX ET INTRODUCTION */}
         <HeroSection />
         
