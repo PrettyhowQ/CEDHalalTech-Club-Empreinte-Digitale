@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* SECTION SANTÉ SOUHEILA YAKOUBI-OZEL */}
+            {/* SECTION SANTÉ & JURIDIQUE */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl p-6 text-white text-center shadow-2xl">
                 <h2 className="text-xl font-bold mb-3">🏥 Espace Santé CED</h2>
@@ -126,6 +126,84 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
+            </div>
+
+            {/* SECTION TECHFORALL & ASSURANCE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🌍 TechForAll</h2>
+                <p className="text-sm mb-2">Brahim - Gestion Opérationnelle</p>
+                <p className="text-sm mb-4">Donations Tech, Construction Écologique</p>
+                <Link href="/techforall">
+                  <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    TechForAll
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🛡️ Al-Aman CED Takaful</h2>
+                <p className="text-sm mb-2">Assurance Islamique</p>
+                <p className="text-sm mb-4">Conformité AAOIFI/IFSB</p>
+                <Link href="/al-aman-ced-prototype">
+                  <Button size="sm" className="bg-white text-violet-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Takaful
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* SECTION LOGISTIQUE ÉQUIPE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🚚 Logistique Europe</h2>
+                <p className="text-sm mb-2">Yakoubi Karim - Paris</p>
+                <p className="text-sm mb-4">Distribution & Partenariats EU</p>
+                <Link href="/logistique-europe">
+                  <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Europe
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🏔️ Logistique Suisse</h2>
+                <p className="text-sm mb-2">Yakoubi Aziz - Berne</p>
+                <p className="text-sm mb-4">Opérations CH & Coordination</p>
+                <Link href="/logistique-suisse">
+                  <Button size="sm" className="bg-white text-red-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Suisse
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* SECTION INNOVATIONS FUTURISTES */}
+            <div className="bg-gradient-to-r from-gray-800 to-black rounded-2xl p-8 text-white text-center shadow-2xl mb-8">
+              <h2 className="text-2xl font-bold mb-4">🚀 Innovations Futuristes CED</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white/10 rounded-lg p-4">
+                  <h3 className="font-bold mb-2">⚛️ Quantum Halal Trading</h3>
+                  <p className="text-sm">Trading quantique conforme Sharia</p>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <h3 className="font-bold mb-2">🧠 Neural Islamic Banking</h3>
+                  <p className="text-sm">IA spirituelle conseil financier</p>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <h3 className="font-bold mb-2">🌌 Metaverse Hajj</h3>
+                  <p className="text-sm">Pèlerinage virtuel immersif</p>
+                </div>
+              </div>
+              <Link href="/innovation-roadmap">
+                <Button size="lg" className="mt-4 bg-white text-black hover:bg-gray-100">
+                  Découvrir le Futur
+                </Button>
+              </Link>
             </div>
 
             {/* SECTION SPIRITUELLE - ACCÈS IMMÉDIAT AUX RÉCITATIONS ET CITADELLE */}

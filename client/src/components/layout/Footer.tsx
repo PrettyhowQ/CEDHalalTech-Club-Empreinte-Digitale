@@ -101,12 +101,37 @@ export function Footer() {
           </div>
         </div>
         
+        {/* Protection Intellectuelle OBLIGATOIRE */}
+        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-lg p-6 mb-6">
+          <div className="text-center">
+            <h4 className="text-white font-bold text-xl mb-3">🛡️ PROTECTION INTELLECTUELLE MAXIMALE</h4>
+            <p className="text-white font-bold text-lg mb-2">
+              © 2025 YAKOUBI YAMINA - TOUS DROITS RÉSERVÉS
+            </p>
+            <p className="text-orange-100 font-semibold mb-2">
+              Club Empreinte Digitale & PrettyhowQ - Code propriétaire exclusif
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-orange-100">
+              <div>
+                ✓ Traçabilité numérique activée sur tous composants<br/>
+                ✓ Aucune reproduction autorisée<br/>
+                ✓ Usage exclusif réservé à l'écosystème CED
+              </div>
+              <div>
+                ✓ Conformité RGPD/LPD Suisse<br/>
+                ✓ Hébergement sécurisé Suisse<br/>
+                ✓ Succession: Souheila & Hanaé-Denise Ozel
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Legal and Language Info */}
         <div className="border-t border-gray-800 pt-8">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="mb-4 lg:mb-0">
               <p className="text-gray-400 text-sm mb-2">
-                © 2025 Yakoubi Yamina - Club Empreinte Digitale & PrettyhowQ. Tous droits réservés.
+                Dirigeante unique: Yakoubi Yamina | Écosystème multigénérationnel protégé
               </p>
               <p className="text-gray-500 text-xs">
                 Hébergé à Genève, Suisse 🇨🇭 | Conforme RGPD & LPD Suisse
