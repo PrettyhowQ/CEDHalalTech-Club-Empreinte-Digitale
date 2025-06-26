@@ -103,6 +103,7 @@ import QuranListeningPage from "@/pages/QuranListeningPage";
 import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
 import SystemDiagnosticsPage from "@/pages/SystemDiagnosticsPage";
 import PremiumArabicSchoolPage from "@/pages/PremiumArabicSchoolPage";
+import TraducteurPage from "@/pages/traducteur-page";
 import IslamicBankingComparisonPage from "@/pages/IslamicBankingComparisonPage";
 import VoiceBankingArabicPage from "@/pages/VoiceBankingArabicPage";
 import ZakatCalculatorPage from "@/pages/ZakatCalculatorPage";
@@ -520,7 +521,7 @@ function Router() {
       <Route path="/saudi-export" component={ExportModulesPage} />
       <Route path="/golfe-export" component={ExportModulesPage} />
       
-      {/* École de Langues */}
+      {/* École de Langues et Traducteur */}
       <Route path="/language-learning" component={LanguageLearningPage} />
       <Route path="/ecole-langues" component={LanguageLearningPage} />
       <Route path="/langues" component={LanguageLearningPage} />
@@ -528,6 +529,9 @@ function Router() {
       <Route path="/anglais-international" component={LanguageLearningPage} />
       <Route path="/italien-culture" component={LanguageLearningPage} />
       <Route path="/echange-linguistique" component={LanguageLearningPage} />
+      <Route path="/traducteur" component={TraducteurPage} />
+      <Route path="/translator" component={TraducteurPage} />
+      <Route path="/app-traduction" component={TraducteurPage} />
       
       {/* Comparaison écoles en ligne */}
       <Route path="/education-comparison" component={EducationComparisonPage} />

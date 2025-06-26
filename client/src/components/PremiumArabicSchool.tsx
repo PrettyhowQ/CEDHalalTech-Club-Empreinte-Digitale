@@ -186,7 +186,11 @@ export function PremiumArabicSchool() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Crown className="h-12 w-12 text-yellow-400" />
-              <h1 className="text-5xl font-bold">École Arabe CED Academy</h1>
+              <div className="text-center">
+                <h1 className="text-5xl font-bold">Institut Club Empreinte Digitale</h1>
+                <p className="text-2xl text-emerald-200 mt-2" dir="rtl">معهد النادي الرقمي</p>
+                <p className="text-lg text-emerald-300 mt-1">CED Academy • Illuminez-vous par l'arabe</p>
+              </div>
             </div>
             <p className="text-xl text-emerald-100 mb-4 max-w-3xl mx-auto">
               Apprenez l'arabe et la récitation du Coran avec les plus grands récitateurs du monde. 
