@@ -540,6 +540,9 @@ function Router() {
       <Route path="/interface-arabe" component={ArabicInterface} />
       <Route path="/arabic-interface" component={ArabicInterface} />
       <Route path="/institut-ced" component={ArabicInterface} />
+      <Route path="/fiqh-informatique" component={FiqhInformatique} />
+      <Route path="/fiqh-guide" component={FiqhInformatique} />
+      <Route path="/islamic-tech-rules" component={FiqhInformatique} />
       <Route path="/traducteur-multilingue" component={ArabicMultilingualTranslator} />
       <Route path="/multilingual-translator" component={ArabicMultilingualTranslator} />
       <Route path="/traducteur-arabe" component={ArabicMultilingualTranslator} />

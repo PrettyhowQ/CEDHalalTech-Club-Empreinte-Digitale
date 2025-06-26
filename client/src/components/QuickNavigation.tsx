@@ -50,6 +50,14 @@ export function QuickNavigation() {
       badge: 'Impact'
     },
     {
+      title: 'Fiqh Informatique',
+      icon: Shield,
+      description: '27,446+ règles tech halal',
+      href: '/fiqh-informatique',
+      color: 'bg-teal-600',
+      badge: 'Expansion Golfe'
+    },
+    {
       title: 'Al-Aman Takaful',
       icon: Shield,
       description: 'Assurance islamique',
