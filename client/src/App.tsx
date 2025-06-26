@@ -134,6 +134,7 @@ import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import ExportModulesPage from "@/pages/export-modules-page";
 import LanguageLearningPage from "@/pages/language-learning-page";
 import FamilyBankingPage from "@/pages/family-banking";
+import ArabicInterface from "@/pages/ArabicInterface";
 import NotFound from "@/pages/not-found";
 
 function Router() {
