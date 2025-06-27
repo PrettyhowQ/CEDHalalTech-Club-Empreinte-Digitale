@@ -16,6 +16,7 @@ import {
   Star,
   Book,
   Scale,
+  Building,
   Building2,
   Globe,
   Brain,
@@ -25,7 +26,8 @@ import {
   Heart,
   Lightbulb,
   Search,
-  Filter
+  Filter,
+  TrendingUp
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
