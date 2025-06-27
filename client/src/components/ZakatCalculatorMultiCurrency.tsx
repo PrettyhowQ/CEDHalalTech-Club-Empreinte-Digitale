@@ -15,7 +15,6 @@ import {
   AlertTriangle,
   Globe,
   Banknote,
-
   Building,
   Home,
   Car,
@@ -27,6 +26,7 @@ import {
   History,
   RefreshCw
 } from "lucide-react";
+import sheepImage from "@assets/IMG_6563_1751023148590.png";
 import { useToast } from "@/hooks/use-toast";
 
 interface ZakatAsset {
@@ -371,7 +371,7 @@ export function ZakatCalculatorMultiCurrency() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <PiggyBank className="h-5 w-5" />
+                    <img src={sheepImage} alt="Épargne Halal" className="h-5 w-5 rounded-full object-cover" />
                     إضافة أصل جديد
                   </CardTitle>
                 </CardHeader>
@@ -566,7 +566,7 @@ export function ZakatCalculatorMultiCurrency() {
 
               {assets.length === 0 && (
                 <div className="lg:col-span-2 text-center py-12">
-                  <PiggyBank className="h-16 w-16 text-gray-300 mx-auto mb-4" />
+                  <img src={sheepImage} alt="Épargne Halal" className="h-16 w-16 mx-auto mb-4 opacity-50 grayscale" />
                   <h3 className="text-lg font-semibold text-gray-600 mb-2">لا توجد أصول مسجلة</h3>
                   <p className="text-gray-500">أضف أصولك لحساب الزكاة الواجبة عليها</p>
                 </div>

@@ -26,7 +26,7 @@ import {
   Gift,
   Leaf,
   Award,
-  PiggyBank
+
 } from 'lucide-react';
 
 interface DonationStream {

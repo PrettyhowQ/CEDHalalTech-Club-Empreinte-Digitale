@@ -173,7 +173,7 @@ export default function BanqueDigitale() {
   const getAccountTypeIcon = (type: string) => {
     switch (type) {
       case 'checking': return <Wallet className="h-5 w-5" />;
-      case 'savings': return <PiggyBank className="h-5 w-5" />;
+      case 'savings': return <Target className="h-5 w-5" />;
       case 'investment': return <TrendingUp className="h-5 w-5" />;
       default: return <Wallet className="h-5 w-5" />;
     }

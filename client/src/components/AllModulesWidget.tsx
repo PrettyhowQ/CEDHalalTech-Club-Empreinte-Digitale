@@ -40,7 +40,7 @@ export function AllModulesWidget() {
     // PÔLE 1: PILOTAGE & VISION
     { title: 'Dashboard Central CED', icon: TrendingUp, href: '/dashboard', category: 'pilotage', badge: 'Central' },
     { title: 'Analyse Stratégique', icon: Target, href: '/analyse-strategique', category: 'pilotage', badge: 'Stratégie' },
-    { title: 'Prévisionnel Financier', icon: PiggyBank, href: '/previsionnel', category: 'pilotage', badge: 'Finance' },
+    { title: 'Prévisionnel Financier', icon: Target, href: '/previsionnel', category: 'pilotage', badge: 'Finance' },
     { title: 'Analytics Avancées', icon: TrendingUp, href: '/analytics-avancees', category: 'pilotage', badge: 'IA' },
     { title: 'Vue Ensemble', icon: Globe, href: '/vue-ensemble', category: 'pilotage', badge: 'Global' },
 
