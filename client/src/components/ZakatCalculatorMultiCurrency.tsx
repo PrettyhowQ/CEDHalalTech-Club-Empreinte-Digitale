@@ -15,7 +15,7 @@ import {
   AlertTriangle,
   Globe,
   Banknote,
-  PiggyBank,
+
   Building,
   Home,
   Car,
