@@ -18,6 +18,7 @@ import {
   TrendingUp,
   Users,
   Zap,
+  Utensils,
   Settings,
   Star,
   Award,
@@ -55,6 +56,7 @@ export function AllModulesWidget() {
     // PÔLE 3: FINANCE & SÉCURITÉ
     { title: 'CED Bank', icon: CreditCard, href: '/ced-bank', category: 'finance', badge: '0% Intérêt' },
     { title: 'Banking Mobile', icon: Smartphone, href: '/mobile-banking', category: 'finance', badge: 'App' },
+    { title: 'Canal AED Alimentation', icon: Utensils, href: '/aed-channel', category: 'finance', badge: 'Halal Food' },
     { title: 'Al-Aman Takaful', icon: Shield, href: '/al-aman-takaful', category: 'finance', badge: 'Assurance' },
     { title: 'Calculateur Zakat', icon: Calculator, href: '/zakat-calculator', category: 'finance', badge: 'Multi-devises' },
     { title: 'Convertisseur Devises', icon: Calculator, href: '/convertisseur', category: 'finance', badge: 'Instantané' },

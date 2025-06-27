@@ -114,6 +114,7 @@ import ShariaAdvisorPage from "@/pages/ShariaAdvisorPage";
 import BlockchainTradePage from "@/pages/BlockchainTradePage";
 import CryptoShariaPage from "@/pages/CryptoShariaPage";
 import IslamicDeFiPage from "@/pages/IslamicDeFiPage";
+import AEDChannelPage from "@/pages/AEDChannelPage";
 import TestDashboardPage from "@/pages/TestDashboardPage";
 import ShariaComplianceAnalysisPage from "@/pages/ShariaComplianceAnalysisPage";
 import ShariaGovernancePage from "@/pages/ShariaGovernancePage";
@@ -461,6 +462,11 @@ function Router() {
       <Route path="/conformite-crypto" component={CryptoShariaPage} />
       <Route path="/islamic-defi" component={IslamicDeFiPage} />
       <Route path="/defi-islamique" component={IslamicDeFiPage} />
+      
+      {/* Canal AED Alimentation */}
+      <Route path="/aed-channel" component={AEDChannelPage} />
+      <Route path="/canal-aed" component={AEDChannelPage} />
+      <Route path="/aed-alimentation" component={AEDChannelPage} />
       
       {/* Dashboard de test */}
       <Route path="/test-dashboard" component={TestDashboardPage} />
