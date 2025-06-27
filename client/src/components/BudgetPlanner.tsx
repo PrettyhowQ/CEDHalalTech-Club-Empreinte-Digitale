@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  PiggyBank,
   Target,
   TrendingUp,
   AlertTriangle,
@@ -26,6 +25,7 @@ import {
   GraduationCap,
   Plane
 } from 'lucide-react';
+import sheepImage from "@assets/IMG_6563_1751023148590.png";
 
 interface BudgetCategory {
   id: string;
@@ -112,7 +112,7 @@ export function BudgetPlanner() {
         name: 'Épargne Halal',
         allocated: 3000,
         spent: 2800,
-        icon: PiggyBank,
+        icon: Target,
         color: 'bg-indigo-500',
         isHalal: true,
         priority: 'high'
@@ -211,7 +211,7 @@ export function BudgetPlanner() {
       >
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center">
-            <PiggyBank className="h-6 w-6 text-white" />
+            <img src={sheepImage} alt="Épargne Halal" className="h-6 w-6 rounded-full object-cover" />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-gray-900">Planificateur Budget Islamic</h2>

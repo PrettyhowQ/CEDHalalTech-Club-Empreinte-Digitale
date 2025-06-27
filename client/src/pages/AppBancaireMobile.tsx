@@ -26,7 +26,7 @@ import {
   Users,
   TrendingUp,
   Wallet,
-  PiggyBank,
+
   Target,
   Zap
 } from 'lucide-react';

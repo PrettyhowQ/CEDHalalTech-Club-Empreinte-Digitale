@@ -11,7 +11,7 @@ import {
   Wallet,
   TrendingUp,
   Shield,
-  PiggyBank,
+
   Send,
   Receipt,
   Target,

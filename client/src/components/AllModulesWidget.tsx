@@ -24,7 +24,7 @@ import {
   Award,
   Target,
   Clock,
-  PiggyBank,
+
   Briefcase,
   Code,
   Database,

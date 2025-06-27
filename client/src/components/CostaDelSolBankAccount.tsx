@@ -26,7 +26,7 @@ import {
   Gift,
   Truck,
   Award,
-  PiggyBank,
+
   MapPin,
   Phone,
   User,
