@@ -28,7 +28,8 @@ import {
   Briefcase,
   Code,
   Database,
-  ChevronRight
+  ChevronRight,
+  FileText
 } from 'lucide-react';
 import { Link } from 'wouter';
 
