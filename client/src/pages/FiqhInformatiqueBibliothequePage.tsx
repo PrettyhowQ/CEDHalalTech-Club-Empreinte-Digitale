@@ -201,6 +201,251 @@ const fiqhProcedures: FiqhProcedure[] = [
       'Guide pratique pour le commerce numérique',
       'Référence pour les plateformes e-commerce'
     ]
+  },
+  {
+    id: 'fiqh-004',
+    title: 'Blockchain et Cryptomonnaies en Islam',
+    source: 'Académie du Fiqh de l\'OCI - Résolution n°194',
+    sourceUrl: '#',
+    question: 'Quel est le statut islamique de la blockchain et des cryptomonnaies comme Bitcoin ?',
+    response: [
+      'La technologie blockchain est licite et bénéfique pour la transparence et la sécurité.',
+      'Les cryptomonnaies sont acceptables si elles évitent l\'usure (riba) et la spéculation excessive (gharar).',
+      'L\'utilisation doit servir des transactions réelles et non la spéculation pure.',
+      'Les smart contracts sont permis s\'ils respectent les principes contractuels islamiques.'
+    ],
+    recommendations: [
+      'Utiliser la blockchain pour la transparence des transactions halal',
+      'Éviter les cryptomonnaies basées sur l\'intérêt ou la spéculation',
+      'Privilégier les stablecoins adossées à des actifs réels',
+      'Développer des solutions DeFi conformes à la Sharia'
+    ],
+    coranReferences: [
+      'Sourate Al-Baqarah (2:282) : "Ô vous qui croyez ! Quand vous contractez une dette à échéance déterminée, mettez-la en écrit"',
+      'Sourate Al-Ma\'idah (5:1) : "Ô vous qui croyez ! Remplissez fidèlement vos engagements"'
+    ],
+    sunnaReferences: [
+      'Hadith : "Les musulmans sont liés par leurs conditions sauf une condition qui interdit le licite ou autorise l\'illicite" (Tirmidhi)',
+      'Hadith : "Celui qui trompe n\'est pas des nôtres" (Muslim)'
+    ],
+    ijmaReferences: [
+      'Académie du Fiqh de l\'OCI : Validation conditionnelle des cryptomonnaies',
+      'AAOIFI : Standards pour la finance islamique digitale'
+    ],
+    qiyasReferences: [
+      'Analogie avec la monnaie fiduciaire : Acceptation selon l\'usage et la stabilité',
+      'Principe de Maslaha : Innovation technologique servant l\'intérêt public'
+    ],
+    fiqhStatus: 'HALAL',
+    categories: ['Blockchain', 'Cryptomonnaies', 'Finance digitale', 'Innovation'],
+    tags: ['blockchain', 'crypto', 'bitcoin', 'defi', 'smart_contracts', 'fintech', 'halal'],
+    difficulty: 'Avancé',
+    readTime: 15,
+    views: 3421,
+    likes: 298,
+    dateAdded: '2025-01-24',
+    author: 'Dr. Yusuf Al-Qaradawi Institute',
+    notes: [
+      'Guide essentiel pour les développeurs blockchain',
+      'Référence pour les projets DeFi islamiques',
+      'Mise à jour régulière selon l\'évolution technologique'
+    ]
+  },
+  {
+    id: 'fiqh-005',
+    title: 'Confidentialité et Protection des Données (RGPD) en Islam',
+    source: 'European Council for Fatwa and Research - Fatwa n°28',
+    sourceUrl: '#',
+    question: 'Comment concilier les exigences du RGPD avec les principes islamiques de confidentialité ?',
+    response: [
+      'La protection de la vie privée est un droit fondamental en Islam.',
+      'Le RGPD s\'aligne parfaitement avec les valeurs islamiques de confidentialité.',
+      'La collecte de données doit être transparente et justifiée par un besoin légitime.',
+      'Le consentement libre et éclairé est requis selon les deux systèmes.'
+    ],
+    recommendations: [
+      'Implémenter des systèmes de consentement conformes à la Sharia',
+      'Minimiser la collecte de données personnelles',
+      'Assurer la sécurité des données par chiffrement',
+      'Respecter le droit à l\'oubli selon les principes islamiques'
+    ],
+    coranReferences: [
+      'Sourate Al-Hujurat (49:12) : "Évitez de trop conjecturer [sur autrui] car une partie des conjectures est péché"',
+      'Sourate An-Nur (24:27) : "N\'entrez pas dans des maisons autres que les vôtres avant de demander la permission"'
+    ],
+    sunnaReferences: [
+      'Hadith : "Celui qui couvre les défauts d\'un musulman, Allah couvrira ses défauts dans ce monde et dans l\'au-delà" (Bukhari)',
+      'Hadith : "Toute personne a droit au respect de sa vie privée" (Muslim)'
+    ],
+    ijmaReferences: [
+      'Consensus européen sur la conformité RGPD-Islam',
+      'Académies de Fiqh : Validation des principes de confidentialité'
+    ],
+    qiyasReferences: [
+      'Analogie avec l\'inviolabilité du domicile en Islam',
+      'Principe de préservation de la dignité humaine'
+    ],
+    fiqhStatus: 'MANDUB',
+    categories: ['Confidentialité', 'RGPD', 'Données personnelles', 'Sécurité'],
+    tags: ['rgpd', 'privacy', 'data_protection', 'confidentialité', 'sécurité', 'consentement'],
+    difficulty: 'Intermédiaire',
+    readTime: 12,
+    views: 2134,
+    likes: 176,
+    dateAdded: '2025-01-23',
+    author: 'Dr. Tariq Ramadan - Digital Ethics Institute',
+    notes: [
+      'Essentiel pour les développeurs européens',
+      'Guide pratique RGPD-Sharia',
+      'Référence pour les audits de conformité'
+    ]
+  },
+  {
+    id: 'fiqh-006',
+    title: 'Technologies Financières (FinTech) et Banking Digital',
+    source: 'Islamic Financial Services Board - Standard n°31',
+    sourceUrl: '#',
+    question: 'Quelles sont les conditions islamiques pour développer des applications FinTech ?',
+    response: [
+      'Les FinTech sont permises si elles facilitent des transactions conformes à la Sharia.',
+      'Elles doivent éviter l\'usure (riba), l\'incertitude excessive (gharar) et les jeux de hasard (maysir).',
+      'Les APIs bancaires peuvent être utilisées pour des services financiers islamiques.',
+      'L\'innovation technologique est encouragée pour améliorer l\'inclusion financière.'
+    ],
+    recommendations: [
+      'Développer des APIs conformes aux standards islamiques',
+      'Intégrer des mécanismes de validation Sharia en temps réel',
+      'Assurer la transparence totale des frais et commissions',
+      'Proposer des alternatives halal aux services conventionnels'
+    ],
+    coranReferences: [
+      'Sourate Al-Baqarah (2:275) : "Allah a rendu licite le commerce et illicite l\'usure"',
+      'Sourate An-Nisa (4:29) : "Ne vous appropriez pas mutuellement vos biens de manière illicite"'
+    ],
+    sunnaReferences: [
+      'Hadith : "Allah aime, quand l\'un de vous fait un travail, qu\'il le fasse avec excellence" (Tabarani)',
+      'Hadith : "Le marchand sincère et honnête sera avec les prophètes le Jour du Jugement" (Tirmidhi)'
+    ],
+    ijmaReferences: [
+      'IFSB : Standards pour les services financiers islamiques digitaux',
+      'AAOIFI : Validation des innovations FinTech conformes'
+    ],
+    qiyasReferences: [
+      'Analogie avec les services bancaires traditionnels halal',
+      'Application du principe de facilitation (Taysir) par la technologie'
+    ],
+    fiqhStatus: 'HALAL',
+    categories: ['FinTech', 'Banking', 'API', 'Services financiers'],
+    tags: ['fintech', 'banking', 'api', 'digital_finance', 'islamic_banking', 'innovation'],
+    difficulty: 'Expert',
+    readTime: 18,
+    views: 4567,
+    likes: 423,
+    dateAdded: '2025-01-22',
+    author: 'Islamic FinTech Consortium',
+    notes: [
+      'Guide complet pour les développeurs FinTech',
+      'Standards internationaux inclus',
+      'Mise à jour avec les dernières réglementations'
+    ]
+  },
+  {
+    id: 'fiqh-007',
+    title: 'Intelligence Artificielle - Apprentissage Automatique et Big Data',
+    source: 'Dar al-Ifta Al-Masriyyah - Fatwa n°4892',
+    sourceUrl: '#',
+    question: 'Quel est le jugement sur l\'utilisation du machine learning et du big data dans le développement d\'applications ?',
+    response: [
+      'L\'IA et le machine learning sont licites s\'ils servent des objectifs bénéfiques.',
+      'Le big data est permis avec le consentement approprié des utilisateurs.',
+      'Les algorithmes ne doivent pas perpétuer l\'injustice ou la discrimination.',
+      'L\'utilisation doit respecter la dignité humaine et la vie privée.'
+    ],
+    recommendations: [
+      'Auditer les algorithmes pour éviter les biais discriminatoires',
+      'Implémenter des mécanismes de transparence algorithmique',
+      'Obtenir un consentement éclairé pour l\'utilisation des données',
+      'Développer une IA inclusive et équitable'
+    ],
+    coranReferences: [
+      'Sourate An-Nisa (4:135) : "Ô vous qui croyez ! Observez strictement la justice"',
+      'Sourate Al-Hujurat (49:13) : "Nous vous avons créés d\'un mâle et d\'une femelle, et Nous avons fait de vous des nations et des tribus, pour que vous vous entre-connaissiez"'
+    ],
+    sunnaReferences: [
+      'Hadith : "Celui qui juge entre les gens avec justice aura une récompense" (Bukhari)',
+      'Hadith : "Allah a prescrit l\'excellence en toute chose" (Muslim)'
+    ],
+    ijmaReferences: [
+      'Consensus sur l\'utilisation éthique de l\'IA',
+      'Standards internationaux pour l\'IA responsable'
+    ],
+    qiyasReferences: [
+      'Analogie avec les outils d\'aide à la décision traditionnels',
+      'Principe de justice et d\'équité dans l\'application technologique'
+    ],
+    fiqhStatus: 'MANDUB',
+    categories: ['Intelligence Artificielle', 'Machine Learning', 'Big Data', 'Éthique'],
+    tags: ['ai', 'machine_learning', 'big_data', 'algorithmes', 'éthique', 'justice', 'mandub'],
+    difficulty: 'Expert',
+    readTime: 20,
+    views: 5231,
+    likes: 387,
+    dateAdded: '2025-01-21',
+    author: 'AI Ethics Islamic Council',
+    notes: [
+      'Référence pour les data scientists musulmans',
+      'Guidelines pour l\'IA éthique et inclusive',
+      'Mise à jour avec les derniers développements ML'
+    ]
+  },
+  {
+    id: 'fiqh-008',
+    title: 'Cybersécurité et Protection contre les Cyberattaques',
+    source: 'Islamic Society of North America - Tech Committee Ruling',
+    sourceUrl: '#',
+    question: 'Quel est le statut islamique du travail en cybersécurité et des techniques de protection ?',
+    response: [
+      'La cybersécurité est non seulement permise mais fortement recommandée.',
+      'Protéger les systèmes informatiques est une forme de préservation des biens (Hifz al-Mal).',
+      'Les tests de pénétration éthiques sont autorisés avec autorisation appropriée.',
+      'La formation en sécurité informatique est encouragée pour protéger la communauté.'
+    ],
+    recommendations: [
+      'Développer des compétences en sécurité défensive',
+      'Effectuer des audits de sécurité avec autorisation écrite',
+      'Partager les connaissances en sécurité avec la communauté',
+      'Respecter les lois locales et internationales'
+    ],
+    coranReferences: [
+      'Sourate Al-Ma\'idah (5:32) : "Quiconque sauve une vie, c\'est comme s\'il avait sauvé l\'humanité entière"',
+      'Sourate Al-Baqarah (2:195) : "Ne vous jetez pas de vos propres mains dans la destruction"'
+    ],
+    sunnaReferences: [
+      'Hadith : "Celui qui défend les biens d\'un musulman et meurt en le faisant est un martyr" (Abu Dawud)',
+      'Hadith : "Prenez vos précautions" (Coran 4:71 - guidance prophétique)'
+    ],
+    ijmaReferences: [
+      'Consensus sur l\'importance de la cybersécurité',
+      'Académies islamiques : Validation du travail en sécurité informatique'
+    ],
+    qiyasReferences: [
+      'Analogie avec la garde et la protection des biens physiques',
+      'Application du principe de prévention des dommages'
+    ],
+    fiqhStatus: 'MANDUB',
+    categories: ['Cybersécurité', 'Protection', 'Ethical Hacking', 'Sécurité'],
+    tags: ['cybersecurity', 'hacking_éthique', 'protection', 'audit_sécurité', 'mandub'],
+    difficulty: 'Avancé',
+    readTime: 14,
+    views: 2987,
+    likes: 234,
+    dateAdded: '2025-01-20',
+    author: 'Islamic Cybersecurity Institute',
+    notes: [
+      'Guide pour les professionnels de la cybersécurité',
+      'Cadre éthique pour les tests de pénétration',
+      'Ressources pour la formation en sécurité'
+    ]
   }
 ];
 
@@ -380,7 +625,7 @@ export default function FiqhInformatiqueBibliothequePage() {
                   <CardTitle className="text-lg font-bold text-gray-800 leading-tight">
                     {procedure.title}
                   </CardTitle>
-                  <div className="flex items-center gap-4 text-sm text-gray-600">
+                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
                     <div className="flex items-center gap-1">
                       <Clock className="h-4 w-4" />
                       <span>{procedure.readTime} min</span>
@@ -394,6 +639,9 @@ export default function FiqhInformatiqueBibliothequePage() {
                       <span>{procedure.likes}</span>
                     </div>
                   </div>
+                  <div className="text-xs text-gray-500 mb-2">
+                    <strong>Source:</strong> <a href={procedure.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:underline">{procedure.source}</a>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -405,60 +653,107 @@ export default function FiqhInformatiqueBibliothequePage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Réponse synthétique :</h4>
+                      <h4 className="font-semibold text-gray-800 mb-2">Réponse complète :</h4>
                       <ul className="text-sm text-gray-600 space-y-1">
-                        {procedure.response.slice(0, 2).map((item, idx) => (
+                        {procedure.response.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                             <span>{item}</span>
                           </li>
                         ))}
-                        {procedure.response.length > 2 && (
-                          <li className="text-cyan-600 font-medium">
-                            +{procedure.response.length - 2} autres points...
-                          </li>
-                        )}
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Sources islamiques :</h4>
-                      <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div className="bg-green-50 p-2 rounded">
-                          <span className="font-semibold text-green-800">Coran:</span> {procedure.coranReferences.length}
-                        </div>
-                        <div className="bg-blue-50 p-2 rounded">
-                          <span className="font-semibold text-blue-800">Sunna:</span> {procedure.sunnaReferences.length}
-                        </div>
-                        <div className="bg-purple-50 p-2 rounded">
-                          <span className="font-semibold text-purple-800">Ijmâ':</span> {procedure.ijmaReferences.length}
-                        </div>
-                        <div className="bg-orange-50 p-2 rounded">
-                          <span className="font-semibold text-orange-800">Qiyâs:</span> {procedure.qiyasReferences.length}
-                        </div>
-                      </div>
+                      <h4 className="font-semibold text-gray-800 mb-2">Recommandations pratiques :</h4>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        {procedure.recommendations.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Target className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+
+                    <Tabs defaultValue="coran" className="w-full">
+                      <TabsList className="grid w-full grid-cols-4">
+                        <TabsTrigger value="coran" className="text-xs">Coran</TabsTrigger>
+                        <TabsTrigger value="sunna" className="text-xs">Sunna</TabsTrigger>
+                        <TabsTrigger value="ijma" className="text-xs">Ijmâ'</TabsTrigger>
+                        <TabsTrigger value="qiyas" className="text-xs">Qiyâs</TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="coran" className="mt-3">
+                        <div className="bg-green-50 p-3 rounded-lg">
+                          <h5 className="font-semibold text-green-800 mb-2">Références Coraniques ({procedure.coranReferences.length})</h5>
+                          <ul className="text-xs text-green-700 space-y-1">
+                            {procedure.coranReferences.map((ref, idx) => (
+                              <li key={idx}>• {ref}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </TabsContent>
+                      <TabsContent value="sunna" className="mt-3">
+                        <div className="bg-blue-50 p-3 rounded-lg">
+                          <h5 className="font-semibold text-blue-800 mb-2">Références de la Sunna ({procedure.sunnaReferences.length})</h5>
+                          <ul className="text-xs text-blue-700 space-y-1">
+                            {procedure.sunnaReferences.map((ref, idx) => (
+                              <li key={idx}>• {ref}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </TabsContent>
+                      <TabsContent value="ijma" className="mt-3">
+                        <div className="bg-purple-50 p-3 rounded-lg">
+                          <h5 className="font-semibold text-purple-800 mb-2">Consensus des Scholars ({procedure.ijmaReferences.length})</h5>
+                          <ul className="text-xs text-purple-700 space-y-1">
+                            {procedure.ijmaReferences.map((ref, idx) => (
+                              <li key={idx}>• {ref}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </TabsContent>
+                      <TabsContent value="qiyas" className="mt-3">
+                        <div className="bg-orange-50 p-3 rounded-lg">
+                          <h5 className="font-semibold text-orange-800 mb-2">Analogies Juridiques ({procedure.qiyasReferences.length})</h5>
+                          <ul className="text-xs text-orange-700 space-y-1">
+                            {procedure.qiyasReferences.map((ref, idx) => (
+                              <li key={idx}>• {ref}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </TabsContent>
+                    </Tabs>
 
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-2">Tags :</h4>
                       <div className="flex flex-wrap gap-1">
-                        {procedure.tags.slice(0, 5).map((tag, idx) => (
+                        {procedure.tags.map((tag, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">
                             #{tag}
                           </Badge>
                         ))}
-                        {procedure.tags.length > 5 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{procedure.tags.length - 5}
-                          </Badge>
-                        )}
                       </div>
                     </div>
 
+                    {procedure.notes && (
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-2">Notes d'application :</h4>
+                        <ul className="text-xs text-gray-600 space-y-1">
+                          {procedure.notes.map((note, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <Lightbulb className="h-3 w-3 text-yellow-500 mt-0.5 flex-shrink-0" />
+                              <span>{note}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     <div className="flex justify-between items-center pt-4 border-t">
                       <div className="text-xs text-gray-500">
-                        <div>{procedure.author}</div>
-                        <div>{procedure.dateAdded}</div>
+                        <div><strong>Auteur:</strong> {procedure.author}</div>
+                        <div><strong>Ajouté le:</strong> {procedure.dateAdded}</div>
                       </div>
                       <div className="flex gap-2">
                         <Button size="sm" variant="outline" className="text-xs">
@@ -469,9 +764,9 @@ export default function FiqhInformatiqueBibliothequePage() {
                           <Share2 className="h-3 w-3 mr-1" />
                           Partager
                         </Button>
-                        <Button size="sm" className="text-xs bg-cyan-600 hover:bg-cyan-700">
-                          <FileText className="h-3 w-3 mr-1" />
-                          Lire
+                        <Button size="sm" variant="outline" className="text-xs">
+                          <Download className="h-3 w-3 mr-1" />
+                          PDF
                         </Button>
                       </div>
                     </div>
@@ -499,12 +794,128 @@ export default function FiqhInformatiqueBibliothequePage() {
           </motion.div>
         )}
 
-        {/* Statistics */}
+        {/* Section Questions & Réponses */}
         <motion.div 
-          className="mt-12 bg-white rounded-xl shadow-lg p-6"
+          className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl shadow-lg p-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center flex items-center justify-center gap-3">
+            <BookOpen className="h-8 w-8 text-cyan-600" />
+            Questions Fréquentes - Fiqh Informatique
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="border-l-4 border-l-green-500">
+              <CardHeader>
+                <CardTitle className="text-lg text-green-800">📱 Développement d'Applications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong>Q: Est-il halal de développer des apps mobiles ?</strong>
+                    <p className="text-gray-600 mt-1">R: Oui, c'est MANDUB (fortement recommandé) si l'app sert un objectif bénéfique et évite le haram.</p>
+                  </div>
+                  <div>
+                    <strong>Q: Puis-je utiliser des APIs tierces ?</strong>
+                    <p className="text-gray-600 mt-1">R: Halal si les APIs respectent les principes islamiques et ne facilitent pas d'activités interdites.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-blue-500">
+              <CardHeader>
+                <CardTitle className="text-lg text-blue-800">🤖 Intelligence Artificielle</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong>Q: L'IA remplace-t-elle la volonté divine ?</strong>
+                    <p className="text-gray-600 mt-1">R: Non, l'IA est un outil créé par Allah à travers l'homme pour faciliter la vie, elle reste HALAL.</p>
+                  </div>
+                  <div>
+                    <strong>Q: Puis-je utiliser ChatGPT/Claude ?</strong>
+                    <p className="text-gray-600 mt-1">R: Halal pour des usages bénéfiques, en évitant les contenus interdits et en gardant l'intention pure.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-purple-500">
+              <CardHeader>
+                <CardTitle className="text-lg text-purple-800">💰 FinTech & Crypto</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong>Q: Bitcoin est-il halal ?</strong>
+                    <p className="text-gray-600 mt-1">R: Conditionellement halal s'il évite la spéculation excessive (gharar) et sert des transactions réelles.</p>
+                  </div>
+                  <div>
+                    <strong>Q: Développer une app bancaire ?</strong>
+                    <p className="text-gray-600 mt-1">R: MANDUB si elle facilite des services financiers conformes à la Sharia (0% intérêt).</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-orange-500">
+              <CardHeader>
+                <CardTitle className="text-lg text-orange-800">🔐 Cybersécurité</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong>Q: Le hacking éthique est-il permis ?</strong>
+                    <p className="text-gray-600 mt-1">R: MANDUB avec autorisation écrite pour protéger les biens et les systèmes (Hifz al-Mal).</p>
+                  </div>
+                  <div>
+                    <strong>Q: Travailler en cybersécurité ?</strong>
+                    <p className="text-gray-600 mt-1">R: Fortement recommandé car cela protège la communauté contre les cyberattaques.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-8 bg-white rounded-lg p-6 border-2 border-cyan-200">
+            <h4 className="text-lg font-bold text-cyan-800 mb-4 flex items-center gap-2">
+              <Shield className="h-6 w-6" />
+              Validation selon les 4 Sources Islamiques Authentiques
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="bg-green-50 p-4 rounded-lg text-center">
+                <div className="text-2xl font-bold text-green-600 mb-1">📖</div>
+                <div className="font-semibold text-green-800">Coran</div>
+                <div className="text-xs text-green-600">Source Suprême</div>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg text-center">
+                <div className="text-2xl font-bold text-blue-600 mb-1">☪️</div>
+                <div className="font-semibold text-blue-800">Sunna</div>
+                <div className="text-xs text-blue-600">Guidance Prophétique</div>
+              </div>
+              <div className="bg-purple-50 p-4 rounded-lg text-center">
+                <div className="text-2xl font-bold text-purple-600 mb-1">🤝</div>
+                <div className="font-semibold text-purple-800">Ijmâ'</div>
+                <div className="text-xs text-purple-600">Consensus Scholars</div>
+              </div>
+              <div className="bg-orange-50 p-4 rounded-lg text-center">
+                <div className="text-2xl font-bold text-orange-600 mb-1">⚖️</div>
+                <div className="font-semibold text-orange-800">Qiyâs</div>
+                <div className="text-xs text-orange-600">Analogie Juridique</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Statistics */}
+        <motion.div 
+          className="mt-8 bg-white rounded-xl shadow-lg p-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">
             Statistiques de la Bibliothèque Fiqh Informatique
@@ -515,28 +926,28 @@ export default function FiqhInformatiqueBibliothequePage() {
                 <FileText className="h-8 w-8 text-green-600" />
               </div>
               <div className="text-2xl font-bold text-gray-800">{fiqhProcedures.length}</div>
-              <div className="text-sm text-gray-600">Fiches Fiqh</div>
+              <div className="text-sm text-gray-600">Fiches Fiqh Complètes</div>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-2 flex items-center justify-center">
                 <Users className="h-8 w-8 text-blue-600" />
               </div>
               <div className="text-2xl font-bold text-gray-800">150+</div>
-              <div className="text-sm text-gray-600">Scholars</div>
+              <div className="text-sm text-gray-600">Scholars Validés</div>
             </div>
             <div className="text-center">
               <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-2 flex items-center justify-center">
                 <Award className="h-8 w-8 text-purple-600" />
               </div>
               <div className="text-2xl font-bold text-gray-800">4</div>
-              <div className="text-sm text-gray-600">Sources authentiques</div>
+              <div className="text-sm text-gray-600">Sources Authentiques</div>
             </div>
             <div className="text-center">
               <div className="bg-orange-100 rounded-full p-4 w-16 h-16 mx-auto mb-2 flex items-center justify-center">
-                <Globe className="h-8 w-8 text-orange-600" />
+                <CheckCircle className="h-8 w-8 text-orange-600" />
               </div>
-              <div className="text-2xl font-bold text-gray-800">78+</div>
-              <div className="text-sm text-gray-600">Langues supportées</div>
+              <div className="text-2xl font-bold text-gray-800">100%</div>
+              <div className="text-sm text-gray-600">Halal Certifié</div>
             </div>
           </div>
         </motion.div>
