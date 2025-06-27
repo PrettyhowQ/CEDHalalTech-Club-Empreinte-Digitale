@@ -140,6 +140,7 @@ import ArabicInterface from "@/pages/ArabicInterface";
 import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
 import FiqhInformatique from "@/pages/FiqhInformatique";
 import FiqhInformatiqueBibliothequePage from "@/pages/FiqhInformatiqueBibliothequePage";
+import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import NotFound from "@/pages/not-found";
 
@@ -557,6 +558,11 @@ function Router() {
       <Route path="/fiches-fiqh" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/procedures-islamiques" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/islamic-procedures" component={FiqhInformatiqueBibliothequePage} />
+      <Route path="/manuel-fiqh" component={ManuelFiqhPage} />
+      <Route path="/manuel-fiqh-informatique" component={ManuelFiqhPage} />
+      <Route path="/guide-complet-fiqh" component={ManuelFiqhPage} />
+      <Route path="/fiqh-handbook" component={ManuelFiqhPage} />
+      <Route path="/islamic-tech-handbook" component={ManuelFiqhPage} />
       <Route path="/traducteur-multilingue" component={ArabicMultilingualTranslator} />
       <Route path="/multilingual-translator" component={ArabicMultilingualTranslator} />
       <Route path="/traducteur-arabe" component={ArabicMultilingualTranslator} />

@@ -54,6 +54,7 @@ export function AllModulesWidget() {
     { title: 'Traducteur Multilingue', icon: Globe, href: '/traducteur-multilingue', category: 'formations', badge: 'Langues' },
     { title: 'École de Langues', icon: Globe, href: '/language-learning', category: 'formations', badge: 'International' },
     { title: 'Bibliothèque Fiqh', icon: FileText, href: '/bibliotheque-fiqh', category: 'formations', badge: 'Fiches' },
+    { title: 'Manuel Fiqh Complet', icon: BookOpen, href: '/manuel-fiqh', category: 'formations', badge: 'Manuel' },
 
     // PÔLE 3: FINANCE & SÉCURITÉ
     { title: 'CED Bank', icon: CreditCard, href: '/ced-bank', category: 'finance', badge: '0% Intérêt' },
