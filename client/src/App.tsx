@@ -146,7 +146,9 @@ import EspaceSantePage from "@/pages/EspaceSantePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
-  const { isAuthenticated, isLoading } = useAuth();
+  // const { isAuthenticated, isLoading } = useAuth();
+  const isAuthenticated = false;
+  const isLoading = false;
 
   return (
     <Switch>
