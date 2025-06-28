@@ -20,19 +20,21 @@ import {
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 
+type CurrencyCode = 'CHF' | 'EUR' | 'USD' | 'AED';
+
 export default function ZakatCalculatorPage() {
-  const [currency, setCurrency] = useState('CHF');
+  const [currency, setCurrency] = useState<CurrencyCode>('CHF');
   const [wealth, setWealth] = useState('');
   const [zakatAmount, setZakatAmount] = useState(0);
 
   const currencies = [
-    { code: 'CHF', symbol: 'CHF', name: 'Franc Suisse', icon: Banknote },
-    { code: 'EUR', symbol: '€', name: 'Euro', icon: Euro },
-    { code: 'USD', symbol: '$', name: 'Dollar US', icon: DollarSign },
-    { code: 'AED', symbol: 'AED', name: 'Dirham UAE', icon: Coins }
+    { code: 'CHF' as const, symbol: 'CHF', name: 'Franc Suisse', icon: Banknote },
+    { code: 'EUR' as const, symbol: '€', name: 'Euro', icon: Euro },
+    { code: 'USD' as const, symbol: '$', name: 'Dollar US', icon: DollarSign },
+    { code: 'AED' as const, symbol: 'AED', name: 'Dirham UAE', icon: Coins }
   ];
 
-  const nisabValues = {
+  const nisabValues: Record<CurrencyCode, number> = {
     CHF: 4500,
     EUR: 4200,
     USD: 4800,
@@ -98,101 +100,142 @@ export default function ZakatCalculatorPage() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Widget Accès Rapide - Design identique à l'image */}
-        <div className="mb-8">
-          <Card className="max-w-md mx-auto bg-white shadow-lg rounded-2xl overflow-hidden">
-            <CardHeader className="bg-gray-50 px-6 py-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-teal-600" />
+        {/* Widget Accès Rapide - Design EXACT de l'image */}
+        <div className="mb-8 flex justify-center">
+          <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            {/* Header avec recherche */}
+            <div className="bg-gray-50 p-4 border-b border-gray-200">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="h-5 w-5 text-white" />
                 </div>
-                <div>
-                  <CardTitle className="text-lg font-semibold text-gray-800">Club Empreinte Digitale</CardTitle>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-blue-600">Accès Rapide</span>
-                    <Badge className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Live</Badge>
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-800 text-sm">Club Empreinte Digitale</h3>
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span className="text-xs font-medium text-blue-600">Accès Rapide</span>
+                    </div>
+                    <span className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full font-medium">Live</span>
                   </div>
                 </div>
               </div>
-            </CardHeader>
-            
-            <CardContent className="p-0">
+              <div className="relative">
+                <input 
+                  type="text" 
+                  placeholder="Rechercher..." 
+                  className="w-full bg-white border border-gray-300 rounded-lg pl-8 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <div className="absolute left-2.5 top-2.5 w-4 h-4 text-gray-400">🔍</div>
+              </div>
+            </div>
+
+            {/* Menu Items */}
+            <div className="divide-y divide-gray-100">
               {/* CED Bank */}
               <div className="bg-blue-600 text-white p-4 flex items-center justify-between hover:bg-blue-700 transition-colors cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <Banknote className="h-5 w-5" />
+                  <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
+                    <Banknote className="h-4 w-4" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold">CED Bank ⭐</h3>
-                    <p className="text-sm opacity-90">0% intérêt • 100% halal</p>
+                    <h4 className="font-semibold text-sm">CED Bank ⭐</h4>
+                    <p className="text-xs opacity-90">0% intérêt • 100% halal</p>
                   </div>
                 </div>
-                <div className="text-white">→</div>
+                <div className="text-lg">→</div>
               </div>
 
-              {/* Zakat Calculator - Highlighted */}
-              <div className="bg-emerald-600 text-white p-4 flex items-center justify-between hover:bg-emerald-700 transition-colors cursor-pointer border-l-4 border-yellow-400">
+              {/* Zakat Calculator - Active/Highlighted */}
+              <div className="bg-emerald-600 text-white p-4 flex items-center justify-between hover:bg-emerald-700 transition-colors cursor-pointer relative">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-yellow-400"></div>
                 <div className="flex items-center gap-3">
-                  <Calculator className="h-5 w-5" />
+                  <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
+                    <Calculator className="h-4 w-4" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold">Zakat Calculator</h3>
-                    <p className="text-sm opacity-90">Multi-devises instantané</p>
+                    <h4 className="font-semibold text-sm">Zakat Calculator</h4>
+                    <p className="text-xs opacity-90">Multi-devises instantané</p>
                   </div>
                 </div>
-                <div className="text-white">→</div>
+                <div className="text-lg">→</div>
               </div>
 
               {/* Formations Pro */}
               <div className="bg-purple-600 text-white p-4 flex items-center justify-between hover:bg-purple-700 transition-colors cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <Star className="h-5 w-5" />
+                  <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
+                    <Star className="h-4 w-4" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold">Formations Pro ⭐</h3>
-                    <p className="text-sm opacity-90">156 cours disponibles</p>
+                    <h4 className="font-semibold text-sm">Formations Pro ⭐</h4>
+                    <p className="text-xs opacity-90">156 cours disponibles</p>
                   </div>
                 </div>
-                <div className="text-white">→</div>
+                <div className="text-lg">→</div>
               </div>
 
               {/* Mode Prière */}
               <div className="bg-red-600 text-white p-4 flex items-center justify-between hover:bg-red-700 transition-colors cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <Heart className="h-5 w-5" />
+                  <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
+                    <Heart className="h-4 w-4" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold">Mode Prière</h3>
-                    <p className="text-sm opacity-90">Sync satellitaire GPS</p>
+                    <h4 className="font-semibold text-sm">Mode Prière</h4>
+                    <p className="text-xs opacity-90">Sync satellitaire GPS</p>
                   </div>
                 </div>
-                <div className="text-white">→</div>
+                <div className="text-lg">→</div>
               </div>
 
               {/* TechForAll */}
               <div className="bg-teal-600 text-white p-4 flex items-center justify-between hover:bg-teal-700 transition-colors cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <Users className="h-5 w-5" />
+                  <div className="w-6 h-6 bg-white/20 rounded flex items-center justify-center">
+                    <Users className="h-4 w-4" />
+                  </div>
                   <div>
-                    <h3 className="font-semibold">TechForAll</h3>
-                    <p className="text-sm opacity-90">Dons technologiques</p>
+                    <h4 className="font-semibold text-sm">TechForAll</h4>
+                    <p className="text-xs opacity-90">Dons technologiques</p>
                   </div>
                 </div>
-                <div className="text-white">→</div>
+                <div className="text-lg">→</div>
               </div>
+            </div>
 
-              {/* Statistiques */}
-              <div className="bg-gray-100 p-4">
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>2,847 utilisateurs actifs</span>
-                  <span>⏰ Temps réel</span>
-                </div>
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-emerald-500 h-2 rounded-full" style={{width: '75%'}}></div>
-                  </div>
-                  <span className="text-xs text-gray-500">💪 Renforcement Adaptatif</span>
+            {/* Footer Stats */}
+            <div className="bg-gray-50 p-4 border-t border-gray-200">
+              <div className="flex items-center justify-between text-xs text-gray-600 mb-2">
+                <span className="font-medium">2,847 utilisateurs actifs</span>
+                <div className="flex items-center gap-1">
+                  <div className="w-3 h-3 text-gray-500">⏰</div>
+                  <span>Temps réel</span>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+              <div className="flex items-center gap-2">
+                <span className="text-xs">💪</span>
+                <span className="text-xs text-gray-500">Renforcement Adaptatif</span>
+              </div>
+              <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5">
+                <div className="bg-emerald-500 h-1.5 rounded-full" style={{width: '75%'}}></div>
+              </div>
+            </div>
+
+            {/* Bottom Actions */}
+            <div className="bg-white p-4 flex gap-2">
+              <button className="flex-1 bg-emerald-500 text-white text-sm font-medium py-2 px-4 rounded-lg hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2">
+                <div className="w-4 h-4">📈</div>
+                Commencer
+              </button>
+              <button className="bg-gray-100 text-gray-700 text-sm font-medium py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                <div className="w-6 h-6 flex items-center justify-center">⚙️</div>
+              </button>
+              <button className="bg-orange-400 text-white text-sm font-medium py-2 px-4 rounded-lg hover:bg-orange-500 transition-colors">
+                <div className="w-6 h-6 flex items-center justify-center">🎤</div>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Calculateur Principal */}
@@ -212,7 +255,7 @@ export default function ZakatCalculatorPage() {
                   <Label className="block text-sm font-medium text-gray-700 mb-2">
                     Devise
                   </Label>
-                  <Select value={currency} onValueChange={setCurrency}>
+                  <Select value={currency} onValueChange={(value: string) => setCurrency(value as CurrencyCode)}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Sélectionner une devise" />
                     </SelectTrigger>
