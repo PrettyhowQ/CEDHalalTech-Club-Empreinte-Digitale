@@ -1456,4 +1456,25 @@ Marques: CED Bank®, Al-Aman Takaful®, TechForAll®, Super IARP Pro®
 
 ---
 
+## 📜 COPYRIGHT & PROTECTION LÉGALE
+
+**© Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有**
+
+🇪🇺 **Conforme RGPD** • 🇨🇭 **LPD Suisse** • 🔒 **Hébergement sécurisé Suisse** • 🛡️ **Données confidentielles protégées**
+
+**Projet confidentiel – Traçabilité numérique activée – Usage exclusif réservé à l'écosystème CED & PrettyhowQ**
+
+Ce projet, son contenu, son code, ses idées, ses visuels, ses textes et sa structure sont la propriété exclusive de **Yakoubi Yamina**. Toute reproduction, diffusion, extraction, adaptation, modification ou exploitation – totale ou partielle – sans autorisation écrite préalable est strictement interdite et fera l'objet de poursuites judiciaires conformément au Code de la propriété intellectuelle (France / Europe / International).
+
+Ce dépôt n'est ni open source, ni destiné à un usage public ou commercial sans accord express préalable.
+
+### 📧 Contacts Officiels
+- **swissyakoubidev.ch@ik.me**
+- **yakoubi.yamina@ik.me** 
+- **contact@empreintedigitale.club**
+
+**📌 Version complète – Écosystème en production**
+
+---
+
 *Ce README constitue la référence technique complète pour le développement, déploiement et maintenance du Club Empreinte Digitale. Toute modification de l'architecture nécessite validation préalable de Yakoubi Yamina et du Conseil Sharia CED.*
