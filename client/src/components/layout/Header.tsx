@@ -16,6 +16,8 @@ export function Header() {
 
   const navigation = [
     { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
+    { name: 'Portfolio Web 👩‍💼', href: '/portfolio-web', priority: true },
+    { name: 'Portfolio Mobile 📱', href: '/portfolio-mobile', priority: true },
     { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },
     { name: 'CED Bank 🏦', href: '/banque', priority: true },
     { name: 'Al-Aman CED Takaful 🛡️', href: '/al-aman-ced-prototype', priority: true, premium: true },
