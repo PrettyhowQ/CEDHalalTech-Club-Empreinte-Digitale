@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { PortfolioMobileRedirection } from '@/components/PortfolioMobileRedirection';
 import { GulfRespectfulInterface } from '@/components/GulfRespectfulInterface';
 import { PortfolioMobileApp } from '@/components/PortfolioMobileApp';
+import { PortfolioTestInterface } from '@/components/PortfolioTestInterface';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -110,10 +111,11 @@ export default function PortfolioMobilePage() {
       {/* Contenu adaptatif */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Tabs defaultValue="redirection" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="redirection">Redirection Apps</TabsTrigger>
             <TabsTrigger value="portfolio">Portfolio Complet</TabsTrigger>
             <TabsTrigger value="respectful">Interface Respectueuse</TabsTrigger>
+            <TabsTrigger value="test">Tests Validation</TabsTrigger>
           </TabsList>
 
           <TabsContent value="redirection" className="mt-6">
@@ -145,6 +147,10 @@ export default function PortfolioMobilePage() {
                 </Button>
               </div>
             )}
+          </TabsContent>
+
+          <TabsContent value="test" className="mt-6">
+            <PortfolioTestInterface />
           </TabsContent>
         </Tabs>
       </div>

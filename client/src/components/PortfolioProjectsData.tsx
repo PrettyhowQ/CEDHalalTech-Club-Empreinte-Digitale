@@ -526,8 +526,8 @@ export const getPortfolioStats = () => {
   const totalCountries = Math.max(...portfolioProjects.map(p => p.metrics?.countries || 0));
   const totalLanguages = Math.max(...portfolioProjects.map(p => p.metrics?.languages || 0));
   
-  const uniqueCategories = portfolioProjects.map(p => p.category);
-  const categoriesCount = Array.from(new Set(uniqueCategories)).length;
+  const uniqueCategories = Array.from(new Set(portfolioProjects.map(p => p.category)));
+  const categoriesCount = uniqueCategories.length;
   
   return {
     totalProjects,
