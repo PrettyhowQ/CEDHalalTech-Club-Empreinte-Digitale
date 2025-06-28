@@ -6,10 +6,22 @@
 [![Sharia Compliant](https://img.shields.io/badge/Sharia-100%25%20Conforme-green.svg)](#conformité-sharia)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
+[![Deploy](https://img.shields.io/badge/Déployé-Vercel-black.svg)](https://club-empreinte-digitale.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success.svg)](https://club-empreinte-digitale.vercel.app)
 
 ---
 
+## 🚀 Liens de Déploiement
+
+| Plateforme | Statut | URL | Description |
+|------------|--------|-----|-------------|
+| **🔴 Vercel** | ✅ Production | [club-empreinte-digitale.vercel.app](https://club-empreinte-digitale.vercel.app) | Application principale |
+| **🟢 Replit** | ✅ Développement | [replit.com/@YakoubiYamina/club-empreinte-digitale](https://replit.com/@YakoubiYamina/club-empreinte-digitale) | Environnement dev |
+| **🔵 GitHub Pages** | ✅ Documentation | [yakoubi-yamina.github.io/club-empreinte-digitale](https://yakoubi-yamina.github.io/club-empreinte-digitale) | Docs techniques |
+| **🟡 Netlify** | ✅ Staging | [club-empreinte-digitale.netlify.app](https://club-empreinte-digitale.netlify.app) | Tests pré-production |
+
 ## 📋 Table des Matières
+- [Liens de déploiement](#liens-de-déploiement)
 - [Vue d'ensemble](#vue-densemble)
 - [Arborescence complète](#arborescence-complète)
 - [Installation](#installation)
@@ -17,6 +29,7 @@
 - [Développement](#développement)
 - [Architecture technique](#architecture-technique)
 - [Déploiement](#déploiement)
+- [Synchronisation GitHub](#synchronisation-github)
 - [Conformité Sharia](#conformité-sharia)
 
 ---
@@ -1229,6 +1242,110 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: npm run deploy:production
+```
+
+---
+
+## 📂 Synchronisation GitHub
+
+### Pipeline de Développement
+```mermaid
+graph LR
+    A[Replit Dev] --> B[GitHub Repo]
+    B --> C[Vercel Deploy]
+    B --> D[GitHub Pages]
+    B --> E[Netlify Staging]
+    F[Local VS Code] --> B
+```
+
+### Commandes Git Essentielles
+```bash
+# Clone du dépôt principal
+git clone https://github.com/yakoubi-yamina/club-empreinte-digitale.git
+cd club-empreinte-digitale
+
+# Synchronisation quotidienne
+git add .
+git commit -m "feat: mise à jour écosystème CED - $(date '+%d/%m/%Y %H:%M')"
+git push origin main
+
+# Branches de développement
+git checkout -b feature/nouvelle-fonctionnalite
+git checkout -b hotfix/correction-urgente
+git checkout -b release/v3.1.3
+```
+
+### Fichiers Synchronisés en Temps Réel
+| Dossier | Description | Statut Sync |
+|---------|-------------|-------------|
+| `📁 client/` | Frontend React complet | ✅ Synchronisé |
+| `📁 server/` | Backend Node.js | ✅ Synchronisé |
+| `📁 shared/` | Schémas partagés | ✅ Synchronisé |
+| `📁 docs/` | Documentation | ✅ Synchronisé |
+| `📁 assets/` | Assets statiques | ✅ Synchronisé |
+| `README.md` | Documentation principale | ✅ Synchronisé |
+| `package.json` | Dépendances | ✅ Synchronisé |
+| `.env.example` | Variables d'environnement | ✅ Synchronisé |
+
+### GitHub Actions CI/CD Étendu
+```yaml
+# .github/workflows/deploy-ced.yml
+name: CED Ecosystem Deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
+      - run: npm run compliance:sharia
+      
+  deploy-vercel:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Vercel
+        uses: vercel/action@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          
+  deploy-github-pages:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
+### Protection des Branches
+```yaml
+# Configuration branch protection rules
+protection_rules:
+  main:
+    required_status_checks:
+      - "build-and-test"
+      - "sharia-compliance-check"
+    enforce_admins: true
+    required_pull_request_reviews:
+      required_approving_review_count: 1
+      dismiss_stale_reviews: true
+    restrictions:
+      users: ["yakoubi-yamina"]
 ```
 
 ---

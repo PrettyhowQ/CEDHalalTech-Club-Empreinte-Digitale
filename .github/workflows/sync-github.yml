@@ -1,0 +1,143 @@
+name: 🔄 Synchronisation GitHub CED
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Synchronisation automatique quotidienne à 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Déclenchement manuel
+
+env:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '8'
+
+jobs:
+  sync-files:
+    name: 📂 Synchronisation Fichiers
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔄 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📊 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build Project
+        run: npm run build
+
+      - name: ✅ Run Tests
+        run: npm run test
+
+      - name: ☪️ Sharia Compliance Check
+        run: npm run compliance:sharia
+
+      - name: 📝 Update Documentation
+        run: |
+          echo "Mise à jour documentation $(date '+%d/%m/%Y %H:%M:%S')" >> CHANGELOG.md
+          git config --local user.email "yakoubi.yamina@ik.me"
+          git config --local user.name "Yakoubi Yamina"
+
+      - name: 🚀 Commit & Push Changes
+        run: |
+          git add .
+          git diff --staged --quiet || git commit -m "🔄 Auto-sync: CED Ecosystem $(date '+%d/%m/%Y %H:%M')"
+          git push origin ${{ github.ref_name }}
+
+  deploy-staging:
+    name: 🟡 Deploy Staging
+    needs: sync-files
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 🚀 Deploy to Netlify
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=dist --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+  deploy-production:
+    name: 🔴 Deploy Production
+    needs: sync-files
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 🚀 Deploy to Vercel
+        uses: vercel/action@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          vercel-args: '--prod'
+
+  deploy-docs:
+    name: 📚 Deploy Documentation
+    needs: sync-files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: docs.club-empreinte-digitale.com
+
+  security-scan:
+    name: 🔒 Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 🛡️ Run Security Audit
+        run: |
+          npm audit --audit-level high
+          npm run security:scan
+      - name: 📊 CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          languages: typescript, javascript
+
+  performance-check:
+    name: ⚡ Performance Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 📊 Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  notification:
+    name: 📢 Notifications
+    needs: [sync-files, deploy-production, deploy-docs]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📧 Notify Success
+        if: ${{ needs.sync-files.result == 'success' }}
+        run: |
+          echo "✅ Synchronisation CED réussie - $(date '+%d/%m/%Y %H:%M')"
+          echo "🔗 Production: https://club-empreinte-digitale.vercel.app"
+          echo "📚 Docs: https://yakoubi-yamina.github.io/club-empreinte-digitale"
+      
+      - name: 🚨 Notify Failure
+        if: ${{ needs.sync-files.result == 'failure' }}
+        run: |
+          echo "❌ Échec synchronisation CED - $(date '+%d/%m/%Y %H:%M')"
+          echo "📧 Contact: yakoubi.yamina@ik.me"
