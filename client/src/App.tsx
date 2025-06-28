@@ -345,6 +345,7 @@ function Router() {
       <Route path="/ced-cloud-platform" component={CEDReplitPlatform} />
       <Route path="/platform-deploy" component={CEDReplitPlatform} />
       <Route path="/cloud-hosting" component={CEDReplitPlatform} />
+      <Route path="/cloud-ced" component={CEDReplitPlatform} />
       <Route path="/vue-ensemble" component={VueEnsemble} />
       <Route path="/contact-complet" component={ContactComplet} />
       <Route path="/contacts-equipe" component={ContactComplet} />

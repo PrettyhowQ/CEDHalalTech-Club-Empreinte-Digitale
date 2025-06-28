@@ -1,5 +1,6 @@
 // Portfolio Projects Data - Complete CED Ecosystem Projects
 // Tous les projets de l'écosystème Club Empreinte Digitale pour le portfolio mobile
+// 🔗 GitHub Repository: https://github.com/PrettyhowQ
 
 export interface PortfolioProject {
   id: string;
