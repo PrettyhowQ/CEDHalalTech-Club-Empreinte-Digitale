@@ -441,6 +441,9 @@ function Router() {
       <Route path="/contract-generator" component={ContractGeneratorPage} />
       <Route path="/generateur-contrats" component={ContractGeneratorPage} />
       <Route path="/contrats-travail" component={ContractGeneratorPage} />
+      <Route path="/institut-ced-academy" component={ArabicInterface} />
+      <Route path="/institut-ced" component={ArabicInterface} />
+      <Route path="/ced-academy" component={ArabicInterface} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
