@@ -49,6 +49,7 @@ import CostaDelSol from "@/pages/CostaDelSol";
 import YakoubiStore from "@/pages/YakoubiStore";
 import CostaDelSolWebsite from "@/pages/CostaDelSolWebsite";
 import PortfolioMobilePage from "@/pages/PortfolioMobilePage";
+import PortfolioWebClassiquePage from "@/pages/PortfolioWebClassiquePage";
 import TechForAllLanding from "@/pages/TechForAllLanding";
 import VueEnsemble from "@/pages/VueEnsemble";
 import ContactComplet from "@/pages/ContactComplet";
@@ -433,6 +434,9 @@ function Router() {
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/portfolio-mobile" component={PortfolioMobilePage} />
       <Route path="/portfolio-yakoubi-yamina" component={PortfolioMobilePage} />
+      <Route path="/portfolio-web" component={PortfolioWebClassiquePage} />
+      <Route path="/portfolio-classique" component={PortfolioWebClassiquePage} />
+      <Route path="/yakoubi-yamina-portfolio" component={PortfolioWebClassiquePage} />
       <Route path="/mobile-portfolio" component={PortfolioMobilePage} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />

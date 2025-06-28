@@ -182,15 +182,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ACCÈS DIRECT CLOUD CED */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center shadow-2xl mb-8">
-              <h2 className="text-2xl font-bold mb-4">☁️ Cloud CED Platform</h2>
-              <p className="text-lg mb-6">Stockage sécurisé, déploiement et synchronisation de tous vos projets</p>
-              <Link href="/cloud-ced">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold">
-                  Accéder au Cloud CED
-                </Button>
-              </Link>
+            {/* ACCÈS PORTFOLIOS */}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+                <h2 className="text-2xl font-bold mb-4">☁️ Cloud CED Platform</h2>
+                <p className="text-lg mb-6">Stockage sécurisé, déploiement et synchronisation</p>
+                <Link href="/cloud-ced">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-6 py-3 font-bold">
+                    Accéder au Cloud CED
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+                <h2 className="text-2xl font-bold mb-4">👩‍💼 Portfolio Professionnel</h2>
+                <p className="text-lg mb-6">CV et réalisations format web classique</p>
+                <Link href="/portfolio-web">
+                  <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-6 py-3 font-bold">
+                    Voir Portfolio Web
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* SECTION INNOVATIONS FUTURISTES */}
