@@ -182,6 +182,17 @@ export default function Home() {
               </div>
             </div>
 
+            {/* ACCÈS DIRECT CLOUD CED */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center shadow-2xl mb-8">
+              <h2 className="text-2xl font-bold mb-4">☁️ Cloud CED Platform</h2>
+              <p className="text-lg mb-6">Stockage sécurisé, déploiement et synchronisation de tous vos projets</p>
+              <Link href="/cloud-ced">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold">
+                  Accéder au Cloud CED
+                </Button>
+              </Link>
+            </div>
+
             {/* SECTION INNOVATIONS FUTURISTES */}
             <div className="bg-gradient-to-r from-gray-800 to-black rounded-2xl p-8 text-white text-center shadow-2xl mb-8">
               <h2 className="text-2xl font-bold mb-4">🚀 Innovations Futuristes CED</h2>
