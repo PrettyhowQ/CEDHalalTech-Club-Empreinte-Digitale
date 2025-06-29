@@ -145,6 +145,7 @@ import FiqhInformatiqueBibliothequePage from "@/pages/FiqhInformatiqueBibliotheq
 import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import EspaceSantePage from "@/pages/EspaceSantePage";
+import AIAdvisorPage from "@/pages/AIAdvisor";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -444,9 +445,9 @@ function Router() {
       <Route path="/institut-ced-academy" component={ArabicInterface} />
       <Route path="/institut-ced" component={ArabicInterface} />
       <Route path="/ced-academy" component={ArabicInterface} />
-      <Route path="/ia-financiere" component={() => <AIAdvisorPage />} />
-      <Route path="/ai-financial" component={() => <AIAdvisorPage />} />
-      <Route path="/conseil-ia-sharia" component={() => <AIAdvisorPage />} />
+      <Route path="/ia-financiere" component={AIAdvisorPage} />
+      <Route path="/ai-financial" component={AIAdvisorPage} />
+      <Route path="/conseil-ia-sharia" component={AIAdvisorPage} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
