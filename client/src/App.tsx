@@ -448,6 +448,11 @@ function Router() {
       <Route path="/ia-financiere" component={AIAdvisorPage} />
       <Route path="/ai-financial" component={AIAdvisorPage} />
       <Route path="/conseil-ia-sharia" component={AIAdvisorPage} />
+      <Route path="/ecoute-coran" component={QuranListeningPage} />
+      <Route path="/quran-listening" component={QuranListeningPage} />
+      <Route path="/recitateurs-coran" component={QuranListeningPage} />
+      <Route path="/coran-live" component={QuranLiveRecitationPage} />
+      <Route path="/quran-live" component={QuranLiveRecitationPage} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
