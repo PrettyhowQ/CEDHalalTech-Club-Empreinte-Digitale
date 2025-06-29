@@ -146,6 +146,7 @@ import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
+import QuranReaderPage from "@/pages/QuranReaderPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -453,6 +454,10 @@ function Router() {
       <Route path="/recitateurs-coran" component={QuranListeningPage} />
       <Route path="/coran-live" component={QuranLiveRecitationPage} />
       <Route path="/quran-live" component={QuranLiveRecitationPage} />
+      <Route path="/lecteur-coran" component={QuranReaderPage} />
+      <Route path="/quran-reader" component={QuranReaderPage} />
+      <Route path="/coran-tajweed" component={QuranReaderPage} />
+      <Route path="/lecture-coran" component={QuranReaderPage} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
