@@ -11,7 +11,8 @@ import {
   TrendingUp,
   Search,
   Settings,
-  Mic
+  Mic,
+  TestTube
 } from 'lucide-react';
 import { Link, useLocation } from 'wouter';
 
@@ -24,6 +25,15 @@ export default function QuickAccessWidget({ currentPage }: QuickAccessWidgetProp
   const [searchTerm, setSearchTerm] = useState('');
 
   const menuItems = [
+    {
+      id: 'test-center',
+      title: 'Centre de Test 🧪',
+      subtitle: 'Testez toutes les fonctionnalités',
+      icon: Settings,
+      href: '/test-center',
+      color: 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700',
+      isActive: location.includes('/test-center') || location.includes('/testing-center')
+    },
     {
       id: 'ced-bank',
       title: 'CED Bank ⭐',

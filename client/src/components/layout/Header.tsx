@@ -84,13 +84,15 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  item.premium
-                    ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg hover:from-yellow-600 hover:to-orange-600 shadow-md font-bold'
-                    : item.priority 
-                      ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
-                      : location === item.href
-                        ? 'text-primary-600 border-b-2 border-primary-600'
-                        : 'text-gray-700 hover:text-primary-600'
+                  item.testing
+                    ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg hover:from-emerald-600 hover:to-cyan-600 shadow-lg font-bold animate-pulse'
+                    : item.premium
+                      ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg hover:from-yellow-600 hover:to-orange-600 shadow-md font-bold'
+                      : item.priority 
+                        ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
+                        : location === item.href
+                          ? 'text-primary-600 border-b-2 border-primary-600'
+                          : 'text-gray-700 hover:text-primary-600'
                 }`}
               >
                 {item.name}
