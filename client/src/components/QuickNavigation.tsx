@@ -26,6 +26,14 @@ export function QuickNavigation() {
 
   const quickActions = [
     {
+      title: 'Centre de Test',
+      icon: Zap,
+      description: 'Testez toutes les fonctionnalités',
+      href: '/test-center',
+      color: 'bg-gradient-to-r from-emerald-600 to-cyan-600',
+      badge: 'Nouveau'
+    },
+    {
       title: 'CED Bank',
       icon: CreditCard,
       description: 'Banking halal complet',

@@ -35,6 +35,7 @@ export function PermanentNavigation() {
   const allModules = [
     // Pages principales
     { title: 'Accueil', icon: TrendingUp, href: '/', category: 'Principal' },
+    { title: 'Centre de Test', icon: Search, href: '/test-center', category: 'Principal' },
     { title: 'Formations', icon: GraduationCap, href: '/formations', category: 'Formation' },
     { title: 'Planning', icon: TrendingUp, href: '/planning', category: 'Organisation' },
     { title: 'Dashboard', icon: TrendingUp, href: '/dashboard', category: 'Principal' },
@@ -65,6 +66,8 @@ export function PermanentNavigation() {
     
     // Fiqh & Spiritualité
     { title: 'Fiqh Informatique', icon: BookOpen, href: '/fiqh-informatique', category: 'Spirituel' },
+    { title: 'Community Fiqh Guidelines', icon: Users, href: '/community-fiqh-guidelines', category: 'Spirituel' },
+    { title: 'Spiritual Micro-Interactions', icon: Heart, href: '/spiritual-motivation', category: 'Spirituel' },
     { title: 'Guide Fiqh Complet', icon: BookOpen, href: '/fiqh-informatique-guide', category: 'Spirituel' },
     { title: 'Mode Prière', icon: Heart, href: '/mode-priere', category: 'Spirituel' },
     { title: 'Conseil Sharia IA', icon: Shield, href: '/sharia-advisor', category: 'Spirituel' },
