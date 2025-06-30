@@ -154,6 +154,10 @@ import AIAdvisorPage from "@/pages/AIAdvisor";
 import QuranReaderPage from "@/pages/QuranReaderPage";
 import MobileNativeAppsRobustPage from "@/pages/MobileNativeAppsRobustPage";
 import NotFound from "@/pages/not-found";
+import WebTVPrettyhowQ from "@/pages/WebTVPrettyhowQ";
+import HalalTechWebsite from "@/pages/HalalTechWebsite";
+import AssistantIASpiritual from "@/pages/AssistantIASpiritual";
+import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
 
 function Router() {
   // const { isAuthenticated, isLoading } = useAuth();
@@ -673,6 +677,26 @@ function Router() {
       <Route path="/family-banking" component={FamilyBankingPage} />
       <Route path="/banking-familial" component={FamilyBankingPage} />
       <Route path="/comptes-famille" component={FamilyBankingPage} />
+
+      {/* Nouvelles fonctionnalités PrettyhowQ HalalTech™ */}
+      <Route path="/webtv-prettyhowq" component={WebTVPrettyhowQ} />
+      <Route path="/webtv-ia" component={WebTVPrettyhowQ} />
+      <Route path="/youtube-automatise" component={WebTVPrettyhowQ} />
+      <Route path="/television-ia" component={WebTVPrettyhowQ} />
+      <Route path="/prettyhowq-tv" component={WebTVPrettyhowQ} />
+      
+      <Route path="/halaltech-website" component={HalalTechWebsite} />
+      <Route path="/halaltech" component={HalalTechWebsite} />
+      <Route path="/formations-halal" component={HalalTechWebsite} />
+      <Route path="/plateforme-halal" component={HalalTechWebsite} />
+      <Route path="/ia-ethique" component={HalalTechWebsite} />
+      <Route path="/formations-fiqh" component={HalalTechWebsite} />
+      
+      <Route path="/assistant-ia-spiritual" component={AssistantIASpiritual} />
+      <Route path="/assistant-spirituel" component={AssistantIASpiritual} />
+      <Route path="/ia-islamique" component={AssistantIASpiritual} />
+      <Route path="/chatbot-spiritual" component={AssistantIASpiritual} />
+      <Route path="/aide-spirituelle" component={AssistantIASpiritual} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
