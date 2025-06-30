@@ -101,6 +101,60 @@ export default function Home() {
               </div>
             </div>
 
+            {/* NOUVELLES PLATEFORMES PRETTYHOWQ HALALTECH™ */}
+            <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl font-bold mb-2">🌙 PrettyhowQ HalalTech™</h2>
+                <p className="text-lg opacity-90">Écosystème d'IA Éthique et Formation Halal</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🎬</div>
+                  <h3 className="font-bold mb-2">WebTV IA PrettyhowQ</h3>
+                  <p className="text-sm mb-3 opacity-80">Chaîne YouTube automatisée 250K+ abonnés</p>
+                  <Link href="/webtv-prettyhowq">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Voir WebTV
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🌙</div>
+                  <h3 className="font-bold mb-2">HalalTech Website</h3>
+                  <p className="text-sm mb-3 opacity-80">Formation IA éthique multilingue FR/EN/AR</p>
+                  <Link href="/halaltech">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      HalalTech
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🤲</div>
+                  <h3 className="font-bold mb-2">Assistant IA Spirituel</h3>
+                  <p className="text-sm mb-3 opacity-80">Guidance conforme Tawhid et Maslaha</p>
+                  <Link href="/assistant-spirituel">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Assistant IA
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🎓</div>
+                  <h3 className="font-bold mb-2">Formations Halal</h3>
+                  <p className="text-sm mb-3 opacity-80">25+ cours certifiés PrettyhowQ HalalTech™</p>
+                  <Link href="/formations-halal">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Formations
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* SECTION SANTÉ & JURIDIQUE */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl p-6 text-white text-center shadow-2xl">

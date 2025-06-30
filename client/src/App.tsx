@@ -9,7 +9,7 @@ import { VoiceProvider } from "@/context/VoiceContext";
 import Footer from "@/components/Footer";
 
 // Pages
-import Home from "@/pages/Home";
+import Home from "@/pages/HomeFixed";
 import Landing from "@/pages/Landing";
 import Formations from "@/pages/Formations";
 import Planning from "@/pages/Planning";

@@ -1,0 +1,278 @@
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { LiveClock } from '@/components/ui/LiveClock';
+import { QuickAgenda } from '@/components/ui/QuickAgenda';
+import { ParticleBackground } from '@/components/ui/ParticleBackground';
+import { ThemeCustomizer } from '@/components/ui/ThemeCustomizer';
+import { RealTimeFinanceWidget } from '@/components/ui/RealTimeFinanceWidget';
+import { AIGeneratorWidget } from '@/components/ui/AIGeneratorWidget';
+import { NutritionWidget } from '@/components/ui/NutritionWidget';
+import { SportWidget } from '@/components/ui/SportWidget';
+import { QuickNavigation } from '@/components/QuickNavigation';
+import { PermanentNavigation } from '@/components/PermanentNavigation';
+import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
+import { GraduationCap, BookOpen } from 'lucide-react';
+import { PerformanceOptimizer } from '@/components/PerformanceOptimizer';
+import { InstantAccess } from '@/components/ui/InstantAccess';
+import { SmartPreloader } from '@/components/ui/SmartPreloader';
+import { IntuitiveBreadcrumb } from '@/components/ui/IntuitiveBreadcrumb';
+import { ContextualHelp } from '@/components/ui/ContextualHelp';
+import { PerformanceMonitor } from '@/components/ui/PerformanceMonitor';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { CEDBankSection } from '@/components/sections/CEDBankSection';
+import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
+import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
+import { FormationsSection } from '@/components/sections/FormationsSection';
+import { AcademieSection } from '@/components/sections/AcademieSection';
+import { AutomatisationSection } from '@/components/sections/AutomatisationSection';
+import { EntreprisesSection } from '@/components/sections/EntreprisesSection';
+import { ProgrammingLanguagesSection } from '@/components/sections/ProgrammingLanguagesSection';
+import { EspaceSanteSection } from '@/components/sections/EspaceSanteSection';
+import { SimulateurBTSSection } from '@/components/sections/SimulateurBTSSection';
+import { ModulesSection } from '@/components/sections/ModulesSection';
+import { GenerateursSection } from '@/components/sections/GenerateursSection';
+import { RechercheSection } from '@/components/sections/RechercheSection';
+import { MentoratSection } from '@/components/sections/MentoratSection';
+import { CommunauteSection } from '@/components/sections/CommunauteSection';
+import { PlanningFormationsSection } from '@/components/sections/PlanningFormationsSection';
+import { RealTimeMonitoringSection } from '@/components/sections/RealTimeMonitoringSection';
+import { PortfolioSection } from '@/components/sections/PortfolioSection';
+import { EcosystemSection } from '@/components/sections/EcosystemSection';
+import { IAEthiqueSection } from '@/components/sections/IAEthiqueSection';
+import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { AnalyticsDashboard } from '@/components/sections/AnalyticsDashboard';
+import { ImpactEnvironnementalSection } from '@/components/sections/ImpactEnvironnementalSection';
+import { FeaturedToolsSection } from '@/components/sections/FeaturedToolsSection';
+import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
+
+export default function Home() {
+  return (
+    <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SmartPreloader />
+      <ParticleBackground />
+      <Header />
+      <LiveClock variant="desktop" />
+      <QuickAgenda userId="guest" variant="compact" />
+      <RealTimeFinanceWidget variant="compact" />
+      <AIGeneratorWidget variant="compact" />
+      <NutritionWidget variant="compact" />
+      <SportWidget variant="compact" />
+      <InstantAccess />
+      <IntuitiveBreadcrumb />
+      <PermanentNavigation />
+      <QuickNavigation />
+      
+      <main className="relative z-10">
+        {/* ACCÈS DIRECT PRINCIPALES FONCTIONNALITÉS */}
+        <section className="py-8 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🎓 Formations CED</h2>
+                <p className="text-sm mb-4">Programmation, IA, Islamiques</p>
+                <Link href="/formations">
+                  <Button size="sm" className="bg-white text-blue-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Formations
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🏛️ Institut CED</h2>
+                <p className="text-sm mb-4">Plateforme éducative islamique</p>
+                <Link href="/arabic-interface">
+                  <Button size="sm" className="bg-white text-purple-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Institut CED
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">👑 Banking Golfe Premium</h2>
+                <p className="text-sm mb-4">Investisseurs & Grosses Fortunes</p>
+                <Link href="/premium-dashboard">
+                  <Button size="sm" className="bg-white text-amber-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Investisseurs
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* NOUVELLES PLATEFORMES PRETTYHOWQ HALALTECH™ */}
+            <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl font-bold mb-2">🌙 PrettyhowQ HalalTech™</h2>
+                <p className="text-lg opacity-90">Écosystème d'IA Éthique et Formation Halal</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🎬</div>
+                  <h3 className="font-bold mb-2">WebTV IA PrettyhowQ</h3>
+                  <p className="text-sm mb-3 opacity-80">Chaîne YouTube automatisée 250K+ abonnés</p>
+                  <Link href="/webtv-prettyhowq">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Voir WebTV
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🌙</div>
+                  <h3 className="font-bold mb-2">HalalTech Website</h3>
+                  <p className="text-sm mb-3 opacity-80">Formation IA éthique multilingue FR/EN/AR</p>
+                  <Link href="/halaltech">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      HalalTech
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🤲</div>
+                  <h3 className="font-bold mb-2">Assistant IA Spirituel</h3>
+                  <p className="text-sm mb-3 opacity-80">Guidance conforme Tawhid et Maslaha</p>
+                  <Link href="/assistant-spirituel">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Assistant IA
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🎓</div>
+                  <h3 className="font-bold mb-2">Formations Halal</h3>
+                  <p className="text-sm mb-3 opacity-80">25+ cours certifiés PrettyhowQ HalalTech™</p>
+                  <Link href="/formations-halal">
+                    <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                      Formations
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* SECTION SANTÉ & JURIDIQUE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🏥 Espace Santé CED</h2>
+                <p className="text-sm mb-2">Souheila Yakoubi-Ozel - Co-Directrice</p>
+                <p className="text-sm mb-4">Nutrition, Coaching, Bien-être</p>
+                <Link href="/espace-sante">
+                  <Button size="sm" className="bg-white text-pink-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Espace Santé
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">⚖️ Juridique CED</h2>
+                <p className="text-sm mb-2">Hanaé-Denise Ozel - Secteur Juridique</p>
+                <p className="text-sm mb-4">Contrats, Fiches de paie, Droit</p>
+                <Link href="/juridique">
+                  <Button size="sm" className="bg-white text-teal-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Juridique
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* SECTION TECHFORALL & ASSURANCE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🌍 TechForAll</h2>
+                <p className="text-sm mb-2">Brahim - Gestion Opérationnelle</p>
+                <p className="text-sm mb-4">Donations Tech, Construction Écologique</p>
+                <Link href="/techforall">
+                  <Button size="sm" className="bg-white text-green-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    TechForAll
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <h2 className="text-xl font-bold mb-3">🛡️ Al-Aman CED Takaful</h2>
+                <p className="text-sm mb-2">Assurance Islamique Complète</p>
+                <p className="text-sm mb-4">Couverture famille 45+ membres</p>
+                <Link href="/al-aman-takaful">
+                  <Button size="sm" className="bg-white text-violet-600 hover:bg-gray-100 text-sm px-4 py-2">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Al-Aman CED
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* INNOVATIONS FUTURES */}
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🚀 Innovations Futures CED</h2>
+                <p className="text-lg opacity-90">Technologies Révolutionnaires en Développement</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link href="/quantum-halal-trading" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">⚛️</div>
+                  <h4 className="font-bold mb-2 text-lg">Quantum Halal Trading</h4>
+                  <p className="text-sm opacity-90">Premier trading quantique conforme Sharia</p>
+                </Link>
+
+                <Link href="/neural-islamic-banking" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🧠</div>
+                  <h4 className="font-bold mb-2 text-lg">Neural Islamic Banking</h4>
+                  <p className="text-sm opacity-90">IA spirituelle pour conseil financier</p>
+                </Link>
+
+                <Link href="/metaverse-hajj" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🕋</div>
+                  <h4 className="font-bold mb-2 text-lg">Metaverse Hajj</h4>
+                  <p className="text-sm opacity-90">Pèlerinage virtuel immersif</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTIONS PRINCIPALES */}
+        <HeroSection />
+        <CEDBankSection />
+        <CitadelleMusulmanSection />
+        <ChatIARPSection />
+        <FormationsSection />
+        <AcademieSection />
+        <AutomatisationSection />
+        <EntreprisesSection />
+        <ProgrammingLanguagesSection />
+        <EspaceSanteSection />
+        <SimulateurBTSSection />
+        <ModulesSection />
+        <GenerateursSection />
+        <RechercheSection />
+        <MentoratSection />
+        <CommunauteSection />
+        <PlanningFormationsSection />
+        <RealTimeMonitoringSection />
+        <PortfolioSection />
+        <EcosystemSection />
+        <AnalyticsDashboard />
+        <FeaturedToolsSection />
+        <IAEthiqueSection />
+        <ImpactEnvironnementalSection />
+        <TestimonialsSection />
+      </main>
+
+      <ThemeCustomizer />
+      <VoiceAssistant />
+      <ContextualHelp />
+      <PerformanceMonitor />
+      <Footer />
+    </div>
+  );
+}
