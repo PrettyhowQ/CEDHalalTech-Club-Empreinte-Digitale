@@ -697,6 +697,12 @@ function Router() {
       <Route path="/ia-islamique" component={AssistantIASpiritual} />
       <Route path="/chatbot-spiritual" component={AssistantIASpiritual} />
       <Route path="/aide-spirituelle" component={AssistantIASpiritual} />
+      
+      <Route path="/plateforme-formations-halal" component={PlateformeFormationsHalal} />
+      <Route path="/formations-certifiees" component={PlateformeFormationsHalal} />
+      <Route path="/plateforme-education" component={PlateformeFormationsHalal} />
+      <Route path="/academy-halal" component={PlateformeFormationsHalal} />
+      <Route path="/certifications-prettyhowq" component={PlateformeFormationsHalal} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
