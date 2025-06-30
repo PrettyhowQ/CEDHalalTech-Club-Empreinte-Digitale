@@ -16,7 +16,6 @@ import {
   Moon,
   Sun,
   Compass,
-  Flame,
   Waves,
   Wind,
   Target,
@@ -398,7 +397,7 @@ export function SpiritualMotivationMicroInteractions() {
             
             <Card className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white border-0">
               <CardContent className="p-4 text-center">
-                <Flame className="h-8 w-8 mx-auto mb-2 animate-bounce" />
+                <Star className="h-8 w-8 mx-auto mb-2 animate-bounce" />
                 <div className="text-2xl font-bold">{streakCount}</div>
                 <div className="text-sm opacity-90">Jours Consécutifs</div>
               </CardContent>
