@@ -1,9 +1,5 @@
-import { APIManagement } from '@/components/APIManagement';
+import { APIManagementSimple } from '@/components/APIManagementSimple';
 
 export default function APIManagementPage() {
-  return (
-    <div>
-      <APIManagement />
-    </div>
-  );
+  return <APIManagementSimple />;
 }

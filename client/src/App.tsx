@@ -67,6 +67,7 @@ import EcologicalConstructionDonationsPage from "@/pages/EcologicalConstructionD
 import ShariaBoardCompliancePage from "@/pages/ShariaBoardCompliance";
 import BankingSecurityPage from "@/pages/BankingSecurity";
 import APIManagementPage from "@/pages/APIManagement";
+import APIManagementTest from "@/pages/APIManagementTest";
 import MobileNativeAppsPage from "@/pages/MobileNativeApps";
 import AnalyticsAvanceesPage from "@/pages/AnalyticsAdvancees";
 import IntegrationsStrategiquesPage from "@/pages/IntegrationsStrategiques";
@@ -422,6 +423,10 @@ function Router() {
       <Route path="/authentification-2fa" component={BankingSecurityPage} />
       <Route path="/gestion-apis" component={APIManagementPage} />
       <Route path="/apis-management" component={APIManagementPage} />
+      <Route path="/api-management" component={APIManagementPage} />
+      <Route path="/management-apis" component={APIManagementPage} />
+      <Route path="/tech-apis" component={APIManagementPage} />
+      <Route path="/api-tech" component={APIManagementPage} />
       <Route path="/apps-natives" component={MobileNativeAppsPage} />
       <Route path="/mobile-ios-android" component={MobileNativeAppsPage} />
       <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
