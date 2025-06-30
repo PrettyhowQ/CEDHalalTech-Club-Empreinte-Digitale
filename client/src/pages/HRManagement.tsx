@@ -1,5 +1,5 @@
-import { HRManagementSystem } from "@/components/HRManagementSystem";
+import { HRManagementRobust } from '@/components/sections/HRManagementRobust';
 
-export default function HRManagementPage() {
-  return <HRManagementSystem />;
+export default function HRManagement() {
+  return <HRManagementRobust />;
 }

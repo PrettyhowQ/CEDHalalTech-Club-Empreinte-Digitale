@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { VoiceProvider } from "@/context/VoiceContext";
 // import { useAuth } from "@/hooks/useAuth";
 import Footer from "@/components/Footer";
+import { lazy } from "react";
 
 // Pages
 import Home from "@/pages/HomeFixed";
@@ -99,9 +100,10 @@ import { IslamicMarketPartnership } from "@/components/IslamicMarketPartnership"
 import { IslamicGovernance } from "@/components/IslamicGovernance";
 import { AlAmanCEDPrototype } from "@/components/AlAmanCEDPrototype";
 import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
-import HRManagementRobustPage from "@/pages/HRManagementRobustPage";
 import HRTestPage from "@/pages/HRTestPage";
 import HRSimplePage from "@/pages/HRSimplePage";
+
+const HRManagement = lazy(() => import('@/pages/HRManagement'));
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
@@ -368,7 +370,8 @@ function Router() {
       {/* Système RH et Code du Travail */}
       <Route path="/rh-management" component={HRSimplePage} />
       <Route path="/ressources-humaines" component={HRSimplePage} />
-      <Route path="/gestion-rh" component={HRSimplePage} />
+      <Route path="/gestion-rh" component={HRManagement} />
+      <Route path="/hr-management" component={HRManagement} />
       <Route path="/code-travail-suisse" component={HRSimplePage} />
       <Route path="/contrats-travail" component={HRSimplePage} />
       <Route path="/droit-travail" component={HRSimplePage} />
