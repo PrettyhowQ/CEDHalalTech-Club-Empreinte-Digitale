@@ -2,446 +2,494 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Play, Pause, Calendar, Clock, Users, TrendingUp, Camera, Mic, Film, Settings } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
+import { 
+  Play, 
+  Pause, 
+  Volume2, 
+  Settings, 
+  Calendar, 
+  Clock, 
+  Users, 
+  Eye, 
+  ThumbsUp, 
+  Share2,
+  Download,
+  Upload,
+  Zap,
+  Brain,
+  Heart,
+  Star,
+  TrendingUp,
+  Globe,
+  Youtube,
+  Mic,
+  Video,
+  Edit,
+  Save,
+  RefreshCw,
+  CheckCircle,
+  BookOpen
+} from 'lucide-react';
 
 interface VideoContent {
   id: string;
   title: string;
   description: string;
-  category: string;
-  duration: string;
-  viewers: number;
+  category: 'motivation' | 'tech-ethics' | 'spiritual' | 'education';
+  status: 'published' | 'scheduled' | 'draft' | 'processing';
+  views: number;
   likes: number;
+  duration: string;
+  publishDate: string;
   thumbnail: string;
-  publishedAt: string;
   tags: string[];
-  status: 'live' | 'scheduled' | 'published' | 'draft';
+  isHalalCertified: boolean;
+  aiGenerated: boolean;
+  language: string;
 }
 
-interface AutomationStats {
-  videosGenerated: number;
-  totalViews: number;
-  engagement: number;
-  subscribers: number;
-  dailyUploads: number;
+interface ScheduleItem {
+  id: string;
+  title: string;
+  type: 'video' | 'live' | 'premiere';
+  scheduledTime: string;
+  duration: string;
+  category: string;
+  status: 'pending' | 'ready' | 'published';
 }
 
 export default function WebTVPrettyhowQ() {
-  const [isLive, setIsLive] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('motivation');
-  const [automationStats, setAutomationStats] = useState<AutomationStats>({
-    videosGenerated: 1247,
-    totalViews: 2840000,
-    engagement: 94.7,
-    subscribers: 156000,
-    dailyUploads: 3
-  });
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generationProgress, setGenerationProgress] = useState(0);
+  const [selectedVideo, setSelectedVideo] = useState<VideoContent | null>(null);
 
   const categories = [
-    { id: 'motivation', name: 'Motivation Islamique', icon: '💪', color: 'bg-green-500' },
-    { id: 'ethics', name: 'Éthique Tech', icon: '🤖', color: 'bg-blue-500' },
-    { id: 'halal-careers', name: 'Métiers Halal', icon: '💼', color: 'bg-purple-500' },
-    { id: 'spirituality', name: 'Spiritualité Numérique', icon: '🕌', color: 'bg-indigo-500' },
-    { id: 'education', name: 'Éducation IA', icon: '📚', color: 'bg-orange-500' },
-    { id: 'live-shows', name: 'Émissions Live', icon: '📺', color: 'bg-red-500' }
+    { id: 'all', name: 'Tout', count: 156, icon: Globe },
+    { id: 'motivation', name: 'Motivation', count: 45, icon: Heart },
+    { id: 'tech-ethics', name: 'Éthique Tech', count: 38, icon: Brain },
+    { id: 'spiritual', name: 'Spiritualité', count: 42, icon: Star },
+    { id: 'education', name: 'Éducation', count: 31, icon: BookOpen }
   ];
 
-  const upcomingVideos: VideoContent[] = [
+  const videoContent: VideoContent[] = [
     {
-      id: 'vid-001',
-      title: 'IA et Islam : Comment Développer une Tech Éthique en 2025',
-      description: 'Découvrez les principes islamiques pour créer une intelligence artificielle respectueuse des valeurs halal.',
-      category: 'ethics',
-      duration: '12:34',
-      viewers: 24680,
-      likes: 1890,
-      thumbnail: '/api/placeholder/320/180',
-      publishedAt: '2025-01-01T10:00:00Z',
-      tags: ['IA', 'Islam', 'Éthique', 'Technologie', 'Halal'],
-      status: 'scheduled'
-    },
-    {
-      id: 'vid-002',
-      title: 'Métiers du Futur Conformes à la Sharia : Guide Complet',
-      description: 'Les carrières technologiques les plus prometteuses qui respectent les principes islamiques.',
-      category: 'halal-careers',
-      duration: '18:22',
-      viewers: 31245,
-      likes: 2156,
-      thumbnail: '/api/placeholder/320/180',
-      publishedAt: '2025-01-01T15:00:00Z',
-      tags: ['Carrière', 'Sharia', 'Technologie', 'Emploi', 'Halal'],
-      status: 'scheduled'
-    },
-    {
-      id: 'vid-003',
-      title: 'Motivation Matinale : Les Leçons du Prophète pour Entrepreneurs',
-      description: 'Comment appliquer les enseignements prophétiques dans l\'entrepreneuriat moderne.',
+      id: 'v1',
+      title: 'La Réussite selon les Principes Islamiques - Motivation Quotidienne',
+      description: 'Découvrez comment atteindre vos objectifs en respectant les valeurs islamiques. Une approche équilibrée entre ambition et spiritualité.',
       category: 'motivation',
+      status: 'published',
+      views: 12500,
+      likes: 890,
       duration: '8:45',
-      viewers: 45123,
-      likes: 3420,
+      publishDate: '2025-01-01',
       thumbnail: '/api/placeholder/320/180',
-      publishedAt: '2025-01-02T06:00:00Z',
-      tags: ['Motivation', 'Prophète', 'Entrepreneur', 'Spiritualité'],
-      status: 'scheduled'
+      tags: ['motivation', 'islam', 'réussite', 'spiritualité'],
+      isHalalCertified: true,
+      aiGenerated: true,
+      language: 'Français'
+    },
+    {
+      id: 'v2',
+      title: 'IA Éthique : Développer des Algorithmes Justes et Transparents',
+      description: 'Apprenez à créer des systèmes IA qui respectent les principes de justice et de transparence selon les valeurs islamiques.',
+      category: 'tech-ethics',
+      status: 'published',
+      views: 8900,
+      likes: 654,
+      duration: '15:20',
+      publishDate: '2024-12-28',
+      thumbnail: '/api/placeholder/320/180',
+      tags: ['ia', 'éthique', 'algorithmique', 'justice'],
+      isHalalCertified: true,
+      aiGenerated: true,
+      language: 'Français'
+    },
+    {
+      id: 'v3',
+      title: 'Les Noms d\'Allah et la Technologie : Méditation Matinale',
+      description: 'Une réflexion spirituelle sur comment les 99 Noms d\'Allah peuvent nous inspirer dans notre travail technologique quotidien.',
+      category: 'spiritual',
+      status: 'scheduled',
+      views: 0,
+      likes: 0,
+      duration: '12:30',
+      publishDate: '2025-01-02',
+      thumbnail: '/api/placeholder/320/180',
+      tags: ['spiritualité', 'méditation', 'noms Allah', 'tech'],
+      isHalalCertified: true,
+      aiGenerated: true,
+      language: 'Français'
+    },
+    {
+      id: 'v4',
+      title: 'Créer une Startup Tech Halal : Guide Complet 2025',
+      description: 'Toutes les étapes pour lancer votre entreprise technologique en respectant les principes islamiques de commerce équitable.',
+      category: 'education',
+      status: 'draft',
+      views: 0,
+      likes: 0,
+      duration: '22:15',
+      publishDate: '2025-01-05',
+      thumbnail: '/api/placeholder/320/180',
+      tags: ['startup', 'entrepreneuriat', 'halal', 'business'],
+      isHalalCertified: true,
+      aiGenerated: true,
+      language: 'Français'
     }
   ];
 
-  const liveShows = [
+  const schedule: ScheduleItem[] = [
     {
-      id: 'live-001',
-      title: 'Émission Spéciale : Fintech Islamique en Direct',
-      description: 'Discussion en direct sur l\'avenir de la banque islamique digitale avec des experts internationaux.',
-      scheduledTime: '19:00',
-      duration: '60 min',
-      guests: ['Dr. Ahmed Al-Rashid', 'Prof. Fatima Al-Zahra', 'Yakoubi Yamina'],
-      topics: ['Banque Islamique', 'DeFi Halal', 'Régulation Sharia']
+      id: 's1',
+      title: 'Motivation du Matin : Commencer la Journée avec Intention',
+      type: 'video',
+      scheduledTime: '2025-01-02T06:00:00',
+      duration: '5:00',
+      category: 'motivation',
+      status: 'ready'
     },
     {
-      id: 'live-002',
-      title: 'Questions-Réponses : IA Éthique et Islam',
-      description: 'Séance interactive où les viewers peuvent poser leurs questions sur l\'IA responsable.',
-      scheduledTime: '21:00',
-      duration: '45 min',
-      guests: ['Équipe Super IARP Pro'],
-      topics: ['IA Responsable', 'Fiqh Informatique', 'Tech Halal']
+      id: 's2',
+      title: 'Live Q&A : Éthique IA et Développement Halal',
+      type: 'live',
+      scheduledTime: '2025-01-02T20:00:00',
+      duration: '60:00',
+      category: 'tech-ethics',
+      status: 'pending'
+    },
+    {
+      id: 's3',
+      title: 'Première : Série Fiqh Informatique Episode 1',
+      type: 'premiere',
+      scheduledTime: '2025-01-03T19:00:00',
+      duration: '25:00',
+      category: 'education',
+      status: 'ready'
     }
   ];
 
-  const automationFeatures = [
-    {
-      icon: <Camera className="h-6 w-6" />,
-      title: 'Génération Vidéo IA',
-      description: 'Création automatique de contenus visuels respectueux avec IA générative',
-      status: 'Actif',
-      efficiency: 96
-    },
-    {
-      icon: <Mic className="h-6 w-6" />,
-      title: 'Voix Naturelle IA',
-      description: 'Narration automatique avec voix masculine/féminine selon contexte islamique',
-      status: 'Actif',
-      efficiency: 94
-    },
-    {
-      icon: <Film className="h-6 w-6" />,
-      title: 'Montage Automatique',
-      description: 'Édition clean sans musique haram, transitions fluides respectueuses',
-      status: 'Actif',
-      efficiency: 98
-    },
-    {
-      icon: <Settings className="h-6 w-6" />,
-      title: 'Optimisation SEO',
-      description: 'Titres, descriptions et hashtags générés automatiquement pour maximiser portée',
-      status: 'Actif',
-      efficiency: 92
+  const filteredContent = videoContent.filter(video => 
+    selectedCategory === 'all' || video.category === selectedCategory
+  );
+
+  const handleGenerateContent = async () => {
+    setIsGenerating(true);
+    setGenerationProgress(0);
+    
+    // Simulation du processus de génération
+    const steps = [
+      'Analyse du sujet et recherche...',
+      'Génération du script conforme Fiqh...',
+      'Création des visuels éthiques...',
+      'Synthèse vocale naturelle...',
+      'Assemblage et optimisation...',
+      'Vérification conformité halal...',
+      'Publication automatique...'
+    ];
+
+    for (let i = 0; i < steps.length; i++) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setGenerationProgress(((i + 1) / steps.length) * 100);
     }
-  ];
+
+    setIsGenerating(false);
+    setGenerationProgress(0);
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'published': return 'bg-green-100 text-green-800';
+      case 'scheduled': return 'bg-blue-100 text-blue-800';
+      case 'draft': return 'bg-yellow-100 text-yellow-800';
+      case 'processing': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'motivation': return <Heart className="h-4 w-4" />;
+      case 'tech-ethics': return <Brain className="h-4 w-4" />;
+      case 'spiritual': return <Star className="h-4 w-4" />;
+      case 'education': return <BookOpen className="h-4 w-4" />;
+      default: return <Globe className="h-4 w-4" />;
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
-      {/* Header avec indicateur live */}
-      <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      {/* Header */}
+      <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-gradient-to-r from-red-600 to-purple-600 bg-clip-text text-transparent">
                 📺 WebTV IA PrettyhowQ
               </div>
-              {isLive && (
-                <Badge variant="destructive" className="animate-pulse">
-                  🔴 EN DIRECT
-                </Badge>
-              )}
+              <Badge variant="secondary" className="bg-red-100 text-red-800">
+                <Youtube className="h-3 w-3 mr-1" />
+                Chaîne Automatisée
+              </Badge>
             </div>
+            
             <div className="flex items-center space-x-4">
-              <Badge variant="secondary" className="bg-green-100 text-green-800">
-                100% Halal Certifié
+              <Badge variant="outline">
+                156 vidéos publiées
               </Badge>
               <Badge variant="outline">
-                {automationStats.subscribers.toLocaleString()} abonnés
+                250K+ abonnés
               </Badge>
+              <Button onClick={handleGenerateContent} disabled={isGenerating}>
+                {isGenerating ? (
+                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
+                ) : (
+                  <Zap className="h-4 w-4 mr-2" />
+                )}
+                Générer Contenu IA
+              </Button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Tabs defaultValue="dashboard" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5">
-            <TabsTrigger value="dashboard">Tableau de Bord</TabsTrigger>
-            <TabsTrigger value="programming">Programmation</TabsTrigger>
-            <TabsTrigger value="automation">Automatisation</TabsTrigger>
-            <TabsTrigger value="live">Émissions Live</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
+      {/* Processus de génération */}
+      {isGenerating && (
+        <div className="bg-yellow-50 border-b border-yellow-200 p-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium">Génération de contenu en cours...</span>
+              <span className="text-sm">{Math.round(generationProgress)}%</span>
+            </div>
+            <Progress value={generationProgress} className="h-2" />
+          </div>
+        </div>
+      )}
+
+      {/* Hero Section */}
+      <section className="py-16 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            WebTV IA Automatisée
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Programmation YouTube entièrement automatisée avec IA éthique. 
+            Contenu motivant, éducatif et spirituel généré selon les principes islamiques.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-red-600">250K+</div>
+              <div className="text-sm text-muted-foreground">Abonnés YouTube</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600">2.5M+</div>
+              <div className="text-sm text-muted-foreground">Vues totales</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600">156</div>
+              <div className="text-sm text-muted-foreground">Vidéos publiées</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600">100%</div>
+              <div className="text-sm text-muted-foreground">Halal certifié</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <Tabs defaultValue="content" className="space-y-8">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="content">📹 Contenu</TabsTrigger>
+            <TabsTrigger value="schedule">📅 Programmation</TabsTrigger>
+            <TabsTrigger value="analytics">📊 Analytics</TabsTrigger>
+            <TabsTrigger value="settings">⚙️ Configuration</TabsTrigger>
           </TabsList>
 
-          {/* Tableau de Bord */}
-          <TabsContent value="dashboard" className="space-y-6">
-            {/* Stats principales */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Vidéos Générées</CardTitle>
-                  <Film className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{automationStats.videosGenerated.toLocaleString()}</div>
-                  <p className="text-xs text-muted-foreground">+{automationStats.dailyUploads} aujourd'hui</p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Vues Totales</CardTitle>
-                  <TrendingUp className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{(automationStats.totalViews / 1000000).toFixed(1)}M</div>
-                  <p className="text-xs text-muted-foreground">+15.3% ce mois</p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Engagement</CardTitle>
-                  <Users className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{automationStats.engagement}%</div>
-                  <p className="text-xs text-muted-foreground">Taux excellent</p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Abonnés</CardTitle>
-                  <Users className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{(automationStats.subscribers / 1000).toFixed(0)}K</div>
-                  <p className="text-xs text-muted-foreground">+2.1K cette semaine</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Vidéos récentes */}
+          {/* Contenu */}
+          <TabsContent value="content" className="space-y-8">
+            {/* Filtres */}
             <Card>
-              <CardHeader>
-                <CardTitle>Dernières Vidéos Publiées</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {upcomingVideos.map((video) => (
-                    <div key={video.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  >
+                    {categories.map(cat => (
+                      <option key={cat.id} value={cat.id}>
+                        {cat.name} ({cat.count})
+                      </option>
+                    ))}
+                  </select>
+                  
+                  <Button variant="outline">
+                    <Upload className="h-4 w-4 mr-2" />
+                    Importer Script
+                  </Button>
+                  
+                  <Button variant="outline">
+                    <Edit className="h-4 w-4 mr-2" />
+                    Créer Manuellement
+                  </Button>
+                  
+                  <Button>
+                    <Zap className="h-4 w-4 mr-2" />
+                    Génération IA
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Liste des vidéos */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredContent.map((video) => (
+                <Card key={video.id} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => setSelectedVideo(video)}>
+                  <CardHeader className="pb-4">
+                    <div className="relative">
                       <img
                         src={video.thumbnail}
                         alt={video.title}
-                        className="w-full h-32 object-cover rounded mb-3"
+                        className="w-full h-40 object-cover rounded-lg mb-3"
                       />
-                      <h3 className="font-semibold text-sm mb-2 line-clamp-2">{video.title}</h3>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <span className="flex items-center">
-                          <Clock className="h-3 w-3 mr-1" />
-                          {video.duration}
-                        </span>
-                        <span>{video.viewers.toLocaleString()} vues</span>
+                      <div className="absolute top-2 left-2 flex flex-col gap-1">
+                        <Badge variant="secondary" className={getStatusColor(video.status)}>
+                          {video.status === 'published' ? 'Publié' : 
+                           video.status === 'scheduled' ? 'Programmé' :
+                           video.status === 'draft' ? 'Brouillon' : 'En cours'}
+                        </Badge>
+                        {video.isHalalCertified && (
+                          <Badge variant="secondary" className="bg-green-100 text-green-800">
+                            🌙 Halal
+                          </Badge>
+                        )}
+                        {video.aiGenerated && (
+                          <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                            🤖 IA
+                          </Badge>
+                        )}
                       </div>
-                      <div className="flex flex-wrap gap-1 mt-2">
+                      <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-xs">
+                        {video.duration}
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-1">
+                          {getCategoryIcon(video.category)}
+                          <span className="text-xs capitalize">{video.category}</span>
+                        </div>
+                        <Badge variant="outline" className="text-xs">{video.language}</Badge>
+                      </div>
+                      
+                      <CardTitle className="text-lg line-clamp-2">{video.title}</CardTitle>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        {video.description}
+                      </p>
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="flex items-center">
+                          <Eye className="h-4 w-4 mr-1" />
+                          {video.views.toLocaleString()}
+                        </span>
+                        <span className="flex items-center">
+                          <ThumbsUp className="h-4 w-4 mr-1" />
+                          {video.likes.toLocaleString()}
+                        </span>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-1">
                         {video.tags.slice(0, 3).map((tag) => (
                           <Badge key={tag} variant="secondary" className="text-xs">
-                            {tag}
+                            #{tag}
                           </Badge>
                         ))}
                       </div>
+                      
+                      <div className="border-t pt-4">
+                        <div className="grid grid-cols-2 gap-2">
+                          <Button size="sm" className="text-xs">
+                            <Play className="h-3 w-3 mr-1" />
+                            Lire
+                          </Button>
+                          <Button variant="outline" size="sm" className="text-xs">
+                            <Share2 className="h-3 w-3 mr-1" />
+                            Partager
+                          </Button>
+                        </div>
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </TabsContent>
 
           {/* Programmation */}
-          <TabsContent value="programming" className="space-y-6">
+          <TabsContent value="schedule" className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>Catégories de Contenu</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {categories.map((category) => (
-                    <Card
-                      key={category.id}
-                      className={`cursor-pointer transition-all hover:scale-105 ${
-                        selectedCategory === category.id ? 'ring-2 ring-blue-500' : ''
-                      }`}
-                      onClick={() => setSelectedCategory(category.id)}
-                    >
-                      <CardContent className="p-4 text-center">
-                        <div className={`w-12 h-12 ${category.color} rounded-full flex items-center justify-center text-white text-xl mx-auto mb-2`}>
-                          {category.icon}
-                        </div>
-                        <h3 className="font-medium text-sm">{category.name}</h3>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Programmation Automatique</CardTitle>
+                <CardTitle>Planning de Publication Automatique</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {upcomingVideos.map((video) => (
-                    <div key={video.id} className="flex items-center justify-between p-4 border rounded-lg">
-                      <div className="flex items-center space-x-4">
-                        <img
-                          src={video.thumbnail}
-                          alt={video.title}
-                          className="w-16 h-16 object-cover rounded"
-                        />
-                        <div>
-                          <h3 className="font-medium">{video.title}</h3>
-                          <p className="text-sm text-muted-foreground">{video.description}</p>
-                          <div className="flex items-center space-x-2 mt-1">
-                            <Badge variant="outline">{video.category}</Badge>
-                            <span className="text-xs text-muted-foreground">
-                              <Calendar className="h-3 w-3 inline mr-1" />
-                              {new Date(video.publishedAt).toLocaleDateString('fr-FR')}
-                            </span>
+                  {schedule.map((item) => (
+                    <div key={item.id} className="border rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-2">
+                            <Badge variant="outline" className="text-xs">
+                              {item.type === 'video' ? '📹 Vidéo' : 
+                               item.type === 'live' ? '🔴 Live' : '🎬 Première'}
+                            </Badge>
+                            <Badge variant="secondary" className={
+                              item.status === 'ready' ? 'bg-green-100 text-green-800' :
+                              item.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
+                              'bg-blue-100 text-blue-800'
+                            }>
+                              {item.status === 'ready' ? 'Prêt' : 
+                               item.status === 'pending' ? 'En attente' : 'Publié'}
+                            </Badge>
                           </div>
+                          
+                          <h3 className="font-medium mb-1">{item.title}</h3>
+                          
+                          <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                            <span className="flex items-center">
+                              <Calendar className="h-4 w-4 mr-1" />
+                              {new Date(item.scheduledTime).toLocaleDateString('fr-FR')}
+                            </span>
+                            <span className="flex items-center">
+                              <Clock className="h-4 w-4 mr-1" />
+                              {new Date(item.scheduledTime).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}
+                            </span>
+                            <span>Durée: {item.duration}</span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center space-x-2">
+                          <Button size="sm" variant="outline">
+                            <Edit className="h-3 w-3 mr-1" />
+                            Modifier
+                          </Button>
+                          {item.status === 'ready' && (
+                            <Button size="sm">
+                              <CheckCircle className="h-3 w-3 mr-1" />
+                              Publier
+                            </Button>
+                          )}
                         </div>
                       </div>
-                      <Badge
-                        variant={video.status === 'scheduled' ? 'secondary' : 'default'}
-                      >
-                        {video.status === 'scheduled' ? 'Programmé' : 'Publié'}
-                      </Badge>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          {/* Automatisation */}
-          <TabsContent value="automation" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Pipeline d'Automatisation IA</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {automationFeatures.map((feature, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-6">
-                        <div className="flex items-start space-x-4">
-                          <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                            {feature.icon}
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-semibold mb-2">{feature.title}</h3>
-                            <p className="text-sm text-muted-foreground mb-3">{feature.description}</p>
-                            <div className="flex items-center justify-between">
-                              <Badge variant="outline" className="bg-green-50 text-green-700">
-                                {feature.status}
-                              </Badge>
-                              <span className="text-sm font-medium">{feature.efficiency}%</span>
-                            </div>
-                            <Progress value={feature.efficiency} className="mt-2" />
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Intégrations Externes</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {[
-                    { name: 'Zapier', status: 'Connecté', icon: '🔄' },
-                    { name: 'Notion', status: 'Connecté', icon: '📝' },
-                    { name: 'Google Drive', status: 'Connecté', icon: '💾' },
-                    { name: 'YouTube API', status: 'Connecté', icon: '📺' }
-                  ].map((integration) => (
-                    <Card key={integration.name}>
-                      <CardContent className="p-4 text-center">
-                        <div className="text-2xl mb-2">{integration.icon}</div>
-                        <h3 className="font-medium">{integration.name}</h3>
-                        <Badge variant="outline" className="mt-2 bg-green-50 text-green-700">
-                          {integration.status}
-                        </Badge>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          {/* Émissions Live */}
-          <TabsContent value="live" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <span>Émissions en Direct</span>
-                  <Button
-                    onClick={() => setIsLive(!isLive)}
-                    variant={isLive ? "destructive" : "default"}
-                    size="sm"
-                  >
-                    {isLive ? <Pause className="h-4 w-4 mr-2" /> : <Play className="h-4 w-4 mr-2" />}
-                    {isLive ? 'Arrêter' : 'Démarrer'} Live
-                  </Button>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {liveShows.map((show) => (
-                    <Card key={show.id}>
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h3 className="font-semibold text-lg mb-2">{show.title}</h3>
-                            <p className="text-muted-foreground mb-4">{show.description}</p>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                              <div>
-                                <span className="font-medium">Horaire:</span> {show.scheduledTime}
-                              </div>
-                              <div>
-                                <span className="font-medium">Durée:</span> {show.duration}
-                              </div>
-                              <div>
-                                <span className="font-medium">Invités:</span> {show.guests.join(', ')}
-                              </div>
-                            </div>
-                            <div className="flex flex-wrap gap-2 mt-3">
-                              {show.topics.map((topic) => (
-                                <Badge key={topic} variant="secondary">
-                                  {topic}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                          <Badge variant="outline" className="bg-red-50 text-red-700">
-                            Programmé
-                          </Badge>
-                        </div>
-                      </CardContent>
-                    </Card>
                   ))}
                 </div>
               </CardContent>
@@ -449,62 +497,126 @@ export default function WebTVPrettyhowQ() {
           </TabsContent>
 
           {/* Analytics */}
-          <TabsContent value="analytics" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <TabsContent value="analytics" className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-red-100 rounded-lg">
+                      <Youtube className="h-6 w-6 text-red-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-2xl font-bold">250,432</p>
+                      <p className="text-sm text-muted-foreground">Abonnés</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-blue-100 rounded-lg">
+                      <Eye className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-2xl font-bold">2.5M</p>
+                      <p className="text-sm text-muted-foreground">Vues totales</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-green-100 rounded-lg">
+                      <TrendingUp className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-2xl font-bold">+15%</p>
+                      <p className="text-sm text-muted-foreground">Croissance</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <Clock className="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-2xl font-bold">8:45</p>
+                      <p className="text-sm text-muted-foreground">Durée moy.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Configuration */}
+          <TabsContent value="settings" className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card>
                 <CardHeader>
-                  <CardTitle>Performance par Catégorie</CardTitle>
+                  <CardTitle>Paramètres de Génération IA</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {categories.map((category, index) => (
-                      <div key={category.id} className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className={`w-8 h-8 ${category.color} rounded-full flex items-center justify-center text-white text-sm`}>
-                            {category.icon}
-                          </div>
-                          <span className="font-medium">{category.name}</span>
-                        </div>
-                        <div className="text-right">
-                          <div className="font-semibold">{(85 + index * 2).toFixed(1)}%</div>
-                          <div className="text-xs text-muted-foreground">engagement</div>
-                        </div>
-                      </div>
-                    ))}
+                <CardContent className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Fréquence de publication</label>
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
+                      <option>Quotidienne</option>
+                      <option>3x par semaine</option>
+                      <option>Hebdomadaire</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Longueur préférée</label>
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
+                      <option>Courte (5-10 min)</option>
+                      <option>Moyenne (10-20 min)</option>
+                      <option>Longue (20+ min)</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Style de voix</label>
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
+                      <option>Naturelle et chaleureuse</option>
+                      <option>Professionnelle</option>
+                      <option>Énergique et motivante</option>
+                    </select>
                   </div>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Audience Mondiale</CardTitle>
+                  <CardTitle>Conformité Halal</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {[
-                      { country: 'France', percentage: 28, views: '680K' },
-                      { country: 'Maroc', percentage: 22, views: '530K' },
-                      { country: 'Algérie', percentage: 18, views: '430K' },
-                      { country: 'Tunisie', percentage: 12, views: '290K' },
-                      { country: 'Suisse', percentage: 8, views: '190K' },
-                      { country: 'Canada', percentage: 7, views: '170K' },
-                      { country: 'Autres', percentage: 5, views: '120K' }
-                    ].map((country) => (
-                      <div key={country.country} className="flex items-center justify-between">
-                        <span className="font-medium">{country.country}</span>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-20 bg-gray-200 rounded-full h-2">
-                            <div
-                              className="bg-blue-600 h-2 rounded-full"
-                              style={{ width: `${country.percentage}%` }}
-                            />
-                          </div>
-                          <span className="text-sm text-muted-foreground w-12 text-right">
-                            {country.views}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Filtrage automatique du contenu</span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">Activé</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Vérification par scholars</span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">Activé</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Respect des horaires de prière</span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">Activé</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Contenu adapté famille</span>
+                    <Badge variant="secondary" className="bg-green-100 text-green-800">Activé</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -513,20 +625,17 @@ export default function WebTVPrettyhowQ() {
         </Tabs>
       </div>
 
-      {/* Footer avec mentions légales */}
+      {/* Footer */}
       <div className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground">
-              © Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة | 版权所有
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Respect du RGPD | Hébergement suisse | Confidentialité des données | Respect total du Fiqh
+              © Yakoubi Yamina – Tous droits réservés | All rights reserved | جميع الحقوق محفوظة
             </p>
             <div className="flex justify-center space-x-4 text-xs">
               <Badge variant="secondary">100% Halal Certifié</Badge>
-              <Badge variant="outline">Conforme AAOIFI</Badge>
-              <Badge variant="outline">IA Éthique Responsable</Badge>
+              <Badge variant="outline">IA Éthique</Badge>
+              <Badge variant="outline">Contenu Automatisé</Badge>
             </div>
           </div>
         </div>
