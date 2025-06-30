@@ -31,7 +31,7 @@ import {
   Award,
   Star,
   Clock,
-  Flame,
+  Sparkles,
   BarChart3
 } from 'lucide-react';
 
@@ -132,15 +132,15 @@ const globalSports: SportActivity[] = [
     description: 'Développe force, endurance et confiance en soi'
   },
   {
-    id: 'yoga',
-    name: 'Yoga',
-    category: 'Bien-être',
-    icon: '🧘‍♀️',
+    id: 'dhikr-meditation',
+    name: 'Méditation Dhikr',
+    category: 'Spiritualité',
+    icon: '🕌',
     difficulty: 'Débutant',
-    duration: '30-90 min',
-    calories: '150-300 kcal/h',
-    equipment: ['Tapis'],
-    description: 'Améliore flexibilité, équilibre et bien-être mental'
+    duration: '15-60 min',
+    calories: '50-100 kcal/h',
+    equipment: ['Tapis de prière', 'Tasbih'],
+    description: 'Récitation spirituelle pour paix intérieure et rappel d\'Allah'
   },
   {
     id: 'basketball',
@@ -407,7 +407,7 @@ export function CoachingApp() {
                         <span>{sport.duration}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Flame className="h-3 w-3 text-orange-500" />
+                        <Sparkles className="h-3 w-3 text-orange-500" />
                         <span>{sport.calories}</span>
                       </div>
                     </div>
