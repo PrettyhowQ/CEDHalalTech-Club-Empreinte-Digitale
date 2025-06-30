@@ -165,6 +165,7 @@ import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
+import TestingCenterPage from "@/pages/TestingCenterPage";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -769,6 +770,13 @@ function Router() {
       <Route path="/spiritual-micro" component={SpiritualMotivationMicroInteractionsPage} />
       <Route path="/motivation-spirituelle" component={SpiritualMotivationMicroInteractionsPage} />
       <Route path="/dhikr-interactif" component={SpiritualMotivationMicroInteractionsPage} />
+      
+      {/* Testing Center */}
+      <Route path="/test-center" component={TestingCenterPage} />
+      <Route path="/testing-center" component={TestingCenterPage} />
+      <Route path="/centre-test" component={TestingCenterPage} />
+      <Route path="/test-fonctionnalites" component={TestingCenterPage} />
+      <Route path="/tous-tester" component={TestingCenterPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />

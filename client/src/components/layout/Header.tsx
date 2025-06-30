@@ -16,6 +16,7 @@ export function Header() {
   const { currentLanguage, setLanguage } = useLanguage();
 
   const navigation = [
+    { name: 'Centre de Test 🧪', href: '/test-center', priority: true, testing: true },
     { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
     { name: 'Institut CED Academy 🎓', href: '/institut-ced-academy', priority: true, premium: true },
     { name: 'Portfolio Web 👩‍💼', href: '/portfolio-web', priority: true },
