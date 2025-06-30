@@ -16,6 +16,7 @@ export function Header() {
 
   const navigation = [
     { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
+    { name: 'Institut CED Academy 🎓', href: '/institut-ced-academy', priority: true, premium: true },
     { name: 'Portfolio Web 👩‍💼', href: '/portfolio-web', priority: true },
     { name: 'Portfolio Mobile 📱', href: '/portfolio-mobile', priority: true },
     { name: 'Dashboard Premium ⭐', href: '/premium-dashboard', priority: true, premium: true },

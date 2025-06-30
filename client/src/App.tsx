@@ -139,6 +139,7 @@ import ExportModulesPage from "@/pages/export-modules-page";
 import LanguageLearningPage from "@/pages/language-learning-page";
 import FamilyBankingPage from "@/pages/family-banking";
 import ArabicInterface from "@/pages/ArabicInterface";
+import InstitutCEDAcademyPage from "@/pages/InstitutCEDAcademyPage";
 import ArabicMultilingualTranslator from "@/pages/ArabicMultilingualTranslator";
 import FiqhInformatique from "@/pages/FiqhInformatique";
 import FiqhInformatiqueBibliothequePage from "@/pages/FiqhInformatiqueBibliothequePage";
@@ -443,9 +444,9 @@ function Router() {
       <Route path="/contract-generator" component={ContractGeneratorPage} />
       <Route path="/generateur-contrats" component={ContractGeneratorPage} />
       <Route path="/contrats-travail" component={ContractGeneratorPage} />
-      <Route path="/institut-ced-academy" component={ArabicInterface} />
-      <Route path="/institut-ced" component={ArabicInterface} />
-      <Route path="/ced-academy" component={ArabicInterface} />
+      <Route path="/institut-ced-academy" component={InstitutCEDAcademyPage} />
+      <Route path="/institut-ced" component={InstitutCEDAcademyPage} />
+      <Route path="/ced-academy" component={InstitutCEDAcademyPage} />
       <Route path="/ia-financiere" component={AIAdvisorPage} />
       <Route path="/ai-financial" component={AIAdvisorPage} />
       <Route path="/conseil-ia-sharia" component={AIAdvisorPage} />
