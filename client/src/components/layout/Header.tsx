@@ -13,7 +13,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
   const { isAuthenticated, user } = useAuth();
-  const { currentLanguage } = useLanguage();
+  const { currentLanguage, setLanguage } = useLanguage();
 
   const navigation = [
     { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
@@ -99,7 +99,6 @@ export function Header() {
             <InteractiveLanguageSelector 
               currentLanguage={currentLanguage.code} 
               onLanguageChange={(language) => {
-                const { setLanguage } = useLanguage();
                 setLanguage(language);
               }}
               variant="compact"

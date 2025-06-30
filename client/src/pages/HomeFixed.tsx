@@ -21,6 +21,8 @@ import { ContextualHelp } from '@/components/ui/ContextualHelp';
 import { PerformanceMonitor } from '@/components/ui/PerformanceMonitor';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
+import { InteractiveLanguageSelector } from '@/components/ui/InteractiveLanguageSelector';
+import { useLanguage } from '@/context/LanguageContext';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
@@ -47,6 +49,8 @@ import { FeaturedToolsSection } from '@/components/sections/FeaturedToolsSection
 import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
 
 export default function Home() {
+  const { currentLanguage, setLanguage } = useLanguage();
+  
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
       <SmartPreloader />
@@ -104,9 +108,22 @@ export default function Home() {
 
             {/* NOUVELLES PLATEFORMES PRETTYHOWQ HALALTECH™ */}
             <div className="bg-gradient-to-r from-green-600 to-emerald-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
-              <div className="text-center mb-6">
-                <h2 className="text-3xl font-bold mb-2">🌙 PrettyhowQ HalalTech™</h2>
-                <p className="text-lg opacity-90">Écosystème d'IA Éthique et Formation Halal</p>
+              <div className="flex justify-between items-center mb-6">
+                <div className="text-center flex-1">
+                  <h2 className="text-3xl font-bold mb-2">🌙 PrettyhowQ HalalTech™</h2>
+                  <p className="text-lg opacity-90">Écosystème d'IA Éthique et Formation Halal</p>
+                </div>
+                
+                {/* Sélecteur de langue interactif */}
+                <div className="ml-6">
+                  <InteractiveLanguageSelector
+                    currentLanguage={currentLanguage.code}
+                    onLanguageChange={setLanguage}
+                    variant="compact"
+                    showGreeting={true}
+                    showAudioSupport={true}
+                  />
+                </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -158,6 +158,7 @@ import WebTVPrettyhowQ from "@/pages/WebTVPrettyhowQ";
 import HalalTechWebsite from "@/pages/HalalTechWebsite";
 import AssistantIASpiritual from "@/pages/AssistantIASpiritual";
 import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
+import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 
 function Router() {
   // const { isAuthenticated, isLoading } = useAuth();
@@ -691,6 +692,11 @@ function Router() {
       <Route path="/plateforme-halal" component={HalalTechWebsite} />
       <Route path="/ia-ethique" component={HalalTechWebsite} />
       <Route path="/formations-fiqh" component={HalalTechWebsite} />
+      
+      <Route path="/selecteur-langue" component={HalalTechWebsite} />
+      <Route path="/language-selector" component={HalalTechWebsite} />
+      <Route path="/langues-interactives" component={HalalTechWebsite} />
+      <Route path="/multilingual" component={HalalTechWebsite} />
       
       <Route path="/assistant-ia-spiritual" component={AssistantIASpiritual} />
       <Route path="/assistant-spirituel" component={AssistantIASpiritual} />
