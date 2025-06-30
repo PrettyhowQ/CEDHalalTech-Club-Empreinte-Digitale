@@ -103,7 +103,7 @@ import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
 import HRTestPage from "@/pages/HRTestPage";
 import HRSimplePage from "@/pages/HRSimplePage";
 
-const HRManagement = lazy(() => import('@/pages/HRManagement'));
+import HRManagement from "@/pages/HRManagement";
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
