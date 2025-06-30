@@ -100,6 +100,7 @@ import { IslamicGovernance } from "@/components/IslamicGovernance";
 import { AlAmanCEDPrototype } from "@/components/AlAmanCEDPrototype";
 import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
 import HRManagementPage from "@/pages/HRManagement";
+import HRManagementRobustPage from "@/pages/HRManagementRobustPage";
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
@@ -359,16 +360,16 @@ function Router() {
       <Route path="/equipe-complete" component={ContactComplet} />
       
       {/* Système RH et Code du Travail */}
-      <Route path="/rh-management" component={HRManagementPage} />
-      <Route path="/ressources-humaines" component={HRManagementPage} />
-      <Route path="/gestion-rh" component={HRManagementPage} />
-      <Route path="/code-travail-suisse" component={HRManagementPage} />
-      <Route path="/contrats-travail" component={HRManagementPage} />
-      <Route path="/droit-travail" component={HRManagementPage} />
-      <Route path="/ia-juridique" component={HRManagementPage} />
-      <Route path="/consultation-juridique" component={HRManagementPage} />
-      <Route path="/salaires-equipe" component={HRManagementPage} />
-      <Route path="/periode-essai" component={HRManagementPage} />
+      <Route path="/rh-management" component={HRManagementRobustPage} />
+      <Route path="/ressources-humaines" component={HRManagementRobustPage} />
+      <Route path="/gestion-rh" component={HRManagementRobustPage} />
+      <Route path="/code-travail-suisse" component={HRManagementRobustPage} />
+      <Route path="/contrats-travail" component={HRManagementRobustPage} />
+      <Route path="/droit-travail" component={HRManagementRobustPage} />
+      <Route path="/ia-juridique" component={HRManagementRobustPage} />
+      <Route path="/consultation-juridique" component={HRManagementRobustPage} />
+      <Route path="/salaires-equipe" component={HRManagementRobustPage} />
+      <Route path="/periode-essai" component={HRManagementRobustPage} />
       <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
       <Route path="/gestion-equipe" component={TableauBordEquipePage} />
       <Route path="/fiches-paie" component={PaySlipGeneratorPage} />
