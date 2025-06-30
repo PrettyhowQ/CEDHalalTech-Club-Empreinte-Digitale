@@ -99,8 +99,8 @@ import { IslamicMarketPartnership } from "@/components/IslamicMarketPartnership"
 import { IslamicGovernance } from "@/components/IslamicGovernance";
 import { AlAmanCEDPrototype } from "@/components/AlAmanCEDPrototype";
 import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
-import HRManagementPage from "@/pages/HRManagement";
 import HRManagementRobustPage from "@/pages/HRManagementRobustPage";
+import HRTestPage from "@/pages/HRTestPage";
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
@@ -370,6 +370,8 @@ function Router() {
       <Route path="/consultation-juridique" component={HRManagementRobustPage} />
       <Route path="/salaires-equipe" component={HRManagementRobustPage} />
       <Route path="/periode-essai" component={HRManagementRobustPage} />
+      <Route path="/hr-test" component={HRTestPage} />
+      <Route path="/test-rh" component={HRTestPage} />
       <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
       <Route path="/gestion-equipe" component={TableauBordEquipePage} />
       <Route path="/fiches-paie" component={PaySlipGeneratorPage} />
