@@ -1,9 +1,5 @@
-import { MobileNativeApps } from '@/components/MobileNativeApps';
+import { MobileNativeAppsSimple } from '@/components/MobileNativeAppsSimple';
 
 export default function MobileNativeAppsPage() {
-  return (
-    <div>
-      <MobileNativeApps />
-    </div>
-  );
+  return <MobileNativeAppsSimple />;
 }

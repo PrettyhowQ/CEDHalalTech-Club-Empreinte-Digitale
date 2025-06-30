@@ -68,6 +68,7 @@ import ShariaBoardCompliancePage from "@/pages/ShariaBoardCompliance";
 import BankingSecurityPage from "@/pages/BankingSecurity";
 import APIManagementPage from "@/pages/APIManagement";
 import APIManagementTest from "@/pages/APIManagementTest";
+import NativeAppsTest from "@/pages/NativeAppsTest";
 import MobileNativeAppsPage from "@/pages/MobileNativeApps";
 import AnalyticsAvanceesPage from "@/pages/AnalyticsAdvancees";
 import IntegrationsStrategiquesPage from "@/pages/IntegrationsStrategiques";
@@ -429,7 +430,14 @@ function Router() {
       <Route path="/api-tech" component={APIManagementPage} />
       <Route path="/test-api-management" component={APIManagementTest} />
       <Route path="/apps-natives" component={MobileNativeAppsPage} />
+      <Route path="/applications-natives" component={MobileNativeAppsPage} />
+      <Route path="/native-apps" component={MobileNativeAppsPage} />
+      <Route path="/mobile-apps" component={MobileNativeAppsPage} />
       <Route path="/mobile-ios-android" component={MobileNativeAppsPage} />
+      <Route path="/ios-android-apps" component={MobileNativeAppsPage} />
+      <Route path="/tech-mobile" component={MobileNativeAppsPage} />
+      <Route path="/mobile-tech" component={MobileNativeAppsPage} />
+      <Route path="/test-native-apps" component={NativeAppsTest} />
       <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
       <Route path="/intelligence-artificielle" component={AnalyticsAvanceesPage} />
       <Route path="/integrations-strategiques" component={IntegrationsStrategiquesPage} />
