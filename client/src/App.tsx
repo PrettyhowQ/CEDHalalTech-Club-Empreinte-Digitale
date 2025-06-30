@@ -163,6 +163,8 @@ import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
 import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
+import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
+import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -754,6 +756,19 @@ function Router() {
       <Route path="/islamic-ethics" component={FiqhCompliancePage} />
       <Route path="/halal-development" component={FiqhCompliancePage} />
       <Route path="/ethical-coding" component={FiqhCompliancePage} />
+      
+      {/* Community Fiqh Guidelines */}
+      <Route path="/community-fiqh-guidelines" component={CommunityFiqhGuidelinesPage} />
+      <Route path="/community-guidelines" component={CommunityFiqhGuidelinesPage} />
+      <Route path="/fiqh-community" component={CommunityFiqhGuidelinesPage} />
+      <Route path="/collaborative-fiqh" component={CommunityFiqhGuidelinesPage} />
+      
+      {/* Spiritual Motivation Micro-Interactions */}
+      <Route path="/spiritual-motivation" component={SpiritualMotivationMicroInteractionsPage} />
+      <Route path="/micro-interactions" component={SpiritualMotivationMicroInteractionsPage} />
+      <Route path="/spiritual-micro" component={SpiritualMotivationMicroInteractionsPage} />
+      <Route path="/motivation-spirituelle" component={SpiritualMotivationMicroInteractionsPage} />
+      <Route path="/dhikr-interactif" component={SpiritualMotivationMicroInteractionsPage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
