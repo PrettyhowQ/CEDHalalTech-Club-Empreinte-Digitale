@@ -68,7 +68,7 @@ import ShariaBoardCompliancePage from "@/pages/ShariaBoardCompliance";
 import BankingSecurityPage from "@/pages/BankingSecurity";
 import APIManagementPage from "@/pages/APIManagement";
 import APIManagementTest from "@/pages/APIManagementTest";
-import NativeAppsTest from "@/pages/NativeAppsTest";
+import NativeAppsTestSimple from "@/pages/NativeAppsTestSimple";
 import MobileNativeAppsPage from "@/pages/MobileNativeApps";
 import AnalyticsAvanceesPage from "@/pages/AnalyticsAdvancees";
 import IntegrationsStrategiquesPage from "@/pages/IntegrationsStrategiques";
@@ -437,7 +437,7 @@ function Router() {
       <Route path="/ios-android-apps" component={MobileNativeAppsPage} />
       <Route path="/tech-mobile" component={MobileNativeAppsPage} />
       <Route path="/mobile-tech" component={MobileNativeAppsPage} />
-      <Route path="/test-native-apps" component={NativeAppsTest} />
+      <Route path="/test-native-apps" component={NativeAppsTestSimple} />
       <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
       <Route path="/intelligence-artificielle" component={AnalyticsAvanceesPage} />
       <Route path="/integrations-strategiques" component={IntegrationsStrategiquesPage} />
