@@ -427,6 +427,7 @@ function Router() {
       <Route path="/management-apis" component={APIManagementPage} />
       <Route path="/tech-apis" component={APIManagementPage} />
       <Route path="/api-tech" component={APIManagementPage} />
+      <Route path="/test-api-management" component={APIManagementTest} />
       <Route path="/apps-natives" component={MobileNativeAppsPage} />
       <Route path="/mobile-ios-android" component={MobileNativeAppsPage} />
       <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
