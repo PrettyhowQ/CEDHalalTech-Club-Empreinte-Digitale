@@ -1,73 +1,225 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface Language {
   code: string;
   name: string;
   nativeName: string;
   flag: string;
+  region: string;
+  direction: 'ltr' | 'rtl';
+  audioSupport: boolean;
+  culturalGreeting: string;
+  religiousContext?: string;
 }
-
-const SUPPORTED_LANGUAGES: Language[] = [
-  { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
-  { code: 'en', name: 'English', nativeName: 'English', flag: '🇬🇧' },
-  { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
-  { code: 'de', name: 'German', nativeName: 'Deutsch', flag: '🇩🇪' },
-  { code: 'it', name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹' },
-  { code: 'pt', name: 'Portuguese', nativeName: 'Português', flag: '🇵🇹' },
-  { code: 'ar', name: 'Arabic', nativeName: 'العربية', flag: '🇸🇦' },
-  { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳' },
-  { code: 'ja', name: 'Japanese', nativeName: '日本語', flag: '🇯🇵' },
-  { code: 'ko', name: 'Korean', nativeName: '한국어', flag: '🇰🇷' },
-  // Add more languages as needed (up to 78 total)
-];
 
 interface LanguageContextType {
   currentLanguage: Language;
-  setLanguage: (languageCode: string) => void;
-  supportedLanguages: Language[];
+  setLanguage: (language: Language) => void;
+  translations: Record<string, string>;
   isRTL: boolean;
 }
 
+const defaultLanguage: Language = {
+  code: 'fr',
+  name: 'Français',
+  nativeName: 'Français',
+  flag: '🇫🇷',
+  region: 'Europe',
+  direction: 'ltr',
+  audioSupport: true,
+  culturalGreeting: 'Que la paix soit avec vous',
+  religiousContext: 'Communauté musulmane croissante'
+};
+
+// Traductions de base pour l'interface
+const translations: Record<string, Record<string, string>> = {
+  fr: {
+    welcome: 'Bienvenue',
+    features: 'Fonctionnalités',
+    about: 'À propos',
+    contact: 'Contact',
+    login: 'Connexion',
+    register: 'Inscription',
+    dashboard: 'Tableau de bord',
+    profile: 'Profil',
+    settings: 'Paramètres',
+    logout: 'Déconnexion',
+    language: 'Langue',
+    theme: 'Thème',
+    help: 'Aide',
+    search: 'Rechercher',
+    save: 'Enregistrer',
+    cancel: 'Annuler',
+    delete: 'Supprimer',
+    edit: 'Modifier',
+    add: 'Ajouter',
+    view: 'Voir',
+    close: 'Fermer',
+    open: 'Ouvrir',
+    yes: 'Oui',
+    no: 'Non',
+    loading: 'Chargement...',
+    error: 'Erreur',
+    success: 'Succès',
+    warning: 'Avertissement',
+    info: 'Information',
+    // Spécifique PrettyhowQ HalalTech
+    halaltech: 'HalalTech',
+    webtv: 'WebTV IA PrettyhowQ',
+    assistant: 'Assistant IA Spirituel',
+    formations: 'Formations Halal',
+    islamic_banking: 'Banque Islamique',
+    takaful: 'Assurance Takaful',
+    peace_greeting: 'Que la paix soit avec vous',
+    bismillah: 'Au nom d\'Allah',
+    alhamdulillah: 'Louange à Allah',
+    subhanallah: 'Gloire à Allah',
+    allahu_akbar: 'Allah est Le Plus Grand',
+    select_language: 'Sélectionner votre langue',
+    current_language: 'Langue actuelle',
+    voice_enabled: 'Voix activée',
+    voice_disabled: 'Voix désactivée'
+  },
+  en: {
+    welcome: 'Welcome',
+    features: 'Features',
+    about: 'About',
+    contact: 'Contact',
+    login: 'Login',
+    register: 'Register',
+    dashboard: 'Dashboard',
+    profile: 'Profile',
+    settings: 'Settings',
+    logout: 'Logout',
+    language: 'Language',
+    theme: 'Theme',
+    help: 'Help',
+    search: 'Search',
+    save: 'Save',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    edit: 'Edit',
+    add: 'Add',
+    view: 'View',
+    close: 'Close',
+    open: 'Open',
+    yes: 'Yes',
+    no: 'No',
+    loading: 'Loading...',
+    error: 'Error',
+    success: 'Success',
+    warning: 'Warning',
+    info: 'Information',
+    // Specific PrettyhowQ HalalTech
+    halaltech: 'HalalTech',
+    webtv: 'WebTV AI PrettyhowQ',
+    assistant: 'Spiritual AI Assistant',
+    formations: 'Halal Training',
+    islamic_banking: 'Islamic Banking',
+    takaful: 'Takaful Insurance',
+    peace_greeting: 'Peace be upon you',
+    bismillah: 'In the name of Allah',
+    alhamdulillah: 'Praise be to Allah',
+    subhanallah: 'Glory be to Allah',
+    allahu_akbar: 'Allah is the Greatest',
+    select_language: 'Select your language',
+    current_language: 'Current language',
+    voice_enabled: 'Voice enabled',
+    voice_disabled: 'Voice disabled'
+  },
+  ar: {
+    welcome: 'أهلاً وسهلاً',
+    features: 'الميزات',
+    about: 'حول',
+    contact: 'اتصل بنا',
+    login: 'تسجيل الدخول',
+    register: 'التسجيل',
+    dashboard: 'لوحة التحكم',
+    profile: 'الملف الشخصي',
+    settings: 'الإعدادات',
+    logout: 'تسجيل الخروج',
+    language: 'اللغة',
+    theme: 'المظهر',
+    help: 'المساعدة',
+    search: 'البحث',
+    save: 'حفظ',
+    cancel: 'إلغاء',
+    delete: 'حذف',
+    edit: 'تعديل',
+    add: 'إضافة',
+    view: 'عرض',
+    close: 'إغلاق',
+    open: 'فتح',
+    yes: 'نعم',
+    no: 'لا',
+    loading: 'جاري التحميل...',
+    error: 'خطأ',
+    success: 'نجح',
+    warning: 'تحذير',
+    info: 'معلومات',
+    // Specific PrettyhowQ HalalTech
+    halaltech: 'هلال تك',
+    webtv: 'تلفزيون الويب بالذكاء الاصطناعي',
+    assistant: 'المساعد الروحي بالذكاء الاصطناعي',
+    formations: 'التكوينات الحلال',
+    islamic_banking: 'البنوك الإسلامية',
+    takaful: 'التكافل',
+    peace_greeting: 'السلام عليكم ورحمة الله وبركاته',
+    bismillah: 'بسم الله',
+    alhamdulillah: 'الحمد لله',
+    subhanallah: 'سبحان الله',
+    allahu_akbar: 'الله أكبر',
+    select_language: 'اختر لغتك',
+    current_language: 'اللغة الحالية',
+    voice_enabled: 'الصوت مفعّل',
+    voice_disabled: 'الصوت معطّل'
+  }
+};
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(SUPPORTED_LANGUAGES[0]);
+interface LanguageProviderProps {
+  children: React.ReactNode;
+}
+
+export function LanguageProvider({ children }: LanguageProviderProps) {
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLanguage);
 
   useEffect(() => {
-    // Detect browser language on initial load
-    const browserLang = navigator.language.split('-')[0];
-    const savedLang = localStorage.getItem('preferred-language');
-    const initialLang = savedLang || browserLang || 'fr';
-    
-    const language = SUPPORTED_LANGUAGES.find(lang => lang.code === initialLang) || SUPPORTED_LANGUAGES[0];
-    setCurrentLanguage(language);
+    const savedLanguage = localStorage.getItem('prettyhowq-language');
+    if (savedLanguage) {
+      try {
+        const parsedLanguage = JSON.parse(savedLanguage);
+        setCurrentLanguage(parsedLanguage);
+        document.documentElement.dir = parsedLanguage.direction;
+        document.documentElement.lang = parsedLanguage.code;
+      } catch (error) {
+        console.warn('Erreur lors du chargement de la langue sauvegardée:', error);
+      }
+    }
   }, []);
 
-  const setLanguage = (languageCode: string) => {
-    const language = SUPPORTED_LANGUAGES.find(lang => lang.code === languageCode);
-    if (language) {
-      setCurrentLanguage(language);
-      localStorage.setItem('preferred-language', languageCode);
-      
-      // Update document direction for RTL languages
-      document.documentElement.dir = isRTL(languageCode) ? 'rtl' : 'ltr';
-    }
+  const setLanguage = (language: Language) => {
+    setCurrentLanguage(language);
+    localStorage.setItem('prettyhowq-language', JSON.stringify(language));
+    document.documentElement.dir = language.direction;
+    document.documentElement.lang = language.code;
+    
+    const event = new CustomEvent('languageChanged', { detail: language });
+    window.dispatchEvent(event);
   };
 
-  const isRTL = (langCode?: string): boolean => {
-    const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
-    return rtlLanguages.includes(langCode || currentLanguage.code);
+  const currentTranslations = translations[currentLanguage.code] || translations.fr;
+
+  const value: LanguageContextType = {
+    currentLanguage,
+    setLanguage,
+    translations: currentTranslations,
+    isRTL: currentLanguage.direction === 'rtl'
   };
 
   return (
-    <LanguageContext.Provider
-      value={{
-        currentLanguage,
-        setLanguage,
-        supportedLanguages: SUPPORTED_LANGUAGES,
-        isRTL: isRTL(),
-      }}
-    >
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );
@@ -76,57 +228,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error('useLanguage doit être utilisé dans un LanguageProvider');
   }
   return context;
 }
 
-// Translation function placeholder - in real app would use i18n library
-export function t(key: string, language?: string): string {
-  // This is a simplified translation function
-  // In production, you'd use a proper i18n library
-  const translations: Record<string, Record<string, string>> = {
-    'fr': {
-      'welcome': 'Bienvenue',
-      'courses': 'Formations',
-      'resources': 'Ressources',
-      'boutique': 'Boutique Solidaire',
-      'ethics': 'IA Éthique',
-      'start_free': 'Commencer gratuitement',
-      'try_chat': 'Essayer Chat IARP',
-      'programming': 'Programmation',
-      'nutrition': 'Diététique',
-      'ai_domains': '10 Domaines IA',
-      'certifications': 'Certifications',
-    },
-    'en': {
-      'welcome': 'Welcome',
-      'courses': 'Courses',
-      'resources': 'Resources',
-      'boutique': 'Solidarity Shop',
-      'ethics': 'Ethical AI',
-      'start_free': 'Start for free',
-      'try_chat': 'Try Chat IARP',
-      'programming': 'Programming',
-      'nutrition': 'Nutrition',
-      'ai_domains': '10 AI Domains',
-      'certifications': 'Certifications',
-    },
-    'es': {
-      'welcome': 'Bienvenido',
-      'courses': 'Cursos',
-      'resources': 'Recursos',
-      'boutique': 'Tienda Solidaria',
-      'ethics': 'IA Ética',
-      'start_free': 'Empezar gratis',
-      'try_chat': 'Probar Chat IARP',
-      'programming': 'Programación',
-      'nutrition': 'Dietética',
-      'ai_domains': '10 Dominios IA',
-      'certifications': 'Certificaciones',
-    },
-  };
-
-  const lang = language || 'fr';
-  return translations[lang]?.[key] || key;
-}
+export default LanguageContext;
