@@ -101,6 +101,7 @@ import { AlAmanCEDPrototype } from "@/components/AlAmanCEDPrototype";
 import { CEDReplitPlatform } from "@/components/CEDReplitPlatform";
 import HRManagementRobustPage from "@/pages/HRManagementRobustPage";
 import HRTestPage from "@/pages/HRTestPage";
+import HRSimplePage from "@/pages/HRSimplePage";
 import ContractGeneratorPage from "@/pages/ContractGeneratorPage";
 import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
@@ -360,16 +361,16 @@ function Router() {
       <Route path="/equipe-complete" component={ContactComplet} />
       
       {/* Système RH et Code du Travail */}
-      <Route path="/rh-management" component={HRManagementRobustPage} />
-      <Route path="/ressources-humaines" component={HRManagementRobustPage} />
-      <Route path="/gestion-rh" component={HRManagementRobustPage} />
-      <Route path="/code-travail-suisse" component={HRManagementRobustPage} />
-      <Route path="/contrats-travail" component={HRManagementRobustPage} />
-      <Route path="/droit-travail" component={HRManagementRobustPage} />
-      <Route path="/ia-juridique" component={HRManagementRobustPage} />
-      <Route path="/consultation-juridique" component={HRManagementRobustPage} />
-      <Route path="/salaires-equipe" component={HRManagementRobustPage} />
-      <Route path="/periode-essai" component={HRManagementRobustPage} />
+      <Route path="/rh-management" component={HRSimplePage} />
+      <Route path="/ressources-humaines" component={HRSimplePage} />
+      <Route path="/gestion-rh" component={HRSimplePage} />
+      <Route path="/code-travail-suisse" component={HRSimplePage} />
+      <Route path="/contrats-travail" component={HRSimplePage} />
+      <Route path="/droit-travail" component={HRSimplePage} />
+      <Route path="/ia-juridique" component={HRSimplePage} />
+      <Route path="/consultation-juridique" component={HRSimplePage} />
+      <Route path="/salaires-equipe" component={HRSimplePage} />
+      <Route path="/periode-essai" component={HRSimplePage} />
       <Route path="/hr-test" component={HRTestPage} />
       <Route path="/test-rh" component={HRTestPage} />
       <Route path="/tableau-bord-equipe" component={TableauBordEquipePage} />
