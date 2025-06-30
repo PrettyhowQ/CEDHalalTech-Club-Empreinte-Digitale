@@ -162,6 +162,7 @@ import AssistantIASpiritual from "@/pages/AssistantIASpiritual";
 import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
 import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 import IslamicThemesPage from "@/pages/IslamicThemesPage";
+import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -746,6 +747,13 @@ function Router() {
       <Route path="/ecosystem-diagnostic" component={EcosystemDiagnosticsPage} />
       <Route path="/analyse-complete" component={EcosystemDiagnosticsPage} />
       <Route path="/performance" component={EcosystemDiagnosticsPage} />
+      
+      {/* Fiqh Informatique complet */}
+      <Route path="/fiqh-informatique" component={FiqhCompliancePage} />
+      <Route path="/fiqh-compliance" component={FiqhCompliancePage} />
+      <Route path="/islamic-ethics" component={FiqhCompliancePage} />
+      <Route path="/halal-development" component={FiqhCompliancePage} />
+      <Route path="/ethical-coding" component={FiqhCompliancePage} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
