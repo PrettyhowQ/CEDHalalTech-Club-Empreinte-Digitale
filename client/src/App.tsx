@@ -150,6 +150,7 @@ import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
 import QuranReaderPage from "@/pages/QuranReaderPage";
+import MobileNativeAppsRobustPage from "@/pages/MobileNativeAppsRobustPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -429,15 +430,15 @@ function Router() {
       <Route path="/tech-apis" component={APIManagementPage} />
       <Route path="/api-tech" component={APIManagementPage} />
       <Route path="/test-api-management" component={APIManagementTest} />
-      <Route path="/apps-natives" component={MobileNativeAppsPage} />
-      <Route path="/applications-natives" component={MobileNativeAppsPage} />
-      <Route path="/native-apps" component={MobileNativeAppsPage} />
-      <Route path="/mobile-apps" component={MobileNativeAppsPage} />
-      <Route path="/mobile-ios-android" component={MobileNativeAppsPage} />
-      <Route path="/ios-android-apps" component={MobileNativeAppsPage} />
-      <Route path="/tech-mobile" component={MobileNativeAppsPage} />
-      <Route path="/mobile-tech" component={MobileNativeAppsPage} />
-      <Route path="/test-native-apps" component={NativeAppsTestSimple} />
+      <Route path="/apps-natives" component={MobileNativeAppsRobustPage} />
+      <Route path="/applications-natives" component={MobileNativeAppsRobustPage} />
+      <Route path="/native-apps" component={MobileNativeAppsRobustPage} />
+      <Route path="/mobile-apps" component={MobileNativeAppsRobustPage} />
+      <Route path="/mobile-ios-android" component={MobileNativeAppsRobustPage} />
+      <Route path="/ios-android-apps" component={MobileNativeAppsRobustPage} />
+      <Route path="/tech-mobile" component={MobileNativeAppsRobustPage} />
+      <Route path="/mobile-tech" component={MobileNativeAppsRobustPage} />
+      <Route path="/test-native-apps" component={MobileNativeAppsRobustPage} />
       <Route path="/analytics-avancees" component={AnalyticsAvanceesPage} />
       <Route path="/intelligence-artificielle" component={AnalyticsAvanceesPage} />
       <Route path="/integrations-strategiques" component={IntegrationsStrategiquesPage} />
