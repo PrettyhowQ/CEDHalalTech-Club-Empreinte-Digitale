@@ -7,6 +7,7 @@ import { insertChatConversationSchema, insertAnalyticsEventSchema } from "@share
 
 import { seedIslamicCourses } from './seedIslamicCourses';
 import formationsRoutes from './routes/formations';
+import aiRoutes from './routes/ai';
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -297,6 +298,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Formations routes - Système CED Academy
   app.use('/api/formations', formationsRoutes);
+
+  // IA routes - Super IARP Pro et générateurs halal
+  app.use('/api/ai', aiRoutes);
 
   const httpServer = createServer(app);
   return httpServer;
