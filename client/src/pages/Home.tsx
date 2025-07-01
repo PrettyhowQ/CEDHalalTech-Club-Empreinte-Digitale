@@ -46,6 +46,7 @@ import { AnalyticsDashboard } from '@/components/sections/AnalyticsDashboard';
 import { ImpactEnvironnementalSection } from '@/components/sections/ImpactEnvironnementalSection';
 import { FeaturedToolsSection } from '@/components/sections/FeaturedToolsSection';
 import { VoiceAssistant } from '@/components/voice/VoiceAssistant';
+import { FloatingQuranButton } from '@/components/ui/FloatingQuranButton';
 
 export default function Home() {
   return (
@@ -480,6 +481,10 @@ export default function Home() {
         {/* PRIORITÉ 12 - TÉMOIGNAGES ET VALIDATION SOCIALE */}
         <TestimonialsSection />
       </main>
+      
+      {/* BOUTON CORAN FLOTTANT IMPOSSIBLE À RATER */}
+      <FloatingQuranButton />
+      
       <ThemeCustomizer />
       <VoiceAssistant />
       <ContextualHelp />
