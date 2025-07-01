@@ -166,7 +166,7 @@ import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
 import TestingCenterPage from "@/pages/TestingCenterPage";
-import CharteFiqhIAHalal from "@/pages/CharteFiqhIAHalal";
+import CharteFiqhIAHalalSimple from "@/pages/CharteFiqhIAHalalSimple";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -778,6 +778,12 @@ function Router() {
       <Route path="/centre-test" component={TestingCenterPage} />
       <Route path="/test-fonctionnalites" component={TestingCenterPage} />
       <Route path="/tous-tester" component={TestingCenterPage} />
+      
+      {/* Charte Fiqh & IA Halal */}
+      <Route path="/charte-fiqh-ia-halal" component={CharteFiqhIAHalalSimple} />
+      <Route path="/charte-prettyhowq" component={CharteFiqhIAHalalSimple} />
+      <Route path="/certification-halal" component={CharteFiqhIAHalalSimple} />
+      <Route path="/fiqh-chart" component={CharteFiqhIAHalalSimple} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={Home} />
