@@ -67,7 +67,7 @@ export default function Home() {
         {/* TABLEAU DE BORD CENTRAL */}
         <CentralDashboard />
 
-        <div style={{ display: 'none' }}>
+
         {/* ACCÈS DIRECT PRINCIPALES FONCTIONNALITÉS */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
