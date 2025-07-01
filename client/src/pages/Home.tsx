@@ -20,7 +20,7 @@ import { IntuitiveBreadcrumb } from '@/components/ui/IntuitiveBreadcrumb';
 import { ContextualHelp } from '@/components/ui/ContextualHelp';
 import { PerformanceMonitor } from '@/components/ui/PerformanceMonitor';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { QuranAccessSection } from '@/components/sections/QuranAccessSection';
+import { CentralDashboard } from '@/components/CentralDashboard';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
@@ -64,9 +64,10 @@ export default function Home() {
       <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
-        {/* SECTION RÉCITATEURS CORAN */}
-        <QuranAccessSection />
+        {/* TABLEAU DE BORD CENTRAL */}
+        <CentralDashboard />
 
+        <div style={{ display: 'none' }}>
         {/* ACCÈS DIRECT PRINCIPALES FONCTIONNALITÉS */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
