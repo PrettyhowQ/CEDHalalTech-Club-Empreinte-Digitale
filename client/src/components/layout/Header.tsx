@@ -16,6 +16,7 @@ export function Header() {
   const { currentLanguage, setLanguage } = useLanguage();
 
   const navigation = [
+    { name: 'Récitateurs Coran 🎧', href: '/lecteur-coran', priority: true, quran: true },
     { name: 'Centre de Test 🧪', href: '/test-center', priority: true, testing: true },
     { name: 'Vue d\'Ensemble 📊', href: '/vue-ensemble', priority: true, premium: true },
     { name: 'Institut CED Academy 🎓', href: '/institut-ced-academy', priority: true, premium: true },
@@ -84,15 +85,17 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  item.testing
-                    ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg hover:from-emerald-600 hover:to-cyan-600 shadow-lg font-bold animate-pulse'
-                    : item.premium
-                      ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg hover:from-yellow-600 hover:to-orange-600 shadow-md font-bold'
-                      : item.priority 
-                        ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
-                        : location === item.href
-                          ? 'text-primary-600 border-b-2 border-primary-600'
-                          : 'text-gray-700 hover:text-primary-600'
+                  item.quran
+                    ? 'bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg hover:from-green-700 hover:to-emerald-800 shadow-lg font-bold'
+                    : item.testing
+                      ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-lg hover:from-emerald-600 hover:to-cyan-600 shadow-lg font-bold animate-pulse'
+                      : item.premium
+                        ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg hover:from-yellow-600 hover:to-orange-600 shadow-md font-bold'
+                        : item.priority 
+                          ? 'bg-green-500 text-white rounded-lg hover:bg-green-600 shadow-md'
+                          : location === item.href
+                            ? 'text-primary-600 border-b-2 border-primary-600'
+                            : 'text-gray-700 hover:text-primary-600'
                 }`}
               >
                 {item.name}
