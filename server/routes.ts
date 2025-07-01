@@ -6,6 +6,7 @@ import { chatWithIARP } from "./openai";
 import { insertChatConversationSchema, insertAnalyticsEventSchema } from "@shared/schema";
 
 import { seedIslamicCourses } from './seedIslamicCourses';
+import formationsRoutes from './routes/formations';
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -293,6 +294,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Failed to track event" });
     }
   });
+
+  // Formations routes - Système CED Academy
+  app.use('/api/formations', formationsRoutes);
 
   const httpServer = createServer(app);
   return httpServer;
