@@ -15,21 +15,70 @@ interface Language {
 interface LanguageContextType {
   currentLanguage: Language;
   setLanguage: (language: Language) => void;
+  supportedLanguages: Language[];
   translations: Record<string, string>;
   isRTL: boolean;
 }
 
-const defaultLanguage: Language = {
-  code: 'fr',
-  name: 'Français',
-  nativeName: 'Français',
-  flag: '🇫🇷',
-  region: 'Europe',
-  direction: 'ltr',
-  audioSupport: true,
-  culturalGreeting: 'Que la paix soit avec vous',
-  religiousContext: 'Communauté musulmane croissante'
-};
+const supportedLanguages: Language[] = [
+  {
+    code: 'fr',
+    name: 'Français',
+    nativeName: 'Français',
+    flag: '🇫🇷',
+    region: 'Europe',
+    direction: 'ltr',
+    audioSupport: true,
+    culturalGreeting: 'Que la paix soit avec vous',
+    religiousContext: 'Communauté musulmane croissante'
+  },
+  {
+    code: 'en',
+    name: 'English',
+    nativeName: 'English',
+    flag: '🇺🇸',
+    region: 'North America',
+    direction: 'ltr',
+    audioSupport: true,
+    culturalGreeting: 'Peace be upon you',
+    religiousContext: 'Growing Islamic community'
+  },
+  {
+    code: 'ar',
+    name: 'Arabic',
+    nativeName: 'العربية',
+    flag: '🇸🇦',
+    region: 'Middle East',
+    direction: 'rtl',
+    audioSupport: true,
+    culturalGreeting: 'السلام عليكم ورحمة الله وبركاته',
+    religiousContext: 'Language of the Quran'
+  },
+  {
+    code: 'es',
+    name: 'Spanish',
+    nativeName: 'Español',
+    flag: '🇪🇸',
+    region: 'Europe',
+    direction: 'ltr',
+    audioSupport: true,
+    culturalGreeting: 'La paz sea contigo',
+    religiousContext: 'Muslim heritage in Al-Andalus'
+  },
+  {
+    code: 'tr',
+    name: 'Turkish',
+    nativeName: 'Türkçe',
+    flag: '🇹🇷',
+    region: 'Asia',
+    direction: 'ltr',
+    audioSupport: true,
+    culturalGreeting: 'Selamünaleyküm',
+    religiousContext: 'Ottoman Islamic tradition'
+  }
+];
+
+const defaultLanguage: Language = supportedLanguages[0];
 
 // Traductions de base pour l'interface
 const translations: Record<string, Record<string, string>> = {
@@ -214,6 +263,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const value: LanguageContextType = {
     currentLanguage,
     setLanguage,
+    supportedLanguages,
     translations: currentTranslations,
     isRTL: currentLanguage.direction === 'rtl'
   };

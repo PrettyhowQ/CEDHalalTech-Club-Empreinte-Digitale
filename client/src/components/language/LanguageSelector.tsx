@@ -11,17 +11,20 @@ export function LanguageSelector() {
   const [searchTerm, setSearchTerm] = useState('');
   const { currentLanguage, setLanguage, supportedLanguages } = useLanguage();
 
-  const filteredLanguages = supportedLanguages.filter(
+  const filteredLanguages = supportedLanguages?.filter(
     (lang) =>
       lang.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       lang.nativeName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       lang.code.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  ) || [];
 
   const handleLanguageSelect = (languageCode: string) => {
-    setLanguage(languageCode);
-    setIsOpen(false);
-    setSearchTerm('');
+    const selectedLang = supportedLanguages?.find(lang => lang.code === languageCode);
+    if (selectedLang) {
+      setLanguage(selectedLang);
+      setIsOpen(false);
+      setSearchTerm('');
+    }
   };
 
   return (
