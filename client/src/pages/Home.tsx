@@ -65,6 +65,57 @@ export default function Home() {
       <PermanentNavigation />
       <QuickNavigation />
       <main className="relative z-10">
+        {/* ACCÈS DIRECT CORAN - ULTRA SIMPLE */}
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 p-8">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold text-green-800 mb-8">🕌 Club Empreinte Digitale</h1>
+            
+            {/* BOUTON CORAN GÉANT */}
+            <Link href="/lecteur-coran">
+              <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 cursor-pointer mb-8 max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-6">
+                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-6xl">🎧</span>
+                  </div>
+                  <div className="text-left">
+                    <h2 className="text-5xl font-bold mb-4">ÉCOUTER LE CORAN</h2>
+                    <p className="text-2xl opacity-90">Mishary Al-Afasy • Al-Sudais • Al-Shuraim</p>
+                    <p className="text-lg opacity-75 mt-2">Cliquez ici pour accéder aux récitateurs</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            
+            {/* AUTRES SERVICES */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Link href="/banque">
+                <div className="bg-blue-600 text-white rounded-xl p-6 hover:bg-blue-700 transition-colors">
+                  <div className="text-4xl mb-3">🏦</div>
+                  <h3 className="text-xl font-bold">CED Bank</h3>
+                  <p className="text-sm opacity-90">Banking halal</p>
+                </div>
+              </Link>
+              
+              <Link href="/institut-ced-academy">
+                <div className="bg-purple-600 text-white rounded-xl p-6 hover:bg-purple-700 transition-colors">
+                  <div className="text-4xl mb-3">🎓</div>
+                  <h3 className="text-xl font-bold">Institut CED</h3>
+                  <p className="text-sm opacity-90">Formations islamiques</p>
+                </div>
+              </Link>
+              
+              <Link href="/techforall">
+                <div className="bg-pink-600 text-white rounded-xl p-6 hover:bg-pink-700 transition-colors">
+                  <div className="text-4xl mb-3">❤️</div>
+                  <h3 className="text-xl font-bold">TechForAll</h3>
+                  <p className="text-sm opacity-90">Dons solidaires</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div style={{ display: 'none' }}>
         {/* TABLEAU DE BORD CENTRAL */}
         <CentralDashboard />
 
@@ -474,12 +525,7 @@ export default function Home() {
         <PortfolioSection />
         <EcosystemSection />
         
-        {/* PRIORITÉ 11 - IA ÉTHIQUE ET IMPACT */}
-        <IAEthiqueSection />
-        <ImpactEnvironnementalSection />
-        
-        {/* PRIORITÉ 12 - TÉMOIGNAGES ET VALIDATION SOCIALE */}
-        <TestimonialsSection />
+        </div>
       </main>
       
       {/* BOUTON CORAN FLOTTANT IMPOSSIBLE À RATER */}
