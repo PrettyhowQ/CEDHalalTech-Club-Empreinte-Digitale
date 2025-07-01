@@ -728,7 +728,7 @@ export function SpiritualMotivationMicroInteractions() {
                   <div className="space-y-4">
                     {[
                       { name: 'Premier Dhikr', icon: '🌟', description: 'Première motivation spirituelle accomplie' },
-                      { name: 'Séries de 7', icon: '🔥', description: '7 jours consécutifs de motivation' },
+                      { name: 'Séries de 7', icon: '⭐', description: '7 jours consécutifs de motivation' },
                       { name: 'Explorateur Spirituel', icon: '🧭', description: 'Testé toutes les catégories' },
                       { name: 'Méditant Assidu', icon: '🧘', description: '50 sessions de méditation' }
                     ].map((achievement, index) => (

@@ -361,7 +361,7 @@ export function RealTimeDubaiInvestments() {
         <CardContent>
           <div className="space-y-4">
             <div className="p-4 bg-white rounded-lg border border-yellow-200">
-              <h4 className="font-bold text-yellow-800 mb-2">🔥 Dubai South - Tendance Haussière</h4>
+              <h4 className="font-bold text-yellow-800 mb-2">⭐ Dubai South - Tendance Haussière</h4>
               <p className="text-sm text-gray-700 mb-3">
                 Prix en hausse de +2.79% sur 24h. Zone en développement rapide avec nouveau métro en construction.
               </p>

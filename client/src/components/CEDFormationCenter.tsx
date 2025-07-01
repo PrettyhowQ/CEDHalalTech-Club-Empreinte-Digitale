@@ -563,7 +563,7 @@ export function CEDFormationCenter() {
                       )}
                       {course.bestseller && (
                         <Badge className="bg-red-500 text-white text-xs">
-                          🔥 Bestseller
+                          ⭐ Bestseller
                         </Badge>
                       )}
                       {course.newCourse && (

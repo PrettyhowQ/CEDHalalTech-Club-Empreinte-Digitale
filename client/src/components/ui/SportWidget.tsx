@@ -194,8 +194,8 @@ export function SportWidget({ variant = 'full' }: { variant?: 'full' | 'compact'
               <Badge variant="secondary" className="text-xs mt-1">1.8K actifs</Badge>
             </div>
             <div className="p-3 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow text-center">
-              <div className="text-2xl mb-2">🧘‍♀️</div>
-              <h4 className="font-medium text-sm">Yoga</h4>
+              <div className="text-2xl mb-2">🕌</div>
+              <h4 className="font-medium text-sm">Méditation Dhikr</h4>
               <Badge variant="secondary" className="text-xs mt-1">1.5K actifs</Badge>
             </div>
             <div className="p-3 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow text-center">
