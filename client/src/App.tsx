@@ -167,6 +167,7 @@ import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
 import TestingCenterPage from "@/pages/TestingCenterPage";
 import CharteFiqhIAHalalSimple from "@/pages/CharteFiqhIAHalalSimple";
+import CloudHalal from "@/pages/CloudHalal";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -794,6 +795,12 @@ function Router() {
           <Route path="/dashboard" component={Dashboard} />
         </>
       )}
+
+      {/* Cloud Halal */}
+      <Route path="/cloud-halal" component={CloudHalal} />
+      <Route path="/cloud-100-halal" component={CloudHalal} />
+      <Route path="/halal-cloud" component={CloudHalal} />
+      <Route path="/infrastructure-islamique" component={CloudHalal} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
