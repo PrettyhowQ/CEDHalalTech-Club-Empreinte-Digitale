@@ -166,6 +166,7 @@ import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
 import TestingCenterPage from "@/pages/TestingCenterPage";
+import CharteFiqhIAHalal from "@/pages/CharteFiqhIAHalal";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
