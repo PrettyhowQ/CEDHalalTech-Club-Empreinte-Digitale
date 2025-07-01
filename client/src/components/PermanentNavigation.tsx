@@ -36,6 +36,18 @@ export function PermanentNavigation() {
     // Pages principales
     { title: 'Accueil', icon: TrendingUp, href: '/', category: 'Principal' },
     { title: 'Centre de Test', icon: Search, href: '/test-center', category: 'Principal' },
+    
+    // CORAN ET RÉCITATEURS
+    { title: 'Écouter du Coran', icon: BookOpen, href: '/lecteur-coran', category: 'Spirituel' },
+    { title: 'Récitateurs Coran', icon: BookOpen, href: '/lecteur-coran', category: 'Spirituel' },
+    { title: 'Mishary Al-Afasy', icon: BookOpen, href: '/lecteur-coran?reciter=mishary', category: 'Spirituel' },
+    { title: 'Al-Sudais', icon: BookOpen, href: '/lecteur-coran?reciter=sudais', category: 'Spirituel' },
+    { title: 'Al-Shuraim', icon: BookOpen, href: '/lecteur-coran?reciter=shuraim', category: 'Spirituel' },
+    { title: 'Saad Al-Ghamdi', icon: BookOpen, href: '/lecteur-coran?reciter=ghamdi', category: 'Spirituel' },
+    { title: 'Coran Tajweed', icon: BookOpen, href: '/coran-tajweed', category: 'Spirituel' },
+    { title: 'Coran Multilingue', icon: Globe, href: '/quran-multilingue', category: 'Spirituel' },
+    { title: 'Quran Reader', icon: BookOpen, href: '/quran-reader', category: 'Spirituel' },
+    
     { title: 'Formations', icon: GraduationCap, href: '/formations', category: 'Formation' },
     { title: 'Planning', icon: TrendingUp, href: '/planning', category: 'Organisation' },
     { title: 'Dashboard', icon: TrendingUp, href: '/dashboard', category: 'Principal' },

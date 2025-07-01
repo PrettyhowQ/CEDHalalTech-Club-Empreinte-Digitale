@@ -124,11 +124,25 @@ export function CentralDashboard() {
     { name: 'Premium', href: '/premium-dashboard', icon: Star, color: 'yellow' }
   ];
 
-  const filteredServices = mainServices.filter(service =>
-    service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const quranSearchTerms = [
+    'coran', 'quran', 'récitateur', 'récitateurs', 'mishary', 'sudais', 'shuraim', 'ghamdi',
+    'écouter', 'audio', 'tajweed', 'al-afasy', 'al-sudais', 'al-shuraim', 'al-ghamdi'
+  ];
+
+  const filteredServices = mainServices.filter(service => {
+    const query = searchQuery.toLowerCase();
+    const matchesService = service.title.toLowerCase().includes(query) ||
+                          service.description.toLowerCase().includes(query) ||
+                          service.category.toLowerCase().includes(query);
+    
+    // Si la recherche contient des termes liés au Coran, prioriser le service Coran
+    const isQuranSearch = quranSearchTerms.some(term => query.includes(term));
+    if (isQuranSearch && service.id === 'quran') {
+      return true;
+    }
+    
+    return matchesService;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-4">
