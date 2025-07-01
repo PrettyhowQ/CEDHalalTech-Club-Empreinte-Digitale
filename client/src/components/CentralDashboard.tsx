@@ -133,6 +133,33 @@ export function CentralDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 p-4">
       <div className="max-w-7xl mx-auto">
+        {/* BOUTON CORAN TRÈS VISIBLE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center mb-8"
+        >
+          <Link href="/lecteur-coran">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white rounded-2xl p-8 shadow-2xl mb-6 cursor-pointer transform transition-all duration-300 hover:shadow-3xl"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                  <Headphones className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-left">
+                  <h2 className="text-3xl font-bold mb-2">🎧 ÉCOUTER LE CORAN</h2>
+                  <p className="text-lg opacity-90">Mishary Al-Afasy • Al-Sudais • Al-Shuraim</p>
+                  <p className="text-sm opacity-75">Cliquez ici pour accéder aux récitateurs</p>
+                </div>
+                <Play className="h-12 w-12 text-white ml-4" />
+              </div>
+            </motion.div>
+          </Link>
+        </motion.div>
+
         {/* Header avec recherche */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
