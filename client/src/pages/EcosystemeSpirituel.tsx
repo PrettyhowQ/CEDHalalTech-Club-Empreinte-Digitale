@@ -574,7 +574,7 @@ export default function EcosystemeSpirituel() {
                       <CardHeader>
                         <div className="flex items-center space-x-3">
                           <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                            <Smile className="h-6 w-6 text-white" />
+                            <Heart className="h-6 w-6 text-white" />
                           </div>
                           <div>
                             <h3 className="font-semibold text-lg">{story.name}</h3>
@@ -674,7 +674,7 @@ export default function EcosystemeSpirituel() {
                 {
                   title: 'Méditation Islamique',
                   description: 'Techniques de dhikr et contemplation',
-                  icon: <Peace className="h-6 w-6" />,
+                  icon: <Star className="h-6 w-6" />,
                   color: 'from-pink-500 to-purple-500',
                   items: '76 sessions guidées'
                 }

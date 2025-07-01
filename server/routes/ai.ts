@@ -172,7 +172,7 @@ router.post('/chat', async (req, res) => {
     let tokens = 0;
     let filtered = false;
 
-    if (process.env.OPENAI_API_KEY) {
+    if (openai) {
       try {
         const completion = await openai.chat.completions.create({
           model: model.includes('gpt-4') ? 'gpt-4' : 'gpt-3.5-turbo',
@@ -272,7 +272,7 @@ router.post('/generate', async (req, res) => {
     let result = "";
     let filtered = false;
 
-    if (process.env.OPENAI_API_KEY) {
+    if (openai) {
       try {
         const completion = await openai.chat.completions.create({
           model: 'gpt-4',
