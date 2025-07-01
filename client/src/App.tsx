@@ -109,6 +109,7 @@ import LogisticsMobilePage from "@/pages/LogisticsMobilePage";
 import TechForAllIntegrationPage from "@/pages/TechForAllIntegrationPage";
 import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
+import { SimpleCoran } from "@/components/SimpleCoran";
 import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
 import SystemDiagnosticsPage from "@/pages/SystemDiagnosticsPage";
 import PremiumArabicSchoolPage from "@/pages/PremiumArabicSchoolPage";
@@ -510,10 +511,10 @@ function Router() {
       <Route path="/recitateurs-coran" component={QuranListeningPage} />
       <Route path="/coran-live" component={QuranLiveRecitationPage} />
       <Route path="/quran-live" component={QuranLiveRecitationPage} />
-      <Route path="/lecteur-coran" component={QuranReaderPage} />
-      <Route path="/quran-reader" component={QuranReaderPage} />
-      <Route path="/coran-tajweed" component={QuranReaderPage} />
-      <Route path="/lecture-coran" component={QuranReaderPage} />
+      <Route path="/lecteur-coran" component={SimpleCoran} />
+      <Route path="/quran-reader" component={SimpleCoran} />
+      <Route path="/coran-tajweed" component={SimpleCoran} />
+      <Route path="/lecture-coran" component={SimpleCoran} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
