@@ -153,10 +153,112 @@ export function QuranListeningApp() {
     { number: 3, name: 'Al-Imran', arabicName: 'آل عمران', englishName: 'The Family of Imran', numberOfAyahs: 200, revelationType: 'medinan', duration: '2:45:30' },
     { number: 4, name: 'An-Nisa', arabicName: 'النساء', englishName: 'The Women', numberOfAyahs: 176, revelationType: 'medinan', duration: '2:28:45' },
     { number: 5, name: 'Al-Maidah', arabicName: 'المائدة', englishName: 'The Table', numberOfAyahs: 120, revelationType: 'medinan', duration: '1:52:20' },
+    { number: 6, name: 'Al-Anam', arabicName: 'الأنعام', englishName: 'The Cattle', numberOfAyahs: 165, revelationType: 'meccan', duration: '2:15:30' },
+    { number: 7, name: 'Al-Araf', arabicName: 'الأعراف', englishName: 'The Heights', numberOfAyahs: 206, revelationType: 'meccan', duration: '2:52:45' },
+    { number: 8, name: 'Al-Anfal', arabicName: 'الأنفال', englishName: 'The Spoils of War', numberOfAyahs: 75, revelationType: 'medinan', duration: '1:18:20' },
+    { number: 9, name: 'At-Tawbah', arabicName: 'التوبة', englishName: 'The Repentance', numberOfAyahs: 129, revelationType: 'medinan', duration: '2:05:15' },
+    { number: 10, name: 'Yunus', arabicName: 'يونس', englishName: 'Jonah', numberOfAyahs: 109, revelationType: 'meccan', duration: '1:48:30' },
+    { number: 11, name: 'Hud', arabicName: 'هود', englishName: 'Hud', numberOfAyahs: 123, revelationType: 'meccan', duration: '1:58:45' },
+    { number: 12, name: 'Yusuf', arabicName: 'يوسف', englishName: 'Joseph', numberOfAyahs: 111, revelationType: 'meccan', duration: '1:52:15' },
+    { number: 13, name: 'Ar-Rad', arabicName: 'الرعد', englishName: 'The Thunder', numberOfAyahs: 43, revelationType: 'medinan', duration: '42:30' },
+    { number: 14, name: 'Ibrahim', arabicName: 'إبراهيم', englishName: 'Abraham', numberOfAyahs: 52, revelationType: 'meccan', duration: '48:15' },
+    { number: 15, name: 'Al-Hijr', arabicName: 'الحجر', englishName: 'The Rocky Tract', numberOfAyahs: 99, revelationType: 'meccan', duration: '1:22:45' },
+    { number: 16, name: 'An-Nahl', arabicName: 'النحل', englishName: 'The Bee', numberOfAyahs: 128, revelationType: 'meccan', duration: '1:58:30' },
+    { number: 17, name: 'Al-Isra', arabicName: 'الإسراء', englishName: 'The Night Journey', numberOfAyahs: 111, revelationType: 'meccan', duration: '1:45:20' },
     { number: 18, name: 'Al-Kahf', arabicName: 'الكهف', englishName: 'The Cave', numberOfAyahs: 110, revelationType: 'meccan', duration: '1:35:40' },
+    { number: 19, name: 'Maryam', arabicName: 'مريم', englishName: 'Mary', numberOfAyahs: 98, revelationType: 'meccan', duration: '1:28:15' },
+    { number: 20, name: 'Ta-Ha', arabicName: 'طه', englishName: 'Ta-Ha', numberOfAyahs: 135, revelationType: 'meccan', duration: '1:52:30' },
+    { number: 21, name: 'Al-Anbiya', arabicName: 'الأنبياء', englishName: 'The Prophets', numberOfAyahs: 112, revelationType: 'meccan', duration: '1:42:45' },
+    { number: 22, name: 'Al-Hajj', arabicName: 'الحج', englishName: 'The Pilgrimage', numberOfAyahs: 78, revelationType: 'medinan', duration: '1:15:20' },
+    { number: 23, name: 'Al-Muminun', arabicName: 'المؤمنون', englishName: 'The Believers', numberOfAyahs: 118, revelationType: 'meccan', duration: '1:38:15' },
+    { number: 24, name: 'An-Nur', arabicName: 'النور', englishName: 'The Light', numberOfAyahs: 64, revelationType: 'medinan', duration: '1:05:30' },
+    { number: 25, name: 'Al-Furqan', arabicName: 'الفرقان', englishName: 'The Criterion', numberOfAyahs: 77, revelationType: 'meccan', duration: '1:12:45' },
+    { number: 26, name: 'Ash-Shuara', arabicName: 'الشعراء', englishName: 'The Poets', numberOfAyahs: 227, revelationType: 'meccan', duration: '2:35:20' },
+    { number: 27, name: 'An-Naml', arabicName: 'النمل', englishName: 'The Ant', numberOfAyahs: 93, revelationType: 'meccan', duration: '1:25:15' },
+    { number: 28, name: 'Al-Qasas', arabicName: 'القصص', englishName: 'The Stories', numberOfAyahs: 88, revelationType: 'meccan', duration: '1:22:30' },
+    { number: 29, name: 'Al-Ankabut', arabicName: 'العنكبوت', englishName: 'The Spider', numberOfAyahs: 69, revelationType: 'meccan', duration: '1:08:45' },
+    { number: 30, name: 'Ar-Rum', arabicName: 'الروم', englishName: 'The Romans', numberOfAyahs: 60, revelationType: 'meccan', duration: '58:20' },
+    { number: 31, name: 'Luqman', arabicName: 'لقمان', englishName: 'Luqman', numberOfAyahs: 34, revelationType: 'meccan', duration: '35:15' },
+    { number: 32, name: 'As-Sajdah', arabicName: 'السجدة', englishName: 'The Prostration', numberOfAyahs: 30, revelationType: 'meccan', duration: '28:30' },
+    { number: 33, name: 'Al-Ahzab', arabicName: 'الأحزاب', englishName: 'The Clans', numberOfAyahs: 73, revelationType: 'medinan', duration: '1:15:45' },
+    { number: 34, name: 'Saba', arabicName: 'سبأ', englishName: 'Sheba', numberOfAyahs: 54, revelationType: 'meccan', duration: '52:20' },
+    { number: 35, name: 'Fatir', arabicName: 'فاطر', englishName: 'The Creator', numberOfAyahs: 45, revelationType: 'meccan', duration: '45:15' },
     { number: 36, name: 'Ya-Sin', arabicName: 'يس', englishName: 'Ya-Sin', numberOfAyahs: 83, revelationType: 'meccan', duration: '42:15' },
+    { number: 37, name: 'As-Saffat', arabicName: 'الصافات', englishName: 'Those Who Set The Ranks', numberOfAyahs: 182, revelationType: 'meccan', duration: '2:18:30' },
+    { number: 38, name: 'Sad', arabicName: 'ص', englishName: 'The Letter Sad', numberOfAyahs: 88, revelationType: 'meccan', duration: '1:22:45' },
+    { number: 39, name: 'Az-Zumar', arabicName: 'الزمر', englishName: 'The Troops', numberOfAyahs: 75, revelationType: 'meccan', duration: '1:15:20' },
+    { number: 40, name: 'Ghafir', arabicName: 'غافر', englishName: 'The Forgiver', numberOfAyahs: 85, revelationType: 'meccan', duration: '1:18:15' },
+    { number: 41, name: 'Fussilat', arabicName: 'فصلت', englishName: 'Explained In Detail', numberOfAyahs: 54, revelationType: 'meccan', duration: '52:30' },
+    { number: 42, name: 'Ash-Shuraa', arabicName: 'الشورى', englishName: 'The Consultation', numberOfAyahs: 53, revelationType: 'meccan', duration: '48:45' },
+    { number: 43, name: 'Az-Zukhruf', arabicName: 'الزخرف', englishName: 'The Ornaments of Gold', numberOfAyahs: 89, revelationType: 'meccan', duration: '1:25:20' },
+    { number: 44, name: 'Ad-Dukhan', arabicName: 'الدخان', englishName: 'The Smoke', numberOfAyahs: 59, revelationType: 'meccan', duration: '32:15' },
+    { number: 45, name: 'Al-Jathiyah', arabicName: 'الجاثية', englishName: 'The Crouching', numberOfAyahs: 37, revelationType: 'meccan', duration: '35:30' },
+    { number: 46, name: 'Al-Ahqaf', arabicName: 'الأحقاف', englishName: 'The Wind-Curved Sandhills', numberOfAyahs: 35, revelationType: 'meccan', duration: '32:45' },
+    { number: 47, name: 'Muhammad', arabicName: 'محمد', englishName: 'Muhammad', numberOfAyahs: 38, revelationType: 'medinan', duration: '38:20' },
+    { number: 48, name: 'Al-Fath', arabicName: 'الفتح', englishName: 'The Victory', numberOfAyahs: 29, revelationType: 'medinan', duration: '28:15' },
+    { number: 49, name: 'Al-Hujurat', arabicName: 'الحجرات', englishName: 'The Rooms', numberOfAyahs: 18, revelationType: 'medinan', duration: '18:30' },
+    { number: 50, name: 'Qaf', arabicName: 'ق', englishName: 'The Letter Qaf', numberOfAyahs: 45, revelationType: 'meccan', duration: '25:45' },
+    { number: 51, name: 'Adh-Dhariyat', arabicName: 'الذاريات', englishName: 'The Winnowing Winds', numberOfAyahs: 60, revelationType: 'meccan', duration: '32:20' },
+    { number: 52, name: 'At-Tur', arabicName: 'الطور', englishName: 'The Mount', numberOfAyahs: 49, revelationType: 'meccan', duration: '28:15' },
+    { number: 53, name: 'An-Najm', arabicName: 'النجم', englishName: 'The Star', numberOfAyahs: 62, revelationType: 'meccan', duration: '32:30' },
+    { number: 54, name: 'Al-Qamar', arabicName: 'القمر', englishName: 'The Moon', numberOfAyahs: 55, revelationType: 'meccan', duration: '28:45' },
     { number: 55, name: 'Ar-Rahman', arabicName: 'الرحمن', englishName: 'The Most Gracious', numberOfAyahs: 78, revelationType: 'medinan', duration: '28:30' },
-    { number: 67, name: 'Al-Mulk', arabicName: 'الملك', englishName: 'The Kingdom', numberOfAyahs: 30, revelationType: 'meccan', duration: '18:45' },
+    { number: 56, name: 'Al-Waqiah', arabicName: 'الواقعة', englishName: 'The Inevitable', numberOfAyahs: 96, revelationType: 'meccan', duration: '42:20' },
+    { number: 57, name: 'Al-Hadid', arabicName: 'الحديد', englishName: 'The Iron', numberOfAyahs: 29, revelationType: 'medinan', duration: '28:15' },
+    { number: 58, name: 'Al-Mujadila', arabicName: 'المجادلة', englishName: 'The Pleading Woman', numberOfAyahs: 22, revelationType: 'medinan', duration: '22:30' },
+    { number: 59, name: 'Al-Hashr', arabicName: 'الحشر', englishName: 'The Exile', numberOfAyahs: 24, revelationType: 'medinan', duration: '25:45' },
+    { number: 60, name: 'Al-Mumtahanah', arabicName: 'الممتحنة', englishName: 'She That Is To Be Examined', numberOfAyahs: 13, revelationType: 'medinan', duration: '15:20' },
+    { number: 61, name: 'As-Saff', arabicName: 'الصف', englishName: 'The Ranks', numberOfAyahs: 14, revelationType: 'medinan', duration: '12:15' },
+    { number: 62, name: 'Al-Jumuah', arabicName: 'الجمعة', englishName: 'The Congregation', numberOfAyahs: 11, revelationType: 'medinan', duration: '8:30' },
+    { number: 63, name: 'Al-Munafiqun', arabicName: 'المنافقون', englishName: 'The Hypocrites', numberOfAyahs: 11, revelationType: 'medinan', duration: '8:45' },
+    { number: 64, name: 'At-Taghabun', arabicName: 'التغابن', englishName: 'The Mutual Disillusion', numberOfAyahs: 18, revelationType: 'medinan', duration: '12:20' },
+    { number: 65, name: 'At-Talaq', arabicName: 'الطلاق', englishName: 'The Divorce', numberOfAyahs: 12, revelationType: 'medinan', duration: '8:15' },
+    { number: 66, name: 'At-Tahrim', arabicName: 'التحريم', englishName: 'The Prohibition', numberOfAyahs: 12, revelationType: 'medinan', duration: '8:30' },
+    { number: 67, name: 'Al-Mulk', arabicName: 'الملك', englishName: 'The Sovereignty', numberOfAyahs: 30, revelationType: 'meccan', duration: '18:45' },
+    { number: 68, name: 'Al-Qalam', arabicName: 'القلم', englishName: 'The Pen', numberOfAyahs: 52, revelationType: 'meccan', duration: '25:20' },
+    { number: 69, name: 'Al-Haqqah', arabicName: 'الحاقة', englishName: 'The Reality', numberOfAyahs: 52, revelationType: 'meccan', duration: '22:15' },
+    { number: 70, name: 'Al-Maarij', arabicName: 'المعارج', englishName: 'The Ascending Stairways', numberOfAyahs: 44, revelationType: 'meccan', duration: '18:30' },
+    { number: 71, name: 'Nuh', arabicName: 'نوح', englishName: 'Noah', numberOfAyahs: 28, revelationType: 'meccan', duration: '15:45' },
+    { number: 72, name: 'Al-Jinn', arabicName: 'الجن', englishName: 'The Jinn', numberOfAyahs: 28, revelationType: 'meccan', duration: '15:20' },
+    { number: 73, name: 'Al-Muzzammil', arabicName: 'المزمل', englishName: 'The Enshrouded One', numberOfAyahs: 20, revelationType: 'meccan', duration: '12:15' },
+    { number: 74, name: 'Al-Muddaththir', arabicName: 'المدثر', englishName: 'The Cloaked One', numberOfAyahs: 56, revelationType: 'meccan', duration: '22:30' },
+    { number: 75, name: 'Al-Qiyamah', arabicName: 'القيامة', englishName: 'The Resurrection', numberOfAyahs: 40, revelationType: 'meccan', duration: '15:45' },
+    { number: 76, name: 'Al-Insan', arabicName: 'الإنسان', englishName: 'The Man', numberOfAyahs: 31, revelationType: 'medinan', duration: '18:20' },
+    { number: 77, name: 'Al-Mursalat', arabicName: 'المرسلات', englishName: 'The Emissaries', numberOfAyahs: 50, revelationType: 'meccan', duration: '18:15' },
+    { number: 78, name: 'An-Naba', arabicName: 'النبأ', englishName: 'The Tidings', numberOfAyahs: 40, revelationType: 'meccan', duration: '15:30' },
+    { number: 79, name: 'An-Naziat', arabicName: 'النازعات', englishName: 'Those Who Drag Forth', numberOfAyahs: 46, revelationType: 'meccan', duration: '16:45' },
+    { number: 80, name: 'Abasa', arabicName: 'عبس', englishName: 'He Frowned', numberOfAyahs: 42, revelationType: 'meccan', duration: '12:20' },
+    { number: 81, name: 'At-Takwir', arabicName: 'التكوير', englishName: 'The Overthrowing', numberOfAyahs: 29, revelationType: 'meccan', duration: '8:15' },
+    { number: 82, name: 'Al-Infitar', arabicName: 'الانفطار', englishName: 'The Cleaving', numberOfAyahs: 19, revelationType: 'meccan', duration: '5:30' },
+    { number: 83, name: 'Al-Mutaffifin', arabicName: 'المطففين', englishName: 'The Defrauding', numberOfAyahs: 36, revelationType: 'meccan', duration: '12:45' },
+    { number: 84, name: 'Al-Inshiqaq', arabicName: 'الانشقاق', englishName: 'The Sundering', numberOfAyahs: 25, revelationType: 'meccan', duration: '8:20' },
+    { number: 85, name: 'Al-Buruj', arabicName: 'البروج', englishName: 'The Mansions of The Stars', numberOfAyahs: 22, revelationType: 'meccan', duration: '8:15' },
+    { number: 86, name: 'At-Tariq', arabicName: 'الطارق', englishName: 'The Morning Star', numberOfAyahs: 17, revelationType: 'meccan', duration: '5:30' },
+    { number: 87, name: 'Al-Ala', arabicName: 'الأعلى', englishName: 'The Most High', numberOfAyahs: 19, revelationType: 'meccan', duration: '6:45' },
+    { number: 88, name: 'Al-Ghashiyah', arabicName: 'الغاشية', englishName: 'The Overwhelming', numberOfAyahs: 26, revelationType: 'meccan', duration: '8:20' },
+    { number: 89, name: 'Al-Fajr', arabicName: 'الفجر', englishName: 'The Dawn', numberOfAyahs: 30, revelationType: 'meccan', duration: '12:15' },
+    { number: 90, name: 'Al-Balad', arabicName: 'البلد', englishName: 'The City', numberOfAyahs: 20, revelationType: 'meccan', duration: '6:30' },
+    { number: 91, name: 'Ash-Shams', arabicName: 'الشمس', englishName: 'The Sun', numberOfAyahs: 15, revelationType: 'meccan', duration: '4:45' },
+    { number: 92, name: 'Al-Layl', arabicName: 'الليل', englishName: 'The Night', numberOfAyahs: 21, revelationType: 'meccan', duration: '6:20' },
+    { number: 93, name: 'Ad-Duhaa', arabicName: 'الضحى', englishName: 'The Morning Hours', numberOfAyahs: 11, revelationType: 'meccan', duration: '3:15' },
+    { number: 94, name: 'Ash-Sharh', arabicName: 'الشرح', englishName: 'The Relief', numberOfAyahs: 8, revelationType: 'meccan', duration: '2:30' },
+    { number: 95, name: 'At-Tin', arabicName: 'التين', englishName: 'The Fig', numberOfAyahs: 8, revelationType: 'meccan', duration: '2:45' },
+    { number: 96, name: 'Al-Alaq', arabicName: 'العلق', englishName: 'The Clot', numberOfAyahs: 19, revelationType: 'meccan', duration: '5:20' },
+    { number: 97, name: 'Al-Qadr', arabicName: 'القدر', englishName: 'The Power', numberOfAyahs: 5, revelationType: 'meccan', duration: '1:15' },
+    { number: 98, name: 'Al-Bayyinah', arabicName: 'البينة', englishName: 'The Clear Proof', numberOfAyahs: 8, revelationType: 'medinan', duration: '3:30' },
+    { number: 99, name: 'Az-Zalzalah', arabicName: 'الزلزلة', englishName: 'The Earthquake', numberOfAyahs: 8, revelationType: 'medinan', duration: '2:45' },
+    { number: 100, name: 'Al-Adiyat', arabicName: 'العاديات', englishName: 'The Courser', numberOfAyahs: 11, revelationType: 'meccan', duration: '3:20' },
+    { number: 101, name: 'Al-Qariah', arabicName: 'القارعة', englishName: 'The Calamity', numberOfAyahs: 11, revelationType: 'meccan', duration: '3:15' },
+    { number: 102, name: 'At-Takathur', arabicName: 'التكاثر', englishName: 'The Rivalry in World Increase', numberOfAyahs: 8, revelationType: 'meccan', duration: '2:30' },
+    { number: 103, name: 'Al-Asr', arabicName: 'العصر', englishName: 'The Declining Day', numberOfAyahs: 3, revelationType: 'meccan', duration: '1:00' },
+    { number: 104, name: 'Al-Humazah', arabicName: 'الهمزة', englishName: 'The Traducer', numberOfAyahs: 9, revelationType: 'meccan', duration: '2:45' },
+    { number: 105, name: 'Al-Fil', arabicName: 'الفيل', englishName: 'The Elephant', numberOfAyahs: 5, revelationType: 'meccan', duration: '1:30' },
+    { number: 106, name: 'Quraysh', arabicName: 'قريش', englishName: 'Quraysh', numberOfAyahs: 4, revelationType: 'meccan', duration: '1:15' },
+    { number: 107, name: 'Al-Maun', arabicName: 'الماعون', englishName: 'The Small Kindnesses', numberOfAyahs: 7, revelationType: 'meccan', duration: '2:00' },
+    { number: 108, name: 'Al-Kawthar', arabicName: 'الكوثر', englishName: 'The Abundance', numberOfAyahs: 3, revelationType: 'meccan', duration: '0:45' },
+    { number: 109, name: 'Al-Kafirun', arabicName: 'الكافرون', englishName: 'The Disbelievers', numberOfAyahs: 6, revelationType: 'meccan', duration: '1:30' },
+    { number: 110, name: 'An-Nasr', arabicName: 'النصر', englishName: 'The Divine Support', numberOfAyahs: 3, revelationType: 'medinan', duration: '0:50' },
+    { number: 111, name: 'Al-Masad', arabicName: 'المسد', englishName: 'The Palm Fibre', numberOfAyahs: 5, revelationType: 'meccan', duration: '1:15' },
     { number: 112, name: 'Al-Ikhlas', arabicName: 'الإخلاص', englishName: 'The Sincerity', numberOfAyahs: 4, revelationType: 'meccan', duration: '0:45' },
     { number: 113, name: 'Al-Falaq', arabicName: 'الفلق', englishName: 'The Daybreak', numberOfAyahs: 5, revelationType: 'meccan', duration: '0:50' },
     { number: 114, name: 'An-Nas', arabicName: 'الناس', englishName: 'The People', numberOfAyahs: 6, revelationType: 'meccan', duration: '1:00' }
@@ -530,29 +632,104 @@ export function QuranListeningApp() {
           </Card>
         </div>
 
-        {/* Actions rapides */}
-        <Card className={nightMode ? 'bg-gray-800 border-gray-600' : ''}>
+        {/* SOURATES POPULAIRES - LECTURE DIRECTE */}
+        <Card className={`mb-8 ${nightMode ? 'bg-gray-800 border-gray-600' : ''}`}>
           <CardHeader>
-            <CardTitle>Actions Rapides</CardTitle>
+            <CardTitle className="text-center">🎧 Sourates les Plus Écoutées</CardTitle>
+            <p className="text-center text-sm text-gray-600">Cliquez pour écouter immédiatement</p>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Button variant="outline" className="h-16 flex flex-col gap-2">
-                <Download className="h-5 w-5" />
-                Télécharger
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Al-Fatiha */}
+              <Button 
+                onClick={() => { setSelectedSurah(1); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">1. الفاتحة</div>
+                <div className="text-sm">Al-Fatiha (1:30)</div>
               </Button>
-              <Button variant="outline" className="h-16 flex flex-col gap-2">
-                <Heart className="h-5 w-5" />
-                Favoris
+
+              {/* Al-Ikhlas */}
+              <Button 
+                onClick={() => { setSelectedSurah(112); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">112. الإخلاص</div>
+                <div className="text-sm">Al-Ikhlas (0:45)</div>
               </Button>
-              <Button variant="outline" className="h-16 flex flex-col gap-2">
-                <Clock className="h-5 w-5" />
-                Minuteur
+
+              {/* Ya-Sin */}
+              <Button 
+                onClick={() => { setSelectedSurah(36); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-purple-500 to-purple-600 text-white hover:from-purple-600 hover:to-purple-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">36. يس</div>
+                <div className="text-sm">Ya-Sin (42:15)</div>
               </Button>
-              <Button variant="outline" className="h-16 flex flex-col gap-2">
-                <List className="h-5 w-5" />
-                Playlist
+
+              {/* Al-Kahf */}
+              <Button 
+                onClick={() => { setSelectedSurah(18); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">18. الكهف</div>
+                <div className="text-sm">Al-Kahf (1:35:40)</div>
               </Button>
+
+              {/* Ar-Rahman */}
+              <Button 
+                onClick={() => { setSelectedSurah(55); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-600 hover:to-pink-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">55. الرحمن</div>
+                <div className="text-sm">Ar-Rahman (28:30)</div>
+              </Button>
+
+              {/* Al-Mulk */}
+              <Button 
+                onClick={() => { setSelectedSurah(67); handlePlay(); }}
+                className="h-20 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white hover:from-indigo-600 hover:to-indigo-700 flex flex-col justify-center"
+              >
+                <div className="text-lg font-bold">67. الملك</div>
+                <div className="text-sm">Al-Mulk (18:45)</div>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* LISTE COMPLÈTE DES SOURATES */}
+        <Card className={`mb-8 ${nightMode ? 'bg-gray-800 border-gray-600' : ''}`}>
+          <CardHeader>
+            <CardTitle>📖 Toutes les Sourates (114)</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 gap-2 max-h-96 overflow-y-auto">
+              {surahs.map((surah) => (
+                <div key={surah.number} className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold text-sm">
+                        {surah.number}
+                      </div>
+                      <div>
+                        <div className="font-medium">{surah.name}</div>
+                        <div className="text-lg text-gray-600">{surah.arabicName}</div>
+                        <div className="text-xs text-gray-500">
+                          {surah.numberOfAyahs} versets • {surah.duration} • {surah.revelationType === 'meccan' ? 'Mecquoise' : 'Médinoise'}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <Button 
+                    onClick={() => { setSelectedSurah(surah.number); handlePlay(); }}
+                    size="sm"
+                    className="bg-emerald-500 hover:bg-emerald-600 text-white"
+                  >
+                    <Play className="h-4 w-4 mr-1" />
+                    Écouter
+                  </Button>
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
