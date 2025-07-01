@@ -8,14 +8,14 @@ export function SimpleCoran() {
   const [currentSurah, setCurrentSurah] = useState<string>('');
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // URLs audio réelles depuis MP3Quran.net
+  // URLs audio réelles depuis plusieurs sources
   const audioSources = {
-    fatiha: 'https://server8.mp3quran.net/afs/001.mp3', // Al-Fatiha par Mishary
-    ikhlas: 'https://server8.mp3quran.net/afs/112.mp3', // Al-Ikhlas par Mishary
-    falaq: 'https://server8.mp3quran.net/afs/113.mp3',  // Al-Falaq par Mishary
-    nas: 'https://server8.mp3quran.net/afs/114.mp3',    // An-Nas par Mishary
-    yasin: 'https://server8.mp3quran.net/afs/036.mp3',  // Ya-Sin par Mishary
-    mulk: 'https://server8.mp3quran.net/afs/067.mp3',   // Al-Mulk par Mishary
+    fatiha: 'https://verses.quran.com/Alafasy/mp3/001001.mp3', // Al-Fatiha verset 1
+    ikhlas: 'https://verses.quran.com/Alafasy/mp3/112001.mp3', // Al-Ikhlas verset 1
+    falaq: 'https://verses.quran.com/Alafasy/mp3/113001.mp3',  // Al-Falaq verset 1
+    nas: 'https://verses.quran.com/Alafasy/mp3/114001.mp3',    // An-Nas verset 1
+    yasin: 'https://verses.quran.com/Alafasy/mp3/036001.mp3',  // Ya-Sin verset 1
+    mulk: 'https://verses.quran.com/Alafasy/mp3/067001.mp3',   // Al-Mulk verset 1
   };
 
   const playAudio = (surahKey: string, surahName: string) => {
@@ -29,16 +29,39 @@ export function SimpleCoran() {
     }
 
     // Load and play new audio
-    audio.src = audioSources[surahKey as keyof typeof audioSources];
+    const audioUrl = audioSources[surahKey as keyof typeof audioSources];
+    console.log('Tentative lecture:', audioUrl);
+    
+    audio.src = audioUrl;
     setCurrentSurah(surahName);
+    
+    // Forcer le chargement
+    audio.load();
     
     audio.play()
       .then(() => {
+        console.log('Audio démarré avec succès');
         setIsPlaying(true);
       })
       .catch((error) => {
         console.error('Erreur lecture audio:', error);
-        alert('Impossible de lire l\'audio. Vérifiez votre connexion internet.');
+        
+        // Essayer source alternative
+        const fallbackUrl = `https://server11.mp3quran.net/sds/${surahKey === 'fatiha' ? '001' : surahKey === 'ikhlas' ? '112' : '113'}.mp3`;
+        console.log('Tentative source alternative:', fallbackUrl);
+        
+        audio.src = fallbackUrl;
+        audio.load();
+        
+        audio.play()
+          .then(() => {
+            console.log('Source alternative fonctionne');
+            setIsPlaying(true);
+          })
+          .catch((err) => {
+            console.error('Toutes sources échouent:', err);
+            alert(`Erreur audio: ${error.message}\n\nVérifiez:\n1. Connexion internet\n2. Autorisations audio navigateur\n3. Volume système`);
+          });
       });
   };
 
@@ -161,22 +184,54 @@ export function SimpleCoran() {
           </CardContent>
         </Card>
 
-        {/* Instructions */}
+        {/* Test Audio Direct */}
         <div className="mt-8 text-center">
           <div className="bg-white/80 backdrop-blur rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-4">💡 Comment utiliser</h3>
+            <h3 className="text-xl font-bold mb-4">🔊 Test Audio Direct</h3>
+            <div className="flex justify-center gap-4 mb-4">
+              <button 
+                onClick={() => {
+                  const testAudio = new Audio('https://verses.quran.com/Alafasy/mp3/001001.mp3');
+                  testAudio.play().catch(e => alert('Erreur: ' + e.message));
+                }}
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+              >
+                TEST 1: Verse Quran.com
+              </button>
+              
+              <button 
+                onClick={() => {
+                  const testAudio = new Audio('https://server8.mp3quran.net/afs/001.mp3');
+                  testAudio.play().catch(e => alert('Erreur: ' + e.message));
+                }}
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                TEST 2: MP3Quran.net
+              </button>
+              
+              <button 
+                onClick={() => {
+                  const testAudio = new Audio('https://audio.quranwbw.com/audio/mishary/001.mp3');
+                  testAudio.play().catch(e => alert('Erreur: ' + e.message));
+                }}
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+              >
+                TEST 3: QuranWBW
+              </button>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
                 <div className="text-2xl mb-2">1️⃣</div>
-                <p><strong>Cliquez</strong> sur une sourate</p>
+                <p><strong>Testez</strong> les boutons TEST ci-dessus</p>
               </div>
               <div>
                 <div className="text-2xl mb-2">2️⃣</div>
-                <p><strong>L'audio se lance</strong> automatiquement</p>
+                <p><strong>Si ça marche</strong>, les sourates marchent aussi</p>
               </div>
               <div>
                 <div className="text-2xl mb-2">3️⃣</div>
-                <p><strong>Utilisez les contrôles</strong> pour pause/lecture</p>
+                <p><strong>Sinon</strong> problème de connexion/navigateur</p>
               </div>
             </div>
           </div>
