@@ -176,6 +176,10 @@ import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivatio
 import TestingCenterPage from "@/pages/TestingCenterPage";
 import CharteFiqhIAHalalSimple from "@/pages/CharteFiqhIAHalalSimple";
 import CloudHalal from "@/pages/CloudHalal";
+import FiqhInformatiqueComplet from "@/pages/FiqhInformatiqueComplet";
+import ThemesIslamiquesPersonnalisables from "@/pages/ThemesIslamiquesPersonnalisables";
+import DiagnosticEcosystemeRevolutionnaire from "@/pages/DiagnosticEcosystemeRevolutionnaire";
+import GestionRHComplete from "@/pages/GestionRHComplete";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -844,6 +848,27 @@ function Router() {
       <Route path="/52-modules" component={Localisation52Modules} />
       <Route path="/tous-modules" component={Localisation52Modules} />
       <Route path="/coran-et-modules" component={Localisation52Modules} />
+      
+      {/* Nouvelles Fonctionnalités Révolutionnaires CED */}
+      <Route path="/fiqh-informatique-complet" component={FiqhInformatiqueComplet} />
+      <Route path="/fiqh-complet" component={FiqhInformatiqueComplet} />
+      <Route path="/4-sources-islamiques" component={FiqhInformatiqueComplet} />
+      <Route path="/fiqh-system" component={FiqhInformatiqueComplet} />
+      
+      <Route path="/themes-islamiques-personnalisables" component={ThemesIslamiquesPersonnalisables} />
+      <Route path="/themes-spirituels" component={ThemesIslamiquesPersonnalisables} />
+      <Route path="/personnalisation" component={ThemesIslamiquesPersonnalisables} />
+      <Route path="/8-themes" component={ThemesIslamiquesPersonnalisables} />
+      
+      <Route path="/diagnostic-ecosysteme-revolutionnaire" component={DiagnosticEcosystemeRevolutionnaire} />
+      <Route path="/diagnostic-99" component={DiagnosticEcosystemeRevolutionnaire} />
+      <Route path="/score-revolutionnaire" component={DiagnosticEcosystemeRevolutionnaire} />
+      <Route path="/performance-ced" component={DiagnosticEcosystemeRevolutionnaire} />
+      
+      <Route path="/gestion-rh-complete" component={GestionRHComplete} />
+      <Route path="/rh-complete" component={GestionRHComplete} />
+      <Route path="/equipe-ced" component={GestionRHComplete} />
+      <Route path="/hr-management" component={GestionRHComplete} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
