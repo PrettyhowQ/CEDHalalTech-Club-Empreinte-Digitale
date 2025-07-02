@@ -164,6 +164,7 @@ import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
 import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
+import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
@@ -809,6 +810,12 @@ function Router() {
       <Route path="/islamic-accounting" component={ComptabiliteIslamique} />
       <Route path="/comptabilite-halal" component={ComptabiliteIslamique} />
       <Route path="/gestion-comptable" component={ComptabiliteIslamique} />
+      
+      {/* Immobilier Islamique */}
+      <Route path="/immobilier-islamique" component={ImmobilierIslamique} />
+      <Route path="/islamic-real-estate" component={ImmobilierIslamique} />
+      <Route path="/immobilier-halal" component={ImmobilierIslamique} />
+      <Route path="/gestion-immobiliere" component={ImmobilierIslamique} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

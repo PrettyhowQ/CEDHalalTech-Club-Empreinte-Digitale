@@ -492,11 +492,13 @@ export type InsertCertificat = z.infer<typeof insertCertificatSchema>;
 
 // Enums pour comptabilité islamique
 export const typeCompteEnum = pgEnum("type_compte", ["actif", "passif", "capitaux_propres", "produits", "charges"]);
-export const categorieIslamisueEnum = pgEnum("categorie_islamique", ["halal_income", "zakat_fund", "qard_hassan", "murabaha", "ijara", "musharaka", "mudaraba", "takaful"]);
+export const categorieIslamisueEnum = pgEnum("categorie_islamique", ["halal_income", "zakat_fund", "qard_hassan", "murabaha", "ijara", "musharaka", "mudaraba", "takaful", "immobilier", "istisna", "bay_salam"]);
 export const statutConformiteEnum = pgEnum("statut_conformite", ["halal", "haram", "makruh", "mandub", "mubah"]);
-export const typeContratEnum = pgEnum("type_contrat", ["murabaha", "ijara", "musharaka", "mudaraba", "qard_hassan", "bay_salam", "istisna", "takaful"]);
+export const typeContratEnum = pgEnum("type_contrat", ["murabaha", "ijara", "musharaka", "mudaraba", "qard_hassan", "bay_salam", "istisna", "takaful", "immobilier_murabaha", "immobilier_ijara"]);
 export const niveauGhararEnum = pgEnum("niveau_gharar", ["bas", "moyen", "eleve", "interdit"]);
 export const typeZakatEnum = pgEnum("type_zakat", ["mal", "fitr", "ushr", "rikaz", "tijara"]);
+export const typeProprietEnum = pgEnum("type_propriete", ["terrain", "appartement", "villa", "bureau", "commercial", "industriel", "agricole"]);
+export const statutProprietEnum = pgEnum("statut_propriete", ["a_vendre", "vendu", "a_louer", "loue", "en_construction", "en_renovation"]);
 
 // Entreprises / Clients
 export const entreprises = pgTable("entreprises", {
@@ -736,3 +738,214 @@ export type EcritureComptable = typeof ecrituresComptables.$inferSelect;
 export type CalculZakat = typeof calculZakat.$inferSelect;
 export type ContratIslamique = typeof contratsIslamiques.$inferSelect;
 export type AuditSharia = typeof auditSharia.$inferSelect;
+
+// ==========================================
+// SYSTÈME IMMOBILIER ISLAMIQUE 
+// ==========================================
+
+// Propriétés immobilières
+export const proprietesImmobilieres = pgTable("proprietes_immobilieres", {
+  id: serial("id").primaryKey(),
+  reference: varchar("reference", { length: 50 }).notNull().unique(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  typePropriete: typeProprietEnum("type_propriete").notNull(),
+  adresseComplete: text("adresse_complete").notNull(),
+  ville: varchar("ville", { length: 100 }).notNull(),
+  codePostal: varchar("code_postal", { length: 20 }),
+  pays: varchar("pays", { length: 100 }).notNull().default('Suisse'),
+  superficie: decimal("superficie", { precision: 10, scale: 2 }), // m²
+  nombrePieces: integer("nombre_pieces"),
+  nombreChambres: integer("nombre_chambres"),
+  nombreSallesBains: integer("nombre_salles_bains"),
+  anneeConstruction: integer("annee_construction"),
+  prixAchat: decimal("prix_achat", { precision: 15, scale: 2 }).notNull(),
+  prixVente: decimal("prix_vente", { precision: 15, scale: 2 }),
+  loyerMensuel: decimal("loyer_mensuel", { precision: 15, scale: 2 }),
+  chargesMensuelles: decimal("charges_mensuelles", { precision: 15, scale: 2 }).default('0.00'),
+  devise: deviseEnum("devise").default("CHF"),
+  statutPropriete: statutProprietEnum("statut_propriete").default('a_vendre'),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  certificationHalal: boolean("certification_halal").notNull().default(false),
+  zonePriere: boolean("zone_priere").notNull().default(false), // Espace prière dans le bien
+  orientationQibla: boolean("orientation_qibla").notNull().default(false),
+  proximiteMosquee: boolean("proximite_mosquee").notNull().default(false),
+  proximiteEcoleIslamique: boolean("proximite_ecole_islamique").notNull().default(false),
+  typeContratPrevu: typeContratEnum("type_contrat_prevu"), // Murabaha, Ijara, etc.
+  pourcentageFinancement: decimal("pourcentage_financement", { precision: 5, scale: 2 }).default('0.00'),
+  dureeFinancement: integer("duree_financement"), // en mois
+  tauxMarge: decimal("taux_marge", { precision: 5, scale: 4 }).default('0.0000'),
+  zakatApplicable: boolean("zakat_applicable").notNull().default(true),
+  dateAcquisition: timestamp("date_acquisition"),
+  dateVente: timestamp("date_vente"),
+  vendeur: varchar("vendeur", { length: 255 }),
+  acheteur: varchar("acheteur", { length: 255 }),
+  notaire: varchar("notaire", { length: 255 }),
+  numeroTitreFoncier: varchar("numero_titre_foncier", { length: 100 }),
+  valeurCadastre: decimal("valeur_cadastre", { precision: 15, scale: 2 }),
+  taxesFoncieres: decimal("taxes_foncieres", { precision: 15, scale: 2 }).default('0.00'),
+  assuranceBien: decimal("assurance_bien", { precision: 15, scale: 2 }).default('0.00'),
+  fraisNotaire: decimal("frais_notaire", { precision: 15, scale: 2 }).default('0.00'),
+  commissionsAgence: decimal("commissions_agence", { precision: 15, scale: 2 }).default('0.00'),
+  description: text("description"),
+  descriptifIslamique: text("descriptif_islamique"), // Aspects conformes à l'Islam
+  photos: text("photos").array(),
+  documentsLegaux: text("documents_legaux").array(),
+  contratsAssocies: text("contrats_associes").array(),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Transactions immobilières
+export const transactionsImmobilieres = pgTable("transactions_immobilieres", {
+  id: serial("id").primaryKey(),
+  numeroTransaction: varchar("numero_transaction", { length: 50 }).notNull().unique(),
+  proprieteId: integer("propriete_id").notNull(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  typeTransaction: varchar("type_transaction", { length: 50 }).notNull(), // 'achat', 'vente', 'location', 'renovation'
+  typeContratIslamique: typeContratEnum("type_contrat_islamique").notNull(),
+  contrepartie: varchar("contrepartie", { length: 255 }).notNull(), // Nom acheteur/vendeur/locataire
+  montantTransaction: decimal("montant_transaction", { precision: 15, scale: 2 }).notNull(),
+  acompteVerse: decimal("acompte_verse", { precision: 15, scale: 2 }).default('0.00'),
+  soldeRestant: decimal("solde_restant", { precision: 15, scale: 2 }).default('0.00'),
+  devise: deviseEnum("devise").default("CHF"),
+  dureeContrat: integer("duree_contrat"), // en mois pour Ijara
+  tauxMarge: decimal("taux_marge", { precision: 5, scale: 4 }).default('0.0000'), // Pour Murabaha
+  loyerMensuel: decimal("loyer_mensuel", { precision: 15, scale: 2 }), // Pour Ijara
+  caution: decimal("caution", { precision: 15, scale: 2 }).default('0.00'),
+  dateTransaction: timestamp("date_transaction").notNull(),
+  dateSignature: timestamp("date_signature"),
+  dateDebutContrat: timestamp("date_debut_contrat"),
+  dateFinContrat: timestamp("date_fin_contrat"),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  validationSharia: boolean("validation_sharia").notNull().default(false),
+  savantValidateur: varchar("savant_validateur", { length: 255 }),
+  referenceFatwa: varchar("reference_fatwa", { length: 255 }),
+  temoinsTransaction: text("temoins_transaction").array(),
+  conditionsSpeciales: text("conditions_speciales"),
+  clausesIslamiques: text("clauses_islamiques"),
+  garanties: text("garanties").array(),
+  penalitesRetard: decimal("penalites_retard", { precision: 5, scale: 4 }).default('0.0000'),
+  fraisGestion: decimal("frais_gestion", { precision: 15, scale: 2 }).default('0.00'),
+  commissionsVente: decimal("commissions_vente", { precision: 15, scale: 2 }).default('0.00'),
+  taxesTransaction: decimal("taxes_transaction", { precision: 15, scale: 2 }).default('0.00'),
+  statutTransaction: varchar("statut_transaction", { length: 50 }).notNull().default('en_cours'), // 'en_cours', 'signe', 'execute', 'annule'
+  documentsLegaux: text("documents_legaux").array(),
+  justificationIslamique: text("justification_islamique"),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Évaluations immobilières
+export const evaluationsImmobilieres = pgTable("evaluations_immobilieres", {
+  id: serial("id").primaryKey(),
+  proprieteId: integer("propriete_id").notNull(),
+  dateEvaluation: timestamp("date_evaluation").notNull(),
+  typeEvaluation: varchar("type_evaluation", { length: 50 }).notNull(), // 'expertise', 'estimation', 'controle'
+  evaluateur: varchar("evaluateur", { length: 255 }).notNull(),
+  qualificationEvaluateur: varchar("qualification_evaluateur", { length: 255 }),
+  valeurEstimee: decimal("valeur_estimee", { precision: 15, scale: 2 }).notNull(),
+  valeurMinimale: decimal("valeur_minimale", { precision: 15, scale: 2 }),
+  valeurMaximale: decimal("valeur_maximale", { precision: 15, scale: 2 }),
+  devise: deviseEnum("devise").default("CHF"),
+  methodologie: varchar("methodologie", { length: 100 }), // 'comparaison', 'cout_remplacement', 'revenus'
+  facteursPrix: text("facteurs_prix").array(),
+  pointsForts: text("points_forts").array(),
+  pointsFaibles: text("points_faibles").array(),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  criteresIslamiques: text("criteres_islamiques").array(),
+  recommandations: text("recommandations"),
+  rapportComplet: text("rapport_complet"),
+  photos: text("photos").array(),
+  validiteEvaluation: integer("validite_evaluation").default(6), // en mois
+  dateExpiration: timestamp("date_expiration"),
+  certifiee: boolean("certifiee").notNull().default(false),
+  numeroRapport: varchar("numero_rapport", { length: 100 }),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+});
+
+// Planning entretien et rénovations
+export const maintenanceImmobiliere = pgTable("maintenance_immobiliere", {
+  id: serial("id").primaryKey(),
+  proprieteId: integer("propriete_id").notNull(),
+  typeMaintenance: varchar("type_maintenance", { length: 50 }).notNull(), // 'entretien', 'reparation', 'renovation', 'amelioration'
+  description: text("description").notNull(),
+  priorite: varchar("priorite", { length: 20 }).notNull().default('moyenne'), // 'faible', 'moyenne', 'haute', 'urgente'
+  coutEstime: decimal("cout_estime", { precision: 15, scale: 2 }).notNull(),
+  coutReel: decimal("cout_reel", { precision: 15, scale: 2 }),
+  devise: deviseEnum("devise").default("CHF"),
+  datePrevue: timestamp("date_prevue"),
+  dateRealisation: timestamp("date_realisation"),
+  entrepriseIntervenante: varchar("entreprise_intervenante", { length: 255 }),
+  contactIntervenant: varchar("contact_intervenant", { length: 255 }),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  certificationHalal: boolean("certification_halal").notNull().default(false),
+  materiaux: text("materiaux").array(),
+  materiauxHalal: boolean("materiaux_halal").notNull().default(true),
+  mainOeuvreMusulmane: boolean("main_oeuvre_musulmane").notNull().default(false),
+  respectHeuresPriere: boolean("respect_heures_priere").notNull().default(true),
+  statutMaintenance: varchar("statut_maintenance", { length: 50 }).notNull().default('planifie'), // 'planifie', 'en_cours', 'termine', 'annule'
+  facturesAssociees: text("factures_associees").array(),
+  garantieTravaux: integer("garantie_travaux"), // en mois
+  photosAvant: text("photos_avant").array(),
+  photosApres: text("photos_apres").array(),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Relations immobilier
+export const proprietesImmobilieresRelations = relations(proprietesImmobilieres, ({ one, many }) => ({
+  entreprise: one(entreprises, {
+    fields: [proprietesImmobilieres.entrepriseId],
+    references: [entreprises.id],
+  }),
+  transactions: many(transactionsImmobilieres),
+  evaluations: many(evaluationsImmobilieres),
+  maintenances: many(maintenanceImmobiliere),
+}));
+
+export const transactionsImmobilieresRelations = relations(transactionsImmobilieres, ({ one }) => ({
+  propriete: one(proprietesImmobilieres, {
+    fields: [transactionsImmobilieres.proprieteId],
+    references: [proprietesImmobilieres.id],
+  }),
+  entreprise: one(entreprises, {
+    fields: [transactionsImmobilieres.entrepriseId],
+    references: [entreprises.id],
+  }),
+}));
+
+export const evaluationsImmobilieresRelations = relations(evaluationsImmobilieres, ({ one }) => ({
+  propriete: one(proprietesImmobilieres, {
+    fields: [evaluationsImmobilieres.proprieteId],
+    references: [proprietesImmobilieres.id],
+  }),
+}));
+
+export const maintenanceImmobilieresRelations = relations(maintenanceImmobiliere, ({ one }) => ({
+  propriete: one(proprietesImmobilieres, {
+    fields: [maintenanceImmobiliere.proprieteId],
+    references: [proprietesImmobilieres.id],
+  }),
+}));
+
+// Schémas d'insertion immobilier
+export const insertProprieteImmobiliereSchema = createInsertSchema(proprietesImmobilieres).omit({ id: true });
+export const insertTransactionImmobiliereSchema = createInsertSchema(transactionsImmobilieres).omit({ id: true });
+export const insertEvaluationImmobiliereSchema = createInsertSchema(evaluationsImmobilieres).omit({ id: true });
+export const insertMaintenanceImmobiliereSchema = createInsertSchema(maintenanceImmobiliere).omit({ id: true });
+
+// Types d'insertion immobilier
+export type InsertProprieteImmobiliere = z.infer<typeof insertProprieteImmobiliereSchema>;
+export type InsertTransactionImmobiliere = z.infer<typeof insertTransactionImmobiliereSchema>;
+export type InsertEvaluationImmobiliere = z.infer<typeof insertEvaluationImmobiliereSchema>;
+export type InsertMaintenanceImmobiliere = z.infer<typeof insertMaintenanceImmobiliereSchema>;
+
+// Types de sélection immobilier
+export type ProprieteImmobiliere = typeof proprietesImmobilieres.$inferSelect;
+export type TransactionImmobiliere = typeof transactionsImmobilieres.$inferSelect;
+export type EvaluationImmobiliere = typeof evaluationsImmobilieres.$inferSelect;
+export type MaintenanceImmobiliere = typeof maintenanceImmobiliere.$inferSelect;

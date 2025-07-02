@@ -6,7 +6,11 @@ import {
   ecrituresComptables,
   calculZakat,
   contratsIslamiques,
-  auditSharia
+  auditSharia,
+  proprietesImmobilieres,
+  transactionsImmobilieres,
+  evaluationsImmobilieres,
+  maintenanceImmobiliere
 } from "@shared/schema";
 
 export async function seedComptabiliteIslamique() {
@@ -271,16 +275,194 @@ export async function seedComptabiliteIslamique() {
       console.log(`✅ Entreprise ajoutée: ${entreprise.nom}`);
     }
 
-    console.log("🎉 Système de comptabilité islamique ajouté avec succès!");
+    // 3. Propriétés immobilières exemples
+    const proprietesData = [
+      {
+        reference: "IMM-2025-001",
+        entrepriseId: 1, // Halal Market Geneva
+        typePropriete: "villa" as const,
+        adresseComplete: "Chemin des Roses 15, 1201 Genève, Suisse",
+        ville: "Genève",
+        codePostal: "1201",
+        pays: "Suisse",
+        superficie: "450.00",
+        nombrePieces: 8,
+        nombreChambres: 5,
+        nombreSallesBains: 3,
+        anneeConstruction: 2015,
+        prixAchat: "2850000.00",
+        prixVente: "3200000.00",
+        loyerMensuel: "8500.00",
+        chargesMensuelles: "450.00",
+        devise: "CHF" as const,
+        statutPropriete: "a_vendre" as const,
+        conformiteIslamique: true,
+        certificationHalal: true,
+        zonePriere: true,
+        orientationQibla: true,
+        proximiteMosquee: true,
+        proximiteEcoleIslamique: true,
+        typeContratPrevu: "murabaha" as const,
+        pourcentageFinancement: "80.00",
+        dureeFinancement: 240, // 20 ans
+        tauxMarge: "3.5000", // 3.5%
+        zakatApplicable: true,
+        dateAcquisition: new Date("2023-06-15"),
+        vendeur: "Famille Schmidt",
+        notaire: "Étude Dubois & Associés",
+        numeroTitreFoncier: "GE-001-2023-15678",
+        valeurCadastre: "2650000.00",
+        taxesFoncieres: "12500.00",
+        assuranceBien: "4800.00",
+        fraisNotaire: "85500.00",
+        commissionsAgence: "96000.00",
+        description: "Villa familiale de standing avec jardin paysager",
+        descriptifIslamique: "Propriété avec espace prière orienté Qibla, proximité mosquée Petit-Saconnex (5min), école islamique Al-Hidaya (10min), environnement halal, matériaux de construction conformes"
+      },
+      {
+        reference: "IMM-2025-002",
+        entrepriseId: 2, // Islamic Finance Consulting
+        typePropriete: "appartement" as const,
+        adresseComplete: "Avenue du Lac 42, 1000 Lausanne, Suisse",
+        ville: "Lausanne",
+        codePostal: "1000",
+        pays: "Suisse",
+        superficie: "120.00",
+        nombrePieces: 4,
+        nombreChambres: 2,
+        nombreSallesBains: 2,
+        anneeConstruction: 2018,
+        prixAchat: "1250000.00",
+        prixVente: "1400000.00",
+        loyerMensuel: "4500.00",
+        chargesMensuelles: "280.00",
+        devise: "CHF" as const,
+        statutPropriete: "loue" as const,
+        conformiteIslamique: true,
+        certificationHalal: false,
+        zonePriere: false,
+        orientationQibla: false,
+        proximiteMosquee: false,
+        proximiteEcoleIslamique: false,
+        typeContratPrevu: "ijara" as const,
+        pourcentageFinancement: "0.00",
+        dureeFinancement: 0,
+        tauxMarge: "0.0000",
+        zakatApplicable: true,
+        dateAcquisition: new Date("2024-03-20"),
+        acheteur: "M. Ahmed Zouari",
+        notaire: "SCP Moreau & Partenaires",
+        numeroTitreFoncier: "VD-042-2024-98765",
+        valeurCadastre: "1180000.00",
+        taxesFoncieres: "8400.00",
+        assuranceBien: "2400.00",
+        fraisNotaire: "37500.00",
+        commissionsAgence: "37500.00",
+        description: "Appartement moderne avec vue lac",
+        descriptifIslamique: "Bien immobilier acquis sans financement ribawi, contrat Ijara pour location conforme Sharia, revenus locatifs halal"
+      },
+      {
+        reference: "IMM-2025-003",
+        entrepriseId: 3, // CED Academy
+        typePropriete: "bureau" as const,
+        adresseComplete: "Rue du Commerce 28, 1204 Genève, Suisse",
+        ville: "Genève",
+        codePostal: "1204",
+        pays: "Suisse",
+        superficie: "280.00",
+        nombrePieces: 8,
+        nombreChambres: 0,
+        nombreSallesBains: 2,
+        anneeConstruction: 2020,
+        prixAchat: "1850000.00",
+        prixVente: "2100000.00",
+        loyerMensuel: "6800.00",
+        chargesMensuelles: "520.00",
+        devise: "CHF" as const,
+        statutPropriete: "a_louer" as const,
+        conformiteIslamique: true,
+        certificationHalal: true,
+        zonePriere: true,
+        orientationQibla: true,
+        proximiteMosquee: true,
+        proximiteEcoleIslamique: false,
+        typeContratPrevu: "ijara" as const,
+        pourcentageFinancement: "70.00",
+        dureeFinancement: 180, // 15 ans
+        tauxMarge: "3.0000", // 3%
+        zakatApplicable: true,
+        dateAcquisition: new Date("2024-09-10"),
+        vendeur: "SCI Plateau Commercial",
+        notaire: "Étude Maître Rossier",
+        numeroTitreFoncier: "GE-028-2024-11223",
+        valeurCadastre: "1750000.00",
+        taxesFoncieres: "15200.00",
+        assuranceBien: "3600.00",
+        fraisNotaire: "55500.00",
+        commissionsAgence: "55500.00",
+        description: "Bureaux modernes dans quartier d'affaires",
+        descriptifIslamique: "Espace professionnel avec salle de prière aménagée, orientation Qibla vérifiée, activités commerciales halal uniquement, contrat Ijara pour futurs locataires musulmans"
+      }
+    ];
+
+    for (const propriete of proprietesData) {
+      await db.insert(proprietesImmobilieres).values(propriete).onConflictDoNothing();
+      console.log(`✅ Propriété ajoutée: ${propriete.reference} - ${propriete.typePropriete} à ${propriete.ville}`);
+    }
+
+    // 4. Transactions immobilières exemples
+    const transactionsImmobilieresData = [
+      {
+        numeroTransaction: "TXN-IMM-2025-001",
+        proprieteId: 1,
+        entrepriseId: 1,
+        typeTransaction: "achat",
+        typeContratIslamique: "murabaha" as const,
+        contrepartie: "Famille Schmidt",
+        montantTransaction: "2850000.00",
+        acompteVerse: "570000.00", // 20%
+        soldeRestant: "2280000.00",
+        devise: "CHF" as const,
+        dureeContrat: 240, // 20 ans
+        tauxMarge: "3.5000",
+        dateTransaction: new Date("2023-06-15"),
+        dateSignature: new Date("2023-06-15"),
+        dateDebutContrat: new Date("2023-07-01"),
+        dateFinContrat: new Date("2043-07-01"),
+        conformiteIslamique: true,
+        validationSharia: true,
+        savantValidateur: "Sheikh Dr. Ahmad Al-Khalifi",
+        referenceFatwa: "FATWA-MURABAHA-IMM-2023-15",
+        temoinsTransaction: ["Maître Dubois", "M. Hassan Benali"],
+        conditionsSpeciales: "Financement Murabaha avec marge fixe 3.5%, pas d'intérêt ribawi",
+        clausesIslamiques: "Conformité totale aux principes de la finance islamique, validation comité Sharia",
+        garanties: ["Hypothèque légale", "Assurance décès halal", "Caution personnelle"],
+        statutTransaction: "execute",
+        documentsLegaux: ["Acte de vente", "Contrat Murabaha", "Certificat conformité Sharia"],
+        justificationIslamique: "Transaction conforme aux principes Murabaha selon Coran 2:275 et consensus scholars AAOIFI"
+      }
+    ];
+
+    for (const transaction of transactionsImmobilieresData) {
+      await db.insert(transactionsImmobilieres).values(transaction).onConflictDoNothing();
+      console.log(`✅ Transaction immobilière ajoutée: ${transaction.numeroTransaction}`);
+    }
+
+    console.log("🎉 Système complet comptabilité + immobilier islamique ajouté avec succès!");
     console.log("📊 Total comptes créés:", planComptableData.length);
     console.log("🏢 Total entreprises créées:", entreprisesData.length);
+    console.log("🏠 Total propriétés créées:", proprietesData.length);
+    console.log("💼 Total transactions immobilières:", transactionsImmobilieresData.length);
     console.log("💡 Fonctionnalités disponibles:");
     console.log("   ✓ Plan comptable conforme Sharia");
     console.log("   ✓ Gestion entreprises clients");
+    console.log("   ✓ Gestion propriétés immobilières");
+    console.log("   ✓ Transactions immobilières (Murabaha, Ijara)");
     console.log("   ✓ Calcul automatique Zakat");
-    console.log("   ✓ Contrats islamiques (Murabaha, Ijara, Musharaka)");
+    console.log("   ✓ Contrats islamiques complets");
     console.log("   ✓ Audit conformité AAOIFI/IFSB");
     console.log("   ✓ Double entrée comptable islamique");
+    console.log("   ✓ Évaluations et maintenance immobilière");
 
   } catch (error) {
     console.error("❌ Erreur lors du seeding comptabilité islamique:", error);

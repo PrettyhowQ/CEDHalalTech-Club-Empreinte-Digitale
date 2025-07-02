@@ -122,6 +122,16 @@ export function CentralDashboard() {
       color: 'from-emerald-600 to-green-700',
       category: 'Comptabilité',
       description: 'Double entrée, Zakat, contrats islamiques'
+    },
+    {
+      id: 'realestate',
+      title: 'Immobilier Islamique',
+      subtitle: 'Achat/Vente conforme Sharia',
+      icon: Building,
+      href: '/immobilier-islamique',
+      color: 'from-blue-600 to-indigo-700',
+      category: 'Immobilier',
+      description: 'Murabaha, Ijara, zones prière, proximité mosquées'
     }
   ];
 
