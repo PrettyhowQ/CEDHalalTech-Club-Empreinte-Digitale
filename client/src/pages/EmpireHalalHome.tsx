@@ -15,7 +15,8 @@ import {
   TrendingUp,
   Banknote,
   Star,
-  Crown
+  Crown,
+  Headphones
 } from 'lucide-react';
 
 export default function EmpireHalalHome() {
@@ -259,6 +260,12 @@ export default function EmpireHalalHome() {
                 <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white">
                   <Home className="h-5 w-5 mr-2" />
                   Immobilier Halal
+                </Button>
+              </Link>
+              <Link href="/52-modules">
+                <Button className="w-full h-16 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
+                  <Headphones className="h-5 w-5 mr-2" />
+                  🎵 Coran Audio + 52 Modules
                 </Button>
               </Link>
               <Link href="/ca-se-trouve-ou">

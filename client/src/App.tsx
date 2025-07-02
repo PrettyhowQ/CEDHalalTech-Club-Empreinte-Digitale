@@ -169,6 +169,7 @@ import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
 import EmpireHalalHome from "@/pages/EmpireHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
+import Localisation52Modules from "@/pages/Localisation52Modules";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
@@ -838,6 +839,11 @@ function Router() {
       <Route path="/localisation-visuelle" component={LocalisationVisuelle} />
       <Route path="/ca-se-trouve-ou" component={LocalisationVisuelle} />
       <Route path="/recherche-visuelle" component={LocalisationVisuelle} />
+      
+      {/* 52 Modules Empire Halal */}
+      <Route path="/52-modules" component={Localisation52Modules} />
+      <Route path="/tous-modules" component={Localisation52Modules} />
+      <Route path="/coran-et-modules" component={Localisation52Modules} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
