@@ -165,10 +165,22 @@ export default function Localisation52Modules() {
       icon: Globe,
       color: "bg-red-100 text-red-800"
     },
-    
-    // 🏥 SANTÉ & BIEN-ÊTRE (Modules 11-15)
     {
       id: 11,
+      nom: "💜 Motivation Spirituelle",
+      path: "/motivation-spirituelle",
+      fichier: "client/src/pages/MotivationSpirituelleApp.tsx",
+      description: "Micro-interactions divines multilingues",
+      contenu: "Dhikr authentiques, 8 langues, humeurs spirituelles",
+      category: "education",
+      status: "✅ Opérationnel",
+      icon: Heart,
+      color: "bg-purple-100 text-purple-800"
+    },
+    
+    // 🏥 SANTÉ & BIEN-ÊTRE (Modules 12-16)
+    {
+      id: 12,
       nom: "🏥 Espace Santé Souheila",
       path: "/sante-souheila",
       fichier: "client/src/pages/EspaceSanteSouheila.tsx",
@@ -180,9 +192,9 @@ export default function Localisation52Modules() {
       color: "bg-rose-100 text-rose-800"
     },
     
-    // ⚖️ JURIDIQUE (Modules 16-20)
+    // ⚖️ JURIDIQUE (Modules 17-21)
     {
-      id: 12,
+      id: 13,
       nom: "⚖️ Juridique Hanaé-Denise",
       path: "/juridique-hanae",
       fichier: "client/src/pages/JuridiqueHanae.tsx",
@@ -194,9 +206,9 @@ export default function Localisation52Modules() {
       color: "bg-amber-100 text-amber-800"
     },
     
-    // 🚛 LOGISTIQUE (Modules 21-25)
+    // 🚛 LOGISTIQUE (Modules 22-26)
     {
-      id: 13,
+      id: 14,
       nom: "🚛 TechForAll Donation",
       path: "/techforall",
       fichier: "client/src/pages/TechForAll.tsx",
@@ -208,9 +220,9 @@ export default function Localisation52Modules() {
       color: "bg-lime-100 text-lime-800"
     },
     
-    // 📱 APPLICATIONS NATIVES (Modules 26-35)
+    // 📱 APPLICATIONS NATIVES (Modules 27-36)
     {
-      id: 14,
+      id: 15,
       nom: "📱 Apps Natives Mobiles",
       path: "/apps-natives",
       fichier: "client/src/pages/MobileNativeApps.tsx",
@@ -222,9 +234,9 @@ export default function Localisation52Modules() {
       color: "bg-violet-100 text-violet-800"
     },
     
-    // 🔧 ADMINISTRATION (Modules 36-45)
+    // 🔧 ADMINISTRATION (Modules 37-46)
     {
-      id: 15,
+      id: 16,
       nom: "👥 RH Management",
       path: "/rh-management",
       fichier: "client/src/pages/HRManagement.tsx",
@@ -236,9 +248,9 @@ export default function Localisation52Modules() {
       color: "bg-teal-100 text-teal-800"
     },
     
-    // 🌐 ÉCOSYSTÈME GLOBAL (Modules 46-52)
+    // 🌐 ÉCOSYSTÈME GLOBAL (Modules 47-53)
     {
-      id: 16,
+      id: 17,
       nom: "🌐 Écosystème Pôles Halal",
       path: "/ecosysteme-poles-halal",
       fichier: "client/src/pages/EcosystemePolesHalal.tsx",
