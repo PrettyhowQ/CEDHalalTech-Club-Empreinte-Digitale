@@ -168,6 +168,7 @@ import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
 import EmpireHalalHome from "@/pages/EmpireHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
+import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
@@ -832,6 +833,11 @@ function Router() {
       <Route path="/ou-est-tout" component={NavigationComplete} />
       <Route path="/localisation" component={NavigationComplete} />
       <Route path="/map" component={NavigationComplete} />
+      
+      {/* Localisation Visuelle */}
+      <Route path="/localisation-visuelle" component={LocalisationVisuelle} />
+      <Route path="/ca-se-trouve-ou" component={LocalisationVisuelle} />
+      <Route path="/recherche-visuelle" component={LocalisationVisuelle} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
