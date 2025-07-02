@@ -199,6 +199,7 @@ import PhilosophieHumiliteIslamique from "@/pages/PhilosophieHumiliteIslamique";
 import HommageScholarsIslamiques from "@/pages/HommageScholarsIslamiques";
 import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
 import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
+import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1020,6 +1021,13 @@ function Router() {
       <Route path="/amour-authentique" component={AmourFiAllahAuthentique} />
       <Route path="/spiritual-love" component={AmourFiAllahAuthentique} />
       <Route path="/love-prophet-allah" component={AmourFiAllahAuthentique} />
+      
+      {/* Blockchain Fiqh Rules */}
+      <Route path="/blockchain-fiqh-rules" component={BlockchainFiqhRules} />
+      <Route path="/blockchain-fiqh" component={BlockchainFiqhRules} />
+      <Route path="/crypto-fiqh" component={BlockchainFiqhRules} />
+      <Route path="/blockchain-islamic" component={BlockchainFiqhRules} />
+      <Route path="/regles-blockchain" component={BlockchainFiqhRules} />
       <Route path="/sabil-al-halal" component={VoieHalal52} />
       <Route path="/programme-52-etapes" component={VoieHalal52} />
       <Route path="/transformation-halal" component={VoieHalal52} />
