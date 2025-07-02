@@ -184,6 +184,7 @@ import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
 import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
 import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
 import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
+import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -900,6 +901,13 @@ function Router() {
       <Route path="/intelligence-artificielle-islam" component={FiqhIA3456Regles} />
       <Route path="/ai-islamic-rules" component={FiqhIA3456Regles} />
       <Route path="/fiqh-artificial-intelligence" component={FiqhIA3456Regles} />
+      
+      {/* Motivation Spirituelle Micro-Interactions */}
+      <Route path="/motivation-spirituelle" component={MotivationSpirituelleApp} />
+      <Route path="/spiritual-motivation" component={MotivationSpirituelleApp} />
+      <Route path="/micro-interactions-spirituelles" component={MotivationSpirituelleApp} />
+      <Route path="/dhikr-motivation" component={MotivationSpirituelleApp} />
+      <Route path="/motivation-micro-interactions" component={MotivationSpirituelleApp} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

@@ -286,6 +286,12 @@ export default function EmpireHalalHome() {
                   23,456 Règles Fiqh Tech
                 </Button>
               </Link>
+              <Link href="/motivation-spirituelle">
+                <Button className="w-full h-16 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white">
+                  <span className="text-lg mr-2">💜</span>
+                  Motivation Spirituelle
+                </Button>
+              </Link>
               <Link href="/ca-se-trouve-ou">
                 <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
                   <CheckCircle className="h-5 w-5 mr-2" />
