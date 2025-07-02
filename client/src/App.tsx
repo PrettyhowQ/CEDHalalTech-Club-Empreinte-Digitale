@@ -185,6 +185,7 @@ import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
 import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
 import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
 import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
+import PlanificationSuccessorale50Ans from "@/pages/PlanificationSuccessorale50Ans";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -908,6 +909,13 @@ function Router() {
       <Route path="/micro-interactions-spirituelles" component={MotivationSpirituelleApp} />
       <Route path="/dhikr-motivation" component={MotivationSpirituelleApp} />
       <Route path="/motivation-micro-interactions" component={MotivationSpirituelleApp} />
+      
+      {/* Planification Successorale 50+ Ans */}
+      <Route path="/planification-successorale-50-ans" component={PlanificationSuccessorale50Ans} />
+      <Route path="/succession-planning" component={PlanificationSuccessorale50Ans} />
+      <Route path="/heritage-familial-50ans" component={PlanificationSuccessorale50Ans} />
+      <Route path="/souheila-hanae-heritage" component={PlanificationSuccessorale50Ans} />
+      <Route path="/generations-futures-ced" component={PlanificationSuccessorale50Ans} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

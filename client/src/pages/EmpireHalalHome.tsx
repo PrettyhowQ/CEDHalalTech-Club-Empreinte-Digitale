@@ -292,6 +292,12 @@ export default function EmpireHalalHome() {
                   Motivation Spirituelle
                 </Button>
               </Link>
+              <Link href="/planification-successorale-50-ans">
+                <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
+                  <span className="text-lg mr-2">👑</span>
+                  Héritage 50+ Ans
+                </Button>
+              </Link>
               <Link href="/ca-se-trouve-ou">
                 <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
                   <CheckCircle className="h-5 w-5 mr-2" />

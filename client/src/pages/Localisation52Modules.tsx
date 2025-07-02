@@ -32,7 +32,8 @@ import {
   Clock,
   TrendingUp,
   Car,
-  Award
+  Award,
+  Crown
 } from 'lucide-react';
 
 export default function Localisation52Modules() {
@@ -260,6 +261,18 @@ export default function Localisation52Modules() {
       status: "✅ Opérationnel",
       icon: Globe,
       color: "bg-slate-100 text-slate-800"
+    },
+    {
+      id: 18,
+      nom: "👑 Planification Successorale 50+ Ans",
+      path: "/planification-successorale-50-ans",
+      fichier: "client/src/pages/PlanificationSuccessorale50Ans.tsx",
+      description: "Transmission multigénérationnelle empire CED",
+      contenu: "Souheila & Hanaé-Denise, 3+ générations, 12.5B CHF projection",
+      category: "governance",
+      status: "✅ Opérationnel",
+      icon: Crown,
+      color: "bg-emerald-100 text-emerald-800"
     },
 
     // MODULES 17-32 : SPIRITUALITÉ & FIQH
