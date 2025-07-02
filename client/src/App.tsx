@@ -191,6 +191,9 @@ import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
 import ResponsiveAccessibilityMode from "@/pages/ResponsiveAccessibilityMode";
 import InteractiveSpiritualJourneyMoodTracker from "@/pages/InteractiveSpiritualJourneyMoodTracker";
 import LecteurCoranComplet from "@/pages/LecteurCoranComplet";
+import MethodesApprentissageIslamiqueTech from "@/pages/MethodesApprentissageIslamiqueTech";
+import MethodologieEtudiantsIslamiqueTech from "@/pages/MethodologieEtudiantsIslamiqueTech";
+import FinanceIslamiqueHalal from "@/pages/FinanceIslamiqueHalal";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -957,6 +960,28 @@ function Router() {
       <Route path="/mood-tracker-spirituel" component={InteractiveSpiritualJourneyMoodTracker} />
       <Route path="/journey-spiritual-gentle" component={InteractiveSpiritualJourneyMoodTracker} />
       <Route path="/spiritual-mood-tracker" component={InteractiveSpiritualJourneyMoodTracker} />
+
+      {/* Méthodes Apprentissage Islamique Tech */}
+      <Route path="/methodes-apprentissage-islamique-tech" component={MethodesApprentissageIslamiqueTech} />
+      <Route path="/islamic-learning-methods" component={MethodesApprentissageIslamiqueTech} />
+      <Route path="/apprentissage-tech-halal" component={MethodesApprentissageIslamiqueTech} />
+      <Route path="/methodes-tech-islamique" component={MethodesApprentissageIslamiqueTech} />
+      <Route path="/halal-tech-learning" component={MethodesApprentissageIslamiqueTech} />
+
+      {/* Méthodologie Étudiants Islamique Tech */}
+      <Route path="/methodologie-etudiants-islamique-tech" component={MethodologieEtudiantsIslamiqueTech} />
+      <Route path="/islamic-students-methodology" component={MethodologieEtudiantsIslamiqueTech} />
+      <Route path="/methodologie-sciences-islamiques" component={MethodologieEtudiantsIslamiqueTech} />
+      <Route path="/fiqh-informatique-pratique" component={MethodologieEtudiantsIslamiqueTech} />
+      <Route path="/dev-web-islamique" component={MethodologieEtudiantsIslamiqueTech} />
+
+      {/* Finance Islamique 100% Halal */}
+      <Route path="/finance-islamique-halal" component={FinanceIslamiqueHalal} />
+      <Route path="/islamic-finance-100-halal" component={FinanceIslamiqueHalal} />
+      <Route path="/finance-sharia-compliant" component={FinanceIslamiqueHalal} />
+      <Route path="/instruments-financiers-islamiques" component={FinanceIslamiqueHalal} />
+      <Route path="/halal-banking-investments" component={FinanceIslamiqueHalal} />
+      <Route path="/sukuk-murabaha-takaful" component={FinanceIslamiqueHalal} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
