@@ -543,6 +543,7 @@ function Router() {
       <Route path="/coran-live" component={QuranLiveRecitationPage} />
       <Route path="/quran-live" component={QuranLiveRecitationPage} />
       <Route path="/lecteur-coran" component={SimpleCoran} />
+      <Route path="/simple-coran" component={SimpleCoran} />
       <Route path="/quran-reader" component={SimpleCoran} />
       <Route path="/coran-tajweed" component={SimpleCoran} />
       <Route path="/lecture-coran" component={SimpleCoran} />

@@ -276,9 +276,9 @@ export default function Localisation52Modules() {
       color: "bg-emerald-100 text-emerald-800"
     },
 
-    // MODULES 17-32 : SPIRITUALITÉ & FIQH
+    // MODULES 33-34 : SPIRITUALITÉ & FIQH
     {
-      id: 17,
+      id: 33,
       nom: "📺 WebTV PrettyhowQ",
       path: "/webtv-prettyhowq",
       description: "Chaîne YouTube automatisée",
@@ -289,7 +289,7 @@ export default function Localisation52Modules() {
       color: "bg-blue-50 text-blue-600"
     },
     {
-      id: 18,
+      id: 34,
       nom: "☁️ Cloud Halal 100%",
       path: "/cloud-halal",
       description: "Infrastructure 100% conforme",
