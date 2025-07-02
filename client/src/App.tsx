@@ -195,6 +195,7 @@ import MethodesApprentissageIslamiqueTech from "@/pages/MethodesApprentissageIsl
 import MethodologieEtudiantsIslamiqueTech from "@/pages/MethodologieEtudiantsIslamiqueTech";
 import FinanceIslamiqueHalal from "@/pages/FinanceIslamiqueHalal";
 import VoieHalal52 from "@/pages/VoieHalal52";
+import PhilosophieHumiliteIslamique from "@/pages/PhilosophieHumiliteIslamique";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -987,6 +988,13 @@ function Router() {
       {/* Voie Halal 52 - Programme Transformation */}
       <Route path="/voie-halal-52" component={VoieHalal52} />
       <Route path="/voie-halal" component={VoieHalal52} />
+      
+      {/* Philosophie Humilité Islamique */}
+      <Route path="/philosophie-humilite-islamique" component={PhilosophieHumiliteIslamique} />
+      <Route path="/humilite-elevation" component={PhilosophieHumiliteIslamique} />
+      <Route path="/tawadu-islamic" component={PhilosophieHumiliteIslamique} />
+      <Route path="/spiritual-elevation" component={PhilosophieHumiliteIslamique} />
+      <Route path="/bi-kudrati-allah" component={PhilosophieHumiliteIslamique} />
       <Route path="/sabil-al-halal" component={VoieHalal52} />
       <Route path="/programme-52-etapes" component={VoieHalal52} />
       <Route path="/transformation-halal" component={VoieHalal52} />

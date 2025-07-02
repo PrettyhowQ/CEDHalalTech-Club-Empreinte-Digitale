@@ -299,6 +299,12 @@ export default function CedVoieHalalHome() {
                   Motivation Spirituelle
                 </Button>
               </Link>
+              <Link href="/philosophie-humilite-islamique">
+                <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
+                  <Heart className="h-5 w-5 mr-2" />
+                  Philosophie de l'Humilité
+                </Button>
+              </Link>
               <Link href="/planification-successorale-50-ans">
                 <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
                   <span className="text-lg mr-2">👑</span>
