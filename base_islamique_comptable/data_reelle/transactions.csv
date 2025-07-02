@@ -1,0 +1,21 @@
+date,reference,type_transaction,montant_chf,devise,contrepartie,description,categorie_islamique,statut_conformite,type_contrat,zakat_applicable,validee_sharia
+2025-01-02,TXN-2025-001,achat_immobilier,2850000.00,CHF,Famille Schmidt,Achat villa Genève via Murabaha,murabaha,halal,murabaha,true,true
+2025-01-02,TXN-2025-002,vente_produits,45680.00,CHF,Halal Market SA,Vente produits halal certifiés,halal_income,halal,bay_simple,true,true
+2025-01-03,TXN-2025-003,location_bureau,6800.00,CHF,CED Academy SARL,Loyer mensuel bureaux Ijara,ijara,halal,ijara,true,true
+2025-01-03,TXN-2025-004,financement_participatif,150000.00,CHF,Islamic Finance Consulting,Investissement Musharaka,musharaka,halal,musharaka,true,true
+2025-01-04,TXN-2025-005,don_zakat,8500.00,CHF,Mosquée An-Nour Genève,Versement Zakat al-Mal 2024,zakat_fund,mandub,qard_hassan,false,true
+2025-01-04,TXN-2025-006,assurance_takaful,3200.00,CHF,Al-Aman Takaful,Prime assurance islamique famille,takaful,halal,takaful,false,true
+2025-01-05,TXN-2025-007,achat_materiel,12450.00,CHF,TechForAll Suisse,Équipement informatique halal,halal_income,halal,bay_simple,true,true
+2025-01-05,TXN-2025-008,formation_islamique,2800.00,CHF,Institut Al-Azhar Genève,Formation Fiqh Informatique,halal_income,mandub,ijara,false,true
+2025-01-06,TXN-2025-009,renovation_propriete,45000.00,CHF,Entreprise Al-Bina,Rénovation salle prière villa,istisna,halal,istisna,true,true
+2025-01-06,TXN-2025-010,vente_vehicule,85000.00,CHF,Famille Zouari,Vente véhicule sans financement ribawi,halal_income,halal,bay_simple,true,true
+2025-01-07,TXN-2025-011,construction_mosquee,250000.00,CHF,Association Islamique Vaud,Don construction mosquée Lausanne,zakat_fund,mandub,qard_hassan,false,true
+2025-01-07,TXN-2025-012,location_appartement,4500.00,CHF,M. Ahmed Zouari,Loyer appartement Lausanne Ijara,ijara,halal,ijara,true,true
+2025-01-08,TXN-2025-013,achat_terrain,420000.00,CHF,Commune de Vernier,Terrain constructible halal,murabaha,halal,murabaha,true,true
+2025-01-08,TXN-2025-014,vente_services,18750.00,CHF,Clients divers,Consultations finance islamique,halal_income,halal,ijara,true,true
+2025-01-09,TXN-2025-015,financement_startup,75000.00,CHF,Halal Tech Startup,Investissement participatif Mudaraba,mudaraba,halal,mudaraba,true,true
+2025-01-09,TXN-2025-016,achat_or,35000.00,CHF,Comptoir Or Genève,Achat or physique (réserve Zakat),halal_income,halal,bay_simple,true,true
+2025-01-10,TXN-2025-017,pret_sans_interet,50000.00,CHF,Frère Muhammad Al-Kassem,Prêt Qard Hassan (sans intérêt),qard_hassan,mandub,qard_hassan,false,true
+2025-01-10,TXN-2025-018,remboursement_qard,25000.00,CHF,Sœur Fatima Benali,Remboursement prêt sans intérêt,qard_hassan,mandub,qard_hassan,false,true
+2025-01-11,TXN-2025-019,salaire_equipe,542000.00,CHF,Équipe CED,Salaires janvier conformes Sharia,halal_income,halal,ijara,false,true
+2025-01-11,TXN-2025-020,versement_zakat_fitr,480.00,CHF,Centre Islamique Genève,Zakat al-Fitr famille (8 personnes),zakat_fund,wajib,qard_hassan,false,true
