@@ -182,6 +182,8 @@ import DiagnosticEcosystemeRevolutionnaire from "@/pages/DiagnosticEcosystemeRev
 import GestionRHComplete from "@/pages/GestionRHComplete";
 import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
 import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
+import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
+import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -885,6 +887,19 @@ function Router() {
       <Route path="/fintech-gaming" component={GamifiedLearningPath} />
       <Route path="/apprentissage-jeu" component={GamifiedLearningPath} />
       <Route path="/islamic-gaming-learning" component={GamifiedLearningPath} />
+      
+      {/* Bibliothèque Fiqh Informatique */}
+      <Route path="/bibliotheque-fiqh-informatique" component={BibliothequeNumeriqueFiqh} />
+      <Route path="/fiqh-library" component={BibliothequeNumeriqueFiqh} />
+      <Route path="/islamic-tech-rules" component={BibliothequeNumeriqueFiqh} />
+      <Route path="/23456-regles-islamiques" component={BibliothequeNumeriqueFiqh} />
+      <Route path="/bibliotheque-numerique-fiqh" component={BibliothequeNumeriqueFiqh} />
+      
+      {/* Fiqh IA - 3456 Règles Intelligence Artificielle */}
+      <Route path="/fiqh-ia-3456-regles" component={FiqhIA3456Regles} />
+      <Route path="/intelligence-artificielle-islam" component={FiqhIA3456Regles} />
+      <Route path="/ai-islamic-rules" component={FiqhIA3456Regles} />
+      <Route path="/fiqh-artificial-intelligence" component={FiqhIA3456Regles} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

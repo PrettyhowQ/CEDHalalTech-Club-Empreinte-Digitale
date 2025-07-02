@@ -280,6 +280,12 @@ export default function EmpireHalalHome() {
                   Parcours Gamifié FinTech
                 </Button>
               </Link>
+              <Link href="/bibliotheque-fiqh-informatique">
+                <Button className="w-full h-16 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white">
+                  <span className="text-lg mr-2">📚</span>
+                  23,456 Règles Fiqh Tech
+                </Button>
+              </Link>
               <Link href="/ca-se-trouve-ou">
                 <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
                   <CheckCircle className="h-5 w-5 mr-2" />
