@@ -186,6 +186,8 @@ import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
 import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
 import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
 import PlanificationSuccessorale50Ans from "@/pages/PlanificationSuccessorale50Ans";
+import EquipeDeveloppementWebHalal from "@/pages/EquipeDeveloppementWebHalal";
+import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -916,6 +918,21 @@ function Router() {
       <Route path="/heritage-familial-50ans" component={PlanificationSuccessorale50Ans} />
       <Route path="/souheila-hanae-heritage" component={PlanificationSuccessorale50Ans} />
       <Route path="/generations-futures-ced" component={PlanificationSuccessorale50Ans} />
+      
+      {/* Équipe Développement Web Halal */}
+      <Route path="/equipe-developpement-web-halal" component={EquipeDeveloppementWebHalal} />
+      <Route path="/dev-team-halal" component={EquipeDeveloppementWebHalal} />
+      <Route path="/langages-halal-certifies" component={EquipeDeveloppementWebHalal} />
+      <Route path="/visual-studio-code-halal" component={EquipeDeveloppementWebHalal} />
+      <Route path="/github-halal" component={EquipeDeveloppementWebHalal} />
+      <Route path="/clients-prestige-cartier-lv" component={EquipeDeveloppementWebHalal} />
+      
+      {/* Convertisseur Devises & Zakat */}
+      <Route path="/convertisseur-devise-zakat" component={ConvertisseurDeviseZakat} />
+      <Route path="/currency-converter-zakat" component={ConvertisseurDeviseZakat} />
+      <Route path="/calculateur-zakat-halal" component={ConvertisseurDeviseZakat} />
+      <Route path="/outils-financiers-halal" component={ConvertisseurDeviseZakat} />
+      <Route path="/widgets-sites-prestige" component={ConvertisseurDeviseZakat} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

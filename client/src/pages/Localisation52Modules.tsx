@@ -33,7 +33,8 @@ import {
   TrendingUp,
   Car,
   Award,
-  Crown
+  Crown,
+  Code2
 } from 'lucide-react';
 
 export default function Localisation52Modules() {
