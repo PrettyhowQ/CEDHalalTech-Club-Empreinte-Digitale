@@ -196,6 +196,9 @@ import MethodologieEtudiantsIslamiqueTech from "@/pages/MethodologieEtudiantsIsl
 import FinanceIslamiqueHalal from "@/pages/FinanceIslamiqueHalal";
 import VoieHalal52 from "@/pages/VoieHalal52";
 import PhilosophieHumiliteIslamique from "@/pages/PhilosophieHumiliteIslamique";
+import HommageScholarsIslamiques from "@/pages/HommageScholarsIslamiques";
+import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
+import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -995,6 +998,28 @@ function Router() {
       <Route path="/tawadu-islamic" component={PhilosophieHumiliteIslamique} />
       <Route path="/spiritual-elevation" component={PhilosophieHumiliteIslamique} />
       <Route path="/bi-kudrati-allah" component={PhilosophieHumiliteIslamique} />
+      
+      {/* Hommage Scholars Islamiques */}
+      <Route path="/hommage-scholars-islamiques" component={HommageScholarsIslamiques} />
+      <Route path="/scholars-islamic" component={HommageScholarsIslamiques} />
+      <Route path="/savants-islam" component={HommageScholarsIslamiques} />
+      <Route path="/montagnes-science" component={HommageScholarsIslamiques} />
+      <Route path="/zakat-scholars" component={HommageScholarsIslamiques} />
+      <Route path="/albani-ibn-taymiyyah" component={HommageScholarsIslamiques} />
+      
+      {/* Système Du'a Transactions */}
+      <Route path="/systeme-duaa-transactions" component={SystemeDuaaTransactions} />
+      <Route path="/duaa-automatique" component={SystemeDuaaTransactions} />
+      <Route path="/prayer-transactions" component={SystemeDuaaTransactions} />
+      <Route path="/scholars-duaa-system" component={SystemeDuaaTransactions} />
+      <Route path="/automatic-prayer" component={SystemeDuaaTransactions} />
+      
+      {/* Amour Fi-Allah Authentique */}
+      <Route path="/amour-fi-allah-authentique" component={AmourFiAllahAuthentique} />
+      <Route path="/love-fi-allah" component={AmourFiAllahAuthentique} />
+      <Route path="/amour-authentique" component={AmourFiAllahAuthentique} />
+      <Route path="/spiritual-love" component={AmourFiAllahAuthentique} />
+      <Route path="/love-prophet-allah" component={AmourFiAllahAuthentique} />
       <Route path="/sabil-al-halal" component={VoieHalal52} />
       <Route path="/programme-52-etapes" component={VoieHalal52} />
       <Route path="/transformation-halal" component={VoieHalal52} />

@@ -305,6 +305,24 @@ export default function CedVoieHalalHome() {
                   Philosophie de l'Humilité
                 </Button>
               </Link>
+              <Link href="/hommage-scholars-islamiques">
+                <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
+                  <Star className="h-5 w-5 mr-2" />
+                  Hommage aux Scholars
+                </Button>
+              </Link>
+              <Link href="/systeme-duaa-transactions">
+                <Button className="w-full h-16 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+                  <Heart className="h-5 w-5 mr-2" />
+                  Du'a à Chaque Transaction
+                </Button>
+              </Link>
+              <Link href="/amour-fi-allah-authentique">
+                <Button className="w-full h-16 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white">
+                  <Heart className="h-5 w-5 mr-2" />
+                  Amour Fi-Allah Authentique
+                </Button>
+              </Link>
               <Link href="/planification-successorale-50-ans">
                 <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
                   <span className="text-lg mr-2">👑</span>
