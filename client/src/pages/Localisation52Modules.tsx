@@ -675,6 +675,28 @@ export default function Localisation52Modules() {
       status: "✅ Opérationnel",
       icon: Award,
       color: "bg-gold-100 text-gold-800"
+    },
+    {
+      id: 53,
+      nom: "💻 Équipe Développement Web Halal",
+      path: "/equipe-developpement-web-halal",
+      description: "Meilleure équipe mondiale selon Fiqh informatique",
+      contenu: "6 langages halal, VS Code/GitHub halal, clients prestige",
+      category: "tech",
+      status: "✅ Opérationnel",
+      icon: Code2,
+      color: "bg-emerald-100 text-emerald-800"
+    },
+    {
+      id: 54,
+      nom: "💱 Convertisseur Devises & Zakat",
+      path: "/convertisseur-devise-zakat",
+      description: "Outils financiers halal pour sites prestige",
+      contenu: "Conversion temps réel, calculateur Zakat, widgets",
+      category: "finance",
+      status: "✅ Opérationnel",
+      icon: Calculator,
+      color: "bg-blue-100 text-blue-800"
     }
   ];
 

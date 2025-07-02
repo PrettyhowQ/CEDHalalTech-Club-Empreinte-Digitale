@@ -490,7 +490,7 @@ Aucune reproduction, distribution ou modification n'est autorisée
 sans autorisation écrite explicite.
 
 Transmission autorisée uniquement à :
-- Souheila Yakoubi-Ozel (héritière désignée)
+- Souheila-Iness  Yakoubi-Ozel (héritière désignée)
 - Hanaé-Denise Ozel (héritière désignée)
 - Leurs descendants selon planification successorale
 
