@@ -188,6 +188,8 @@ import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
 import PlanificationSuccessorale50Ans from "@/pages/PlanificationSuccessorale50Ans";
 import EquipeDeveloppementWebHalal from "@/pages/EquipeDeveloppementWebHalal";
 import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
+import ResponsiveAccessibilityMode from "@/pages/ResponsiveAccessibilityMode";
+import InteractiveSpiritualJourneyMoodTracker from "@/pages/InteractiveSpiritualJourneyMoodTracker";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -933,6 +935,20 @@ function Router() {
       <Route path="/calculateur-zakat-halal" component={ConvertisseurDeviseZakat} />
       <Route path="/outils-financiers-halal" component={ConvertisseurDeviseZakat} />
       <Route path="/widgets-sites-prestige" component={ConvertisseurDeviseZakat} />
+      
+      {/* Mode Accessibilité Islamique */}
+      <Route path="/mode-accessibilite-islamique" component={ResponsiveAccessibilityMode} />
+      <Route path="/responsive-accessibility-mode" component={ResponsiveAccessibilityMode} />
+      <Route path="/accessibilite-contraste-islam" component={ResponsiveAccessibilityMode} />
+      <Route path="/high-contrast-islamic" component={ResponsiveAccessibilityMode} />
+      <Route path="/accessibility-islamic-mode" component={ResponsiveAccessibilityMode} />
+      
+      {/* Suivi Spirituel Interactif */}
+      <Route path="/suivi-spirituel-interactif" component={InteractiveSpiritualJourneyMoodTracker} />
+      <Route path="/interactive-spiritual-journey" component={InteractiveSpiritualJourneyMoodTracker} />
+      <Route path="/mood-tracker-spirituel" component={InteractiveSpiritualJourneyMoodTracker} />
+      <Route path="/journey-spiritual-gentle" component={InteractiveSpiritualJourneyMoodTracker} />
+      <Route path="/spiritual-mood-tracker" component={InteractiveSpiritualJourneyMoodTracker} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
