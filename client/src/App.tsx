@@ -166,6 +166,7 @@ import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
 import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
+import EmpireHalalHome from "@/pages/EmpireHalalHome";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
@@ -791,7 +792,8 @@ function Router() {
       <Route path="/fiqh-chart" component={CharteFiqhIAHalalSimple} />
 
       {/* Main home page accessible to everyone */}
-      <Route path="/" component={Home} />
+      <Route path="/" component={EmpireHalalHome} />
+      <Route path="/home-original" component={Home} />
       
       {/* Protected routes for authenticated users */}
       {isAuthenticated && !isLoading && (
