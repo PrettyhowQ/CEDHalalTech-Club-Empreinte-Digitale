@@ -166,7 +166,7 @@ import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
 import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
-import EmpireHalalHome from "@/pages/EmpireHalalHome";
+import CedVoieHalalHome from "@/pages/EmpireHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import Localisation52Modules from "@/pages/Localisation52Modules";
@@ -194,6 +194,7 @@ import LecteurCoranComplet from "@/pages/LecteurCoranComplet";
 import MethodesApprentissageIslamiqueTech from "@/pages/MethodesApprentissageIslamiqueTech";
 import MethodologieEtudiantsIslamiqueTech from "@/pages/MethodologieEtudiantsIslamiqueTech";
 import FinanceIslamiqueHalal from "@/pages/FinanceIslamiqueHalal";
+import VoieHalal52 from "@/pages/VoieHalal52";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -820,7 +821,7 @@ function Router() {
       <Route path="/fiqh-chart" component={CharteFiqhIAHalalSimple} />
 
       {/* Main home page accessible to everyone */}
-      <Route path="/" component={EmpireHalalHome} />
+      <Route path="/" component={CedVoieHalalHome} />
       <Route path="/home-original" component={Home} />
       
       {/* Protected routes for authenticated users */}
@@ -982,6 +983,14 @@ function Router() {
       <Route path="/instruments-financiers-islamiques" component={FinanceIslamiqueHalal} />
       <Route path="/halal-banking-investments" component={FinanceIslamiqueHalal} />
       <Route path="/sukuk-murabaha-takaful" component={FinanceIslamiqueHalal} />
+
+      {/* Voie Halal 52 - Programme Transformation */}
+      <Route path="/voie-halal-52" component={VoieHalal52} />
+      <Route path="/voie-halal" component={VoieHalal52} />
+      <Route path="/sabil-al-halal" component={VoieHalal52} />
+      <Route path="/programme-52-etapes" component={VoieHalal52} />
+      <Route path="/transformation-halal" component={VoieHalal52} />
+      <Route path="/univers-ethique-prospere" component={VoieHalal52} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

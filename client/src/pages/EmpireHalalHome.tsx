@@ -16,10 +16,11 @@ import {
   Banknote,
   Star,
   Crown,
-  Headphones
+  Headphones,
+  Heart
 } from 'lucide-react';
 
-export default function EmpireHalalHome() {
+export default function CedVoieHalalHome() {
   const patrimoineStats = {
     total: "19,245,750.00",
     zakat_annuelle: "481,278.75",
@@ -29,7 +30,7 @@ export default function EmpireHalalHome() {
     pays_operationnels: 4
   };
 
-  const servicesEmpire = [
+  const servicesVoieHalal = [
     {
       nom: "CED Bank",
       status: "Opérationnel",
@@ -89,17 +90,20 @@ export default function EmpireHalalHome() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-blue-50 to-purple-50">
       
-      {/* Header Empire */}
-      <div className="bg-gradient-to-r from-emerald-800 to-blue-800 text-white py-8">
+      {/* Header Réseau Économique */}
+      <div className="bg-gradient-to-r from-emerald-800 to-blue-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Crown className="h-12 w-12 text-yellow-400" />
-              <h1 className="text-5xl font-bold">Empire Économique 100% Halal</h1>
-              <Crown className="h-12 w-12 text-yellow-400" />
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Heart className="h-12 w-12 text-yellow-400" />
+              <h1 className="text-5xl font-bold">Réseau Économique 100% Halal</h1>
+              <Heart className="h-12 w-12 text-yellow-400" />
             </div>
-            <p className="text-xl text-emerald-100 mb-2">
-              Club Empreinte Digitale - Système Islamo-Tech Souverain
+            <p className="text-2xl text-emerald-100 mb-4 leading-relaxed max-w-4xl mx-auto">
+              "Un réseau économique 100% halal, pensé pour les cœurs sincères qui veulent entreprendre avec foi, éthique et excellence."
+            </p>
+            <p className="text-lg text-blue-100 mb-2">
+              Club Empreinte Digitale - CED Voie du HALAL | Écosystème Éthique & Prospère
             </p>
             <div className="flex items-center justify-center gap-4 text-sm">
               <Badge className="bg-yellow-500 text-yellow-900">
@@ -118,7 +122,7 @@ export default function EmpireHalalHome() {
 
       <div className="max-w-7xl mx-auto px-6 py-8">
         
-        {/* Métriques Empire */}
+        {/* Métriques Écosystème Éthique */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
           <Card className="bg-white/80 backdrop-blur border-2 border-emerald-200">
@@ -188,17 +192,20 @@ export default function EmpireHalalHome() {
           </Card>
         </div>
 
-        {/* Services Empire */}
+        {/* Services Voie Halal 52 */}
         <Card className="mb-12">
           <CardHeader className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white">
             <CardTitle className="text-2xl flex items-center gap-3">
-              <Globe className="h-8 w-8" />
-              Services Empire Halal - Interconnexion Complète
+              <Star className="h-8 w-8" />
+              🌟 Voie Halal 52 : Bâtir un Univers Éthique & Prospère
             </CardTitle>
+            <p className="text-emerald-100 mt-2">
+              طريق الحلال ٥٢ – لبناء عالم أخلاقي ومزدهر | 52 étapes vers une réussite alignée avec tes valeurs
+            </p>
           </CardHeader>
           <CardContent className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {servicesEmpire.map((service, index) => (
+              {servicesVoieHalal.map((service, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className={`bg-gradient-to-r ${service.color} p-4 text-white`}>
                     <div className="flex items-center gap-3 mb-2">
@@ -240,7 +247,7 @@ export default function EmpireHalalHome() {
         {/* Accès Rapide */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-2xl text-emerald-800">Accès Rapide Empire</CardTitle>
+            <CardTitle className="text-2xl text-emerald-800">Accès Rapide - Voie Halal 52</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -343,7 +350,7 @@ export default function EmpireHalalHome() {
                 "Incha Allah bi hawllilah"
               </p>
               <p className="text-sm text-gray-700">
-                Premier empire économique 100% halal de l'espace francophone
+                Premier réseau économique 100% halal de l'espace francophone - CED Voie du HALAL
               </p>
               <p className="text-xs text-gray-600 mt-2">
                 © 2025 Club Empreinte Digitale - Yakoubi Yamina
