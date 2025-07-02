@@ -64,7 +64,7 @@ export default function ComptabiliteIslamique() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-emerald-800 mb-4 flex items-center justify-center gap-3">
-            <Mosque className="h-12 w-12" />
+            <Building className="h-12 w-12" />
             Comptabilité Islamique CED
           </h1>
           <p className="text-xl text-emerald-600">

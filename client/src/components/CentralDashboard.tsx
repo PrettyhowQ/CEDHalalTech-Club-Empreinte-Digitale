@@ -112,6 +112,16 @@ export function CentralDashboard() {
       color: 'from-amber-600 to-yellow-700',
       category: 'RH',
       description: 'Fiches paie, contrats, planning'
+    },
+    {
+      id: 'accounting',
+      title: 'Comptabilité Islamique',
+      subtitle: 'Gestion comptable Sharia',
+      icon: FileText,
+      href: '/comptabilite-islamique',
+      color: 'from-emerald-600 to-green-700',
+      category: 'Comptabilité',
+      description: 'Double entrée, Zakat, contrats islamiques'
     }
   ];
 

@@ -803,6 +803,12 @@ function Router() {
       <Route path="/cloud-100-halal" component={CloudHalal} />
       <Route path="/halal-cloud" component={CloudHalal} />
       <Route path="/infrastructure-islamique" component={CloudHalal} />
+      
+      {/* Comptabilité Islamique */}
+      <Route path="/comptabilite-islamique" component={ComptabiliteIslamique} />
+      <Route path="/islamic-accounting" component={ComptabiliteIslamique} />
+      <Route path="/comptabilite-halal" component={ComptabiliteIslamique} />
+      <Route path="/gestion-comptable" component={ComptabiliteIslamique} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
