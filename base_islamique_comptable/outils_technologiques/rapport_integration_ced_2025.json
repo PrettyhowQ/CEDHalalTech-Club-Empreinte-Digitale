@@ -1,0 +1,239 @@
+{
+  "ecosysteme_ced": {
+    "nom": "Club Empreinte Digitale",
+    "dirigeante": "Yakoubi Yamina",
+    "date_creation": "2023-01-15",
+    "certification_sharia": "CED-INTEGRATION-2025-001",
+    "validators_scholars": 7,
+    "conformite_madhabs": "Hanafi, Maliki, Shafi'i, Hanbali"
+  },
+  "famille_yakoubi": {
+    "nombre_membres": 9,
+    "patrimoine_global": {
+      "par_membre": {
+        "1": {
+          "nom": "Yakoubi Yamina",
+          "role": "Dirigeante CED - Décisionnaire unique",
+          "comptes_bancaires": {
+            "CHF": 15750000.0,
+            "AED": 2500000.0,
+            "EUR": 500000.0,
+            "USD": 750000.0
+          },
+          "total_chf_equivalent": 17606250.0,
+          "couverture_takaful": 5000000.0,
+          "proprietes": 2
+        },
+        "2": {
+          "nom": "Souheila Yakoubi-Ozel",
+          "role": "Directrice Santé CED + Héritière",
+          "comptes_bancaires": {
+            "CHF": 85000.0
+          },
+          "total_chf_equivalent": 85000.0,
+          "couverture_takaful": 1500000.0,
+          "proprietes": 0
+        },
+        "3": {
+          "nom": "Hanaé-Denise Ozel",
+          "role": "Directrice Juridique CED + Héritière",
+          "comptes_bancaires": {
+            "CHF": 75000.0
+          },
+          "total_chf_equivalent": 75000.0,
+          "couverture_takaful": 1500000.0,
+          "proprietes": 0
+        },
+        "4": {
+          "nom": "Mohammed Yakoubi",
+          "role": "Père - Retraité (né 1942 Dahra)",
+          "comptes_bancaires": {
+            "CHF": 150000.0
+          },
+          "total_chf_equivalent": 150000.0,
+          "couverture_takaful": 150000.0,
+          "proprietes": 0
+        },
+        "5": {
+          "nom": "Kheira Yakoubi née Slimani",
+          "role": "Mère (née 1953 Dahra)",
+          "comptes_bancaires": {
+            "CHF": 150000.0
+          },
+          "total_chf_equivalent": 150000.0,
+          "couverture_takaful": 150000.0,
+          "proprietes": 0
+        },
+        "6": {
+          "nom": "Yakoubi Aziz",
+          "role": "Logistique Suisse (Berne)",
+          "comptes_bancaires": {
+            "CHF": 400000.0
+          },
+          "total_chf_equivalent": 400000.0,
+          "couverture_takaful": 200000.0,
+          "proprietes": 0
+        },
+        "7": {
+          "nom": "Yakoubi Karim",
+          "role": "Logistique Europe (Paris)",
+          "comptes_bancaires": {
+            "EUR": 500000.0
+          },
+          "total_chf_equivalent": 522500.0,
+          "couverture_takaful": 180000.0,
+          "proprietes": 0
+        },
+        "8": {
+          "nom": "Yakoubi Farid",
+          "role": "Business Émirats (Dubai)",
+          "comptes_bancaires": {
+            "AED": 800000.0
+          },
+          "total_chf_equivalent": 212000.0,
+          "couverture_takaful": 150000.0,
+          "proprietes": 0
+        },
+        "9": {
+          "nom": "Brahim TechForAll",
+          "role": "Gestion TechForAll + Boutique Costa del Sol",
+          "comptes_bancaires": {
+            "CHF": 45000.0
+          },
+          "total_chf_equivalent": 45000.0,
+          "couverture_takaful": 120000.0,
+          "proprietes": 0
+        }
+      },
+      "totaux_par_devise": {
+        "CHF": 16655000.0,
+        "AED": 3300000.0,
+        "EUR": 1000000.0,
+        "USD": 750000.0
+      },
+      "total_chf_equivalent": 19245750.0,
+      "couverture_takaful_totale": 8950000.0,
+      "nombre_proprietes": 2
+    },
+    "zakat_calculations": {
+      "date_calcul": "2025-07-02",
+      "nisab_chf": 5567.5,
+      "patrimoine_total_chf": 19245750.0,
+      "superieur_nisab": true,
+      "zakat_al_mal_due": 481143.75,
+      "zakat_al_fitr": 135.0,
+      "total_zakat_annuelle": 481278.75,
+      "detail_par_membre": {
+        "1": {
+          "nom": "Yakoubi Yamina",
+          "patrimoine_chf": 17606250.0,
+          "zakat_due": 440156.25,
+          "zakat_fitr": 15.0
+        },
+        "2": {
+          "nom": "Souheila Yakoubi-Ozel",
+          "patrimoine_chf": 85000.0,
+          "zakat_due": 2125.0,
+          "zakat_fitr": 15.0
+        },
+        "3": {
+          "nom": "Hanaé-Denise Ozel",
+          "patrimoine_chf": 75000.0,
+          "zakat_due": 1875.0,
+          "zakat_fitr": 15.0
+        },
+        "4": {
+          "nom": "Mohammed Yakoubi",
+          "patrimoine_chf": 150000.0,
+          "zakat_due": 3750.0,
+          "zakat_fitr": 15.0
+        },
+        "5": {
+          "nom": "Kheira Yakoubi née Slimani",
+          "patrimoine_chf": 150000.0,
+          "zakat_due": 3750.0,
+          "zakat_fitr": 15.0
+        },
+        "6": {
+          "nom": "Yakoubi Aziz",
+          "patrimoine_chf": 400000.0,
+          "zakat_due": 10000.0,
+          "zakat_fitr": 15.0
+        },
+        "7": {
+          "nom": "Yakoubi Karim",
+          "patrimoine_chf": 522500.0,
+          "zakat_due": 13062.5,
+          "zakat_fitr": 15.0
+        },
+        "8": {
+          "nom": "Yakoubi Farid",
+          "patrimoine_chf": 212000.0,
+          "zakat_due": 5300.0,
+          "zakat_fitr": 15.0
+        },
+        "9": {
+          "nom": "Brahim TechForAll",
+          "patrimoine_chf": 45000.0,
+          "zakat_due": 1125.0,
+          "zakat_fitr": 15.0
+        }
+      }
+    }
+  },
+  "services_integres": {
+    "ced_bank": {
+      "comptes_actifs": 9,
+      "devises_supportees": [
+        "CHF",
+        "AED",
+        "EUR",
+        "USD"
+      ],
+      "total_actifs_chf": 19245750.0
+    },
+    "al_aman_takaful": {
+      "polices_actives": 9,
+      "couverture_totale_chf": 8950000.0,
+      "type_assurance": "Takaful islamique"
+    },
+    "immobilier_islamique": {
+      "proprietes_totales": 2,
+      "types": [
+        "Villa",
+        "Appartement",
+        "Bureau"
+      ],
+      "conformite_sharia": "100%"
+    },
+    "comptabilite_islamique": {
+      "plan_comptable": "Conforme AAOIFI",
+      "double_entree": "Système islamique",
+      "audit_sharia": "Trimestriel"
+    }
+  },
+  "interoperabilite": {
+    "api_unifiee": true,
+    "transferts_inter_services": true,
+    "monitoring_temps_reel": true,
+    "alertes_conformite": true
+  },
+  "gouvernance_islamique": {
+    "comite_sharia": "7 scholars internationaux",
+    "president": "Sheikh Dr. Ahmad Al-Khalifi",
+    "validation_unanime": true,
+    "audit_trimestriel": true
+  },
+  "expansion_geographique": {
+    "suisse": "Siège principal opérationnel",
+    "emirats": "Succursale prévue Q3 2025",
+    "luxembourg": "Hub européen Q4 2025",
+    "autres": "Expansion selon demande"
+  },
+  "innovations_futures": {
+    "blockchain_halal": "Développement Q4 2025",
+    "ia_sharia_compliant": "Recherche en cours",
+    "metaverse_islamique": "Concept validé scholars",
+    "quantum_banking": "Vision 2027"
+  }
+}

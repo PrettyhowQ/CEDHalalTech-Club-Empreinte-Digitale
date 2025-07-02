@@ -132,6 +132,16 @@ export function CentralDashboard() {
       color: 'from-blue-600 to-indigo-700',
       category: 'Immobilier',
       description: 'Murabaha, Ijara, zones prière, proximité mosquées'
+    },
+    {
+      id: 'ecosystem',
+      title: 'Écosystème Pôles Halal',
+      subtitle: 'Empire économique islamique',
+      icon: Globe,
+      href: '/ecosysteme-poles-halal',
+      color: 'from-emerald-600 to-green-700',
+      category: 'Intégration',
+      description: 'API bancaire, WebTV, Garages, Conseil Chariah'
     }
   ];
 

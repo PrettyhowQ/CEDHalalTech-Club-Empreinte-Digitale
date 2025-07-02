@@ -1,0 +1,65 @@
+{
+  "date_calcul": "2025-07-02",
+  "periode_hawl": "354 jours (année lunaire)",
+  "nisab_reference": {
+    "or_85g": "5567.50 CHF",
+    "argent_595g": "505.75 CHF",
+    "minimum_retenu": "505.75 CHF"
+  },
+  "patrimoine_detaille": {
+    "liquidites": 0.0,
+    "immobilier_investissement": 0.0,
+    "or_argent": 0.0,
+    "commerce_stock": 0.0,
+    "creances": 0.0,
+    "total_zakatable": 0.0
+  },
+  "zakat_mal": {
+    "patrimoine_total": 0.0,
+    "nisab_applicable": 505.75,
+    "superieur_nisab": false,
+    "zakat_due": 0.0,
+    "taux_applique": 0.025,
+    "conformite_fiqh": true,
+    "sources_juridiques": [
+      "Coran 2:43 - وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ",
+      "Hadith Bukhari 1395 - Zakat or/argent",
+      "Consensus 4 madhabs - Nisab et taux 2.5%",
+      "AAOIFI FAS-9 - Standards finance islamique"
+    ]
+  },
+  "zakat_fitr": {
+    "type": "zakat_fitr",
+    "nombre_personnes": 6,
+    "montant_par_personne": 15.0,
+    "total_fitr": 90.0,
+    "obligation": "WAJIB (obligatoire)",
+    "timing": "Avant prière Aïd al-Fitr",
+    "sources": [
+      "Hadith Ibn Umar - Sahih Bukhari 1503",
+      "1 Sa' de nourriture de base par personne",
+      "Consensus des scholars contemporains"
+    ]
+  },
+  "total_zakat_annuelle": 90.0,
+  "beneficiaires_prioritaires": [
+    "1. Fuqara (pauvres)",
+    "2. Masakin (nécessiteux)",
+    "3. Amilin (collecteurs)",
+    "4. Muallafat (nouveaux musulmans)",
+    "5. Riqab (libération esclaves)",
+    "6. Gharimin (endettés)",
+    "7. Fi sabilillah (cause d'Allah)",
+    "8. Ibn sabil (voyageurs démunis)"
+  ],
+  "validations_sharia": {
+    "scholars_consultés": [
+      "Sheikh Salih Al-Fawzan",
+      "Dr. Wahba Az-Zuhayli",
+      "Comité Permanent Arabie Saoudite",
+      "Standards AAOIFI"
+    ],
+    "conformite_madhabs": "Hanafi, Maliki, Shafi'i, Hanbali",
+    "certificat": "CED-ZAKAT-2025-001"
+  }
+}

@@ -18,4 +18,4 @@ date,reference,type_transaction,montant_chf,devise,contrepartie,description,cate
 2025-01-10,TXN-2025-017,pret_sans_interet,50000.00,CHF,Frère Muhammad Al-Kassem,Prêt Qard Hassan (sans intérêt),qard_hassan,mandub,qard_hassan,false,true
 2025-01-10,TXN-2025-018,remboursement_qard,25000.00,CHF,Sœur Fatima Benali,Remboursement prêt sans intérêt,qard_hassan,mandub,qard_hassan,false,true
 2025-01-11,TXN-2025-019,salaire_equipe,542000.00,CHF,Équipe CED,Salaires janvier conformes Sharia,halal_income,halal,ijara,false,true
-2025-01-11,TXN-2025-020,versement_zakat_fitr,480.00,CHF,Centre Islamique Genève,Zakat al-Fitr famille (8 personnes),zakat_fund,wajib,qard_hassan,false,true
+2025-01-11,TXN-2025-020,versement_zakat_fitr,480.00,CHF,Centre Islamique Genève,Zakat al-Fitr famille (8 personnes),zakat_fund,mandub,qard_hassan,false,true
