@@ -261,10 +261,10 @@ export default function EmpireHalalHome() {
                   Immobilier Halal
                 </Button>
               </Link>
-              <Link href="/base_islamique_comptable/README.md">
+              <Link href="/navigation-complete">
                 <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
                   <CheckCircle className="h-5 w-5 mr-2" />
-                  Documentation
+                  Où Est Tout ?
                 </Button>
               </Link>
             </div>
