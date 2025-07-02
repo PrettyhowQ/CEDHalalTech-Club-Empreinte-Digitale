@@ -180,6 +180,8 @@ import FiqhInformatiqueComplet from "@/pages/FiqhInformatiqueComplet";
 import ThemesIslamiquesPersonnalisables from "@/pages/ThemesIslamiquesPersonnalisables";
 import DiagnosticEcosystemeRevolutionnaire from "@/pages/DiagnosticEcosystemeRevolutionnaire";
 import GestionRHComplete from "@/pages/GestionRHComplete";
+import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
+import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -869,6 +871,20 @@ function Router() {
       <Route path="/rh-complete" component={GestionRHComplete} />
       <Route path="/equipe-ced" component={GestionRHComplete} />
       <Route path="/hr-management" component={GestionRHComplete} />
+      
+      {/* Assistant Vocal Multilingue Éthique */}
+      <Route path="/assistant-vocal-multilingue" component={MultilingualVoiceAssistant} />
+      <Route path="/voice-assistant" component={MultilingualVoiceAssistant} />
+      <Route path="/aisha-al-aman" component={MultilingualVoiceAssistant} />
+      <Route path="/ia-vocale-ethique" component={MultilingualVoiceAssistant} />
+      <Route path="/multilingual-voice" component={MultilingualVoiceAssistant} />
+      
+      {/* Parcours Gamifié FinTech Islamique */}
+      <Route path="/parcours-gamifie" component={GamifiedLearningPath} />
+      <Route path="/gamified-learning" component={GamifiedLearningPath} />
+      <Route path="/fintech-gaming" component={GamifiedLearningPath} />
+      <Route path="/apprentissage-jeu" component={GamifiedLearningPath} />
+      <Route path="/islamic-gaming-learning" component={GamifiedLearningPath} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

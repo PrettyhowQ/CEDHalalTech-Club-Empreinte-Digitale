@@ -89,7 +89,7 @@ const GamifiedLearningPath = () => {
     { id: 2, title: 'Guerrier Fiqh', desc: 'Réussir 10 quiz de conformité', icon: Shield, earned: true, date: '2025-01-20' },
     { id: 3, title: 'Savant Digital', desc: 'Compléter 50 modules', icon: Brain, earned: true, date: '2025-01-25' },
     { id: 4, title: 'Maître Banking', desc: 'Certification Banking Islamique', icon: Crown, earned: true, date: '2025-01-30' },
-    { id: 5, title: 'Streaker Discipline', desc: '30 jours consécutifs', icon: Fire, earned: false, progress: 50 },
+    { id: 5, title: 'Streaker Discipline', desc: '30 jours consécutifs', icon: Flame, earned: false, progress: 50 },
     { id: 6, title: 'Mentor Communauté', desc: 'Aider 100 apprenants', icon: Users, earned: false, progress: 75 },
     { id: 7, title: 'Innovateur Halal', desc: 'Créer une solution FinTech', icon: Lightbulb, earned: false, progress: 25 }
   ];
@@ -238,15 +238,17 @@ const GamifiedLearningPath = () => {
     { xp: 5000, reward: '👑 Accès VIP Mentoring', type: 'feature' }
   ];
 
-  const completeModule = (moduleId) => {
+  const completeModule = (moduleId: number) => {
     if (!completedModules.includes(moduleId)) {
       setCompletedModules([...completedModules, moduleId]);
       const module = currentPathModules.find(m => m.id === moduleId);
-      setUserXP(prev => prev + module.xp);
-      setCoinsBalance(prev => prev + Math.floor(module.xp / 10));
+      if (module) {
+        setUserXP(prev => prev + module.xp);
+        setCoinsBalance(prev => prev + Math.floor(module.xp / 10));
+      }
       
       // Level up logic
-      if (userXP + module.xp >= totalXP) {
+      if (module && userXP + module.xp >= totalXP) {
         setUserLevel(prev => prev + 1);
         setUserXP(0);
         setTotalXP(prev => prev + 500);
@@ -350,7 +352,7 @@ const GamifiedLearningPath = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Fire className="h-5 w-5 text-orange-500" />
+                <Flame className="h-5 w-5 text-orange-500" />
                 Discipline Quotidienne
               </CardTitle>
             </CardHeader>

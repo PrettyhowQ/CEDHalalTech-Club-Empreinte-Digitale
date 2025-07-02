@@ -268,6 +268,18 @@ export default function EmpireHalalHome() {
                   🎵 Coran Audio + 52 Modules
                 </Button>
               </Link>
+              <Link href="/assistant-vocal-multilingue">
+                <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
+                  <span className="text-lg mr-2">🎤</span>
+                  Assistant Vocal Aisha Al-Aman
+                </Button>
+              </Link>
+              <Link href="/parcours-gamifie">
+                <Button className="w-full h-16 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white">
+                  <span className="text-lg mr-2">🎮</span>
+                  Parcours Gamifié FinTech
+                </Button>
+              </Link>
               <Link href="/ca-se-trouve-ou">
                 <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
                   <CheckCircle className="h-5 w-5 mr-2" />
