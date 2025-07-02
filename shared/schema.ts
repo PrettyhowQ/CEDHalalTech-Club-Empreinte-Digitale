@@ -485,3 +485,254 @@ export type InsertProgressionLecon = z.infer<typeof insertProgressionLeconSchema
 export type InsertQuiz = z.infer<typeof insertQuizSchema>;
 export type InsertResultatQuiz = z.infer<typeof insertResultatQuizSchema>;
 export type InsertCertificat = z.infer<typeof insertCertificatSchema>;
+
+// ==========================================
+// SYSTÈME COMPTABILITÉ ISLAMIQUE 
+// ==========================================
+
+// Enums pour comptabilité islamique
+export const typeCompteEnum = pgEnum("type_compte", ["actif", "passif", "capitaux_propres", "produits", "charges"]);
+export const categorieIslamisueEnum = pgEnum("categorie_islamique", ["halal_income", "zakat_fund", "qard_hassan", "murabaha", "ijara", "musharaka", "mudaraba", "takaful"]);
+export const statutConformiteEnum = pgEnum("statut_conformite", ["halal", "haram", "makruh", "mandub", "mubah"]);
+export const typeContratEnum = pgEnum("type_contrat", ["murabaha", "ijara", "musharaka", "mudaraba", "qard_hassan", "bay_salam", "istisna", "takaful"]);
+export const niveauGhararEnum = pgEnum("niveau_gharar", ["bas", "moyen", "eleve", "interdit"]);
+export const typeZakatEnum = pgEnum("type_zakat", ["mal", "fitr", "ushr", "rikaz", "tijara"]);
+
+// Entreprises / Clients
+export const entreprises = pgTable("entreprises", {
+  id: serial("id").primaryKey(),
+  nom: varchar("nom", { length: 255 }).notNull(),
+  nomArabe: varchar("nom_arabe", { length: 255 }),
+  typeActivite: varchar("type_activite", { length: 100 }).notNull(), // 'alimentation_halal', 'finance_islamique', 'education', etc.
+  numeroRegistre: varchar("numero_registre", { length: 100 }),
+  numeroTva: varchar("numero_tva", { length: 100 }),
+  adresse: text("adresse"),
+  ville: varchar("ville", { length: 100 }),
+  pays: varchar("pays", { length: 100 }),
+  telephone: varchar("telephone", { length: 50 }),
+  email: varchar("email", { length: 255 }),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  zakatApplicable: boolean("zakat_applicable").notNull().default(true),
+  devise: deviseEnum("devise").default("CHF"),
+  debutAnneFiscale: timestamp("debut_annee_fiscale").notNull(),
+  statutShahadah: varchar("statut_shahadah", { length: 50 }).notNull().default('confirme'), // 'confirme', 'en_attente', 'non_musulman'
+  certificationMetier: varchar("certification_metier", { length: 100 }), // 'certifie_halal', 'conforme_sharia', etc.
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Plan comptable islamique
+export const planComptable = pgTable("plan_comptable", {
+  id: serial("id").primaryKey(),
+  codeCompte: varchar("code_compte", { length: 20 }).notNull().unique(),
+  nomCompte: varchar("nom_compte", { length: 255 }).notNull(),
+  nomArabe: varchar("nom_arabe", { length: 255 }),
+  typeCompte: typeCompteEnum("type_compte").notNull(),
+  categorieIslamique: categorieIslamisueEnum("categorie_islamique").notNull(),
+  compteParentId: integer("compte_parent_id"),
+  niveau: integer("niveau").notNull().default(1),
+  actif: boolean("actif").notNull().default(true),
+  zakatApplicable: boolean("zakat_applicable").notNull().default(false),
+  tauxZakat: decimal("taux_zakat", { precision: 5, scale: 4 }).default('0.0250'), // 2.5% par défaut
+  statutIslamique: statutConformiteEnum("statut_islamique").notNull().default('halal'),
+  justificationFiqh: text("justification_fiqh"), // Justification selon le Fiqh
+  description: text("description"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Transactions comptables islamiques
+export const transactionsComptables = pgTable("transactions_comptables", {
+  id: serial("id").primaryKey(),
+  numeroTransaction: varchar("numero_transaction", { length: 50 }).notNull().unique(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  dateTransaction: timestamp("date_transaction").notNull(),
+  description: text("description").notNull(),
+  descriptionArabe: text("description_arabe"),
+  reference: varchar("reference", { length: 100 }),
+  montantTotal: decimal("montant_total", { precision: 15, scale: 2 }).notNull(),
+  devise: deviseEnum("devise").default("CHF"),
+  typeTransaction: varchar("type_transaction", { length: 50 }).notNull(), // 'vente', 'achat', 'paiement', 'recette', 'ecriture'
+  typeContratIslamique: typeContratEnum("type_contrat_islamique"),
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  statutRiba: varchar("statut_riba", { length: 20 }).notNull().default('sans_riba'), // 'sans_riba', 'contient_riba', 'douteux'
+  niveauGharar: niveauGhararEnum("niveau_gharar").default('bas'),
+  impactZakat: boolean("impact_zakat").notNull().default(false),
+  montantSadaqah: decimal("montant_sadaqah", { precision: 15, scale: 2 }).default('0.00'),
+  conformitePriere: boolean("conformite_priere").notNull().default(true), // Transaction faite en dehors des heures de prière
+  bismillahRecite: boolean("bismillah_recite").notNull().default(true),
+  temoinRequis: boolean("temoin_requis").notNull().default(false),
+  nomsTemoin: text("noms_temoin"),
+  approuvePar: varchar("approuve_par", { length: 255 }),
+  savantIslamique: varchar("savant_islamique", { length: 255 }), // Savant ayant validé si nécessaire
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Écritures comptables (double entrée islamique)
+export const ecrituresComptables = pgTable("ecritures_comptables", {
+  id: serial("id").primaryKey(),
+  transactionId: integer("transaction_id").notNull(),
+  compteId: integer("compte_id").notNull(),
+  montantDebit: decimal("montant_debit", { precision: 15, scale: 2 }).default('0.00'),
+  montantCredit: decimal("montant_credit", { precision: 15, scale: 2 }).default('0.00'),
+  description: text("description"),
+  justificationIslamique: text("justification_islamique"), // Justification selon les principes islamiques
+  zakatable: boolean("zakatable").notNull().default(false),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+});
+
+// Calculs de Zakat
+export const calculZakat = pgTable("calcul_zakat", {
+  id: serial("id").primaryKey(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  dateCalcul: timestamp("date_calcul").notNull(),
+  dateHijri: varchar("date_hijri", { length: 50 }), // Date du calendrier Hijri
+  typeZakat: typeZakatEnum("type_zakat").notNull(),
+  biensSoumisZakat: decimal("biens_soumis_zakat", { precision: 15, scale: 2 }).notNull(),
+  montantNisab: decimal("montant_nisab", { precision: 15, scale: 2 }).notNull(),
+  tauxZakat: decimal("taux_zakat", { precision: 5, scale: 4 }).notNull().default('0.0250'),
+  zakatDue: decimal("zakat_due", { precision: 15, scale: 2 }).notNull(),
+  zakatVersee: decimal("zakat_versee", { precision: 15, scale: 2 }).default('0.00'),
+  soldeZakat: decimal("solde_zakat", { precision: 15, scale: 2 }).notNull(),
+  statutPaiement: varchar("statut_paiement", { length: 20 }).notNull().default('en_attente'), // 'en_attente', 'paye', 'partiel'
+  organisationBeneficiaire: varchar("organisation_beneficiaire", { length: 255 }),
+  justificationIslamique: text("justification_islamique"),
+  approbationSavant: varchar("approbation_savant", { length: 255 }),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Contrats islamiques
+export const contratsIslamiques = pgTable("contrats_islamiques", {
+  id: serial("id").primaryKey(),
+  numeroContrat: varchar("numero_contrat", { length: 50 }).notNull().unique(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  nomContrePartie: varchar("nom_contre_partie", { length: 255 }).notNull(),
+  typeContrat: typeContratEnum("type_contrat").notNull(),
+  montantContrat: decimal("montant_contrat", { precision: 15, scale: 2 }).notNull(),
+  devise: deviseEnum("devise").default("CHF"),
+  dateDebut: timestamp("date_debut").notNull(),
+  dateFin: timestamp("date_fin"),
+  ratioPartageProfit: varchar("ratio_partage_profit", { length: 50 }), // Pour Musharaka/Mudaraba
+  montantLoyer: decimal("montant_loyer", { precision: 15, scale: 2 }), // Pour Ijara
+  tauxMarge: decimal("taux_marge", { precision: 5, scale: 4 }), // Pour Murabaha
+  conformiteIslamique: boolean("conformite_islamique").notNull().default(true),
+  comiteSharia: varchar("comite_sharia", { length: 255 }),
+  referenceFatwa: varchar("reference_fatwa", { length: 255 }),
+  nomsTemoin: text("noms_temoin"),
+  statutContrat: varchar("statut_contrat", { length: 20 }).notNull().default('actif'), // 'actif', 'termine', 'annule'
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Audit et conformité Sharia
+export const auditSharia = pgTable("audit_sharia", {
+  id: serial("id").primaryKey(),
+  entrepriseId: integer("entreprise_id").notNull(),
+  dateAudit: timestamp("date_audit").notNull(),
+  periodeAuditDu: timestamp("periode_audit_du").notNull(),
+  periodeAuditAu: timestamp("periode_audit_au").notNull(),
+  nomAuditeur: varchar("nom_auditeur", { length: 255 }).notNull(),
+  qualificationAuditeur: varchar("qualification_auditeur", { length: 255 }),
+  scoreConformite: integer("score_conformite"), // Score sur 100
+  transactionsNonConformes: integer("transactions_non_conformes").default(0),
+  incidentsRiba: integer("incidents_riba").default(0),
+  incidentsGharar: integer("incidents_gharar").default(0),
+  recommandations: text("recommandations"),
+  actionsCorrectives: text("actions_correctives"),
+  statutAudit: varchar("statut_audit", { length: 20 }).notNull().default('termine'), // 'en_cours', 'termine', 'suivi_requis'
+  certificationEmise: boolean("certification_emise").notNull().default(false),
+  prochaineAudit: timestamp("prochaine_audit"),
+  notes: text("notes"),
+  dateCreation: timestamp("date_creation").notNull().defaultNow(),
+  dateMiseAJour: timestamp("date_mise_a_jour").notNull().defaultNow(),
+});
+
+// Relations pour comptabilité islamique
+export const entreprisesRelations = relations(entreprises, ({ many }) => ({
+  transactions: many(transactionsComptables),
+  calculZakat: many(calculZakat),
+  contrats: many(contratsIslamiques),
+  audits: many(auditSharia),
+}));
+
+export const transactionsComptablesRelations = relations(transactionsComptables, ({ one, many }) => ({
+  entreprise: one(entreprises, {
+    fields: [transactionsComptables.entrepriseId],
+    references: [entreprises.id],
+  }),
+  ecritures: many(ecrituresComptables),
+}));
+
+export const ecrituresComptablesRelations = relations(ecrituresComptables, ({ one }) => ({
+  transaction: one(transactionsComptables, {
+    fields: [ecrituresComptables.transactionId],
+    references: [transactionsComptables.id],
+  }),
+  compte: one(planComptable, {
+    fields: [ecrituresComptables.compteId],
+    references: [planComptable.id],
+  }),
+}));
+
+export const planComptableRelations = relations(planComptable, ({ one, many }) => ({
+  compteParent: one(planComptable, {
+    fields: [planComptable.compteParentId],
+    references: [planComptable.id],
+  }),
+  sousComptes: many(planComptable),
+  ecritures: many(ecrituresComptables),
+}));
+
+export const calculZakatRelations = relations(calculZakat, ({ one }) => ({
+  entreprise: one(entreprises, {
+    fields: [calculZakat.entrepriseId],
+    references: [entreprises.id],
+  }),
+}));
+
+export const contratsIslamiquesRelations = relations(contratsIslamiques, ({ one }) => ({
+  entreprise: one(entreprises, {
+    fields: [contratsIslamiques.entrepriseId],
+    references: [entreprises.id],
+  }),
+}));
+
+export const auditShariaRelations = relations(auditSharia, ({ one }) => ({
+  entreprise: one(entreprises, {
+    fields: [auditSharia.entrepriseId],
+    references: [entreprises.id],
+  }),
+}));
+
+// Schémas d'insertion pour comptabilité islamique
+export const insertEntrepriseSchema = createInsertSchema(entreprises).omit({ id: true });
+export const insertPlanComptableSchema = createInsertSchema(planComptable).omit({ id: true });
+export const insertTransactionComptableSchema = createInsertSchema(transactionsComptables).omit({ id: true });
+export const insertEcritureComptableSchema = createInsertSchema(ecrituresComptables).omit({ id: true });
+export const insertCalculZakatSchema = createInsertSchema(calculZakat).omit({ id: true });
+export const insertContratIslamisueSchema = createInsertSchema(contratsIslamiques).omit({ id: true });
+export const insertAuditShariaSchema = createInsertSchema(auditSharia).omit({ id: true });
+
+// Types d'insertion comptabilité islamique
+export type InsertEntreprise = z.infer<typeof insertEntrepriseSchema>;
+export type InsertPlanComptable = z.infer<typeof insertPlanComptableSchema>;
+export type InsertTransactionComptable = z.infer<typeof insertTransactionComptableSchema>;
+export type InsertEcritureComptable = z.infer<typeof insertEcritureComptableSchema>;
+export type InsertCalculZakat = z.infer<typeof insertCalculZakatSchema>;
+export type InsertContratIslamique = z.infer<typeof insertContratIslamisueSchema>;
+export type InsertAuditSharia = z.infer<typeof insertAuditShariaSchema>;
+
+// Types de sélection comptabilité islamique
+export type Entreprise = typeof entreprises.$inferSelect;
+export type PlanComptable = typeof planComptable.$inferSelect;
+export type TransactionComptable = typeof transactionsComptables.$inferSelect;
+export type EcritureComptable = typeof ecrituresComptables.$inferSelect;
+export type CalculZakat = typeof calculZakat.$inferSelect;
+export type ContratIslamique = typeof contratsIslamiques.$inferSelect;
+export type AuditSharia = typeof auditSharia.$inferSelect;

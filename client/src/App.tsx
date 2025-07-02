@@ -163,6 +163,7 @@ import AssistantIASpiritual from "@/pages/AssistantIASpiritual";
 import PlateformeFormationsHalal from "@/pages/PlateformeFormationsHalal";
 import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 import IslamicThemesPage from "@/pages/IslamicThemesPage";
+import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
