@@ -190,6 +190,7 @@ import EquipeDeveloppementWebHalal from "@/pages/EquipeDeveloppementWebHalal";
 import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
 import ResponsiveAccessibilityMode from "@/pages/ResponsiveAccessibilityMode";
 import InteractiveSpiritualJourneyMoodTracker from "@/pages/InteractiveSpiritualJourneyMoodTracker";
+import LecteurCoranComplet from "@/pages/LecteurCoranComplet";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -536,6 +537,13 @@ function Router() {
       <Route path="/quran-reader" component={SimpleCoran} />
       <Route path="/coran-tajweed" component={SimpleCoran} />
       <Route path="/lecture-coran" component={SimpleCoran} />
+      
+      {/* Lecteur Coran Complet avec 114 sourates */}
+      <Route path="/lecteur-coran-complet" component={LecteurCoranComplet} />
+      <Route path="/coran-complet" component={LecteurCoranComplet} />
+      <Route path="/holy-quran-reader" component={LecteurCoranComplet} />
+      <Route path="/lecteur-coran-114-sourates" component={LecteurCoranComplet} />
+      <Route path="/recitation-coran-complete" component={LecteurCoranComplet} />
       <Route path="/temoignages" component={Temoignages} />
       <Route path="/formations/programmation" component={Formations} />
       <Route path="/formations/dietetique" component={Formations} />
