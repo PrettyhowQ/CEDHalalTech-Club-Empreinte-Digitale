@@ -197,10 +197,10 @@ export default function CedVoieHalalHome() {
           <CardHeader className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white">
             <CardTitle className="text-2xl flex items-center gap-3">
               <Star className="h-8 w-8" />
-              🌟 Voie Halal 52 : Bâtir un Univers Éthique & Prospère
+              🌟 Voie Halal : Bâtir un Univers Éthique & Prospère
             </CardTitle>
             <p className="text-emerald-100 mt-2">
-              طريق الحلال ٥٢ – لبناء عالم أخلاقي ومزدهر | 52 étapes vers une réussite alignée avec tes valeurs
+              طريق الحلال – لبناء عالم أخلاقي ومزدهر | Étapes vers une réussite alignée avec tes valeurs
             </p>
           </CardHeader>
           <CardContent className="p-6">
@@ -247,7 +247,7 @@ export default function CedVoieHalalHome() {
         {/* Accès Rapide */}
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-2xl text-emerald-800">Accès Rapide - Voie Halal 52</CardTitle>
+            <CardTitle className="text-2xl text-emerald-800">Accès Rapide - Voie Halal</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

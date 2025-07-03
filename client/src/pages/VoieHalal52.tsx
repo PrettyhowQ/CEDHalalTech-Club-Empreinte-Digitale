@@ -128,7 +128,7 @@ export default function VoieHalal52() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <Star className="h-16 w-16 text-yellow-300" />
             <h1 className="text-6xl font-bold">
-              Voie Halal 52
+              Voie Halal
             </h1>
             <Star className="h-16 w-16 text-yellow-300" />
           </div>
@@ -143,10 +143,10 @@ export default function VoieHalal52() {
           
           <div className="bg-white/20 backdrop-blur rounded-2xl p-6 max-w-4xl mx-auto">
             <p className="text-lg leading-relaxed">
-              <strong className="text-yellow-300">🧭 "52 étapes vers une réussite alignée avec tes valeurs"</strong>
+              <strong className="text-yellow-300">🧭 "Étapes vers une réussite alignée avec tes valeurs"</strong>
             </p>
             <p className="mt-4 text-emerald-100">
-              Un programme de transformation en 52 modules pour construire un projet de vie, 
+              Un programme de transformation pour construire un projet de vie, 
               d'entreprise ou de contribution aligné avec les principes de l'Islam : 
               justice, bienveillance, transparence et excellence.
             </p>
@@ -161,7 +161,7 @@ export default function VoieHalal52() {
           <CardHeader className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white">
             <CardTitle className="text-2xl flex items-center gap-3">
               <Target className="h-8 w-8" />
-              Progression Voie Halal 52
+              Progression Voie Halal
             </CardTitle>
           </CardHeader>
           <CardContent className="p-8">
@@ -237,7 +237,7 @@ export default function VoieHalal52() {
           <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
             <CardTitle className="text-2xl flex items-center gap-3">
               <Lightbulb className="h-8 w-8" />
-              Les 52 Étapes de Transformation
+              Les Étapes de Transformation
             </CardTitle>
             <p className="text-blue-100 mt-2">
               Chaque étape est une pierre précieuse sur le chemin de la réussite éthique
@@ -298,7 +298,7 @@ export default function VoieHalal52() {
               </h3>
               <p className="text-xl mb-6 text-emerald-100">
                 "Que vous soyez entrepreneur, étudiant, parent, éducateur ou créatif, 
-                Voie Halal 52 vous guide avec rigueur et spiritualité sur le chemin du halal."
+                Voie Halal vous guide avec rigueur et spiritualité sur le chemin du halal."
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/methodes-apprentissage-islamique-tech">
@@ -327,7 +327,7 @@ export default function VoieHalal52() {
             🔒 <strong>Protection Intellectuelle Yakoubi Yamina</strong> - Tous droits réservés
           </p>
           <p>
-            Programme "Voie Halal 52" développé selon les principes islamiques authentiques | 
+            Programme "Voie Halal" développé selon les principes islamiques authentiques | 
             Validation par 150+ scholars internationaux
           </p>
         </div>
