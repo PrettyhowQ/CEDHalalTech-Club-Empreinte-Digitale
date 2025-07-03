@@ -25,7 +25,7 @@ export default function PhilosophieHumiliteIslamique() {
           <div className="flex items-center justify-center mb-6">
             <Heart className="h-12 w-12 text-emerald-600 mr-4" />
             <h1 className="text-4xl font-bold text-emerald-800">
-              Philosophie de l'Humilité Islamique
+              Enseignement de l'Humilité Islamique
             </h1>
             <Heart className="h-12 w-12 text-emerald-600 ml-4" />
           </div>
@@ -254,7 +254,7 @@ export default function PhilosophieHumiliteIslamique() {
         {/* Footer Protection */}
         <div className="mt-12 p-4 bg-gray-50 rounded-lg text-center text-xs text-gray-600">
           <p>© 2025 Club Empreinte Digitale - Yakoubi Yamina</p>
-          <p className="mt-1">Philosophie Islamique Authentique - Tous droits réservés</p>
+          <p className="mt-1">Enseignement Islamique Authentique - Tous droits réservés</p>
         </div>
 
       </div>

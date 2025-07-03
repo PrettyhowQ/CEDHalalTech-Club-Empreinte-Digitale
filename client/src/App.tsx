@@ -996,6 +996,8 @@ function Router() {
       
       {/* Philosophie Humilité Islamique */}
       <Route path="/philosophie-humilite-islamique" component={PhilosophieHumiliteIslamique} />
+      <Route path="/enseignement-humilite-islamique" component={PhilosophieHumiliteIslamique} />
+      <Route path="/sagesse-humilite-islamique" component={PhilosophieHumiliteIslamique} />
       <Route path="/humilite-elevation" component={PhilosophieHumiliteIslamique} />
       <Route path="/tawadu-islamic" component={PhilosophieHumiliteIslamique} />
       <Route path="/spiritual-elevation" component={PhilosophieHumiliteIslamique} />
