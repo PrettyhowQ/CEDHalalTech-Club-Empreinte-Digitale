@@ -110,6 +110,20 @@ export default function ProtectionLicence() {
                   CED HalalTech™ certifié mondialement
                 </Badge>
                 
+                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-4 mb-4">
+                  <h4 className="font-bold text-red-800 dark:text-red-200 mb-2 flex items-center gap-2">
+                    <FileText className="h-4 w-4" />
+                    📜 Licence d'Interdiction Totale
+                  </h4>
+                  <p className="text-red-700 dark:text-red-300 text-sm mb-2">
+                    Document officiel : <code className="bg-red-100 dark:bg-red-800 px-2 py-1 rounded text-xs">LICENCE_INTERDICTION_CED_HALALTECH.md</code>
+                  </p>
+                  <p className="text-red-600 dark:text-red-400 text-xs italic border-l-2 border-red-300 pl-3">
+                    "Toute utilisation, reproduction, diffusion ou adaptation de CED HalalTech™, 
+                    en totalité ou en partie, est strictement interdite sans l'accord écrit de sa créatrice, Yakoubi Yamina."
+                  </p>
+                </div>
+                
                 <div className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                   <p>Propriété intellectuelle protégée</p>
                   <p>Marque déposée internationale</p>
