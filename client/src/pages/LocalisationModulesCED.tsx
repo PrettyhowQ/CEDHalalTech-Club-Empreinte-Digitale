@@ -37,11 +37,11 @@ import {
   Code2
 } from 'lucide-react';
 
-export default function Localisation52Modules() {
+export default function LocalisationModulesCED() {
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('tous');
 
-  const modules52 = [
+  const modulesCED = [
     // 🎵 CORAN AUDIO - Module Principal
     {
       id: 1,
@@ -566,7 +566,7 @@ export default function Localisation52Modules() {
       color: "bg-blue-100 text-blue-800"
     },
 
-    // MODULES 43-52 : SERVICES COMPLÉMENTAIRES
+    // MODULES SERVICES COMPLÉMENTAIRES
     {
       id: 43,
       nom: "🚗 Garages Halal Network",
@@ -667,7 +667,7 @@ export default function Localisation52Modules() {
       color: "bg-red-100 text-red-800"
     },
     {
-      id: 52,
+      id: 51,
       nom: "🏆 Certification Halal Hub",
       path: "/certification-hub",
       description: "Centre certification finale",
@@ -702,21 +702,21 @@ export default function Localisation52Modules() {
   ];
 
   const categories = [
-    { value: 'tous', label: 'Tous les Modules', count: modules52.length },
-    { value: 'spirituel', label: 'Spirituel', count: modules52.filter(m => m.category === 'spirituel').length },
-    { value: 'finance', label: 'Finance', count: modules52.filter(m => m.category === 'finance').length },
-    { value: 'education', label: 'Éducation', count: modules52.filter(m => m.category === 'education').length },
-    { value: 'sante', label: 'Santé', count: modules52.filter(m => m.category === 'sante').length },
-    { value: 'juridique', label: 'Juridique', count: modules52.filter(m => m.category === 'juridique').length },
-    { value: 'logistique', label: 'Logistique', count: modules52.filter(m => m.category === 'logistique').length },
-    { value: 'mobile', label: 'Mobile', count: modules52.filter(m => m.category === 'mobile').length },
-    { value: 'admin', label: 'Administration', count: modules52.filter(m => m.category === 'admin').length },
-    { value: 'ecosystem', label: 'Écosystème', count: modules52.filter(m => m.category === 'ecosystem').length },
-    { value: 'media', label: 'Média', count: modules52.filter(m => m.category === 'media').length },
-    { value: 'tech', label: 'Tech', count: modules52.filter(m => m.category === 'tech').length }
+    { value: 'tous', label: 'Tous les Modules', count: modulesCED.length },
+    { value: 'spirituel', label: 'Spirituel', count: modulesCED.filter(m => m.category === 'spirituel').length },
+    { value: 'finance', label: 'Finance', count: modulesCED.filter(m => m.category === 'finance').length },
+    { value: 'education', label: 'Éducation', count: modulesCED.filter(m => m.category === 'education').length },
+    { value: 'sante', label: 'Santé', count: modulesCED.filter(m => m.category === 'sante').length },
+    { value: 'juridique', label: 'Juridique', count: modulesCED.filter(m => m.category === 'juridique').length },
+    { value: 'logistique', label: 'Logistique', count: modulesCED.filter(m => m.category === 'logistique').length },
+    { value: 'mobile', label: 'Mobile', count: modulesCED.filter(m => m.category === 'mobile').length },
+    { value: 'admin', label: 'Administration', count: modulesCED.filter(m => m.category === 'admin').length },
+    { value: 'ecosystem', label: 'Écosystème', count: modulesCED.filter(m => m.category === 'ecosystem').length },
+    { value: 'media', label: 'Média', count: modulesCED.filter(m => m.category === 'media').length },
+    { value: 'tech', label: 'Tech', count: modulesCED.filter(m => m.category === 'tech').length }
   ];
 
-  const filteredModules = modules52.filter(module => {
+  const filteredModules = modulesCED.filter(module => {
     const matchesSearch = module.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          module.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          module.contenu.toLowerCase().includes(searchTerm.toLowerCase());
@@ -724,8 +724,8 @@ export default function Localisation52Modules() {
     return matchesSearch && matchesCategory;
   });
 
-  const operationalCount = modules52.filter(m => m.status.includes('✅')).length;
-  const inProgressCount = modules52.filter(m => m.status.includes('🔄')).length;
+  const operationalCount = modulesCED.filter(m => m.status.includes('✅')).length;
+  const inProgressCount = modulesCED.filter(m => m.status.includes('🔄')).length;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
@@ -735,10 +735,10 @@ export default function Localisation52Modules() {
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-indigo-800 mb-4 flex items-center justify-center gap-3">
             <Zap className="h-12 w-12" />
-            Les 52 Modules CED HalalTech™
+            Les Modules CED HalalTech™
           </h1>
           <p className="text-xl text-indigo-600 mb-2">
-            🎵 <strong>Coran Audio + 51 Autres Modules</strong> 🎵
+            🎵 <strong>Coran Audio + Autres Modules</strong> 🎵
           </p>
           <div className="flex justify-center gap-4 text-sm">
             <Badge className="bg-green-100 text-green-800">
@@ -748,7 +748,7 @@ export default function Localisation52Modules() {
               🔄 {inProgressCount} En Cours
             </Badge>
             <Badge className="bg-purple-100 text-purple-800">
-              🎯 {modules52.length} Total
+              🎯 {modulesCED.length} Total
             </Badge>
           </div>
         </div>
@@ -833,7 +833,7 @@ export default function Localisation52Modules() {
           </CardContent>
         </Card>
 
-        {/* Grille des 52 Modules */}
+        {/* Grille des Modules CED */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredModules.map((module) => (
             <Card key={module.id} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -899,7 +899,7 @@ export default function Localisation52Modules() {
         {/* Résumé Final */}
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-indigo-800">📊 Résumé CED HalalTech™ 52 Modules</CardTitle>
+            <CardTitle className="text-indigo-800">📊 Résumé CED HalalTech™ Modules</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -942,7 +942,7 @@ export default function Localisation52Modules() {
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-indigo-200 text-center text-sm text-indigo-600">
           <p className="mb-2">© 2025 Club Empreinte Digitale - Yakoubi Yamina</p>
-          <p className="mb-2">🎵 CED HalalTech™ 52 Modules - Le Coran au Centre 🎵</p>
+          <p className="mb-2">🎵 CED HalalTech™ Modules - Le Coran au Centre 🎵</p>
           <p className="text-xs text-gray-500">
             {filteredModules.length} modules affichés
             {searchTerm && ` pour "${searchTerm}"`}

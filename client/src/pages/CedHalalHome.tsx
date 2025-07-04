@@ -269,10 +269,10 @@ export default function CedVoieHalalHome() {
                   Immobilier Halal
                 </Button>
               </Link>
-              <Link href="/52-modules">
+              <Link href="/modules-ced">
                 <Button className="w-full h-16 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
                   <Headphones className="h-5 w-5 mr-2" />
-                  🎵 Coran Audio + 52 Modules
+                  🎵 Coran Audio + Modules CED
                 </Button>
               </Link>
               <Link href="/assistant-vocal-multilingue">

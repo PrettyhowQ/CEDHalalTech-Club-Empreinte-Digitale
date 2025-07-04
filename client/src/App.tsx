@@ -170,7 +170,7 @@ import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
 import CedVoieHalalHome from "@/pages/CedHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
-import Localisation52Modules from "@/pages/Localisation52Modules";
+import LocalisationModulesCED from "@/pages/LocalisationModulesCED";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
 import CommunityFiqhGuidelinesPage from "@/pages/CommunityFiqhGuidelinesPage";
 import SpiritualMotivationMicroInteractionsPage from "@/pages/SpiritualMotivationMicroInteractionsPage";
@@ -876,10 +876,10 @@ function Router() {
       <Route path="/ca-se-trouve-ou" component={LocalisationVisuelle} />
       <Route path="/recherche-visuelle" component={LocalisationVisuelle} />
       
-      {/* 53 Modules CED HalalTech™ */}
-      <Route path="/52-modules" component={Localisation52Modules} />
-      <Route path="/tous-modules" component={Localisation52Modules} />
-      <Route path="/coran-et-modules" component={Localisation52Modules} />
+      {/* Modules CED HalalTech™ */}
+      <Route path="/modules-ced" component={LocalisationModulesCED} />
+      <Route path="/tous-modules" component={LocalisationModulesCED} />
+      <Route path="/coran-et-modules" component={LocalisationModulesCED} />
       
       {/* Nouvelles Fonctionnalités Révolutionnaires CED */}
       <Route path="/fiqh-informatique-complet" component={FiqhInformatiqueComplet} />
