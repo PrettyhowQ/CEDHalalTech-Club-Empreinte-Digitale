@@ -305,6 +305,12 @@ export default function CedVoieHalalHome() {
                   Sagesse CED HalalTech™
                 </Button>
               </Link>
+              <Link href="/halal-security">
+                <Button className="w-full h-16 bg-gradient-to-r from-slate-600 to-gray-600 hover:from-slate-700 hover:to-gray-700 text-white">
+                  <Shield className="h-5 w-5 mr-2" />
+                  🛡️ HalalSecurity
+                </Button>
+              </Link>
               <Link href="/enseignement-humilite-islamique">
                 <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
                   <Heart className="h-5 w-5 mr-2" />

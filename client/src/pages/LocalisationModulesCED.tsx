@@ -698,6 +698,17 @@ export default function LocalisationModulesCED() {
       status: "✅ Opérationnel",
       icon: Calculator,
       color: "bg-blue-100 text-blue-800"
+    },
+    {
+      id: 55,
+      nom: "🛡️ HalalSecurity",
+      path: "/halal-security",
+      description: "Cybersécurité 100% islamique",
+      contenu: "Protection numérique conforme Sharia, authentification halal, pare-feu islamique",
+      category: "tech",
+      status: "✅ Opérationnel",
+      icon: Shield,
+      color: "bg-slate-100 text-slate-800"
     }
   ];
 
