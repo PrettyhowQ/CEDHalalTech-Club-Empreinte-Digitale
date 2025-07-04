@@ -203,6 +203,7 @@ import HommageScholarsIslamiques from "@/pages/HommageScholarsIslamiques";
 import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
 import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
+import ProtectionLicence from "@/pages/ProtectionLicence";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -916,6 +917,13 @@ function Router() {
       <Route path="/fintech-gaming" component={GamifiedLearningPath} />
       <Route path="/apprentissage-jeu" component={GamifiedLearningPath} />
       <Route path="/islamic-gaming-learning" component={GamifiedLearningPath} />
+      
+      {/* Protection et Licence CED HalalTech™ */}
+      <Route path="/protection-licence" component={ProtectionLicence} />
+      <Route path="/licence-protection" component={ProtectionLicence} />
+      <Route path="/copyright-ced" component={ProtectionLicence} />
+      <Route path="/licence-halal" component={ProtectionLicence} />
+      <Route path="/protection-intellectuelle" component={ProtectionLicence} />
       
       {/* Bibliothèque Fiqh Informatique */}
       <Route path="/bibliotheque-fiqh-informatique" component={BibliothequeNumeriqueFiqh} />

@@ -2,6 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'wouter';
+import ProtectionFooter from '@/components/ProtectionFooter';
 import { 
   Globe, 
   Building, 
@@ -317,6 +318,12 @@ export default function CedVoieHalalHome() {
                   Enseignement de l'Humilité
                 </Button>
               </Link>
+              <Link href="/protection-licence">
+                <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
+                  <Shield className="h-5 w-5 mr-2" />
+                  🛡️ Protection & Licence CED
+                </Button>
+              </Link>
               <Link href="/hommage-scholars-islamiques">
                 <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
                   <Star className="h-5 w-5 mr-2" />
@@ -402,6 +409,9 @@ export default function CedVoieHalalHome() {
         </Card>
 
       </div>
+      
+      {/* Footer de Protection et Licence */}
+      <ProtectionFooter />
     </div>
   );
 }

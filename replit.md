@@ -250,3 +250,11 @@ Preferred communication style: Simple, everyday language.
 - Code propriétaire exclusif - aucune reproduction autorisée
 - Conformité RGPD/LPD avec hébergement sécurisé Suisse
 - Usage exclusif réservé à l'écosystème CED & PrettyhowQ
+
+### Licence et Copyright CED HalalTech™
+- **Protection & Licence** : Utilisation exclusivement halal – Toute exploitation commerciale nécessite accord écrit
+- **Licence Éthique** : En conformité avec les valeurs islamiques authentiques
+- **Copyright** : © Yakoubi Yamina – Tous droits réservés | CED HalalTech™ certifié mondialement
+- **Hébergement** : 🇨🇭 Données hébergées en Suisse • Conforme RGPD & LPD
+- **Usage** : Éthique & halal uniquement selon Fiqh informatique
+- **Protection Multilingue** : ‎جميع الحقوق محفوظة | All rights reserved | 版权所有
