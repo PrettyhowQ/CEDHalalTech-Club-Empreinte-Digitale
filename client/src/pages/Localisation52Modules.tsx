@@ -456,7 +456,7 @@ export default function Localisation52Modules() {
 
     // MODULES 33-42 : INNOVATIONS TECHNOLOGIQUES
     {
-      id: 33,
+      id: 53,
       nom: "⚡ Quantum Halal Trading",
       path: "/quantum-trading",
       description: "Trading quantique Sharia",
@@ -467,7 +467,7 @@ export default function Localisation52Modules() {
       color: "bg-purple-50 text-purple-600"
     },
     {
-      id: 34,
+      id: 54,
       nom: "🧠 Neural Islamic Banking",
       path: "/neural-banking",
       description: "IA spirituelle conseil financier",

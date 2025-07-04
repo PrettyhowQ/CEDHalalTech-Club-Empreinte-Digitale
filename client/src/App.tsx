@@ -111,6 +111,7 @@ import AlAmanCEDInsurancePage from "@/pages/AlAmanCEDInsurancePage";
 import QuranListeningPage from "@/pages/QuranListeningPage";
 import { SimpleCoran } from "@/components/SimpleCoran";
 import QuranLiveRecitationPage from "@/pages/QuranLiveRecitationPage";
+import GaragesHalal from "@/pages/GaragesHalal";
 import SystemDiagnosticsPage from "@/pages/SystemDiagnosticsPage";
 import PremiumArabicSchoolPage from "@/pages/PremiumArabicSchoolPage";
 import TraducteurPage from "@/pages/traducteur-page";
@@ -1024,6 +1025,12 @@ function Router() {
       <Route path="/amour-authentique" component={AmourFiAllahAuthentique} />
       <Route path="/spiritual-love" component={AmourFiAllahAuthentique} />
       <Route path="/love-prophet-allah" component={AmourFiAllahAuthentique} />
+      
+      {/* Garages Halal Network */}
+      <Route path="/garages-halal" component={GaragesHalal} />
+      <Route path="/garages-halal-network" component={GaragesHalal} />
+      <Route path="/garage-halal" component={GaragesHalal} />
+      <Route path="/automotive-halal" component={GaragesHalal} />
       
       {/* Blockchain Fiqh Rules */}
       <Route path="/blockchain-fiqh-rules" component={BlockchainFiqhRules} />
