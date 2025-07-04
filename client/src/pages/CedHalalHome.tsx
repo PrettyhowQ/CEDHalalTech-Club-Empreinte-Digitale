@@ -18,7 +18,8 @@ import {
   Star,
   Crown,
   Headphones,
-  Heart
+  Heart,
+  Scale
 } from 'lucide-react';
 
 export default function CedVoieHalalHome() {
@@ -322,6 +323,12 @@ export default function CedVoieHalalHome() {
                 <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
                   <Shield className="h-5 w-5 mr-2" />
                   🛡️ Protection & Licence CED
+                </Button>
+              </Link>
+              <Link href="/mentions-legales">
+                <Button className="w-full h-16 bg-gradient-to-r from-slate-600 to-zinc-700 hover:from-slate-700 hover:to-zinc-800 text-white">
+                  <Scale className="h-5 w-5 mr-2" />
+                  ⚖️ Mentions Légales
                 </Button>
               </Link>
               <Link href="/hommage-scholars-islamiques">

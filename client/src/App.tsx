@@ -188,6 +188,8 @@ import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
 import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
 import SagesseCEDHalalTech from "@/pages/SagesseCEDHalalTech";
 import HalalSecurity from "@/pages/HalalSecurity";
+import ProtectionLicence from "@/pages/ProtectionLicence";
+import MentionsLegales from "@/pages/MentionsLegales";
 import PlanificationSuccessorale50Ans from "@/pages/PlanificationSuccessorale50Ans";
 import EquipeDeveloppementWebHalal from "@/pages/EquipeDeveloppementWebHalal";
 import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
@@ -203,7 +205,6 @@ import HommageScholarsIslamiques from "@/pages/HommageScholarsIslamiques";
 import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
 import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
-import ProtectionLicence from "@/pages/ProtectionLicence";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -924,6 +925,12 @@ function Router() {
       <Route path="/copyright-ced" component={ProtectionLicence} />
       <Route path="/licence-halal" component={ProtectionLicence} />
       <Route path="/protection-intellectuelle" component={ProtectionLicence} />
+      
+      {/* Mentions Légales CED HalalTech™ */}
+      <Route path="/mentions-legales" component={MentionsLegales} />
+      <Route path="/legal-notice" component={MentionsLegales} />
+      <Route path="/mentions-juridiques" component={MentionsLegales} />
+      <Route path="/informations-legales" component={MentionsLegales} />
       
       {/* Bibliothèque Fiqh Informatique */}
       <Route path="/bibliotheque-fiqh-informatique" component={BibliothequeNumeriqueFiqh} />
