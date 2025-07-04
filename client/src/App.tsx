@@ -186,6 +186,7 @@ import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
 import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
 import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
 import MotivationSpirituelleApp from "@/pages/MotivationSpirituelleApp";
+import SagesseCEDHalalTech from "@/pages/SagesseCEDHalalTech";
 import PlanificationSuccessorale50Ans from "@/pages/PlanificationSuccessorale50Ans";
 import EquipeDeveloppementWebHalal from "@/pages/EquipeDeveloppementWebHalal";
 import ConvertisseurDeviseZakat from "@/pages/ConvertisseurDeviseZakat";
@@ -1013,6 +1014,12 @@ function Router() {
       <Route path="/montagnes-science" component={HommageScholarsIslamiques} />
       <Route path="/zakat-scholars" component={HommageScholarsIslamiques} />
       <Route path="/albani-ibn-taymiyyah" component={HommageScholarsIslamiques} />
+      
+      {/* Sagesse CED HalalTech™ */}
+      <Route path="/sagesse-ced-halaltech" component={SagesseCEDHalalTech} />
+      <Route path="/enseignement-ced" component={SagesseCEDHalalTech} />
+      <Route path="/sagesse-technologique" component={SagesseCEDHalalTech} />
+      <Route path="/intelligence-coeur-foi" component={SagesseCEDHalalTech} />
       
       {/* Système Du'a Transactions */}
       <Route path="/systeme-duaa-transactions" component={SystemeDuaaTransactions} />
