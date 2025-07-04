@@ -39,7 +39,7 @@ export default function ProtectionLicence() {
             </h1>
           </div>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
-            CED HalalTech™ - Écosystème technologique 100% conforme aux valeurs islamiques
+            CED HalalTech™ (Club Empreinte Digitale) - Écosystème technologique 100% conforme aux valeurs islamiques
           </p>
           <Badge className="mt-3 bg-emerald-100 text-emerald-800 px-4 py-2">
             Technologie 100% Halal • Certifiée et protégée mondialement

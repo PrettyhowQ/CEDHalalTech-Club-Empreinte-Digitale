@@ -42,7 +42,7 @@ export default function MentionsLegales() {
             </h1>
           </div>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
-            HalalTech / CED - © Yakoubi Yamina
+            HalalTech / CED (Club Empreinte Digitale) - © Yakoubi Yamina
           </p>
           <Badge className="mt-3 bg-slate-100 text-slate-800 px-4 py-2">
             Protection juridique complète • Droit international
