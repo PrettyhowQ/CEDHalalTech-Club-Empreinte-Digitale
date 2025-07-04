@@ -136,7 +136,7 @@ export function CentralDashboard() {
     {
       id: 'ecosystem',
       title: 'Écosystème Pôles Halal',
-      subtitle: 'Empire économique islamique',
+      subtitle: 'Écosystème CED HalalTech™',
       icon: Globe,
       href: '/ecosysteme-poles-halal',
       color: 'from-emerald-600 to-green-700',

@@ -108,7 +108,7 @@ export default function LocalisationVisuelle() {
     },
     {
       nom: "Écosystème CED Complet",
-      path: "EMPIRE_ECONOMIQUE_HALAL_COMPLET.md",
+      path: "ECOSYSTEME_CED_HALALTECH_COMPLET.md",
       type: "synthèse",
       description: "Document final synthèse écosystème halal Yakoubi Yamina",
       contenu: "7 étapes accomplies, 43.9M CHF patrimoine total",

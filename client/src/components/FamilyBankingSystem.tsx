@@ -521,7 +521,7 @@ export function FamilyBankingSystem() {
                 <h4 className="font-semibold mb-3">Vision 2025-2030</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">Empire</div>
+                    <div className="text-2xl font-bold text-blue-600">CED HalalTech™</div>
                     <div className="text-sm text-gray-600">Multi-continental</div>
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">

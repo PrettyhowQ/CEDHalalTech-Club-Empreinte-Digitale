@@ -132,7 +132,7 @@ export function DubaiWealthTracker() {
         timezone: 'GMT+4'
       },
       notes: [
-        'Empire retail considérable aux EAU',
+        'Réseau retail considérable aux EAU',
         'Approche via responsabilité sociale corporate',
         'Focus sur impact communautaire'
       ]
@@ -180,7 +180,7 @@ export function DubaiWealthTracker() {
         timezone: 'GMT+4'
       },
       notes: [
-        'Empire retail mode et lifestyle',
+        'Réseau retail mode et lifestyle',
         'Approche via responsabilité sociale',
         'Potentiel diversification secteurs'
       ]

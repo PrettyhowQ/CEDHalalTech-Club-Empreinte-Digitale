@@ -66,7 +66,7 @@ export default function NavigationComplete() {
       categorie: "📚 DOCUMENTATION",
       items: [
         { nom: "README Base Islamique", path: "base_islamique_comptable/README.md", description: "Guide complet utilisation", status: "✅ Rédigé", icon: BookOpen },
-        { nom: "Écosystème CED Complet", path: "EMPIRE_ECONOMIQUE_HALAL_COMPLET.md", description: "Document synthèse final", status: "✅ Finalisé", icon: FileText },
+        { nom: "Écosystème CED Complet", path: "ECOSYSTEME_CED_HALALTECH_COMPLET.md", description: "Document synthèse final", status: "✅ Finalisé", icon: FileText },
         { nom: "Architecture Technique", path: "replit.md", description: "Documentation projet mise à jour", status: "✅ À jour", icon: Settings }
       ]
     },
@@ -228,7 +228,7 @@ server/
 └── db.ts                           (Configuration BDD)
 
 Documentation/
-├── ECOSYSTEME_CED_HALAL_COMPLET.md   (Synthèse finale)
+├── ECOSYSTEME_CED_HALALTECH_COMPLET.md   (Synthèse finale)
 ├── base_islamique_comptable/README.md  (Guide technique)
 └── replit.md                          (Architecture projet)
               `}</pre>
