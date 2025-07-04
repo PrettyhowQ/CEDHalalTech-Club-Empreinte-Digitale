@@ -167,7 +167,7 @@ import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
 import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
-import CedVoieHalalHome from "@/pages/EmpireHalalHome";
+import CedVoieHalalHome from "@/pages/CedHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import Localisation52Modules from "@/pages/Localisation52Modules";
@@ -829,6 +829,8 @@ function Router() {
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={CedVoieHalalHome} />
+      <Route path="/ced-halal-home" component={CedVoieHalalHome} />
+      <Route path="/ecosysteme-ced" component={CedVoieHalalHome} />
       <Route path="/home-original" component={Home} />
       
       {/* Protected routes for authenticated users */}

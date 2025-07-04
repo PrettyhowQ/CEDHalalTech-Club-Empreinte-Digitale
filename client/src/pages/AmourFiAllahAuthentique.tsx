@@ -335,7 +335,7 @@ export default function AmourFiAllahAuthentique() {
               </Button>
             </Link>
           </div>
-          <Link href="/empire-halal-home">
+          <Link href="/ced-halal-home">
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3">
               <ArrowRight className="h-5 w-5 mr-2" />
               Retour à l'Écosystème CED

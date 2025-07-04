@@ -243,7 +243,7 @@ export default function PhilosophieHumiliteIslamique() {
 
         {/* Navigation */}
         <div className="text-center">
-          <Link href="/empire-halal-home">
+          <Link href="/ced-halal-home">
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3">
               <ArrowUp className="h-5 w-5 mr-2" />
               Retour à l'Écosystème CED

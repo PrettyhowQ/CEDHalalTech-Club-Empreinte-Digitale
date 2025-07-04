@@ -29,7 +29,7 @@ export default function NavigationComplete() {
     {
       categorie: "🏛️ PAGES PRINCIPALES",
       items: [
-        { nom: "Empire Halal Home", path: "/", description: "Page d'accueil empire économique", status: "✅ Opérationnel", icon: Home },
+        { nom: "CED Halal Home", path: "/", description: "Page d'accueil écosystème CED", status: "✅ Opérationnel", icon: Home },
         { nom: "Écosystème Pôles Halal", path: "/ecosysteme-poles-halal", description: "Vue d'ensemble complète", status: "✅ Opérationnel", icon: Globe },
         { nom: "Comptabilité Islamique", path: "/comptabilite-islamique", description: "Système comptable Sharia", status: "✅ Opérationnel", icon: Calculator },
         { nom: "Immobilier Islamique", path: "/immobilier-islamique", description: "Gestion propriétés halal", status: "✅ Opérationnel", icon: Building },
@@ -59,14 +59,14 @@ export default function NavigationComplete() {
         { nom: "Calculateur Zakat", path: "base_islamique_comptable/outils_technologiques/zakat_calculator.py", description: "Calcul automatique conforme", status: "✅ Testé", icon: Code },
         { nom: "Intégration Écosystème", path: "base_islamique_comptable/outils_technologiques/integration_ecosysteme_ced.py", description: "Famille Yakoubi complète", status: "✅ Fonctionnel", icon: Code },
         { nom: "Rapport Zakat JSON", path: "base_islamique_comptable/outils_technologiques/rapport_zakat_2025.json", description: "Résultats automatiques", status: "✅ Généré", icon: FileText },
-        { nom: "Rapport Intégration", path: "base_islamique_comptable/outils_technologiques/rapport_integration_ced_2025.json", description: "Empire complet", status: "✅ Généré", icon: FileText }
+        { nom: "Rapport Intégration", path: "base_islamique_comptable/outils_technologiques/rapport_integration_ced_2025.json", description: "Écosystème complet", status: "✅ Généré", icon: FileText }
       ]
     },
     {
       categorie: "📚 DOCUMENTATION",
       items: [
         { nom: "README Base Islamique", path: "base_islamique_comptable/README.md", description: "Guide complet utilisation", status: "✅ Rédigé", icon: BookOpen },
-        { nom: "Empire Économique Complet", path: "EMPIRE_ECONOMIQUE_HALAL_COMPLET.md", description: "Document synthèse final", status: "✅ Finalisé", icon: FileText },
+        { nom: "Écosystème CED Complet", path: "EMPIRE_ECONOMIQUE_HALAL_COMPLET.md", description: "Document synthèse final", status: "✅ Finalisé", icon: FileText },
         { nom: "Architecture Technique", path: "replit.md", description: "Documentation projet mise à jour", status: "✅ À jour", icon: Settings }
       ]
     },
@@ -98,7 +98,7 @@ export default function NavigationComplete() {
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-blue-800 mb-4 flex items-center justify-center gap-3">
             <Map className="h-12 w-12" />
-            Navigation Complète Empire CED
+            Navigation Complète Écosystème CED
           </h1>
           <p className="text-xl text-blue-600">
             Localisation de tous les éléments de votre écosystème halal
@@ -210,11 +210,11 @@ base_islamique_comptable/
     ├── zakat_calculator.py            (Calculateur Python)
     ├── integration_ecosysteme_ced.py  (Famille Yakoubi)
     ├── rapport_zakat_2025.json        (Résultats Zakat)
-    ├── rapport_integration_ced_2025.json (Empire complet)
+    ├── rapport_integration_ced_2025.json (Écosystème complet)
     └── README.md                      (Guide utilisation)
 
 client/src/pages/
-├── EmpireHalalHome.tsx               (Page d'accueil empire)
+├── CedHalalHome.tsx                 (Page d'accueil CED)
 ├── EcosystemePolesHalal.tsx         (Vue d'ensemble)
 ├── ComptabiliteIslamique.tsx        (Système comptable)
 ├── ImmobilierIslamique.tsx          (Gestion immobilier)
@@ -228,7 +228,7 @@ server/
 └── db.ts                           (Configuration BDD)
 
 Documentation/
-├── EMPIRE_ECONOMIQUE_HALAL_COMPLET.md (Synthèse finale)
+├── ECOSYSTEME_CED_HALAL_COMPLET.md   (Synthèse finale)
 ├── base_islamique_comptable/README.md  (Guide technique)
 └── replit.md                          (Architecture projet)
               `}</pre>
@@ -241,7 +241,7 @@ Documentation/
           <Link href="/">
             <Button className="w-full h-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
               <Home className="h-5 w-5 mr-2" />
-              Empire Home
+              CED Home
             </Button>
           </Link>
           <Link href="/ecosysteme-poles-halal">
@@ -269,7 +269,7 @@ Documentation/
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-blue-200 text-center text-sm text-blue-600">
           <p className="mb-2">© 2025 Club Empreinte Digitale - Yakoubi Yamina</p>
-          <p className="mb-2">🗺️ Navigation complète empire économique 100% halal</p>
+          <p className="mb-2">🗺️ Navigation complète écosystème CED 100% halal</p>
           <p className="text-xs text-gray-500">
             Tous les éléments sont maintenant localisés et accessibles
           </p>

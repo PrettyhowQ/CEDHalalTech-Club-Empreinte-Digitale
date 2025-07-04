@@ -268,7 +268,7 @@ export default function Localisation52Modules() {
       nom: "👑 Planification Successorale 50+ Ans",
       path: "/planification-successorale-50-ans",
       fichier: "client/src/pages/PlanificationSuccessorale50Ans.tsx",
-      description: "Transmission multigénérationnelle empire CED",
+      description: "Transmission multigénérationnelle écosystème CED",
       contenu: "Souheila & Hanaé-Denise, 3+ générations, 12.5B CHF projection",
       category: "governance",
       status: "✅ Opérationnel",
@@ -735,7 +735,7 @@ export default function Localisation52Modules() {
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-indigo-800 mb-4 flex items-center justify-center gap-3">
             <Zap className="h-12 w-12" />
-            Les 52 Modules Empire Halal
+            Les 52 Modules CED HalalTech™
           </h1>
           <p className="text-xl text-indigo-600 mb-2">
             🎵 <strong>Coran Audio + 51 Autres Modules</strong> 🎵
@@ -899,7 +899,7 @@ export default function Localisation52Modules() {
         {/* Résumé Final */}
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-indigo-800">📊 Résumé Empire 52 Modules</CardTitle>
+            <CardTitle className="text-indigo-800">📊 Résumé CED HalalTech™ 52 Modules</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -942,7 +942,7 @@ export default function Localisation52Modules() {
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-indigo-200 text-center text-sm text-indigo-600">
           <p className="mb-2">© 2025 Club Empreinte Digitale - Yakoubi Yamina</p>
-          <p className="mb-2">🎵 Empire Halal 52 Modules - Le Coran au Centre 🎵</p>
+          <p className="mb-2">🎵 CED HalalTech™ 52 Modules - Le Coran au Centre 🎵</p>
           <p className="text-xs text-gray-500">
             {filteredModules.length} modules affichés
             {searchTerm && ` pour "${searchTerm}"`}

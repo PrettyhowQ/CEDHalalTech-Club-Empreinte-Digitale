@@ -244,7 +244,7 @@ const PlanificationSuccessorale50Ans: React.FC = () => {
               Planification Successorale 50+ Ans
             </h1>
             <p className="text-xl mb-6 max-w-3xl mx-auto">
-              Transmission multigénérationnelle de l'Empire CED Halal pour Souheila & Hanaé-Denise et leurs descendants
+              Transmission multigénérationnelle de l'Écosystème CED HalalTech™ pour Souheila & Hanaé-Denise et leurs descendants
             </p>
             <div className="flex items-center justify-center gap-8 text-lg">
               <div className="flex items-center gap-2">
@@ -648,7 +648,7 @@ const PlanificationSuccessorale50Ans: React.FC = () => {
           <Link href="/52-modules">
             <Button className="w-full h-16 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white">
               <Crown className="h-5 w-5 mr-2" />
-              Empire 53 Modules
+              CED HalalTech™ 53 Modules
             </Button>
           </Link>
           

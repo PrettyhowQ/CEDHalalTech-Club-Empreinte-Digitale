@@ -505,7 +505,7 @@ const MotivationSpirituelleApp: React.FC = () => {
           <Link href="/52-modules">
             <Button className="w-full h-16 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
               <Star className="h-5 w-5 mr-2" />
-              Empire 52 Modules
+              CED HalalTech™ 53 Modules
             </Button>
           </Link>
         </div>

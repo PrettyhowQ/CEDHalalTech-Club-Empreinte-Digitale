@@ -107,10 +107,10 @@ export default function LocalisationVisuelle() {
       color: "bg-yellow-100 text-yellow-800"
     },
     {
-      nom: "Empire Économique Complet",
+      nom: "Écosystème CED Complet",
       path: "EMPIRE_ECONOMIQUE_HALAL_COMPLET.md",
       type: "synthèse",
-      description: "Document final synthèse empire halal Yakoubi Yamina",
+      description: "Document final synthèse écosystème halal Yakoubi Yamina",
       contenu: "7 étapes accomplies, 43.9M CHF patrimoine total",
       taille: "~25KB",
       icon: FileText,
@@ -176,7 +176,7 @@ export default function LocalisationVisuelle() {
             Localisation Visuelle - "Ça Se Trouve Où ?"
           </h1>
           <p className="text-xl text-indigo-600 mb-6">
-            Trouvez instantanément n'importe quel élément de votre empire halal
+            Trouvez instantanément n'importe quel élément de votre écosystème halal
           </p>
           
           {/* Barre de recherche */}
@@ -324,7 +324,7 @@ export default function LocalisationVisuelle() {
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-indigo-200 text-center text-sm text-indigo-600">
           <p className="mb-2">© 2025 Club Empreinte Digitale - Yakoubi Yamina</p>
-          <p className="mb-2">🗺️ Localisation visuelle complète de votre empire halal</p>
+          <p className="mb-2">🗺️ Localisation visuelle complète de votre écosystème halal</p>
           <p className="text-xs text-gray-500">
             {filteredEmplacements.length} éléments trouvés
             {searchTerm && ` pour "${searchTerm}"`}
