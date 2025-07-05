@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { VoiceProvider } from "@/context/VoiceContext";
 // import { useAuth } from "@/hooks/useAuth";
 import Footer from "@/components/Footer";
+import ProtectionFooter from "@/components/ProtectionFooter";
 import { lazy } from "react";
 
 // Pages
@@ -1093,7 +1094,7 @@ function App() {
               <main className="flex-1">
                 <Router />
               </main>
-              <Footer />
+              <ProtectionFooter />
             </div>
             <Toaster />
           </TooltipProvider>

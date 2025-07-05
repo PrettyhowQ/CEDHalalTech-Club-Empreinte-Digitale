@@ -97,6 +97,38 @@ body:not(.enhanced-visuals) .particle {
   display: none;
 }
 
+/* Styles Footer Protection CED HalalTech™ */
+.footer-halaltech {
+  position: relative;
+}
+
+.footer-halaltech::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6, #06b6d4);
+  background-size: 200% 100%;
+  animation: gradient-flow 3s ease infinite;
+}
+
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (max-width: 768px) {
+  .footer-halaltech {
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer-halaltech .space-y-3 > * {
+    margin-bottom: 0.75rem;
+  }
+}
+
 body:not(.enhanced-visuals) .text-white {
   color: rgb(17, 24, 39) !important;
 }
