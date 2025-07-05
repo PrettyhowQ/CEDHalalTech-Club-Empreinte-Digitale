@@ -478,57 +478,67 @@ export default function CedVoieHalalHome() {
           </CardContent>
         </Card>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <Link href="/protection-licence">
-                <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
-                  <Shield className="h-5 w-5 mr-2" />
-                  🛡️ Protection & Licence CED
-                </Button>
-              </Link>
-              <Link href="/mentions-legales">
-                <Button className="w-full h-16 bg-gradient-to-r from-slate-600 to-zinc-700 hover:from-slate-700 hover:to-zinc-800 text-white">
-                  <Scale className="h-5 w-5 mr-2" />
-                  ⚖️ Mentions Légales
-                </Button>
-              </Link>
-              <Link href="/hommage-scholars-islamiques">
-                <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
-                  <Star className="h-5 w-5 mr-2" />
-                  Hommage aux Scholars
-                </Button>
-              </Link>
-              <Link href="/systeme-duaa-transactions">
-                <Button className="w-full h-16 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
-                  <Heart className="h-5 w-5 mr-2" />
-                  Du'a à Chaque Transaction
-                </Button>
-              </Link>
-              <Link href="/amour-fi-allah-authentique">
-                <Button className="w-full h-16 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white">
-                  <Heart className="h-5 w-5 mr-2" />
-                  Amour Fi-Allah Authentique
-                </Button>
-              </Link>
-              <Link href="/blockchain-fiqh-rules">
-                <Button className="w-full h-16 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
-                  <Shield className="h-5 w-5 mr-2" />
-                  Blockchain & Fiqh Rules
-                </Button>
-              </Link>
-              <Link href="/planification-successorale-50-ans">
-                <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
-                  <span className="text-lg mr-2">👑</span>
-                  Héritage 50+ Ans
-                </Button>
-              </Link>
-              <Link href="/ca-se-trouve-ou">
-                <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
-                  <CheckCircle className="h-5 w-5 mr-2" />
-                  Ça Se Trouve Où ?
-                </Button>
-              </Link>
+        {/* Actions Rapides */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl text-gray-800">Actions Rapides CED</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <Link href="/protection-licence">
+                    <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
+                      <Shield className="h-5 w-5 mr-2" />
+                      🛡️ Protection & Licence CED
+                    </Button>
+                  </Link>
+                  <Link href="/mentions-legales">
+                    <Button className="w-full h-16 bg-gradient-to-r from-slate-600 to-zinc-700 hover:from-slate-700 hover:to-zinc-800 text-white">
+                      <Scale className="h-5 w-5 mr-2" />
+                      ⚖️ Mentions Légales
+                    </Button>
+                  </Link>
+                  <Link href="/hommage-scholars-islamiques">
+                    <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
+                      <Star className="h-5 w-5 mr-2" />
+                      Hommage aux Scholars
+                    </Button>
+                  </Link>
+                  <Link href="/systeme-duaa-transactions">
+                    <Button className="w-full h-16 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
+                      <Heart className="h-5 w-5 mr-2" />
+                      Du'a à Chaque Transaction
+                    </Button>
+                  </Link>
+                </div>
+                <div className="space-y-4">
+                  <Link href="/amour-fi-allah-authentique">
+                    <Button className="w-full h-16 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white">
+                      <Heart className="h-5 w-5 mr-2" />
+                      Amour Fi-Allah Authentique
+                    </Button>
+                  </Link>
+                  <Link href="/blockchain-fiqh-rules">
+                    <Button className="w-full h-16 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
+                      <Shield className="h-5 w-5 mr-2" />
+                      Blockchain & Fiqh Rules
+                    </Button>
+                  </Link>
+                  <Link href="/planification-successorale-50-ans">
+                    <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
+                      <span className="text-lg mr-2">👑</span>
+                      Héritage 50+ Ans
+                    </Button>
+                  </Link>
+                  <Link href="/ca-se-trouve-ou">
+                    <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white">
+                      <CheckCircle className="h-5 w-5 mr-2" />
+                      Ça Se Trouve Où ?
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
