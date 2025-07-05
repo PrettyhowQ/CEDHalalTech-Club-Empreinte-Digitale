@@ -154,6 +154,7 @@ import FiqhInformatique from "@/pages/FiqhInformatique";
 import FiqhInformatiqueBibliothequePage from "@/pages/FiqhInformatiqueBibliothequePage";
 import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import SuperIARPProPage from "@/pages/SuperIARPProPage";
+import IARPVocalTest from "@/pages/IARPVocalTest";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
 import QuranReaderPage from "@/pages/QuranReaderPage";
@@ -706,6 +707,9 @@ function Router() {
       <Route path="/fiqh-handbook" component={ManuelFiqhPage} />
       <Route path="/islamic-tech-handbook" component={ManuelFiqhPage} />
       <Route path="/super-iarp-pro" component={SuperIARPProPage} />
+      <Route path="/iarp-vocal-test" component={IARPVocalTest} />
+      <Route path="/iarp-vocal" component={IARPVocalTest} />
+      <Route path="/test-vocal-iarp" component={IARPVocalTest} />
       <Route path="/super-ia" component={SuperIARPProPage} />
       <Route path="/iarp-pro" component={SuperIARPProPage} />
       <Route path="/ai-responsable" component={SuperIARPProPage} />

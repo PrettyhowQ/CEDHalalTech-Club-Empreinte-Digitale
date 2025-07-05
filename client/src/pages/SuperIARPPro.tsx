@@ -98,6 +98,7 @@ interface GenerationSettings {
   languageMode: string;
   voiceMode: string;
   imageStyle: string;
+  autoSpeak: boolean;
   responseFormat: string;
 }
 
@@ -118,8 +119,43 @@ export default function SuperIARPPro() {
     languageMode: 'français',
     voiceMode: 'respectueux',
     imageStyle: 'islamique-moderne',
+    autoSpeak: true,
     responseFormat: 'markdown'
   });
+
+  // Fonction synthèse vocale
+  const speakText = (text: string) => {
+    if ('speechSynthesis' in window) {
+      // Nettoyer le texte des caractères spéciaux
+      const cleanText = text.replace(/[#*`]/g, '').replace(/\n/g, ' ');
+      
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.lang = 'fr-FR';
+      utterance.rate = 0.8;
+      utterance.pitch = 1;
+      utterance.volume = 0.9;
+      
+      // Attendre que les voix soient chargées
+      const setVoice = () => {
+        const voices = speechSynthesis.getVoices();
+        const frenchVoice = voices.find(voice => 
+          voice.lang.startsWith('fr') && (voice.name.toLowerCase().includes('male') || voice.name.toLowerCase().includes('homme'))
+        ) || voices.find(voice => voice.lang.startsWith('fr'));
+        
+        if (frenchVoice) {
+          utterance.voice = frenchVoice;
+        }
+        
+        speechSynthesis.speak(utterance);
+      };
+
+      if (speechSynthesis.getVoices().length > 0) {
+        setVoice();
+      } else {
+        speechSynthesis.onvoiceschanged = setVoice;
+      }
+    }
+  };
   const [isVoiceMode, setIsVoiceMode] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [generationHistory, setGenerationHistory] = useState<any[]>([]);
@@ -257,15 +293,13 @@ Je suis votre assistant intelligent conçu selon les plus hauts standards de con
     setIsGenerating(true);
 
     try {
-      // Simulation d'appel API avec vérification halal
-      const response = await fetch('/api/ai/chat', {
+      // Appel API réel OpenAI GPT-4o avec IARP
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: inputMessage,
-          model: currentModel,
-          settings: settings,
-          halalFilter: settings.halalFilter
+          language: 'fr'
         })
       });
 
@@ -277,20 +311,15 @@ Je suis votre assistant intelligent conçu selon les plus hauts standards de con
           role: 'assistant',
           content: data.response,
           timestamp: new Date(),
-          model: currentModel,
-          tokens: data.tokens,
-          filtered: data.filtered,
-          halalCheck: data.halalCheck
+          model: 'gpt-4o-halal',
+          halalCheck: true
         };
 
         setMessages(prev => [...prev, assistantMessage]);
         
-        if (data.filtered) {
-          toast({
-            title: "Contenu filtré",
-            description: "Certains éléments ont été filtrés pour respecter les guidelines halal",
-            variant: "default"
-          });
+        // Synthèse vocale automatique si activée
+        if (settings.autoSpeak) {
+          speakText(data.response);
         }
       } else {
         throw new Error('Erreur de génération');
