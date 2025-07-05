@@ -14,6 +14,11 @@ export async function chatWithIARP(
   language: string = 'fr', 
   conversationHistory: any[] = []
 ): Promise<string> {
+  // Mode démo activé par défaut jusqu'à ajout crédits OpenAI
+  console.log("🎯 Mode démo IARP activé automatiquement");
+  return generateDemoResponse(message, language, true);
+  
+  /* Code OpenAI désactivé temporairement - décommentez après ajout crédits
   try {
     const systemPrompt = getSystemPromptForLanguage(language);
     
@@ -31,13 +36,97 @@ export async function chatWithIARP(
     });
 
     return response.choices[0].message.content || "Je suis désolé, je n'ai pas pu comprendre votre demande.";
-  } catch (error) {
+  } catch (error: any) {
     console.error("Erreur Chat IARP:", error);
+    
+    // Si quota dépassé, activer automatiquement le mode démo
+    if (error?.status === 429 || error?.code === 'insufficient_quota' || 
+        (error?.message && error.message.includes('quota'))) {
+      console.log("🎯 Activation automatique du mode démo IARP - Quota OpenAI dépassé");
+      return generateDemoResponse(message, language, true);
+    }
+    
     if (!process.env.OPENAI_API_KEY) {
       return "Chat IARP nécessite une clé OpenAI pour fonctionner. Veuillez configurer OPENAI_API_KEY dans les secrets Replit.";
     }
     return "Je suis actuellement indisponible. Veuillez réessayer plus tard.";
   }
+  */
+}
+
+function generateDemoResponse(message: string, language: string, quotaExceeded: boolean = false): string {
+  const lowerMessage = message.toLowerCase();
+  
+  const demoResponses: Record<string, Record<string, string[]>> = {
+    fr: {
+      greeting: [
+        "Assalamu alaykum ! Je suis Super IARP Pro, votre assistant IA islamique éthique. Comment puis-je vous aider aujourd'hui ?",
+        "Wa alaykum assalam ! Bienvenue dans l'écosystème CED HalalTech™. Je suis là pour vous accompagner.",
+        "Marhaban ! Je suis IARP, conforme aux principes islamiques. Posez-moi vos questions !"
+      ],
+      islamic: [
+        "SubhanAllah ! L'Islam nous enseigne l'importance de la connaissance. Puis-je vous aider avec une question spécifique ?",
+        "Alhamdulillahi rabbil alameen. La recherche de la connaissance est une obligation pour chaque musulman. Comment puis-je vous assister ?",
+        "La Barakah d'Allah soit sur vos projets ! Comment puis-je vous accompagner selon les principes islamiques ?"
+      ],
+      tech: [
+        "Excellent ! L'écosystème CED HalalTech™ propose des solutions technologiques 100% conformes à la Sharia. Quel domaine vous intéresse ?",
+        "MashAllah ! Nos formations en Fiqh informatique couvrent tous les aspects technologiques halal. Souhaitez-vous en savoir plus ?",
+        "L'innovation technologique selon les valeurs islamiques authentiques est notre spécialité. Comment puis-je vous guider ?"
+      ],
+      formation: [
+        "Nos 10 formations islamiques certifiées Fiqh sont disponibles : Tajweed, Coran, Sahaba, Hadith, Fiqh Hanafi, Aqida, Arabe, Calligraphie. Laquelle vous intéresse ?",
+        "L'Institut CED Academy propose un apprentissage conforme aux 4 écoles sunnites. Souhaitez-vous découvrir nos programmes ?",
+        "L'éducation islamique authentique selon la méthodologie des Salaf. Quelle formation recherchez-vous ?"
+      ],
+      default: [
+        "Merci pour votre question ! En mode démo, je peux vous renseigner sur l'écosystème CED HalalTech™, nos formations islamiques et nos services bancaires halal.",
+        "Barakallahu feeki ! Je suis là pour vous accompagner dans vos projets conformes aux principes islamiques.",
+        "Qu'Allah facilite vos démarches ! Comment puis-je vous aider avec nos services 100% halal ?"
+      ]
+    },
+    en: {
+      greeting: [
+        "Assalamu alaykum! I'm Super IARP Pro, your ethical Islamic AI assistant. How can I help you today?",
+        "Welcome to CED HalalTech™ ecosystem! I'm here to assist you with Islamic-compliant solutions.",
+        "Marhaban! I'm IARP, fully compliant with Islamic principles. Ask me anything!"
+      ],
+      islamic: [
+        "SubhanAllah! Islam teaches us the importance of knowledge. Can I help with a specific question?",
+        "Alhamdulillahi rabbil alameen. Seeking knowledge is an obligation for every Muslim. How can I assist?",
+        "May Allah's Barakah be upon your projects! How can I help according to Islamic principles?"
+      ],
+      default: [
+        "Thank you for your question! In demo mode, I can provide information about CED HalalTech™ ecosystem and our Islamic services.",
+        "Barakallahu feeki! I'm here to support your projects in compliance with Islamic principles.",
+        "May Allah facilitate your endeavors! How can I assist with our 100% halal services?"
+      ]
+    }
+  };
+
+  let category = 'default';
+  if (lowerMessage.includes('salamu') || lowerMessage.includes('bonjour') || lowerMessage.includes('hello')) {
+    category = 'greeting';
+  } else if (lowerMessage.includes('islam') || lowerMessage.includes('allah') || lowerMessage.includes('halal')) {
+    category = 'islamic';
+  } else if (lowerMessage.includes('tech') || lowerMessage.includes('formation') || lowerMessage.includes('cours')) {
+    category = language === 'fr' ? 'formation' : 'default';
+  } else if (lowerMessage.includes('tech') || lowerMessage.includes('développ')) {
+    category = 'tech';
+  }
+
+  const responses = demoResponses[language]?.[category] || demoResponses[language]?.['default'] || demoResponses['fr']['default'];
+  const response = responses[Math.floor(Math.random() * responses.length)];
+
+  if (quotaExceeded) {
+    const prefix = language === 'fr' 
+      ? "⚠️ [MODE DÉMO] Quota OpenAI dépassé. " 
+      : "⚠️ [DEMO MODE] OpenAI quota exceeded. ";
+    return prefix + response;
+  }
+
+  const prefix = language === 'fr' ? "🎯 [MODE DÉMO] " : "🎯 [DEMO MODE] ";
+  return prefix + response;
 }
 
 function getSystemPromptForLanguage(language: string): string {

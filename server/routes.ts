@@ -3,6 +3,28 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth, isAuthenticated } from "./replitAuth";
 import { chatWithIARP } from "./openai";
+
+function generateDemoResponseSafe(message: string, language: string): string {
+  const lowerMessage = message.toLowerCase();
+  
+  const demoResponses: Record<string, string[]> = {
+    fr: [
+      "⚠️ [MODE DÉMO] Assalamu alaykum ! Je suis Super IARP Pro en mode démonstration. Vos crédits OpenAI sont épuisés, mais je peux vous renseigner sur l'écosystème CED HalalTech™.",
+      "🎯 [MODE DÉMO] Wa alaykum assalam ! Bienvenue dans l'écosystème CED HalalTech™. Mode démo activé - ajoutez des crédits OpenAI pour l'expérience complète.",
+      "🕌 [MODE DÉMO] Marhaban ! Je suis IARP, conforme aux principes islamiques. En mode démo, je peux vous parler de nos 10 formations islamiques certifiées Fiqh.",
+      "📚 [MODE DÉMO] Nos formations disponibles : Tajweed, Mémorisation Coranique, Sahaba, Hadith, Fiqh Hanafi, Aqida, Arabe, Calligraphie. Laquelle vous intéresse ?",
+      "💳 [MODE DÉMO] L'écosystème CED Bank propose des services bancaires 100% halal. Pour activer le chat complet, ajoutez des crédits sur platform.openai.com/billing"
+    ],
+    en: [
+      "⚠️ [DEMO MODE] Assalamu alaykum! I'm Super IARP Pro in demonstration mode. Your OpenAI credits are exhausted, but I can tell you about CED HalalTech™ ecosystem.",
+      "🎯 [DEMO MODE] Welcome to CED HalalTech™! Demo mode active - add OpenAI credits for the complete experience.",
+      "🕌 [DEMO MODE] Marhaban! I'm IARP, compliant with Islamic principles. In demo mode, I can tell you about our 10 certified Islamic Fiqh trainings."
+    ]
+  };
+
+  const responses = demoResponses[language] || demoResponses['fr'];
+  return responses[Math.floor(Math.random() * responses.length)];
+}
 import { insertChatConversationSchema, insertAnalyticsEventSchema } from "@shared/schema";
 
 import { seedIslamicCourses } from './seedIslamicCourses';
@@ -178,7 +200,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Get AI response
-      const aiResponse = await chatWithIARP(message, language, conversation.messages as any[]);
+      let aiResponse: string;
+      try {
+        aiResponse = await chatWithIARP(message, language, conversation.messages as any[]);
+      } catch (error: any) {
+        // Fallback sur mode démo si erreur OpenAI
+        console.log("🎯 Fallback vers mode démo IARP suite à erreur:", error?.message);
+        aiResponse = generateDemoResponseSafe(message, language);
+      }
       
       // Update conversation with new messages
       const updatedMessages = [
