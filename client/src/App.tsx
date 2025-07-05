@@ -208,6 +208,7 @@ import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
 import TestModule55 from "@/pages/TestModule55";
+import AnalyseConcurrentielle from "@/pages/AnalyseConcurrentielle";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1081,6 +1082,12 @@ function Router() {
       <Route path="/test-modules-complet" component={TestModule55} />
       <Route path="/centre-test-complet" component={TestModule55} />
       <Route path="/test-fonctionnalites" component={TestModule55} />
+      
+      {/* Analyse Concurrentielle */}
+      <Route path="/analyse-concurrentielle" component={AnalyseConcurrentielle} />
+      <Route path="/competitive-analysis" component={AnalyseConcurrentielle} />
+      <Route path="/comparaison-concurrents" component={AnalyseConcurrentielle} />
+      <Route path="/market-analysis" component={AnalyseConcurrentielle} />
       <Route path="/blockchain-fiqh" component={BlockchainFiqhRules} />
       <Route path="/crypto-fiqh" component={BlockchainFiqhRules} />
       <Route path="/blockchain-islamic" component={BlockchainFiqhRules} />

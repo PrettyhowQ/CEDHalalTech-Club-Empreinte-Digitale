@@ -403,6 +403,12 @@ export default function CedVoieHalalHome() {
                   Test Complet 55 Modules CED
                 </Button>
               </Link>
+              <Link href="/analyse-concurrentielle">
+                <Button className="w-full h-16 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white">
+                  <span className="text-lg mr-2">📊</span>
+                  Analyse Concurrentielle
+                </Button>
+              </Link>
               <Link href="/protection-licence">
                 <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
                   <Shield className="h-5 w-5 mr-2" />
