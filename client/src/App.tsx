@@ -209,6 +209,11 @@ import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
 import TestModule55 from "@/pages/TestModule55";
 import AnalyseConcurrentielle from "@/pages/AnalyseConcurrentielle";
+import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
+import AccessibiliteInclusiveMultilingue from "@/pages/AccessibiliteInclusiveMultilingue";
+import ReconnaissanceVocaleIslamique from "@/pages/ReconnaissanceVocaleIslamique";
+import AnalysePredictiveMarcheHalal from "@/pages/AnalysePredictiveMarcheHalal";
+import GestionCommunautaireMusulmane from "@/pages/GestionCommunautaireMusulmane";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1088,6 +1093,27 @@ function Router() {
       <Route path="/competitive-analysis" component={AnalyseConcurrentielle} />
       <Route path="/comparaison-concurrents" component={AnalyseConcurrentielle} />
       <Route path="/market-analysis" component={AnalyseConcurrentielle} />
+      
+      {/* 5 Nouvelles Fonctionnalités Révolutionnaires */}
+      <Route path="/tendances-tech-halal-temps-reel" component={TendancesTechHalalTempsReel} />
+      <Route path="/real-time-halal-tech-trends" component={TendancesTechHalalTempsReel} />
+      <Route path="/halal-technology-trends" component={TendancesTechHalalTempsReel} />
+      
+      <Route path="/accessibilite-inclusive-multilingue" component={AccessibiliteInclusiveMultilingue} />
+      <Route path="/inclusive-accessibility-multilingual" component={AccessibiliteInclusiveMultilingue} />
+      <Route path="/accessibility-voice-guide" component={AccessibiliteInclusiveMultilingue} />
+      
+      <Route path="/reconnaissance-vocale-islamique" component={ReconnaissanceVocaleIslamique} />
+      <Route path="/islamic-voice-recognition" component={ReconnaissanceVocaleIslamique} />
+      <Route path="/voice-commands-halal" component={ReconnaissanceVocaleIslamique} />
+      
+      <Route path="/analyse-predictive-marche-halal" component={AnalysePredictiveMarcheHalal} />
+      <Route path="/predictive-halal-market-analysis" component={AnalysePredictiveMarcheHalal} />
+      <Route path="/halal-market-predictions" component={AnalysePredictiveMarcheHalal} />
+      
+      <Route path="/gestion-communautaire-musulmane" component={GestionCommunautaireMusulmane} />
+      <Route path="/muslim-community-management" component={GestionCommunautaireMusulmane} />
+      <Route path="/islamic-community-platform" component={GestionCommunautaireMusulmane} />
       <Route path="/blockchain-fiqh" component={BlockchainFiqhRules} />
       <Route path="/crypto-fiqh" component={BlockchainFiqhRules} />
       <Route path="/blockchain-islamic" component={BlockchainFiqhRules} />

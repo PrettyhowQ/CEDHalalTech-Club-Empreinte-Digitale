@@ -409,6 +409,78 @@ export default function CedVoieHalalHome() {
                   Analyse Concurrentielle
                 </Button>
               </Link>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Section 5 Nouvelles Fonctionnalités Révolutionnaires */}
+        <Card className="mb-12 bg-gradient-to-r from-pink-50 to-purple-50 border-4 border-pink-300">
+          <CardHeader className="bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+            <CardTitle className="text-2xl flex items-center gap-3">
+              <span className="text-3xl">🚀</span>
+              5 Nouvelles Fonctionnalités Révolutionnaires CED HalalTech™
+            </CardTitle>
+            <p className="text-pink-100 mt-2">
+              Technologies de pointe • Intelligence artificielle avancée • Innovation halal mondiale
+            </p>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <Link href="/tendances-tech-halal-temps-reel">
+                <Button className="w-full h-20 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-2 border-blue-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">📈</span>
+                  <span className="text-sm font-bold">Tendances Tech Halal</span>
+                  <span className="text-xs">Temps Réel</span>
+                </Button>
+              </Link>
+
+              <Link href="/accessibilite-inclusive-multilingue">
+                <Button className="w-full h-20 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white border-2 border-green-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🎯</span>
+                  <span className="text-sm font-bold">Accessibilité Inclusive</span>
+                  <span className="text-xs">Guide Vocal Multilingue</span>
+                </Button>
+              </Link>
+
+              <Link href="/reconnaissance-vocale-islamique">
+                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🎤</span>
+                  <span className="text-sm font-bold">Reconnaissance Vocale</span>
+                  <span className="text-xs">Islamique Avancée</span>
+                </Button>
+              </Link>
+
+              <Link href="/analyse-predictive-marche-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-orange-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🔮</span>
+                  <span className="text-sm font-bold">Analyse Prédictive</span>
+                  <span className="text-xs">Marché Halal IA</span>
+                </Button>
+              </Link>
+
+              <Link href="/gestion-communautaire-musulmane">
+                <Button className="w-full h-20 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white border-2 border-teal-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🕌</span>
+                  <span className="text-sm font-bold">Communauté Musulmane</span>
+                  <span className="text-xs">Gestion Globale</span>
+                </Button>
+              </Link>
+
+            </div>
+
+            <div className="mt-6 p-4 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg">
+              <p className="text-center text-gray-800 font-medium">
+                ⚡ <strong>Exclusivité CED HalalTech™</strong> - Premières au monde dans la technologie islamique • 
+                Innovation révolutionnaire • Conformité Sharia 100%
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
               <Link href="/protection-licence">
                 <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
                   <Shield className="h-5 w-5 mr-2" />
