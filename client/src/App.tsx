@@ -206,6 +206,7 @@ import HommageScholarsIslamiques from "@/pages/HommageScholarsIslamiques";
 import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
 import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
+import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1066,6 +1067,13 @@ function Router() {
       
       {/* Blockchain Fiqh Rules */}
       <Route path="/blockchain-fiqh-rules" component={BlockchainFiqhRules} />
+      
+      {/* Certificats et Diplômes HalalTech™ */}
+      <Route path="/certificats-halaltech" component={CertificatesHalalTech} />
+      <Route path="/diplomes-halaltech" component={CertificatesHalalTech} />
+      <Route path="/certificates-halal" component={CertificatesHalalTech} />
+      <Route path="/generateur-certificats" component={CertificatesHalalTech} />
+      <Route path="/certificate-generator" component={CertificatesHalalTech} />
       <Route path="/blockchain-fiqh" component={BlockchainFiqhRules} />
       <Route path="/crypto-fiqh" component={BlockchainFiqhRules} />
       <Route path="/blockchain-islamic" component={BlockchainFiqhRules} />

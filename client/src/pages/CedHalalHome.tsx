@@ -319,6 +319,12 @@ export default function CedVoieHalalHome() {
                   Enseignement de l'Humilité
                 </Button>
               </Link>
+              <Link href="/certificats-halaltech">
+                <Button className="w-full h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white">
+                  <span className="text-lg mr-2">🎓</span>
+                  Diplômes & Certificats HalalTech™
+                </Button>
+              </Link>
               <Link href="/protection-licence">
                 <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
                   <Shield className="h-5 w-5 mr-2" />
