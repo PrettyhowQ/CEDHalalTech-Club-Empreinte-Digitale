@@ -207,6 +207,7 @@ import SystemeDuaaTransactions from "@/pages/SystemeDuaaTransactions";
 import AmourFiAllahAuthentique from "@/pages/AmourFiAllahAuthentique";
 import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
+import TestModule55 from "@/pages/TestModule55";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1074,6 +1075,12 @@ function Router() {
       <Route path="/certificates-halal" component={CertificatesHalalTech} />
       <Route path="/generateur-certificats" component={CertificatesHalalTech} />
       <Route path="/certificate-generator" component={CertificatesHalalTech} />
+      
+      {/* Test Complet 55 Modules */}
+      <Route path="/test-55-modules" component={TestModule55} />
+      <Route path="/test-modules-complet" component={TestModule55} />
+      <Route path="/centre-test-complet" component={TestModule55} />
+      <Route path="/test-fonctionnalites" component={TestModule55} />
       <Route path="/blockchain-fiqh" component={BlockchainFiqhRules} />
       <Route path="/crypto-fiqh" component={BlockchainFiqhRules} />
       <Route path="/blockchain-islamic" component={BlockchainFiqhRules} />

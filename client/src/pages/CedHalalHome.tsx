@@ -124,6 +124,78 @@ export default function CedVoieHalalHome() {
 
       <div className="max-w-7xl mx-auto px-6 py-8">
         
+        {/* Centre de Test Prioritaire */}
+        <Card className="mb-8 border-4 border-orange-400 bg-gradient-to-r from-orange-50 to-red-50">
+          <CardHeader className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
+            <CardTitle className="text-2xl flex items-center gap-3">
+              <span className="text-3xl">🧪</span>
+              Centre de Test Complet - 55 Modules CED HalalTech™
+            </CardTitle>
+            <p className="text-orange-100 mt-2">
+              Testez toutes les fonctionnalités de l'écosystème • Interface unifiée • Validation complète
+            </p>
+          </CardHeader>
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-bold text-lg text-orange-800 mb-3">
+                  🎯 Fonctionnalités de Test
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Tous les 55 modules en un seul endroit
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Filtrage par catégorie et recherche
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Statistiques en temps réel
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Accès direct à chaque fonctionnalité
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-orange-800 mb-3">
+                  📊 Statistiques Globales
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-green-100 p-3 rounded-lg text-center">
+                    <p className="text-2xl font-bold text-green-800">50+</p>
+                    <p className="text-sm text-green-600">Opérationnels</p>
+                  </div>
+                  <div className="bg-blue-100 p-3 rounded-lg text-center">
+                    <p className="text-2xl font-bold text-blue-800">25</p>
+                    <p className="text-sm text-blue-600">Catégories</p>
+                  </div>
+                  <div className="bg-purple-100 p-3 rounded-lg text-center">
+                    <p className="text-2xl font-bold text-purple-800">165+</p>
+                    <p className="text-sm text-purple-600">Fonctionnalités</p>
+                  </div>
+                  <div className="bg-orange-100 p-3 rounded-lg text-center">
+                    <p className="text-2xl font-bold text-orange-800">100%</p>
+                    <p className="text-sm text-orange-600">Sharia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
+              <Link href="/test-55-modules">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🧪</span>
+                  Commencer les Tests des 55 Modules
+                  <span className="text-2xl ml-3">🚀</span>
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Métriques Écosystème Éthique */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
@@ -323,6 +395,12 @@ export default function CedVoieHalalHome() {
                 <Button className="w-full h-16 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white">
                   <span className="text-lg mr-2">🎓</span>
                   Diplômes & Certificats HalalTech™
+                </Button>
+              </Link>
+              <Link href="/test-55-modules">
+                <Button className="w-full h-16 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-yellow-400">
+                  <span className="text-lg mr-2">🧪</span>
+                  Test Complet 55 Modules CED
                 </Button>
               </Link>
               <Link href="/protection-licence">
