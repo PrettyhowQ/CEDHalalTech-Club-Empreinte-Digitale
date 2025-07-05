@@ -14,11 +14,14 @@ export async function chatWithIARP(
   language: string = 'fr', 
   conversationHistory: any[] = []
 ): Promise<string> {
-  // Mode démo activé par défaut jusqu'à ajout crédits OpenAI
-  console.log("🎯 Mode démo IARP activé automatiquement");
-  return generateDemoResponse(message, language, true);
+  // Mode OpenAI complet réactivé avec crédits disponibles
+  console.log("🚀 Chat IARP Pro avec OpenAI GPT-4o activé");
   
-  /* Code OpenAI désactivé temporairement - décommentez après ajout crédits
+  /* Code démo disponible en fallback si nécessaire
+  if (process.env.DEMO_MODE === 'true') {
+    return generateDemoResponse(message, language, true);
+  }
+  */
   try {
     const systemPrompt = getSystemPromptForLanguage(language);
     
@@ -39,10 +42,10 @@ export async function chatWithIARP(
   } catch (error: any) {
     console.error("Erreur Chat IARP:", error);
     
-    // Si quota dépassé, activer automatiquement le mode démo
+    // Si quota dépassé, fallback vers mode démo
     if (error?.status === 429 || error?.code === 'insufficient_quota' || 
         (error?.message && error.message.includes('quota'))) {
-      console.log("🎯 Activation automatique du mode démo IARP - Quota OpenAI dépassé");
+      console.log("🎯 Fallback vers mode démo IARP - Quota OpenAI épuisé");
       return generateDemoResponse(message, language, true);
     }
     
@@ -51,7 +54,6 @@ export async function chatWithIARP(
     }
     return "Je suis actuellement indisponible. Veuillez réessayer plus tard.";
   }
-  */
 }
 
 function generateDemoResponse(message: string, language: string, quotaExceeded: boolean = false): string {
