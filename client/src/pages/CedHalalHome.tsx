@@ -490,7 +490,11 @@ export default function CedVoieHalalHome() {
 
               <Link href="/garages-halal">
                 <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
-                  <span className="text-2xl mb-1">🏦</span>
+                  <img 
+                    src="@assets/58D70CD1-EF23-48DA-909D-FFDB14104DE1_1751826407654.png" 
+                    alt="CED Bank Logo" 
+                    className="h-8 w-8 object-contain mb-1 bg-white rounded p-1"
+                  />
                   <span className="text-sm font-bold">CED Bank Intégré</span>
                   <span className="text-xs">Financement 0% Riba</span>
                 </Button>
@@ -498,7 +502,11 @@ export default function CedVoieHalalHome() {
 
               <Link href="/garages-halal">
                 <Button className="w-full h-20 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-orange-400 flex flex-col justify-center">
-                  <span className="text-2xl mb-1">🛡️</span>
+                  <img 
+                    src="@assets/620CEEAC-1C3D-47C2-9ABB-DAD0A286B304_1751826407654.png" 
+                    alt="Al-Aman Assurance Logo" 
+                    className="h-8 w-8 object-contain mb-1 bg-white rounded p-1"
+                  />
                   <span className="text-sm font-bold">Al-Aman Takaful</span>
                   <span className="text-xs">Assurance Islamique</span>
                 </Button>

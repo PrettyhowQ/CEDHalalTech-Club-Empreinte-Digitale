@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProtectionFooter: React.FC = () => {
   return (
-    <footer className="footer-halaltech bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-8 px-6 mt-16 border-t-4 border-gradient-to-r border-cyan-400">
+    <footer className="protection-halal bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-8 px-6 mt-16 border-t-4 border-gradient-to-r border-cyan-400">
       <div className="max-w-6xl mx-auto">
         <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-400/30 shadow-2xl backdrop-blur-sm">
           <section className="text-center space-y-4">
