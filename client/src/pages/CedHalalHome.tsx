@@ -216,6 +216,14 @@ export default function CedVoieHalalHome() {
                   <span className="text-2xl ml-3">✨</span>
                 </Button>
               </Link>
+              
+              <Link href="/web-tv-halal">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">📺</span>
+                  Web TV Halal - Regarder en Direct
+                  <span className="text-2xl ml-3">🔴</span>
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>
