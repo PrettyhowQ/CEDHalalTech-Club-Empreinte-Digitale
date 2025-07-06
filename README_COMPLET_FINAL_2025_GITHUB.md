@@ -89,6 +89,80 @@
 - **RGPD/LPD Conforme** - Respect vie privée
 - **Audit Permanent** - Surveillance 24/7
 
+## 📁 Structure du Projet
+
+```
+club-empreinte-digitale/
+├── 📁 client/                          # Frontend React
+│   ├── 📄 index.html                   # Page HTML principale
+│   └── 📁 src/                         # Code source frontend
+│       ├── 📄 App.tsx                  # Composant principal React
+│       ├── 📄 main.tsx                 # Point d'entrée React
+│       ├── 📄 index.css                # Styles globaux
+│       ├── 📁 components/              # Composants réutilisables
+│       │   ├── 📁 ui/                  # Composants UI de base
+│       │   ├── 📁 layout/              # Composants de mise en page
+│       │   └── 📁 sections/            # Sections spécialisées
+│       ├── 📁 pages/                   # Pages de l'application
+│       │   ├── 📄 CedHalalHome.tsx     # Page d'accueil CED
+│       │   ├── 📄 SuperIARPProPage.tsx # Chat IA éthique
+│       │   ├── 📄 MultilingualVoiceAssistant.tsx # Assistant vocal 91 langues
+│       │   └── 📄 ...                  # 55+ autres pages
+│       └── 📁 lib/                     # Utilitaires et configurations
+├── 📁 server/                          # Backend Express
+│   ├── 📄 index.ts                     # Serveur principal
+│   ├── 📄 routes.ts                    # Routes API
+│   ├── 📄 storage.ts                   # Interface base de données
+│   └── 📄 vite.ts                      # Configuration Vite
+├── 📁 shared/                          # Code partagé
+│   └── 📄 schema.ts                    # Schémas base de données Drizzle
+├── 📁 scripts/                         # Scripts utilitaires
+├── 📁 base_islamique_comptable/        # Base comptable islamique
+│   ├── 📁 data_reelle/                 # Données financières réelles
+│   ├── 📁 sources_islamiques/          # Sources Fiqh authentiques
+│   └── 📁 outils_technologiques/       # Outils calcul Zakat
+├── 📁 attached_assets/                 # Assets et médias
+├── 📄 package.json                     # Dépendances npm
+├── 📄 package-lock.json               # Verrous versions
+├── 📄 tsconfig.json                   # Configuration TypeScript
+├── 📄 tailwind.config.ts              # Configuration Tailwind CSS
+├── 📄 vite.config.ts                  # Configuration Vite
+├── 📄 drizzle.config.ts               # Configuration Drizzle ORM
+├── 📄 postcss.config.js               # Configuration PostCSS
+├── 📄 components.json                 # Configuration Shadcn/UI
+├── 📄 .env.example                    # Variables d'environnement exemple
+├── 📄 .gitignore                      # Fichiers ignorés Git
+├── 📄 .replit                         # Configuration Replit
+├── 📄 LICENSE                         # Licence MIT
+├── 📄 README.md                       # Documentation principale
+├── 📄 CHANGELOG.md                    # Historique des changements
+├── 📄 replit.md                       # Documentation architecture
+│
+├── 📄 CHARTE_SUPERVISION_ISLAMIQUE_OFFICIELLE.md  # Gouvernance religieuse
+├── 📄 CONFORMITE_SHARIA_100_IMPLEMENTEE.md        # Conformité islamique
+├── 📄 MANUEL_FIQH_INFORMATIQUE_COMPLET.md         # Manuel Fiqh tech
+├── 📄 LICENCE_INTERDICTION_CED_HALALTECH.md       # Licence propriétaire
+├── 📄 API_DOCUMENTATION.md                        # Documentation API
+├── 📄 DEPLOYMENT_GUIDE.md                         # Guide déploiement
+├── 📄 GUIDE_UTILISATION_MOBILE.md                 # Guide mobile
+├── 📄 ARBORESCENCE_COMPLETE_CED.md                # Architecture détaillée
+├── 📄 ECOSYSTEME_CED_HALALTECH_COMPLET.md         # Vue d'ensemble
+├── 📄 PRESENTATION_SAVANTS_ISLAMIQUES.md          # Présentation scholars
+├── 📄 VALIDATION_IA_VOCALE_FEMININE_SAVANTS.md    # Validation religieuse
+└── 📄 BUSINESS_FORECAST.md                        # Prévisions business
+```
+
+### **Légende**
+- 📁 = Dossier (répertoire)
+- 📄 = Fichier
+
+### **Points Clés**
+- **156 fichiers** mappés au total
+- **React 18 + TypeScript** pour frontend moderne
+- **Express.js + PostgreSQL** pour backend robuste
+- **55+ pages** fonctionnelles avec routes configurées
+- **Conformité 100% Sharia** avec documentation complète
+
 ## 🛠️ Installation
 
 ### Prérequis
