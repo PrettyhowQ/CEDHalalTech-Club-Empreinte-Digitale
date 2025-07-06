@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import SupervisionBanner from '@/components/SupervisionBanner';
 import { 
   Brain, 
   Zap, 
@@ -92,6 +93,10 @@ export default function SuperIARPProPage() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
+        
+        {/* Supervision Banner */}
+        <SupervisionBanner showWarning={true} showScholar={true} />
+        
         {/* IA PrettyhowQ HalalTech™ */}
         <div className="mb-12">
           <div className="text-center mb-8">

@@ -157,6 +157,9 @@ import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import IARPVocalTest from "@/pages/IARPVocalTest";
 import ContactScholars from "@/pages/ContactScholars";
 import Modules52CED from "@/pages/Modules52CED";
+import CharteSupervisionSavante from "@/pages/CharteSupervisionSavante";
+import ClauseIANonMufti from "@/pages/ClauseIANonMufti";
+import EcranPresentationScholar from "@/pages/EcranPresentationScholar";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
 import QuranReaderPage from "@/pages/QuranReaderPage";
@@ -721,6 +724,17 @@ function Router() {
       <Route path="/modules-52" component={Modules52CED} />
       <Route path="/modules-ced" component={Modules52CED} />
       <Route path="/ecosysteme-complet" component={Modules52CED} />
+      
+      {/* Nouvelles pages : Charte, Clause IA, Présentation Scholar */}
+      <Route path="/charte-supervision-savante" component={CharteSupervisionSavante} />
+      <Route path="/charte-islamique" component={CharteSupervisionSavante} />
+      <Route path="/supervision-scholars" component={CharteSupervisionSavante} />
+      <Route path="/clause-ia-non-mufti" component={ClauseIANonMufti} />
+      <Route path="/protection-juridique-ia" component={ClauseIANonMufti} />
+      <Route path="/ia-non-mufti" component={ClauseIANonMufti} />
+      <Route path="/presentation-scholar" component={EcranPresentationScholar} />
+      <Route path="/ecran-scholar" component={EcranPresentationScholar} />
+      <Route path="/madhhab-presentation" component={EcranPresentationScholar} />
       
       <Route path="/super-ia" component={SuperIARPProPage} />
       <Route path="/iarp-pro" component={SuperIARPProPage} />

@@ -413,6 +413,47 @@ export default function CedVoieHalalHome() {
           </CardContent>
         </Card>
 
+        {/* Section Supervision Savante */}
+        <Card className="mb-12 bg-gradient-to-r from-green-50 to-emerald-50 border-4 border-green-300">
+          <CardHeader className="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+            <CardTitle className="text-2xl flex items-center gap-3">
+              <span className="text-3xl">📜</span>
+              Supervision Savante & Protection Juridique
+            </CardTitle>
+            <p className="text-green-100 mt-2">
+              Charte islamique officielle • Clause "IA Non-Mufti" • Présentation scholars et madhhab
+            </p>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <Link href="/charte-supervision-savante">
+                <Button className="w-full h-20 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white border-2 border-green-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">📜</span>
+                  <span className="text-sm font-bold">Charte Supervision</span>
+                  <span className="text-xs">Islamique Officielle</span>
+                </Button>
+              </Link>
+
+              <Link href="/clause-ia-non-mufti">
+                <Button className="w-full h-20 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white border-2 border-red-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">⚠️</span>
+                  <span className="text-sm font-bold">Clause "IA Non-Mufti"</span>
+                  <span className="text-xs">Protection Juridique</span>
+                </Button>
+              </Link>
+
+              <Link href="/presentation-scholar">
+                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🎓</span>
+                  <span className="text-sm font-bold">Présentation Scholar</span>
+                  <span className="text-xs">UI/UX + Madhhab</span>
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Section 5 Nouvelles Fonctionnalités Révolutionnaires */}
         <Card className="mb-12 bg-gradient-to-r from-pink-50 to-purple-50 border-4 border-pink-300">
           <CardHeader className="bg-gradient-to-r from-pink-600 to-purple-600 text-white">
