@@ -41,13 +41,35 @@ export default function WebTVHalal() {
     },
     {
       id: 4,
-      name: "Tech For Ummah",
-      category: "Innovation",
-      subscribers: "203K",
-      description: "Innovations technologiques au service de la communauté musulmane",
+      name: "Al-Amana Auto TV",
+      category: "Automobile",
+      subscribers: "45K",
+      description: "Garage Yakoubi Farid - Voitures de prestige et services halal",
+      language: "Français/Arabe",
+      status: "live",
+      viewers: "890",
+      thumbnail: "/api/placeholder/320/180"
+    },
+    {
+      id: 5,
+      name: "Bank CED Live",
+      category: "Finance",
+      subscribers: "234K",
+      description: "Services bancaires islamiques et consultation financière halal",
       language: "Multilingue",
-      status: "offline",
-      lastShow: "Il y a 2h",
+      status: "scheduled",
+      nextShow: "16:00",
+      thumbnail: "/api/placeholder/320/180"
+    },
+    {
+      id: 6,
+      name: "Al-Aman Takaful TV",
+      category: "Assurance",
+      subscribers: "78K",
+      description: "Assurance islamique conforme Sharia - Protection complète",
+      language: "Français/Arabe",
+      status: "live",
+      viewers: "1.2K",
       thumbnail: "/api/placeholder/320/180"
     }
   ];
@@ -66,6 +88,27 @@ export default function WebTVHalal() {
       duration: "60 min",
       category: "Formation",
       description: "Cours en direct de programmation halal et IA éthique"
+    },
+    {
+      time: "10:30",
+      title: "Al-Amana Auto Show",
+      duration: "45 min",
+      category: "Automobile",
+      description: "Yakoubi Farid présente les voitures de prestige et services garage halal"
+    },
+    {
+      time: "11:30",
+      title: "Bank CED Conseil",
+      duration: "30 min",
+      category: "Finance",
+      description: "Consultation financière islamique et ouverture compte direct"
+    },
+    {
+      time: "12:00",
+      title: "Al-Aman Takaful Info",
+      duration: "30 min",
+      category: "Assurance",
+      description: "Tout savoir sur l'assurance islamique et couverture complète"
     },
     {
       time: "13:00",

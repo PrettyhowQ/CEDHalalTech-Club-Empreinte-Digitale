@@ -215,6 +215,9 @@ import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
 import TestModule55 from "@/pages/TestModule55";
 import AnalyseConcurrentielle from "@/pages/AnalyseConcurrentielle";
+import AnalyseConcurrentielleComplete from "@/pages/AnalyseConcurrentielleComplete";
+import HajjSavingsPlanner from "@/pages/HajjSavingsPlanner";
+import NikahFinancialPlanning from "@/pages/NikahFinancialPlanning";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
 import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
@@ -1132,6 +1135,27 @@ function Router() {
       <Route path="/analyse-concurrentielle" component={AnalyseConcurrentielle} />
       <Route path="/competitive-analysis" component={AnalyseConcurrentielle} />
       <Route path="/comparaison-concurrents" component={AnalyseConcurrentielle} />
+      
+      {/* Analyse Concurrentielle Complète */}
+      <Route path="/analyse-concurrentielle-complete" component={AnalyseConcurrentielleComplete} />
+      <Route path="/competitive-analysis-complete" component={AnalyseConcurrentielleComplete} />
+      <Route path="/analyse-marche-complet" component={AnalyseConcurrentielleComplete} />
+      <Route path="/market-domination" component={AnalyseConcurrentielleComplete} />
+      <Route path="/concurrence-mondiale" component={AnalyseConcurrentielleComplete} />
+      
+      {/* Hajj Savings Planner */}
+      <Route path="/hajj-savings-planner" component={HajjSavingsPlanner} />
+      <Route path="/epargne-hajj" component={HajjSavingsPlanner} />
+      <Route path="/pilgrimage-savings" component={HajjSavingsPlanner} />
+      <Route path="/planificateur-hajj" component={HajjSavingsPlanner} />
+      <Route path="/pelerinage-epargne" component={HajjSavingsPlanner} />
+      
+      {/* Nikah Financial Planning */}
+      <Route path="/nikah-financial-planning" component={NikahFinancialPlanning} />
+      <Route path="/planification-mariage-islamique" component={NikahFinancialPlanning} />
+      <Route path="/wedding-islamic-planning" component={NikahFinancialPlanning} />
+      <Route path="/mahr-calculator" component={NikahFinancialPlanning} />
+      <Route path="/budget-nikah" component={NikahFinancialPlanning} />
       <Route path="/market-analysis" component={AnalyseConcurrentielle} />
       
       {/* 5 Nouvelles Fonctionnalités Révolutionnaires */}
