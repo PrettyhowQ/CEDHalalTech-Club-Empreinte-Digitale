@@ -184,10 +184,14 @@ export default function WebTVHalal() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Video className="h-10 w-10 text-purple-600" />
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src="@assets/1C5E68B4-F28D-4FFE-91DD-6EDF1476DE79_1751825949295.png" 
+              alt="Web TV Halal Logo" 
+              className="h-16 w-16 object-contain"
+            />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Web TV Halal
+              📺 Web TV Halal
             </h1>
           </div>
           <p className="text-xl text-gray-600 mb-4">

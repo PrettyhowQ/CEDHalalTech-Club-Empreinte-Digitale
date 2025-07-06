@@ -627,8 +627,12 @@ export default function CedVoieHalalHome() {
               </Link>
 
               <Link href="/web-tv-halal">
-                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
-                  <span className="text-2xl mb-1">📺</span>
+                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center relative">
+                  <img 
+                    src="@assets/1C5E68B4-F28D-4FFE-91DD-6EDF1476DE79_1751825949295.png" 
+                    alt="Web TV Halal Logo" 
+                    className="h-8 w-8 object-contain mb-1 bg-white rounded p-1"
+                  />
                   <span className="text-sm font-bold">Web TV Halal</span>
                   <span className="text-xs">6 chaînes islamiques</span>
                 </Button>
@@ -649,6 +653,20 @@ export default function CedVoieHalalHome() {
                   <span className="text-xs">55 modules testables</span>
                 </Button>
               </Link>
+            </div>
+            
+            {/* Bouton Déploiement Mondial */}
+            <div className="mt-8 text-center">
+              <Link href="/deployment-mondial">
+                <Button className="text-2xl px-12 py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white border-4 border-yellow-400 shadow-2xl hover:shadow-3xl transition-all rounded-xl">
+                  <span className="text-3xl mr-4">🚀</span>
+                  Déploiement Mondial CED HalalTech™
+                  <span className="text-3xl ml-4">🌍</span>
+                </Button>
+              </Link>
+              <p className="text-sm text-gray-600 mt-2">
+                Position dominante confirmée • Monopole technologique • Prêt pour expansion mondiale
+              </p>
             </div>
           </CardContent>
         </Card>

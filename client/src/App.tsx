@@ -218,6 +218,7 @@ import AnalyseConcurrentielle from "@/pages/AnalyseConcurrentielle";
 import AnalyseConcurrentielleComplete from "@/pages/AnalyseConcurrentielleComplete";
 import HajjSavingsPlanner from "@/pages/HajjSavingsPlanner";
 import NikahFinancialPlanning from "@/pages/NikahFinancialPlanning";
+import DeploymentMondial from "@/pages/DeploymentMondial";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
 import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
@@ -1156,6 +1157,13 @@ function Router() {
       <Route path="/wedding-islamic-planning" component={NikahFinancialPlanning} />
       <Route path="/mahr-calculator" component={NikahFinancialPlanning} />
       <Route path="/budget-nikah" component={NikahFinancialPlanning} />
+      
+      {/* Déploiement Mondial */}
+      <Route path="/deployment-mondial" component={DeploymentMondial} />
+      <Route path="/deploiement-global" component={DeploymentMondial} />
+      <Route path="/world-deployment" component={DeploymentMondial} />
+      <Route path="/lancement-mondial" component={DeploymentMondial} />
+      <Route path="/global-launch" component={DeploymentMondial} />
       <Route path="/market-analysis" component={AnalyseConcurrentielle} />
       
       {/* 5 Nouvelles Fonctionnalités Révolutionnaires */}
