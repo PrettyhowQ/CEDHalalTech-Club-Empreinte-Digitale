@@ -2,17 +2,73 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MapPin, Phone, Mail, Star, CheckCircle, Clock, Users, Wrench, Car, Shield } from "lucide-react";
+import { MapPin, Phone, Mail, Star, CheckCircle, Clock, Users, Wrench, Car, Shield, CreditCard, Banknote, Eye, Calendar } from "lucide-react";
 
 export default function GarageHalalNetwork() {
+  // Voitures de prestige disponibles
+  const prestigeCars = [
+    {
+      id: 1,
+      brand: "Mercedes-Benz",
+      model: "S-Class 500 4MATIC",
+      year: 2024,
+      price: 165000,
+      type: "Vente",
+      mileage: 2500,
+      color: "Noir Obsidienne",
+      features: ["Cuir Nappa", "Toit Panoramique", "Massage Seats", "Burmester Audio"],
+      financing: "Murabaha 0% Riba",
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 2,
+      brand: "BMW",
+      model: "X7 M50i",
+      year: 2024,
+      price: 4500,
+      type: "Location/mois",
+      mileage: 1200,
+      color: "Blanc Alpin",
+      features: ["7 Places", "Conduite Autonome", "Harman Kardon", "Toit Sky Lounge"],
+      financing: "Ijara Islamique",
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 3,
+      brand: "Audi",
+      model: "A8 L 60 TFSI",
+      year: 2023,
+      price: 128000,
+      type: "Vente",
+      mileage: 8500,
+      color: "Gris Daytona",
+      features: ["Quattro", "Matrix LED", "Bang & Olufsen", "Executive Package"],
+      financing: "Murabaha Flexible",
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 4,
+      brand: "Lexus",
+      model: "LS 500h Hybrid",
+      year: 2024,
+      price: 3200,
+      type: "Location/mois",
+      mileage: 800,
+      color: "Bleu Sonic",
+      features: ["Hybride", "Mark Levinson", "Chauffage/Climatisation", "Kiriko Glass"],
+      financing: "Ijara Premium",
+      image: "/api/placeholder/400/250"
+    }
+  ];
+
   const garages = [
     {
       id: 1,
-      name: "Garage Farid Auto Halal",
+      name: "Al-Amana Auto Halal – Yakoubi Farid",
       city: "Genève",
       address: "Route de Meyrin 147, 1214 Vernier",
       phone: "+41 22 788 5050",
-      email: "farid@garages-halal.ch",
+      email: "farid.yakoubi@al-amana-auto.ch",
       rating: 4.9,
       reviews: 287,
       services: ["Réparation", "Entretien", "Carrosserie", "Pneus", "Diagnostic"],
@@ -22,7 +78,12 @@ export default function GarageHalalNetwork() {
       prayerRoom: true,
       halalFinancing: true,
       muslimStaff: true,
-      image: "/api/placeholder/400/250"
+      alAmanInsurance: true,
+      halalTechStandards: true,
+      dubaiValidated: true,
+      genevaGuaranteed: true,
+      image: "/api/placeholder/400/250",
+      description: "🚘 Al-Amana Auto Halal – Yakoubi Farid - Service automobile certifié Halal dirigé par Yakoubi Farid. 🛡️ Données & Éthique garanties à Genève avec standards HalalTech™ validés à Dubaï. Assurance Al-Aman intégrée."
     },
     {
       id: 2,
@@ -120,8 +181,9 @@ export default function GarageHalalNetwork() {
         </div>
 
         <Tabs defaultValue="garages" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
             <TabsTrigger value="garages">Nos Garages</TabsTrigger>
+            <TabsTrigger value="prestige">Voitures Prestige</TabsTrigger>
             <TabsTrigger value="services">Services Halal</TabsTrigger>
             <TabsTrigger value="certification">Certification</TabsTrigger>
           </TabsList>
@@ -198,7 +260,44 @@ export default function GarageHalalNetwork() {
                             Finance halal
                           </div>
                         )}
+                        {garage.alAmanInsurance && (
+                          <div className="flex items-center gap-1 text-purple-600">
+                            <Shield className="h-4 w-4" />
+                            Assurance Al-Aman
+                          </div>
+                        )}
                       </div>
+
+                      {/* Nouvelles certifications HalalTech™ */}
+                      {(garage.halalTechStandards || garage.dubaiValidated || garage.genevaGuaranteed) && (
+                        <div className="flex flex-wrap gap-2 text-sm">
+                          {garage.halalTechStandards && (
+                            <div className="flex items-center gap-1 text-cyan-600">
+                              <CheckCircle className="h-4 w-4" />
+                              Standards HalalTech™
+                            </div>
+                          )}
+                          {garage.dubaiValidated && (
+                            <div className="flex items-center gap-1 text-yellow-600">
+                              <Star className="h-4 w-4" />
+                              Validé à Dubaï 🇦🇪
+                            </div>
+                          )}
+                          {garage.genevaGuaranteed && (
+                            <div className="flex items-center gap-1 text-red-600">
+                              <Shield className="h-4 w-4" />
+                              Garanti à Genève 🇨🇭
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Description spéciale pour Al-Amana */}
+                      {garage.description && (
+                        <div className="p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
+                          <p className="text-sm text-blue-800 font-medium">{garage.description}</p>
+                        </div>
+                      )}
 
                       {/* Contact */}
                       <div className="flex gap-2">
@@ -215,6 +314,132 @@ export default function GarageHalalNetwork() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </TabsContent>
+
+          {/* Onglet Voitures de Prestige */}
+          <TabsContent value="prestige">
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-center mb-4 bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">
+                🏆 Collection Voitures de Prestige Al-Amana Auto Halal
+              </h2>
+              <p className="text-center text-gray-600 mb-6">
+                Sélection exclusive de véhicules de luxe avec financement islamique 100% conforme Sharia
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {prestigeCars.map((car) => (
+                <Card key={car.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-yellow-200">
+                  <div className="h-56 bg-gradient-to-br from-slate-100 to-slate-200 relative">
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <Car className="h-20 w-20 text-slate-600" />
+                    </div>
+                    <Badge className={`absolute top-4 right-4 ${car.type === 'Vente' ? 'bg-emerald-600' : 'bg-blue-600'}`}>
+                      {car.type === 'Vente' ? 
+                        <><Banknote className="h-3 w-3 mr-1" />À Vendre</> : 
+                        <><Calendar className="h-3 w-3 mr-1" />Location</>
+                      }
+                    </Badge>
+                    <Badge className="absolute top-4 left-4 bg-yellow-600">
+                      <Star className="h-3 w-3 mr-1" />
+                      Prestige
+                    </Badge>
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <div>
+                        <div className="text-lg font-bold">{car.brand}</div>
+                        <div className="text-sm text-gray-600">{car.model}</div>
+                      </div>
+                      <Badge variant="outline">{car.year}</Badge>
+                    </CardTitle>
+                    <CardDescription>
+                      <div className="flex items-center gap-4 text-sm">
+                        <span className="flex items-center gap-1">
+                          <Eye className="h-4 w-4" />
+                          {car.mileage.toLocaleString()} km
+                        </span>
+                        <span>• {car.color}</span>
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="space-y-4">
+                      {/* Prix */}
+                      <div className="text-center p-4 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-200">
+                        <div className="text-2xl font-bold text-yellow-800">
+                          {car.price.toLocaleString()} CHF{car.type === 'Location/mois' && '/mois'}
+                        </div>
+                        <div className="text-sm text-yellow-600">{car.financing}</div>
+                      </div>
+
+                      {/* Équipements */}
+                      <div>
+                        <h4 className="font-medium mb-2">Équipements de série</h4>
+                        <div className="flex flex-wrap gap-1">
+                          {car.features.map((feature, idx) => (
+                            <Badge key={idx} variant="secondary" className="text-xs">
+                              {feature}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Services inclus */}
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2 text-emerald-600">
+                          <CheckCircle className="h-4 w-4" />
+                          <span>Assurance Al-Aman CED incluse</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-600">
+                          <CreditCard className="h-4 w-4" />
+                          <span>Ouverture compte Bank CED gratuite</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-purple-600">
+                          <Shield className="h-4 w-4" />
+                          <span>Garantie constructeur + extension halal</span>
+                        </div>
+                      </div>
+
+                      {/* Actions */}
+                      <div className="flex gap-2 mt-4">
+                        <Button className="flex-1 bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700">
+                          <Eye className="h-4 w-4 mr-1" />
+                          Voir Détails
+                        </Button>
+                        <Button variant="outline" className="flex-1">
+                          <Phone className="h-4 w-4 mr-1" />
+                          Contacter Farid
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Section financement spécial */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-lg border border-emerald-200">
+              <h3 className="text-xl font-bold text-center mb-4 text-emerald-800">
+                💰 Financement Islamique Exclusif - Yakoubi Farid
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="font-bold text-emerald-600">Murabaha Automobile</div>
+                  <div className="text-gray-600">0% Riba • Paiement échelonné</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="font-bold text-blue-600">Ijara Location</div>
+                  <div className="text-gray-600">Option d'achat • Flexibilité totale</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                  <div className="font-bold text-purple-600">Package Complet</div>
+                  <div className="text-gray-600">Bank CED + Al-Aman • -15%</div>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
@@ -240,22 +465,67 @@ export default function GarageHalalNetwork() {
                 </CardContent>
               </Card>
 
-              {/* Financement Halal */}
-              <Card>
+              {/* Bank CED - Services Bancaires */}
+              <Card className="border-emerald-200 bg-emerald-50">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-blue-600" />
-                    Financement Islamique
+                    <Shield className="h-5 w-5 text-emerald-600" />
+                    Bank CED - Services Bancaires
                   </CardTitle>
+                  <CardDescription>
+                    Banque islamique 100% conforme Sharia
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li>• 0% Riba - Conformité Sharia complète</li>
-                    <li>• Murabaha pour achats véhicules</li>
-                    <li>• Ijara pour location long terme</li>
-                    <li>• Paiement échelonné sans intérêt</li>
-                    <li>• Certification AAOIFI validée</li>
+                    <li>• Ouverture compte CED directement au garage</li>
+                    <li>• Carte bancaire CED gratuite première année</li>
+                    <li>• Financement véhicule 0% Riba garanti</li>
+                    <li>• Virement instantané pour réparations</li>
+                    <li>• Épargne Mudaraba sans intérêt</li>
+                    <li>• Gestion patrimoine halal intégrée</li>
                   </ul>
+                  <div className="mt-4 p-3 bg-emerald-100 rounded-lg">
+                    <p className="text-xs text-emerald-800">
+                      <strong>Exclusivité Al-Amana Auto Halal :</strong> 
+                      Yakoubi Farid certifié conseiller Bank CED pour tous services bancaires islamiques.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Assurance Al-Aman */}
+              <Card className="border-purple-200 bg-purple-50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-purple-600" />
+                    Assurance Al-Aman CED
+                  </CardTitle>
+                  <CardDescription>
+                    Assurance Takaful 100% conforme à la Sharia
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Couverture tous risques véhicule</li>
+                    <li>• Responsabilité civile Takaful</li>
+                    <li>• Assistance dépannage 24/7</li>
+                    <li>• Réparation garage agréé halal</li>
+                    <li>• Indemnisation selon principes islamiques</li>
+                    <li>• Surplus redistribué aux participants</li>
+                  </ul>
+                  <div className="mt-4 p-3 bg-purple-100 rounded-lg">
+                    <p className="text-xs text-purple-800">
+                      <strong>Spécial Al-Amana Auto Halal – Yakoubi Farid :</strong> 
+                      Réduction de 15% sur tous les contrats Al-Aman CED pour les clients du garage.
+                    </p>
+                  </div>
+                  <div className="mt-2 p-3 bg-emerald-100 rounded-lg">
+                    <p className="text-xs text-emerald-800">
+                      <strong>🏦 Bank CED :</strong> 
+                      Ouverture de compte bancaire islamique directement au garage avec carte CED gratuite et financement véhicule 0% Riba.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
 
