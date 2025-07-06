@@ -220,6 +220,11 @@ import HajjSavingsPlanner from "@/pages/HajjSavingsPlanner";
 import NikahFinancialPlanning from "@/pages/NikahFinancialPlanning";
 import DeploymentMondial from "@/pages/DeploymentMondial";
 import HalalEcoSystem from "@/pages/HalalEcoSystem";
+import UXRevolutionnaire from "@/pages/UXRevolutionnaire";
+import InteractiveProgressVisualization from "@/components/InteractiveProgressVisualization";
+import AccessibilityModeIslamic from "@/components/AccessibilityModeIslamic";
+import IslamicMicroInteractions from "@/components/IslamicMicroInteractions";
+import ContextualHelpTooltips from "@/components/ContextualHelpTooltips";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
 import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
@@ -1203,6 +1208,17 @@ function Router() {
       <Route path="/programme-52-etapes" component={VoieHalal52} />
       <Route path="/transformation-halal" component={VoieHalal52} />
       <Route path="/univers-ethique-prospere" component={VoieHalal52} />
+
+      {/* UX Révolutionnaire - 4 Fonctionnalités Avancées */}
+      <Route path="/ux-revolutionnaire" component={UXRevolutionnaire} />
+      <Route path="/interactive-progress-visualization" component={InteractiveProgressVisualization} />
+      <Route path="/accessibility-mode-islamic" component={AccessibilityModeIslamic} />
+      <Route path="/islamic-micro-interactions" component={IslamicMicroInteractions} />
+      <Route path="/contextual-help-tooltips" component={ContextualHelpTooltips} />
+      <Route path="/visualisation-progression-interactive" component={InteractiveProgressVisualization} />
+      <Route path="/mode-accessibilite-islamique" component={AccessibilityModeIslamic} />
+      <Route path="/micro-interactions-islamiques" component={IslamicMicroInteractions} />
+      <Route path="/aide-contextuelle-culturelle" component={ContextualHelpTooltips} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

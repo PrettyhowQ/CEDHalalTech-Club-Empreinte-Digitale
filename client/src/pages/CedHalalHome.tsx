@@ -200,12 +200,20 @@ export default function CedVoieHalalHome() {
                 </div>
               </div>
             </div>
-            <div className="mt-6 text-center">
+            <div className="mt-6 text-center space-y-4">
               <Link href="/test-55-modules">
                 <Button className="text-xl px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
                   <span className="text-2xl mr-3">🧪</span>
                   Commencer les Tests des 55 Modules
                   <span className="text-2xl ml-3">🚀</span>
+                </Button>
+              </Link>
+              
+              <Link href="/ux-revolutionnaire">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🎨</span>
+                  UX Révolutionnaire - 4 Fonctionnalités Avancées
+                  <span className="text-2xl ml-3">✨</span>
                 </Button>
               </Link>
             </div>
