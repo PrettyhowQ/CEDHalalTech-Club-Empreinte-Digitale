@@ -382,6 +382,24 @@ Supervision Islamique Permanente
 
 ---
 
+## 🛡️ Protection & Licence
+
+**Utilisation exclusivement halal** – Toute exploitation commerciale nécessite accord écrit. Licence éthique en conformité avec les valeurs islamiques.
+
+**© Yakoubi Yamina** – Tous droits réservés | **CED HalalTech™** certifié mondialement
+
+### 🇨🇭 Données hébergées en Suisse
+- **Conforme RGPD & LPD**
+- **Usage éthique & halal uniquement**
+- **جميع الحقوق محفوظة** (Tous droits réservés - Arabe)
+- **All rights reserved** (Anglais)
+- **版权所有** (Chinois)
+
+**CED HalalTech™** - Technologie 100% Halal • Certifiée et protégée mondialement  
+*Écosystème révolutionnaire conforme aux valeurs islamiques authentiques*
+
+---
+
 <div align="center">
 
 **🕌 Bismillah - Au nom d'Allah, le Clément, le Miséricordieux**
