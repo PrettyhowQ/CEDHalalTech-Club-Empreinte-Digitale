@@ -215,6 +215,8 @@ import BlockchainFiqhRules from "@/pages/BlockchainFiqhRules";
 import CertificatesHalalTech from "@/pages/CertificatesHalalTech";
 import TestModule55 from "@/pages/TestModule55";
 import AnalyseConcurrentielle from "@/pages/AnalyseConcurrentielle";
+import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
+import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
 import AccessibiliteInclusiveMultilingue from "@/pages/AccessibiliteInclusiveMultilingue";
 import ReconnaissanceVocaleIslamique from "@/pages/ReconnaissanceVocaleIslamique";
@@ -801,6 +803,13 @@ function Router() {
       <Route path="/television-ia" component={WebTVPrettyhowQ} />
       <Route path="/prettyhowq-tv" component={WebTVPrettyhowQ} />
       
+      {/* Web TV Halal - Nouvelle plateforme */}
+      <Route path="/webtv-halal" component={WebTVHalal} />
+      <Route path="/web-tv-halal" component={WebTVHalal} />
+      <Route path="/television-halal" component={WebTVHalal} />
+      <Route path="/tv-islamique" component={WebTVHalal} />
+      <Route path="/diffusion-halal" component={WebTVHalal} />
+      
       <Route path="/halaltech-website" component={HalalTechWebsite} />
       <Route path="/halaltech" component={HalalTechWebsite} />
       <Route path="/formations-halal" component={HalalTechWebsite} />
@@ -1097,10 +1106,11 @@ function Router() {
       <Route path="/love-prophet-allah" component={AmourFiAllahAuthentique} />
       
       {/* Garages Halal Network */}
-      <Route path="/garages-halal" component={GaragesHalal} />
-      <Route path="/garages-halal-network" component={GaragesHalal} />
-      <Route path="/garage-halal" component={GaragesHalal} />
-      <Route path="/automotive-halal" component={GaragesHalal} />
+      <Route path="/garages-halal" component={GarageHalalNetwork} />
+      <Route path="/garages-halal-network" component={GarageHalalNetwork} />
+      <Route path="/garage-halal" component={GarageHalalNetwork} />
+      <Route path="/automotive-halal" component={GarageHalalNetwork} />
+      <Route path="/garage-halal-network" component={GarageHalalNetwork} />
       
       {/* Blockchain Fiqh Rules */}
       <Route path="/blockchain-fiqh-rules" component={BlockchainFiqhRules} />
