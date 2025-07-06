@@ -155,10 +155,14 @@ export default function GarageHalalNetwork() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Car className="h-10 w-10 text-emerald-600" />
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src="@assets/08657603-AD72-44C6-951C-F7A18E37B12D_1751825648264.png" 
+              alt="Al-Amana Auto Halal Logo" 
+              className="h-16 w-16 object-contain"
+            />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
-              Garage Halal Network
+              🚘 Al-Amana Auto Halal – Yakoubi Farid
             </h1>
           </div>
           <p className="text-xl text-gray-600 mb-4">

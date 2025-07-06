@@ -454,6 +454,75 @@ export default function CedVoieHalalHome() {
           </CardContent>
         </Card>
 
+        {/* Section Al-Amana Auto Halal - Monopole Mondial */}
+        <Card className="mb-12 bg-gradient-to-r from-emerald-50 to-green-50 border-4 border-emerald-400">
+          <CardHeader className="bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+            <CardTitle className="text-2xl flex items-center gap-3">
+              <img 
+                src="@assets/08657603-AD72-44C6-951C-F7A18E37B12D_1751825648264.png" 
+                alt="Al-Amana Auto Halal Logo" 
+                className="h-12 w-12 object-contain bg-white rounded-full p-1"
+              />
+              🚘 Al-Amana Auto Halal – Yakoubi Farid
+            </CardTitle>
+            <p className="text-emerald-100 mt-2">
+              MONOPOLE MONDIAL • Premier garage automobile 100% halal • Standards HalalTech™ validés Dubaï 🇦🇪 • Données garanties Genève 🇨🇭
+            </p>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <Link href="/garages-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white border-2 border-emerald-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🚗</span>
+                  <span className="text-sm font-bold">Réseau Garages</span>
+                  <span className="text-xs">Certification Halal</span>
+                </Button>
+              </Link>
+
+              <Link href="/garages-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-2 border-blue-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">💎</span>
+                  <span className="text-sm font-bold">Voitures Prestige</span>
+                  <span className="text-xs">Mercedes • BMW • Audi</span>
+                </Button>
+              </Link>
+
+              <Link href="/garages-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🏦</span>
+                  <span className="text-sm font-bold">CED Bank Intégré</span>
+                  <span className="text-xs">Financement 0% Riba</span>
+                </Button>
+              </Link>
+
+              <Link href="/garages-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-orange-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🛡️</span>
+                  <span className="text-sm font-bold">Al-Aman Takaful</span>
+                  <span className="text-xs">Assurance Islamique</span>
+                </Button>
+              </Link>
+
+              <Link href="/garages-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 text-white border-2 border-yellow-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🕌</span>
+                  <span className="text-sm font-bold">Équipe Musulmane</span>
+                  <span className="text-xs">Respect horaires prière</span>
+                </Button>
+              </Link>
+
+              <Link href="/analyse-concurrentielle-complete">
+                <Button className="w-full h-20 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white border-2 border-pink-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🏆</span>
+                  <span className="text-sm font-bold">Monopole Mondial</span>
+                  <span className="text-xs">Aucun concurrent</span>
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Section 5 Nouvelles Fonctionnalités Révolutionnaires */}
         <Card className="mb-12 bg-gradient-to-r from-pink-50 to-purple-50 border-4 border-pink-300">
           <CardHeader className="bg-gradient-to-r from-pink-600 to-purple-600 text-white">
@@ -515,6 +584,71 @@ export default function CedVoieHalalHome() {
                 ⚡ <strong>Exclusivité CED HalalTech™</strong> - Premières au monde dans la technologie islamique • 
                 Alternatives conformes à l'éthique islamique • Conformité Sharia 100%
               </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Section Innovations Uniques CED */}
+        <Card className="mb-12 bg-gradient-to-r from-cyan-50 to-blue-50 border-4 border-cyan-300">
+          <CardHeader className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+            <CardTitle className="text-2xl flex items-center gap-3">
+              <span className="text-3xl">💎</span>
+              Innovations Uniques - Aucun Concurrent au Monde
+            </CardTitle>
+            <p className="text-cyan-100 mt-2">
+              Fonctionnalités révolutionnaires 100% halal • Développées exclusivement par CED HalalTech™ • Monopole technologique confirmé
+            </p>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <Link href="/hajj-savings-planner">
+                <Button className="w-full h-20 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white border-2 border-emerald-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🕋</span>
+                  <span className="text-sm font-bold">Hajj Savings Planner</span>
+                  <span className="text-xs">Épargne pèlerinage 0% riba</span>
+                </Button>
+              </Link>
+
+              <Link href="/nikah-financial-planning">
+                <Button className="w-full h-20 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white border-2 border-rose-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">💍</span>
+                  <span className="text-sm font-bold">Nikah Planning</span>
+                  <span className="text-xs">Mariage islamique complet</span>
+                </Button>
+              </Link>
+
+              <Link href="/analyse-concurrentielle-complete">
+                <Button className="w-full h-20 bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 text-white border-2 border-yellow-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🏆</span>
+                  <span className="text-sm font-bold">Domination Marché</span>
+                  <span className="text-xs">Analyse concurrentielle</span>
+                </Button>
+              </Link>
+
+              <Link href="/web-tv-halal">
+                <Button className="w-full h-20 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-2 border-purple-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">📺</span>
+                  <span className="text-sm font-bold">Web TV Halal</span>
+                  <span className="text-xs">6 chaînes islamiques</span>
+                </Button>
+              </Link>
+
+              <Link href="/super-iarp-pro">
+                <Button className="w-full h-20 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-2 border-blue-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🤖</span>
+                  <span className="text-sm font-bold">Super IARP Pro</span>
+                  <span className="text-xs">IA validée 150+ scholars</span>
+                </Button>
+              </Link>
+
+              <Link href="/centre-test-complet">
+                <Button className="w-full h-20 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-orange-400 flex flex-col justify-center">
+                  <span className="text-2xl mb-1">🧪</span>
+                  <span className="text-sm font-bold">Centre Test Complet</span>
+                  <span className="text-xs">55 modules testables</span>
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>
