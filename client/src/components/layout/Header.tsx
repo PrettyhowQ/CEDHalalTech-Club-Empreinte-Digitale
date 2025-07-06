@@ -48,7 +48,7 @@ export function Header() {
     { name: 'App Logistique 📱', href: '/app-logistique', priority: true, premium: true },
     { name: 'CED Bank Comptes 🏛️', href: '/ced-bank-comptes', priority: true, premium: true },
     { name: 'Al-Aman Takaful 🛡️', href: '/al-aman-takaful', priority: true, premium: true },
-    { name: 'Innovation Roadmap 🚀', href: '/innovation-roadmap', priority: true, premium: true },
+    { name: 'Alternatives Conformes à l\'Éthique Islamique 🚀', href: '/innovation-roadmap', priority: true, premium: true },
     { name: 'Formation Employés 🎓', href: '/formation-employes', priority: true, premium: true },
     { name: 'Suite Mobile Pro 📱', href: '/suite-mobile-pro', priority: true, premium: true },
     { name: 'Écoute du Coran 🎧', href: '/ecoute-coran', priority: true, premium: true },

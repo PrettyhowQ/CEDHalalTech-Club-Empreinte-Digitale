@@ -31,7 +31,7 @@ import {
   Microscope
 } from 'lucide-react';
 
-interface Innovation {
+interface AlternativeEthique {
   id: string;
   name: string;
   description: string;
@@ -43,7 +43,7 @@ interface Innovation {
 }
 
 export default function TechnologiesAvancees() {
-  const innovations: Innovation[] = [
+  const alternativesEthiques: AlternativeEthique[] = [
     {
       id: 'quantum-consciousness',
       name: 'IA à Conscience Quantique',
@@ -59,7 +59,7 @@ export default function TechnologiesAvancees() {
       name: 'Apprentissage Multiversel',
       description: 'Exploration simultanée de millions de réalités parallèles pour optimiser les parcours éducatifs',
       category: 'quantum',
-      uniqueness: 'Innovation mondiale - Simulation de tous les futurs possibles d\'apprentissage',
+      uniqueness: 'Alternative éthique mondiale - Simulation de tous les futurs possibles d\'apprentissage',
       impact: 'Élimine les échecs en testant toutes les méthodes simultanément',
       timeline: '2026-2035',
       readinessLevel: 70
@@ -244,9 +244,9 @@ export default function TechnologiesAvancees() {
 
             <TabsContent value="innovations" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {innovations.map((innovation, index) => (
+                {alternativesEthiques.map((alternative, index) => (
                   <motion.div
-                    key={innovation.id}
+                    key={alternative.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -255,37 +255,37 @@ export default function TechnologiesAvancees() {
                       <CardHeader className="pb-3">
                         <CardTitle className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            {getCategoryIcon(innovation.category)}
-                            <span className="text-lg">{innovation.name}</span>
+                            {getCategoryIcon(alternative.category)}
+                            <span className="text-lg">{alternative.name}</span>
                           </div>
-                          <Badge className={getCategoryColor(innovation.category)}>
-                            {innovation.category}
+                          <Badge className={getCategoryColor(alternative.category)}>
+                            {alternative.category}
                           </Badge>
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <p className="text-gray-700 text-sm">{innovation.description}</p>
+                        <p className="text-gray-700 text-sm">{alternative.description}</p>
                         
                         <div className="space-y-3">
                           <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
                             <h4 className="font-medium text-sm text-blue-800 mb-1">Exclusivité</h4>
-                            <p className="text-sm text-blue-700">{innovation.uniqueness}</p>
+                            <p className="text-sm text-blue-700">{alternative.uniqueness}</p>
                           </div>
                           
                           <div className="p-3 bg-green-50 rounded-lg border border-green-200">
                             <h4 className="font-medium text-sm text-green-800 mb-1">Impact Révolutionnaire</h4>
-                            <p className="text-sm text-green-700">{innovation.impact}</p>
+                            <p className="text-sm text-green-700">{alternative.impact}</p>
                           </div>
                         </div>
 
                         <div className="flex justify-between items-center text-sm">
                           <div className="flex items-center gap-2">
-                            <Badge variant="outline">{innovation.timeline}</Badge>
+                            <Badge variant="outline">{alternative.timeline}</Badge>
                           </div>
                           <div className="flex items-center gap-2">
                             <span className="text-gray-500">Maturité:</span>
-                            <Badge className={getReadinessColor(innovation.readinessLevel)}>
-                              {innovation.readinessLevel}%
+                            <Badge className={getReadinessColor(alternative.readinessLevel)}>
+                              {alternative.readinessLevel}%
                             </Badge>
                           </div>
                         </div>

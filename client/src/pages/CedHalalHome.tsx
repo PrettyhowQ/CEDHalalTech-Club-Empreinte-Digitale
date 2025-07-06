@@ -462,7 +462,7 @@ export default function CedVoieHalalHome() {
               5 Nouvelles Fonctionnalités Révolutionnaires CED HalalTech™
             </CardTitle>
             <p className="text-pink-100 mt-2">
-              Technologies de pointe • Intelligence artificielle avancée • Innovation halal mondiale
+              Technologies de pointe • Intelligence artificielle avancée • Alternatives conformes à l'éthique islamique mondiale
             </p>
           </CardHeader>
           <CardContent className="p-8">
@@ -513,7 +513,7 @@ export default function CedVoieHalalHome() {
             <div className="mt-6 p-4 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg">
               <p className="text-center text-gray-800 font-medium">
                 ⚡ <strong>Exclusivité CED HalalTech™</strong> - Premières au monde dans la technologie islamique • 
-                Innovation révolutionnaire • Conformité Sharia 100%
+                Alternatives conformes à l'éthique islamique • Conformité Sharia 100%
               </p>
             </div>
           </CardContent>

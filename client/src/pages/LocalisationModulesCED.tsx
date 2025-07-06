@@ -454,7 +454,7 @@ export default function LocalisationModulesCED() {
       color: "bg-red-100 text-red-800"
     },
 
-    // MODULES 33-42 : INNOVATIONS TECHNOLOGIQUES
+    // MODULES 33-42 : ALTERNATIVES CONFORMES À L'ÉTHIQUE ISLAMIQUE
     {
       id: 53,
       nom: "⚡ Quantum Halal Trading",

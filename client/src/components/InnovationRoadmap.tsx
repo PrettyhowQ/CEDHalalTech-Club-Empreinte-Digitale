@@ -33,7 +33,7 @@ import {
 import { motion } from 'framer-motion';
 import { CEDFooter } from './CEDFooter';
 
-interface InnovationFeature {
+interface AlternativeEthiqueFeature {
   id: string;
   category: 'fintech' | 'ai' | 'social' | 'sustainability' | 'governance' | 'expansion';
   title: string;
@@ -49,7 +49,7 @@ interface InnovationFeature {
   keyMetrics: { metric: string; target: string }[];
 }
 
-const innovationFeatures: InnovationFeature[] = [
+const alternativesEthiques: AlternativeEthiqueFeature[] = [
   {
     id: 'quantum-halal-trading',
     category: 'fintech',
@@ -245,14 +245,14 @@ const innovationFeatures: InnovationFeature[] = [
 ];
 
 const ecosystemMetrics = {
-  totalInvestment: innovationFeatures.reduce((sum, feature) => sum + feature.investment, 0),
-  expectedROI: innovationFeatures.reduce((sum, feature) => sum + (feature.investment * feature.roi / 100), 0),
-  revolutionaryFeatures: innovationFeatures.filter(f => f.impact === 'revolutionary').length,
-  activeProjects: innovationFeatures.filter(f => f.status === 'development' || f.status === 'testing').length
+  totalInvestment: alternativesEthiques.reduce((sum, feature) => sum + feature.investment, 0),
+  expectedROI: alternativesEthiques.reduce((sum, feature) => sum + (feature.investment * feature.roi / 100), 0),
+  revolutionaryFeatures: alternativesEthiques.filter(f => f.impact === 'revolutionary').length,
+  activeProjects: alternativesEthiques.filter(f => f.status === 'development' || f.status === 'testing').length
 };
 
 export function InnovationRoadmap() {
-  const [selectedFeature, setSelectedFeature] = useState<InnovationFeature | null>(null);
+  const [selectedFeature, setSelectedFeature] = useState<AlternativeEthiqueFeature | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const getCategoryColor = (category: string) => {
@@ -288,8 +288,8 @@ export function InnovationRoadmap() {
   };
 
   const filteredFeatures = selectedCategory === 'all' 
-    ? innovationFeatures 
-    : innovationFeatures.filter(f => f.category === selectedCategory);
+    ? alternativesEthiques 
+    : alternativesEthiques.filter(f => f.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -402,7 +402,7 @@ export function InnovationRoadmap() {
           ))}
         </motion.div>
 
-        {/* Innovations */}
+        {/* Alternatives Éthiques */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

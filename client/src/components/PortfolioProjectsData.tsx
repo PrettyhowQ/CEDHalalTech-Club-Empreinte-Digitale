@@ -422,12 +422,12 @@ export const portfolioProjects: PortfolioProject[] = [
     region: ['Europe', 'Suisse', 'International']
   },
 
-  // INNOVATIONS FUTURES
+  // ALTERNATIVES CONFORMES À L'ÉTHIQUE ISLAMIQUE
   {
     id: 'quantum-halal-trading',
     title: 'Quantum Halal Trading',
     description: 'Premier système trading quantique conforme Sharia avec IA prédictive',
-    category: 'innovation',
+    category: 'alternative-ethique',
     status: 'planning',
     technologies: ['Quantum Computing', 'AI/ML', 'Blockchain', 'Real-time Analytics'],
     features: [
@@ -455,7 +455,7 @@ export const portfolioProjects: PortfolioProject[] = [
     id: 'neural-islamic-banking',
     title: 'Neural Islamic Banking',
     description: 'IA spirituelle pour conseil financier personnalisé conforme Sharia',
-    category: 'innovation',
+    category: 'alternative-ethique',
     status: 'planning',
     technologies: ['Neural Networks', 'NLP', 'Spiritual AI', 'Islamic Finance'],
     features: [
@@ -483,7 +483,7 @@ export const portfolioProjects: PortfolioProject[] = [
     id: 'metaverse-hajj',
     title: 'Metaverse Hajj Experience',
     description: 'Pèlerinage virtuel immersif pour préparation et éducation Hajj',
-    category: 'innovation',
+    category: 'alternative-ethique',
     status: 'planning',
     technologies: ['VR/AR', 'Metaverse', '3D Modeling', 'Spatial Audio'],
     features: [
