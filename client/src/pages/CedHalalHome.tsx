@@ -705,6 +705,13 @@ export default function CedVoieHalalHome() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
+                  <Link href="/halal-eco-system">
+                    <Button className="w-full h-20 bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white text-lg font-bold border-4 border-green-400 shadow-xl">
+                      <span className="text-3xl mr-3">🌍</span>
+                      🌱 CHARTE ÉCOLOGIQUE ISLAMIQUE CED
+                      <span className="text-3xl ml-3">🌱</span>
+                    </Button>
+                  </Link>
                   <Link href="/protection-licence">
                     <Button className="w-full h-16 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white">
                       <Shield className="h-5 w-5 mr-2" />
