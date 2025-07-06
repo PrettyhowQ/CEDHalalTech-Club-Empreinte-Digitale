@@ -122,6 +122,22 @@ export default function CedVoieHalalHome() {
         </div>
       </div>
 
+      {/* BOUTON CHARTE ÉCOLOGIQUE - IMMÉDIATEMENT VISIBLE */}
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 py-6">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <Link href="/halal-eco-system">
+            <Button className="text-2xl px-16 py-8 bg-white hover:bg-gray-100 text-green-700 font-bold border-4 border-yellow-400 shadow-2xl hover:shadow-3xl transition-all rounded-2xl">
+              <span className="text-4xl mr-4">🌍</span>
+              CHARTE ÉCOLOGIQUE ISLAMIQUE CED
+              <span className="text-4xl ml-4">🌱</span>
+            </Button>
+          </Link>
+          <p className="text-white text-lg mt-3 font-semibold">
+            6 Piliers écologie islamique • 8 Technologies vertes halal • Fatwas environnementales officielles
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 py-8">
         
         {/* Centre de Test Prioritaire */}
