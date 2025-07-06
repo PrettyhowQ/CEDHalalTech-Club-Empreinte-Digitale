@@ -41,21 +41,114 @@ const MultilingualVoiceAssistant = () => {
   const recognitionRef = useRef<any>(null);
 
   const languages = [
+    // Langues Islamiques Principales
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'ur', name: 'اردو', flag: '🇵🇰' },
+    { code: 'fa', name: 'فارسی', flag: '🇮🇷' },
     { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
     { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
     { code: 'ms', name: 'Bahasa Melayu', flag: '🇲🇾' },
     { code: 'bn', name: 'বাংলা', flag: '🇧🇩' },
-    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
-    { code: 'fa', name: 'فارسی', flag: '🇮🇷' },
+    
+    // Langues Européennes
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'pt', name: 'Português', flag: '🇧🇷' },
     { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'zh', name: '中文', flag: '🇨🇳' }
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+    { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
+    { code: 'no', name: 'Norsk', flag: '🇳🇴' },
+    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
+    { code: 'pl', name: 'Polski', flag: '🇵🇱' },
+    { code: 'cs', name: 'Čeština', flag: '🇨🇿' },
+    { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
+    { code: 'ro', name: 'Română', flag: '🇷🇴' },
+    { code: 'bg', name: 'Български', flag: '🇧🇬' },
+    { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
+    { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
+    { code: 'sl', name: 'Slovenščina', flag: '🇸🇮' },
+    { code: 'et', name: 'Eesti', flag: '🇪🇪' },
+    { code: 'lv', name: 'Latviešu', flag: '🇱🇻' },
+    { code: 'lt', name: 'Lietuvių', flag: '🇱🇹' },
+    { code: 'el', name: 'Ελληνικά', flag: '🇬🇷' },
+    
+    // Langues Asiatiques
+    { code: 'zh', name: '中文', flag: '🇨🇳' },
+    { code: 'ja', name: '日本語', flag: '🇯🇵' },
+    { code: 'ko', name: '한국어', flag: '🇰🇷' },
+    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
+    { code: 'th', name: 'ไทย', flag: '🇹🇭' },
+    { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
+    { code: 'tl', name: 'Filipino', flag: '🇵🇭' },
+    { code: 'my', name: 'မြန်မာ', flag: '🇲🇲' },
+    { code: 'km', name: 'ខ្មែរ', flag: '🇰🇭' },
+    { code: 'lo', name: 'ລາວ', flag: '🇱🇦' },
+    { code: 'si', name: 'සිංහල', flag: '🇱🇰' },
+    { code: 'ta', name: 'தமிழ்', flag: '🇮🇳' },
+    { code: 'te', name: 'తెలుగు', flag: '🇮🇳' },
+    { code: 'ml', name: 'മലയാളം', flag: '🇮🇳' },
+    { code: 'kn', name: 'ಕನ್ನಡ', flag: '🇮🇳' },
+    { code: 'gu', name: 'ગુજરાતી', flag: '🇮🇳' },
+    { code: 'pa', name: 'ਪੰਜਾਬੀ', flag: '🇮🇳' },
+    { code: 'mr', name: 'मराठी', flag: '🇮🇳' },
+    { code: 'or', name: 'ଓଡ଼ିଆ', flag: '🇮🇳' },
+    { code: 'as', name: 'অসমীয়া', flag: '🇮🇳' },
+    { code: 'ne', name: 'नेपाली', flag: '🇳🇵' },
+    
+    // Langues Africaines
+    { code: 'sw', name: 'Kiswahili', flag: '🇰🇪' },
+    { code: 'ha', name: 'Hausa', flag: '🇳🇬' },
+    { code: 'yo', name: 'Yorùbá', flag: '🇳🇬' },
+    { code: 'ig', name: 'Igbo', flag: '🇳🇬' },
+    { code: 'am', name: 'አማርኛ', flag: '🇪🇹' },
+    { code: 'so', name: 'Soomaali', flag: '🇸🇴' },
+    { code: 'zu', name: 'isiZulu', flag: '🇿🇦' },
+    { code: 'xh', name: 'isiXhosa', flag: '🇿🇦' },
+    { code: 'af', name: 'Afrikaans', flag: '🇿🇦' },
+    
+    // Langues du Moyen-Orient/Cauccase
+    { code: 'he', name: 'עברית', flag: '🇮🇱' },
+    { code: 'ku', name: 'کوردی', flag: '🇮🇶' },
+    { code: 'az', name: 'Azərbaycan', flag: '🇦🇿' },
+    { code: 'ka', name: 'ქართული', flag: '🇬🇪' },
+    { code: 'hy', name: 'Հայերեն', flag: '🇦🇲' },
+    
+    // Langues des Amériques
+    { code: 'qu', name: 'Quechua', flag: '🇵🇪' },
+    { code: 'gn', name: 'Guaraní', flag: '🇵🇾' },
+    
+    // Langues Austronésiennes/Océanie
+    { code: 'mi', name: 'Te Reo Māori', flag: '🇳🇿' },
+    { code: 'sm', name: 'Gagana Samoa', flag: '🇼🇸' },
+    { code: 'to', name: 'Lea Faka-Tonga', flag: '🇹🇴' },
+    { code: 'fj', name: 'Vosa Vakaviti', flag: '🇫🇯' },
+    
+    // Langues Construites/Internationales
+    { code: 'eo', name: 'Esperanto', flag: '🌍' },
+    { code: 'la', name: 'Latina', flag: '🏛️' },
+    
+    // Dialectes Arabes Régionaux
+    { code: 'ar-eg', name: 'العربية المصرية', flag: '🇪🇬' },
+    { code: 'ar-ma', name: 'الدارجة المغربية', flag: '🇲🇦' },
+    { code: 'ar-dz', name: 'العربية الجزائرية', flag: '🇩🇿' },
+    { code: 'ar-tn', name: 'العربية التونسية', flag: '🇹🇳' },
+    { code: 'ar-ly', name: 'العربية الليبية', flag: '🇱🇾' },
+    { code: 'ar-sd', name: 'العربية السودانية', flag: '🇸🇩' },
+    { code: 'ar-sy', name: 'العربية الشامية', flag: '🇸🇾' },
+    { code: 'ar-lb', name: 'العربية اللبنانية', flag: '🇱🇧' },
+    { code: 'ar-jo', name: 'العربية الأردنية', flag: '🇯🇴' },
+    { code: 'ar-ps', name: 'العربية الفلسطينية', flag: '🇵🇸' },
+    { code: 'ar-iq', name: 'العربية العراقية', flag: '🇮🇶' },
+    { code: 'ar-kw', name: 'العربية الكويتية', flag: '🇰🇼' },
+    { code: 'ar-ae', name: 'العربية الإماراتية', flag: '🇦🇪' },
+    { code: 'ar-qa', name: 'العربية القطرية', flag: '🇶🇦' },
+    { code: 'ar-bh', name: 'العربية البحرينية', flag: '🇧🇭' },
+    { code: 'ar-om', name: 'العربية العُمانية', flag: '🇴🇲' },
+    { code: 'ar-ye', name: 'العربية اليمنية', flag: '🇾🇪' }
   ];
 
   const ethicalFeatures = [
