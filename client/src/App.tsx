@@ -219,6 +219,7 @@ import AnalyseConcurrentielleComplete from "@/pages/AnalyseConcurrentielleComple
 import HajjSavingsPlanner from "@/pages/HajjSavingsPlanner";
 import NikahFinancialPlanning from "@/pages/NikahFinancialPlanning";
 import DeploymentMondial from "@/pages/DeploymentMondial";
+import HalalEcoSystem from "@/pages/HalalEcoSystem";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
 import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
@@ -1164,6 +1165,14 @@ function Router() {
       <Route path="/world-deployment" component={DeploymentMondial} />
       <Route path="/lancement-mondial" component={DeploymentMondial} />
       <Route path="/global-launch" component={DeploymentMondial} />
+      
+      {/* Halal Eco System */}
+      <Route path="/halal-eco-system" component={HalalEcoSystem} />
+      <Route path="/ecosysteme-halal" component={HalalEcoSystem} />
+      <Route path="/charte-ecologique-ced" component={HalalEcoSystem} />
+      <Route path="/ecologie-islamique" component={HalalEcoSystem} />
+      <Route path="/environmental-islamic" component={HalalEcoSystem} />
+      <Route path="/green-halal-tech" component={HalalEcoSystem} />
       <Route path="/market-analysis" component={AnalyseConcurrentielle} />
       
       {/* 5 Nouvelles Fonctionnalités Révolutionnaires */}

@@ -663,18 +663,35 @@ export default function CedVoieHalalHome() {
               </Link>
             </div>
             
-            {/* Bouton Déploiement Mondial */}
-            <div className="mt-8 text-center">
-              <Link href="/deployment-mondial">
-                <Button className="text-2xl px-12 py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white border-4 border-yellow-400 shadow-2xl hover:shadow-3xl transition-all rounded-xl">
-                  <span className="text-3xl mr-4">🚀</span>
-                  Déploiement Mondial CED HalalTech™
-                  <span className="text-3xl ml-4">🌍</span>
-                </Button>
-              </Link>
-              <p className="text-sm text-gray-600 mt-2">
-                Position dominante confirmée • Monopole technologique • Prêt pour expansion mondiale
-              </p>
+            {/* Boutons d'Action Principaux */}
+            <div className="mt-8 space-y-4">
+              {/* Bouton Déploiement Mondial */}
+              <div className="text-center">
+                <Link href="/deployment-mondial">
+                  <Button className="text-2xl px-12 py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white border-4 border-yellow-400 shadow-2xl hover:shadow-3xl transition-all rounded-xl">
+                    <span className="text-3xl mr-4">🚀</span>
+                    Déploiement Mondial CED HalalTech™
+                    <span className="text-3xl ml-4">🌍</span>
+                  </Button>
+                </Link>
+                <p className="text-sm text-gray-600 mt-2">
+                  Position dominante confirmée • Monopole technologique • Prêt pour expansion mondiale
+                </p>
+              </div>
+              
+              {/* Bouton Charte Écologique */}
+              <div className="text-center">
+                <Link href="/halal-eco-system">
+                  <Button className="text-xl px-10 py-5 bg-gradient-to-r from-green-600 via-emerald-600 to-cyan-600 hover:from-green-700 hover:via-emerald-700 hover:to-cyan-700 text-white border-4 border-green-400 shadow-xl hover:shadow-2xl transition-all rounded-xl">
+                    <span className="text-2xl mr-3">🌍</span>
+                    Charte Écologique Islamique CED
+                    <span className="text-2xl ml-3">🌱</span>
+                  </Button>
+                </Link>
+                <p className="text-sm text-gray-600 mt-2">
+                  6 Piliers écologie islamique • Technologies vertes halal • Fatwas environnementales officielles
+                </p>
+              </div>
             </div>
           </CardContent>
         </Card>
