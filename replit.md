@@ -262,8 +262,8 @@ Preferred communication style: Simple, everyday language.
 - **Succession planifiée**: Héritage à ses filles Souheila Yakoubi-Ozel et Hanaé-Denise Ozel  
 - **Vision multigénérationnelle**: Écosystème transmis de mère en filles puis aux petits-enfants
 - **Rôles spécialisés**: 
-  - Souheila: Secteur SANTÉ + co-direction
-  - Hanaé-Denise: Secteur JURIDIQUE + fiches de paie
+  - Souheila Yakoubi-Ozel: Secteur SANTÉ + co-direction + IA Coaching Halal (propriété exclusive)
+  - Hanaé-Denise Ozel: Jurisprudence Islamique + Finance Islamique + Psychologie Islamique Halal pour Femmes (collaboration avec Souheila)
   - Brahim: Gestion opérationnelle TechForAll + boutique Costa del Sol (sous supervision Yakoubi Yamina)
   - Yakoubi Karim: Logistique européenne (Paris)
   - Yakoubi Aziz: Logistique Suisse (Berne)

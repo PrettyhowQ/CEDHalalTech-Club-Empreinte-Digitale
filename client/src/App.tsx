@@ -244,6 +244,7 @@ import LogosEcosystemeComplet from "@/pages/LogosEcosystemeComplet";
 import SanteSouheilaYakoubi from "@/pages/SanteSouheilaYakoubi";
 import SportsHautNiveau from "@/pages/SportsHautNiveau";
 import IACoachingHalal from "@/pages/IACoachingHalal";
+import JurisprudenceHanaeOzel from "@/pages/JurisprudenceHanaeOzel";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1297,6 +1298,12 @@ function Router() {
       <Route path="/coaching-ia-souheila" component={IACoachingHalal} />
       <Route path="/ia-nutrition-halal" component={IACoachingHalal} />
       <Route path="/assistant-ia-sante" component={IACoachingHalal} />
+      
+      {/* Jurisprudence Islamique - Hanaé-Dénise Ozel */}
+      <Route path="/jurisprudence-hanae-ozel" component={JurisprudenceHanaeOzel} />
+      <Route path="/finance-islamique-hanae" component={JurisprudenceHanaeOzel} />
+      <Route path="/psychologie-islamique-femmes" component={JurisprudenceHanaeOzel} />
+      <Route path="/consultation-juridique-islamique" component={JurisprudenceHanaeOzel} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

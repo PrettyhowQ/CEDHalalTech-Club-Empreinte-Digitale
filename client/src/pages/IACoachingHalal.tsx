@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
-import { Robot, Heart, Target, Brain, Apple, Timer, Users, Star, Trophy, MessageCircle, Mic, Camera } from "lucide-react";
+import { Bot, Heart, Target, Brain, Apple, Timer, Users, Star, Trophy, MessageCircle, Mic, Camera } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -146,7 +146,7 @@ export default function IACoachingHalal() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
-            <Robot className="h-16 w-16 text-purple-600 mr-4" />
+            <Bot className="h-16 w-16 text-purple-600 mr-4" />
             <div>
               <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 IA Coaching Halal
