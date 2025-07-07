@@ -245,6 +245,7 @@ import SanteSouheilaYakoubi from "@/pages/SanteSouheilaYakoubi";
 import SportsHautNiveau from "@/pages/SportsHautNiveau";
 import IACoachingHalal from "@/pages/IACoachingHalal";
 import JurisprudenceHanaeOzel from "@/pages/JurisprudenceHanaeOzel";
+import MalikKetarDeveloppement from "@/pages/MalikKetarDeveloppement";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1304,6 +1305,12 @@ function Router() {
       <Route path="/finance-islamique-hanae" component={JurisprudenceHanaeOzel} />
       <Route path="/psychologie-islamique-femmes" component={JurisprudenceHanaeOzel} />
       <Route path="/consultation-juridique-islamique" component={JurisprudenceHanaeOzel} />
+      
+      {/* Malik Ketar - Développement Web & Coaching Hommes */}
+      <Route path="/malik-ketar-developpement" component={MalikKetarDeveloppement} />
+      <Route path="/developpement-web-halaltech" component={MalikKetarDeveloppement} />
+      <Route path="/ux-ui-design-islamique" component={MalikKetarDeveloppement} />
+      <Route path="/coaching-sportif-hommes" component={MalikKetarDeveloppement} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
