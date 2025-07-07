@@ -239,6 +239,7 @@ import GamificationStyleVieEcologique from "@/pages/GamificationStyleVieEcologiq
 import DefiCarboneCommunautaire from "@/pages/DefiCarboneCommunautaire";
 import TrackerHabitudesEcoFriendly from "@/pages/TrackerHabitudesEcoFriendly";
 import VisualisateurImpactClimatique from "@/pages/VisualisateurImpactClimatique";
+import AlAmanTakafulLogoRedesign from "@/pages/AlAmanTakafulLogoRedesign";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1261,6 +1262,12 @@ function Router() {
       <Route path="/visualisateur-impact-climatique" component={VisualisateurImpactClimatique} />
       <Route path="/climate-impact-visualizer" component={VisualisateurImpactClimatique} />
       <Route path="/impact-climatique-scholars" component={VisualisateurImpactClimatique} />
+
+      {/* Al-Aman Takaful™ Logo Redesign */}
+      <Route path="/al-aman-takaful-logo-redesign" component={AlAmanTakafulLogoRedesign} />
+      <Route path="/logo-takaful-conforme" component={AlAmanTakafulLogoRedesign} />
+      <Route path="/takaful-logo-islamic" component={AlAmanTakafulLogoRedesign} />
+      <Route path="/logo-assurance-islamique" component={AlAmanTakafulLogoRedesign} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

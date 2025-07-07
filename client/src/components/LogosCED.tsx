@@ -147,11 +147,26 @@ const LogosCED: React.FC<LogoCEDProps> = ({
             {/* Bouclier de protection */}
             <path d="M 60 15 L 90 30 L 90 60 Q 90 80 60 95 Q 30 80 30 60 L 30 30 Z" fill="url(#takafulGrad)" stroke={colors.accent} strokeWidth="2"/>
             
-            {/* Croix de protection */}
-            <path d="M 60 35 L 60 75 M 45 55 L 75 55" stroke={colors.accent} strokeWidth="4" strokeLinecap="round"/>
+            {/* Croissant islamique central */}
+            <path d="M 50 35 Q 42 45 42 55 Q 42 65 50 75 Q 58 70 58 55 Q 58 45 50 35 Z" fill={colors.accent} opacity="0.9"/>
             
-            {/* Texte TAKAFUL */}
-            <text x="60" y="95" textAnchor="middle" fill={colors.primary} fontSize="11" fontWeight="bold" fontFamily="Arial, sans-serif">TAKAFUL</text>
+            {/* Étoile à 8 branches (symbole islamique) */}
+            <g transform="translate(72, 55)">
+              <path d="M0,-6 L1.5,-1.5 L6,0 L1.5,1.5 L0,6 L-1.5,1.5 L-6,0 L-1.5,-1.5 Z" fill={colors.accent} opacity="0.9"/>
+            </g>
+            
+            {/* Motifs géométriques de protection */}
+            <circle cx="45" cy="40" r="2" fill={colors.accent} opacity="0.6"/>
+            <circle cx="75" cy="40" r="2" fill={colors.accent} opacity="0.6"/>
+            <circle cx="45" cy="70" r="2" fill={colors.accent} opacity="0.6"/>
+            <circle cx="75" cy="70" r="2" fill={colors.accent} opacity="0.6"/>
+            
+            {/* Calligraphie stylisée "حماية" (Protection) */}
+            <path d="M 40 80 Q 50 75 60 80 Q 70 85 80 80" stroke={colors.accent} strokeWidth="2" fill="none" opacity="0.7"/>
+            
+            {/* Texte AL-AMAN TAKAFUL */}
+            <text x="60" y="90" textAnchor="middle" fill={colors.primary} fontSize="9" fontWeight="bold" fontFamily="Arial, sans-serif">🛡️ AL-AMAN</text>
+            <text x="60" y="100" textAnchor="middle" fill={colors.primary} fontSize="8" fontWeight="bold" fontFamily="Arial, sans-serif">TAKAFUL™</text>
             
             {showCopyright && (
               <text x="60" y="110" textAnchor="middle" fill={colors.primary} fontSize="6" fontFamily="Arial, sans-serif">© Yakoubi Yamina</text>
