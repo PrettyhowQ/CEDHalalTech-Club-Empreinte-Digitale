@@ -234,6 +234,11 @@ import AccessibiliteInclusiveMultilingue from "@/pages/AccessibiliteInclusiveMul
 import ReconnaissanceVocaleIslamique from "@/pages/ReconnaissanceVocaleIslamique";
 import AnalysePredictiveMarcheHalal from "@/pages/AnalysePredictiveMarcheHalal";
 import GestionCommunautaireMusulmane from "@/pages/GestionCommunautaireMusulmane";
+import QuizEducationEnvironnementale from "@/pages/QuizEducationEnvironnementale";
+import GamificationStyleVieEcologique from "@/pages/GamificationStyleVieEcologique";
+import DefiCarboneCommunautaire from "@/pages/DefiCarboneCommunautaire";
+import TrackerHabitudesEcoFriendly from "@/pages/TrackerHabitudesEcoFriendly";
+import VisualisateurImpactClimatique from "@/pages/VisualisateurImpactClimatique";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1235,6 +1240,27 @@ function Router() {
       <Route path="/education-environnement-coran-sunna" component={FormationsEnvironnementHalal} />
       <Route path="/sensibilisation-ecologique-halal" component={FormationsEnvironnementHalal} />
       <Route path="/cours-environnement-4-ecoles" component={FormationsEnvironnementHalal} />
+
+      {/* 5 Modules Éducation Environnementale Interactive Islamique */}
+      <Route path="/quiz-education-environnementale" component={QuizEducationEnvironnementale} />
+      <Route path="/interactive-environmental-quiz" component={QuizEducationEnvironnementale} />
+      <Route path="/quiz-coran-ecologie" component={QuizEducationEnvironnementale} />
+      
+      <Route path="/gamification-style-vie-ecologique" component={GamificationStyleVieEcologique} />
+      <Route path="/sustainable-lifestyle-gamification" component={GamificationStyleVieEcologique} />
+      <Route path="/vie-ecologique-islamique" component={GamificationStyleVieEcologique} />
+      
+      <Route path="/defi-carbone-communautaire" component={DefiCarboneCommunautaire} />
+      <Route path="/community-carbon-challenge" component={DefiCarboneCommunautaire} />
+      <Route path="/challenge-carbone-taawun" component={DefiCarboneCommunautaire} />
+      
+      <Route path="/tracker-habitudes-eco-friendly" component={TrackerHabitudesEcoFriendly} />
+      <Route path="/eco-friendly-habit-tracker" component={TrackerHabitudesEcoFriendly} />
+      <Route path="/suivi-habitudes-vertes" component={TrackerHabitudesEcoFriendly} />
+      
+      <Route path="/visualisateur-impact-climatique" component={VisualisateurImpactClimatique} />
+      <Route path="/climate-impact-visualizer" component={VisualisateurImpactClimatique} />
+      <Route path="/impact-climatique-scholars" component={VisualisateurImpactClimatique} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
