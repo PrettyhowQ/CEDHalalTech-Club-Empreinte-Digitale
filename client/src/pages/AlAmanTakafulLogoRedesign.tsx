@@ -42,7 +42,7 @@ export default function AlAmanTakafulLogoRedesign() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Logo d'assurance islamique redessiné selon les principes de conformité Sharia - 
-            Suppression de la croix et intégration de symboles islamiques authentiques
+            Intégration de symboles islamiques authentiques et éléments de protection
           </p>
           <Badge variant="outline" className="bg-emerald-100 text-emerald-700 border-emerald-300">
             ✅ 100% Conforme aux Valeurs Islamiques
@@ -60,22 +60,22 @@ export default function AlAmanTakafulLogoRedesign() {
                 Ancien Logo (Non-Conforme)
               </CardTitle>
               <CardDescription>
-                Logo avec croix - Non recommandé selon la majorité des avis religieux
+                Logo précédent avec éléments remplacés par des symboles islamiques
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center space-y-4">
               <div className="bg-white p-6 rounded-lg border-2 border-red-200">
                 <div className="text-6xl mb-4">❌</div>
                 <p className="text-red-600 font-semibold">Croix médicale présente</p>
-                <p className="text-sm text-red-500">Symbole non approprié pour assurance islamique</p>
+                <p className="text-sm text-red-500">Symbole remplacé par des alternatives conformes</p>
               </div>
               
               <div className="space-y-2">
-                <h4 className="font-semibold text-red-700">Problèmes identifiés :</h4>
+                <h4 className="font-semibold text-red-700">Améliorations apportées :</h4>
                 <ul className="text-sm text-red-600 space-y-1 text-left">
-                  <li>• Croix associée au christianisme</li>
-                  <li>• Non conforme aux sensibilités musulmanes</li>
-                  <li>• Contradictoire avec identité Takaful</li>
+                  <li>• Nouveau design plus adapté</li>
+                  <li>• Symboles islamiques intégrés</li>
+                  <li>• Identité Takaful renforcée</li>
                 </ul>
               </div>
             </CardContent>
