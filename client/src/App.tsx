@@ -228,6 +228,7 @@ import ContextualHelpTooltips from "@/components/ContextualHelpTooltips";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
 import FormationsEnvironnementHalal from "@/pages/FormationsEnvironnementHalal";
 import WebTVHalal from "@/pages/WebTVHalal";
+import LogosOfficielsCED from "@/pages/LogosOfficielsCED";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
 import AccessibiliteInclusiveMultilingue from "@/pages/AccessibiliteInclusiveMultilingue";
 import ReconnaissanceVocaleIslamique from "@/pages/ReconnaissanceVocaleIslamique";
@@ -820,6 +821,13 @@ function Router() {
       <Route path="/television-halal" component={WebTVHalal} />
       <Route path="/tv-islamique" component={WebTVHalal} />
       <Route path="/diffusion-halal" component={WebTVHalal} />
+      
+      {/* Logos Officiels CED */}
+      <Route path="/logos-officiels-ced" component={LogosOfficielsCED} />
+      <Route path="/logos-ced" component={LogosOfficielsCED} />
+      <Route path="/logos-copyright" component={LogosOfficielsCED} />
+      <Route path="/logos-halaltech" component={LogosOfficielsCED} />
+      <Route path="/identity-ced" component={LogosOfficielsCED} />
       
       <Route path="/halaltech-website" component={HalalTechWebsite} />
       <Route path="/halaltech" component={HalalTechWebsite} />

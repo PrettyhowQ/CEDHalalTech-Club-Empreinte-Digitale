@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'wouter';
 import ProtectionFooter from '@/components/ProtectionFooter';
+import LogosCED from '@/components/LogosCED';
 import { 
   Globe, 
   Building, 
@@ -93,28 +94,30 @@ export default function CedVoieHalalHome() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-blue-50 to-purple-50">
       
       {/* Header Réseau Économique */}
-      <div className="bg-gradient-to-r from-emerald-800 to-blue-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="bg-gradient-to-r from-emerald-800 to-blue-800 text-white py-8 sm:py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Heart className="h-12 w-12 text-yellow-400" />
-              <h1 className="text-5xl font-bold">Réseau Économique 100% Halal</h1>
-              <Heart className="h-12 w-12 text-yellow-400" />
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
+              <Heart className="h-8 w-8 sm:h-10 w-10 lg:h-12 w-12 text-yellow-400" />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                Réseau Économique 100% Halal
+              </h1>
+              <Heart className="h-8 w-8 sm:h-10 w-10 lg:h-12 w-12 text-yellow-400" />
             </div>
-            <p className="text-2xl text-emerald-100 mb-4 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-emerald-100 mb-3 sm:mb-4 leading-relaxed max-w-4xl mx-auto px-2">
               "Un réseau économique 100% halal, pensé pour les cœurs sincères qui veulent entreprendre avec foi, éthique et excellence."
             </p>
-            <p className="text-lg text-blue-100 mb-2">
+            <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-2 px-2">
               Club Empreinte Digitale - CED Voie du HALAL | Écosystème Éthique & Prospère
             </p>
-            <div className="flex items-center justify-center gap-4 text-sm">
-              <Badge className="bg-yellow-500 text-yellow-900">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm flex-wrap">
+              <Badge className="bg-yellow-500 text-yellow-900 px-2 py-1">
                 Dirigeante: Yakoubi Yamina
               </Badge>
-              <Badge className="bg-green-500 text-green-900">
+              <Badge className="bg-green-500 text-green-900 px-2 py-1">
                 Pionnière Francophone
               </Badge>
-              <Badge className="bg-blue-500 text-blue-900">
+              <Badge className="bg-blue-500 text-blue-900 px-2 py-1">
                 100% Conforme Sharia
               </Badge>
             </div>
@@ -123,16 +126,17 @@ export default function CedVoieHalalHome() {
       </div>
 
       {/* BOUTON CHARTE ÉCOLOGIQUE - IMMÉDIATEMENT VISIBLE */}
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 py-6">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 py-4 sm:py-6 lg:py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link href="/halal-eco-system">
-            <Button className="text-2xl px-16 py-8 bg-white hover:bg-gray-100 text-green-700 font-bold border-4 border-yellow-400 shadow-2xl hover:shadow-3xl transition-all rounded-2xl">
-              <span className="text-4xl mr-4">🌍</span>
-              CHARTE ÉCOLOGIQUE ISLAMIQUE CED
-              <span className="text-4xl ml-4">🌱</span>
+            <Button className="text-base sm:text-lg md:text-xl lg:text-2xl px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 bg-white hover:bg-gray-100 text-green-700 font-bold border-2 sm:border-4 border-yellow-400 shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all rounded-xl sm:rounded-2xl w-full sm:w-auto">
+              <span className="text-2xl sm:text-3xl lg:text-4xl mr-2 sm:mr-4">🌍</span>
+              <span className="hidden sm:inline">CHARTE ÉCOLOGIQUE ISLAMIQUE CED</span>
+              <span className="sm:hidden">CHARTE ÉCOLOGIQUE CED</span>
+              <span className="text-2xl sm:text-3xl lg:text-4xl ml-2 sm:ml-4">🌱</span>
             </Button>
           </Link>
-          <p className="text-white text-lg mt-3 font-semibold">
+          <p className="text-white text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 font-semibold px-2">
             6 Piliers écologie islamique • 8 Technologies vertes halal • Fatwas environnementales officielles
           </p>
         </div>
@@ -230,6 +234,14 @@ export default function CedVoieHalalHome() {
                   <span className="text-2xl mr-3">🌱</span>
                   Formations Environnement Halal - Coran & Science
                   <span className="text-2xl ml-3">📚</span>
+                </Button>
+              </Link>
+              
+              <Link href="/logos-officiels-ced">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🛡️</span>
+                  Logos Officiels CED - Copyright Intégré
+                  <span className="text-2xl ml-3">©️</span>
                 </Button>
               </Link>
             </div>
@@ -732,6 +744,94 @@ export default function CedVoieHalalHome() {
                   6 Piliers écologie islamique • Technologies vertes halal • Fatwas environnementales officielles
                 </p>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Section Logos Officiels CED avec Copyright Intégré */}
+        <Card className="mb-8 border-purple-500 border-2 shadow-2xl">
+          <CardHeader className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+            <CardTitle className="text-2xl text-center flex items-center justify-center gap-3">
+              <span className="text-3xl">🛡️</span>
+              Logos Officiels CED HalalTech™ - Copyright Intégré
+              <span className="text-3xl">©️</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <div className="mb-6 p-4 bg-red-100 border border-red-300 rounded-lg">
+              <p className="text-red-800 font-semibold text-center">
+                ⚖️ Tous les logos incluent automatiquement le copyright © Yakoubi Yamina
+              </p>
+              <p className="text-red-700 text-sm text-center mt-1">
+                Usage exclusivement réservé à l'écosystème CED • Reproduction interdite sans autorisation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-6">
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="primary" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-purple-700">Logo Principal CED</p>
+                <p className="text-xs text-gray-600">Croissant & Étoile Islamique</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="bank" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-blue-700">CED Bank</p>
+                <p className="text-xs text-gray-600">Services Bancaires Halal</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="academy" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-purple-700">CED Academy</p>
+                <p className="text-xs text-gray-600">Formations Islamiques</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="takaful" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-green-700">Al-Aman Takaful</p>
+                <p className="text-xs text-gray-600">Assurance Islamique</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="halaltech" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-emerald-700">HalalTech™</p>
+                <p className="text-xs text-gray-600">Innovation Tech Halal</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white p-4 rounded-lg border shadow-md mb-2">
+                  <LogosCED variant="eco" size="medium" showCopyright={true} />
+                </div>
+                <p className="text-sm font-semibold text-green-700">Eco Halal</p>
+                <p className="text-xs text-gray-600">Écologie Islamique</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link href="/logos-officiels-ced">
+                <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-3 text-lg">
+                  <span className="mr-2">🖼️</span>
+                  Voir Tous les Logos & Télécharger SVG
+                  <span className="ml-2">📥</span>
+                </Button>
+              </Link>
+            </div>
+
+            <div className="mt-4 p-3 bg-yellow-100 border border-yellow-300 rounded-lg">
+              <p className="text-yellow-800 text-sm text-center">
+                <strong>Format SVG Vectoriel</strong> • Qualité optimale toutes tailles • 
+                <strong>Copyright automatiquement intégré</strong> • Conformité RGPD/LPD 🇨🇭
+              </p>
             </div>
           </CardContent>
         </Card>
