@@ -226,6 +226,7 @@ import AccessibilityModeIslamic from "@/components/AccessibilityModeIslamic";
 import IslamicMicroInteractions from "@/components/IslamicMicroInteractions";
 import ContextualHelpTooltips from "@/components/ContextualHelpTooltips";
 import GarageHalalNetwork from "@/pages/GarageHalalNetwork";
+import FormationsEnvironnementHalal from "@/pages/FormationsEnvironnementHalal";
 import WebTVHalal from "@/pages/WebTVHalal";
 import TendancesTechHalalTempsReel from "@/pages/TendancesTechHalalTempsReel";
 import AccessibiliteInclusiveMultilingue from "@/pages/AccessibiliteInclusiveMultilingue";
@@ -1219,6 +1220,13 @@ function Router() {
       <Route path="/mode-accessibilite-islamique" component={AccessibilityModeIslamic} />
       <Route path="/micro-interactions-islamiques" component={IslamicMicroInteractions} />
       <Route path="/aide-contextuelle-culturelle" component={ContextualHelpTooltips} />
+
+      {/* Formations Environnement Halal */}
+      <Route path="/formations-environnement-halal" component={FormationsEnvironnementHalal} />
+      <Route path="/formations-ecologie-islamique" component={FormationsEnvironnementHalal} />
+      <Route path="/education-environnement-coran-sunna" component={FormationsEnvironnementHalal} />
+      <Route path="/sensibilisation-ecologique-halal" component={FormationsEnvironnementHalal} />
+      <Route path="/cours-environnement-4-ecoles" component={FormationsEnvironnementHalal} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

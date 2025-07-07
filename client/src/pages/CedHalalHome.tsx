@@ -224,6 +224,14 @@ export default function CedVoieHalalHome() {
                   <span className="text-2xl ml-3">🔴</span>
                 </Button>
               </Link>
+              
+              <Link href="/formations-environnement-halal">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🌱</span>
+                  Formations Environnement Halal - Coran & Science
+                  <span className="text-2xl ml-3">📚</span>
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>
