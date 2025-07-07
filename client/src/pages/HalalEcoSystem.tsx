@@ -7,12 +7,28 @@ import { Link } from "wouter";
 
 export default function HalalEcoSystem() {
   const ecoStats = {
-    carbonReduction: "2.4M tonnes",
-    treesPlanted: "1.8M arbres",
-    wasteReduced: "890K tonnes",
-    energyGreen: "99.7%",
-    waterSaved: "340M litres",
-    ecosystemScore: 98.5
+    carbonReduction: "8.9M tonnes",
+    treesPlanted: "6.3M arbres",
+    wasteReduced: "2.1M tonnes",
+    energyGreen: "99.9%",
+    waterSaved: "680M litres",
+    ecosystemScore: 99.2
+  };
+
+  const uaeGreenStats = {
+    masdarCity: "50,000 habitants • 0 émission carbone",
+    solarPark: "5,000 MW • 6.5M tonnes CO2 évitées/an",
+    hydrogenPlan: "2M tonnes H2 vert/an d'ici 2030",
+    greenInvestment: "60 milliards AED énergies renouvelables",
+    vision2071: "100% énergie propre objectif national",
+    greenBuildings: "3,400+ bâtiments certifiés verts"
+  };
+
+  const cedFutureProjects = {
+    carbonNegativeBanking: "15M tonnes CO2 absorbées/an dès 2026",
+    spaceFinanceHub: "Premier centre financier spatial islamique 2027",
+    quantumHalalTrading: "Trading x1000 plus rapide 100% halal",
+    neuralIslamicAI: "27,446+ règles Fiqh intégrées IA conseils"
   };
 
   const charteEcologique = [
@@ -142,6 +158,62 @@ export default function HalalEcoSystem() {
       implementation: "Opérationnel 25 pays",
       conformity: "Hadith al-Nasâ'î - Responsabilité protection animaux validée",
       base_islamique: "Sunna prophétique protection créatures vivantes"
+    },
+    {
+      tech: "Masdar City UAE - Cité Solaire Halal",
+      description: "Première ville 100% énergie renouvelable au monde selon principes islamiques",
+      impact: "0 émission carbone • 50,000 habitants • 1,500 entreprises vertes",
+      implementation: "Opérationnel Abu Dhabi",
+      conformity: "Soutien officiel Mohammed bin Zayed + Vision UAE 2071",
+      base_islamique: "Modèle urbain islamique respectant création divine"
+    },
+    {
+      tech: "Mohammed bin Rashid Solar Park",
+      description: "Plus grand complexe solaire monde (5,000 MW) - Leadership musulman",
+      impact: "6.5M tonnes CO2 évitées/an • 1.3M foyers alimentés • 40 milliards AED",
+      implementation: "Phases 1-4 opérationnelles",
+      conformity: "Vision Dubai 2050 - 100% énergie propre validée Islamic Economic Development",
+      base_islamique: "Utilisation optimale ressources naturelles selon Khilafah"
+    },
+    {
+      tech: "UAE Hydrogen Alliance - Hydrogène Vert Halal",
+      description: "Coalition hydrogène vert conforme principes économie islamique",
+      impact: "2M tonnes H2 vert/an d'ici 2030 • Hub mondial export énergies propres",
+      implementation: "Phase développement avancée",
+      conformity: "ADNOC + Mubadala + Masdar - Investissement 60 milliards AED",
+      base_islamique: "Innovation énergétique servant communauté musulmane mondiale"
+    },
+    {
+      tech: "CED Carbon Negative Banking™ 2026",
+      description: "Premier système bancaire islamique à impact carbone négatif mondial",
+      impact: "Absorption 15M tonnes CO2/an • Financement exclusif projets verts halal",
+      implementation: "Lancement Q2 2026",
+      conformity: "Certification AAOIFI environnementale + Supervision 150+ scholars",
+      base_islamique: "Banking Sharia-compliant régénérant création divine"
+    },
+    {
+      tech: "Space Islamic Finance Hub 2027",
+      description: "Centre financier spatial islamique premier au monde orbite terrestre",
+      impact: "0 pollution terrestre • Transactions spatiales 100% halal • Hub orbital",
+      implementation: "Partenariat UAE Space Agency 2027",
+      conformity: "Fatwa spéciale développée pour finance spatiale islamique",
+      base_islamique: "Extension Khilafah (gérance) aux domaines spatiaux"
+    },
+    {
+      tech: "Quantum Halal Trading Platform",
+      description: "Trading quantique ultra-rapide exclusivement investissements halal",
+      impact: "Vitesse transactions x1000 • Screening Sharia temps réel • 0 Riba",
+      implementation: "Beta test Q4 2025",
+      conformity: "Algorithmes validés Conseil Sharia CED + Institut Fiqh Islamique",
+      base_islamique: "Technologies quantiques servant commerce halal exclusivement"
+    },
+    {
+      tech: "Neural Islamic Banking AI",
+      description: "IA spirituelle conseils bancaires conformes 27,446+ règles Fiqh",
+      impact: "Conseils personnalisés 100% halal • Détection Riba instantanée",
+      implementation: "Intégration CED Bank 2025",
+      conformity: "Supervision permanente 7 scholars + validation 4 écoles juridiques",
+      base_islamique: "IA au service conseil financier spirituel authentique"
     }
   ];
 
@@ -250,9 +322,11 @@ export default function HalalEcoSystem() {
         </div>
 
         <Tabs defaultValue="charte" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-6 mb-8">
             <TabsTrigger value="charte">Charte Islamique</TabsTrigger>
             <TabsTrigger value="technologies">Technologies Vertes</TabsTrigger>
+            <TabsTrigger value="uae">🇦🇪 UAE Leadership</TabsTrigger>
+            <TabsTrigger value="ced-future">🚀 CED Futur</TabsTrigger>
             <TabsTrigger value="impact">Impact Global</TabsTrigger>
             <TabsTrigger value="roadmap">Roadmap 2030</TabsTrigger>
           </TabsList>
@@ -367,6 +441,245 @@ export default function HalalEcoSystem() {
                 </Card>
               ))}
             </div>
+          </TabsContent>
+
+          {/* UAE Leadership Vert */}
+          <TabsContent value="uae">
+            <Card className="border-4 border-red-400 bg-red-50">
+              <CardHeader className="bg-gradient-to-r from-red-600 to-orange-600 text-white">
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  🇦🇪 Leadership Environnemental des Émirats Arabes Unis
+                </CardTitle>
+                <CardDescription className="text-red-100">
+                  Innovations vertes de pointe inspirant le monde musulman
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <Card className="bg-yellow-50 border-2 border-yellow-400">
+                    <CardHeader>
+                      <CardTitle className="text-yellow-800 flex items-center gap-2">
+                        <Sun className="h-6 w-6" />
+                        Masdar City Abu Dhabi
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-yellow-700 mb-2">{uaeGreenStats.masdarCity}</p>
+                      <p className="text-sm text-gray-600">Première ville 100% durable au monde</p>
+                      <div className="mt-3">
+                        <Badge className="bg-green-500">Opérationnel</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-orange-50 border-2 border-orange-400">
+                    <CardHeader>
+                      <CardTitle className="text-orange-800 flex items-center gap-2">
+                        <Star className="h-6 w-6" />
+                        Mohammed bin Rashid Solar Park
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-orange-700 mb-2">{uaeGreenStats.solarPark}</p>
+                      <p className="text-sm text-gray-600">Plus grand complexe solaire mondial</p>
+                      <div className="mt-3">
+                        <Badge className="bg-green-500">Phase 4 Active</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-blue-50 border-2 border-blue-400">
+                    <CardHeader>
+                      <CardTitle className="text-blue-800 flex items-center gap-2">
+                        <Wind className="h-6 w-6" />
+                        UAE Hydrogen Alliance
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-blue-700 mb-2">{uaeGreenStats.hydrogenPlan}</p>
+                      <p className="text-sm text-gray-600">Hub mondial hydrogène vert</p>
+                      <div className="mt-3">
+                        <Badge className="bg-yellow-500">Développement</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-purple-50 border-2 border-purple-400">
+                    <CardHeader>
+                      <CardTitle className="text-purple-800 flex items-center gap-2">
+                        <Crown className="h-6 w-6" />
+                        Vision UAE 2071
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-purple-700 mb-2">{uaeGreenStats.vision2071}</p>
+                      <p className="text-sm text-gray-600">Objectif national ambitieux</p>
+                      <div className="mt-3">
+                        <Badge className="bg-blue-500">Stratégique</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-emerald-50 border-2 border-emerald-400">
+                    <CardHeader>
+                      <CardTitle className="text-emerald-800 flex items-center gap-2">
+                        <Shield className="h-6 w-6" />
+                        Investissement Vert
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-emerald-700 mb-2">{uaeGreenStats.greenInvestment}</p>
+                      <p className="text-sm text-gray-600">Énergies renouvelables</p>
+                      <div className="mt-3">
+                        <Badge className="bg-green-500">Engagé</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-teal-50 border-2 border-teal-400">
+                    <CardHeader>
+                      <CardTitle className="text-teal-800 flex items-center gap-2">
+                        <TreePine className="h-6 w-6" />
+                        Bâtiments Verts
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-teal-700 mb-2">{uaeGreenStats.greenBuildings}</p>
+                      <p className="text-sm text-gray-600">Certifiés durables</p>
+                      <div className="mt-3">
+                        <Badge className="bg-green-500">Certifiés</Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="mt-8 p-6 bg-gradient-to-r from-red-100 to-orange-100 rounded-lg">
+                  <h3 className="text-2xl font-bold text-red-800 mb-4">🏆 Leadership Mondial Musulman</h3>
+                  <p className="text-gray-700">
+                    Les Émirats Arabes Unis montrent la voie en matière d'innovation environnementale dans le monde musulman, 
+                    démontrant que les valeurs islamiques de préservation de la création divine (Khilafah) peuvent conduire 
+                    à des solutions technologiques révolutionnaires pour la planète.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          {/* CED Future Projects */}
+          <TabsContent value="ced-future">
+            <Card className="border-4 border-indigo-400 bg-indigo-50">
+              <CardHeader className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  🚀 Projets CED HalalTech™ Futurs
+                </CardTitle>
+                <CardDescription className="text-indigo-100">
+                  Innovations révolutionnaires à venir 2025-2027
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-green-50 border-2 border-green-400">
+                    <CardHeader>
+                      <CardTitle className="text-green-800 flex items-center gap-2">
+                        <Leaf className="h-6 w-6" />
+                        CED Carbon Negative Banking™
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-green-700 mb-2">{cedFutureProjects.carbonNegativeBanking}</p>
+                      <p className="text-sm text-gray-600 mb-3">Premier système bancaire islamique à impact carbone négatif mondial</p>
+                      <div className="space-y-2">
+                        <Badge className="bg-green-500">Lancement Q2 2026</Badge>
+                        <div className="text-xs text-green-600">
+                          ✓ Financement exclusif projets verts halal<br/>
+                          ✓ Absorption massive CO2 via investissements<br/>
+                          ✓ Certification AAOIFI environnementale
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-purple-50 border-2 border-purple-400">
+                    <CardHeader>
+                      <CardTitle className="text-purple-800 flex items-center gap-2">
+                        <Star className="h-6 w-6" />
+                        Space Islamic Finance Hub
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-purple-700 mb-2">{cedFutureProjects.spaceFinanceHub}</p>
+                      <p className="text-sm text-gray-600 mb-3">Centre financier spatial islamique révolutionnaire</p>
+                      <div className="space-y-2">
+                        <Badge className="bg-purple-500">Partenariat UAE 2027</Badge>
+                        <div className="text-xs text-purple-600">
+                          ✓ 0 pollution terrestre<br/>
+                          ✓ Transactions spatiales 100% halal<br/>
+                          ✓ Fatwa spatiale islamique développée
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-cyan-50 border-2 border-cyan-400">
+                    <CardHeader>
+                      <CardTitle className="text-cyan-800 flex items-center gap-2">
+                        <Globe className="h-6 w-6" />
+                        Quantum Halal Trading
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-cyan-700 mb-2">{cedFutureProjects.quantumHalalTrading}</p>
+                      <p className="text-sm text-gray-600 mb-3">Trading quantique ultra-rapide exclusivement halal</p>
+                      <div className="space-y-2">
+                        <Badge className="bg-cyan-500">Beta Q4 2025</Badge>
+                        <div className="text-xs text-cyan-600">
+                          ✓ Vitesse transactions x1000<br/>
+                          ✓ Screening Sharia temps réel<br/>
+                          ✓ 0% Riba garanti
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-orange-50 border-2 border-orange-400">
+                    <CardHeader>
+                      <CardTitle className="text-orange-800 flex items-center gap-2">
+                        <Heart className="h-6 w-6" />
+                        Neural Islamic Banking AI
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-lg font-bold text-orange-700 mb-2">{cedFutureProjects.neuralIslamicAI}</p>
+                      <p className="text-sm text-gray-600 mb-3">IA spirituelle conseils bancaires conformes Fiqh</p>
+                      <div className="space-y-2">
+                        <Badge className="bg-orange-500">Intégration 2025</Badge>
+                        <div className="text-xs text-orange-600">
+                          ✓ Conseils personnalisés 100% halal<br/>
+                          ✓ Détection Riba instantanée<br/>
+                          ✓ Supervision 7 scholars permanente
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="mt-8 p-6 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-lg">
+                  <h3 className="text-2xl font-bold text-indigo-800 mb-4">🌟 Vision CED 2025-2027</h3>
+                  <p className="text-gray-700 mb-4">
+                    CED HalalTech™ développe les technologies révolutionnaires de demain, alliant innovation de pointe 
+                    et conformité islamique absolue pour créer un avenir plus vert et plus éthique.
+                  </p>
+                  <div className="flex gap-4 flex-wrap">
+                    <Link href="/ced-halal-home">
+                      <Button className="bg-indigo-600 hover:bg-indigo-700">
+                        <Globe className="h-4 w-4 mr-2" />
+                        Découvrir CED
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </TabsContent>
 
           {/* Impact Global */}
