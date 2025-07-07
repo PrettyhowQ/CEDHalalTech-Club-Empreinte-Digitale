@@ -241,6 +241,8 @@ import TrackerHabitudesEcoFriendly from "@/pages/TrackerHabitudesEcoFriendly";
 import VisualisateurImpactClimatique from "@/pages/VisualisateurImpactClimatique";
 import AlAmanTakafulLogoRedesign from "@/pages/AlAmanTakafulLogoRedesign";
 import LogosEcosystemeComplet from "@/pages/LogosEcosystemeComplet";
+import SanteSouheilaYakoubi from "@/pages/SanteSouheilaYakoubi";
+import SportsHautNiveau from "@/pages/SportsHautNiveau";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1273,6 +1275,21 @@ function Router() {
       <Route path="/logo-takaful-conforme" component={AlAmanTakafulLogoRedesign} />
       <Route path="/takaful-logo-islamic" component={AlAmanTakafulLogoRedesign} />
       <Route path="/logo-assurance-islamique" component={AlAmanTakafulLogoRedesign} />
+      
+      {/* Section Santé Souheila-iness Yakoubi-Ozel */}
+      <Route path="/sante-souheila-yakoubi" component={SanteSouheilaYakoubi} />
+      <Route path="/espace-sante-souheila" component={SanteSouheilaYakoubi} />
+      <Route path="/souheila-yakoubi-ozel-sante" component={SanteSouheilaYakoubi} />
+      <Route path="/dietetique-islamique" component={SanteSouheilaYakoubi} />
+      <Route path="/medecine-prophetique" component={SanteSouheilaYakoubi} />
+      <Route path="/sante-naturelle-halal" component={SanteSouheilaYakoubi} />
+      
+      {/* Sports de Haut Niveau */}
+      <Route path="/sports-haut-niveau" component={SportsHautNiveau} />
+      <Route path="/sports-etudes-ced" component={SportsHautNiveau} />
+      <Route path="/nutrition-sportive-halal" component={SportsHautNiveau} />
+      <Route path="/programmes-elite-sport" component={SportsHautNiveau} />
+      <Route path="/sport-olympique-halal" component={SportsHautNiveau} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

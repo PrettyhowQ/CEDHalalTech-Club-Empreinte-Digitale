@@ -260,6 +260,22 @@ export default function CedVoieHalalHome() {
                   <span className="text-2xl ml-3">🎨</span>
                 </Button>
               </Link>
+              
+              <Link href="/sante-souheila-yakoubi">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🌿</span>
+                  Espace Santé Souheila-iness Yakoubi-Ozel
+                  <span className="text-2xl ml-3">💚</span>
+                </Button>
+              </Link>
+              
+              <Link href="/sports-haut-niveau">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🏆</span>
+                  Sports de Haut Niveau & Sport-Études
+                  <span className="text-2xl ml-3">⚽</span>
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>
