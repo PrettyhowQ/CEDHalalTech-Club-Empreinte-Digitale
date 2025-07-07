@@ -252,6 +252,14 @@ export default function CedVoieHalalHome() {
                   <span className="text-2xl ml-3">✅</span>
                 </Button>
               </Link>
+              
+              <Link href="/logos-ecosysteme-complet">
+                <Button className="text-xl px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-3 border-yellow-400 shadow-lg hover:shadow-xl transition-all">
+                  <span className="text-2xl mr-3">🏢</span>
+                  Collection Logos Écosystème Complet
+                  <span className="text-2xl ml-3">🎨</span>
+                </Button>
+              </Link>
             </div>
           </CardContent>
         </Card>

@@ -240,6 +240,7 @@ import DefiCarboneCommunautaire from "@/pages/DefiCarboneCommunautaire";
 import TrackerHabitudesEcoFriendly from "@/pages/TrackerHabitudesEcoFriendly";
 import VisualisateurImpactClimatique from "@/pages/VisualisateurImpactClimatique";
 import AlAmanTakafulLogoRedesign from "@/pages/AlAmanTakafulLogoRedesign";
+import LogosEcosystemeComplet from "@/pages/LogosEcosystemeComplet";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1265,6 +1266,10 @@ function Router() {
 
       {/* Al-Aman Takaful™ Logo Redesign */}
       <Route path="/al-aman-takaful-logo-redesign" component={AlAmanTakafulLogoRedesign} />
+      <Route path="/logos-ecosysteme-complet" component={LogosEcosystemeComplet} />
+      <Route path="/logos-ecosysteme-ced" component={LogosEcosystemeComplet} />
+      <Route path="/logos-redesignes" component={LogosEcosystemeComplet} />
+      <Route path="/nouveaux-logos-ced" component={LogosEcosystemeComplet} />
       <Route path="/logo-takaful-conforme" component={AlAmanTakafulLogoRedesign} />
       <Route path="/takaful-logo-islamic" component={AlAmanTakafulLogoRedesign} />
       <Route path="/logo-assurance-islamique" component={AlAmanTakafulLogoRedesign} />
