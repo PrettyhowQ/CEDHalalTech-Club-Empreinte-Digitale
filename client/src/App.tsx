@@ -157,6 +157,16 @@ import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import IARPVocalTest from "@/pages/IARPVocalTest";
 import ProtectionLicenceCED from "@/pages/ProtectionLicenceCED";
 import TestComplet55ModulesCED from "@/pages/TestComplet55ModulesCED";
+import InteractiveHalalJourneyTracker from "@/pages/InteractiveHalalJourneyTracker";
+import SpiritualWellnessGamification from "@/pages/SpiritualWellnessGamification";
+import CommunityImpactVisualizationDashboard from "@/pages/CommunityImpactVisualizationDashboard";
+import MultilingualAIMentorGuidance from "@/pages/MultilingualAIMentorGuidance";
+import EcoFriendlyLifestyleChallengeGenerator from "@/pages/EcoFriendlyLifestyleChallengeGenerator";
+import AnimatedWellnessProgressSparkle from "@/pages/AnimatedWellnessProgressSparkle";
+import InclusiveEmojiMoodTracker from "@/pages/InclusiveEmojiMoodTracker";
+import MicroRewardsGamificationSystem from "@/pages/MicroRewardsGamificationSystem";
+import InteractiveCulturalLearningTooltips from "@/pages/InteractiveCulturalLearningTooltips";
+import AccessibilityVoiceNavigationFeature from "@/pages/AccessibilityVoiceNavigationFeature";
 import ContactScholars from "@/pages/ContactScholars";
 import Modules52CED from "@/pages/Modules52CED";
 import CharteSupervisionSavante from "@/pages/CharteSupervisionSavante";
@@ -537,6 +547,47 @@ function Router() {
       <Route path="/tajwid-courses" component={PremiumArabicSchoolPage} />
       <Route path="/recitateurs" component={PremiumArabicSchoolPage} />
       
+      {/* 10 Nouvelles Fonctionnalités Révolutionnaires CED HalalTech™ */}
+      <Route path="/interactive-halal-journey-tracker" component={InteractiveHalalJourneyTracker} />
+      <Route path="/journey-tracker" component={InteractiveHalalJourneyTracker} />
+      <Route path="/parcours-halal-interactif" component={InteractiveHalalJourneyTracker} />
+      
+      <Route path="/spiritual-wellness-gamification" component={SpiritualWellnessGamification} />
+      <Route path="/wellness-gamification" component={SpiritualWellnessGamification} />
+      <Route path="/gamification-spirituelle" component={SpiritualWellnessGamification} />
+      
+      <Route path="/community-impact-dashboard" component={CommunityImpactVisualizationDashboard} />
+      <Route path="/impact-communautaire" component={CommunityImpactVisualizationDashboard} />
+      <Route path="/visualisation-impact" component={CommunityImpactVisualizationDashboard} />
+      
+      <Route path="/multilingual-ai-mentor" component={MultilingualAIMentorGuidance} />
+      <Route path="/mentor-ia-multilingue" component={MultilingualAIMentorGuidance} />
+      <Route path="/ai-mentor-guidance" component={MultilingualAIMentorGuidance} />
+      
+      <Route path="/eco-friendly-challenges" component={EcoFriendlyLifestyleChallengeGenerator} />
+      <Route path="/defis-ecologiques-halal" component={EcoFriendlyLifestyleChallengeGenerator} />
+      <Route path="/challenges-environnementaux" component={EcoFriendlyLifestyleChallengeGenerator} />
+      
+      <Route path="/animated-wellness-progress" component={AnimatedWellnessProgressSparkle} />
+      <Route path="/progres-bien-etre-anime" component={AnimatedWellnessProgressSparkle} />
+      <Route path="/wellness-sparkle-effect" component={AnimatedWellnessProgressSparkle} />
+      
+      <Route path="/emoji-mood-tracker" component={InclusiveEmojiMoodTracker} />
+      <Route path="/humeur-emoji-inclusif" component={InclusiveEmojiMoodTracker} />
+      <Route path="/mood-tracker-inclusif" component={InclusiveEmojiMoodTracker} />
+      
+      <Route path="/micro-rewards-system" component={MicroRewardsGamificationSystem} />
+      <Route path="/systeme-micro-recompenses" component={MicroRewardsGamificationSystem} />
+      <Route path="/recompenses-gamification" component={MicroRewardsGamificationSystem} />
+      
+      <Route path="/cultural-learning-tooltips" component={InteractiveCulturalLearningTooltips} />
+      <Route path="/apprentissage-culturel-interactif" component={InteractiveCulturalLearningTooltips} />
+      <Route path="/tooltips-culturels" component={InteractiveCulturalLearningTooltips} />
+      
+      <Route path="/voice-navigation-accessibility" component={AccessibilityVoiceNavigationFeature} />
+      <Route path="/navigation-vocale-accessible" component={AccessibilityVoiceNavigationFeature} />
+      <Route path="/accessibilite-navigation-vocale" component={AccessibilityVoiceNavigationFeature} />
+
       {/* Diagnostic système */}
       <Route path="/diagnostic-systeme" component={SystemDiagnosticsPage} />
       <Route path="/system-diagnostics" component={SystemDiagnosticsPage} />

@@ -633,6 +633,222 @@ export default function CedHalalHome() {
                   </Button>
                 </Link>
               </div>
+              
+              {/* Section Nouvelles Fonctionnalités Révolutionnaires 2025 */}
+              <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg border-2 border-purple-200">
+                <h3 className="text-2xl font-bold text-purple-800 mb-4 text-center">
+                  ✨ 10 Fonctionnalités Révolutionnaires 2025
+                </h3>
+                <p className="text-center text-gray-600 mb-6">
+                  Technologies spirituelles et communautaires de pointe 100% halal
+                </p>
+                
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                  <Link href="/interactive-halal-journey-tracker">
+                    <Button className="text-xs px-3 py-3 bg-emerald-500 hover:bg-emerald-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🌟</span>
+                      <span className="text-center leading-tight">Journey Tracker</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/spiritual-wellness-gamification">
+                    <Button className="text-xs px-3 py-3 bg-purple-500 hover:bg-purple-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🎮</span>
+                      <span className="text-center leading-tight">Wellness Gaming</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/community-impact-dashboard">
+                    <Button className="text-xs px-3 py-3 bg-blue-500 hover:bg-blue-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">📊</span>
+                      <span className="text-center leading-tight">Impact Dashboard</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/multilingual-ai-mentor">
+                    <Button className="text-xs px-3 py-3 bg-indigo-500 hover:bg-indigo-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🤖</span>
+                      <span className="text-center leading-tight">AI Mentor 78+</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/eco-friendly-challenges">
+                    <Button className="text-xs px-3 py-3 bg-green-500 hover:bg-green-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🌱</span>
+                      <span className="text-center leading-tight">Eco Challenges</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/animated-wellness-progress">
+                    <Button className="text-xs px-3 py-3 bg-pink-500 hover:bg-pink-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">✨</span>
+                      <span className="text-center leading-tight">Progress Sparkle</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/emoji-mood-tracker">
+                    <Button className="text-xs px-3 py-3 bg-yellow-500 hover:bg-yellow-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">😊</span>
+                      <span className="text-center leading-tight">Mood Tracker</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/micro-rewards-system">
+                    <Button className="text-xs px-3 py-3 bg-orange-500 hover:bg-orange-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🎁</span>
+                      <span className="text-center leading-tight">Micro Rewards</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/cultural-learning-tooltips">
+                    <Button className="text-xs px-3 py-3 bg-cyan-500 hover:bg-cyan-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">📚</span>
+                      <span className="text-center leading-tight">Cultural Tips</span>
+                    </Button>
+                  </Link>
+                  
+                  <Link href="/voice-navigation-accessibility">
+                    <Button className="text-xs px-3 py-3 bg-red-500 hover:bg-red-600 text-white w-full h-20 flex flex-col items-center justify-center">
+                      <span className="text-lg mb-1">🎤</span>
+                      <span className="text-center leading-tight">Voice Access</span>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Section nouvelles fonctionnalités intégrée */}
+        <div className="mb-16">
+          <Card className="border-4 border-gradient-to-r from-purple-400 to-indigo-400 bg-gradient-to-br from-purple-50 to-indigo-50 shadow-2xl">
+            <CardHeader className="text-center">
+              <div className="text-8xl mb-4">🚀</div>
+              <CardTitle className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Innovations Technologiques Spirituelles 2025
+              </CardTitle>
+              <p className="text-xl text-gray-600 mt-4">
+                10 Fonctionnalités révolutionnaires alliant technologie moderne et spiritualité islamique authentique
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg border-2 border-emerald-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-emerald-800 mb-3">🌟 Interactive Halal Journey Milestone Tracker</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span>Progression spirituelle selon Coran/Sunna</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Jalons authentiques avec sources islamiques</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span>Système XP basé sur bonnes actions</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg border-2 border-purple-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-purple-800 mb-3">🎮 Spiritual Wellness Motivation Gamification</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      <span>Défis spirituels gamifiés quotidiens</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <span>Badges récompenses halal authentiques</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      <span>Motivation à travers sources islamiques</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg border-2 border-blue-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-blue-800 mb-3">📊 Community Impact Visualisation Dashboard</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Impact communauté musulmane mondiale</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span>Visualisation données Ta'awun réel</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                      <span>Métriques projets caritatifs</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg border-2 border-indigo-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-indigo-800 mb-3">🤖 Multilingual AI Mentor Guidance System</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      <span>IA mentor 78+ langues supportées</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                      <span>Guidance conforme Fiqh informatique</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      <span>Clause "IA Non-Mufti" intégrée</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg border-2 border-green-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-green-800 mb-3">🌱 Eco-Friendly Lifestyle Challenge Generator</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span>Défis écologiques selon Coran/Sunna</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span>Principe Anti-Israf (non-gaspillage)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-lime-500 rounded-full"></div>
+                      <span>Sadaqah Jariyah environnementale</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg border-2 border-pink-300 hover:shadow-lg transition-all">
+                  <h4 className="font-bold text-pink-800 mb-3">✨ 5 Fonctionnalités UX Révolutionnaires Supplémentaires</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      <span>Effets visuels spirituels scintillants</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <span>Tracker humeur emoji inclusif</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                      <span>Micro-récompenses gamification</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                      <span>Tooltips apprentissage culturel</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span>Navigation vocale accessible</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
