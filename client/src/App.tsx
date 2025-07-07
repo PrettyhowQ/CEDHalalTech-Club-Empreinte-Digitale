@@ -273,6 +273,7 @@ import HalalTechCommunityGamification from "@/pages/HalalTechCommunityGamificati
 import MindfulWellnessConstellation from "@/pages/MindfulWellnessConstellation";
 import MethodologieSciencesIslamiques from "@/pages/MethodologieSciencesIslamiques";
 import AlAmanaAutoHalal from "@/pages/AlAmanaAutoHalal";
+import CEDBankMobile from "@/pages/CEDBankMobile";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -444,6 +445,9 @@ function Router() {
       <Route path="/ced-bank-cards" component={CEDBankCardsPage} />
       <Route path="/cartes-ced" component={CEDBankCardsPage} />
       <Route path="/yakoubi-cards" component={CEDBankCardsPage} />
+      <Route path="/ced-bank-mobile" component={CEDBankMobile} />
+      <Route path="/banque-mobile" component={CEDBankMobile} />
+      <Route path="/mobile-banking" component={CEDBankMobile} />
       <Route path="/souheila-bank" component={SouheilaBankAccountPage} />
       <Route path="/compte-souheila" component={SouheilaBankAccountPage} />
       <Route path="/nutrition-bank" component={SouheilaBankAccountPage} />
