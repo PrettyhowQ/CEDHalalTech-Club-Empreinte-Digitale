@@ -118,28 +118,28 @@ const IslamicStartupIncubator = () => {
       expertise: "Fiqh Informatique & Blockchain",
       experience: "25+ ans sciences islamiques",
       speciality: "Validation conformité Sharia technologique",
-      icon: "👨‍🏫"
+      icon: "🫥"
     },
     {
       name: "Yakoubi Yamina",
       expertise: "Entrepreneuriat Tech Islamique",
       experience: "15+ ans innovation halal",
       speciality: "Stratégie expansion marchés musulmans",
-      icon: "👩‍💼"
+      icon: "🧕"
     },
     {
       name: "Omar Al-Mansouri",
       expertise: "Financement Islamique Digital",
       experience: "20+ ans banking islamique",
       speciality: "Structuration investissements halal",
-      icon: "👨‍💰"
+      icon: "🫥"
     },
     {
       name: "Dr. Aisha Benali",
       expertise: "IA Éthique & Machine Learning",
       experience: "12+ ans recherche IA",
       speciality: "Développement IA conforme valeurs islamiques",
-      icon: "👩‍🔬"
+      icon: "🧕"
     }
   ];
 

@@ -22,7 +22,7 @@ const AIHalalEntrepreneurshipMentor = () => {
       experience: "15+ ans entrepreneuriat halal",
       specialties: ["Business Plan Halal", "Financement Islamique", "Stratégie Go-to-Market"],
       languages: ["Français", "Arabe", "Anglais"],
-      avatar: "👩‍💼",
+      avatar: "🧕",
       personality: "Bienveillante et méthodique, spécialisée dans l'accompagnement des entrepreneurs musulmans",
       successRate: 94
     },
@@ -34,7 +34,7 @@ const AIHalalEntrepreneurshipMentor = () => {
       experience: "12+ ans innovation Islamic tech",
       specialties: ["Architecture Halal", "IA Éthique", "Blockchain Islamique"],
       languages: ["Français", "Arabe", "Anglais", "Ourdou"],
-      avatar: "👨‍💻",
+      avatar: "🫥",
       personality: "Visionnaire et pragmatique, expert en transformation digitale halal",
       successRate: 97
     },
@@ -46,7 +46,7 @@ const AIHalalEntrepreneurshipMentor = () => {
       experience: "20+ ans banking islamique",
       specialties: ["Sukuk", "Murabaha", "Musharaka", "Due Diligence Sharia"],
       languages: ["Arabe", "Français", "Anglais"],
-      avatar: "🧑‍🏫",
+      avatar: "🫥",
       personality: "Sage et expérimenté, maîtrise parfaite du Fiqh financier moderne",
       successRate: 99
     },
@@ -58,7 +58,7 @@ const AIHalalEntrepreneurshipMentor = () => {
       experience: "18+ ans marketing islamique",
       specialties: ["Segmentation Halal", "Cultural Fit", "Brand Islamique"],
       languages: ["Français", "Arabe", "Anglais", "Malais"],
-      avatar: "👩‍🎯",
+      avatar: "🧕",
       personality: "Créative et analytique, comprend les nuances culturelles islamiques",
       successRate: 96
     }

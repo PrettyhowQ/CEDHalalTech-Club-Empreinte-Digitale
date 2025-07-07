@@ -285,6 +285,12 @@ Preferred communication style: Simple, everyday language.
 - Conformité RGPD/LPD avec hébergement sécurisé Suisse
 - Usage exclusif réservé à l'écosystème CED & PrettyhowQ
 
+### Conformité Culturelle Islamique
+- Avatars femmes: 🧕 (voile respectueux)
+- Avatars hommes: 🫥 (visage flouté pour pudeur)
+- Respect des valeurs islamiques dans toute représentation visuelle
+- Interface culturellement sensible pour communautés musulmanes
+
 ### Licence et Copyright CED HalalTech™
 - **Protection & Licence** : Utilisation exclusivement halal – Toute exploitation commerciale nécessite accord écrit
 - **Licence Éthique** : En conformité avec les valeurs islamiques authentiques

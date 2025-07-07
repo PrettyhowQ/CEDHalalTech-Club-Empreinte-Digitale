@@ -17,7 +17,7 @@ const FamilyBetaAccess = () => {
       modules: 75,
       status: "Actif",
       lastLogin: "Aujourd'hui 11:20",
-      avatar: "👩‍💼",
+      avatar: "🧕",
       priority: 1
     },
     {
@@ -29,7 +29,7 @@ const FamilyBetaAccess = () => {
       modules: 45,
       status: "Actif",
       lastLogin: "Hier 18:30",
-      avatar: "👩‍⚕️",
+      avatar: "🧕",
       priority: 2
     },
     {
@@ -41,7 +41,7 @@ const FamilyBetaAccess = () => {
       modules: 38,
       status: "Actif",
       lastLogin: "Hier 15:45",
-      avatar: "👩‍⚖️",
+      avatar: "🧕",
       priority: 3
     },
     {
@@ -53,7 +53,7 @@ const FamilyBetaAccess = () => {
       modules: 42,
       status: "Actif",
       lastLogin: "Aujourd'hui 09:15",
-      avatar: "👨‍💻",
+      avatar: "🫥",
       priority: 4
     },
     {
@@ -65,7 +65,7 @@ const FamilyBetaAccess = () => {
       modules: 25,
       status: "Actif",
       lastLogin: "Aujourd'hui 08:30",
-      avatar: "👨‍🔧",
+      avatar: "🫥",
       priority: 5
     },
     {
@@ -77,7 +77,7 @@ const FamilyBetaAccess = () => {
       modules: 20,
       status: "Actif",
       lastLogin: "Hier 16:20",
-      avatar: "👨‍🚛",
+      avatar: "🫥",
       priority: 6
     },
     {
@@ -89,7 +89,7 @@ const FamilyBetaAccess = () => {
       modules: 18,
       status: "Actif",
       lastLogin: "Hier 14:10",
-      avatar: "👨‍🔧",
+      avatar: "🫥",
       priority: 7
     }
   ];
