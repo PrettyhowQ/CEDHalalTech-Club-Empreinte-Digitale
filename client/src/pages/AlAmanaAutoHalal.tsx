@@ -192,24 +192,24 @@ export default function AlAmanaAutoHalal() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-black rounded-full mb-6">
             <Car className="w-10 h-10 text-yellow-500" />
           </div>
-          <h1 className="text-5xl font-bold text-black mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-black mb-4">
             🚘 Al-Amana Auto Halal
           </h1>
-          <p className="text-2xl text-gray-900 mb-4">
+          <p className="text-lg md:text-2xl text-gray-900 mb-4 px-4">
             Garage Privé Haut de Gamme • Réservé Clients CED Bank • Genève
           </p>
-          <div className="flex justify-center gap-4">
-            <Badge className="bg-black text-yellow-400 text-lg px-4 py-2">
-              <Lock className="w-5 h-5 mr-2" />
-              Accès Exclusif
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+            <Badge className="bg-black text-yellow-400 text-sm md:text-lg px-3 md:px-4 py-2">
+              <Lock className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
+              <span className="hidden sm:inline">Accès </span>Exclusif
             </Badge>
-            <Badge className="bg-black text-yellow-400 text-lg px-4 py-2">
-              <Star className="w-5 h-5 mr-2" />
-              Sur Commande Uniquement
+            <Badge className="bg-black text-yellow-400 text-sm md:text-lg px-3 md:px-4 py-2">
+              <Star className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
+              Sur Commande
             </Badge>
-            <Badge className="bg-black text-yellow-400 text-lg px-4 py-2">
-              <Shield className="w-5 h-5 mr-2" />
-              100% Halal Certifié
+            <Badge className="bg-black text-yellow-400 text-sm md:text-lg px-3 md:px-4 py-2">
+              <Shield className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
+              100% Halal
             </Badge>
           </div>
         </div>
@@ -246,12 +246,12 @@ export default function AlAmanaAutoHalal() {
 
         {clientCED && (
           <Tabs defaultValue="vehicules" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8 bg-gray-800">
-              <TabsTrigger value="vehicules" className="text-white">🚗 Véhicules</TabsTrigger>
-              <TabsTrigger value="services" className="text-white">🛡️ Services</TabsTrigger>
-              <TabsTrigger value="processus" className="text-white">📋 Processus</TabsTrigger>
-              <TabsTrigger value="localisation" className="text-white">📍 Localisation</TabsTrigger>
-              <TabsTrigger value="commande" className="text-white">💳 Commander</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 mb-8 bg-gray-800">
+              <TabsTrigger value="vehicules" className="text-white text-xs sm:text-sm">🚗 <span className="hidden sm:inline">Véhicules</span></TabsTrigger>
+              <TabsTrigger value="services" className="text-white text-xs sm:text-sm">🛡️ <span className="hidden sm:inline">Services</span></TabsTrigger>
+              <TabsTrigger value="processus" className="text-white text-xs sm:text-sm">📋 <span className="hidden sm:inline">Processus</span></TabsTrigger>
+              <TabsTrigger value="localisation" className="text-white text-xs sm:text-sm">📍 <span className="hidden sm:inline">Localisation</span></TabsTrigger>
+              <TabsTrigger value="commande" className="text-white text-xs sm:text-sm">💳 <span className="hidden sm:inline">Commander</span></TabsTrigger>
             </TabsList>
 
             {/* Onglet Véhicules */}
@@ -269,15 +269,15 @@ export default function AlAmanaAutoHalal() {
                 </Card>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                 {vehiculesPrestige.map((vehicule, index) => (
                   <Card key={index} className="border-2 border-gray-700 bg-gray-800 hover:border-yellow-500 transition-all hover:shadow-2xl">
-                    <CardHeader className="text-center">
-                      <div className="text-8xl mb-4">{vehicule.image}</div>
-                      <CardTitle className="text-2xl text-yellow-400">{vehicule.marque}</CardTitle>
-                      <p className="text-xl text-gray-300">{vehicule.modele}</p>
-                      <div className="text-3xl font-bold text-green-400 mb-2">{vehicule.prix}</div>
-                      <Badge className="bg-yellow-600 text-black">{vehicule.certification}</Badge>
+                    <CardHeader className="text-center p-4 md:p-6">
+                      <div className="text-6xl md:text-8xl mb-3 md:mb-4">{vehicule.image}</div>
+                      <CardTitle className="text-lg md:text-2xl text-yellow-400">{vehicule.marque}</CardTitle>
+                      <p className="text-base md:text-xl text-gray-300">{vehicule.modele}</p>
+                      <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">{vehicule.prix}</div>
+                      <Badge className="bg-yellow-600 text-black text-xs md:text-sm">{vehicule.certification}</Badge>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
@@ -290,14 +290,14 @@ export default function AlAmanaAutoHalal() {
                           </ul>
                         </div>
                         
-                        <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 text-xs md:text-sm">
                           <div>
                             <span className="text-yellow-400">Financement:</span>
-                            <p className="text-green-400 font-bold">{vehicule.financement}</p>
+                            <p className="text-green-400 font-bold text-xs md:text-sm">{vehicule.financement}</p>
                           </div>
                           <div>
                             <span className="text-yellow-400">Disponibilité:</span>
-                            <p className="text-gray-300">{vehicule.disponibilite}</p>
+                            <p className="text-gray-300 text-xs md:text-sm">{vehicule.disponibilite}</p>
                           </div>
                         </div>
                         
@@ -319,7 +319,7 @@ export default function AlAmanaAutoHalal() {
 
             {/* Onglet Services */}
             <TabsContent value="services">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {servicesExclusifs.map((service, index) => (
                   <Card key={index} className="border-2 border-gray-700 bg-gray-800">
                     <CardHeader className="text-center">
@@ -341,21 +341,21 @@ export default function AlAmanaAutoHalal() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-3 gap-6 text-center">
-                    <div className="p-4 bg-gray-800 rounded border border-green-500">
-                      <div className="text-4xl mb-2">🏦</div>
-                      <h4 className="font-bold text-green-400 mb-2">CED Bank</h4>
-                      <p className="text-sm text-gray-300">Financement halal Murabaha/Ijara intégré</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 text-center">
+                    <div className="p-3 md:p-4 bg-gray-800 rounded border border-green-500">
+                      <div className="text-3xl md:text-4xl mb-2">🏦</div>
+                      <h4 className="font-bold text-green-400 mb-2 text-sm md:text-base">CED Bank</h4>
+                      <p className="text-xs md:text-sm text-gray-300">Financement halal Murabaha/Ijara intégré</p>
                     </div>
-                    <div className="p-4 bg-gray-800 rounded border border-blue-500">
-                      <div className="text-4xl mb-2">🛡️</div>
-                      <h4 className="font-bold text-blue-400 mb-2">Al-Aman Takaful</h4>
-                      <p className="text-sm text-gray-300">Assurance automobile premium halal</p>
+                    <div className="p-3 md:p-4 bg-gray-800 rounded border border-blue-500">
+                      <div className="text-3xl md:text-4xl mb-2">🛡️</div>
+                      <h4 className="font-bold text-blue-400 mb-2 text-sm md:text-base">Al-Aman Takaful</h4>
+                      <p className="text-xs md:text-sm text-gray-300">Assurance automobile premium halal</p>
                     </div>
-                    <div className="p-4 bg-gray-800 rounded border border-purple-500">
-                      <div className="text-4xl mb-2">🤖</div>
-                      <h4 className="font-bold text-purple-400 mb-2">IA PrettyhowQ</h4>
-                      <p className="text-sm text-gray-300">Assistant intelligent personnalisation</p>
+                    <div className="p-3 md:p-4 bg-gray-800 rounded border border-purple-500">
+                      <div className="text-3xl md:text-4xl mb-2">🤖</div>
+                      <h4 className="font-bold text-purple-400 mb-2 text-sm md:text-base">IA PrettyhowQ</h4>
+                      <p className="text-xs md:text-sm text-gray-300">Assistant intelligent personnalisation</p>
                     </div>
                   </div>
                 </CardContent>
@@ -393,7 +393,7 @@ export default function AlAmanaAutoHalal() {
 
             {/* Onglet Localisation */}
             <TabsContent value="localisation">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 {localisations.map((lieu, index) => (
                   <Card key={index} className="border-2 border-gray-700 bg-gray-800">
                     <CardHeader>
@@ -435,9 +435,9 @@ export default function AlAmanaAutoHalal() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                       <div>
-                        <label className="block text-yellow-400 font-semibold mb-2">Marque Souhaitée</label>
+                        <label className="block text-yellow-400 font-semibold mb-2 text-sm md:text-base">Marque Souhaitée</label>
                         <Select>
                           <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
                             <SelectValue placeholder="Sélectionner marque" />
@@ -455,7 +455,7 @@ export default function AlAmanaAutoHalal() {
                       </div>
                       
                       <div>
-                        <label className="block text-yellow-400 font-semibold mb-2">Budget Maximum</label>
+                        <label className="block text-yellow-400 font-semibold mb-2 text-sm md:text-base">Budget Maximum</label>
                         <Select>
                           <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
                             <SelectValue placeholder="Gamme de prix" />
@@ -472,7 +472,7 @@ export default function AlAmanaAutoHalal() {
                     </div>
                     
                     <div>
-                      <label className="block text-yellow-400 font-semibold mb-2">
+                      <label className="block text-yellow-400 font-semibold mb-2 text-sm md:text-base">
                         Spécifications Personnalisées
                       </label>
                       <Textarea 
@@ -484,9 +484,9 @@ export default function AlAmanaAutoHalal() {
                       />
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                       <div>
-                        <label className="block text-yellow-400 font-semibold mb-2">Mode Financement</label>
+                        <label className="block text-yellow-400 font-semibold mb-2 text-sm md:text-base">Mode Financement</label>
                         <Select>
                           <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
                             <SelectValue placeholder="Type financement" />
@@ -501,7 +501,7 @@ export default function AlAmanaAutoHalal() {
                       </div>
                       
                       <div>
-                        <label className="block text-yellow-400 font-semibold mb-2">Délai Souhaité</label>
+                        <label className="block text-yellow-400 font-semibold mb-2 text-sm md:text-base">Délai Souhaité</label>
                         <Select>
                           <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
                             <SelectValue placeholder="Urgence livraison" />
@@ -517,10 +517,10 @@ export default function AlAmanaAutoHalal() {
                     </div>
                     
                     <div className="text-center">
-                      <Button className="bg-yellow-600 hover:bg-yellow-700 text-black text-xl px-12 py-4">
+                      <Button className="bg-yellow-600 hover:bg-yellow-700 text-black text-lg md:text-xl px-8 md:px-12 py-3 md:py-4 w-full sm:w-auto">
                         🚗 Soumettre Demande Exclusive
                       </Button>
-                      <p className="text-gray-400 text-sm mt-4">
+                      <p className="text-gray-400 text-xs md:text-sm mt-4 px-4">
                         Un conseiller Al-Amana vous contactera sous 24h pour finaliser votre commande sur mesure
                       </p>
                     </div>
