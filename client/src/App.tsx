@@ -252,6 +252,7 @@ import MultilingualEnvironmentalStorytelling from "@/pages/MultilingualEnvironme
 import HalalTechCommunityGamification from "@/pages/HalalTechCommunityGamification";
 import MindfulWellnessConstellation from "@/pages/MindfulWellnessConstellation";
 import MethodologieSciencesIslamiques from "@/pages/MethodologieSciencesIslamiques";
+import AlAmanaAutoHalal from "@/pages/AlAmanaAutoHalal";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1342,6 +1343,12 @@ function Router() {
       <Route path="/methodologie-sciences-islamiques" component={MethodologieSciencesIslamiques} />
       <Route path="/sciences-islamiques" component={MethodologieSciencesIslamiques} />
       <Route path="/apprentissage-islamique" component={MethodologieSciencesIslamiques} />
+      
+      {/* Al-Amana Auto Halal - Garage Premium */}
+      <Route path="/al-amana-auto-halal" component={AlAmanaAutoHalal} />
+      <Route path="/garage-halal" component={AlAmanaAutoHalal} />
+      <Route path="/vehicules-premium-halal" component={AlAmanaAutoHalal} />
+      <Route path="/auto-haut-gamme" component={AlAmanaAutoHalal} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

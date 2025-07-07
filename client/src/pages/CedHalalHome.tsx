@@ -39,7 +39,7 @@ export default function CedHalalHome() {
         <div className="mb-16">
           <Card className="border-4 border-emerald-400 bg-gradient-to-br from-emerald-50 to-blue-50 shadow-2xl">
             <CardHeader className="text-center">
-              <div className="text-6xl mb-4">👑</div>
+              <div className="text-6xl mb-4">🤝</div>
               <CardTitle className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
                 Équipe Dirigeante CED HalalTech™
               </CardTitle>
@@ -186,6 +186,11 @@ export default function CedHalalHome() {
                 <Link href="/super-iarp-pro">
                   <Button className="text-lg px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white">
                     🤖 Super IARP Pro
+                  </Button>
+                </Link>
+                <Link href="/al-amana-auto-halal">
+                  <Button className="text-lg px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-black">
+                    🚗 Al-Amana Auto Halal
                   </Button>
                 </Link>
               </div>
