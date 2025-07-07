@@ -243,6 +243,7 @@ import AlAmanTakafulLogoRedesign from "@/pages/AlAmanTakafulLogoRedesign";
 import LogosEcosystemeComplet from "@/pages/LogosEcosystemeComplet";
 import SanteSouheilaYakoubi from "@/pages/SanteSouheilaYakoubi";
 import SportsHautNiveau from "@/pages/SportsHautNiveau";
+import IACoachingHalal from "@/pages/IACoachingHalal";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1290,6 +1291,12 @@ function Router() {
       <Route path="/nutrition-sportive-halal" component={SportsHautNiveau} />
       <Route path="/programmes-elite-sport" component={SportsHautNiveau} />
       <Route path="/sport-olympique-halal" component={SportsHautNiveau} />
+      
+      {/* IA Coaching Halal - Propriété Souheila-iness */}
+      <Route path="/ia-coaching-halal" component={IACoachingHalal} />
+      <Route path="/coaching-ia-souheila" component={IACoachingHalal} />
+      <Route path="/ia-nutrition-halal" component={IACoachingHalal} />
+      <Route path="/assistant-ia-sante" component={IACoachingHalal} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

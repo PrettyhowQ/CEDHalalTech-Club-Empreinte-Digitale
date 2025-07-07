@@ -561,11 +561,64 @@ export default function SportsHautNiveau() {
           </TabsContent>
         </Tabs>
 
+        {/* Information Centre Futur */}
+        <div className="mt-12 mb-8">
+          <Card className="border-2 border-yellow-200 bg-yellow-50">
+            <CardHeader>
+              <CardTitle className="text-2xl text-yellow-700 text-center">
+                🏗️ Projet Centre Sportif Physique CED HalalTech™
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-4 bg-pink-50 rounded border border-pink-200">
+                  <h4 className="font-semibold text-pink-700 mb-3">🏃‍♀️ Association Centre Sport Mondial Féminin Halal</h4>
+                  <p className="text-sm text-gray-600 mb-2"><strong>Directrice :</strong> Souheila-iness Yakoubi-Ozel</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    <li>• Centre physique spécialisé sport haut niveau</li>
+                    <li>• Diététique et nutrition intégrées</li>
+                    <li>• Formation sportive selon valeurs islamiques</li>
+                    <li>• Excellence féminine mondiale halal</li>
+                  </ul>
+                </div>
+                
+                <div className="p-4 bg-blue-50 rounded border border-blue-200">
+                  <h4 className="font-semibold text-blue-700 mb-3">🏃‍♂️ Section Masculine</h4>
+                  <p className="text-sm text-gray-600 mb-2"><strong>Directeur :</strong> Malik Ketar (Époux de Souheila)</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    <li>• Coordination avec section féminine</li>
+                    <li>• Programmes elite masculins</li>
+                    <li>• Respect séparation islamique</li>
+                    <li>• Excellence sportive halal hommes</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-6 text-center p-4 bg-green-50 rounded border border-green-200">
+                <h4 className="font-semibold text-green-700 mb-2">📱 En Attendant le Centre Physique :</h4>
+                <p className="text-green-600 text-sm mb-3">
+                  Les sportifs peuvent accéder directement à l'<strong>IA Coaching Halal</strong> qui appartient à Souheila-iness Yakoubi-Ozel
+                </p>
+                <Link href="/ia-coaching-halal">
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+                    🤖 Accéder à l'IA Coaching Halal
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Footer */}
         <div className="mt-12 text-center">
           <Link href="/sante-souheila-yakoubi">
             <Button variant="outline" size="lg" className="mr-4">
               ← Espace Santé Souheila
+            </Button>
+          </Link>
+          <Link href="/ia-coaching-halal">
+            <Button variant="outline" size="lg" className="mr-4">
+              IA Coaching Halal
             </Button>
           </Link>
           <Link href="/ced-halal-home">
