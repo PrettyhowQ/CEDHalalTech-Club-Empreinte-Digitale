@@ -158,6 +158,21 @@ export default function CedHalalHome() {
                     </Button>
                   </CardContent>
                 </Card>
+
+                {/* AI Entrepreneurship Mentor */}
+                <Card className="bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200 hover:shadow-lg transition-all cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-6xl mb-4">🤖</div>
+                    <h3 className="text-xl font-bold text-purple-800 mb-3">Mentor IA Entrepreneuriat</h3>
+                    <p className="text-sm text-purple-600 mb-4">Intelligence artificielle mentoring halal personnalisé</p>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-500 to-violet-600 text-white hover:from-purple-600 hover:to-violet-700"
+                      onClick={() => window.location.href = '/ai-halal-entrepreneurship-mentor'}
+                    >
+                      Démarrer Mentoring
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </CardContent>
           </Card>

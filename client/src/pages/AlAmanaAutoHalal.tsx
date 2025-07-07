@@ -341,7 +341,7 @@ export default function AlAmanaAutoHalal() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 text-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
                     <div className="p-3 md:p-4 bg-gray-800 rounded border border-green-500">
                       <div className="text-3xl md:text-4xl mb-2">🏦</div>
                       <h4 className="font-bold text-green-400 mb-2 text-sm md:text-base">CED Bank</h4>
@@ -356,6 +356,47 @@ export default function AlAmanaAutoHalal() {
                       <div className="text-3xl md:text-4xl mb-2">🤖</div>
                       <h4 className="font-bold text-purple-400 mb-2 text-sm md:text-base">IA PrettyhowQ</h4>
                       <p className="text-xs md:text-sm text-gray-300">Assistant intelligent personnalisation</p>
+                    </div>
+                    <div className="p-3 md:p-4 bg-gray-800 rounded border border-yellow-500">
+                      <div className="text-3xl md:text-4xl mb-2">🔌</div>
+                      <h4 className="font-bold text-yellow-400 mb-2 text-sm md:text-base">Électronique Halal</h4>
+                      <p className="text-xs md:text-sm text-gray-300">Systèmes audio/navigation conformes Sharia</p>
+                    </div>
+                  </div>
+                  
+                  {/* Section Électronique Halal Détaillée */}
+                  <div className="mt-8 p-6 bg-gradient-to-r from-yellow-900 to-orange-900 rounded-lg border border-yellow-500">
+                    <h4 className="text-2xl font-bold text-yellow-400 text-center mb-6">
+                      🔌 Électronique Halal Spécialisée
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div className="bg-gray-800 p-4 rounded border border-yellow-400">
+                        <h5 className="text-lg font-bold text-yellow-300 mb-2">📱 Systèmes Multimédia</h5>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Écrans sans contenu haram</li>
+                          <li>• Audio halal exclusivement</li>
+                          <li>• Filtres Sharia intégrés</li>
+                          <li>• Mode prière automatique</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-yellow-400">
+                        <h5 className="text-lg font-bold text-yellow-300 mb-2">🗺️ Navigation Islamique</h5>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Localisation mosquées proches</li>
+                          <li>• Évitement zones non-halal</li>
+                          <li>• Qibla Compass intégré</li>
+                          <li>• Horaires prières GPS</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-4 rounded border border-yellow-400">
+                        <h5 className="text-lg font-bold text-yellow-300 mb-2">⚡ Dispositifs Connectés</h5>
+                        <ul className="text-sm text-gray-300 space-y-1">
+                          <li>• Chargeurs sans-fil halal</li>
+                          <li>• Batteries écologiques</li>
+                          <li>• IOT conformité islamique</li>
+                          <li>• Certification scholars</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </CardContent>

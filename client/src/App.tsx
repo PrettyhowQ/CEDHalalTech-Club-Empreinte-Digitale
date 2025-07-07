@@ -196,6 +196,7 @@ import HalalTechMarketplace from "@/pages/HalalTechMarketplace";
 import IslamicStartupIncubator from "@/pages/IslamicStartupIncubator";
 import FamilyBetaAccess from "@/pages/FamilyBetaAccess";
 import SmartContractsHalal from "@/pages/SmartContractsHalal";
+import AIHalalEntrepreneurshipMentor from "@/pages/AIHalalEntrepreneurshipMentor";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import LocalisationModulesCED from "@/pages/LocalisationModulesCED";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
@@ -1007,6 +1008,9 @@ function Router() {
       <Route path="/acces-beta-famille" component={FamilyBetaAccess} />
       <Route path="/smart-contracts-halal" component={SmartContractsHalal} />
       <Route path="/contrats-intelligents-halal" component={SmartContractsHalal} />
+      <Route path="/ai-halal-entrepreneurship-mentor" component={AIHalalEntrepreneurshipMentor} />
+      <Route path="/mentor-ia-entrepreneuriat-halal" component={AIHalalEntrepreneurshipMentor} />
+      <Route path="/mentor-entrepreneurship-ai" component={AIHalalEntrepreneurshipMentor} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={CedVoieHalalHome} />
