@@ -1,505 +1,328 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Slider } from '@/components/ui/slider';
-import { Switch } from '@/components/ui/switch';
-import { 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Settings, 
-  Globe, 
-  Brain, 
-  Shield,
-  Sparkles,
-  Heart,
-  BookOpen,
-  Headphones,
-  Moon,
-  Star,
-  Zap,
-  Users,
-  MessageSquare,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const MultilingualVoiceAssistant = () => {
   const [isListening, setIsListening] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('fr');
-  const [voiceType, setVoiceType] = useState('feminine');
-  const [volume, setVolume] = useState([80]);
-  const [speed, setSpeed] = useState([1.0]);
-  const [fiqhMode, setFiqhMode] = useState(true);
-  const [currentTranscript, setCurrentTranscript] = useState('');
-  const [conversation, setConversation] = useState<any[]>([]);
-  const [ethicsScore, setEthicsScore] = useState(98);
-  const recognitionRef = useRef<any>(null);
+  const [selectedLanguage, setSelectedLanguage] = useState("fr-FR");
+  const [selectedVoice, setSelectedVoice] = useState("feminine");
+  const [recognitionResult, setRecognitionResult] = useState("");
+  const [assistantResponse, setAssistantResponse] = useState("");
+  const [culturalMode, setCulturalMode] = useState("islamic");
 
   const languages = [
-    // Langues Islamiques Principales
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'ur', name: 'اردو', flag: '🇵🇰' },
-    { code: 'fa', name: 'فارسی', flag: '🇮🇷' },
-    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
-    { code: 'ms', name: 'Bahasa Melayu', flag: '🇲🇾' },
-    { code: 'bn', name: 'বাংলা', flag: '🇧🇩' },
-    
-    // Langues Européennes
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'pt', name: 'Português', flag: '🇧🇷' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
-    { code: 'no', name: 'Norsk', flag: '🇳🇴' },
-    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
-    { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
-    { code: 'pl', name: 'Polski', flag: '🇵🇱' },
-    { code: 'cs', name: 'Čeština', flag: '🇨🇿' },
-    { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
-    { code: 'ro', name: 'Română', flag: '🇷🇴' },
-    { code: 'bg', name: 'Български', flag: '🇧🇬' },
-    { code: 'hr', name: 'Hrvatski', flag: '🇭🇷' },
-    { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
-    { code: 'sl', name: 'Slovenščina', flag: '🇸🇮' },
-    { code: 'et', name: 'Eesti', flag: '🇪🇪' },
-    { code: 'lv', name: 'Latviešu', flag: '🇱🇻' },
-    { code: 'lt', name: 'Lietuvių', flag: '🇱🇹' },
-    { code: 'el', name: 'Ελληνικά', flag: '🇬🇷' },
-    
-    // Langues Asiatiques
-    { code: 'zh', name: '中文', flag: '🇨🇳' },
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },
-    { code: 'ko', name: '한국어', flag: '🇰🇷' },
-    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
-    { code: 'th', name: 'ไทย', flag: '🇹🇭' },
-    { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
-    { code: 'tl', name: 'Filipino', flag: '🇵🇭' },
-    { code: 'my', name: 'မြန်မာ', flag: '🇲🇲' },
-    { code: 'km', name: 'ខ្មែរ', flag: '🇰🇭' },
-    { code: 'lo', name: 'ລາວ', flag: '🇱🇦' },
-    { code: 'si', name: 'සිංහල', flag: '🇱🇰' },
-    { code: 'ta', name: 'தமிழ்', flag: '🇮🇳' },
-    { code: 'te', name: 'తెలుగు', flag: '🇮🇳' },
-    { code: 'ml', name: 'മലയാളം', flag: '🇮🇳' },
-    { code: 'kn', name: 'ಕನ್ನಡ', flag: '🇮🇳' },
-    { code: 'gu', name: 'ગુજરાતી', flag: '🇮🇳' },
-    { code: 'pa', name: 'ਪੰਜਾਬੀ', flag: '🇮🇳' },
-    { code: 'mr', name: 'मराठी', flag: '🇮🇳' },
-    { code: 'or', name: 'ଓଡ଼ିଆ', flag: '🇮🇳' },
-    { code: 'as', name: 'অসমীয়া', flag: '🇮🇳' },
-    { code: 'ne', name: 'नेपाली', flag: '🇳🇵' },
-    
-    // Langues Africaines
-    { code: 'sw', name: 'Kiswahili', flag: '🇰🇪' },
-    { code: 'ha', name: 'Hausa', flag: '🇳🇬' },
-    { code: 'yo', name: 'Yorùbá', flag: '🇳🇬' },
-    { code: 'ig', name: 'Igbo', flag: '🇳🇬' },
-    { code: 'am', name: 'አማርኛ', flag: '🇪🇹' },
-    { code: 'so', name: 'Soomaali', flag: '🇸🇴' },
-    { code: 'zu', name: 'isiZulu', flag: '🇿🇦' },
-    { code: 'xh', name: 'isiXhosa', flag: '🇿🇦' },
-    { code: 'af', name: 'Afrikaans', flag: '🇿🇦' },
-    
-    // Langues du Moyen-Orient/Cauccase
-    { code: 'he', name: 'עברית', flag: '🇮🇱' },
-    { code: 'ku', name: 'کوردی', flag: '🇮🇶' },
-    { code: 'az', name: 'Azərbaycan', flag: '🇦🇿' },
-    { code: 'ka', name: 'ქართული', flag: '🇬🇪' },
-    { code: 'hy', name: 'Հայերեն', flag: '🇦🇲' },
-    
-    // Langues des Amériques
-    { code: 'qu', name: 'Quechua', flag: '🇵🇪' },
-    { code: 'gn', name: 'Guaraní', flag: '🇵🇾' },
-    
-    // Langues Austronésiennes/Océanie
-    { code: 'mi', name: 'Te Reo Māori', flag: '🇳🇿' },
-    { code: 'sm', name: 'Gagana Samoa', flag: '🇼🇸' },
-    { code: 'to', name: 'Lea Faka-Tonga', flag: '🇹🇴' },
-    { code: 'fj', name: 'Vosa Vakaviti', flag: '🇫🇯' },
-    
-    // Langues Construites/Internationales
-    { code: 'eo', name: 'Esperanto', flag: '🌍' },
-    { code: 'la', name: 'Latina', flag: '🏛️' },
-    
-    // Dialectes Arabes Régionaux
-    { code: 'ar-eg', name: 'العربية المصرية', flag: '🇪🇬' },
-    { code: 'ar-ma', name: 'الدارجة المغربية', flag: '🇲🇦' },
-    { code: 'ar-dz', name: 'العربية الجزائرية', flag: '🇩🇿' },
-    { code: 'ar-tn', name: 'العربية التونسية', flag: '🇹🇳' },
-    { code: 'ar-ly', name: 'العربية الليبية', flag: '🇱🇾' },
-    { code: 'ar-sd', name: 'العربية السودانية', flag: '🇸🇩' },
-    { code: 'ar-sy', name: 'العربية الشامية', flag: '🇸🇾' },
-    { code: 'ar-lb', name: 'العربية اللبنانية', flag: '🇱🇧' },
-    { code: 'ar-jo', name: 'العربية الأردنية', flag: '🇯🇴' },
-    { code: 'ar-ps', name: 'العربية الفلسطينية', flag: '🇵🇸' },
-    { code: 'ar-iq', name: 'العربية العراقية', flag: '🇮🇶' },
-    { code: 'ar-kw', name: 'العربية الكويتية', flag: '🇰🇼' },
-    { code: 'ar-ae', name: 'العربية الإماراتية', flag: '🇦🇪' },
-    { code: 'ar-qa', name: 'العربية القطرية', flag: '🇶🇦' },
-    { code: 'ar-bh', name: 'العربية البحرينية', flag: '🇧🇭' },
-    { code: 'ar-om', name: 'العربية العُمانية', flag: '🇴🇲' },
-    { code: 'ar-ye', name: 'العربية اليمنية', flag: '🇾🇪' }
+    { code: "ar-SA", name: "العربية", flag: "🇸🇦", cultural: "Islamic" },
+    { code: "fr-FR", name: "Français", flag: "🇫🇷", cultural: "Islamic" },
+    { code: "en-US", name: "English", flag: "🇺🇸", cultural: "Islamic" },
+    { code: "tr-TR", name: "Türkçe", flag: "🇹🇷", cultural: "Islamic" },
+    { code: "id-ID", name: "Bahasa Indonesia", flag: "🇮🇩", cultural: "Islamic" },
+    { code: "ms-MY", name: "Bahasa Malaysia", flag: "🇲🇾", cultural: "Islamic" },
+    { code: "ur-PK", name: "اردو", flag: "🇵🇰", cultural: "Islamic" },
+    { code: "fa-IR", name: "فارسی", flag: "🇮🇷", cultural: "Islamic" }
   ];
 
-  const ethicalFeatures = [
-    { icon: Shield, title: "Protection Fiqh", desc: "100% conforme Sharia", active: true },
-    { icon: Heart, title: "Voix Respectueuse", desc: "Ton éducatif islamique", active: true },
-    { icon: BookOpen, title: "Sources Authentiques", desc: "Coran & Sunna vérifiés", active: true },
-    { icon: Users, title: "Supervision Savants", desc: "150+ scholars validés", active: true },
-    { icon: Moon, title: "Mode Prière", desc: "Pause automatique Salah", active: fiqhMode },
-    { icon: Star, title: "Dhikr Intégré", desc: "Rappels spirituels", active: true }
+  const voiceOptions = [
+    { 
+      id: "feminine", 
+      name: "Aïcha Al-Aman", 
+      description: "Assistant IA féminin validé 150+ scholars",
+      icon: "👩‍🏫",
+      validation: "✅ Certifié Halal"
+    },
+    { 
+      id: "masculine", 
+      name: "Ahmad Al-Hakeem", 
+      description: "Assistant IA masculin pour préférences utilisateur",
+      icon: "👨‍🏫",
+      validation: "✅ Alternative respectueuse"
+    }
   ];
 
-  const voiceCommands = [
-    { command: "Bismillah", action: "Débuter conversation islamique", category: "Spirituel" },
-    { command: "Quelle est ma prochaine prière ?", action: "Afficher horaires Salah", category: "Prière" },
-    { command: "Récite Ayat al-Kursi", action: "Récitation audio arabe", category: "Coran" },
-    { command: "Comment calculer la Zakat ?", action: "Guide calcul Zakat", category: "Finance" },
-    { command: "Trouve mosquée proche", action: "Localisation Qibla/Mosquées", category: "Localisation" },
-    { command: "Mode silence", action: "Désactiver assistant", category: "Contrôle" },
-    { command: "Rappel Adhkar matin", action: "Notifications spirituelles", category: "Rappels" },
-    { command: "Traduis en arabe", action: "Traduction multilingue", category: "Traduction" }
-  ];
+  const islamicCommands = {
+    "fr-FR": [
+      "Quelle heure est la prière?",
+      "Récite Ayat Al-Kursi",
+      "Direction de la Qibla",
+      "Rappel spirituel du jour",
+      "Invocation avant travail"
+    ],
+    "ar-SA": [
+      "متى وقت الصلاة؟",
+      "اقرأ آية الكرسي",
+      "اتجاه القبلة",
+      "تذكير روحي اليوم",
+      "دعاء قبل العمل"
+    ],
+    "en-US": [
+      "What time is prayer?",
+      "Recite Ayat Al-Kursi",
+      "Qibla direction",
+      "Today's spiritual reminder",
+      "Dua before work"
+    ]
+  };
+
+  const culturalResponses = {
+    greeting: {
+      "fr-FR": "Assalamu Alaykum! Comment puis-je vous aider aujourd'hui dans votre parcours spirituel et technologique?",
+      "ar-SA": "السلام عليكم! كيف يمكنني مساعدتك اليوم في رحلتك الروحية والتقنية؟",
+      "en-US": "Assalamu Alaykum! How can I assist you today in your spiritual and technological journey?"
+    },
+    prayer: {
+      "fr-FR": "Il est temps pour la prière Maghrib. Qu'Allah accepte votre adoration.",
+      "ar-SA": "حان وقت صلاة المغرب. تقبل الله عبادتكم.",
+      "en-US": "It's time for Maghrib prayer. May Allah accept your worship."
+    },
+    tech: {
+      "fr-FR": "Pour développer en conformité avec les valeurs islamiques, rappelez-vous: 'Inn Allah yuhibbu idha 'amila ahadukum 'amalan an yutqinah'",
+      "ar-SA": "للتطوير وفقًا للقيم الإسلامية، تذكر: 'إن الله يحب إذا عمل أحدكم عملاً أن يتقنه'",
+      "en-US": "For development in accordance with Islamic values, remember: 'Verily Allah loves when one of you does a job, he does it with excellence'"
+    }
+  };
 
   const startListening = () => {
-    if ('webkitSpeechRecognition' in window) {
-      const recognition = new window.webkitSpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.lang = selectedLanguage === 'ar' ? 'ar-SA' : `${selectedLanguage}-${selectedLanguage.toUpperCase()}`;
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+      const recognition = new SpeechRecognition();
       
-      recognition.onstart = () => setIsListening(true);
-      recognition.onend = () => setIsListening(false);
-      
-      recognition.onresult = (event: any) => {
-        const transcript = Array.from(event.results)
-          .map(result => result[0])
-          .map(result => result.transcript)
-          .join('');
-        setCurrentTranscript(transcript);
+      recognition.lang = selectedLanguage;
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => {
+        setIsListening(true);
+        setRecognitionResult("🎤 Écoute en cours...");
       };
-      
-      recognitionRef.current = recognition;
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setRecognitionResult(transcript);
+        processCommand(transcript);
+      };
+
+      recognition.onerror = () => {
+        setIsListening(false);
+        setRecognitionResult("❌ Erreur de reconnaissance vocale");
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
       recognition.start();
+    } else {
+      setRecognitionResult("❌ Reconnaissance vocale non supportée");
     }
   };
 
-  const stopListening = () => {
-    if (recognitionRef.current) {
-      recognitionRef.current.stop();
-      setIsListening(false);
+  const processCommand = (command: string) => {
+    const lowerCommand = command.toLowerCase();
+    
+    if (lowerCommand.includes("prière") || lowerCommand.includes("prayer") || lowerCommand.includes("صلاة")) {
+      setAssistantResponse(culturalResponses.prayer[selectedLanguage as keyof typeof culturalResponses.prayer]);
+    } else if (lowerCommand.includes("tech") || lowerCommand.includes("développement") || lowerCommand.includes("تطوير")) {
+      setAssistantResponse(culturalResponses.tech[selectedLanguage as keyof typeof culturalResponses.tech]);
+    } else {
+      setAssistantResponse(culturalResponses.greeting[selectedLanguage as keyof typeof culturalResponses.greeting]);
     }
-  };
 
-  const handleVoiceCommand = (command: string) => {
-    const newMessage = {
-      id: Date.now(),
-      type: 'user',
-      content: command,
-      timestamp: new Date().toLocaleTimeString(),
-      language: selectedLanguage
-    };
-    
-    // Réponse éthique basée sur Fiqh
-    const ethicalResponse = {
-      id: Date.now() + 1,
-      type: 'assistant',
-      content: getEthicalResponse(command),
-      timestamp: new Date().toLocaleTimeString(),
-      language: selectedLanguage,
-      fiqhValidated: true
-    };
-    
-    setConversation(prev => [...prev, newMessage, ethicalResponse]);
-    setCurrentTranscript('');
-  };
-
-  const getEthicalResponse = (command: string) => {
-    const responses = {
-      'Bismillah': 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ - Que la paix soit sur vous. Comment puis-je vous aider dans votre cheminement spirituel aujourd\'hui ?',
-      'Quelle est ma prochaine prière ?': 'Selon votre localisation, la prochaine prière est Maghreb à 18:42. Puis-je activer un rappel 15 minutes avant ?',
-      'Comment calculer la Zakat ?': 'La Zakat est de 2,5% sur l\'épargne dépassant le Nisab (85g d\'or). Souhaitez-vous utiliser notre calculateur certifié Sharia ?',
-      default: 'Je vous écoute avec respect. Posez votre question et je vous répondrai selon les enseignements islamiques authentiques, in sha Allah.'
-    };
-    
-    return responses[command] || responses.default;
+    // Synthèse vocale
+    speakResponse(culturalResponses.greeting[selectedLanguage as keyof typeof culturalResponses.greeting]);
   };
 
   const speakResponse = (text: string) => {
     if ('speechSynthesis' in window) {
-      setIsSpeaking(true);
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = selectedLanguage === 'ar' ? 'ar-SA' : selectedLanguage;
-      utterance.volume = volume[0] / 100;
-      utterance.rate = speed[0];
-      
-      // Voix féminine respectueuse selon validation savants
-      const voices = speechSynthesis.getVoices();
-      const femaleVoice = voices.find(voice => 
-        voice.lang.includes(selectedLanguage) && 
-        (voice.name.includes('Female') || voice.name.includes('Woman'))
-      );
-      if (femaleVoice && voiceType === 'feminine') {
-        utterance.voice = femaleVoice;
-      }
-      
-      utterance.onend = () => setIsSpeaking(false);
+      utterance.lang = selectedLanguage;
+      utterance.rate = 0.9;
+      utterance.pitch = selectedVoice === "feminine" ? 1.2 : 0.9;
       speechSynthesis.speak(utterance);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-blue-50 to-purple-50 p-6">
-      <div className="max-w-6xl mx-auto">
-        
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Mic className="h-12 w-12 text-emerald-600" />
-            <h1 className="text-4xl font-bold text-gray-800">
-              Assistant Vocal Multilingue Éthique
-            </h1>
-            <Sparkles className="h-12 w-12 text-blue-600" />
-          </div>
-          <p className="text-xl text-gray-600 mb-4">
-            🕌 <strong>IA Vocale "Aisha Al-Aman"</strong> - 100% Conforme Fiqh Informatique 🕌
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+            🎤 Assistant Vocal Multilingue Islamique
+          </h1>
+          <p className="text-xl text-gray-600 mb-6">
+            IA Vocale culturellement sensible avec respect des valeurs islamiques
           </p>
-          <div className="flex items-center justify-center gap-6">
-            <Badge variant="outline" className="bg-green-100 text-green-800">
-              ✅ Validée 150+ Scholars
-            </Badge>
-            <Badge variant="outline" className="bg-blue-100 text-blue-800">
-              🌍 78+ Langues
-            </Badge>
-            <Badge variant="outline" className="bg-purple-100 text-purple-800">
-              🛡️ Score Éthique: {ethicsScore}/100
-            </Badge>
-          </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
-          
-          {/* Configuration */}
-          <Card className="lg:col-span-1">
+        {/* Configuration */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Settings className="h-5 w-5" />
-                Configuration Éthique
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              
-              {/* Langue */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Langue Assistant</label>
-                <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {languages.map(lang => (
-                      <SelectItem key={lang.code} value={lang.code}>
-                        {lang.flag} {lang.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {/* Type de voix */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Type de Voix</label>
-                <Select value={voiceType} onValueChange={setVoiceType}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="feminine">👩 Féminine (Aisha Al-Aman)</SelectItem>
-                    <SelectItem value="masculine">👨 Masculine (Alternative)</SelectItem>
-                  </SelectContent>
-                </Select>
-                <p className="text-xs text-gray-500 mt-1">
-                  Voix féminine validée par 7 savants internationaux
-                </p>
-              </div>
-
-              {/* Volume */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Volume: {volume[0]}%</label>
-                <Slider
-                  value={volume}
-                  onValueChange={setVolume}
-                  max={100}
-                  step={5}
-                  className="w-full"
-                />
-              </div>
-
-              {/* Vitesse */}
-              <div>
-                <label className="text-sm font-medium mb-2 block">Vitesse: {speed[0]}x</label>
-                <Slider
-                  value={speed}
-                  onValueChange={setSpeed}
-                  min={0.5}
-                  max={2.0}
-                  step={0.1}
-                  className="w-full"
-                />
-              </div>
-
-              {/* Mode Fiqh */}
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium">Mode Fiqh Strict</label>
-                <Switch checked={fiqhMode} onCheckedChange={setFiqhMode} />
-              </div>
-              
-            </CardContent>
-          </Card>
-
-          {/* Interface Principale */}
-          <Card className="lg:col-span-2">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MessageSquare className="h-5 w-5" />
-                Conversation Éthique
-              </CardTitle>
+              <CardTitle className="text-center">🌍 Langue</CardTitle>
             </CardHeader>
             <CardContent>
-              
-              {/* Zone de conversation */}
-              <div className="bg-gray-50 rounded-lg p-4 h-64 overflow-y-auto mb-4">
-                {conversation.length === 0 ? (
-                  <div className="text-center text-gray-500 mt-20">
-                    <Heart className="h-8 w-8 mx-auto mb-2 text-emerald-500" />
-                    <p>Dites "Bismillah" pour commencer...</p>
-                  </div>
-                ) : (
-                  conversation.map(message => (
-                    <div key={message.id} className={`mb-3 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
-                      <div className={`inline-block p-3 rounded-lg max-w-xs ${
-                        message.type === 'user' 
-                          ? 'bg-blue-500 text-white' 
-                          : 'bg-emerald-100 text-emerald-800'
-                      }`}>
-                        <p className="text-sm">{message.content}</p>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-xs opacity-70">{message.timestamp}</span>
-                          {message.fiqhValidated && (
-                            <CheckCircle className="h-3 w-3 text-emerald-600" />
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))
-                )}
-              </div>
+              <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {languages.map((lang) => (
+                    <SelectItem key={lang.code} value={lang.code}>
+                      {lang.flag} {lang.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Badge className="mt-2 w-full justify-center" variant="secondary">
+                Culture Islamique Respectée
+              </Badge>
+            </CardContent>
+          </Card>
 
-              {/* Transcription en cours */}
-              {currentTranscript && (
-                <div className="bg-yellow-50 border border-yellow-200 rounded p-3 mb-4">
-                  <p className="text-sm text-yellow-800">🎤 {currentTranscript}</p>
-                </div>
-              )}
-
-              {/* Contrôles */}
-              <div className="flex items-center justify-center gap-4">
-                <Button
-                  size="lg"
-                  variant={isListening ? "destructive" : "default"}
-                  onClick={isListening ? stopListening : startListening}
-                  className="flex items-center gap-2"
-                >
-                  {isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-                  {isListening ? 'Arrêter' : 'Écouter'}
-                </Button>
-                
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => currentTranscript && handleVoiceCommand(currentTranscript)}
-                  disabled={!currentTranscript}
-                >
-                  <Zap className="h-5 w-5 mr-2" />
-                  Envoyer
-                </Button>
-                
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={() => speakResponse("As-salāmu ʿalaykum, je suis Aisha Al-Aman, votre assistant vocal éthique. Comment puis-je vous aider aujourd'hui ?")}
-                  disabled={isSpeaking}
-                >
-                  {isSpeaking ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-                  Test Audio
-                </Button>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-center">🗣️ Voix</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {voiceOptions.map((voice) => (
+                  <Button
+                    key={voice.id}
+                    variant={selectedVoice === voice.id ? "default" : "outline"}
+                    className="w-full justify-start"
+                    onClick={() => setSelectedVoice(voice.id)}
+                  >
+                    <span className="mr-2">{voice.icon}</span>
+                    {voice.name}
+                  </Button>
+                ))}
               </div>
-              
+              <Badge className="mt-2 w-full justify-center" variant="secondary">
+                {voiceOptions.find(v => v.id === selectedVoice)?.validation}
+              </Badge>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-center">🕌 Mode Culturel</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Button
+                variant="default"
+                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white"
+                onClick={() => setCulturalMode("islamic")}
+              >
+                🌙 Mode Islamique
+              </Button>
+              <div className="mt-3 text-sm text-center text-gray-600">
+                Réponses conformes Coran & Sunna
+              </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* Fonctionnalités Éthiques */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-          {ethicalFeatures.map((feature, index) => (
-            <Card key={index} className={`${feature.active ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'}`}>
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <feature.icon className={`h-6 w-6 ${feature.active ? 'text-green-600' : 'text-gray-400'}`} />
-                  <div>
-                    <h3 className="font-medium text-sm">{feature.title}</h3>
-                    <p className="text-xs text-gray-600">{feature.desc}</p>
-                  </div>
-                  <Badge variant={feature.active ? "default" : "secondary"} className="ml-auto">
-                    {feature.active ? '✅' : '⏸️'}
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {/* Interface Vocale Principale */}
+        <Card className="mb-8 border-2 border-blue-200">
+          <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-t-lg">
+            <CardTitle className="text-3xl text-center">🎯 Interface Vocale Interactive</CardTitle>
+          </CardHeader>
+          <CardContent className="p-8">
+            <div className="text-center mb-6">
+              <Button
+                onClick={startListening}
+                disabled={isListening}
+                size="lg"
+                className={`w-32 h-32 rounded-full text-2xl ${
+                  isListening 
+                    ? 'bg-gradient-to-r from-red-500 to-pink-500 animate-pulse' 
+                    : 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
+                }`}
+              >
+                {isListening ? "🔴" : "🎤"}
+              </Button>
+              <div className="mt-4 text-lg">
+                {isListening ? "Écoute en cours..." : "Appuyez pour parler"}
+              </div>
+            </div>
 
-        {/* Commandes Vocales */}
-        <Card className="mt-8">
+            {/* Résultat Reconnaissance */}
+            {recognitionResult && (
+              <Card className="mb-6 bg-blue-50">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <h3 className="font-bold text-blue-800 mb-2">📝 Votre Commande:</h3>
+                    <p className="text-lg text-blue-700">{recognitionResult}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Réponse Assistant */}
+            {assistantResponse && (
+              <Card className="mb-6 bg-green-50">
+                <CardContent className="p-4">
+                  <div className="text-center">
+                    <h3 className="font-bold text-green-800 mb-2">
+                      {selectedVoice === "feminine" ? "👩‍🏫" : "👨‍🏫"} Aïcha Al-Aman:
+                    </h3>
+                    <p className="text-lg text-green-700">{assistantResponse}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Commandes Suggérées */}
+        <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Headphones className="h-5 w-5" />
-              Commandes Vocales Disponibles
-            </CardTitle>
+            <CardTitle className="text-center">💬 Commandes Islamiques Suggérées</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {voiceCommands.map((cmd, index) => (
-                <div key={index} className="p-3 border rounded-lg hover:bg-gray-50 cursor-pointer"
-                     onClick={() => handleVoiceCommand(cmd.command)}>
-                  <Badge variant="outline" className="mb-2">{cmd.category}</Badge>
-                  <p className="font-medium text-sm mb-1">"{cmd.command}"</p>
-                  <p className="text-xs text-gray-600">{cmd.action}</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {(islamicCommands[selectedLanguage as keyof typeof islamicCommands] || islamicCommands["fr-FR"]).map((command, index) => (
+                <Button
+                  key={index}
+                  variant="outline"
+                  className="p-4 h-auto text-left justify-start hover:bg-emerald-50"
+                  onClick={() => {
+                    setRecognitionResult(command);
+                    processCommand(command);
+                  }}
+                >
+                  <div>
+                    <div className="font-semibold">{command}</div>
+                  </div>
+                </Button>
               ))}
             </div>
           </CardContent>
         </Card>
 
-        {/* Footer Protection */}
-        <div className="text-center mt-8 p-4 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600">
-            © 2025 <strong>Yakoubi Yamina</strong> - Club Empreinte Digitale CED™ | 
-            Assistant Vocal 100% Conforme Fiqh Informatique | 
-            Tous droits réservés
-          </p>
-        </div>
-        
+        {/* Validation Scholars */}
+        <Card className="bg-gradient-to-r from-amber-50 to-yellow-50 border-amber-200">
+          <CardContent className="p-6 text-center">
+            <div className="text-2xl text-amber-800 font-bold mb-4">
+              🏛️ Validation Scholars Islamiques
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-bold text-amber-700">150+ Scholars Consultés</div>
+                <div className="text-amber-600">Validation internationale</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-bold text-amber-700">4 Madhabs Conformes</div>
+                <div className="text-amber-600">Hanafi, Maliki, Shafi'i, Hanbali</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-bold text-amber-700">Fiqh Informatique</div>
+                <div className="text-amber-600">27,446+ règles respectées</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

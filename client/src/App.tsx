@@ -159,7 +159,6 @@ import ProtectionLicenceCED from "@/pages/ProtectionLicenceCED";
 import TestComplet55ModulesCED from "@/pages/TestComplet55ModulesCED";
 import InteractiveHalalJourneyTracker from "@/pages/InteractiveHalalJourneyTracker";
 import SpiritualWellnessGamification from "@/pages/SpiritualWellnessGamification";
-import CommunityImpactVisualizationDashboard from "@/pages/CommunityImpactVisualizationDashboard";
 import MultilingualAIMentorGuidance from "@/pages/MultilingualAIMentorGuidance";
 import EcoFriendlyLifestyleChallengeGenerator from "@/pages/EcoFriendlyLifestyleChallengeGenerator";
 import AnimatedWellnessProgressSparkle from "@/pages/AnimatedWellnessProgressSparkle";
@@ -188,6 +187,11 @@ import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
 import CedVoieHalalHome from "@/pages/CedHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
+import InteractiveHalalTechJourneyMap from "@/pages/InteractiveHalalTechJourneyMap";
+import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
+import EcoFriendlyDigitalCarbonTracker from "@/pages/EcoFriendlyDigitalCarbonTracker";
+import PersonalizedIslamicWellnessMotivation from "@/pages/PersonalizedIslamicWellnessMotivation";
+import CommunityImpactVisualizationDashboard from "@/pages/CommunityImpactVisualizationDashboard";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import LocalisationModulesCED from "@/pages/LocalisationModulesCED";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
@@ -200,7 +204,6 @@ import FiqhInformatiqueComplet from "@/pages/FiqhInformatiqueComplet";
 import ThemesIslamiquesPersonnalisables from "@/pages/ThemesIslamiquesPersonnalisables";
 import DiagnosticEcosystemeRevolutionnaire from "@/pages/DiagnosticEcosystemeRevolutionnaire";
 import GestionRHComplete from "@/pages/GestionRHComplete";
-import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
 import GamifiedLearningPath from "@/pages/GamifiedLearningPath";
 import BibliothequeNumeriqueFiqh from "@/pages/BibliothequeNumeriqueFiqh";
 import FiqhIA3456Regles from "@/pages/FiqhIA3456Regles";
@@ -976,6 +979,22 @@ function Router() {
       <Route path="/charte-prettyhowq" component={CharteFiqhIAHalalSimple} />
       <Route path="/certification-halal" component={CharteFiqhIAHalalSimple} />
       <Route path="/fiqh-chart" component={CharteFiqhIAHalalSimple} />
+
+      {/* 5 Nouvelles Fonctionnalités Demandées */}
+      <Route path="/interactive-halaltech-journey-map" component={InteractiveHalalTechJourneyMap} />
+      <Route path="/halal-journey-map" component={InteractiveHalalTechJourneyMap} />
+      <Route path="/multilingual-voice-assistant" component={MultilingualVoiceAssistant} />
+      <Route path="/assistant-vocal-multilingue" component={MultilingualVoiceAssistant} />
+      <Route path="/voice-assistant-islamic" component={MultilingualVoiceAssistant} />
+      <Route path="/eco-friendly-carbon-tracker" component={EcoFriendlyDigitalCarbonTracker} />
+      <Route path="/carbon-footprint-tracker" component={EcoFriendlyDigitalCarbonTracker} />
+      <Route path="/suivi-carbone-numerique" component={EcoFriendlyDigitalCarbonTracker} />
+      <Route path="/personalized-islamic-wellness" component={PersonalizedIslamicWellnessMotivation} />
+      <Route path="/motivation-spirituelle-quotidienne" component={PersonalizedIslamicWellnessMotivation} />
+      <Route path="/wellness-motivation-generator" component={PersonalizedIslamicWellnessMotivation} />
+      <Route path="/community-impact-dashboard" component={CommunityImpactVisualizationDashboard} />
+      <Route path="/dashboard-impact-communautaire" component={CommunityImpactVisualizationDashboard} />
+      <Route path="/visualisation-impact-ummah" component={CommunityImpactVisualizationDashboard} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={CedVoieHalalHome} />
