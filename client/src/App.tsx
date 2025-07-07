@@ -246,6 +246,12 @@ import SportsHautNiveau from "@/pages/SportsHautNiveau";
 import IACoachingHalal from "@/pages/IACoachingHalal";
 import JurisprudenceHanaeOzel from "@/pages/JurisprudenceHanaeOzel";
 import MalikKetarDeveloppement from "@/pages/MalikKetarDeveloppement";
+import InteractiveEcoWarriorProgress from "@/pages/InteractiveEcoWarriorProgress";
+import PersonalizedGreenCelebrations from "@/pages/PersonalizedGreenCelebrations";
+import MultilingualEnvironmentalStorytelling from "@/pages/MultilingualEnvironmentalStorytelling";
+import HalalTechCommunityGamification from "@/pages/HalalTechCommunityGamification";
+import MindfulWellnessConstellation from "@/pages/MindfulWellnessConstellation";
+import MethodologieSciencesIslamiques from "@/pages/MethodologieSciencesIslamiques";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -1311,6 +1317,31 @@ function Router() {
       <Route path="/developpement-web-halaltech" component={MalikKetarDeveloppement} />
       <Route path="/ux-ui-design-islamique" component={MalikKetarDeveloppement} />
       <Route path="/coaching-sportif-hommes" component={MalikKetarDeveloppement} />
+      
+      {/* Nouvelles Fonctionnalités Environnementales & Wellness */}
+      <Route path="/interactive-eco-warrior-progress" component={InteractiveEcoWarriorProgress} />
+      <Route path="/eco-warrior-progress" component={InteractiveEcoWarriorProgress} />
+      <Route path="/progression-ecologique" component={InteractiveEcoWarriorProgress} />
+      
+      <Route path="/personalized-green-celebrations" component={PersonalizedGreenCelebrations} />
+      <Route path="/celebrations-vertes" component={PersonalizedGreenCelebrations} />
+      <Route path="/animations-celebrations" component={PersonalizedGreenCelebrations} />
+      
+      <Route path="/multilingual-environmental-storytelling" component={MultilingualEnvironmentalStorytelling} />
+      <Route path="/storytelling-environnemental" component={MultilingualEnvironmentalStorytelling} />
+      <Route path="/histoires-environnementales" component={MultilingualEnvironmentalStorytelling} />
+      
+      <Route path="/halal-tech-community-gamification" component={HalalTechCommunityGamification} />
+      <Route path="/gamification-communautaire" component={HalalTechCommunityGamification} />
+      <Route path="/communaute-halaltech" component={HalalTechCommunityGamification} />
+      
+      <Route path="/mindful-wellness-constellation" component={MindfulWellnessConstellation} />
+      <Route path="/constellation-wellness" component={MindfulWellnessConstellation} />
+      <Route path="/carte-wellness" component={MindfulWellnessConstellation} />
+      
+      <Route path="/methodologie-sciences-islamiques" component={MethodologieSciencesIslamiques} />
+      <Route path="/sciences-islamiques" component={MethodologieSciencesIslamiques} />
+      <Route path="/apprentissage-islamique" component={MethodologieSciencesIslamiques} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
