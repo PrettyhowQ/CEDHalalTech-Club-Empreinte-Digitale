@@ -155,6 +155,8 @@ import FiqhInformatiqueBibliothequePage from "@/pages/FiqhInformatiqueBibliotheq
 import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import IARPVocalTest from "@/pages/IARPVocalTest";
+import ProtectionLicenceCED from "@/pages/ProtectionLicenceCED";
+import TestComplet55ModulesCED from "@/pages/TestComplet55ModulesCED";
 import ContactScholars from "@/pages/ContactScholars";
 import Modules52CED from "@/pages/Modules52CED";
 import CharteSupervisionSavante from "@/pages/CharteSupervisionSavante";
@@ -698,6 +700,13 @@ function Router() {
       
       {/* Guide Fiqh Informatique */}
       <Route path="/fiqh-informatique" component={FiqhInformatiqueGuidePage} />
+      
+      {/* Nouvelles pages créées selon notes manuscrites */}
+      <Route path="/protection-licence-ced" component={ProtectionLicenceCED} />
+      <Route path="/protection-licence" component={ProtectionLicenceCED} />
+      <Route path="/test-complet-55-modules" component={TestComplet55ModulesCED} />
+      <Route path="/test-complet-modules" component={TestComplet55ModulesCED} />
+      <Route path="/centre-test-validation" component={TestComplet55ModulesCED} />
       <Route path="/fiqh-guide" component={FiqhInformatiqueGuidePage} />
       <Route path="/islamic-tech-guide" component={FiqhInformatiqueGuidePage} />
       <Route path="/halal-learning" component={FiqhInformatiqueGuidePage} />

@@ -607,9 +607,14 @@ export default function CedHalalHome() {
                     🎓 Certificats HalalTech™
                   </Button>
                 </Link>
-                <Link href="/test-55-modules">
+                <Link href="/test-complet-55-modules">
                   <Button className="text-sm px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white w-full h-16">
-                    🧪 Centre Test 55 Modules
+                    🧪 Test Complet 55 Modules CED
+                  </Button>
+                </Link>
+                <Link href="/protection-licence-ced">
+                  <Button className="text-sm px-4 py-2 bg-red-600 hover:bg-red-700 text-white w-full h-16">
+                    🛡️ Protection & Licence CED
                   </Button>
                 </Link>
                 <Link href="/52-modules">
