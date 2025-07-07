@@ -85,6 +85,84 @@ export default function CedHalalHome() {
           </Card>
         </div>
 
+        {/* Section Version Bêta Familiale */}
+        <div className="mb-16">
+          <Card className="border-4 border-purple-400 bg-gradient-to-br from-purple-50 to-blue-50 shadow-2xl">
+            <CardHeader className="text-center">
+              <div className="text-8xl mb-4">👨‍👩‍👧‍👦</div>
+              <CardTitle className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Version Bêta Familiale CED
+              </CardTitle>
+              <p className="text-xl text-gray-600 mt-4">
+                Accès privilégié famille Yakoubi • Tests internes avant lancement public
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Accès Bêta Famille */}
+                <Card className="bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 hover:shadow-lg transition-all cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-6xl mb-4">🔑</div>
+                    <h3 className="text-xl font-bold text-blue-800 mb-3">Accès Bêta Famille</h3>
+                    <p className="text-sm text-blue-600 mb-4">Portail exclusif famille Yakoubi pour tests internes</p>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700"
+                      onClick={() => window.location.href = '/family-beta-access'}
+                    >
+                      Accéder Portail Famille
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* HalalTech Marketplace */}
+                <Card className="bg-gradient-to-br from-emerald-50 to-green-50 border-emerald-200 hover:shadow-lg transition-all cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-6xl mb-4">🏪</div>
+                    <h3 className="text-xl font-bold text-emerald-800 mb-3">HalalTech Marketplace</h3>
+                    <p className="text-sm text-emerald-600 mb-4">Premier marché mondial solutions technologiques halal</p>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700"
+                      onClick={() => window.location.href = '/halaltech-marketplace'}
+                    >
+                      Explorer Marketplace
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Islamic Startup Incubator */}
+                <Card className="bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200 hover:shadow-lg transition-all cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-6xl mb-4">🏢</div>
+                    <h3 className="text-xl font-bold text-indigo-800 mb-3">Startup Incubator</h3>
+                    <p className="text-sm text-indigo-600 mb-4">Premier incubateur mondial startups technologiques islamiques</p>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700"
+                      onClick={() => window.location.href = '/islamic-startup-incubator'}
+                    >
+                      Rejoindre Incubateur
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Smart Contracts Halal */}
+                <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-orange-200 hover:shadow-lg transition-all cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-6xl mb-4">⛓️</div>
+                    <h3 className="text-xl font-bold text-orange-800 mb-3">Smart Contracts Halal</h3>
+                    <p className="text-sm text-orange-600 mb-4">Contrats intelligents 100% conformes Sharia</p>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700"
+                      onClick={() => window.location.href = '/smart-contracts-halal'}
+                    >
+                      Créer Contrats
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Section Nouvelles Fonctionnalités Révolutionnaires */}
         <div className="mb-16">
           <Card className="border-4 border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50 shadow-2xl">

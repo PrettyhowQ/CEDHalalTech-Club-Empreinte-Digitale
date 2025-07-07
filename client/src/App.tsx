@@ -192,6 +192,10 @@ import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
 import EcoFriendlyDigitalCarbonTracker from "@/pages/EcoFriendlyDigitalCarbonTracker";
 import PersonalizedIslamicWellnessMotivation from "@/pages/PersonalizedIslamicWellnessMotivation";
 import CommunityImpactVisualizationDashboard from "@/pages/CommunityImpactVisualizationDashboard";
+import HalalTechMarketplace from "@/pages/HalalTechMarketplace";
+import IslamicStartupIncubator from "@/pages/IslamicStartupIncubator";
+import FamilyBetaAccess from "@/pages/FamilyBetaAccess";
+import SmartContractsHalal from "@/pages/SmartContractsHalal";
 import LocalisationVisuelle from "@/pages/LocalisationVisuelle";
 import LocalisationModulesCED from "@/pages/LocalisationModulesCED";
 import FiqhCompliancePage from "@/pages/FiqhCompliancePage";
@@ -995,6 +999,14 @@ function Router() {
       <Route path="/community-impact-dashboard" component={CommunityImpactVisualizationDashboard} />
       <Route path="/dashboard-impact-communautaire" component={CommunityImpactVisualizationDashboard} />
       <Route path="/visualisation-impact-ummah" component={CommunityImpactVisualizationDashboard} />
+      <Route path="/halaltech-marketplace" component={HalalTechMarketplace} />
+      <Route path="/marketplace-halal" component={HalalTechMarketplace} />
+      <Route path="/islamic-startup-incubator" component={IslamicStartupIncubator} />
+      <Route path="/incubateur-startups-islamiques" component={IslamicStartupIncubator} />
+      <Route path="/family-beta-access" component={FamilyBetaAccess} />
+      <Route path="/acces-beta-famille" component={FamilyBetaAccess} />
+      <Route path="/smart-contracts-halal" component={SmartContractsHalal} />
+      <Route path="/contrats-intelligents-halal" component={SmartContractsHalal} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={CedVoieHalalHome} />
