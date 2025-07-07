@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode", 
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-eslint",
+    "ms-mssql.sql-database-projects-vscode",
+    "humao.rest-client",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-github-pullrequest",
+    "vercel.vercel-vscode",
+    "ms-vscode.live-server",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.thunder-client",
+    "ms-ceintl.vscode-language-pack-ar",
+    "ahmadalli.vscode-arabic-support"
+  ]
+}

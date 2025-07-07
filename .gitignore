@@ -14,7 +14,7 @@ yarn-error.log*
 # Build outputs
 dist/
 build/
-*.tsbuildinfo
+.vite/
 
 # Database
 *.db
@@ -24,7 +24,6 @@ build/
 # Logs
 logs
 *.log
-lerna-debug.log*
 
 # Runtime data
 pids
@@ -46,15 +45,6 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
 # Optional REPL history
 .node_repl_history
 
@@ -63,9 +53,6 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -86,15 +73,14 @@ dist
 tmp/
 temp/
 
-# Editor directories and files
+# IDE files
 .vscode/settings.json
-.vscode/launch.json
-.vscode/extensions.json
+.idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
+# OS files
 .DS_Store
 .DS_Store?
 ._*
@@ -103,10 +89,15 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Replit specific
+# Replit files (keep for local development)
 .replit
-replit.nix
-.upm/
+.replit.nix
+.cache/
+.config/
+.local/
 
-# Drizzle
-drizzle/
+# CED HalalTech™ Specific
+attached_assets/
+club-empreinte-digitale/
+*.backup
+*.tar.gz
