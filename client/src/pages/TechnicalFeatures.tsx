@@ -6,12 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Lightbulb, Globe, TrendingUp, Palette, MessageCircle, CheckCircle, Star, Rocket } from "lucide-react";
 
-// Import our technical components
-import { IslamicTooltip } from "@/components/ui/islamic-tooltip";
-import { AccessibilityProvider, AccessibilityPanel, AccessibilityToggle } from "@/components/ui/accessibility-mode";
-import { ProgressVisualization, LearningProgressDemo } from "@/components/ui/progress-visualization";
-import { ColorPaletteProvider, ColorPaletteSelector, ColorShowcase } from "@/components/ui/islamic-color-palette";
-import { AIContextualChatbot } from "@/components/ui/ai-contextual-chatbot";
+// Import our technical demo components
+import { 
+  IslamicTooltipDemo,
+  AccessibilityModeDemo,
+  ProgressVisualizationDemo,
+  IslamicColorPaletteDemo,
+  AIContextualChatbotDemo
+} from "@/components/ui/technical-demos";
 
 const TechnicalFeatures = () => {
   const [activeDemo, setActiveDemo] = useState<string>("tooltip");
@@ -23,7 +25,7 @@ const TechnicalFeatures = () => {
       description: "Système de guidance spirituelle avec références coraniques multilingues",
       icon: <Lightbulb className="h-6 w-6 text-green-600" />,
       technologies: ["React Hooks", "Radix UI", "Multi-langue", "Références Islamiques"],
-      component: <IslamicTooltip />,
+      component: <IslamicTooltipDemo />,
       benefits: [
         "Guidance spirituelle contextuelle",
         "Support 8+ langues",
@@ -37,7 +39,7 @@ const TechnicalFeatures = () => {
       description: "Mode d'accessibilité sensible culturellement avec support RTL et thèmes islamiques",
       icon: <Globe className="h-6 w-6 text-blue-600" />,
       technologies: ["RTL Support", "Mode Prière", "Thèmes Islamiques", "WCAG 2.1"],
-      component: <AccessibilityToggle />,
+      component: <AccessibilityModeDemo />,
       benefits: [
         "Support RTL complet pour l'arabe",
         "Mode prière automatique",
@@ -51,7 +53,7 @@ const TechnicalFeatures = () => {
       description: "Visualisation de progression gamifiée avec niveaux spirituels authentiques",
       icon: <TrendingUp className="h-6 w-6 text-purple-600" />,
       technologies: ["Gamification", "Progress Tracking", "Spiritual Levels", "Interactive UI"],
-      component: <LearningProgressDemo />,
+      component: <ProgressVisualizationDemo />,
       benefits: [
         "Apprentissage gamifié engageant",
         "Niveaux spirituels authentiques",
@@ -65,7 +67,7 @@ const TechnicalFeatures = () => {
       description: "Palette de couleurs adaptative inspirée de l'art islamique traditionnel",
       icon: <Palette className="h-6 w-6 text-amber-600" />,
       technologies: ["CSS Variables", "Islamic Art", "Color Theory", "Adaptive Design"],
-      component: <ColorShowcase />,
+      component: <IslamicColorPaletteDemo />,
       benefits: [
         "4 thèmes art islamique authentiques",
         "Couleurs harmonieuses et respectueuses",
@@ -79,7 +81,7 @@ const TechnicalFeatures = () => {
       description: "Assistant IA Aisha Al-Aman avec reconnaissance vocale et conformité Fiqh",
       icon: <MessageCircle className="h-6 w-6 text-cyan-600" />,
       technologies: ["OpenAI API", "Voice Recognition", "Multilingual AI", "Fiqh Compliance"],
-      component: <AIContextualChatbot />,
+      component: <AIContextualChatbotDemo />,
       benefits: [
         "IA conforme aux valeurs islamiques",
         "Reconnaissance vocale 8+ langues",
@@ -92,9 +94,7 @@ const TechnicalFeatures = () => {
   const currentFeature = features.find(f => f.id === activeDemo);
 
   return (
-    <AccessibilityProvider>
-      <ColorPaletteProvider>
-        <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -269,12 +269,14 @@ const TechnicalFeatures = () => {
                 <Button 
                   size="sm" 
                   className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600"
+                  onClick={() => window.location.href = '/'}
                 >
                   🏠 Retour Accueil CED
                 </Button>
                 <Button 
                   size="sm" 
                   variant="outline"
+                  onClick={() => window.location.href = '/contact'}
                 >
                   📧 Contact Développement
                 </Button>
@@ -295,9 +297,6 @@ const TechnicalFeatures = () => {
         </div>
       </div>
     </div>
-    <AccessibilityPanel />
-    </ColorPaletteProvider>
-    </AccessibilityProvider>
   );
 };
 
