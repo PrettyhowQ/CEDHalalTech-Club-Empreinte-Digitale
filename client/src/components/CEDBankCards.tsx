@@ -8,14 +8,12 @@ import { motion } from 'framer-motion';
 import { 
   CreditCard, 
   Shield, 
-  Crown, 
   Star,
   Globe,
   Zap,
   Lock,
   Smartphone,
   Plane,
-  Gem,
   MapPin,
   Clock,
   DollarSign,
@@ -41,9 +39,9 @@ export function CEDBankCards() {
     switch (tier) {
       case 'standard': return CreditCard;
       case 'gold': return Star;
-      case 'platinum': return Crown;
-      case 'diamond': return Gem;
-      case 'royal': return Crown;
+      case 'platinum': return Star;
+      case 'diamond': return Shield;
+      case 'royal': return Star;
       default: return CreditCard;
     }
   };

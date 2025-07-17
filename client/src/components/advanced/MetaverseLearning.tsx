@@ -40,7 +40,7 @@ export function MetaverseLearning() {
   const [avatarData, setAvatarData] = useState<AvatarCustomization>({
     style: 'Professional Learner',
     abilities: ['Quantum Thinking', 'Holographic Memory', 'Time Dilation Focus'],
-    accessories: ['Neural Crown', 'Knowledge Crystals', 'Wisdom Aura']
+    accessories: ['Neural Star', 'Knowledge Shields', 'Wisdom Aura']
   });
 
   const metaverseWorlds: MetaverseWorld[] = [

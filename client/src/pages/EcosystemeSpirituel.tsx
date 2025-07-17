@@ -26,7 +26,6 @@ import {
   Mountain,
   Waves,
   Wind,
-  Crown,
   Shield,
   Gift,
   Lightbulb,

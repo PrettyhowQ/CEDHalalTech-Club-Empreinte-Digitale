@@ -16,7 +16,6 @@ import {
   Target,
   Calendar,
   Users,
-  Crown,
   Zap,
   Globe,
   Rocket,

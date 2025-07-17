@@ -7,7 +7,6 @@ import { DubaiWealthTracker } from '@/components/DubaiWealthTracker';
 import { RealTimeDubaiInvestments } from '@/components/RealTimeDubaiInvestments';
 import { motion } from 'framer-motion';
 import { 
-  Crown,
   TrendingUp,
   Users,
   DollarSign,
@@ -55,7 +54,7 @@ export default function DubaiWealthCRM() {
       >
         <div className="flex items-center justify-center gap-3">
           <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-            <Crown className="h-8 w-8 text-white" />
+            <Star className="h-8 w-8 text-white" />
           </div>
           <div>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">

@@ -11,13 +11,13 @@ import {
   Shield, 
   Star,
   CheckCircle,
-  Crown,
+
   Zap,
   Globe,
   CreditCard,
   Fingerprint,
   Wallet,
-  Diamond,
+
   Gift
 } from 'lucide-react';
 import { SiAppstore, SiApple, SiGoogleplay, SiAndroid, SiSamsung } from 'react-icons/si';
@@ -71,7 +71,7 @@ export function DubaiEliteAppDownload() {
           name: 'Installation Concierge',
           url: 'https://concierge.cedbank.ae/ios-setup',
           description: 'Service concierge personnel à domicile/bureau',
-          icon: Crown,
+          icon: Star,
           exclusivity: 'vip'
         },
         {
@@ -79,7 +79,7 @@ export function DubaiEliteAppDownload() {
           name: 'Configuration Private Banking',
           url: 'https://private.cedbank.ae/premium-setup',
           description: 'Setup exclusif par notre équipe private banking',
-          icon: Diamond,
+          icon: Shield,
           exclusivity: 'ultra'
         }
       ],
@@ -405,7 +405,7 @@ export function DubaiEliteAppDownload() {
                       <p className="text-sm opacity-70">{method.description}</p>
                     </div>
                     {method.exclusivity === 'ultra' && (
-                      <Crown className="h-4 w-4 ml-2 text-amber-300" />
+                      <Star className="h-4 w-4 ml-2 text-amber-300" />
                     )}
                   </Button>
                 ))}
@@ -459,13 +459,13 @@ export function DubaiEliteAppDownload() {
             <Card className="bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-200">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Crown className="h-5 w-5 text-purple-600" />
+                  <Star className="h-5 w-5 text-purple-600" />
                   Services Concierge Dubai
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center gap-3 p-3 bg-white rounded-lg">
-                  <Diamond className="h-5 w-5 text-purple-600" />
+                  <Shield className="h-5 w-5 text-purple-600" />
                   <div>
                     <p className="font-medium text-sm">Installation à domicile</p>
                     <p className="text-xs text-gray-600">Service concierge personnel UAE</p>

@@ -12,7 +12,6 @@ import {
   Eye,
   Heart,
   Zap,
-  Crown,
   Building2,
   Image,
   Play,
