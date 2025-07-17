@@ -12,6 +12,7 @@ import { lazy } from "react";
 
 // Pages
 import Home from "@/pages/HomeFixed";
+import TechnicalFeatures from "@/pages/TechnicalFeatures";
 import Landing from "@/pages/Landing";
 import Formations from "@/pages/Formations";
 import Planning from "@/pages/Planning";
@@ -1015,6 +1016,12 @@ function Router() {
       <Route path="/ai-halal-entrepreneurship-mentor" component={AIHalalEntrepreneurshipMentor} />
       <Route path="/mentor-ia-entrepreneuriat-halal" component={AIHalalEntrepreneurshipMentor} />
       <Route path="/mentor-entrepreneurship-ai" component={AIHalalEntrepreneurshipMentor} />
+
+      {/* Technical Features Integration */}
+      <Route path="/technical-features" component={TechnicalFeatures} />
+      <Route path="/fonctionnalites-techniques" component={TechnicalFeatures} />
+      <Route path="/features-islamiques" component={TechnicalFeatures} />
+      <Route path="/innovations-techniques" component={TechnicalFeatures} />
 
       {/* Main home page accessible to everyone */}
       <Route path="/" component={CedVoieHalalHome} />

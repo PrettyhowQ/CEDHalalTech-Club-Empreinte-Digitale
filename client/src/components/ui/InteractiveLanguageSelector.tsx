@@ -460,5 +460,3 @@ export function InteractiveLanguageSelector({
     </motion.div>
   );
 }
-
-export default InteractiveLanguageSelector;

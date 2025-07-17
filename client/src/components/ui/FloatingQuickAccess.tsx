@@ -152,5 +152,3 @@ export function FloatingQuickAccess() {
     </div>
   );
 }
-
-export default FloatingQuickAccess;
