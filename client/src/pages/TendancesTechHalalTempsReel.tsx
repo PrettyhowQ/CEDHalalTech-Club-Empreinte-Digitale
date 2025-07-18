@@ -415,7 +415,7 @@ export default function TendancesTechHalalTempsReel() {
                 {/* Projection Future */}
                 <div className="mt-8 p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg border-2 border-yellow-400">
                   <h3 className="text-2xl font-bold text-yellow-700 mb-4 text-center">
-                    🔮 Projection Domination 2025-2026
+                    📊🧮📅💼💡 Prévisionnel Halal Domination 2025-2026
                   </h3>
                   <div className="grid md:grid-cols-4 gap-4 text-center">
                     <div className="p-4 bg-white rounded">

@@ -25,7 +25,7 @@ Le système RH de Club Empreinte Digitale est entièrement conforme au droit sui
 
 ## 👥 ÉQUIPE CLUB EMPREINTE DIGITALE
 
-### 👑 Direction Générale
+### 🧭 Direction Générale
 
 **Yakoubi Yamina - Fondatrice & CEO**
 - **Statut**: Dirigeante unique de l'écosystème complet - Toutes décisions finales

@@ -493,7 +493,7 @@ export default function AnalysePredictiveMarcheHalal() {
 
                   {/* Position CED HalalTech */}
                   <div>
-                    <h3 className="text-2xl font-bold text-blue-700 mb-6">👑 Position CED HalalTech™</h3>
+                    <h3 className="text-2xl font-bold text-blue-700 mb-6">🧭 Position CED HalalTech™</h3>
                     
                     <div className="space-y-6">
                       

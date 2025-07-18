@@ -115,7 +115,7 @@ Club Empreinte Digitale est un écosystème technologique révolutionnaire 100% 
 │   │   │   ├── 📊 DIAGNOSTIC & ANALYTICS
 │   │   │   ├── 📄 DiagnosticEcosystemeRevolutionnaire.tsx # Score 99/100
 │   │   │   │
-│   │   │   ├── 👑 PLANIFICATION SUCCESSORALE
+│   │   │   ├── 📈 PLANIFICATION SUCCESSORALE
 │   │   │   ├── 📄 PlanificationSuccessorale50Ans.tsx # Héritage 50+ ans
 │   │   │   │
 │   │   │   └── 📄 ... (35+ autres modules)

@@ -7,7 +7,7 @@
 
 ## 🏢 Structure Familiale & Accès
 
-### 👑 Direction Générale
+### 🧭 Direction Générale
 - **Yakoubi Yamina** (🧕) - Fondatrice & Directrice Générale
   - Accès Total Administrateur (75 modules)
   - Décisionnaire unique de l'écosystème

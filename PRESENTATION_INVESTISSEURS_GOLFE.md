@@ -361,7 +361,7 @@ Notre écosystème génère revenus multiples sources complémentaires :
 
 ## **🎖️ ÉQUIPE DIRIGEANTE DE CLASSE MONDIALE**
 
-### **👑 Yakoubi Yamina - Founder & CEO**
+### **🧭 Yakoubi Yamina - Founder & CEO**
 - **Vision stratégique** : Créatrice concept CED, expertise 15+ ans fintech
 - **Conformité Sharia** : Formation approfondie 4 écoles juridiques islamiques
 - **Leadership éprouvé** : Construction équipe 47 personnes, culture halal forte

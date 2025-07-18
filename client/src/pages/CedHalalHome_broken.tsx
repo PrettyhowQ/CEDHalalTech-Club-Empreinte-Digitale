@@ -788,7 +788,7 @@ export default function CedVoieHalalHome() {
 
               <Link href="/analyse-predictive-marche-halal">
                 <Button className="w-full h-20 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white border-2 border-orange-400 flex flex-col justify-center">
-                  <span className="text-2xl mb-1">🔮</span>
+                  <span className="text-2xl mb-1">📊🧮</span>
                   <span className="text-sm font-bold">Analyse Prédictive</span>
                   <span className="text-xs">Marché Halal IA</span>
                 </Button>
@@ -1057,7 +1057,7 @@ export default function CedVoieHalalHome() {
                   </Link>
                   <Link href="/planification-successorale-50-ans">
                     <Button className="w-full h-16 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white">
-                      <span className="text-lg mr-2">👑</span>
+                      <span className="text-lg mr-2">🌟</span>
                       Héritage 50+ Ans
                     </Button>
                   </Link>

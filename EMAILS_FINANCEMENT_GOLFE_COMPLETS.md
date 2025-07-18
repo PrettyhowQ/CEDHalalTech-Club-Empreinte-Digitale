@@ -325,4 +325,4 @@ Cordialement,
 - [ ] Reporting progress hebdomadaire
 
 **📧 Contact Coordination**: contact@empreintedigitale.club  
-**👑 Responsable**: Yakoubi Yamina - Fondatrice CED HalalTech™
+**🧭 Responsable**: Yakoubi Yamina - Fondatrice CED HalalTech™

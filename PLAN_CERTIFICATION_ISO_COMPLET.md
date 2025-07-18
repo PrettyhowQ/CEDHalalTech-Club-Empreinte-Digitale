@@ -345,7 +345,7 @@ APRÈS 6 certifications ISO:
 ## 📧 **CONTACT SUIVI PROJET**
 
 **📧 Direction**: contact@empreintedigitale.club  
-**👑 Fondatrice**: Yakoubi Yamina  
+**🧭 Fondatrice**: Yakoubi Yamina  
 **🏢 Siège**: Geneva, Switzerland  
 **📞 Urgence**: +41 XX XXX XX XX (à compléter)
 
