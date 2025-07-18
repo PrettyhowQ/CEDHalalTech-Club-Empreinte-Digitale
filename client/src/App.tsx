@@ -173,8 +173,17 @@ import ContactScholars from "@/pages/ContactScholars";
 import Modules52CED from "@/pages/Modules52CED";
 import CharteSupervisionSavante from "@/pages/CharteSupervisionSavante";
 import ClauseIANonMufti from "@/pages/ClauseIANonMufti";
-import CertificationsValidations from "@/pages/CertificationsValidations";
+
+// Nouvelles fonctionnalités UI/UX islamiques 2025
+import EnhancedCulturalMicroInteractionDesign from "@/pages/EnhancedCulturalMicroInteractionDesign";
+import AnimatedIslamicGeometricLoadingSpinner from "@/pages/AnimatedIslamicGeometricLoadingSpinner";
+import AccessibilityVoiceGuidanceUINavigation from "@/pages/AccessibilityVoiceGuidanceUINavigation";
+import ContextualCulturalLearningPopups from "@/pages/ContextualCulturalLearningPopups";
+import DynamicMultilingualTransitionAnimations from "@/pages/DynamicMultilingualTransitionAnimations";
+
+// Portfolio Premium et Certifications
 import PortfolioPremiumIntegration from "@/pages/PortfolioPremiumIntegration";
+import CertificationsValidations from "@/pages/CertificationsValidations";
 import EcranPresentationScholar from "@/pages/EcranPresentationScholar";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
@@ -814,6 +823,34 @@ function Router() {
       <Route path="/bibliotheque-fiqh" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/fiqh-bibliotheque" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/fiches-fiqh" component={FiqhInformatiqueBibliothequePage} />
+
+      {/* ✨ PORTFOLIO PREMIUM CED HALALTECH™ ✨ */}
+      <Route path="/portfolio-premium" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-premium-ced" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-enterprise" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-international" component={PortfolioPremiumIntegration} />
+      <Route path="/certifications-validations" component={CertificationsValidations} />
+      <Route path="/certifications-iso" component={CertificationsValidations} />
+      <Route path="/validations-religieuses" component={CertificationsValidations} />
+      <Route path="/awards-recognition" component={CertificationsValidations} />
+
+      {/* 🎨 FONCTIONNALITÉS UI/UX ISLAMIQUES RÉVOLUTIONNAIRES */}
+      <Route path="/enhanced-cultural-micro-interactions" component={EnhancedCulturalMicroInteractionDesign} />
+      <Route path="/micro-interactions-culturelles" component={EnhancedCulturalMicroInteractionDesign} />
+      <Route path="/animated-islamic-geometric-loading" component={AnimatedIslamicGeometricLoadingSpinner} />
+      <Route path="/loading-geometrique-islamique" component={AnimatedIslamicGeometricLoadingSpinner} />
+      <Route path="/accessibility-voice-guidance" component={AccessibilityVoiceGuidanceUINavigation} />
+      <Route path="/guidance-vocale-accessibilite" component={AccessibilityVoiceGuidanceUINavigation} />
+      <Route path="/contextual-cultural-learning" component={ContextualCulturalLearningPopups} />
+      <Route path="/apprentissage-culturel-contextuel" component={ContextualCulturalLearningPopups} />
+      <Route path="/dynamic-multilingual-transitions" component={DynamicMultilingualTransitionAnimations} />
+      <Route path="/transitions-multilingues-dynamiques" component={DynamicMultilingualTransitionAnimations} />
+
+      {/* 📚 FORMATIONS HALAL CED TOUTES ROUTES */}
+      <Route path="/formations-halal-ced" component={Formations} />
+      <Route path="/formations-islamiques" component={Formations} />
+      <Route path="/formations-certifiees" component={Formations} />
+      <Route path="/formations-fiqh" component={Formations} />
       <Route path="/procedures-islamiques" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/islamic-procedures" component={FiqhInformatiqueBibliothequePage} />
       <Route path="/manuel-fiqh" component={ManuelFiqhPage} />

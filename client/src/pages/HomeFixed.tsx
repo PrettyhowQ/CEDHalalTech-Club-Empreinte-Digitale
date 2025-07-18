@@ -323,9 +323,83 @@ export default function Home() {
 
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
                   <div className="text-2xl mb-2">🌍</div>
-                  <h4 className="font-bold mb-2">847,592 Utilisateurs</h4>
-                  <p className="text-sm opacity-90">67 pays, +340% croissance</p>
+                  <h4 className="font-bold mb-2">Recognition Globale</h4>
+                  <p className="text-sm opacity-90">847,592 utilisateurs, 67 pays</p>
                 </div>
+              </div>
+            </div>
+
+            {/* 🎨 FONCTIONNALITÉS UI/UX ISLAMIQUES RÉVOLUTIONNAIRES 2025 */}
+            <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🎨 UI/UX Islamiques Révolutionnaires</h2>
+                <p className="text-lg opacity-90">Innovation technologique respectant 100% valeurs islamiques authentiques</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <Link href="/enhanced-cultural-micro-interactions" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">✨</div>
+                  <h4 className="font-bold mb-2">Micro-Interactions</h4>
+                  <p className="text-sm opacity-90">Culturellement sensibles</p>
+                </Link>
+
+                <Link href="/animated-islamic-geometric-loading" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🕌</div>
+                  <h4 className="font-bold mb-2">Loading Géométrique</h4>
+                  <p className="text-sm opacity-90">Motifs islamiques animés</p>
+                </Link>
+
+                <Link href="/accessibility-voice-guidance" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🔊</div>
+                  <h4 className="font-bold mb-2">Guidance Vocale</h4>
+                  <p className="text-sm opacity-90">Accessibilité avancée</p>
+                </Link>
+
+                <Link href="/contextual-cultural-learning" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">📚</div>
+                  <h4 className="font-bold mb-2">Tooltips Culturels</h4>
+                  <p className="text-sm opacity-90">Apprentissage contextuel</p>
+                </Link>
+
+                <Link href="/dynamic-multilingual-transitions" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🌐</div>
+                  <h4 className="font-bold mb-2">Transitions Multilingues</h4>
+                  <p className="text-sm opacity-90">Animations dynamiques</p>
+                </Link>
+              </div>
+            </div>
+
+            {/* SECTION SUPPLÉMENTAIRE POUR AUTRES FONCTIONNALITÉS */}
+            <div className="bg-gradient-to-r from-amber-600 to-yellow-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🌙 Fonctionnalités Halal Complètes</h2>
+                <p className="text-lg opacity-90">Innovations technologiques 100% conformes Fiqh informatique</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <Link href="/formations-halal-ced" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">📚</div>
+                  <h4 className="font-bold mb-2">Formations Halal</h4>
+                  <p className="text-sm opacity-90">Cours certifiés conformes</p>
+                </Link>
+
+                <Link href="/bibliotheque-icones-halal" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🎨</div>
+                  <h4 className="font-bold mb-2">Icônes Halal</h4>
+                  <p className="text-sm opacity-90">Bibliothèque complète</p>
+                </Link>
+
+                <Link href="/super-iarp-pro" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🤖</div>
+                  <h4 className="font-bold mb-2">Super IARP Pro</h4>
+                  <p className="text-sm opacity-90">IA éthique complète</p>
+                </Link>
+
+                <Link href="/test-complet-55-modules" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🧪</div>
+                  <h4 className="font-bold mb-2">Centre Test</h4>
+                  <p className="text-sm opacity-90">Validation modules</p>
+                </Link>
               </div>
             </div>
 
