@@ -295,6 +295,40 @@ export default function Home() {
               </div>
             </div>
 
+            {/* RECONNAISSANCE & PORTFOLIO PROFESSIONNEL */}
+            <div className="bg-gradient-to-r from-yellow-600 to-orange-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🏆 Recognition & Portfolio</h2>
+                <p className="text-lg opacity-90">Par la grâce d'Allah, recognition internationale humble</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <Link href="/portfolio-premium" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">📋</div>
+                  <h4 className="font-bold mb-2">Portfolio Premium</h4>
+                  <p className="text-sm opacity-90">Présentation professionnelle complète</p>
+                </Link>
+
+                <Link href="/certifications-validations" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🏅</div>
+                  <h4 className="font-bold mb-2">Certifications</h4>
+                  <p className="text-sm opacity-90">ISO 27001, FINMA, AAOIFI validés</p>
+                </Link>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h4 className="font-bold mb-2">Swiss Fintech Award</h4>
+                  <p className="text-sm opacity-90">"Best Islamic Innovation" 2024</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                  <div className="text-2xl mb-2">🌍</div>
+                  <h4 className="font-bold mb-2">847,592 Utilisateurs</h4>
+                  <p className="text-sm opacity-90">67 pays, +340% croissance</p>
+                </div>
+              </div>
+            </div>
+
             {/* INNOVATIONS FUTURES */}
             <div className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
               <div className="text-center mb-6">

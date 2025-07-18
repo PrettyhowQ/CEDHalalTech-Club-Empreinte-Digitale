@@ -173,6 +173,8 @@ import ContactScholars from "@/pages/ContactScholars";
 import Modules52CED from "@/pages/Modules52CED";
 import CharteSupervisionSavante from "@/pages/CharteSupervisionSavante";
 import ClauseIANonMufti from "@/pages/ClauseIANonMufti";
+import CertificationsValidations from "@/pages/CertificationsValidations";
+import PortfolioPremiumIntegration from "@/pages/PortfolioPremiumIntegration";
 import EcranPresentationScholar from "@/pages/EcranPresentationScholar";
 import EspaceSantePage from "@/pages/EspaceSantePage";
 import AIAdvisorPage from "@/pages/AIAdvisor";
@@ -840,6 +842,20 @@ function Router() {
       <Route path="/clause-ia-non-mufti" component={ClauseIANonMufti} />
       <Route path="/protection-juridique-ia" component={ClauseIANonMufti} />
       <Route path="/ia-non-mufti" component={ClauseIANonMufti} />
+      
+      {/* Certifications & Validations Premium */}
+      <Route path="/certifications-validations" component={CertificationsValidations} />
+      <Route path="/certifications" component={CertificationsValidations} />
+      <Route path="/awards-recognition" component={CertificationsValidations} />
+      <Route path="/validations-religieuses" component={CertificationsValidations} />
+      <Route path="/prix-recompenses" component={CertificationsValidations} />
+      <Route path="/reconnaissance-internationale" component={CertificationsValidations} />
+      
+      {/* Portfolio Premium Intégration */}
+      <Route path="/portfolio-premium" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-professionnel" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-international" component={PortfolioPremiumIntegration} />
+      <Route path="/portfolio-prestige" component={PortfolioPremiumIntegration} />
       <Route path="/presentation-scholar" component={EcranPresentationScholar} />
       <Route path="/ecran-scholar" component={EcranPresentationScholar} />
       <Route path="/madhhab-presentation" component={EcranPresentationScholar} />
