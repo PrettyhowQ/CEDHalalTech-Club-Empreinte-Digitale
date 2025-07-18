@@ -73,6 +73,12 @@ import APIManagementPage from "@/pages/APIManagement";
 import APIManagementTest from "@/pages/APIManagementTest";
 import NativeAppsTestSimple from "@/pages/NativeAppsTestSimple";
 import MobileNativeAppsPage from "@/pages/MobileNativeApps";
+import BusinessModelCanvas from "@/pages/BusinessModelCanvas";
+import TableauBudgetairePrevisionnel from "@/pages/TableauBudgetairePrevisionnel";
+import InvestorPitchDeck from "@/pages/InvestorPitchDeck";
+import AnalyseStrategiqueComplete from "@/pages/AnalyseStrategiqueComplete";
+import SolutionsImplementationRapide from "@/pages/SolutionsImplementationRapide";
+import PlanActionStrategique from "@/pages/PlanActionStrategique";
 import AnalyticsAvanceesPage from "@/pages/AnalyticsAdvancees";
 import IntegrationsStrategiquesPage from "@/pages/IntegrationsStrategiques";
 import TechForAllDocuments from "@/pages/TechForAllDocuments";
@@ -816,6 +822,27 @@ function Router() {
       <Route path="/85-fonctionnalites" component={RoadmapFonctionnalitesComplete} />
       <Route path="/toutes-fonctionnalites" component={RoadmapFonctionnalitesComplete} />
       <Route path="/fonctionnalites-priorite" component={RoadmapFonctionnalitesComplete} />
+
+      {/* Solutions Stratégiques d'Opérationnalisation */}
+      <Route path="/analyse-strategique-complete" component={AnalyseStrategiqueComplete} />
+      <Route path="/analyse-critique" component={AnalyseStrategiqueComplete} />
+      <Route path="/points-ameliorer" component={AnalyseStrategiqueComplete} />
+      <Route path="/solutions-implementation-rapide" component={SolutionsImplementationRapide} />
+      <Route path="/solutions-express" component={SolutionsImplementationRapide} />
+      <Route path="/implementation-30-jours" component={SolutionsImplementationRapide} />
+      <Route path="/tableau-budgetaire-previsionnel" component={TableauBudgetairePrevisionnel} />
+      <Route path="/budget-previsionnel" component={TableauBudgetairePrevisionnel} />
+      <Route path="/suivi-financier" component={TableauBudgetairePrevisionnel} />
+      <Route path="/investor-pitch-deck" component={InvestorPitchDeck} />
+      <Route path="/pitch-investisseurs" component={InvestorPitchDeck} />
+      <Route path="/deck-professionnel" component={InvestorPitchDeck} />
+      <Route path="/business-model-canvas" component={BusinessModelCanvas} />
+      <Route path="/modele-affaires" component={BusinessModelCanvas} />
+      <Route path="/canvas-business" component={BusinessModelCanvas} />
+      <Route path="/plan-action-strategique" component={PlanActionStrategique} />
+      <Route path="/plan-strategique" component={PlanActionStrategique} />
+      <Route path="/action-strategique" component={PlanActionStrategique} />
+
       <Route path="/arabe-litteraire" component={LanguageLearningPage} />
       <Route path="/anglais-international" component={LanguageLearningPage} />
       <Route path="/italien-culture" component={LanguageLearningPage} />

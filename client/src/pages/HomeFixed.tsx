@@ -324,6 +324,49 @@ export default function Home() {
               </div>
             </div>
 
+            {/* SOLUTIONS STRATÉGIQUES D'OPÉRATIONNALISATION */}
+            <div className="bg-gradient-to-r from-red-600 to-orange-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🎯 Solutions Stratégiques d'Opérationnalisation</h2>
+                <p className="text-lg opacity-90">Plans d'action concrets pour transformer prototypes en entreprises réelles</p>
+                <div className="text-sm text-gray-300 mt-2">Infrastructure • Conformité • Business • Financement</div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <Link href="/analyse-strategique-complete" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h4 className="font-bold mb-2">Analyse Critique</h4>
+                  <p className="text-sm opacity-90">Points critiques à améliorer</p>
+                </Link>
+
+                <Link href="/solutions-implementation-rapide" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">⚡</div>
+                  <h4 className="font-bold mb-2">Solutions Express</h4>
+                  <p className="text-sm opacity-90">Implémentation en 30 jours</p>
+                </Link>
+
+                <Link href="/tableau-budgetaire-previsionnel" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">💰</div>
+                  <h4 className="font-bold mb-2">Budget Prévisionnel</h4>
+                  <p className="text-sm opacity-90">Suivi financier personnel</p>
+                </Link>
+
+                <Link href="/investor-pitch-deck" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">💎</div>
+                  <h4 className="font-bold mb-2">Pitch Investisseurs</h4>
+                  <p className="text-sm opacity-90">Deck professionnel complet</p>
+                </Link>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <Link href="/plan-action-strategique" className="inline-block">
+                  <Button className="bg-white/20 hover:bg-white/30 text-white border-white/20 text-lg px-8 py-4">
+                    🎯 Plan d'Action Stratégique Complet
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
             {/* RECONNAISSANCE & PORTFOLIO PROFESSIONNEL */}
             <div className="bg-gradient-to-r from-yellow-600 to-orange-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
               <div className="text-center mb-6">
