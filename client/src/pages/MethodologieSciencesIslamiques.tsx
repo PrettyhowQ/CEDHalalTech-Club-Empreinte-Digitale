@@ -245,7 +245,7 @@ export default function MethodologieSciencesIslamiques() {
     { niveau: "Pratiquant Exemplaire", icone: "⭐", couleur: "text-yellow-500", description: "Application concrète quotidienne" },
     { niveau: "Transmetteur Sage", icone: "🎓", couleur: "text-orange-500", description: "Da'wah et enseignement responsable" },
     { niveau: "Guide Spirituel", icone: "🌟", couleur: "text-pink-500", description: "Leadership et conseil communautaire" },
-    { niveau: "Scholar Reconnu", icone: "👑", couleur: "text-red-500", description: "Autorité scientifique authentifiée" },
+    { niveau: "Scholar Reconnu", icone: "🕌", couleur: "text-red-500", description: "Autorité scientifique authentifiée" },
     { niveau: "Héritier Prophètes", icone: "💎", couleur: "text-indigo-500", description: "Excellence spirituelle et savoir" }
   ];
 

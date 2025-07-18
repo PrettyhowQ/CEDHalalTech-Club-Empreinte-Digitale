@@ -615,7 +615,7 @@ export default function CedHalalHome() {
                 <Link href="/analyse-predictive-marche-halal">
                   <Card className="border-2 border-cyan-300 hover:border-cyan-500 transition-all hover:shadow-lg cursor-pointer bg-gradient-to-br from-cyan-50 to-blue-50">
                     <CardContent className="p-6 text-center">
-                      <div className="text-5xl mb-3">🔮</div>
+                      <div className="text-5xl mb-3">🧮</div>
                       <h3 className="text-xl font-bold text-cyan-700 mb-2">Analyse Prédictive</h3>
                       <p className="text-sm text-gray-600">Marché Halal IA $12.4B+</p>
                     </CardContent>
@@ -1053,7 +1053,7 @@ export default function CedHalalHome() {
         <div className="mb-16">
           <Card className="border-4 border-purple-400 bg-gradient-to-br from-purple-50 to-indigo-50 shadow-2xl">
             <CardHeader className="text-center">
-              <div className="text-8xl mb-4">👑</div>
+              <div className="text-8xl mb-4">🕌</div>
               <CardTitle className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 4 Madhabs Islamiques - Conformité Totale
               </CardTitle>

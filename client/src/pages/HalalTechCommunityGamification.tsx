@@ -22,7 +22,7 @@ export default function HalalTechCommunityGamification() {
       specialite: "Plantation & Reforestation",
       leader: "Fatima Al-Zahra (Maroc)",
       couleur: "from-green-500 to-emerald-600",
-      badge: "👑",
+      badge: "🕌",
       mission: "Planter 1 million d'arbres Sadaqah Jariyah"
     },
     {
@@ -123,7 +123,7 @@ export default function HalalTechCommunityGamification() {
     { rang: "Khalifa Bronze", icone: "🥉", couleur: "text-yellow-600", seuilXP: 1000 },
     { rang: "Khalifa Argent", icone: "🥈", couleur: "text-gray-500", seuilXP: 5000 },
     { rang: "Khalifa Or", icone: "🥇", couleur: "text-yellow-500", seuilXP: 15000 },
-    { rang: "Maître Gardien", icone: "👑", couleur: "text-purple-600", seuilXP: 35000 },
+    { rang: "Maître Gardien", icone: "🕌", couleur: "text-purple-600", seuilXP: 35000 },
     { rang: "Sage Environnemental", icone: "🧙‍♂️", couleur: "text-blue-600", seuilXP: 75000 },
     { rang: "Champion Création Allah", icone: "⭐", couleur: "text-cyan-500", seuilXP: 150000 },
     { rang: "Légende Éco-Islamique", icone: "💎", couleur: "text-pink-500", seuilXP: 300000 }
@@ -306,7 +306,7 @@ export default function HalalTechCommunityGamification() {
                               <span className="font-bold text-green-600">{equipe.points.toLocaleString()}</span>
                             </div>
                             <div className="text-center">
-                              <p className="text-sm text-gray-600 mb-1">👑 Leader: {equipe.leader}</p>
+                              <p className="text-sm text-gray-600 mb-1">🕌 Leader: {equipe.leader}</p>
                               <p className="text-xs text-blue-600 italic">Mission: {equipe.mission}</p>
                             </div>
                             

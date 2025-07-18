@@ -90,7 +90,7 @@ export default function TendancesTechHalalTempsReel() {
             <TabsTrigger value="tendances-live">📈 Tendances Live</TabsTrigger>
             <TabsTrigger value="marche-mondial">🌍 Marché Mondial</TabsTrigger>
             <TabsTrigger value="innovations-avancees">🚀 Innovations</TabsTrigger>
-            <TabsTrigger value="position-ced">👑 Position CED</TabsTrigger>
+            <TabsTrigger value="position-ced">🕌 Position CED</TabsTrigger>
           </TabsList>
 
           {/* Tendances Live */}
@@ -329,7 +329,7 @@ export default function TendancesTechHalalTempsReel() {
           <TabsContent value="position-ced">
             <Card className="border-4 border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50 shadow-2xl">
               <CardHeader className="text-center">
-                <div className="text-6xl mb-4">👑</div>
+                <div className="text-6xl mb-4">🕌</div>
                 <CardTitle className="text-4xl font-bold text-yellow-700">
                   Position Dominante CED HalalTech™
                 </CardTitle>

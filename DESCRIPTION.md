@@ -252,7 +252,7 @@ Seul système bancaire mondial offrant 6 niveaux de cartes **100% sans frais** a
    • Contrôle parental
    • Éducation financière
 
-6. 👑 YAKOUBI ROYAL (Ultra-Premium)
+6. 🕌 YAKOUBI ROYAL (Ultra-Premium)
    • Limite : 2,000,000 AED/jour
    • Services sur-mesure
    • Accès technologies futures
@@ -372,7 +372,7 @@ Seul système bancaire mondial offrant 6 niveaux de cartes **100% sans frais** a
 - **Sustainable Finance Leader** - Zurich
 - **AI Ethics Pioneer** - San Francisco
 
-## 🔮 Roadmap Technologique 2025-2030
+## 🧮 Roadmap Technologique 2025-2030
 
 ### 2025 - Consolidation Écosystème
 - **Q1** : Finalisation Al-Aman CED intégration

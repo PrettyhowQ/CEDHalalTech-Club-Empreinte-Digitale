@@ -32,7 +32,7 @@ export default function AlAmanaAutoHalal() {
       modele: "Continental GT Speed",
       prix: "290,000 CHF",
       financement: "5,100 CHF/mois (Ijara)",
-      image: "👑",
+      image: "🕌",
       options: ["Cuir Mulliner bespoke", "Roues 22 pouces exclusives", "Finition carbone"],
       disponibilite: "Série limitée - 6 mois",
       certification: "Royal Halal Edition",

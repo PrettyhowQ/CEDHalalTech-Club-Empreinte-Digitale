@@ -173,7 +173,7 @@ export default function AnalysePredictiveMarcheHalal() {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="text-8xl mb-6">🔮</div>
+          <div className="text-8xl mb-6">🧮</div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Analyse Prédictive Marché Halal IA
           </h1>
@@ -704,7 +704,7 @@ export default function AnalysePredictiveMarcheHalal() {
                       
                       {/* Prédictions Clés */}
                       <div className="p-6 bg-white rounded-lg border-2 border-purple-200">
-                        <h4 className="font-bold text-purple-800 mb-4">🔮 Prédictions Clés Aujourd'hui</h4>
+                        <h4 className="font-bold text-purple-800 mb-4">🧮 Prédictions Clés Aujourd'hui</h4>
                         <div className="space-y-3 text-sm">
                           <div className="p-3 bg-green-50 rounded border-l-4 border-green-500">
                             <div className="font-semibold text-green-800">CED HalalTech™ Expansion</div>

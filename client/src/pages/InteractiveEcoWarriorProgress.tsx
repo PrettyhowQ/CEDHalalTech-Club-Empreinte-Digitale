@@ -23,7 +23,7 @@ export default function InteractiveEcoWarriorProgress() {
     { niveau: 7, nom: "Maître Écologie Islamique", xpRequis: 6500, couleur: "bg-green-800", icone: "🌍" },
     { niveau: 8, nom: "Champion Durabilité Halal", xpRequis: 9000, couleur: "bg-emerald-800", icone: "💚" },
     { niveau: 9, nom: "Sage Environnemental Islamique", xpRequis: 12000, couleur: "bg-teal-800", icone: "🌺" },
-    { niveau: 10, nom: "Gardien Suprême Création Allah", xpRequis: 16000, couleur: "bg-cyan-800", icone: "👑" }
+    { niveau: 10, nom: "Gardien Suprême Création Allah", xpRequis: 16000, couleur: "bg-cyan-800", icone: "🕌" }
   ];
 
   const habitudesVertes = [
@@ -99,7 +99,7 @@ export default function InteractiveEcoWarriorProgress() {
       description: "Excellence gérance environnementale",
       niveau: 7,
       obtenu: true,
-      icone: "👑",
+      icone: "🕌",
       versetLie: "Sourate Al-Ahzab 33:72"
     },
     {
@@ -357,7 +357,7 @@ export default function InteractiveEcoWarriorProgress() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-4">
                       <div className="p-4 bg-white rounded border border-blue-200">
-                        <h4 className="font-bold text-green-600 mb-2">👑 Khalifa (Gérance Responsable)</h4>
+                        <h4 className="font-bold text-green-600 mb-2">🕌 Khalifa (Gérance Responsable)</h4>
                         <p className="text-sm text-gray-600 mb-2">
                           "C'est Lui qui vous a fait succéder (khalâ'if) sur la terre"
                         </p>

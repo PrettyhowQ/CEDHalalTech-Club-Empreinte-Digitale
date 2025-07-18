@@ -116,7 +116,7 @@
 | ID | Module | Statut | Fonctionnalités Principales | Route/Fichier |
 |----|--------|--------|------------------------------|---------------|
 | 17 | 🌐 Écosystème Pôles Halal | ✅ | Interconnexion tous services, 7 pôles, API unifiée, WebTV | /ecosysteme-poles-halal |
-| 18 | 👑 Planification Successorale 50+ Ans | ✅ | Transmission multigénérationnelle écosystème CED, Souheila & Hanaé-Denise, 3+ générations, 12.5B CHF projection | /planification-successorale-50-ans |
+| 18 | 🕌 Planification Successorale 50+ Ans | ✅ | Transmission multigénérationnelle écosystème CED, Souheila & Hanaé-Denise, 3+ générations, 12.5B CHF projection | /planification-successorale-50-ans |
 
 ---
 
@@ -154,10 +154,10 @@
 |----|--------|--------|-------------------------|---------------|
 | 37 | 🌱 Carbon Negative Banking | 🔄 | Impact environnemental positif, reforestation, énergies renouvelables | /carbon-banking |
 | 38 | 🚀 Space Islamic Finance | 🔄 | Centre financier spatial futuriste, station orbitale halal, économie spatiale | /space-finance |
-| - | 🔮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
-| - | 🔮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
-| - | 🔮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
-| - | 🔮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
+| - | 🧮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
+| - | 🧮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
+| - | 🧮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
+| - | 🧮 [ESPACE LIBRE] | ⭕ | **NOUVEAUX MODULES À AJOUTER ICI** | - |
 
 ---
 

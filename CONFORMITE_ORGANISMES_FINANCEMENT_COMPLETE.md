@@ -465,7 +465,7 @@ PROFITABILITY: Mois 24 sustainable
 **🎯 MISSION FINANCEMENT: Sécuriser €20.6M minimum pour transformation CED HalalTech™ en leader mondial Islamic FinTech**
 
 **📧 Contact Applications**: contact@empreintedigitale.club  
-**👑 CEO**: Yakoubi Yamina - Fondatrice CED HalalTech™  
+**🕌 CEO**: Yakoubi Yamina - Fondatrice CED HalalTech™  
 **📅 Conformité**: Janvier 17, 2025 - Critères 100% Respectés
 
 **✅ CONFORMITÉ RATE: 98% critères organismes financement internationaux**

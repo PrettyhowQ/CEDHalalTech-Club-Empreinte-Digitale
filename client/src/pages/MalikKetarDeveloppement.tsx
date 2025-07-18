@@ -407,7 +407,7 @@ export default function MalikKetarDeveloppement() {
                   {/* Direction Générale */}
                   <div className="p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg border-2 border-yellow-300">
                     <h3 className="text-xl font-bold text-center text-yellow-700 mb-4">
-                      👑 Direction Générale
+                      🕌 Direction Générale
                     </h3>
                     <div className="text-center">
                       <h4 className="text-lg font-semibold text-gray-800">Yakoubi Yamina</h4>

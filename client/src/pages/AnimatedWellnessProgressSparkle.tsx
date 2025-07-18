@@ -248,7 +248,7 @@ const AnimatedWellnessProgressSparkle = () => {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                <div className="text-4xl mb-3 animate-bounce">👑</div>
+                <div className="text-4xl mb-3 animate-bounce">🕌</div>
                 <div className="text-xl font-bold mb-2">Niveau 7</div>
                 <div className="text-sm opacity-90">Serviteur Dévoué</div>
                 <div className="mt-3 h-2 bg-white/20 rounded-full overflow-hidden">

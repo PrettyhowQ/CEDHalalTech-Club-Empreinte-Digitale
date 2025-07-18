@@ -1200,7 +1200,7 @@ CED HalalTech™ - Technologie 100% Halal • Certifiée et protégée mondialem
 
 📧 Contact Direction Fondatrice: contact@empreintedigitale.club
 📧 Contact Développement: swissyakoubidev.ch@ik.me
-👑 Fondatrice & Direction Générale: Yakoubi Yamina
+🕌 Fondatrice & Direction Générale: Yakoubi Yamina
 ```
 
 ## 🏆 Reconnaissance

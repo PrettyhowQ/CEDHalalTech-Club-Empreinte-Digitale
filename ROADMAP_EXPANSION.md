@@ -193,7 +193,7 @@
 
 #### Technologies post-singularité
 ```
-🔮 IA CONSCIENTE ÉTHIQUE
+🧮 IA CONSCIENTE ÉTHIQUE
 • Première IA véritablement consciente
 • Éthique programmée fondamentalement
 • Partenariat humanité-IA symbiotique

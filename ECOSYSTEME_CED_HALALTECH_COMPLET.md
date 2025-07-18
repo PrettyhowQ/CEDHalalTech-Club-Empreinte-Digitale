@@ -21,7 +21,7 @@ CED HalalTech™ est le premier écosystème technologique 100% conforme aux val
 ### 🏢 **DIRECTION & GOUVERNANCE**
 ```
 Club Empreinte Digitale (CED)
-├── 👑 Direction Générale Unique
+├── 🕌 Direction Générale Unique
 │   └── Yakoubi Yamina (Dirigeante Exclusive)
 │       ├── Décisionnaire unique tous projets
 │       ├── Copyright détentrice exclusive

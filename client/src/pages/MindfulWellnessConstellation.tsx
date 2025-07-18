@@ -141,7 +141,7 @@ export default function MindfulWellnessConstellation() {
     { niveau: 6, nom: "Maîtrise Personnelle", couleur: "text-red-500", icone: "🔥" },
     { niveau: 7, nom: "Illumination Spirituelle", couleur: "text-yellow-500", icone: "✨" },
     { niveau: 8, nom: "Guide pour Autrui", couleur: "text-pink-500", icone: "🌟" },
-    { niveau: 9, nom: "Sage Accompli", couleur: "text-indigo-500", icone: "👑" },
+    { niveau: 9, nom: "Sage Accompli", couleur: "text-indigo-500", icone: "🕌" },
     { niveau: 10, nom: "Être Transcendant", couleur: "text-cyan-500", icone: "💎" }
   ];
 

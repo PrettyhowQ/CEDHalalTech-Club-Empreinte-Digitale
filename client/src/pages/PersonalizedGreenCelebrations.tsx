@@ -294,7 +294,7 @@ export default function PersonalizedGreenCelebrations() {
                     </div>
                     <div className="p-4 bg-blue-50 rounded">
                       <h4 className="font-semibold text-blue-600 mb-2">Purification Spirituelle</h4>
-                      <div className="text-2xl mb-2">💧✨🌈💎🔮</div>
+                      <div className="text-2xl mb-2">💧✨🌈💎🧮</div>
                       <p className="text-sm text-gray-600">Eau pure = Purification corps et âme</p>
                     </div>
                   </div>
@@ -329,7 +329,7 @@ export default function PersonalizedGreenCelebrations() {
                   <div className="space-y-4">
                     <div className="p-4 bg-yellow-50 rounded">
                       <h4 className="font-semibold text-yellow-600 mb-2">Niveaux Khalifa</h4>
-                      <div className="text-2xl mb-2">👑💎🏆⭐🌟</div>
+                      <div className="text-2xl mb-2">🕌💎🏆⭐🌟</div>
                       <p className="text-sm text-gray-600">Évolution gérance responsable terre</p>
                     </div>
                     <div className="p-4 bg-yellow-50 rounded">

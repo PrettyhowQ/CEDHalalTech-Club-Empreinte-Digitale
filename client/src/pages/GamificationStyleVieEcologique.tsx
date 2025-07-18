@@ -142,7 +142,7 @@ export default function GamificationStyleVieEcologique() {
       title: "Éco-Khalifah",
       description: "Level 10 atteint",
       islamicTitle: "خليفة بيئي",
-      icon: "👑",
+      icon: "🕌",
       unlocked: false,
       requirement: "Atteindre le niveau 10"
     }

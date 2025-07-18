@@ -163,7 +163,7 @@ export default function Home() {
               </div>
 
               <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-6 text-white text-center shadow-2xl">
-                <h2 className="text-xl font-bold mb-3">👑 Banking Golfe Premium</h2>
+                <h2 className="text-xl font-bold mb-3">🕌 Banking Golfe Premium</h2>
                 <p className="text-sm mb-4">Investisseurs & Grosses Fortunes</p>
                 <Link href="/premium-dashboard">
                   <Button size="sm" className="bg-white text-amber-600 hover:bg-gray-100 text-sm px-4 py-2">

@@ -759,7 +759,7 @@ export function SpiritualMotivationMicroInteractions() {
                     {[
                       { name: 'Maître du Dhikr', progress: 60, target: 100, icon: '🏅' },
                       { name: 'Série de 30 jours', progress: 23, target: 30, icon: '📅' },
-                      { name: 'Sage Numérique', progress: 15, target: 25, icon: '👑' }
+                      { name: 'Sage Numérique', progress: 15, target: 25, icon: '🕌' }
                     ].map((goal, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex items-center justify-between">

@@ -411,7 +411,7 @@
 
 ## **🚀 8. INNOVATION FUTURE CONFORME**
 
-### **🔮 Roadmap Développement Halal**
+### **🧮 Roadmap Développement Halal**
 
 #### **أ) الجيل القادم - Génération Suivante (2025-2026)**
 

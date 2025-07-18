@@ -235,7 +235,7 @@ const GamifiedLearningPath = () => {
     { xp: 3000, reward: '🎯 Badge "Expert Banking"', type: 'badge' },
     { xp: 3500, reward: '💎 50 Coins Bonus', type: 'coins' },
     { xp: 4000, reward: '🏆 Certificat AAOIFI', type: 'certificate' },
-    { xp: 5000, reward: '👑 Accès VIP Mentoring', type: 'feature' }
+    { xp: 5000, reward: '🕌 Accès VIP Mentoring', type: 'feature' }
   ];
 
   const completeModule = (moduleId: number) => {

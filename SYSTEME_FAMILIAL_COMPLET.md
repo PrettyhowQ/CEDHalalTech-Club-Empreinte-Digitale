@@ -2,7 +2,7 @@
 
 ## 🏦 Structure Bancaire Familiale CED Bank
 
-### 👑 Direction Générale
+### 🕌 Direction Générale
 **Yakoubi Yamina** - Présidente & Fondatrice
 - Compte Prestige Royal : CHF 2,500,000
 - Carte Royale Platinum Unlimited

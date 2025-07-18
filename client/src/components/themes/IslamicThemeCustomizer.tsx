@@ -183,7 +183,7 @@ const islamicThemes: IslamicTheme[] = [
     wallpaper: 'url("/api/placeholder/400/800")',
     mood: 'noble',
     timeOfDay: 'any',
-    icon: '👑',
+    icon: '🕌',
     calligraphy: true,
     patterns: true
   },

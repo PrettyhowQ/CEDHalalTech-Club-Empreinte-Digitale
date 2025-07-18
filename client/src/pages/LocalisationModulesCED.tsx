@@ -265,7 +265,7 @@ export default function LocalisationModulesCED() {
     },
     {
       id: 18,
-      nom: "👑 Planification Successorale 50+ Ans",
+      nom: "🕌 Planification Successorale 50+ Ans",
       path: "/planification-successorale-50-ans",
       fichier: "client/src/pages/PlanificationSuccessorale50Ans.tsx",
       description: "Transmission multigénérationnelle écosystème CED",
