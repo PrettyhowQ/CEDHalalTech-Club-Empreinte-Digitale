@@ -137,6 +137,44 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+              
+              {/* NOUVEAU - Portfolio Complet avec toutes les fonctionnalités */}
+              <div className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-white text-center shadow-2xl">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="text-4xl mr-3">🏆</div>
+                  <div>
+                    <h2 className="text-2xl font-bold">Portfolio Complet CED</h2>
+                    <p className="text-sm opacity-90">Découvrez TOUTES les fonctionnalités développées</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-3 mb-4">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold text-green-400">15+</div>
+                    <div className="text-xs">Fonctionnalités</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold text-blue-400">100%</div>
+                    <div className="text-xs">Halal</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold text-purple-400">IA</div>
+                    <div className="text-xs">Éthique</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold text-yellow-400">3D</div>
+                    <div className="text-xs">Islamique</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold text-red-400">PWA</div>
+                    <div className="text-xs">Mobile</div>
+                  </div>
+                </div>
+                <Link href="/portfolio-complet-ced">
+                  <Button className="bg-white text-purple-600 hover:bg-gray-100 font-bold text-lg px-8 py-3">
+                    🚀 Voir Tout le Portfolio
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

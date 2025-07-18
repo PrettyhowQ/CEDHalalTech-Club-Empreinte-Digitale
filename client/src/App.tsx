@@ -186,6 +186,16 @@ import AnimatedIslamicGeometricLoadingSpinner from "@/pages/AnimatedIslamicGeome
 import AccessibilityVoiceGuidanceUINavigation from "@/pages/AccessibilityVoiceGuidanceUINavigation";
 import ContextualCulturalLearningPopups from "@/pages/ContextualCulturalLearningPopups";
 import DynamicMultilingualTransitionAnimations from "@/pages/DynamicMultilingualTransitionAnimations";
+import Islamic3DVisualization from "@/pages/Islamic3DVisualization";
+
+// Composants PWA
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
+import InteractiveIslamicCulturalTooltips from "@/components/InteractiveIslamicCulturalTooltips";
+import PersonalizedDailySpiritualMotivation from "@/components/PersonalizedDailySpiritualMotivation";
+import AdaptiveMultilingualTransitionAnimations from "@/components/AdaptiveMultilingualTransitionAnimations";
+import EthicalAICulturalInsightGenerator from "@/components/EthicalAICulturalInsightGenerator";
+import GamifiedIslamicKnowledgeMicroChallenges from "@/components/GamifiedIslamicKnowledgeMicroChallenges";
+import PortfolioCompletCED from "@/pages/PortfolioCompletCED";
 
 // Portfolio Premium et Certifications
 import PortfolioPremiumIntegration from "@/pages/PortfolioPremiumIntegration";
@@ -769,6 +779,40 @@ function Router() {
       {/* Comptes famille */}
       <Route path="/parent-accounts" component={ParentAccountsPage} />
       <Route path="/comptes-parents" component={ParentAccountsPage} />
+      
+      {/* Visualisation 3D Islamique */}
+      <Route path="/islamic-3d-visualization" component={Islamic3DVisualization} />
+      <Route path="/geometrie-3d-islamique" component={Islamic3DVisualization} />
+      <Route path="/visualisation-3d-sacree" component={Islamic3DVisualization} />
+      <Route path="/3d-geometry" component={Islamic3DVisualization} />
+      
+      {/* Nouvelles Fonctionnalités Avancées */}
+      <Route path="/interactive-islamic-cultural-tooltips" component={InteractiveIslamicCulturalTooltips} />
+      <Route path="/tooltips-culturels-interactifs" component={InteractiveIslamicCulturalTooltips} />
+      <Route path="/apprentissage-culturel-islamique" component={InteractiveIslamicCulturalTooltips} />
+      
+      <Route path="/personalized-daily-spiritual-motivation" component={PersonalizedDailySpiritualMotivation} />
+      <Route path="/motivation-spirituelle-quotidienne" component={PersonalizedDailySpiritualMotivation} />
+      <Route path="/widget-spirituel-personnalise" component={PersonalizedDailySpiritualMotivation} />
+      
+      <Route path="/adaptive-multilingual-transition-animations" component={AdaptiveMultilingualTransitionAnimations} />
+      <Route path="/animations-transitions-multilingues" component={AdaptiveMultilingualTransitionAnimations} />
+      <Route path="/transitions-adaptatives-langues" component={AdaptiveMultilingualTransitionAnimations} />
+      
+      <Route path="/ethical-ai-cultural-insight-generator" component={EthicalAICulturalInsightGenerator} />
+      <Route path="/generateur-insights-culturels-ia" component={EthicalAICulturalInsightGenerator} />
+      <Route path="/ia-ethique-insights-islamiques" component={EthicalAICulturalInsightGenerator} />
+      
+      <Route path="/gamified-islamic-knowledge-micro-challenges" component={GamifiedIslamicKnowledgeMicroChallenges} />
+      <Route path="/micro-defis-gamifies-islamiques" component={GamifiedIslamicKnowledgeMicroChallenges} />
+      <Route path="/challenges-connaissance-islamique" component={GamifiedIslamicKnowledgeMicroChallenges} />
+      
+      {/* Portfolio Complet CED */}
+      <Route path="/portfolio-complet-ced" component={PortfolioCompletCED} />
+      <Route path="/portfolio-complet" component={PortfolioCompletCED} />
+      <Route path="/portfolio-total" component={PortfolioCompletCED} />
+      <Route path="/showcase-ced" component={PortfolioCompletCED} />
+      <Route path="/toutes-fonctionnalites" component={PortfolioCompletCED} />
       <Route path="/famille-yakoubi" component={ParentAccountsPage} />
       
       {/* Comparaison banques */}
@@ -1593,6 +1637,7 @@ function App() {
               <ProtectionFooter />
             </div>
             <Toaster />
+            <PWAInstallPrompt />
           </TooltipProvider>
         </VoiceProvider>
       </LanguageProvider>
