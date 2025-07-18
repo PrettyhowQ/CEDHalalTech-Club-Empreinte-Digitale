@@ -1,6 +1,6 @@
 import React from 'react';
-import BibliothequeIconesHalal from '@/components/BibliothequeIconesHalal';
+import BibliothequeIconesHalalModerne from '@/components/BibliothequeIconesHalalModerne';
 
 export default function BibliothequeIconesHalalPage() {
-  return <BibliothequeIconesHalal />;
+  return <BibliothequeIconesHalalModerne />;
 }

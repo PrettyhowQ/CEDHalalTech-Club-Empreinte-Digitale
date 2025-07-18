@@ -1475,6 +1475,12 @@ function Router() {
       <Route path="/ui-halal" component={FonctionnalitesUIUXIslamiques} />
       <Route path="/fiqh-informatique-ui" component={FonctionnalitesUIUXIslamiques} />
       <Route path="/analyse-fiqh-ui" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/islamic-uiux-features" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/interface-islamique-revolutionnaire" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/design-islamique-avance" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/uiux-halal-features" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/innovation-interface-islamique" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/fonctionnalites-design-halal" component={FonctionnalitesUIUXIslamiques} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
