@@ -295,6 +295,35 @@ export default function Home() {
               </div>
             </div>
 
+            {/* ROADMAP COMPLÈTE 85 FONCTIONNALITÉS */}
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-bold mb-2">🚀 Roadmap Complète CED HalalTech™</h2>
+                <p className="text-lg opacity-90">85 fonctionnalités organisées par ordre de priorité</p>
+                <div className="text-sm text-gray-300 mt-2">De PRIORITÉ 1 (Critique) à PRIORITÉ 6 (Excellence)</div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link href="/roadmap-fonctionnalites-complete" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">🔥</div>
+                  <h4 className="font-bold mb-2">Roadmap Interactive</h4>
+                  <p className="text-sm opacity-90">Visualisation complète 85 fonctionnalités</p>
+                </Link>
+
+                <Link href="/roadmap-priorites" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">⚡</div>
+                  <h4 className="font-bold mb-2">Par Priorités</h4>
+                  <p className="text-sm opacity-90">6 niveaux organisés chronologiquement</p>
+                </Link>
+
+                <Link href="/85-fonctionnalites" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="text-2xl mb-2">📊</div>
+                  <h4 className="font-bold mb-2">Vue d'Ensemble</h4>
+                  <p className="text-sm opacity-90">Architecture complète écosystème</p>
+                </Link>
+              </div>
+            </div>
+
             {/* RECONNAISSANCE & PORTFOLIO PROFESSIONNEL */}
             <div className="bg-gradient-to-r from-yellow-600 to-orange-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
               <div className="text-center mb-6">

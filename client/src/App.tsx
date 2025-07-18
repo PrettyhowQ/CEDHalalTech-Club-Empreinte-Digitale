@@ -204,6 +204,7 @@ import NavigationComplete from "@/pages/NavigationComplete";
 import InteractiveHalalTechJourneyMap from "@/pages/InteractiveHalalTechJourneyMap";
 import MultilingualVoiceAssistant from "@/pages/MultilingualVoiceAssistant";
 import EcoFriendlyDigitalCarbonTracker from "@/pages/EcoFriendlyDigitalCarbonTracker";
+import RoadmapFonctionnalitesComplete from "@/pages/RoadmapFonctionnalitesComplete";
 import PersonalizedIslamicWellnessMotivation from "@/pages/PersonalizedIslamicWellnessMotivation";
 import CommunityImpactVisualizationDashboard from "@/pages/CommunityImpactVisualizationDashboard";
 import HalalTechMarketplace from "@/pages/HalalTechMarketplace";
@@ -807,6 +808,14 @@ function Router() {
       <Route path="/language-learning" component={LanguageLearningPage} />
       <Route path="/ecole-langues" component={LanguageLearningPage} />
       <Route path="/langues" component={LanguageLearningPage} />
+      
+      {/* Roadmap Complète 85 Fonctionnalités */}
+      <Route path="/roadmap-fonctionnalites-complete" component={RoadmapFonctionnalitesComplete} />
+      <Route path="/roadmap-complete" component={RoadmapFonctionnalitesComplete} />
+      <Route path="/roadmap-priorites" component={RoadmapFonctionnalitesComplete} />
+      <Route path="/85-fonctionnalites" component={RoadmapFonctionnalitesComplete} />
+      <Route path="/toutes-fonctionnalites" component={RoadmapFonctionnalitesComplete} />
+      <Route path="/fonctionnalites-priorite" component={RoadmapFonctionnalitesComplete} />
       <Route path="/arabe-litteraire" component={LanguageLearningPage} />
       <Route path="/anglais-international" component={LanguageLearningPage} />
       <Route path="/italien-culture" component={LanguageLearningPage} />
