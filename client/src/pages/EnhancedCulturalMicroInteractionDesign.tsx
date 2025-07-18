@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Heart, Sparkles, MousePointer, Touch, Zap, BookOpen, Shield, Star } from "lucide-react";
+import { Heart, Sparkles, MousePointer, Hand, Zap, BookOpen, Shield, Star } from "lucide-react";
 import { useState } from "react";
 
 export default function EnhancedCulturalMicroInteractionDesign() {
@@ -179,7 +179,7 @@ export default function EnhancedCulturalMicroInteractionDesign() {
                 <Card className="bg-gradient-to-r from-blue-900/30 to-cyan-900/30 border-blue-600/50">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center space-x-2">
-                      <Touch className="h-6 w-6 text-blue-400" />
+                      <Hand className="h-6 w-6 text-blue-400" />
                       <span>Touch Interactions Mobile</span>
                     </CardTitle>
                   </CardHeader>
