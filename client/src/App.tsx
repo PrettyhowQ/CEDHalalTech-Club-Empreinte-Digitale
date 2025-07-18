@@ -143,6 +143,7 @@ import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage
 import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
+import BibliothequeIconesHalalPage from "@/pages/BibliothequeIconesHalalPage";
 import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
 import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import ExportModulesPage from "@/pages/export-modules-page";
@@ -1455,6 +1456,14 @@ function Router() {
       <Route path="/garage-halal" component={AlAmanaAutoHalal} />
       <Route path="/vehicules-premium-halal" component={AlAmanaAutoHalal} />
       <Route path="/auto-haut-gamme" component={AlAmanaAutoHalal} />
+
+      {/* Bibliothèque d'Icônes Halal */}
+      <Route path="/bibliotheque-icones-halal" component={BibliothequeIconesHalalPage} />
+      <Route path="/icones-halal" component={BibliothequeIconesHalalPage} />
+      <Route path="/halal-icons-library" component={BibliothequeIconesHalalPage} />
+      <Route path="/bibliotheque-icones" component={BibliothequeIconesHalalPage} />
+      <Route path="/icones-figma-halal" component={BibliothequeIconesHalalPage} />
+      <Route path="/figma-halal-icons" component={BibliothequeIconesHalalPage} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />

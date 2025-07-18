@@ -1,0 +1,582 @@
+{
+  "finance": {
+    "category": "Finance & Comptabilité (Halal)",
+    "description": "Icônes pour système financier 100% conforme Sharia",
+    "icons": [
+      {
+        "id": "financial-report",
+        "emoji": "📊",
+        "slug": "tableau-financier",
+        "usage": "Tableau financier",
+        "description": "États, dashboards",
+        "labels": {
+          "fr": "Tableau",
+          "en": "Financial report", 
+          "ar": "جدول مالي"
+        },
+        "usage_category": "finance"
+      },
+      {
+        "id": "calculations",
+        "emoji": "🧮",
+        "slug": "calculs",
+        "usage": "Calculs",
+        "description": "Comptabilité, Zakat calc",
+        "labels": {
+          "fr": "Calculs",
+          "en": "Calculations",
+          "ar": "حسابات"
+        },
+        "usage_category": "finance"
+      },
+      {
+        "id": "calendar",
+        "emoji": "📅",
+        "slug": "previsions-datees",
+        "usage": "Prévisions datées",
+        "description": "Budget mensuel/annuel",
+        "labels": {
+          "fr": "Calendrier",
+          "en": "Calendar",
+          "ar": "تقويم"
+        },
+        "usage_category": "finance"
+      },
+      {
+        "id": "portfolio",
+        "emoji": "💼",
+        "slug": "dossier-pro",
+        "usage": "Dossier pro",
+        "description": "Comptable, cabinet",
+        "labels": {
+          "fr": "Dossier",
+          "en": "Portfolio / Ledger",
+          "ar": "ملف مهني"
+        },
+        "usage_category": "finance"
+      },
+      {
+        "id": "forecast-insight",
+        "emoji": "💡",
+        "slug": "projection-intelligente",
+        "usage": "Projection intelligente",
+        "description": "Sans divination",
+        "labels": {
+          "fr": "Projection",
+          "en": "Forecast Insight",
+          "ar": "رؤية تقديرية"
+        },
+        "usage_category": "finance"
+      },
+      {
+        "id": "approved",
+        "emoji": "✅",
+        "slug": "validation",
+        "usage": "Validation",
+        "description": "Budget approuvé",
+        "labels": {
+          "fr": "Validé",
+          "en": "Approved",
+          "ar": "تم اعتماد"
+        },
+        "usage_category": "finance"
+      }
+    ],
+    "combo": {
+      "emoji": "📊🧮📅💼💡",
+      "description": "Combo prévisionnel halal complet",
+      "usage": "Prévisions financières complètes"
+    }
+  },
+  "ethique": {
+    "category": "Éthique, Contrats & Protection",
+    "description": "Protection juridique et conformité Sharia",
+    "icons": [
+      {
+        "id": "protection",
+        "emoji": "🛡️",
+        "slug": "licence-protection",
+        "usage": "Licence, protection données",
+        "description": "RGPD/LPD conforme",
+        "labels": {
+          "fr": "Protection",
+          "en": "Protection",
+          "ar": "حماية"
+        },
+        "usage_category": "ethique"
+      },
+      {
+        "id": "contract",
+        "emoji": "📜",
+        "slug": "contrat-charte",
+        "usage": "Contrat, charte",
+        "description": "Conditions d'usage",
+        "labels": {
+          "fr": "Contrat",
+          "en": "Contract",
+          "ar": "عقد"
+        },
+        "usage_category": "ethique"
+      },
+      {
+        "id": "signature",
+        "emoji": "✍️",
+        "slug": "signature-numerique",
+        "usage": "Signature numérique",
+        "description": "Autorisée islamiquement",
+        "labels": {
+          "fr": "Signature",
+          "en": "Signature",
+          "ar": "توقيع"
+        },
+        "usage_category": "ethique"
+      },
+      {
+        "id": "validated",
+        "emoji": "✅",
+        "slug": "clause-validee",
+        "usage": "Clause validée",
+        "description": "Conforme Fiqh",
+        "labels": {
+          "fr": "Validé",
+          "en": "Validated",
+          "ar": "مُصدَّق"
+        },
+        "usage_category": "ethique"
+      },
+      {
+        "id": "forbidden",
+        "emoji": "🚫",
+        "slug": "interdit-non-conforme",
+        "usage": "Interdit / non conforme",
+        "description": "Riba, usage haram",
+        "labels": {
+          "fr": "Interdit",
+          "en": "Forbidden",
+          "ar": "ممنوع"
+        },
+        "usage_category": "ethique"
+      }
+    ]
+  },
+  "apprentissage": {
+    "category": "Apprentissage, Formations & Diplômes",
+    "description": "Éducation et certifications islamiques",
+    "icons": [
+      {
+        "id": "certificate",
+        "emoji": "🎓",
+        "slug": "certification-diplome",
+        "usage": "Certification, diplôme",
+        "description": "Obtenu avec mérite",
+        "labels": {
+          "fr": "Diplôme",
+          "en": "Certificate",
+          "ar": "شهادة"
+        },
+        "usage_category": "apprentissage"
+      },
+      {
+        "id": "course",
+        "emoji": "📘",
+        "slug": "cours-module",
+        "usage": "Cours, module",
+        "description": "Formation structurée",
+        "labels": {
+          "fr": "Cours",
+          "en": "Course",
+          "ar": "دورة"
+        },
+        "usage_category": "apprentissage"
+      },
+      {
+        "id": "skills",
+        "emoji": "🧠",
+        "slug": "competences-savoir",
+        "usage": "Compétences, savoir",
+        "description": "Intelligence développée",
+        "labels": {
+          "fr": "Compétences",
+          "en": "Skills",
+          "ar": "مهارات"
+        },
+        "usage_category": "apprentissage"
+      },
+      {
+        "id": "guidance",
+        "emoji": "🧭",
+        "slug": "orientation-professionnelle",
+        "usage": "Orientation professionnelle",
+        "description": "Guidance éthique",
+        "labels": {
+          "fr": "Orientation",
+          "en": "Guidance",
+          "ar": "توجيه"
+        },
+        "usage_category": "apprentissage"
+      },
+      {
+        "id": "progress",
+        "emoji": "📈",
+        "slug": "progression",
+        "usage": "Progression",
+        "description": "Niveau atteint",
+        "labels": {
+          "fr": "Progression",
+          "en": "Progress",
+          "ar": "تقدم"
+        },
+        "usage_category": "apprentissage"
+      },
+      {
+        "id": "excellence",
+        "emoji": "⭐",
+        "slug": "excellence",
+        "usage": "Excellence",
+        "description": "Méritée, non-idolâtre",
+        "labels": {
+          "fr": "Excellence",
+          "en": "Excellence",
+          "ar": "تميز"
+        },
+        "usage_category": "apprentissage"
+      }
+    ]
+  },
+  "productivite": {
+    "category": "Productivité, Planification & Pomodoro",
+    "description": "Organisation du temps selon principes islamiques",
+    "icons": [
+      {
+        "id": "timer",
+        "emoji": "⏱️",
+        "slug": "pomodoro-timer",
+        "usage": "Pomodoro / Timer",
+        "description": "Gestion temps bénie",
+        "labels": {
+          "fr": "Minuteur",
+          "en": "Timer",
+          "ar": "مؤقت"
+        },
+        "usage_category": "productivite"
+      },
+      {
+        "id": "schedule",
+        "emoji": "📅",
+        "slug": "planning-general",
+        "usage": "Planning général",
+        "description": "Organisation quotidienne",
+        "labels": {
+          "fr": "Planning",
+          "en": "Schedule",
+          "ar": "جدولة"
+        },
+        "usage_category": "productivite"
+      },
+      {
+        "id": "completed",
+        "emoji": "✅",
+        "slug": "tache-completee",
+        "usage": "Tâche complétée",
+        "description": "Accomplie avec Baraka",
+        "labels": {
+          "fr": "Complété",
+          "en": "Completed",
+          "ar": "مكتمل"
+        },
+        "usage_category": "productivite"
+      },
+      {
+        "id": "organization",
+        "emoji": "🗂️",
+        "slug": "organisation-dossiers",
+        "usage": "Organisation dossiers",
+        "description": "Classement méthodique",
+        "labels": {
+          "fr": "Organisation",
+          "en": "Organization",
+          "ar": "تنظيم"
+        },
+        "usage_category": "productivite"
+      },
+      {
+        "id": "cycle",
+        "emoji": "🔁",
+        "slug": "cycle-recurrence",
+        "usage": "Cycle / récurrence",
+        "description": "Routine spirituelle",
+        "labels": {
+          "fr": "Cycle",
+          "en": "Cycle",
+          "ar": "دورة"
+        },
+        "usage_category": "productivite"
+      },
+      {
+        "id": "priority",
+        "emoji": "📌",
+        "slug": "priorite-epinglee",
+        "usage": "Priorité épinglée",
+        "description": "Importante selon Maslaha",
+        "labels": {
+          "fr": "Priorité",
+          "en": "Priority",
+          "ar": "أولوية"
+        },
+        "usage_category": "productivite"
+      }
+    ]
+  },
+  "communaute": {
+    "category": "Communauté, Partenaires & Collaboration",
+    "description": "Relations basées sur Ukhuwah et Ta'awun",
+    "icons": [
+      {
+        "id": "partnership",
+        "emoji": "🤝",
+        "slug": "accord-partenariat",
+        "usage": "Accord, partenariat",
+        "description": "Halal et éthique",
+        "labels": {
+          "fr": "Partenariat",
+          "en": "Partnership",
+          "ar": "شراكة"
+        },
+        "usage_category": "communaute"
+      },
+      {
+        "id": "discussion",
+        "emoji": "🗣️",
+        "slug": "discussion-feedback",
+        "usage": "Discussion / feedback",
+        "description": "Échange constructif",
+        "labels": {
+          "fr": "Discussion",
+          "en": "Discussion",
+          "ar": "نقاش"
+        },
+        "usage_category": "communaute"
+      },
+      {
+        "id": "group",
+        "emoji": "👥",
+        "slug": "groupe-famille",
+        "usage": "Groupe / famille",
+        "description": "Communauté test",
+        "labels": {
+          "fr": "Groupe",
+          "en": "Group",
+          "ar": "مجموعة"
+        },
+        "usage_category": "communaute"
+      },
+      {
+        "id": "international",
+        "emoji": "🌍",
+        "slug": "international",
+        "usage": "International",
+        "description": "Multilingue global",
+        "labels": {
+          "fr": "International",
+          "en": "International",
+          "ar": "دولي"
+        },
+        "usage_category": "communaute"
+      },
+      {
+        "id": "messages",
+        "emoji": "💬",
+        "slug": "messagerie-interne",
+        "usage": "Messagerie interne",
+        "description": "Communication directe",
+        "labels": {
+          "fr": "Messages",
+          "en": "Messages",
+          "ar": "رسائل"
+        },
+        "usage_category": "communaute"
+      },
+      {
+        "id": "announcements",
+        "emoji": "📣",
+        "slug": "annonces-officielles",
+        "usage": "Annonces officielles",
+        "description": "Communications importantes",
+        "labels": {
+          "fr": "Annonces",
+          "en": "Announcements",
+          "ar": "إعلانات"
+        },
+        "usage_category": "communaute"
+      }
+    ]
+  },
+  "securite": {
+    "category": "Sécurité, Données & Infrastructure",
+    "description": "Protection technique selon Amanah",
+    "icons": [
+      {
+        "id": "security",
+        "emoji": "🔐",
+        "slug": "chiffrement",
+        "usage": "Chiffrement",
+        "description": "Accès sécurisé",
+        "labels": {
+          "fr": "Sécurité",
+          "en": "Security",
+          "ar": "أمان"
+        },
+        "usage_category": "securite"
+      },
+      {
+        "id": "database",
+        "emoji": "🗄️",
+        "slug": "base-donnees",
+        "usage": "Base de données",
+        "description": "Archive protégée",
+        "labels": {
+          "fr": "Base données",
+          "en": "Database",
+          "ar": "قاعدة بيانات"
+        },
+        "usage_category": "securite"
+      },
+      {
+        "id": "server",
+        "emoji": "🖥️",
+        "slug": "serveur-plateforme",
+        "usage": "Serveur / plateforme",
+        "description": "Infrastructure tech",
+        "labels": {
+          "fr": "Serveur",
+          "en": "Server",
+          "ar": "خادم"
+        },
+        "usage_category": "securite"
+      },
+      {
+        "id": "switzerland",
+        "emoji": "🇨🇭",
+        "slug": "hebergement-suisse",
+        "usage": "Hébergement Suisse",
+        "description": "Conformité LPD",
+        "labels": {
+          "fr": "Suisse",
+          "en": "Switzerland",
+          "ar": "سويسرا"
+        },
+        "usage_category": "securite"
+      },
+      {
+        "id": "compliance",
+        "emoji": "🧭",
+        "slug": "compliance",
+        "usage": "Compliance",
+        "description": "Conformité directionnelle",
+        "labels": {
+          "fr": "Conformité",
+          "en": "Compliance",
+          "ar": "امتثال"
+        },
+        "usage_category": "securite"
+      },
+      {
+        "id": "settings",
+        "emoji": "⚙️",
+        "slug": "parametres-techniques",
+        "usage": "Paramètres techniques",
+        "description": "Configuration système",
+        "labels": {
+          "fr": "Paramètres",
+          "en": "Settings",
+          "ar": "إعدادات"
+        },
+        "usage_category": "securite"
+      }
+    ]
+  },
+  "spiritualite": {
+    "category": "Spiritualité & Services Islamiques",
+    "description": "Utilisés avec respect et intention claire",
+    "icons": [
+      {
+        "id": "mosque",
+        "emoji": "🕌",
+        "slug": "mosquee-spiritualite",
+        "usage": "Mosquée / Spiritualité",
+        "description": "Lieux de culte",
+        "labels": {
+          "fr": "Mosquée",
+          "en": "Mosque",
+          "ar": "مسجد"
+        },
+        "usage_category": "spiritualite"
+      },
+      {
+        "id": "dhikr",
+        "emoji": "📿",
+        "slug": "dhikr-invocations",
+        "usage": "Dhikr / Invocations",
+        "description": "Rappel spirituel",
+        "labels": {
+          "fr": "Dhikr",
+          "en": "Dhikr",
+          "ar": "ذكر"
+        },
+        "usage_category": "spiritualite"
+      },
+      {
+        "id": "quran",
+        "emoji": "📖",
+        "slug": "coran-lecture",
+        "usage": "Coran / Lecture",
+        "description": "Récitation sacrée",
+        "labels": {
+          "fr": "Coran",
+          "en": "Quran",
+          "ar": "قرآن"
+        },
+        "usage_category": "spiritualite"
+      },
+      {
+        "id": "prayer",
+        "emoji": "🤲",
+        "slug": "dua-priere",
+        "usage": "Dua / Prière",
+        "description": "Invocation à Allah",
+        "labels": {
+          "fr": "Prière",
+          "en": "Prayer",
+          "ar": "دعاء"
+        },
+        "usage_category": "spiritualite"
+      },
+      {
+        "id": "hijri-calendar",
+        "emoji": "🌙",
+        "slug": "calendrier-hijri",
+        "usage": "Calendrier Hijri",
+        "description": "Dates islamiques",
+        "labels": {
+          "fr": "Calendrier",
+          "en": "Calendar",
+          "ar": "تقويم هجري"
+        },
+        "usage_category": "spiritualite"
+      },
+      {
+        "id": "ihsan",
+        "emoji": "⭐",
+        "slug": "excellence-spirituelle",
+        "usage": "Excellence spirituelle",
+        "description": "Ihsan dans l'adoration",
+        "labels": {
+          "fr": "Ihsan",
+          "en": "Excellence",
+          "ar": "إحسان"
+        },
+        "usage_category": "spiritualite"
+      }
+    ]
+  }
+}
