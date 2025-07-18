@@ -298,14 +298,14 @@ export default function Home() {
             {/* RECONNAISSANCE & PORTFOLIO PROFESSIONNEL */}
             <div className="bg-gradient-to-r from-yellow-600 to-orange-700 rounded-3xl p-8 mb-8 text-white shadow-2xl">
               <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold mb-2">🏆 Recognition & Portfolio</h2>
-                <p className="text-lg opacity-90">Par la grâce d'Allah, recognition internationale humble</p>
+                <h2 className="text-2xl font-bold mb-2">🏆 CV & Portfolio Professionnel</h2>
+                <p className="text-lg opacity-90">Par la grâce d'Allah, présentation complète Yakoubi Yamina</p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <Link href="/portfolio-premium" className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
                   <div className="text-2xl mb-2">📋</div>
-                  <h4 className="font-bold mb-2">Portfolio Premium</h4>
+                  <h4 className="font-bold mb-2">CV/Portfolio Premium</h4>
                   <p className="text-sm opacity-90">Présentation professionnelle complète</p>
                 </Link>
 
