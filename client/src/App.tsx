@@ -144,6 +144,7 @@ import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
 import BibliothequeIconesHalalPage from "@/pages/BibliothequeIconesHalalPage";
+import FonctionnalitesUIUXIslamiques from "@/pages/FonctionnalitesUIUXIslamiques";
 import DocumentsLegauxAutomatiquesPage from "@/pages/DocumentsLegauxAutomatiquesPage";
 import LogistiqueEquipementsPage from "@/pages/LogistiqueEquipementsPage";
 import ExportModulesPage from "@/pages/export-modules-page";
@@ -1464,6 +1465,16 @@ function Router() {
       <Route path="/bibliotheque-icones" component={BibliothequeIconesHalalPage} />
       <Route path="/icones-figma-halal" component={BibliothequeIconesHalalPage} />
       <Route path="/figma-halal-icons" component={BibliothequeIconesHalalPage} />
+      
+      {/* Fonctionnalités UI/UX Islamiques Révolutionnaires */}
+      <Route path="/fonctionnalites-uiux-islamiques" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/uiux-islamiques" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/ui-ux-islamiques" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/fonctionnalites-ui-islamiques" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/islamic-ui-features" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/ui-halal" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/fiqh-informatique-ui" component={FonctionnalitesUIUXIslamiques} />
+      <Route path="/analyse-fiqh-ui" component={FonctionnalitesUIUXIslamiques} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
