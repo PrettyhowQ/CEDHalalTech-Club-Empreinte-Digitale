@@ -8,9 +8,14 @@ export function VisitorTracker() {
 
   useEffect(() => {
     // Track page visit when location changes
-    trackVisit();
+    if (trackVisit) {
+      trackVisit();
+    }
   }, [location, trackVisit]);
 
   // This component doesn't render anything visible
   return null;
 }
+
+// Export par défaut pour compatibilité
+export default VisitorTracker;

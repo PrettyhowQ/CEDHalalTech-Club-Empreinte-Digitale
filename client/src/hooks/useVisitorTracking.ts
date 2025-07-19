@@ -173,9 +173,15 @@ export const useVisitorTracking = () => {
     }
   }, [accessLevel]); // Se déclenche lors du changement de niveau d'accès
 
+  const trackVisit = async () => {
+    // Cette fonction est maintenant un no-op car le tracking est automatique
+    return;
+  };
+
   return {
     sessionId: sessionIdRef.current,
     isTracked: trackedRef.current,
+    trackVisit, // Ajout pour compatibilité
   };
 };
 
