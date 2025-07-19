@@ -16,7 +16,7 @@ export function usePrivateAccess() {
     
     // ACCÈS DIRECTION YAKOUBI YAMINA
     if (director === 'yakoubi-yamina' || admin === 'yamina') {
-      console.log('🎯 Accès Direction Yakoubi Yamina détecté');
+      console.log('🎯 Accès Direction Yakoubi Yamina détecté via URL');
       localStorage.setItem("ced_private_access", "granted");
       localStorage.setItem("ced_access_timestamp", Date.now().toString());
       localStorage.setItem("ced_access_level", "direction");
@@ -27,7 +27,7 @@ export function usePrivateAccess() {
     
     // ACCÈS FAMILLE YAKOUBI
     if (director === 'yakoubi') {
-      console.log('👨‍👩‍👧‍👦 Accès Famille Yakoubi détecté');
+      console.log('👨‍👩‍👧‍👦 Accès Famille Yakoubi détecté via URL');
       localStorage.setItem("ced_private_access", "granted");
       localStorage.setItem("ced_access_timestamp", Date.now().toString());
       localStorage.setItem("ced_access_level", "famille");
@@ -47,11 +47,22 @@ export function usePrivateAccess() {
       return;
     }
     
-    // Vérifier accès localStorage existant
+    // Si aucun paramètre URL spécial, vérifier uniquement localStorage pour financeur
+    // (mais pas pour direction/famille sans paramètre URL)
     const access = localStorage.getItem("ced_private_access");
     const timestamp = localStorage.getItem("ced_access_timestamp");
+    const level = localStorage.getItem("ced_access_level");
     
-    if (access === "granted" && timestamp) {
+    // Si accès direction/famille MAIS sans paramètre URL, NE PAS donner accès
+    if (level === "direction" || level === "famille") {
+      console.log('ℹ️ Accès direction/famille détecté mais sans paramètre URL - Authentification requise');
+      setHasAccess(false);
+      setIsLoading(false);
+      return;
+    }
+    
+    // Vérifier accès financeur normal
+    if (access === "granted" && timestamp && level === "financeur") {
       const accessTime = parseInt(timestamp);
       const now = Date.now();
       const twentyFourHours = 24 * 60 * 60 * 1000; // 24 heures en ms
