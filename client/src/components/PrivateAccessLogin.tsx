@@ -23,20 +23,16 @@ export default function PrivateAccessLogin() {
     
     if (director === 'yakoubi-yamina' || admin === 'yamina') {
       setAccessDetected("direction");
-      toast({
-        title: "🎯 Accès Direction Détecté",
-        description: "Bienvenue Direction Yakoubi Yamina",
-      });
-      setTimeout(() => window.location.reload(), 2000);
+      console.log('🎯 Accès Direction Yakoubi Yamina détecté via URL');
+      // Accès automatique sans rechargement
+      grantAccess("direction");
     } else if (director === 'yakoubi') {
       setAccessDetected("famille");
-      toast({
-        title: "👨‍👩‍👧‍👦 Accès Famille Détecté", 
-        description: "Bienvenue Famille Yakoubi",
-      });
-      setTimeout(() => window.location.reload(), 2000);
+      console.log('👨‍👩‍👧‍👦 Accès Famille Yakoubi détecté via URL');
+      // Accès automatique sans rechargement  
+      grantAccess("famille");
     }
-  }, [toast]);
+  }, [toast, grantAccess]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,11 +76,31 @@ export default function PrivateAccessLogin() {
         <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="text-white flex items-center space-x-2">
-              <Lock className="h-5 w-5 text-green-400" />
-              <span>Code d'Accès Privé</span>
+              {accessDetected === "direction" ? (
+                <>
+                  <Crown className="h-5 w-5 text-yellow-400" />
+                  <span>Accès Direction Activé</span>
+                </>
+              ) : accessDetected === "famille" ? (
+                <>
+                  <Users className="h-5 w-5 text-blue-400" />
+                  <span>Accès Famille Activé</span>
+                </>
+              ) : (
+                <>
+                  <Lock className="h-5 w-5 text-green-400" />
+                  <span>Code d'Accès Privé</span>
+                </>
+              )}
             </CardTitle>
             <CardDescription className="text-gray-300">
-              Entrez votre code d'accès pour accéder à l'écosystème complet CED
+              {accessDetected === "direction" ? (
+                "🎯 Bienvenue Direction Yakoubi Yamina - Accès complet activé"
+              ) : accessDetected === "famille" ? (
+                "👨‍👩‍👧‍👦 Bienvenue Famille Yakoubi - Accès familial activé"
+              ) : (
+                "Entrez votre code d'accès pour accéder à l'écosystème complet CED"
+              )}
             </CardDescription>
           </CardHeader>
           <CardContent>
