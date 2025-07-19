@@ -6,16 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Download, Search, Copy, Check, Eye, FileText, Database, Code } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { 
-  halalIconsPack, 
-  getIconsByCategory, 
-  searchIcons, 
-  generateMarkdown, 
-  generateJSON, 
-  generateCSV, 
-  generateHTML,
-  type HalalIcon 
-} from '@/data/iconsHalalPack';
+import { halalIconsPack, type HalalIcon } from '@/data/iconsHalalPack';
 
 export default function BibliothequeIconesHalalModerne() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -23,9 +14,61 @@ export default function BibliothequeIconesHalalModerne() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const { toast } = useToast();
 
+  const getIconsByCategory = () => {
+    const categories = halalIconsPack.reduce((acc, icon) => {
+      if (!acc[icon.category]) {
+        acc[icon.category] = [];
+      }
+      acc[icon.category].push(icon);
+      return acc;
+    }, {} as Record<string, HalalIcon[]>);
+    return categories;
+  };
+
+  const searchIcons = (query: string) => {
+    const lowercaseQuery = query.toLowerCase();
+    return halalIconsPack.filter(icon => 
+      icon.fr.toLowerCase().includes(lowercaseQuery) ||
+      icon.usage.toLowerCase().includes(lowercaseQuery) ||
+      icon.category.toLowerCase().includes(lowercaseQuery)
+    );
+  };
+
+  const generateMarkdown = (): string => {
+    const categories = getIconsByCategory();
+    let markdown = `# 📚 Bibliothèque d'icônes Halal – CED HalalTech™ (v1)\n\n`;
+    
+    Object.entries(categories).forEach(([category, icons]) => {
+      markdown += `## ${category}\n`;
+      markdown += `| Label | Icône | Usage |\n|---|---|---|\n`;
+      
+      icons.forEach(icon => {
+        markdown += `| ${icon.fr} | ${icon.emoji} | ${icon.usage} |\n`;
+      });
+      
+      markdown += `\n`;
+    });
+
+    markdown += `---\n\n© Yakoubi Yamina – Tous droits réservés | Club Empreinte Digitale – CED HalalTech™`;
+    return markdown;
+  };
+
+  const generateJSON = (): string => {
+    return JSON.stringify(halalIconsPack, null, 2);
+  };
+
+  const generateCSV = (): string => {
+    const headers = ['id', 'emoji', 'fr', 'en', 'ar', 'category', 'usage'];
+    const rows = halalIconsPack.map(icon => 
+      headers.map(header => `"${icon[header as keyof HalalIcon]}"`).join(',')
+    );
+    
+    return [headers.join(','), ...rows].join('\n');
+  };
+
   const categories = getIconsByCategory();
   const filteredIcons = searchQuery 
-    ? searchIcons(searchQuery, 'fr') 
+    ? searchIcons(searchQuery) 
     : selectedCategory === 'all' 
       ? halalIconsPack 
       : categories[selectedCategory] || [];
