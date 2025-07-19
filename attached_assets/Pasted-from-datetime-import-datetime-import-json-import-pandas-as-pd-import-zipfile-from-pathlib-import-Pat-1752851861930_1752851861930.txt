@@ -1,0 +1,130 @@
+from datetime import datetime
+import json
+import pandas as pd
+import zipfile
+from pathlib import Path
+
+# Création des fichiers demandés
+base_path = Path("/mnt/data/ced_halaltech_icons_pack")
+base_path.mkdir(exist_ok=True)
+
+# 1. Fichier Markdown
+markdown_content = """
+# 📚 Bibliothèque d’icônes Halal – CED HalalTech™ (v1)
+
+Protocole : chaque module choisit **1 icône principale** + (optionnel) 2 icônes de soutien.  
+Interdits : 🔮, ♈, 🎰, 🍷 pour usage fonctionnel.  
+Validations éthiques : 🛡️ + ✅.
+
+---
+
+## 📊 Finance Halal
+| Label | Icône | Usage |
+|---|---|---|
+| Prévisionnel Halal | 📊🧮📅💼💡 | Projections budgétaires éthiques |
+| Calcul Zakat | 🧮🤲 | Calculs obligatoires |
+| Budget Mensuel | 📅💼 | Plan comptable périodique |
+
+## 🛡️ Protection & Licence
+| Label | Icône | Usage |
+|---|---|---|
+| Licence Éthique | 🛡️📜 | Conditions halal |
+| Signature Autorisée | ✍️✅ | Accord validé |
+| Usage Interdit | 🚫 | Non conforme |
+
+## 🎓 Formations & Diplômes
+| Label | Icône | Usage |
+|---|---|---|
+| Certification validée | 🎓✅ | Diplôme obtenu |
+| Progression | 📈📘 | Suivi pédagogique |
+| Excellence | 🌟🧠 | Réussite méritée |
+
+## ⏱️ Planning & Productivité
+| Label | Icône | Usage |
+|---|---|---|
+| Timer Pomodoro | ⏱️ | Gestion du temps |
+| Planning | 📅📌 | Organisation personnelle |
+| Priorité | 📌✅ | Tâche importante |
+
+## 🤝 Communauté & Partenariats
+| Label | Icône | Usage |
+|---|---|---|
+| Collaboration | 🤝 | Accord halal |
+| Groupe Test | 👥🗣️ | Feedback utilisateurs |
+| Multilingue | 🌍💬 | Plateforme mondiale |
+
+## 🌙 Services Islamiques
+| Label | Icône | Usage |
+|---|---|---|
+| Prières | 🕌📅 | Horaires et alertes |
+| Dou‘âa | 🤲 | Intentions / invocations |
+| Zakat | 🧮💰 | Simulation éthique |
+
+---
+
+© Yakoubi Yamina – Tous droits réservés | Club Empreinte Digitale – CED HalalTech™  
+Utilisation exclusivement halal – Toute exploitation commerciale nécessite accord écrit.
+"""
+
+markdown_path = base_path / "icons_halaltech.md"
+markdown_path.write_text(markdown_content, encoding="utf-8")
+
+# 2. JSON multilingue
+icons_json = [
+    {"id": "forecast", "emoji": "📊", "fr": "Prévisionnel", "en": "Forecast", "ar": "تقدير"},
+    {"id": "calculator", "emoji": "🧮", "fr": "Calculs", "en": "Calculations", "ar": "حسابات"},
+    {"id": "calendar", "emoji": "📅", "fr": "Calendrier", "en": "Calendar", "ar": "تقويم"},
+    {"id": "briefcase", "emoji": "💼", "fr": "Gestion", "en": "Management", "ar": "إدارة"},
+    {"id": "insight", "emoji": "💡", "fr": "Projection", "en": "Insight", "ar": "رؤية"},
+    {"id": "shield", "emoji": "🛡️", "fr": "Protection", "en": "Protection", "ar": "حماية"},
+    {"id": "document", "emoji": "📜", "fr": "Charte", "en": "Charter", "ar": "ميثاق"},
+    {"id": "mosque", "emoji": "🕌", "fr": "Prière", "en": "Prayer", "ar": "صلاة"},
+    {"id": "dua", "emoji": "🤲", "fr": "Dou‘âa", "en": "Supplication", "ar": "دعاء"},
+]
+
+json_path = base_path / "icons_halaltech.json"
+json_path.write_text(json.dumps(icons_json, ensure_ascii=False, indent=2), encoding="utf-8")
+
+# 3. CSV version (pour Notion/Airtable)
+df = pd.DataFrame(icons_json)
+csv_path = base_path / "icons_halaltech.csv"
+df.to_csv(csv_path, index=False)
+
+# 4. HTML/JS snippet
+html_js_content = """
+<!-- Menu d'icônes Halal (CED HalalTech™) -->
+<div id="icon-menu">
+  <button title="Prévisionnel">📊</button>
+  <button title="Calculs">🧮</button>
+  <button title="Calendrier">📅</button>
+  <button title="Gestion">💼</button>
+  <button title="Projection">💡</button>
+  <button title="Protection">🛡️</button>
+  <button title="Charte">📜</button>
+  <button title="Prière">🕌</button>
+  <button title="Dou‘âa">🤲</button>
+</div>
+
+<style>
+  #icon-menu button {
+    font-size: 24px;
+    margin: 5px;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+  }
+</style>
+"""
+
+html_path = base_path / "icons_halaltech.html"
+html_path.write_text(html_js_content, encoding="utf-8")
+
+# Zip final
+zip_path = "/mnt/data/Icons_HalalTech_Pack_CED.zip"
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    for file in base_path.iterdir():
+        zipf.write(file, arcname=file.name)
+
+zip_path

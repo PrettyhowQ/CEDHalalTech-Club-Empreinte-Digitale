@@ -1,0 +1,102 @@
+version: '3.8'
+
+services:
+  # Application principale CED HalalTech
+  app:
+    build: .
+    container_name: ced-halaltech-app
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://ced_user:ced_secure_2025@db:5432/ced_halaltech
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - JWT_SECRET=${JWT_SECRET:-ced-halal-jwt-secret-2025}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-ced-halal-encryption-key-12345678}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - ced_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Base de données PostgreSQL
+  db:
+    image: postgres:16-alpine
+    container_name: ced-halaltech-db
+    environment:
+      POSTGRES_DB: ced_halaltech
+      POSTGRES_USER: ced_user
+      POSTGRES_PASSWORD: ced_secure_2025
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - ced_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ced_user -d ced_halaltech"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis pour cache et sessions (optionnel)
+  redis:
+    image: redis:7-alpine
+    container_name: ced-halaltech-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - ced_network
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass ced_redis_2025
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # Nginx proxy (pour production)
+  nginx:
+    image: nginx:alpine
+    container_name: ced-halaltech-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+      - nginx_logs:/var/log/nginx
+    depends_on:
+      - app
+    networks:
+      - ced_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+    name: ced_postgres_data
+  redis_data:
+    driver: local
+    name: ced_redis_data
+  nginx_logs:
+    driver: local
+    name: ced_nginx_logs
+
+networks:
+  ced_network:
+    driver: bridge
+    name: ced_halal_network

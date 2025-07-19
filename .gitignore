@@ -1,49 +1,65 @@
-# Dependencies
+# Dépendances
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Environment variables
+# Fichiers de build
+dist/
+build/
+.next/
+out/
+
+# Variables d'environnement et secrets
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Build outputs
-dist/
-build/
-.vite/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Cache et temp files
+.cache/
+.temp/
+.tmp/
+*.tmp
+*.temp
 
 # Logs
-logs
+logs/
 *.log
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
+# Coverage directory utilisé par tools comme istanbul
 coverage/
 *.lcov
 
 # nyc test coverage
-.nyc_output
+.nyc_output/
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
+# TypeScript cache
+*.tsbuildinfo
+
 # Optional npm cache directory
 .npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
 
 # Optional REPL history
 .node_repl_history
@@ -54,33 +70,54 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
+# dotenv environment variables file
+.env
+.env.test
+
 # parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
+.parcel-cache/
 
 # Next.js build output
-.next
+.next/
 
 # Nuxt.js build / generate output
-.nuxt
-dist
+.nuxt/
+dist/
 
-# Storybook build outputs
-.out
-.storybook-out
+# Gatsby files
+.cache/
+public/
 
-# Temporary folders
-tmp/
-temp/
+# Vuepress build output
+.vuepress/dist/
 
-# IDE files
-.vscode/settings.json
-.idea/
-*.swp
-*.swo
-*~
+# Serverless directories
+.serverless/
 
-# OS files
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test/
+
+# Webpack
+.webpack/
+
+# Electron-builder output
+/dist_electron/
+
+# Replit specific
+.replit
+.upm/
+.config/
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -89,15 +126,39 @@ temp/
 ehthumbs.db
 Thumbs.db
 
-# Replit files (keep for local development)
-.replit
-.replit.nix
-.cache/
-.config/
-.local/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# CED HalalTech™ Specific
-attached_assets/
-club-empreinte-digitale/
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Docker
+.dockerignore
+
+# Backup files
 *.backup
-*.tar.gz
+*.bak
+*.orig
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Assets temporaires
+attached_assets/temp/
+attached_assets/cache/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# Sentry Config File
+.sentryclirc

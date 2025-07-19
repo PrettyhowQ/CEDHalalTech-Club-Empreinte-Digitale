@@ -1,0 +1,1220 @@
+Club Empreinte Digitale -
+Documentation Technique
+Complète
+Date: 25 décembre 2024
+Heure: 07:15 UTC
+Version: 1.0 - Documentation Finale
+Vue d'ensemble du Projet
+Club Empreinte Digitale est un écosystème fintech complet
+combinant banque islamique digitale, assurance Takaful,
+éducation IA éthique, et commerce solidaire, développé par
+Yakoubi Yamina et PrettyhowQ.
+Composants Principaux
+CED Bank: Banque digitale islamique 0% intérêts
+Al-Aman CED Takaful: Assurance islamique conforme
+Sharia
+Super IARP Pro: Assistant IA multilingue (78+ langues)
+TechForAll: Plateforme donation technologique écologique
+La Citadelle du Musulman: Application spirituelle avec
+Coran audio
+Architecture Complète du
+Projet
+club-empreinte-digitale/
+│
+├── client/ # Frontend
+│ ├── public/ # Assets st
+│ │ ├── index.html
+│ │ ├── favicon.ico
+│ │ └── assets/
+│ │
+│ └── src/ # Code sour
+│ ├── main.tsx # Point d'e
+│ ├── App.tsx # Composant
+│ ├── index.css # Styles gl
+│ │
+│ ├── components/ # Composant
+│ │ ├── ui/ # Composant
+│ │ │ ├── button.tsx
+│ │ │ ├── card.tsx
+│ │ │ ├── input.tsx
+│ │ │ ├── badge.tsx
+│ │ │ ├── progress.tsx
+│ │ │ ├── tabs.tsx
+│ │ │ ├── dialog.tsx
+│ │ │ ├── toast.tsx
+│ │ │ └── form.tsx
+│ │ │
+│ │ ├── layout/ # Composant
+│ │ │ ├── Header.tsx # Navigatio
+│ │ │ ├── Footer.tsx # Pied de p
+│ │ │ └── Sidebar.tsx # Barre lat
+│ │ │
+│ │ ├── sections/ # Sections
+│ │ │ ├── HeroSection.tsx
+│ │ │ ├── CEDBankSection.tsx
+│ │ │ ├── TakafulSection.tsx
+│ │ │ ├── CourseSection.tsx
+│ │ │ └── TestimonialSection.tsx
+│ │ │
+│ │ ├── CEDBank.tsx # Système b
+│ │ ├── CEDBankCards.tsx # Gestion c
+│ │ ├── CEDBankSimple.tsx # Interface
+│ │ ├── AlAmanCEDPrototype.tsx # Assurance
+│ │ ├── AlAmanCEDComparison.tsx # Comparais
+│ │ ├── AlAmanCEDLaunchStrategy.tsx # Straté
+│ │ ├── SuperIARPPro.tsx # Assistant
+│ │ ├── AIFinancialAdvisor.tsx # Conseille
+│ │ ├── AIGeneratorsMobile.tsx # Générateu
+│ │ ├── CourseGrid.tsx # Grille co
+│ │ ├── CourseDetail.tsx # Détail co
+│ │ ├── ProgressTracker.tsx # Suivi pro
+│ │ ├── LanguageSelector.tsx # Sélecteur
+│ │ ├── VoiceInteraction.tsx # Interacti
+│ │ ├── ThemeToggle.tsx # Basculeme
+│ │ ├── DashboardEquipe.tsx # Dashboard
+│ │ ├── FichesPaie.tsx # Fiches de
+│ │ ├── ApplicationLogistique.tsx # App logi
+│ │ ├── EmployeeTrainingPlatform.tsx # Forma
+│ │ ├── MobileProfessionalSuite.tsx # Suite
+│ │ ├── QuranListeningApp.tsx # Applicati
+│ │ ├── TechForAllDashboard.tsx # Dashboard
+│ │ ├── EcologicalConstructionDonations.tsx
+│ │ ├── InnovationRoadmap.tsx # Roadmap i
+│ │ ├── ShariaBoardCompliance.tsx # Conseil
+│ │ ├── BankingSecurity.tsx # Sécurité
+│ │ ├── APIManagement.tsx # Gestion A
+│ │ ├── MobileNativeApps.tsx # Apps nati
+│ │ ├── AnalyticsAdvancees.tsx # Analytics
+│ │ ├── IntegrationsStrategiques.tsx # Intég
+│ │ ├── CEDFooter.tsx # Footer cop
+│ │ └── ContactComplet.tsx # Contact c
+│ │
+│ ├── pages/ # Pages de
+│ │ ├── HomePage.tsx # Page d'ac
+│ │ ├── CEDBank.tsx # Page CED
+│ │ ├── CEDBankCards.tsx # Page cart
+│ │ ├── AlAmanTakafulInsurance.tsx # Page Ta
+│ │ ├── SuperIARPPro.tsx # Page IARP
+│ │ ├── CoursesPage.tsx # Page cour
+│ │ ├── CourseDetailPage.tsx # Détail co
+│ │ ├── DashboardEquipe.tsx # Page dash
+│ │ ├── FichesPaie.tsx # Page fiche
+│ │ ├── ApplicationLogistique.tsx # Page app
+│ │ ├── ContactComplet.tsx # Page cont
+│ │ ├── InnovationRoadmap.tsx # Page road
+│ │ ├── EmployeeTrainingPlatform.tsx # Page
+│ │ ├── MobileProfessionalSuite.tsx # Page s
+│ │ ├── QuranListeningApp.tsx # Page Cora
+│ │ ├── TechForAllDashboard.tsx # Page Tech
+│ │ ├── EcologicalConstructionDonations.tsx
+│ │ ├── ShariaBoardCompliance.tsx # Page con
+│ │ ├── BankingSecurity.tsx # Page sécu
+│ │ ├── APIManagement.tsx # Page APIs
+│ │ ├── MobileNativeApps.tsx # Page apps
+│ │ ├── AnalyticsAdvancees.tsx # Page anal
+│ │ ├── IntegrationsStrategiques.tsx # Page
+│ │ ├── DreamSimulator.tsx # Page simu
+│ │ ├── TechForAllDocuments.tsx # Page docu
+│ │ └── NotFoundPage.tsx # Page 404
+│ │
+│ ├── hooks/ # Hooks Rea
+│ │ ├── use-auth.tsx # Hook auth
+│ │ ├── use-toast.tsx # Hook noti
+│ │ ├── use-language.tsx # Hook lang
+│ │ ├── use-voice.tsx # Hook voca
+│ │ └── use-theme.tsx # Hook thèm
+│ │
+│ ├── lib/ # Bibliothè
+│ │ ├── utils.ts # Utilitair
+│ │ ├── queryClient.ts # Client Ta
+│ │ ├── cn.ts # Utilitair
+│ │ └── protected-route.tsx # Routes pr
+│ │
+│ ├── contexts/ # Contextes
+│ │ ├── LanguageContext.tsx # Contexte
+│ │ ├── ThemeContext.tsx # Contexte
+│ │ └── AuthContext.tsx # Contexte
+│ │
+│ └── data/ # Données s
+│ ├── cedBankCards.ts # Configura
+│ ├── courses.ts # Données c
+│ ├── testimonials.ts # Témoignag
+│ ├── languages.ts # Langues s
+│ └── contacts.ts # Contacts
+│
+├── server/ # Backend N
+│ ├── index.ts # Point d'en
+│ ├── vite.ts # Configurat
+│ ├── routes.ts # Routes API
+│ ├── db.ts # Configurat
+│ ├── storage.ts # Interface
+│ ├── openai.ts # Intégratio
+│ └── replitAuth.ts # Authentifi
+│
+├── shared/ # Code part
+│ └── schema.ts # Schémas Dr
+│
+├── attached_assets/ # Assets up
+│ ├── IMG_6023_1750594027499.png
+│ ├── IMG_6029_1750597115937.png
+│ ├── IMG_6030_1750597115937.png
+│ ├── IMG_6031_1750597115937.png
+│ ├── IMG_6032_1750597115937.png
+│ ├── IMG_6033_1750597115937.png
+│ └── ... autres assets
+│
+├── club-empreinte-digitale-sauvegarde/ # Sauvegarde
+│
+├── package.json # Dépendance
+├── package-lock.json # Lock dépen
+├── tsconfig.json # Configurat
+├── vite.config.ts # Configurat
+├── tailwind.config.ts # Configurat
+├── postcss.config.js # Configurat
+├── drizzle.config.ts # Configurat
+├── components.json # Configurat
+├── .replit # Configurat
+├── .gitignore # Git ignore
+├── .env.example # Variables
+├── replit.md # Documentat
+│
+├── README.md # Documentat
+├── API_DOCUMENTATION.md # Documentat
+├── BUSINESS_FORECAST.md # Prévisions
+├── CONTRIBUTING.md # Guide cont
+├── DEPLOYMENT.md # Guide dépl
+├── DESCRIPTION.md # Descriptio
+├── GUIDE_UTILISATION_MOBILE.md # Guide mobi
+├── LICENSE # Licence pr
+├── MIGRATION_VERCEL.md # Migration
+├── PROGRESS_REPORT.md # Rapport pr
+├── ROADMAP_EXPANSION.md # Roadmap ex
+├── SETUP_GITHUB.md # Configurat
+├── SETUP_OPENAI.md # Configurat
+├── STRATEGIE_MONETISATION.md # Stratégie
+│
+├── club-empreinte-digitale-complet.zip # Archive co
+├── club-empreinte-digitale-sauvegarde-complete.zip
+└── generated-icon.png # Icône géné
+Technologies et Stack
+Technique
+Frontend
+Framework: React 18.2.0 + TypeScript 5.0+
+Build Tool: Vite 5.0+ avec HMR
+Styling: Tailwind CSS 3.4+ + PostCSS
+UI Components: Radix UI + shadcn/ui
+State Management: TanStack Query v5
+Routing: Wouter (lightweight)
+Animations: Framer Motion 11+
+Icons: Lucide React + React Icons
+Forms: React Hook Form + Zod validation
+Backend
+Runtime: Node.js 20+ avec ES modules
+Framework: Express.js + TypeScript
+Database: PostgreSQL 16 + Drizzle ORM
+Authentication: Replit Auth + OpenID Connect
+Session: Express Session + PostgreSQL store
+File Upload: Multer + Sharp (images)
+CORS: cors middleware
+Environment: dotenv + NODE_ENV
+APIs Externes
+OpenAI: GPT-4o pour Super IARP Pro
+SendGrid: Emails transactionnels
+Stripe: Paiements et abonnements
+Twilio: SMS et communications
+SWIFT: Virements internationaux
+Infrastructure
+Hosting: Replit Deployments
+Database: PostgreSQL fourni par Replit
+CDN: Assets servis par Vite
+Domain: .replit.app ou domaine custom
+SSL: Géré automatiquement
+Installation et Configuration
+Prérequis
+# Node.js 20+
+node --version # >= 20.0.0
+# NPM 10+
+npm --version # >= 10.0.0
+# Git
+git --version
+1. Cloner le Repository
+git clone https://github.com/votre-username/club-emprei
+cd club-empreinte-digitale
+2. Installer les Dépendances
+# Installation complète
+npm install
+# Vérification des vulnérabilités
+npm audit fix
+3. Configuration Base de Données
+# Générer et pousser le schéma
+npm run db:generate
+npm run db:push
+# Optionnel: voir les données
+npm run db:studio
+4. Variables d'Environnement
+Créer .env basé sur .env.example :
+# Base de données (fournie par Replit)
+DATABASE_URL="postgresql://..."
+PGDATABASE="..."
+PGHOST="..."
+PGPASSWORD="..."
+PGPORT="..."
+PGUSER="..."
+# APIs externes (à configurer)
+OPENAI_API_KEY="sk-proj-..."
+SENDGRID_API_KEY="SG...."
+STRIPE_SECRET_KEY="sk_test_..."
+VITE_STRIPE_PUBLIC_KEY="pk_test_..."
+# Session (générer une clé forte)
+SESSION_SECRET="votre-cle-secrete-forte"
+# Environment
+NODE_ENV="development"
+5. Démarrage Développement
+# Démarrage serveur dev
+npm run dev
+# L'application sera disponible sur http://localhost:50
+Scripts NPM Disponibles
+{
+"scripts": {
+"dev": "NODE_ENV=development tsx server/index.ts",
+"build": "vite build",
+"preview": "vite preview",
+"db:generate": "drizzle-kit generate",
+"db:push": "drizzle-kit push",
+"db:studio": "drizzle-kit studio",
+"db:migrate": "drizzle-kit migrate",
+"type-check": "tsc --noEmit",
+"lint": "eslint . --ext .ts,.tsx",
+"lint:fix": "eslint . --ext .ts,.tsx --fix",
+"format": "prettier --write .",
+"test": "vitest",
+"test:coverage": "vitest --coverage"
+}
+}
+Dépendances Principales
+Dependencies
+{
+"@anthropic-ai/sdk": "^0.24.3",
+"@hookform/resolvers": "^3.3.4",
+"@neondatabase/serverless": "^0.9.0",
+"@radix-ui/react-*": "^1.0.0+",
+"@sendgrid/mail": "^8.1.3",
+"@stripe/react-stripe-js": "^2.7.1",
+"@stripe/stripe-js": "^4.0.0",
+"@tanstack/react-query": "^5.40.0",
+"class-variance-authority": "^0.7.0",
+"clsx": "^2.1.1",
+"drizzle-orm": "^0.30.10",
+"express": "^4.19.2",
+"express-session": "^1.18.0",
+"framer-motion": "^11.2.10",
+"lucide-react": "^0.395.0",
+"openai": "^4.52.1",
+"react": "^18.3.1",
+"react-dom": "^18.3.1",
+"react-hook-form": "^7.51.5",
+"stripe": "^15.8.0",
+"tailwindcss": "^3.4.4",
+"tsx": "^4.15.6",
+"typescript": "^5.4.5",
+"vite": "^5.3.1",
+"wouter": "^3.2.1",
+"zod": "^3.23.8"
+}
+DevDependencies
+{
+"@types/express": "^4.17.21",
+"@types/express-session": "^1.18.0",
+"@types/node": "^20.14.2",
+"@types/react": "^18.3.3",
+"@types/react-dom": "^18.3.0",
+"@vitejs/plugin-react": "^4.3.1",
+"autoprefixer": "^10.4.19",
+"drizzle-kit": "^0.21.4",
+"postcss": "^8.4.38",
+"tailwindcss-animate": "^1.0.7"
+}
+Structure Base de Données
+Tables Principales
+-- Utilisateurs et sessions
+sessions (sessionId, userId, data, expiresAt)
+users (id, email, username, avatar, createdAt, lastLogi
+-- Cours et progression
+courses (id, title, description, category, difficulty,
+userCourseProgress (id, userId, courseId, progress, com
+-- Témoignages
+testimonials (id, name, role, content, rating, publishe
+-- Conversations chat
+chatConversations (id, userId, title, messages, created
+-- Produits e-commerce
+products (id, name, description, price, category, stock
+-- Analytics et événements
+analyticsEvents (id, userId, eventType, eventData, time
+Relations
+// Drizzle ORM Relations
+export const usersRelations = relations(users, ({ many
+courseProgress: many(userCourseProgress),
+chatConversations: many(chatConversations),
+analyticsEvents: many(analyticsEvents),
+}));
+export const coursesRelations = relations(courses, ({ m
+userProgress: many(userCourseProgress),
+}));
+Système de Design
+Couleurs Principales
+:root {
+/* Couleurs CED Bank */
+--ced-primary: #059669; /* Vert émeraude */
+--ced-secondary: #3B82F6; /* Bleu */
+--ced-accent: #F59E0B; /* Orange/Or */
+--ced-success: #10B981; /* Vert succès */
+--ced-warning: #F59E0B; /* Orange warning */
+--ced-error: #EF4444; /* Rouge erreur */
+/* Couleurs Takaful */
+--takaful-primary: #7C3AED; /* Violet */
+--takaful-secondary: #EC4899; /* Rose */
+/* Couleurs neutres */
+--gray-50: #F9FAFB;
+--gray-900: #111827;
+}
+Typographie
+/* Familles de polices */
+font-family: 'Inter', -apple-system, BlinkMacSystemFont
+/* Échelle typographique */
+--text-xs: 0.75rem; /* 12px */
+--text-sm: 0.875rem; /* 14px */
+--text-base: 1rem; /* 16px */
+--text-lg: 1.125rem; /* 18px */
+--text-xl: 1.25rem; /* 20px */
+--text-2xl: 1.5rem; /* 24px */
+--text-3xl: 1.875rem; /* 30px */
+--text-4xl: 2.25rem; /* 36px */
+--text-5xl: 3rem; /* 48px */
+--text-6xl: 3.75rem; /* 60px */
+Espacements
+/* Échelle d'espacement */
+--space-1: 0.25rem; /* 4px */
+--space-2: 0.5rem; /* 8px */
+--space-3: 0.75rem; /* 12px */
+--space-4: 1rem; /* 16px */
+--space-6: 1.5rem; /* 24px */
+--space-8: 2rem; /* 32px */
+--space-12: 3rem; /* 48px */
+--space-16: 4rem; /* 64px */
+--space-20: 5rem; /* 80px */
+Système d'Authentification
+Configuration Replit Auth
+// server/replitAuth.ts
+import { OpenIDClient } from 'openid-client';
+const replitIssuer = 'https://replit.com';
+const clientId = process.env.REPLIT_CLIENT_ID;
+const clientSecret = process.env.REPLIT_CLIENT_SECRET;
+export async function setupAuth(app: Express) {
+const issuer = await Issuer.discover(replitIssuer);
+const client = new issuer.Client({
+client_id: clientId,
+client_secret: clientSecret,
+redirect_uris: ['/api/auth/callback'],
+response_types: ['code'],
+});
+// Routes d'authentification
+app.get('/api/auth/login', (req, res) => {
+const authUrl = client.authorizationUrl({
+scope: 'openid profile email',
+state: generateState(),
+});
+res.redirect(authUrl);
+;)}
+app.get('/api/auth/callback', async (req, res) => {
+const tokenSet = await client.callback(
+'/api/auth/callback',
+req.query
+;)
+const userInfo = await client.userinfo(tokenSet.acc
+// Créer/mettre à jour utilisateur
+const user = await storage.upsertUser({
+id: userInfo.sub,
+email: userInfo.email,
+username: userInfo.preferred_username,
+avatar: userInfo.picture,
+;)}
+req.session.userId = user.id;
+res.redirect('/');
+;)}
+}
+Protection des Routes
+// client/src/lib/protected-route.tsx
+export function ProtectedRoute({ component: Component,
+const { user, isLoading } = useAuth();
+if (isLoading) return <LoadingSpinner />;
+if (!user) return <Redirect to="/auth" />;
+return <Component {...props} />;
+}
+Système Multilingue
+Configuration des Langues
+// client/src/data/languages.ts
+export const SUPPORTED_LANGUAGES = [
+{ code: 'fr', name: 'Français', flag: ' ', rtl: false
+{ code: 'ar', name: 'اﻟﻌﺮﺑﯿﺔ', flag: ' ', rtl: true }
+{ code: 'en', name: 'English', flag: ' ', rtl: false
+{ code: 'de', name: 'Deutsch', flag: ' ', rtl: false
+{ code: 'es', name: 'Español', flag: ' ', rtl: false
+{ code: 'zh', name: '中⽂', flag: ' ', rtl: false },
+// ... 72 autres langues
+;]
+Contexte de Langue
+// client/src/contexts/LanguageContext.tsx
+interface LanguageContextType {
+language: string;
+setLanguage: (lang: string) => void;
+translate: (key: string) => string;
+isRTL: boolean;
+}
+export const LanguageContext = createContext<LanguageCo
+export function LanguageProvider({ children }) {
+const [language, setLanguage] = useState('fr');
+const translate = useCallback((key: string) => {
+return translations[language]?.[key] || key;
+}, [language]);
+const isRTL = SUPPORTED_LANGUAGES.find(l => l.code ==
+return (
+<LanguageContext.Provider value={{ language, setLan
+<div className={isRTL ? 'rtl' : 'ltr'}>
+{children}
+</div>
+</LanguageContext.Provider>
+);
+}
+Système Vocal et IA
+Configuration OpenAI
+// server/openai.ts
+import OpenAI from 'openai';
+const openai = new OpenAI({
+apiKey: process.env.OPENAI_API_KEY,
+});
+export async function chatWithIARP(
+message: string,
+language: string = 'fr',
+context?: any[]
+) {
+const systemPrompt = getSystemPromptForLanguage(langu
+const response = await openai.chat.completions.create
+model: "gpt-4o", // Modèle le plus récent
+messages: [
+{ role: "system", content: systemPrompt },
+...context || [],
+{ role: "user", content: message }
+],
+max_tokens: 1000,
+temperature: 0.7,
+});
+return response.choices[0].message.content;
+}
+function getSystemPromptForLanguage(language: string):
+const prompts = {
+fr: "Tu es Super IARP Pro, assistant IA du Club Emp
+اﻟﺬﻛﻲ ﻟﻨﺎدي اﻟﺒﺼﻤﺔ اﻟﺮﻗﻤﯿﺔ ،Super IARP Pro أﻧﺖ" :ar
+en: "You are Super IARP Pro, AI assistant for Club
+// ... autres langues
+;}
+return prompts[language] || prompts.fr;
+}
+Web Speech API
+// client/src/hooks/use-voice.tsx
+export function useVoice() {
+const [isListening, setIsListening] = useState(false)
+const [transcript, setTranscript] = useState('');
+const startListening = useCallback(() => {
+if (!('webkitSpeechRecognition' in window)) {
+console.error('Speech recognition not supported')
+return;
+}
+const recognition = new window.webkitSpeechRecognit
+recognition.continuous = true;
+recognition.interimResults = true;
+recognition.lang = language || 'fr-FR';
+recognition.onstart = () => setIsListening(true);
+recognition.onend = () => setIsListening(false);
+recognition.onresult = (event) => {
+const results = Array.from(event.results);
+const transcript = results
+.map(result => result[0].transcript)
+.join('');
+setTranscript(transcript);
+;}
+recognition.start();
+}, [language]);
+const speak = useCallback((text: string) => {
+const utterance = new SpeechSynthesisUtterance(text
+utterance.lang = language || 'fr-FR';
+speechSynthesis.speak(utterance);
+}, [language]);
+return { isListening, transcript, startListening, spe
+}
+Système Bancaire CED Bank
+Configuration des Cartes
+// client/src/data/cedBankCards.ts
+export interface BankCard {
+id: string;
+name: string;
+type: 'virtual' | 'physical' | 'premium' | 'elite';
+tier: 'standard' | 'gold' | 'platinum' | 'diamond' |
+dailyLimit: number;
+monthlyLimit: number;
+withdrawalLimit: number;
+currency: string[];
+fees: {
+annual: number;
+foreign: number;
+withdrawal: number;
+replacement: number;
+};
+benefits: string[];
+islamicFeatures: string[];
+securityFeatures: string[];
+eligibility: {
+minDeposit: number;
+minMonthlyIncome: number;
+approvalRequired: boolean;
+};
+color: string;
+gradient: string;
+}
+export const CED_BANK_CARDS: BankCard[] = [
+{
+id: 'yakoubi-essential',
+name: 'Yakoubi Essential',
+type: 'virtual',
+tier: 'standard',
+dailyLimit: 2000,
+monthlyLimit: 10000,
+withdrawalLimit: 500,
+currency: ['AED', 'CHF', 'USD', 'EUR'],
+fees: {
+annual: 0,
+foreign: 0,
+withdrawal: 0,
+replacement: 25
+},
+benefits: [
+'Carte virtuelle instantanée',
+'Virements SWIFT gratuits',
+'Support client 24/7',
+'Mode prière automatique'
+],
+islamicFeatures: [
+'0% intérêt sur tous les services',
+'Conformité Sharia certifiée AAOIFI',
+'Pas de frais usuraires',
+'Investissements halal uniquement'
+],
+securityFeatures: [
+'Cryptage AES-256',
+'Authentification biométrique',
+'Notifications temps réel',
+'Blocage géographique'
+],
+eligibility: {
+minDeposit: 100,
+minMonthlyIncome: 0,
+approvalRequired: false
+},
+color: '#059669',
+gradient: 'from-emerald-500 to-green-600'
+},
+// ... autres cartes (Gold, Platinum, Diamond, Royal)
+];
+API Banking
+// server/routes.ts - Routes bancaires
+app.post('/api/banking/transfer', isAuthenticated, asyn
+const { amount, currency, recipient, reference } = re
+// Validation Sharia
+if (amount <= 0) {
+return res.status(400).json({ error: 'Montant inval
+}
+// Vérification solde
+const balance = await getBankBalance(req.user.id, cur
+if (balance < amount) {
+return res.status(400).json({ error: 'Solde insuffi
+}
+// Traitement virement
+const transfer = await processTransfer({
+fromUserId: req.user.id,
+amount,
+currency,
+recipient,
+reference,
+type: 'swift_transfer'
+});
+res.json({ success: true, transferId: transfer.id });
+});
+app.get('/api/banking/balance', isAuthenticated, async
+const balances = await getUserBalances(req.user.id);
+res.json({ balances });
+});
+app.post('/api/banking/card/create', isAuthenticated, a
+const { cardType, tier } = req.body;
+const card = await createVirtualCard({
+userId: req.user.id,
+type: cardType,
+tier,
+status: 'active'
+});
+res.json({ card });
+});
+Système Takaful (Assurance
+Islamique)
+Produits Takaful
+// Types d'assurance Takaful
+interface TakafulProduct {
+id: string;
+name: string;
+category: 'famille' | 'vehicule' | 'sante' | 'voyage'
+description: string;
+coverage: string[];
+premiumRange: { min: number; max: number };
+deductible: number;
+maxCoverage: number;
+islamicPrinciples: string[];
+eligibility: string[];
+documents: string[];
+}
+export const TAKAFUL_PRODUCTS: TakafulProduct[] = [
+{
+id: 'takaful-famille',
+name: 'Takaful Famille Protection',
+category: 'famille',
+description: 'Protection complète pour votre famill
+coverage: [
+'Décès accidentel',
+'Invalidité permanente',
+'Frais médicaux',
+'Assistance juridique',
+'Rapatriement sanitaire'
+],
+premiumRange: { min: 50, max: 500 },
+deductible: 100,
+maxCoverage: 100000,
+islamicPrinciples: [
+'Mutualité et solidarité (Takaful)',
+'Pas de Gharar (incertitude excessive)',
+'Pas de Maysir (spéculation)',
+'Conformité Sharia AAOIFI'
+],
+eligibility: [
+'Âge 18-65 ans',
+'Résidence légale',
+'Examen médical si nécessaire'
+],
+documents: [
+'Carte d\'identité',
+'Justificatif de revenus',
+'Certificat médical'
+},
+]
+// ... autres produits
+];
+Système Éducatif IA Éthique
+Structure des Cours
+// Schéma cours
+interface Course {
+id: number;
+title: string;
+description: string;
+category: 'ai-ethics' | 'islamic-finance' | 'sustaina
+difficulty: 'beginner' | 'intermediate' | 'advanced';
+duration: number; // en minutes
+price: number;
+instructor: string;
+language: string;
+tags: string[];
+modules: CourseModule[];
+prerequisites: string[];
+certification: boolean;
+published: boolean;
+}
+interface CourseModule {
+id: string;
+title: string;
+content: string;
+type: 'video' | 'text' | 'quiz' | 'interactive';
+duration: number;
+order: number;
+resources: string[];
+}
+Système de Progression
+// Suivi progression utilisateur
+interface UserProgress {
+userId: string;
+courseId: number;
+progress: number; // 0-100
+completed: boolean;
+lastAccessed: Date;
+timeSpent: number; // en secondes
+modules: ModuleProgress[];
+certificates: Certificate[];
+}
+interface ModuleProgress {
+moduleId: string;
+completed: boolean;
+score?: number;
+attempts: number;
+lastAttempt: Date;
+}
+Déploiement et Production
+Configuration Replit
+# .replit
+run = "npm run dev"
+entrypoint = "server/index.ts"
+[nix]
+channel = "stable-24_05"
+[deployment]
+deploymentTarget = "autoscale"
+buildCommand = "npm run build"
+run = "npm start"
+[env]
+NODE_ENV = "production"
+Scripts de Production
+{
+"scripts": {
+"start": "NODE_ENV=production node dist/server/inde
+"build": "tsc && vite build",
+"build:server": "tsc --project tsconfig.server.json
+"build:client": "vite build",
+"postbuild": "npm run build:server"
+}
+}
+Variables de Production
+# Production Environment
+NODE_ENV=production
+DATABASE_URL=postgresql://prod-db-url
+SESSION_SECRET=production-secret-key
+# APIs Production
+OPENAI_API_KEY=sk-proj-prod-key
+STRIPE_SECRET_KEY=sk_live_prod-key
+SENDGRID_API_KEY=SG.prod-key
+# Domaine
+REPLIT_DOMAINS=club-empreinte-digitale.com
+Sécurité et Conformité
+Mesures de Sécurité
+// Middleware de sécurité
+app.use(helmet({
+contentSecurityPolicy: {
+directives: {
+defaultSrc: ["'self'"],
+scriptSrc: ["'self'", "'unsafe-inline'", "https:/
+styleSrc: ["'self'", "'unsafe-inline'"],
+imgSrc: ["'self'", "data:", "https:"],
+connectSrc: ["'self'", "https://api.openai.com"]
+}
+},
+hsts: {
+maxAge: 31536000,
+includeSubDomains: true,
+preload: true
+}
+}));
+// Rate limiting
+app.use('/api/', rateLimit({
+windowMs: 15 * 60 * 1000, // 15 minutes
+max: 100, // 100 requêtes par IP
+message: 'Trop de requêtes, réessayez plus tard'
+}));
+// Validation des entrées
+app.use('/api/', (req, res, next) => {
+const schema = getValidationSchema(req.path, req.meth
+const result = schema.safeParse(req.body);
+if (!result.success) {
+return res.status(400).json({
+error: 'Données invalides',
+details: result.error.issues
+});
+}
+next();
+});
+Conformité RGPD/LPD
+// Gestion des données personnelles
+export const privacyConfig = {
+dataRetention: {
+userProfiles: 365 * 5, // 5 ans
+chatLogs: 365 * 2, // 2 ans
+analytics: 365 * 3, // 3 ans
+sessions: 30 // 30 jours
+},
+encryptedFields: [
+'users.email',
+'users.phone',
+'banking.accountNumber',
+'chat.messages'
+],
+anonymizationRules: {
+'analytics.userId': 'hash',
+'logs.ipAddress': 'mask',
+'sessions.data': 'encrypt'
+}
+};
+Analytics et Métriques
+Système Analytics
+// Événements trackés
+interface AnalyticsEvent {
+id: string;
+userId?: string;
+sessionId: string;
+eventType: 'page_view' | 'button_click' | 'form_submi
+eventData: Record<string, any>;
+timestamp: Date;
+userAgent: string;
+ipAddress: string;
+referrer?: string;
+}
+// Métriques business
+interface BusinessMetrics {
+activeUsers: {
+daily: number;
+weekly: number;
+monthly: number;
+};
+revenue: {
+today: number;
+thisMonth: number;
+thisYear: number;
+};
+userEngagement: {
+averageSessionDuration: number;
+bounceRate: number;
+returnVisitRate: number;
+};
+courseMetrics: {
+enrollments: number;
+completions: number;
+averageProgress: number;
+};
+bankingMetrics: {
+totalTransactions: number;
+transactionVolume: number;
+activeCards: number;
+};
+}
+Tests et Qualité
+Configuration Tests
+// vitest.config.ts
+import { defineConfig } from 'vitest/config';
+export default defineConfig({
+test: {
+environment: 'jsdom',
+setupFiles: ['./src/test/setup.ts'],
+coverage: {
+reporter: ['text', 'html', 'lcov'],
+exclude: [
+'node_modules/',
+'dist/',
+'**/*.d.ts',
+'**/*.config.*'
+]
+}
+}
+});
+Tests Exemple
+// __tests__/components/CEDBank.test.tsx
+import { render, screen } from '@testing-library/react'
+import { CEDBank } from '../components/CEDBank';
+describe('CEDBank Component', () => {
+it('should render banking services', () => {
+render(<CEDBank />);
+expect(screen.getByText('CED Bank International')).
+expect(screen.getByText('0% intérêts')).toBeInTheDo
+expect(screen.getByText('Conformité Sharia')).toBeI
+});
+it('should display card tiers', () => {
+render(<CEDBank />);
+expect(screen.getByText('Yakoubi Essential')).toBeI
+expect(screen.getByText('Yakoubi Gold')).toBeInTheD
+expect(screen.getByText('Yakoubi Royal')).toBeInThe
+});
+});
+Applications Mobiles
+Configuration PWA
+// vite.config.ts - PWA
+import { VitePWA } from 'vite-plugin-pwa';
+export default defineConfig({
+plugins: [
+VitePWA({
+registerType: 'autoUpdate',
+includeAssets: ['favicon.ico', 'apple-touch-icon.
+manifest: {
+name: 'Club Empreinte Digitale',
+short_name: 'CED',
+description: 'Banque islamique digitale et éduc
+theme_color: '#059669',
+background_color: '#ffffff',
+display: 'standalone',
+orientation: 'portrait',
+scope: '/',
+start_url: '/',
+icons: [
+{
+src: 'pwa-192x192.png',
+sizes: '192x192',
+type: 'image/png'
+},
+{
+src: 'pwa-512x512.png',
+sizes: '512x512',
+type: 'image/png'
+}
+]
+}
+})
+]
+});
+Intégrations APIs
+Configuration Stripe
+// Stripe setup
+import Stripe from 'stripe';
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY
+apiVersion: '2023-10-16',
+});
+// Créer un client
+app.post('/api/stripe/customer', async (req, res) => {
+const customer = await stripe.customers.create({
+email: req.user.email,
+name: req.user.username,
+metadata: {
+userId: req.user.id,
+source: 'ced-bank'
+}
+});
+res.json({ customerId: customer.id });
+});
+// Traitement paiement
+app.post('/api/stripe/payment-intent', async (req, res)
+const { amount, currency = 'eur' } = req.body;
+const paymentIntent = await stripe.paymentIntents.cre
+amount: amount * 100, // en centimes
+currency,
+customer: req.user.stripeCustomerId,
+metadata: {
+userId: req.user.id,
+service: 'ced-banking'
+}
+});
+});
+res.json({ clientSecret: paymentIntent.client_secret
+Configuration SendGrid
+// SendGrid emails
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+export async function sendWelcomeEmail(userEmail: strin
+const msg = {
+to: userEmail,
+from: 'welcome@club-empreinte-digitale.com',
+subject: 'Bienvenue dans l\'écosystème CED Bank',
+templateId: 'd-welcome-template-id',
+dynamicTemplateData: {
+userName,
+loginUrl: 'https://club-empreinte-digitale.replit
+supportEmail: 'support@club-empreinte-digitale.co
+}
+};
+await sgMail.send(msg);
+}
+Expansion Internationale
+Marchés Cibles 2025
+// Configuration des marchés
+export const TARGET_MARKETS = {
+'UAE': {
+currency: 'AED',
+regulatory: 'CBUAE',
+languages: ['ar', 'en'],
+localPartners: ['Emirates NBD', 'ADIB'],
+launchDate: '2025-Q1',
+estimatedUsers: 50000
+},
+'Saudi Arabia': {
+currency: 'SAR',
+regulatory: 'SAMA',
+languages: ['ar', 'en'],
+localPartners: ['Al Rajhi Bank', 'SNB'],
+launchDate: '2025-Q3',
+estimatedUsers: 75000
+},
+'France': {
+currency: 'EUR',
+regulatory: 'ACPR',
+languages: ['fr', 'ar', 'en'],
+localPartners: ['BNP Paribas', 'Société Générale'],
+launchDate: '2025-Q4',
+estimatedUsers: 30000
+}
+};
+Support et Documentation
+Contacts Équipe
+// Équipe complète avec contacts
+export const TEAM_CONTACTS = [
+{
+name: 'Yakoubi Yamina',
+role: 'Fondatrice & CEO',
+email: 'yamina@club-empreinte-digitale.com',
+phone: '+971-50-XXX-XXXX',
+location: 'Dubai, UAE',
+responsibilities: ['Vision stratégique', 'Partenari
+},
+{
+name: 'Brahim Yakoubi',
+role: 'CTO & Développeur Principal',
+email: 'brahim@club-empreinte-digitale.com',
+salary: 'CHF 6,200/mois',
+location: 'Genève, Suisse',
+responsibilities: ['Architecture technique', 'Dével
+},
+{
+name: 'Souheila Yakoubi Ozel',
+role: 'Directrice Opérations',
+email: 'souheila@club-empreinte-digitale.com',
+salary: 'CHF 7,200/mois',
+location: 'Zurich, Suisse',
+responsibilities: ['Opérations', 'RH', 'Conformité'
+}
+// ... autres membres équipe
+];
+Roadmap et Vision 2030
+Phases de Développement
+export const DEVELOPMENT_ROADMAP = {
+'Phase 1 - Q1 2025': {
+title: 'Lancement Suisse & UAE',
+objectives: [
+'Licence bancaire FINMA',
+'Partenariat Emirates NBD',
+'Lancement CED Bank UAE',
+'10,000 premiers utilisateurs'
+],
+budget: 4500000, // CHF
+team: 12
+},
+'Phase 2 - Q2-Q3 2025': {
+title: 'Expansion GCC',
+objectives: [
+'Licence SAMA Arabie Saoudite',
+'Takaful cross-selling',
+'Super IARP Pro en production',
+'50,000 utilisateurs actifs'
+],
+budget: 8700000, // CHF
+team: 25
+},
+'Phase 3 - Q4 2025': {
+title: 'Expansion Europe',
+objectives: [
+'Licence ACPR France',
+'TechForAll opérationnel',
+'IPO préparation',
+'100,000 utilisateurs'
+],
+budget: 15000000, // CHF
+team: 45
+},
+'Vision 2030': {
+title: 'Leader Mondial Fintech Islamique',
+objectives: [
+'10+ pays actifs',
+'1M+ utilisateurs',
+'Quantum computing éthique',
+'Économie circulaire complète'
+],
+budget: 100000000, // CHF
+team: 200
+}
+};
+Instructions de Migration
+GitHub
+1. Préparation Repository
+# Créer nouveau repository GitHub
+git init
+git remote add origin https://github.com/votre-username
+# Copier tous les fichiers depuis Replit
+# Exclure les dossiers de build et cache
+2. Configuration GitHub Actions
+# .github/workflows/deploy.yml
+name: Deploy to Production
+on:
+push:
+branches: [ main ]
+jobs:
+deploy:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v3
+- name: Setup Node.js
+uses: actions/setup-node@v3
+with:
+node-version: '20'
+cache: 'npm'
+- name: Install dependencies
+run: npm ci
+- name: Build application
+run: npm run build
+env:
+NODE_ENV: production
+- name: Deploy to Vercel
+uses: vercel/action@v1
+with:
+vercel-token: ${{ secrets.VERCEL_TOKEN }}
+vercel-project-id: ${{ secrets.VERCEL_PROJECT_I
+3. Variables Secrets GitHub
+# Repository Settings > Secrets
+DATABASE_URL=postgresql://...
+OPENAI_API_KEY=sk-proj-...
+STRIPE_SECRET_KEY=sk_live_...
+SENDGRID_API_KEY=SG....
+SESSION_SECRET=...
+VERCEL_TOKEN=...
+VERCEL_PROJECT_ID=...
+Troubleshooting Courant
+Problèmes Fréquents
+1. OpenAI API ne fonctionne pas
+Vérifier OPENAI_API_KEY dans les variables
+d'environnement
+S'assurer que la clé a les permissions nécessaires
+2. Base de données inaccessible
+Vérifier DATABASE_URL
+Exécuter npm run db:push pour synchroniser le
+schéma
+3. Stripe payments échouent
+Vérifier STRIPE_SECRET_KEY et
+VITE_STRIPE_PUBLIC_KEY
+S'assurer que les webhooks sont configurés
+4. Build production échoue
+Vérifier toutes les variables d'environnement
+Exécuter npm run type-check pour les erreurs
+TypeScript
+Licence et Copyright
+Copyright (c) 2025 Yakoubi Yamina - Club Empreinte Digi
+Développé par PrettyhowQ
+Tous droits réservés.
+Ce projet est sous licence propriétaire exclusive.
+Aucune reproduction, distribution ou modification n'est
+sans l'autorisation écrite expresse de Yakoubi Yamina.
+Pour toute demande de licence ou utilisation commercial
+contactez: yamina@club-empreinte-digitale.com
+Protection intellectuelle garantie par les lois suisses
+Conformité RGPD/LPD avec hébergement sécurisé en Suisse
+Prochaines Étapes
+1. Récupération complète sur GitHub
+Cloner tous les fichiers depuis Replit
+Configurer les secrets et variables d'environnement
+Tester le build local
+2. Configuration Visual Studio Code
+Installer les extensions recommandées
+Configurer ESLint et Prettier
+Setup debugging pour Node.js et React
+3. Optimisations finales
+Performance audit avec Lighthouse
+Sécurité scan avec npm audit
+Tests end-to-end avec Playwright
+4. Déploiement production
+Migration vers Vercel Pro
+Configuration domaine custom
+Setup monitoring et alertes
+Développé avec par Yakoubi Yamina & PrettyhowQ Club
+Empreinte Digitale - Pionnier de la fintech islamique éthique
+mondiale

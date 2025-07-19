@@ -1,0 +1,46 @@
+from IPython.display import display, Markdown
+import pandas as pd
+from datetime import datetime
+
+# Liste complète des fonctionnalités pour la plateforme CED & IAP
+features = [
+    # Catégorie : Interface Utilisateur & Accessibilité
+    ["Interface Utilisateur", "Interactive onboarding tour avec apprentissage technologique islamique"],
+    ["Interface Utilisateur", "Micro-animations inspirées de motifs géométriques islamiques"],
+    ["Interface Utilisateur", "Mode sombre & clair personnalisable"],
+    ["Accessibilité", "Générateur de profil d'accessibilité dynamique (malvoyant, autiste, daltonien, etc.)"],
+    ["Accessibilité", "Support vocal IA PrettyhowQ – lecture automatique et commande vocale"],
+    ["Multilingue", "Sélecteur de langue contextuel avec adaptation culturelle (FR / EN / AR / CN)"],
+    
+    # Catégorie : Système de Jeu & Motivation
+    ["Gamification", "Système de badges et niveaux (Débutant → Maître HalalTech)"],
+    ["Gamification", "Récompenses IA, défis hebdomadaires, quêtes techniques"],
+    ["Gamification", "Certificats interactifs + diplôme IA officiel par filière"],
+    
+    # Catégorie : Modules pédagogiques & éducatifs
+    ["Éducation", "Catalogue de formations par niveau + filtre métiers"],
+    ["Éducation", "Tableau de progression personnalisé (IA)"],
+    ["Éducation", "Simulateurs IA de coaching technique, santé, finance, parentalité"],
+    
+    # Catégorie : Modules Islamique & Halal
+    ["Modules Islamiques", "Horaires de prière + boussole Qibla intégrée"],
+    ["Modules Islamiques", "Zakat calculateur, contrats halal automatisés, marketplace éthique"],
+    ["Modules Islamiques", "Charte éthique islamique interactive + signature numérique"],
+    
+    # Catégorie : Communication & collaboration
+    ["Communication", "Messagerie privée entre membres + système de modération IA"],
+    ["Communication", "Notifications IA personnalisées selon le profil & les objectifs"],
+    
+    # Catégorie : Données & protection
+    ["Protection des données", "Données hébergées en Suisse – Conforme RGPD & LPD"],
+    ["Protection des données", "Mode navigation privée + profil invisible + anonymisation"],
+    
+    # Catégorie : IA & Automatisation
+    ["IA Intégrée", "PrettyhowQ – IA éthique vocale & visuelle"],
+    ["IA Intégrée", "Générateurs de plannings, vCards, diplômes, profils personnalisés"],
+    ["IA Intégrée", "IA prédictive pour recommandations personnalisées & orientation"],
+]
+
+df_features = pd.DataFrame(features, columns=["Catégorie", "Fonctionnalité"])
+from ace_tools import display_dataframe_to_user
+display_dataframe_to_user(name="Fonctionnalités CED & IAP", dataframe=df_features)
