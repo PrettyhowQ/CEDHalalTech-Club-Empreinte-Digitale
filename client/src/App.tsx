@@ -307,6 +307,8 @@ import MindfulWellnessConstellation from "@/pages/MindfulWellnessConstellation";
 import MethodologieSciencesIslamiques from "@/pages/MethodologieSciencesIslamiques";
 import AlAmanaAutoHalal from "@/pages/AlAmanaAutoHalal";
 import CEDBankMobile from "@/pages/CEDBankMobile";
+import VisitorAnalyticsPage from "@/pages/VisitorAnalyticsPage";
+import VisitorTracker from "@/components/VisitorTracker";
 // Lazy load diagnostic components
 const EcosystemDiagnosticsPage = () => {
   return (
@@ -658,6 +660,12 @@ function Router() {
       <Route path="/system-diagnostics" component={SystemDiagnosticsPage} />
       <Route path="/verification-complete" component={SystemDiagnosticsPage} />
       <Route path="/tests-fonctionnalites" component={SystemDiagnosticsPage} />
+      
+      {/* Analytics des visiteurs */}
+      <Route path="/visitor-analytics" component={VisitorAnalyticsPage} />
+      <Route path="/analytics-visiteurs" component={VisitorAnalyticsPage} />
+      <Route path="/statistiques-visiteurs" component={VisitorAnalyticsPage} />
+      <Route path="/dashboard-analytics" component={VisitorAnalyticsPage} />
       
       <Route path="/construction-ecologique" component={EcologicalConstructionDonationsPage} />
       <Route path="/logements-sociaux" component={EcologicalConstructionDonationsPage} />
@@ -1654,6 +1662,7 @@ function App() {
           <TooltipProvider>
             <div className="min-h-screen flex flex-col">
               <main className="flex-1">
+                <VisitorTracker />
                 <Router />
               </main>
               <ProtectionFooter />

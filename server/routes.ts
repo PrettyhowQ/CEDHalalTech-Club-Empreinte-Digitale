@@ -25,7 +25,7 @@ function generateDemoResponseSafe(message: string, language: string): string {
   const responses = demoResponses[language] || demoResponses['fr'];
   return responses[Math.floor(Math.random() * responses.length)];
 }
-import { insertChatConversationSchema, insertAnalyticsEventSchema } from "@shared/schema";
+import { insertChatConversationSchema, insertAnalyticsEventSchema, insertVisitorSchema } from "@shared/schema";
 
 import { seedIslamicCourses } from './seedIslamicCourses';
 import formationsRoutes from './routes/formations';
@@ -355,6 +355,64 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // IA routes - Super IARP Pro et générateurs halal
   app.use('/api/ai', aiRoutes);
+
+  // Visitor tracking routes
+  app.post('/api/track-visitor', async (req, res) => {
+    try {
+      const visitorData = req.body;
+      
+      // Add IP address and timestamp if not provided
+      if (!visitorData.ipAddress) {
+        visitorData.ipAddress = req.ip || req.connection.remoteAddress;
+      }
+      if (!visitorData.firstSeen) {
+        visitorData.firstSeen = new Date();
+      }
+      if (!visitorData.lastSeen) {
+        visitorData.lastSeen = new Date();
+      }
+
+      const visitor = await storage.trackVisitor(visitorData);
+      res.json({ success: true, visitor });
+    } catch (error) {
+      console.error("Error tracking visitor:", error);
+      res.status(500).json({ message: "Erreur lors de l'enregistrement du visiteur" });
+    }
+  });
+
+  app.put('/api/update-visitor/:sessionId', async (req, res) => {
+    try {
+      const { sessionId } = req.params;
+      const updates = req.body;
+      
+      await storage.updateVisitor(sessionId, updates);
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Error updating visitor:", error);
+      res.status(500).json({ message: "Erreur lors de la mise à jour du visiteur" });
+    }
+  });
+
+  app.get('/api/visitors', async (req, res) => {
+    try {
+      const limit = parseInt(req.query.limit as string) || 100;
+      const visitors = await storage.getVisitors(limit);
+      res.json(visitors);
+    } catch (error) {
+      console.error("Error getting visitors:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des visiteurs" });
+    }
+  });
+
+  app.get('/api/visitor-stats', async (req, res) => {
+    try {
+      const stats = await storage.getVisitorStats();
+      res.json(stats);
+    } catch (error) {
+      console.error("Error getting visitor stats:", error);
+      res.status(500).json({ message: "Erreur lors de la récupération des statistiques" });
+    }
+  });
 
   const httpServer = createServer(app);
   return httpServer;

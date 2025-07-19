@@ -23,6 +23,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { CEDBankSection } from '@/components/sections/CEDBankSection';
 import { InteractiveLanguageSelector } from '@/components/ui/InteractiveLanguageSelector';
 import { useLanguage } from '@/context/LanguageContext';
+import { AdminAnalyticsButton } from '@/components/admin/AdminAnalyticsButton';
 import { CitadelleMusulmanSection } from '@/components/sections/CitadelleMusulmanSection';
 import { ChatIARPSection } from '@/components/sections/ChatIARPSection';
 import { FormationsSection } from '@/components/sections/FormationsSection';
@@ -177,6 +178,9 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Section Analytics Direction - Visible uniquement pour l'administration */}
+            <AdminAnalyticsButton />
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl p-6 text-white text-center shadow-2xl">
                 <h2 className="text-xl font-bold mb-3">🎓 Formations CED</h2>

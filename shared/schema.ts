@@ -53,6 +53,32 @@ export const users = pgTable("users", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
+// Table de tracking des visiteurs pour analytics
+export const visitors = pgTable("visitors", {
+  id: serial("id").primaryKey(),
+  sessionId: varchar("session_id").notNull(),
+  ipAddress: varchar("ip_address"),
+  userAgent: text("user_agent"),
+  country: varchar("country"),
+  city: varchar("city"),
+  device: varchar("device"), // mobile, desktop, tablet
+  browser: varchar("browser"),
+  operatingSystem: varchar("operating_system"),
+  referrer: text("referrer"),
+  landingPage: varchar("landing_page"),
+  currentPage: varchar("current_page"),
+  accessLevel: varchar("access_level").default("public"), // public, financeur, famille, direction
+  language: varchar("language").default("fr"),
+  timeSpent: integer("time_spent").default(0), // en secondes
+  pageViews: integer("page_views").default(1),
+  isReturningVisitor: boolean("is_returning_visitor").default(false),
+  utmSource: varchar("utm_source"),
+  utmMedium: varchar("utm_medium"),
+  utmCampaign: varchar("utm_campaign"),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
 // Courses table
 export const courses = pgTable("courses", {
   id: serial("id").primaryKey(),
@@ -195,6 +221,14 @@ export const insertAccessCodeSchema = createInsertSchema(accessCodes).omit({
 // Types
 export type UpsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
+
+// Types pour le tracking des visiteurs
+export type InsertVisitor = typeof visitors.$inferInsert;
+export type Visitor = typeof visitors.$inferSelect;
+
+// Schémas de validation avec Zod
+export const insertVisitorSchema = createInsertSchema(visitors);
+export type InsertVisitorData = z.infer<typeof insertVisitorSchema>;
 export type Course = typeof courses.$inferSelect;
 export type UserCourseProgress = typeof userCourseProgress.$inferSelect;
 export type Testimonial = typeof testimonials.$inferSelect;

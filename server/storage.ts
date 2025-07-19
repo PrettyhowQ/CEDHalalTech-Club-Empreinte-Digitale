@@ -7,6 +7,7 @@ import {
   userCourseProgress,
   analyticsEvents,
   accessCodes,
+  visitors,
   type User,
   type UpsertUser,
   type Course,
@@ -16,6 +17,8 @@ import {
   type UserCourseProgress,
   type AnalyticsEvent,
   type AccessCode,
+  type Visitor,
+  type InsertVisitor,
   type InsertCourse,
   type InsertTestimonial,
   type InsertChatConversation,
@@ -24,7 +27,7 @@ import {
   type InsertAccessCode,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq, desc, and, count, sql } from "drizzle-orm";
+import { eq, desc, and, count, sql, gte } from "drizzle-orm";
 
 export interface IStorage {
   // User operations (mandatory for Replit Auth)
@@ -65,6 +68,20 @@ export interface IStorage {
   verifyAccessCode(code: string): Promise<boolean>;
   updateAccessCodeUsage(code: string): Promise<void>;
   createAccessCode(accessCode: InsertAccessCode): Promise<AccessCode>;
+  
+  // Visitor tracking operations
+  trackVisitor(visitor: InsertVisitor): Promise<Visitor>;
+  updateVisitor(sessionId: string, updates: Partial<InsertVisitor>): Promise<void>;
+  getVisitors(limit?: number): Promise<Visitor[]>;
+  getVisitorStats(): Promise<{
+    totalVisitors: number;
+    todayVisitors: number;
+    weeklyVisitors: number;
+    topCountries: { country: string; count: number }[];
+    topPages: { page: string; count: number }[];
+    deviceStats: { device: string; count: number }[];
+    accessLevelStats: { level: string; count: number }[];
+  }>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -309,6 +326,169 @@ export class DatabaseStorage implements IStorage {
       .values(accessCodeData)
       .returning();
     return accessCode;
+  }
+
+  // Visitor tracking operations
+  async trackVisitor(visitorData: InsertVisitor): Promise<Visitor> {
+    try {
+      const [visitor] = await db
+        .insert(visitors)
+        .values(visitorData)
+        .returning();
+      return visitor;
+    } catch (error) {
+      console.error("Error tracking visitor:", error);
+      throw error;
+    }
+  }
+
+  async updateVisitor(sessionId: string, updates: Partial<InsertVisitor>): Promise<void> {
+    try {
+      await db
+        .update(visitors)
+        .set({
+          ...updates,
+          lastSeen: new Date()
+        })
+        .where(eq(visitors.sessionId, sessionId));
+    } catch (error) {
+      console.error("Error updating visitor:", error);
+      throw error;
+    }
+  }
+
+  async getVisitors(limit = 100): Promise<Visitor[]> {
+    try {
+      return await db
+        .select()
+        .from(visitors)
+        .orderBy(desc(visitors.firstSeen))
+        .limit(limit);
+    } catch (error) {
+      console.error("Error getting visitors:", error);
+      return [];
+    }
+  }
+
+  async getVisitorStats(): Promise<{
+    totalVisitors: number;
+    todayVisitors: number;
+    weeklyVisitors: number;
+    topCountries: { country: string; count: number }[];
+    topPages: { page: string; count: number }[];
+    deviceStats: { device: string; count: number }[];
+    accessLevelStats: { level: string; count: number }[];
+  }> {
+    try {
+      const now = new Date();
+      const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const weekStart = new Date(todayStart.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+      // Total visitors
+      const [totalVisitorsResult] = await db.select({ count: count() }).from(visitors);
+      const totalVisitors = totalVisitorsResult?.count || 0;
+
+      // Today's visitors
+      const [todayVisitorsResult] = await db
+        .select({ count: count() })
+        .from(visitors)
+        .where(gte(visitors.firstSeen, todayStart));
+      const todayVisitors = todayVisitorsResult?.count || 0;
+
+      // Weekly visitors
+      const [weeklyVisitorsResult] = await db
+        .select({ count: count() })
+        .from(visitors)
+        .where(gte(visitors.firstSeen, weekStart));
+      const weeklyVisitors = weeklyVisitorsResult?.count || 0;
+
+      // Top countries
+      const topCountriesRaw = await db
+        .select({
+          country: visitors.country,
+          count: count()
+        })
+        .from(visitors)
+        .where(sql`${visitors.country} IS NOT NULL`)
+        .groupBy(visitors.country)
+        .orderBy(desc(count()))
+        .limit(10);
+      
+      const topCountries = topCountriesRaw.map(item => ({
+        country: item.country || 'Unknown',
+        count: item.count || 0
+      }));
+
+      // Top pages
+      const topPagesRaw = await db
+        .select({
+          page: visitors.currentPage,
+          count: count()
+        })
+        .from(visitors)
+        .where(sql`${visitors.currentPage} IS NOT NULL`)
+        .groupBy(visitors.currentPage)
+        .orderBy(desc(count()))
+        .limit(10);
+      
+      const topPages = topPagesRaw.map(item => ({
+        page: item.page || '/',
+        count: item.count || 0
+      }));
+
+      // Device stats
+      const deviceStatsRaw = await db
+        .select({
+          device: visitors.deviceType,
+          count: count()
+        })
+        .from(visitors)
+        .where(sql`${visitors.deviceType} IS NOT NULL`)
+        .groupBy(visitors.deviceType)
+        .orderBy(desc(count()));
+      
+      const deviceStats = deviceStatsRaw.map(item => ({
+        device: item.device || 'Unknown',
+        count: item.count || 0
+      }));
+
+      // Access level stats
+      const accessLevelStatsRaw = await db
+        .select({
+          level: visitors.accessLevel,
+          count: count()
+        })
+        .from(visitors)
+        .where(sql`${visitors.accessLevel} IS NOT NULL`)
+        .groupBy(visitors.accessLevel)
+        .orderBy(desc(count()));
+      
+      const accessLevelStats = accessLevelStatsRaw.map(item => ({
+        level: item.level || 'guest',
+        count: item.count || 0
+      }));
+
+      return {
+        totalVisitors,
+        todayVisitors,
+        weeklyVisitors,
+        topCountries,
+        topPages,
+        deviceStats,
+        accessLevelStats,
+      };
+    } catch (error) {
+      console.error("Error getting visitor stats:", error);
+      return {
+        totalVisitors: 0,
+        todayVisitors: 0,
+        weeklyVisitors: 0,
+        topCountries: [],
+        topPages: [],
+        deviceStats: [],
+        accessLevelStats: [],
+      };
+    }
   }
 }
 
