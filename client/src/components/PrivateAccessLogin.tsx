@@ -5,12 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Shield, Lock, Eye, EyeOff } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { usePrivateAccess } from "@/hooks/usePrivateAccess";
 
-interface PrivateAccessLoginProps {
-  onAccessGranted: () => void;
-}
-
-export default function PrivateAccessLogin({ onAccessGranted }: PrivateAccessLoginProps) {
+export default function PrivateAccessLogin() {
+  const { grantAccess } = usePrivateAccess();
   const [accessCode, setAccessCode] = useState("");
   const [showCode, setShowCode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +32,7 @@ export default function PrivateAccessLogin({ onAccessGranted }: PrivateAccessLog
           title: "Accès autorisé",
           description: "Bienvenue dans l'écosystème CED HalalTech™ privé",
         });
-        onAccessGranted();
+        grantAccess();
       } else {
         toast({
           title: "Code d'accès invalide",
