@@ -151,6 +151,9 @@ import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage
 import AssuranceAuto from "@/pages/AssuranceAuto";
 import AssuranceVoyage from "@/pages/AssuranceVoyage";
 import AssuranceHabitation from "@/pages/AssuranceHabitation";
+import VirementsSWIFT from "@/pages/VirementsSWIFT";
+import CartesYakoubi from "@/pages/CartesYakoubi";
+import InvestissementsHalal from "@/pages/InvestissementsHalal";
 import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
@@ -611,6 +614,22 @@ function Router() {
       <Route path="/takaful-habitation" component={AssuranceHabitation} />
       <Route path="/assurance-logement" component={AssuranceHabitation} />
       <Route path="/al-aman-habitation" component={AssuranceHabitation} />
+      
+      {/* Services Bancaires CED Bank */}
+      <Route path="/virements-swift" component={VirementsSWIFT} />
+      <Route path="/swift-transfers" component={VirementsSWIFT} />
+      <Route path="/transferts-internationaux" component={VirementsSWIFT} />
+      <Route path="/virements-internationaux" component={VirementsSWIFT} />
+      
+      <Route path="/cartes-yakoubi" component={CartesYakoubi} />
+      <Route path="/cartes-bancaires" component={CartesYakoubi} />
+      <Route path="/yakoubi-cards" component={CartesYakoubi} />
+      <Route path="/ced-bank-cards" component={CartesYakoubi} />
+      
+      <Route path="/investissements-halal" component={InvestissementsHalal} />
+      <Route path="/halal-investments" component={InvestissementsHalal} />
+      <Route path="/finance-islamique" component={InvestissementsHalal} />
+      <Route path="/placements-halal" component={InvestissementsHalal} />
       <Route path="/innovation-roadmap" component={InnovationRoadmapPage} />
       <Route path="/roadmap-innovation" component={InnovationRoadmapPage} />
       <Route path="/technologies-futures" component={InnovationRoadmapPage} />
