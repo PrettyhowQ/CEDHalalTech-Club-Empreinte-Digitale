@@ -352,7 +352,7 @@ export default function VirementsSWIFT() {
                 <h3 className="font-semibold mb-2">Documentation requise</h3>
                 <ul className="space-y-1 text-xs">
                   <li>• Pièce d'identité valide du donneur d'ordre</li>
-                  <li>• Justificatif d'origine des fonds si > 15'000 CHF</li>
+                  <li>• Justificatif d'origine des fonds si &gt; 15'000 CHF</li>
                   <li>• Facture ou contrat pour virements commerciaux</li>
                 </ul>
               </div>
