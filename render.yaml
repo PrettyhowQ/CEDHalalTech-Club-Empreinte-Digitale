@@ -1,25 +1,20 @@
 services:
   - type: web
-    name: ced-halaltech-production
+    name: ced-halaltech
     env: node
+    plan: starter
     buildCommand: npm install && npm run build
     startCommand: npm start
-    healthCheckPath: /
     envVars:
       - key: NODE_ENV
         value: production
-      - key: DATABASE_URL
-        fromDatabase:
-          name: ced-halaltech-database
-          property: connectionString
       - key: SESSION_SECRET
         generateValue: true
-      - key: REPL_ID
-        value: ced-halaltech
-      - key: REPLIT_DOMAINS
-        value: ced-halaltech-production.onrender.com
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ced-database
+          property: connectionString
 
 databases:
-  - name: ced-halaltech-database
-    databaseName: ced_halaltech
-    user: ced_user
+  - name: ced-database
+    plan: starter

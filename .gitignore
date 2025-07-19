@@ -1,33 +1,37 @@
-# Dépendances
+# Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Fichiers de build
+# Production builds
 dist/
 build/
-.next/
-out/
+.vercel/
+.render/
 
-# Variables d'environnement et secrets
+# Environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Cache et temp files
-.cache/
-.temp/
-.tmp/
-*.tmp
-*.temp
+# Database
+*.db
+*.sqlite
+*.sqlite3
+database/data/
+pgdata/
 
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Runtime data
 pids/
@@ -35,22 +39,34 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory utilisé par tools comme istanbul
+# Coverage directory used by tools like istanbul
 coverage/
 *.lcov
-
-# nyc test coverage
 .nyc_output/
 
+# Grunt intermediate storage
+.grunt/
+
+# Bower dependency directory
+bower_components/
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
 # Dependency directories
-node_modules/
 jspm_packages/
+
+# Snowpack dependency directory
+web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
+.npm/
 
 # Optional eslint cache
 .eslintcache
@@ -70,15 +86,13 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-
-# parcel-bundler cache (https://parceljs.org/)
+# parcel-bundler cache
+.cache/
 .parcel-cache/
 
 # Next.js build output
 .next/
+out/
 
 # Nuxt.js build / generate output
 .nuxt/
@@ -88,34 +102,30 @@ dist/
 .cache/
 public/
 
-# Vuepress build output
-.vuepress/dist/
+# Vite
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
+# Rollup
+.rollup.cache/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test/
 
-# Webpack
-.webpack/
+# yarn v2
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
-# Electron-builder output
-/dist_electron/
-
-# Replit specific
-.replit
-.upm/
-.config/
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # OS generated files
 .DS_Store
@@ -126,25 +136,11 @@ public/
 ehthumbs.db
 Thumbs.db
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Database
-*.sqlite
-*.sqlite3
-*.db
-
-# Docker
-.dockerignore
-
-# Backup files
-*.backup
-*.bak
-*.orig
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
 
 # SSL certificates
 *.pem
@@ -152,13 +148,26 @@ Thumbs.db
 *.crt
 *.csr
 
-# Assets temporaires
-attached_assets/temp/
-attached_assets/cache/
+# Backup files
+*.bak
+*.backup
+*.old
 
-# Documentation builds
-docs/_build/
-docs/.doctrees/
+# Docker
+.dockerignore
 
-# Sentry Config File
-.sentryclirc
+# Secrets
+secrets/
+config/secrets/
+
+# Testing
+.coverage/
+coverage/
+test-results/
+playwright-report/
+test-results/
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+.cache/
