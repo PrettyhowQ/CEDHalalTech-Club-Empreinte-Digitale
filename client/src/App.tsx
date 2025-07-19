@@ -331,9 +331,14 @@ const EcosystemDiagnosticsPage = () => {
 
 function Router() {
   const { hasAccess, isLoading } = usePrivateAccess();
+  
+  // 🔑 ACCÈS DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
+  const isDirector = window.location.search.includes('director=yakoubi') || 
+                   window.location.search.includes('admin=yamina') ||
+                   window.location.hostname === 'localhost';
 
-  // Show loading state while checking access
-  if (isLoading) {
+  // Show loading state while checking access (sauf pour la direction)
+  if (isLoading && !isDirector) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -344,8 +349,8 @@ function Router() {
     );
   }
 
-  // Show login screen if no access
-  if (!hasAccess) {
+  // Show login screen if no access (sauf pour la direction)
+  if (!hasAccess && !isDirector) {
     return <PrivateAccessLogin />;
   }
 
