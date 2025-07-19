@@ -6,6 +6,7 @@ import {
   products,
   userCourseProgress,
   analyticsEvents,
+  accessCodes,
   type User,
   type UpsertUser,
   type Course,
@@ -14,14 +15,16 @@ import {
   type Product,
   type UserCourseProgress,
   type AnalyticsEvent,
+  type AccessCode,
   type InsertCourse,
   type InsertTestimonial,
   type InsertChatConversation,
   type InsertProduct,
   type InsertAnalyticsEvent,
+  type InsertAccessCode,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq, desc, and, count } from "drizzle-orm";
+import { eq, desc, and, count, sql } from "drizzle-orm";
 
 export interface IStorage {
   // User operations (mandatory for Replit Auth)
@@ -57,6 +60,11 @@ export interface IStorage {
   createAnalyticsEvent(event: InsertAnalyticsEvent): Promise<AnalyticsEvent>;
   getUserAnalytics(userId: string): Promise<any>;
   getGlobalMetrics(): Promise<any>;
+  
+  // Access codes operations
+  verifyAccessCode(code: string): Promise<boolean>;
+  updateAccessCodeUsage(code: string): Promise<void>;
+  createAccessCode(accessCode: InsertAccessCode): Promise<AccessCode>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -250,6 +258,57 @@ export class DatabaseStorage implements IStorage {
       visuallyImpairedLearners: 2340, // Static value as mentioned in docs
       languages: 78, // Static value as mentioned in docs
     };
+  }
+
+  // Access codes operations
+  async verifyAccessCode(code: string): Promise<boolean> {
+    try {
+      const [accessCode] = await db
+        .select()
+        .from(accessCodes)
+        .where(
+          and(
+            eq(accessCodes.code, code),
+            eq(accessCodes.isActive, true)
+          )
+        );
+
+      if (!accessCode) {
+        return false;
+      }
+
+      // Check if code has expired
+      if (accessCode.expiresAt && new Date() > accessCode.expiresAt) {
+        return false;
+      }
+
+      return true;
+    } catch (error) {
+      console.error("Error verifying access code:", error);
+      return false;
+    }
+  }
+
+  async updateAccessCodeUsage(code: string): Promise<void> {
+    try {
+      await db
+        .update(accessCodes)
+        .set({
+          lastUsedAt: new Date(),
+          usageCount: sql`${accessCodes.usageCount} + 1`,
+        })
+        .where(eq(accessCodes.code, code));
+    } catch (error) {
+      console.error("Error updating access code usage:", error);
+    }
+  }
+
+  async createAccessCode(accessCodeData: InsertAccessCode): Promise<AccessCode> {
+    const [accessCode] = await db
+      .insert(accessCodes)
+      .values(accessCodeData)
+      .returning();
+    return accessCode;
   }
 }
 

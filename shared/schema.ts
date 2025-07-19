@@ -135,6 +135,18 @@ export const analyticsEvents = pgTable("analytics_events", {
   timestamp: timestamp("timestamp").defaultNow(),
 });
 
+// Access codes for private access
+export const accessCodes = pgTable("access_codes", {
+  id: serial("id").primaryKey(),
+  code: varchar("code", { length: 50 }).notNull().unique(),
+  description: text("description"),
+  isActive: boolean("is_active").default(true),
+  expiresAt: timestamp("expires_at"),
+  createdAt: timestamp("created_at").defaultNow(),
+  lastUsedAt: timestamp("last_used_at"),
+  usageCount: integer("usage_count").default(0),
+});
+
 // Create insert schemas
 export const insertUserSchema = createInsertSchema(users).pick({
   id: true,
@@ -173,6 +185,13 @@ export const insertAnalyticsEventSchema = createInsertSchema(analyticsEvents).om
   timestamp: true,
 });
 
+export const insertAccessCodeSchema = createInsertSchema(accessCodes).omit({
+  id: true,
+  createdAt: true,
+  lastUsedAt: true,
+  usageCount: true,
+});
+
 // Types
 export type UpsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
@@ -182,11 +201,13 @@ export type Testimonial = typeof testimonials.$inferSelect;
 export type ChatConversation = typeof chatConversations.$inferSelect;
 export type Product = typeof products.$inferSelect;
 export type AnalyticsEvent = typeof analyticsEvents.$inferSelect;
+export type AccessCode = typeof accessCodes.$inferSelect;
 export type InsertCourse = z.infer<typeof insertCourseSchema>;
 export type InsertTestimonial = z.infer<typeof insertTestimonialSchema>;
 export type InsertChatConversation = z.infer<typeof insertChatConversationSchema>;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type InsertAnalyticsEvent = z.infer<typeof insertAnalyticsEventSchema>;
+export type InsertAccessCode = z.infer<typeof insertAccessCodeSchema>;
 
 // ==========================================
 // FORMATIONS SYSTEM - CED ACADEMY

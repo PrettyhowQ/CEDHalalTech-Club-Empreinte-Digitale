@@ -38,6 +38,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Seed Islamic courses on startup
   await seedIslamicCourses();
 
+  // Private access verification route
+  app.post('/api/verify-access', async (req, res) => {
+    try {
+      const { code } = req.body;
+      
+      if (!code) {
+        return res.status(400).json({ message: "Code d'accès requis" });
+      }
+
+      // Check if code exists and is valid
+      const isValid = await storage.verifyAccessCode(code);
+      
+      if (isValid) {
+        // Update usage statistics
+        await storage.updateAccessCodeUsage(code);
+        res.json({ success: true, message: "Accès autorisé" });
+      } else {
+        res.status(401).json({ message: "Code d'accès invalide ou expiré" });
+      }
+    } catch (error) {
+      console.error("Error verifying access:", error);
+      res.status(500).json({ message: "Erreur lors de la vérification" });
+    }
+  });
+
   // Auth routes
   app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
     try {
