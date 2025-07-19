@@ -351,16 +351,15 @@ function Router() {
     );
   }
 
-  // Pour diagnostic: désactiver temporairement l'authentification
   // Show login screen if no access (sauf pour la direction)
-  // if (!hasAccess && !isDirector) {
-  //   return <PrivateAccessLogin />;
-  // }
+  if (!hasAccess && !isDirector) {
+    return <PrivateAccessLogin />;
+  }
 
   return (
     <Switch>
       {/* Route principale - Page d'accueil CED */}
-      <Route path="/" exact component={Home} />
+      <Route path="/" component={Home} />
       <Route path="/home" component={Home} />
       <Route path="/accueil" component={Home} />
       

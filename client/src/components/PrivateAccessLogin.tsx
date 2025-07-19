@@ -45,7 +45,8 @@ export default function PrivateAccessLogin() {
         title: "Accès financeur autorisé",
         description: "Bienvenue dans l'écosystème CED HalalTech™ privé",
       });
-      setTimeout(() => window.location.reload(), 1000);
+      // Redirection immédiate sans rechargement
+      window.location.href = "/";
     } else {
       toast({
         title: "Code d'accès invalide",
