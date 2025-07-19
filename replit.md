@@ -13,6 +13,11 @@ Club Empreinte Digitale (CED) is a comprehensive fintech platform combining Isla
 
 **Current Status**: ✅ FULLY OPERATIONAL & DEPLOYED - Application successfully running on https://clubempreintedi.replit.app with all premium features integrated, private access system operational with code "CED2025", and complete CED HalalTech™ ecosystem finalized.
 
+**Accès Multi-Niveaux Confirmé** :
+- URL normale: https://clubempreintedi.replit.app/ → Écran authentification (code "CED2025")  
+- Direction Yakoubi Yamina: https://clubempreintedi.replit.app/?director=yakoubi-yamina → Accès direct complet
+- Famille Yakoubi: https://clubempreintedi.replit.app/?director=yakoubi → Accès famille
+
 ## System Architecture
 
 ### Frontend Architecture
