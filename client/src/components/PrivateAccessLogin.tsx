@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Shield, Lock, Eye, EyeOff } from "lucide-react";
+import { Shield, Lock, Eye, EyeOff, Crown, Users, Code2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { usePrivateAccess } from "@/hooks/usePrivateAccess";
 
@@ -12,43 +12,53 @@ export default function PrivateAccessLogin() {
   const [accessCode, setAccessCode] = useState("");
   const [showCode, setShowCode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [accessDetected, setAccessDetected] = useState<string | null>(null);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  useEffect(() => {
+    // Vérifier les paramètres URL pour accès automatique
+    const urlParams = new URLSearchParams(window.location.search);
+    const director = urlParams.get('director');
+    const admin = urlParams.get('admin');
+    
+    if (director === 'yakoubi-yamina' || admin === 'yamina') {
+      setAccessDetected("direction");
+      toast({
+        title: "🎯 Accès Direction Détecté",
+        description: "Bienvenue Direction Yakoubi Yamina",
+      });
+      setTimeout(() => window.location.reload(), 2000);
+    } else if (director === 'yakoubi') {
+      setAccessDetected("famille");
+      toast({
+        title: "👨‍👩‍👧‍👦 Accès Famille Détecté", 
+        description: "Bienvenue Famille Yakoubi",
+      });
+      setTimeout(() => window.location.reload(), 2000);
+    }
+  }, [toast]);
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      const response = await fetch("/api/verify-access", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code: accessCode }),
-      });
-
-      if (response.ok) {
-        localStorage.setItem("ced_private_access", "granted");
-        localStorage.setItem("ced_access_timestamp", Date.now().toString());
-        toast({
-          title: "Accès autorisé",
-          description: "Bienvenue dans l'écosystème CED HalalTech™ privé",
-        });
-        grantAccess();
-      } else {
-        toast({
-          title: "Code d'accès invalide",
-          description: "Veuillez vérifier votre code d'accès",
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
+    // Codes d'accès valides
+    if (accessCode === "CED2025") {
+      grantAccess("financeur");
       toast({
-        title: "Erreur de connexion",
-        description: "Impossible de vérifier le code d'accès",
+        title: "Accès financeur autorisé",
+        description: "Bienvenue dans l'écosystème CED HalalTech™ privé",
+      });
+      setTimeout(() => window.location.reload(), 1000);
+    } else {
+      toast({
+        title: "Code d'accès invalide",
+        description: "Veuillez vérifier votre code d'accès",
         variant: "destructive",
       });
-    } finally {
-      setIsLoading(false);
     }
+    
+    setIsLoading(false);
   };
 
   return (
