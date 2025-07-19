@@ -4,7 +4,8 @@ export function useAuth() {
   const { hasAccess, isLoading } = usePrivateAccess();
   
   // 🔑 ACCÈS DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
-  const isDirector = window.location.search.includes('director=yakoubi') || 
+  const isDirector = window.location.search.includes('director=yakoubi-yamina') || 
+                   window.location.search.includes('director=yakoubi') || 
                    window.location.search.includes('admin=yamina') ||
                    window.location.hostname === 'localhost';
 
