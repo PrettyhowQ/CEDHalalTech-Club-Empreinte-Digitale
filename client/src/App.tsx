@@ -148,6 +148,9 @@ import AdvancedLearningPlatformPage from "@/pages/AdvancedLearningPlatformPage";
 import FiqhInformatiqueGuidePage from "@/pages/FiqhInformatiqueGuidePage";
 import FiqhExpansionPage from "@/pages/fiqh-expansion-page";
 import OnlineEducationComparisonPage from "@/pages/OnlineEducationComparisonPage";
+import AssuranceAuto from "@/pages/AssuranceAuto";
+import AssuranceVoyage from "@/pages/AssuranceVoyage";
+import AssuranceHabitation from "@/pages/AssuranceHabitation";
 import EducationComparisonPage from "@/pages/EducationComparisonPage";
 import TechForAllAssociationPage from "@/pages/TechForAllAssociationPage";
 import CostaDelSolBoutiquePage from "@/pages/CostaDelSolBoutiquePage";
@@ -592,6 +595,22 @@ function Router() {
       <Route path="/al-aman-takaful" component={AlAmanTakafulInsurancePage} />
       <Route path="/assurance-takaful" component={AlAmanTakafulInsurancePage} />
       <Route path="/takaful-insurance" component={AlAmanTakafulInsurancePage} />
+      
+      {/* Pages Assurance Al-Aman détaillées */}
+      <Route path="/assurance-auto" component={AssuranceAuto} />
+      <Route path="/assurance-automobile" component={AssuranceAuto} />
+      <Route path="/takaful-auto" component={AssuranceAuto} />
+      <Route path="/al-aman-auto" component={AssuranceAuto} />
+      
+      <Route path="/assurance-voyage" component={AssuranceVoyage} />
+      <Route path="/takaful-voyage" component={AssuranceVoyage} />
+      <Route path="/assurance-hajj-umrah" component={AssuranceVoyage} />
+      <Route path="/al-aman-voyage" component={AssuranceVoyage} />
+      
+      <Route path="/assurance-habitation" component={AssuranceHabitation} />
+      <Route path="/takaful-habitation" component={AssuranceHabitation} />
+      <Route path="/assurance-logement" component={AssuranceHabitation} />
+      <Route path="/al-aman-habitation" component={AssuranceHabitation} />
       <Route path="/innovation-roadmap" component={InnovationRoadmapPage} />
       <Route path="/roadmap-innovation" component={InnovationRoadmapPage} />
       <Route path="/technologies-futures" component={InnovationRoadmapPage} />
