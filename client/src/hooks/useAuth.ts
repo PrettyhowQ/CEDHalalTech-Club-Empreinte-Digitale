@@ -1,14 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
+import { usePrivateAccess } from "./usePrivateAccess";
 
 export function useAuth() {
-  const { data: user, isLoading } = useQuery({
-    queryKey: ["/api/auth/user"],
-    retry: false,
-  });
+  const { hasAccess, isLoading } = usePrivateAccess();
+  
+  // 🔑 ACCÈS DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
+  const isDirector = window.location.search.includes('director=yakoubi') || 
+                   window.location.search.includes('admin=yamina') ||
+                   window.location.hostname === 'localhost';
 
   return {
-    user,
+    user: (hasAccess || isDirector) ? { name: "Utilisateur CED", role: "authenticated" } : null,
     isLoading,
-    isAuthenticated: !!user,
+    isAuthenticated: hasAccess || isDirector,
   };
 }
