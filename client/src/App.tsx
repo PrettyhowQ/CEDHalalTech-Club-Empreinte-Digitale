@@ -1245,7 +1245,7 @@ function Router() {
       <Route path="/home-original" component={Home} />
       
       {/* Protected routes for authenticated users */}
-      {(hasAccess || isDirector) && !isLoading && (
+      {hasAccess && !isLoading && (
         <>
           <Route path="/dashboard" component={Dashboard} />
         </>
