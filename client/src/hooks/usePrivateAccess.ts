@@ -9,25 +9,12 @@ export function usePrivateAccess() {
   }, []);
 
   const checkAccess = () => {
-    // ACCÈS DIRECT AUTOMATIQUE POUR YAKOUBI YAMINA - REPLIT
-    if (window.location.hostname.includes('replit.app') || 
-        window.location.hostname === 'localhost' || 
-        window.location.hostname === '127.0.0.1') {
-      console.log('🎯 Accès Direction Yakoubi Yamina AUTOMATIQUE - Replit détecté');
-      localStorage.setItem("ced_private_access", "granted");
-      localStorage.setItem("ced_access_timestamp", Date.now().toString());
-      localStorage.setItem("ced_access_level", "direction");
-      setHasAccess(true);
-      setIsLoading(false);
-      return;
-    }
-
-    // Vérifier paramètres URL pour accès direction (option secondaire)
+    // PRIORITÉ 1 : Vérifier d'abord les paramètres URL (pour tous les domaines)
     const urlParams = new URLSearchParams(window.location.search);
     const director = urlParams.get('director');
     const admin = urlParams.get('admin');
     
-    // ACCÈS DIRECTION YAKOUBI YAMINA VIA URL
+    // ACCÈS DIRECTION YAKOUBI YAMINA VIA URL (PRIORITÉ ABSOLUE)
     if (director === 'yakoubi-yamina' || admin === 'yamina') {
       console.log('🎯 Accès Direction Yakoubi Yamina détecté via URL');
       localStorage.setItem("ced_private_access", "granted");
@@ -38,12 +25,25 @@ export function usePrivateAccess() {
       return;
     }
     
-    // ACCÈS FAMILLE YAKOUBI VIA URL
+    // ACCÈS FAMILLE YAKOUBI VIA URL (PRIORITÉ ABSOLUE)
     if (director === 'yakoubi') {
       console.log('👨‍👩‍👧‍👦 Accès Famille Yakoubi détecté via URL');
       localStorage.setItem("ced_private_access", "granted");
       localStorage.setItem("ced_access_timestamp", Date.now().toString());
       localStorage.setItem("ced_access_level", "famille");
+      setHasAccess(true);
+      setIsLoading(false);
+      return;
+    }
+
+    // PRIORITÉ 2 : ACCÈS DIRECT AUTOMATIQUE POUR YAKOUBI YAMINA - REPLIT
+    if (window.location.hostname.includes('replit.app') || 
+        window.location.hostname === 'localhost' || 
+        window.location.hostname === '127.0.0.1') {
+      console.log('🎯 Accès Direction Yakoubi Yamina AUTOMATIQUE - Replit détecté');
+      localStorage.setItem("ced_private_access", "granted");
+      localStorage.setItem("ced_access_timestamp", Date.now().toString());
+      localStorage.setItem("ced_access_level", "direction");
       setHasAccess(true);
       setIsLoading(false);
       return;

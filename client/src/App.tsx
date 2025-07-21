@@ -342,11 +342,19 @@ function Router() {
   const { hasAccess, isLoading } = usePrivateAccess();
   
   // 🔑 ACCÈS AUTOMATIQUE DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
-  // Accès direct immédiat sur replit.app + paramètres optionnels
-  const isDirectorAccess = window.location.hostname.includes('replit.app') ||
-                          window.location.search.includes('director=yakoubi') || 
-                          window.location.search.includes('admin=yamina') ||
-                          window.location.hostname === 'localhost';
+  // Paramètres URL en priorité absolue sur TOUS les domaines
+  const urlParams = new URLSearchParams(window.location.search);
+  const director = urlParams.get('director');
+  const admin = urlParams.get('admin');
+  
+  const isDirectorAccess = 
+    // PRIORITÉ 1: Paramètres URL (tous domaines)
+    director === 'yakoubi' || 
+    director === 'yakoubi-yamina' || 
+    admin === 'yamina' ||
+    // PRIORITÉ 2: Domaines développement
+    window.location.hostname.includes('replit.app') ||
+    window.location.hostname === 'localhost';
 
   // BYPASS COMPLET pour accès direction - Pas d'attente, accès immédiat
   if (isDirectorAccess) {
