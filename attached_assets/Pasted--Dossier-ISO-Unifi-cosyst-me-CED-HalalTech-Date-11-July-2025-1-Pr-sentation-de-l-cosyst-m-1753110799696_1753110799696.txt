@@ -1,0 +1,27 @@
+📦 Dossier ISO Unifié – Écosystème CED HalalTech™
+Date : 11 July 2025
+1. Présentation de l'écosystème CED HalalTech™
+L’écosystème CED HalalTech™ est une structure technologique, éducative et financière éthique, basée en Suisse, regroupant : - Une banque éthique et islamique (CED Bank™) - Une assurance solidaire (Al-Aman CED™) - Une association à but non lucratif (TechForAll Suisse™) - Un centre de formation certifiant (CED Learn Pro™) - Une boutique solidaire & durable (CED Market™) - Une intelligence artificielle éthique et halal (PrettyhowQ™)
+2. Certifications ISO visées
+Nous souhaitons obtenir une certification unifiée couvrant les normes suivantes : - ISO 27001 : sécurité de l'information - ISO 9001 : management de la qualité - ISO 21001 : management des organismes de formation - ISO 26000 : responsabilité sociétale - ISO 14001 : management environnemental (boutique solidaire) - ISO 22301 : continuité d'activité (banque/assurance)  Objectif : sécuriser, certifier et valoriser un écosystème 100% halal, éthique et conforme RGPD/LPD.
+3. Charte qualité & sécurité
+Notre engagement repose sur les principes suivants : - Respect total des données personnelles (RGPD / LPD) - Sécurité maximale des infrastructures (hébergement ISO en Suisse) - Transparence des services (code éthique) - Accessibilité, inclusion et formation de qualité - Écologie, durabilité et impact sociétal positif - Conformité aux valeurs islamiques et universelles de respect, équité et responsabilité
+4. Annexes sectorielles
+4.1 Banque éthique (CED Bank™) Objectif : ISO 27001 + ISO 22301 pour sécuriser les flux financiers, protéger les données et garantir la continuité de service.  4.2 Assurance Al-Aman CED™ Objectif : ISO 9001 + ISO 31000 pour garantir la qualité de service et la gestion des risques clients.  4.3 Association TechForAll™ Objectif : ISO 9001 + ISO 26000 pour assurer la transparence, l'utilité publique et la responsabilité sociale.  4.4 Centre de formation CED Learn Pro™ Objectif : ISO 21001 pour encadrer la qualité pédagogique et l’organisation des certifications proposées.  4.5 Boutique CED Market™ Objectif : ISO 14001 pour promouvoir une consommation éthique, durable et responsable.  4.6 IA PrettyhowQ™ Objectif : ISO 27001 + ISO 27701 pour une IA sécurisée, éthique, halal, et respectueuse de la vie privée.
+
+📜 Protection & Licence – CED HalalTech™
+🛡️ Protection & Licence   Utilisation exclusivement halal – Toute exploitation commerciale nécessite accord écrit.   Licence éthique en conformité avec les valeurs islamiques.  © Yakoubi Yamina – Tous droits réservés | CED HalalTech™ certifié mondialement  🇨🇭 Données hébergées en Suisse   Conforme RGPD & LPD   Usage éthique & halal uniquement  جميع الحقوق محفوظة   All rights reserved   版权所有  CED HalalTech™ – Technologie 100% Halal • Certifiée et protégée mondialement   Écosystème révolutionnaire conforme aux valeurs islamiques authentiques
+
+
+--
+🕌	1.	✅ Le starter pack Vercel + Render (avec redirection intégrée) ?
+	2.	✅ Une maquette Figma des deux niveaux (vitrine + plateforme IA) ?
+	3.	✅ Un zip VSCode complet prêt à publier sur les deux ? Club Empreinte Digitale | CED HalalTech™  
+📧 contact@empreintedigitale.club  
+📧yakoubi.yamina@ik.me
+📧swissyakoubidev.ch@ik.me
+ 
+
+🌍 Premier Écosystème Technologique Islamique Mondial  
+🇨🇭 Données hébergées en Suisse – Sécurité & éthique  
+© Yakoubi Yamina – Tous droits réservés | جميع الحقوق محفوظة
