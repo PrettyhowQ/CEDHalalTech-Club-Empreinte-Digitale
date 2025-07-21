@@ -66,7 +66,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Auth routes
   app.get('/api/auth/user', isAuthenticated, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.user?.claims?.sub;
       const user = await storage.getUser(userId);
       res.json(user);
     } catch (error) {
@@ -113,7 +113,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // User progress routes
   app.get('/api/user/progress', isAuthenticated, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.user?.claims?.sub;
       const progress = await storage.getUserProgress(userId);
       res.json(progress);
     } catch (error) {
@@ -124,7 +124,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post('/api/user/progress', isAuthenticated, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.user?.claims?.sub;
       const { courseId, progress } = req.body;
       
       const updatedProgress = await storage.updateUserProgress(userId, courseId, progress);
@@ -145,7 +145,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.post('/api/user/complete-course', isAuthenticated, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.user?.claims?.sub;
       const { courseId } = req.body;
       
       await storage.completeUserCourse(userId, courseId);
@@ -312,7 +312,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Analytics routes
   app.get('/api/analytics/user', isAuthenticated, async (req: any, res) => {
     try {
-      const userId = req.user.claims.sub;
+      const userId = req.user?.claims?.sub;
       const analytics = await storage.getUserAnalytics(userId);
       res.json(analytics);
     } catch (error) {
