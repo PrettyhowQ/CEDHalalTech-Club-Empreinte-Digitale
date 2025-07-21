@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/app/(.*)",
+      "dest": "https://app.cedbank.org/$1",
+      "status": 308
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "https://api.cedbank.org/$1", 
+      "status": 308
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_APP_URL": "https://app.cedbank.org",
+    "NEXT_PUBLIC_API_URL": "https://api.cedbank.org",
+    "NEXT_PUBLIC_VITRINE_URL": "https://cedbank.org"
+  },
+  "functions": {
+    "pages/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}

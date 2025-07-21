@@ -223,6 +223,8 @@ import InteractiveLanguagePage from "@/pages/InteractiveLanguagePage";
 import IslamicThemesPage from "@/pages/IslamicThemesPage";
 import ComptabiliteIslamique from "@/pages/ComptabiliteIslamique";
 import ImmobilierIslamique from "@/pages/ImmobilierIslamique";
+import PresentationN8N from "@/pages/PresentationN8N";
+import FinancementMultilingue from "@/pages/FinancementMultilingue";
 import EcosystemePolesHalal from "@/pages/EcosystemePolesHalal";
 import CedVoieHalalHome from "@/pages/CedHalalHome";
 import NavigationComplete from "@/pages/NavigationComplete";
@@ -1705,6 +1707,20 @@ function Router() {
       <Route path="/uiux-halal-features" component={FonctionnalitesUIUXIslamiques} />
       <Route path="/innovation-interface-islamique" component={FonctionnalitesUIUXIslamiques} />
       <Route path="/fonctionnalites-design-halal" component={FonctionnalitesUIUXIslamiques} />
+
+      {/* PrettyhowQ n8n Presentation */}
+      <Route path="/presentation-n8n" component={PresentationN8N} />
+      <Route path="/n8n-prettyhowq" component={PresentationN8N} />
+      <Route path="/automatisation-n8n" component={PresentationN8N} />
+      <Route path="/n8n-automation" component={PresentationN8N} />
+      <Route path="/workflow-automation" component={PresentationN8N} />
+
+      {/* Financement Multilingue */}
+      <Route path="/financement-multilingue" component={FinancementMultilingue} />
+      <Route path="/multilingual-funding" component={FinancementMultilingue} />
+      <Route path="/funding-resources" component={FinancementMultilingue} />
+      <Route path="/ressources-financement" component={FinancementMultilingue} />
+      <Route path="/subventions-europe-golfe" component={FinancementMultilingue} />
 
       {/* Alternative landing page */}
       <Route path="/landing" component={Landing} />
