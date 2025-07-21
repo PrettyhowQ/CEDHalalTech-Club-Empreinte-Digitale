@@ -173,6 +173,7 @@ import ManuelFiqhPage from "@/pages/ManuelFiqhPage";
 import SuperIARPProPage from "@/pages/SuperIARPProPage";
 import IARPVocalTest from "@/pages/IARPVocalTest";
 import ProtectionLicenceCED from "@/pages/ProtectionLicenceCED";
+import CentralDashboardPage from "@/pages/CentralDashboard";
 import TestComplet55ModulesCED from "@/pages/TestComplet55ModulesCED";
 import InteractiveHalalJourneyTracker from "@/pages/InteractiveHalalJourneyTracker";
 import SpiritualWellnessGamification from "@/pages/SpiritualWellnessGamification";
@@ -402,6 +403,8 @@ function Router() {
       <Route path="/revenus" component={FinancialDashboard} />
       <Route path="/chiffres" component={FinancialDashboard} />
       <Route path="/dashboard-financier" component={FinancialDashboard} />
+      <Route path="/central-dashboard" component={CentralDashboardPage} />
+      <Route path="/tableau-de-bord-central" component={CentralDashboardPage} />
       <Route path="/banque" component={BanqueDigitale} />
       <Route path="/banque-digitale" component={BanqueDigitale} />
       <Route path="/ced-bank" component={CEDBankPage} />
