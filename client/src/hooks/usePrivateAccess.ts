@@ -36,12 +36,14 @@ export function usePrivateAccess() {
       return;
     }
     
-    // ACCÈS LOCALHOST (développement)
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-      console.log('💻 Accès localhost développement détecté');
+    // ACCÈS LOCALHOST (développement) + REPLIT
+    if (window.location.hostname === 'localhost' || 
+        window.location.hostname === '127.0.0.1' ||
+        window.location.hostname.includes('replit.app')) {
+      console.log('💻 Accès développement/replit détecté - Accès direction automatique');
       localStorage.setItem("ced_private_access", "granted");
       localStorage.setItem("ced_access_timestamp", Date.now().toString());
-      localStorage.setItem("ced_access_level", "dev");
+      localStorage.setItem("ced_access_level", "direction");
       setHasAccess(true);
       setIsLoading(false);
       return;
