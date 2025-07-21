@@ -340,34 +340,41 @@ const EcosystemDiagnosticsPage = () => {
 function Router() {
   const { hasAccess, isLoading } = usePrivateAccess();
   
-  // 🔑 ACCÈS DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
-  const isDirector = window.location.search.includes('director=yakoubi') || 
-                   window.location.search.includes('admin=yamina') ||
-                   window.location.hostname === 'localhost';
+  // 🔑 ACCÈS AUTOMATIQUE DIRECTION - Yakoubi Yamina (Fondatrice & Directrice Générale CED HalalTech™)
+  // Accès direct immédiat sur replit.app + paramètres optionnels
+  const isDirectorAccess = window.location.hostname.includes('replit.app') ||
+                          window.location.search.includes('director=yakoubi') || 
+                          window.location.search.includes('admin=yamina') ||
+                          window.location.hostname === 'localhost';
 
-  // Show loading state while checking access (sauf pour la direction)
-  if (isLoading && !isDirector) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <div className="animate-spin w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full mx-auto"></div>
-          <p className="text-emerald-700 font-medium">Vérification de l'accès...</p>
+  // BYPASS COMPLET pour accès direction - Pas d'attente, accès immédiat
+  if (isDirectorAccess) {
+    // Accès direct autorisé - Continuer vers l'écosystème
+  } else {
+    // Pour autres domaines, vérifier l'accès normal
+    if (isLoading) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50 flex items-center justify-center">
+          <div className="text-center space-y-4">
+            <div className="animate-spin w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full mx-auto"></div>
+            <p className="text-emerald-700 font-medium">Vérification de l'accès...</p>
+          </div>
         </div>
-      </div>
-    );
-  }
+      );
+    }
 
-  // Show login screen if no access (sauf pour la direction)
-  if (!hasAccess && !isDirector) {
-    return <PrivateAccessLogin />;
+    if (!hasAccess) {
+      return <PrivateAccessLogin />;
+    }
   }
 
   return (
     <Switch>
-      {/* Route principale - Page d'accueil CED */}
-      <Route path="/" component={Home} />
-      <Route path="/home" component={Home} />
-      <Route path="/accueil" component={Home} />
+      {/* Route principale - Page d'accueil CED HalalTech™ Écosystème */}
+      <Route path="/" component={CedVoieHalalHome} />
+      <Route path="/home" component={CedVoieHalalHome} />
+      <Route path="/accueil" component={CedVoieHalalHome} />
+      <Route path="/landing" component={Home} />
       
       {/* Public routes */}
       <Route path="/formations" component={Formations} />
