@@ -34,4 +34,6 @@ waitForPort = 5000
 
 [[ports]]
 localPort = 5000
-externalPort = 80
+
+[agent]
+integrations = ["javascript_sendgrid==1.0.0", "javascript_google_analytics==1.0.0"]
