@@ -1,14 +1,8 @@
 name: 🔄 Synchronisation GitHub CED
 on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
-  schedule:
-    # Synchronisation automatique quotidienne à 06:00 UTC
-    - cron: '0 6 * * *'
+  # TEMPORAIREMENT DÉSACTIVÉ - Focus sur déploiement Render
   workflow_dispatch:
-    # Déclenchement manuel
+    # Déclenchement manuel uniquement
 
 env:
   NODE_VERSION: '20'
