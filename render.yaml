@@ -2,7 +2,7 @@ services:
   - type: web
     name: ced-halaltech
     runtime: node
-    buildCommand: npm install --legacy-peer-deps --only=production && npm run build:server-only
+    buildCommand: npm install && npm run build:full
     startCommand: npm start
     healthCheckPath: /api/health
     plan: free
@@ -13,5 +13,3 @@ services:
         generateValue: true
       - key: PORT
         value: "10000"
-      - key: NPM_CONFIG_AUDIT_LEVEL
-        value: "none"
