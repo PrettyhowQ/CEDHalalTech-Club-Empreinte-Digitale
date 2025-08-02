@@ -20,6 +20,22 @@ sauvegarde-*.zip
 Dockerfile*
 docker-compose*.yml
 .dockerignore
+
+# VSCode problèmes et cache
+.vscode/settings.json
+*.log
+.eslintcache
+.markdownlintcache
+
+# Documentation et fichiers problématiques
+*.md.backup
+docs/
+documentation/
+**/*DOCUMENTATION*.md
+**/*GUIDE*.md
+**/*MANUEL*.md
+**/*ANALYSE*.md
+**/*AUDIT*.md
 .vercel/
 .render/
 
