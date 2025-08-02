@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: ced-halaltech
+    name: cedhalaltech-club-empreinte-digitale
     runtime: node
     buildCommand: npm install && npm run build:full
     startCommand: npm start
