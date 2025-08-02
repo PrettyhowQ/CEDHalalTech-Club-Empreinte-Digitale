@@ -5,7 +5,7 @@ services:
     buildCommand: npm install && npm run build:full
     startCommand: npm start
     healthCheckPath: /api/health
-    plan: free
+    plan: starter
     envVars:
       - key: NODE_ENV
         value: production
