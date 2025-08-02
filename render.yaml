@@ -1,13 +1,18 @@
 services:
   - type: web
     name: ced-halaltech
-    env: node
+    runtime: node
     plan: starter
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm ci --production=false && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NPM_CONFIG_RETRY
+        value: "5"
+      - key: NPM_CONFIG_AUDIT_LEVEL
+        value: "moderate"
       - key: SESSION_SECRET
         generateValue: true
       - key: DATABASE_URL
