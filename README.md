@@ -364,4 +364,5 @@ Ce projet respecte intégralement les valeurs islamiques authentiques. Toute uti
 
 ---
 
-*Ce projet est développé avec amour fi-Allah pour la communauté musulmane mondiale. Nous demandons à Allah de bénir cet effort et d'en faire un moyen de rapprochement vers Lui. Ameen.*
+*Ce projet est développé avec amour fi-Allah pour la communauté musulmane mondiale. Nous demandons à Allah de bénir cet effort et d'en faire un moyen de rapprochement vers Lui. Ameen.*#   D e p l o y   0 8 / 0 2 / 2 0 2 5   2 1 : 5 4 : 0 2  
+ 
