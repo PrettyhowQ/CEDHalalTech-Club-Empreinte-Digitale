@@ -32,6 +32,16 @@ import formationsRoutes from './routes/formations';
 import aiRoutes from './routes/ai';
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health check endpoint for Render
+  app.get('/api/health', (req, res) => {
+    res.status(200).json({ 
+      status: 'healthy', 
+      timestamp: new Date().toISOString(),
+      service: 'CED HalalTech Ecosystem',
+      version: '1.0.0'
+    });
+  });
+
   // Auth middleware
   await setupAuth(app);
 
