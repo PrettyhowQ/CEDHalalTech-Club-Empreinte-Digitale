@@ -16,9 +16,10 @@ build/
 club-empreinte-digitale-*.zip
 sauvegarde-*.zip
 
-# Docker (non utilisé sur Render)
-Dockerfile
-docker-compose.yml
+# Docker (EXCLUSION DÉFINITIVE - Render utilise render.yaml)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
 .vercel/
 .render/
 
