@@ -11,7 +11,6 @@
     "build:render": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --target=node18 --minify",
     "start": "node dist/index.js",
     "start:dev": "tsx server/index.ts",
-    "postinstall": "npm run check",
     "check": "tsc --noEmit",
     "db:push": "drizzle-kit push"
   },
