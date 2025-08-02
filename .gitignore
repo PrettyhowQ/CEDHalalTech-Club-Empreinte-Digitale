@@ -8,6 +8,13 @@ pnpm-debug.log*
 # Production builds
 dist/
 build/
+
+# Archives et sauvegardes (EXCLUSION RENDER)
+*.zip
+*.tar.gz
+*.rar
+club-empreinte-digitale-*.zip
+sauvegarde-*.zip
 .vercel/
 .render/
 
