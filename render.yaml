@@ -2,11 +2,14 @@ services:
   - type: web
     name: ced-halaltech
     runtime: node
-    buildCommand: npm run build:render
+    buildCommand: npm install && npm run build:render
     startCommand: npm start
     healthCheckPath: /api/health
+    plan: free
     envVars:
       - key: NODE_ENV
         value: production
       - key: SESSION_SECRET
         generateValue: true
+      - key: PORT
+        value: "10000"
