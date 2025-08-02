@@ -2,7 +2,7 @@ services:
   - type: web
     name: ced-halaltech
     runtime: node
-    buildCommand: npm ci && npm run build:full
+    buildCommand: npm install && npm run build:full
     startCommand: npm start
     healthCheckPath: /api/health
     plan: free

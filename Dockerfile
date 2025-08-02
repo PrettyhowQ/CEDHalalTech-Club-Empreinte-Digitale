@@ -17,14 +17,14 @@ WORKDIR /app
 COPY package*.json ./
 COPY tsconfig*.json ./
 
-# Installation dépendances
-RUN npm ci --only=production && npm cache clean --force
+# Installation complète des dépendances (dev + prod pour le build)
+RUN npm ci && npm cache clean --force
 
 # Copie du code source
 COPY . .
 
-# Build de l'application
-RUN npm run build
+# Build de l'application complète
+RUN npm run build:full
 
 # Stage production
 FROM node:20-alpine AS production
@@ -51,9 +51,9 @@ USER ced
 # Port exposé
 EXPOSE 5000
 
-# Health check
+# Health check corrigé
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:5000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "require('http').get('http://localhost:5000/api/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
 
 # Commande de démarrage
 CMD ["npm", "start"]
