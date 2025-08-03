@@ -8,8 +8,10 @@ import memoize from "memoizee";
 import connectPg from "connect-pg-simple";
 import { storage } from "./storage";
 
-if (!process.env.REPLIT_DOMAINS) {
-  throw new Error("Environment variable REPLIT_DOMAINS not provided");
+// Rendre l'authentification Replit optionnelle pour déploiement sur d'autres plateformes
+const isReplitEnvironment = !!process.env.REPLIT_DOMAINS;
+if (!isReplitEnvironment) {
+  console.log("⚠️ REPLIT_DOMAINS non défini - mode déploiement externe (Render, Vercel, etc.)");
 }
 
 const getOidcConfig = memoize(

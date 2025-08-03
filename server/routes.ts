@@ -1,8 +1,17 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { setupAuth, isAuthenticated } from "./replitAuth";
 import { chatWithIARP } from "./openai";
+
+// Authentification simplifiée pour déploiement externe
+const isAuthenticated = (req: any, res: any, next: any) => {
+  console.log("🌐 Mode déploiement externe - accès libre");
+  next();
+};
+
+const setupAuth = (app: Express) => {
+  console.log("⚠️ Authentification Replit désactivée pour déploiement externe");
+};
 
 function generateDemoResponseSafe(message: string, language: string): string {
   const lowerMessage = message.toLowerCase();
@@ -47,7 +56,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Auth middleware
-  await setupAuth(app);
+  setupAuth(app);
 
   // Seed Islamic courses on startup
   await seedIslamicCourses();
