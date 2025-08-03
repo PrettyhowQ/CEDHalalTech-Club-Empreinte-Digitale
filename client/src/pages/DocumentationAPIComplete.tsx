@@ -323,7 +323,7 @@ function BankingDashboard() {
                   <div className="mb-4">
                     <div className="text-green-400">$ curl -X POST https://api.ced-halaltech.com/v1/auth/login \</div>
                     <div className="text-blue-400 ml-4">-H "Content-Type: application/json" \</div>
-                    <div className="text-yellow-400 ml-4">-d '{"email": "user@example.com", "password": "***"}'</div>
+                    <div className="text-yellow-400 ml-4">-d {`'{"email": "user@example.com", "password": "***"}'`}</div>
                   </div>
                   <div className="text-gray-400">
                     <div>Response: HTTP/1.1 200 OK</div>

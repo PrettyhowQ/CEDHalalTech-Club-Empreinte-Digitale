@@ -13,7 +13,8 @@ export default function AssistantVocalAisha() {
     {
       type: "aisha",
       message: "السلام عليكم ورحمة الله وبركاته - Bienvenue ! Je suis Aisha Al-Aman, votre assistante vocale islamique. Comment puis-je vous aider aujourd'hui ?",
-      time: "08:30"
+      time: "08:30",
+      id: "msg-1"
     }
   ]);
 
@@ -28,25 +29,32 @@ export default function AssistantVocalAisha() {
     { code: "bn", name: "বাংলা", flag: "🇧🇩" }
   ];
 
+  const simulateUserInput = () => {
+    setConversation(prev => [...prev, {
+      type: "user",
+      message: "Assalamu alaikum Aisha, peux-tu m'aider avec mes prières quotidiennes ?",
+      time: "08:32",
+      id: `msg-user-${Date.now()}`
+    }]);
+  };
+
+  const simulateAishaResponse = () => {
+    setConversation(prev => [...prev, {
+      type: "aisha",
+      message: "وعليكم السلام ورحمة الله وبركاته - Bien sûr ! Les 5 prières quotidiennes sont : Fajr (aube), Dhuhr (midi), Asr (après-midi), Maghrib (coucher), Isha (nuit). Voulez-vous que je vous rappelle les horaires selon votre localisation ?",
+      time: "08:32",
+      id: `msg-aisha-${Date.now()}`
+    }]);
+    setIsListening(false);
+  };
+
   const toggleListening = () => {
     setIsListening(!isListening);
     if (!isListening) {
-      // Simulation d'écoute
+      // Simulation d'écoute avec fonctions séparées
       setTimeout(() => {
-        setConversation(prev => [...prev, {
-          type: "user",
-          message: "Assalamu alaikum Aisha, peux-tu m'aider avec mes prières quotidiennes ?",
-          time: "08:32"
-        }]);
-        
-        setTimeout(() => {
-          setConversation(prev => [...prev, {
-            type: "aisha",
-            message: "وعليكم السلام ورحمة الله وبركاته - Bien sûr ! Les 5 prières quotidiennes sont : Fajr (aube), Dhuhr (midi), Asr (après-midi), Maghrib (coucher), Isha (nuit). Voulez-vous que je vous rappelle les horaires selon votre localisation ?",
-            time: "08:32"
-          }]);
-          setIsListening(false);
-        }, 2000);
+        simulateUserInput();
+        setTimeout(simulateAishaResponse, 2000);
       }, 3000);
     }
   };
@@ -141,8 +149,8 @@ export default function AssistantVocalAisha() {
 
               {/* Zone de Conversation */}
               <div className="bg-white rounded-lg p-6 max-h-96 overflow-y-auto border-2 border-purple-200">
-                {conversation.map((msg, index) => (
-                  <div key={index} className={`mb-4 ${msg.type === 'aisha' ? 'text-left' : 'text-right'}`}>
+                {conversation.map((msg) => (
+                  <div key={msg.id} className={`mb-4 ${msg.type === 'aisha' ? 'text-left' : 'text-right'}`}>
                     <div className={`inline-block max-w-xs md:max-w-md p-4 rounded-lg ${
                       msg.type === 'aisha' 
                         ? 'bg-purple-100 text-purple-800' 
@@ -216,7 +224,7 @@ export default function AssistantVocalAisha() {
                 </div>
                 <div className="flex justify-between">
                   <span className="font-semibold">Latence réponse:</span>
-                  <span>< 0.5 secondes</span>
+                  <span>&lt; 0.5 secondes</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="font-semibold">Base de données Fiqh:</span>

@@ -5,11 +5,10 @@ import * as schema from "@shared/schema";
 
 neonConfig.webSocketConstructor = ws;
 
-if (!process.env.DATABASE_URL) {
-  throw new Error(
-    "DATABASE_URL must be set. Did you forget to provision a database?",
-  );
-}
+// Pour le développement local sans base de données
+const DATABASE_URL = process.env.DATABASE_URL || "postgresql://localhost:5432/ced_dev";
 
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+console.log("🔌 Tentative de connexion à la base de données...");
+
+export const pool = new Pool({ connectionString: DATABASE_URL });
 export const db = drizzle({ client: pool, schema });
